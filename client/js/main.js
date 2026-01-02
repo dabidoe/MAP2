@@ -145,6 +145,12 @@ class WarRoom1776 {
     this.dmToggle.style.zIndex = '6000';
     this.dmToggle.onclick = () => this._toggleDMMode();
     document.body.appendChild(this.dmToggle);
+
+    // Sidebar toggle button (already in HTML)
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    if (sidebarToggle) {
+      sidebarToggle.onclick = () => this._toggleSidebar();
+    }
   }
 
   /**
@@ -314,6 +320,22 @@ class WarRoom1776 {
     this.gameState.toggleMode();
     const mode = this.gameState.getState().mode;
     alert(`Switched to ${mode} Mode`);
+  }
+
+  /**
+   * Toggle sidebar collapse
+   * @private
+   */
+  _toggleSidebar() {
+    this.gameState.toggleSidebar();
+    const sidebar = document.getElementById('sidebar');
+    const isCollapsed = this.gameState.getState().ui.sidebarCollapsed;
+
+    if (isCollapsed) {
+      sidebar.classList.add('collapsed');
+    } else {
+      sidebar.classList.remove('collapsed');
+    }
   }
 
   /**
