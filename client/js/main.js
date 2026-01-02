@@ -1,378 +1,369 @@
-const socket = io();
-const locationStorage = new Map();
-const characterData = new Map();
-let currentTokens = [];
-let activeLocationId = null;
+/**
+ * War Room 1776 - Main Application
+ * Episode 0.1: Winter Ambush
+ *
+ * Professional VTT with modular architecture
+ */
 
-const GMSession = {
-    mode: 'PLAYER', // Toggle: 'PLAYER' or 'DM'
-    fogOfWar: true,
-    partyGPS: { lat: 40.2985, lng: -74.8718 }, // McConkey's Ferry
-    discoveredLocations: ['frozen_vigil'],
-    activeEncounter: null,
-};
+import { MapEngine } from './MapEngine.js';
+import { CanvasRenderer } from './CanvasRenderer.js';
+import { GameState } from './GameState.js';
+import { CommandDashboard } from './components/CommandDashboard.js';
 
-const campaignState = {
-    date: "December 23, 1776",
-    time: "23:45",
-    weather: "Violent Sleet & Snow",
-    morale: "Low",
-    isTraveling: false
-};
+/**
+ * Main Application Class
+ */
+class WarRoom1776 {
+  constructor() {
+    this.gameState = new GameState();
+    this.mapEngine = null;
+    this.canvasRenderer = null;
+    this.dashboard = null;
+    this.socket = null;
 
-// Initialize map
-const map = L.map('map', { 
-    zoomControl: false,
-    maxZoom: 19,
-    fadeAnimation: true
-}).setView([40.2985, -74.8718], 13);
+    // Tactical view container
+    this.tacticalContainer = null;
 
-L.DomUtil.addClass(map.getContainer(), 'parchment-container');
+    // UI elements
+    this.backButton = null;
+    this.dmToggle = null;
+  }
 
-// HIGH RES ESRI IMAGERY
-L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-    attribution: 'Esri',
-    maxZoom: 19
-}).addTo(map);
+  /**
+   * Initialize application
+   */
+  async init() {
+    console.log('═══════════════════════════════════════════');
+    console.log('🎖️  WAR ROOM 1776 - EPISODE 0.1');
+    console.log('═══════════════════════════════════════════');
 
-// UI Elements
-const sidebar = document.getElementById('sidebar');
-
-// Tactical View Overlay System
-const tacticalContainer = document.createElement('div');
-tacticalContainer.className = 'tactical-map-container';
-const viewport = document.getElementById('map-viewport');
-if (viewport) {
-    viewport.appendChild(tacticalContainer);
-} else {
-    document.body.appendChild(tacticalContainer);
-}
-
-const tacticalImg = document.createElement('img');
-tacticalImg.className = 'tactical-map-img';
-tacticalContainer.appendChild(tacticalImg);
-
-const tokenPlane = document.createElement('div');
-tokenPlane.style.position = 'absolute';
-tokenPlane.style.top = '0';
-tokenPlane.style.left = '0';
-tokenPlane.style.width = '100%';
-tokenPlane.style.height = '100%';
-tacticalContainer.appendChild(tokenPlane);
-
-// World Map Layer Group
-const worldMarkers = L.layerGroup().addTo(map);
-
-// Back Button
-const backButton = document.createElement('button');
-backButton.innerHTML = '← Return to Campaign Map';
-backButton.className = 'cycle-button';
-backButton.style.position = 'absolute';
-backButton.style.bottom = '20px';
-backButton.style.left = '240px'; // Adjusted for smaller sidebar
-backButton.style.display = 'none';
-backButton.style.zIndex = '6000';
-backButton.onclick = exitTacticalView;
-document.body.appendChild(backButton);
-
-// DM Mode Toggle
-const dmToggle = document.createElement('button');
-dmToggle.innerHTML = 'Toggle DM Mode';
-dmToggle.className = 'cycle-button';
-dmToggle.style.position = 'absolute';
-dmToggle.style.top = '20px';
-dmToggle.style.right = '20px';
-dmToggle.style.zIndex = '6000';
-dmToggle.onclick = () => {
-    GMSession.mode = GMSession.mode === 'DM' ? 'PLAYER' : 'DM';
-    alert(`Switched to ${GMSession.mode} Mode`);
-    renderWorldMarkers();
-    renderWorldSidebar();
-};
-document.body.appendChild(dmToggle);
-
-function exitTacticalView() {
-    document.body.classList.remove('tactical-active');
-    activeLocationId = null;
-    backButton.style.display = 'none';
-    map.dragging.enable();
-    map.scrollWheelZoom.enable();
-    renderWorldMarkers();
-    renderWorldSidebar();
-}
-
-function renderWorldSidebar() {
-    if (!sidebar) return;
-
-    let html = `
-        <div class="campaign-header">
-            <h2 class="cinzel">${campaignState.date}</h2>
-            <div class="env-info">
-                <span>🕒 ${campaignState.time}</span> | <span>❄️ ${campaignState.weather}</span>
-            </div>
-            <div class="morale-box">
-                <label>ARMY MORALE</label>
-                <div class="morale-bar"><div class="fill" style="width: 30%;"></div></div>
-            </div>
-        </div>
-        <div class="location-section">
-            <h3 class="sidebar-subhead">STRATEGIC OBJECTIVES</h3>
-            <p style="padding: 0 15px; font-size: 0.8rem; color: #a09580;">Click objective markers on the map to command travel.</p>
-        </div>
-    `;
-    sidebar.innerHTML = html;
-}
-
-function startTravel(targetId) {
-    if (campaignState.isTraveling && GMSession.mode === 'PLAYER') return;
-
-    const destination = locationStorage.get(targetId).data;
-    
-    if (GMSession.mode === 'DM') {
-        const party = currentTokens.filter(t => t.side === 'Continental');
-        party.forEach(token => {
-            token.gps.lat = destination.lat;
-            token.gps.lng = destination.lng;
-        });
-        map.setView([destination.lat, destination.lng], 14);
-        enterTacticalView(locationStorage.get(targetId));
-        return;
-    }
-
-    campaignState.isTraveling = true;
-    document.body.classList.add('traveling');
-    
-    const party = currentTokens.filter(t => t.side === 'Continental');
-    let step = 0;
-    const totalSteps = 40;
-    
-    const moveInterval = setInterval(() => {
-        step++;
-        party.forEach(token => {
-            token.gps.lat += (destination.lat - token.gps.lat) * (1 / (totalSteps - step + 1));
-            token.gps.lng += (destination.lng - token.gps.lng) * (1 / (totalSteps - step + 1));
-            
-            // Discovery Logic
-            locationStorage.forEach((entry, id) => {
-                if (!GMSession.discoveredLocations.includes(id)) {
-                    const dist = L.latLng(token.gps.lat, token.gps.lng).distanceTo(L.latLng(entry.data.lat, entry.data.lng));
-                    if (dist < 800) { 
-                        GMSession.discoveredLocations.push(id);
-                        renderWorldMarkers(); // Update markers on map
-                    }
-                }
-            });
-
-            if (targetId === 'picket_post' && step === 20) {
-                clearInterval(moveInterval);
-                triggerEncounterPopup(targetId);
-            }
-        });
-        
-        renderWorldMarkers();
-        map.panTo([party[0].gps.lat, party[0].gps.lng]);
-        
-        if (step >= totalSteps) {
-            clearInterval(moveInterval);
-            campaignState.isTraveling = false;
-            document.body.classList.remove('traveling');
-            enterTacticalView(locationStorage.get(targetId));
-        }
-    }, 80);
-}
-
-function triggerEncounterPopup(locationId) {
-    const overlay = document.createElement('div');
-    overlay.className = 'encounter-modal';
-    overlay.innerHTML = `
-        <div class="encounter-content">
-            <h1 style="color:#f44336; margin-top:0;">⚠️ AMBUSH!</h1>
-            <p>A Hessian picket line has spotted your movement through the woods.</p>
-            <button class="travel-btn" style="background:#f44336; color:white; width:100%;" onclick="resolveEncounter(true, '${locationId}')">To Arms!</button>
-            <button class="travel-btn" style="width:100%; margin-top:10px; background: #555; color: white;" onclick="resolveEncounter(false, '${locationId}')">Withdraw</button>
-        </div>
-    `;
-    document.body.appendChild(overlay);
-}
-
-window.resolveEncounter = (fight, locId) => {
-    document.querySelector('.encounter-modal').remove();
-    campaignState.isTraveling = false;
-    document.body.classList.remove('traveling');
-    if (fight) enterTacticalView(locationStorage.get(locId));
-};
-
-function renderWorldMarkers() {
-    worldMarkers.clearLayers();
-
-    // RENDER LOCATIONS AS TOKENS
-    locationStorage.forEach((entry, id) => {
-        if (GMSession.mode === 'PLAYER' && !GMSession.discoveredLocations.includes(id)) return;
-
-        const loc = entry.data;
-        const locationIcon = L.divIcon({
-            className: 'location-token',
-            html: `<div style="background:#c5a959; border:2px solid #000; width:16px; height:16px; border-radius:50%; box-shadow: 0 0 10px rgba(0,0,0,0.5);"></div>`,
-            iconSize: [16, 16]
-        });
-
-        L.marker([loc.lat, loc.lng], {icon: locationIcon})
-            .bindTooltip(`<b>${loc.title}</b><br>${loc.description}`, {sticky: true})
-            .addTo(worldMarkers)
-            .on('click', () => startTravel(id));
-    });
-
-    // RENDER CHARACTER TOKENS
-    currentTokens.forEach(token => {
-        if (GMSession.mode === 'PLAYER' && token.side !== 'Continental') return;
-        
-        if (!token.gps) return;
-        L.marker([token.gps.lat, token.gps.lng], {
-            icon: L.icon({
-                iconUrl: token.icon,
-                iconSize: [40, 40],
-                className: 'character-chip'
-            }),
-            draggable: GMSession.mode === 'DM'
-        }).addTo(worldMarkers).on('dragend', (e) => {
-            if (GMSession.mode === 'DM') {
-                const newPos = e.target.getLatLng();
-                token.gps.lat = newPos.lat;
-                token.gps.lng = newPos.lng;
-            }
-        });
-    });
-}
-
-function enterTacticalView(loc) {
-    document.body.classList.add('tactical-active');
-    activeLocationId = loc.id || loc.data.id;
-    tacticalImg.src = loc.data.tacticalMapUrl;
-    backButton.style.display = 'block';
-    map.dragging.disable();
-    map.scrollWheelZoom.disable();
-    worldMarkers.clearLayers();
-    renderTacticalTokens();
-}
-
-function renderTacticalTokens() {
-    tokenPlane.innerHTML = '';
-    console.log(`Rendering tactical tokens for location: ${activeLocationId}`);
-    console.log(`Total tokens: ${currentTokens.length}`);
-
-    currentTokens.forEach(token => {
-        console.log(`Token ${token.name}: locationId=${token.locationId}, activeLocationId=${activeLocationId}, hasGrid=${!!token.grid}`);
-
-        if (token.locationId === activeLocationId && token.grid) {
-            const tokenEl = document.createElement('div');
-            tokenEl.className = 'tactical-token';
-            tokenEl.style.left = `${token.grid.posX}%`;
-            tokenEl.style.top = `${token.grid.posY}%`;
-            tokenEl.style.cursor = GMSession.mode === 'DM' ? 'grab' : 'default';
-            tokenEl.innerHTML = `
-                <img src="${token.icon}" style="width:100%; height:100%; border-radius:50%; border: 3px solid ${token.side === 'Continental' ? '#4CAF50' : '#f44336'};">
-            `;
-
-            // Add drag functionality for DM mode
-            if (GMSession.mode === 'DM') {
-                let isDragging = false;
-
-                tokenEl.addEventListener('mousedown', (e) => {
-                    isDragging = true;
-                    tokenEl.style.cursor = 'grabbing';
-                    e.preventDefault();
-                });
-
-                document.addEventListener('mousemove', (e) => {
-                    if (!isDragging) return;
-
-                    const rect = tacticalContainer.getBoundingClientRect();
-                    const x = ((e.clientX - rect.left) / rect.width) * 100;
-                    const y = ((e.clientY - rect.top) / rect.height) * 100;
-
-                    // Clamp to container bounds
-                    token.grid.posX = Math.max(0, Math.min(100, x));
-                    token.grid.posY = Math.max(0, Math.min(100, y));
-
-                    tokenEl.style.left = `${token.grid.posX}%`;
-                    tokenEl.style.top = `${token.grid.posY}%`;
-                });
-
-                document.addEventListener('mouseup', () => {
-                    if (isDragging) {
-                        isDragging = false;
-                        tokenEl.style.cursor = 'grab';
-                        // TODO: Emit socket event to sync token position
-                        console.log(`Token ${token.name} moved to (${token.grid.posX}, ${token.grid.posY})`);
-                    }
-                });
-            }
-
-            tokenPlane.appendChild(tokenEl);
-            console.log(`✓ Rendered token: ${token.name} at (${token.grid.posX}%, ${token.grid.posY}%)`);
-        }
-    });
-
-    console.log(`Rendered ${tokenPlane.children.length} tokens on tactical map`);
-}
-
-async function initCampaign() {
     try {
-        console.log("Initializing War Room...");
-        
-        let locations = [];
-        try {
-            const locRes = await fetch('/data/locations.json');
-            locations = await locRes.json();
-        } catch (e) {
-            console.error("Location fetch failed, using defaults.");
-            locations = [
-                { id: 'frozen_vigil', title: "McConkey's Ferry", lat: 40.2985, lng: -74.8718, description: 'The embarkation point on the Delaware.', tacticalMapUrl: '/assets/maps/washingtons-camp/the-frozen-vigil-of-fortitude.png' },
-                { id: 'trenton_barracks', title: 'Trenton Barracks', lat: 40.2178, lng: -74.7681, description: 'The stone barracks housing the Rall Regiment.', tacticalMapUrl: '/assets/maps/trenton-barracks/the-barracks-of-trenton.png' }
-            ];
-        }
+      // Load game data from API
+      await this.gameState.loadFromAPI('/api/campaign');
 
-        try {
-            const [charRes, tokenRes] = await Promise.all([
-                fetch('/data/characters.json'),
-                fetch('/data/tokens.json')
-            ]);
-            
-            const charData = await charRes.json();
-            const tokenData = await tokenRes.json();
+      // Initialize map engine
+      this.mapEngine = new MapEngine('map', {
+        worldZoom: 13,
+        center: [40.2985, -74.8718] // McConkey's Ferry
+      });
 
-            currentTokens = tokenData.map(token => {
-                // Try to find matching character by name (since characterRef doesn't exist)
-                const char = charData.find(c => c.name === token.name);
-                return {
-                    ...token,
-                    // Keep existing side or infer from name
-                    side: token.side || (token.name.includes('Washington') || token.name.includes('Greene')) ? 'Continental' : 'Hessian',
-                    // Use icon from token data (already defined) or fallback to character icon
-                    icon: token.icon || (char ? char.icon : 'https://statsheet-cdn.b-cdn.net/images/placeholder.png')
-                    // gps and grid already exist in token data - don't overwrite!
-                };
-            });
+      // Initialize command dashboard
+      this.dashboard = new CommandDashboard(this.gameState);
 
-            console.log(`Loaded ${currentTokens.length} tokens:`);
-            currentTokens.forEach(t => {
-                console.log(`  - ${t.name} (${t.side}) at location ${t.locationId}`);
-                console.log(`    GPS: ${t.gps ? `(${t.gps.lat}, ${t.gps.lng})` : 'MISSING'}`);
-                console.log(`    Grid: ${t.grid ? `(${t.grid.posX}%, ${t.grid.posY}%)` : 'MISSING'}`);
-            });
-        } catch (e) {
-            console.error("Data fetch failed:", e);
-        }
+      // Initialize Socket.io
+      this._initSocket();
 
-        locations.forEach(loc => locationStorage.set(loc.id, { data: loc }));
+      // Create UI controls
+      this._createControls();
 
-        renderWorldSidebar(); 
-        renderWorldMarkers();
-        console.log("Systems Online.");
-    } catch (criticalError) {
-        console.error("CRITICAL BOOT ERROR:", criticalError);
-        document.body.innerHTML = `<div style="color:white; padding:20px;">Boot Error: ${criticalError.message}</div>`;
+      // Setup tactical view container
+      this._setupTacticalContainer();
+
+      // Subscribe to game state changes
+      this._subscribeToEvents();
+
+      // Render initial state
+      this._renderWorldMap();
+
+      console.log('✅ War Room 1776 initialized successfully');
+      console.log('═══════════════════════════════════════════');
+
+    } catch (error) {
+      console.error('❌ Failed to initialize War Room 1776:', error);
+      this._showError('Failed to load game data. Please refresh the page.');
     }
+  }
+
+  /**
+   * Setup tactical container for Canvas rendering
+   * @private
+   */
+  _setupTacticalContainer() {
+    // Create tactical container (positioned over map)
+    this.tacticalContainer = document.createElement('div');
+    this.tacticalContainer.id = 'tactical-container';
+    this.tacticalContainer.style.position = 'absolute';
+    this.tacticalContainer.style.top = '50%';
+    this.tacticalContainer.style.left = '50%';
+    this.tacticalContainer.style.transform = 'translate(-50%, -50%)';
+    this.tacticalContainer.style.width = '90vh';
+    this.tacticalContainer.style.height = '90vh';
+    this.tacticalContainer.style.zIndex = '5000';
+    this.tacticalContainer.style.display = 'none';
+    this.tacticalContainer.style.border = '5px solid #c5a959';
+    this.tacticalContainer.style.background = '#000';
+    this.tacticalContainer.style.boxShadow = '0 0 30px rgba(0,0,0,0.9)';
+
+    document.getElementById('map-viewport').appendChild(this.tacticalContainer);
+
+    // Initialize Canvas renderer (will be shown when entering tactical view)
+    this.canvasRenderer = new CanvasRenderer(this.tacticalContainer, {
+      tokenSize: 50,
+      showHP: true,
+      enableDrag: false // Will be enabled in DM mode
+    });
+
+    this.canvasRenderer.on('tokenClick', (token) => {
+      this.gameState.selectToken(token);
+      console.log('Token selected:', token.name);
+    });
+
+    this.canvasRenderer.on('tokenDragEnd', (token) => {
+      console.log(`Token ${token.name} moved to grid position:`, token.grid);
+      // Emit to server
+      this.socket?.emit('token_move', {
+        tokenId: token.tokenId,
+        grid: token.grid
+      });
+    });
+  }
+
+  /**
+   * Create UI controls
+   * @private
+   */
+  _createControls() {
+    // Back button (return to world map)
+    this.backButton = document.createElement('button');
+    this.backButton.innerHTML = '← Return to Campaign Map';
+    this.backButton.className = 'cycle-button';
+    this.backButton.style.position = 'absolute';
+    this.backButton.style.bottom = '20px';
+    this.backButton.style.left = '250px';
+    this.backButton.style.display = 'none';
+    this.backButton.style.zIndex = '6000';
+    this.backButton.onclick = () => this._exitTacticalView();
+    document.body.appendChild(this.backButton);
+
+    // DM Mode toggle
+    this.dmToggle = document.createElement('button');
+    this.dmToggle.innerHTML = 'Toggle DM Mode';
+    this.dmToggle.className = 'cycle-button';
+    this.dmToggle.style.position = 'absolute';
+    this.dmToggle.style.top = '20px';
+    this.dmToggle.style.right = '20px';
+    this.dmToggle.style.zIndex = '6000';
+    this.dmToggle.onclick = () => this._toggleDMMode();
+    document.body.appendChild(this.dmToggle);
+  }
+
+  /**
+   * Initialize Socket.io connection
+   * @private
+   */
+  _initSocket() {
+    this.socket = io();
+
+    this.socket.on('connect', () => {
+      console.log('⚔️ Connected to War Room server');
+    });
+
+    this.socket.on('update_token', (data) => {
+      console.log('Token update received:', data);
+      this.gameState.updateTokenPosition(data.tokenId, data.gps, data.grid);
+      this._renderCurrentView();
+    });
+
+    this.socket.on('encounter_start', (data) => {
+      console.log('Encounter started:', data);
+      this.gameState.startEncounter(data);
+    });
+
+    this.socket.on('initiative_update', (data) => {
+      console.log('Initiative update:', data);
+      this.gameState.addToInitiative(data.tokenId, data.name, data.roll);
+    });
+
+    this.socket.on('disconnect', () => {
+      console.log('Disconnected from server');
+    });
+  }
+
+  /**
+   * Subscribe to game state events
+   * @private
+   */
+  _subscribeToEvents() {
+    // Render when mode changes
+    this.gameState.on('modeChange', (mode) => {
+      console.log(`Mode changed to: ${mode}`);
+      this.canvasRenderer.config.enableDrag = (mode === 'DM');
+      this._renderCurrentView();
+    });
+
+    // Render when tokens update
+    this.gameState.on('tokenUpdate', () => {
+      this._renderCurrentView();
+    });
+
+    this.gameState.on('tokenMove', () => {
+      this._renderCurrentView();
+    });
+  }
+
+  /**
+   * Render world map
+   * @private
+   */
+  _renderWorldMap() {
+    const state = this.gameState.getState();
+
+    // Clear existing markers
+    this.mapEngine.clearMarkers();
+
+    // Render locations
+    state.locations.forEach(location => {
+      // Only show discovered locations in PLAYER mode
+      if (state.mode === 'PLAYER' && !this.gameState.isLocationDiscovered(location.id)) {
+        return;
+      }
+
+      this.mapEngine.addLocationMarker(location, (loc) => {
+        this._enterTacticalView(loc);
+      });
+    });
+
+    // Render character tokens on world map
+    state.tokens.forEach(token => {
+      // Only show friendly tokens in PLAYER mode
+      if (state.mode === 'PLAYER' && token.side !== 'Continental') {
+        return;
+      }
+
+      const isDraggable = state.mode === 'DM';
+
+      this.mapEngine.addTokenMarker(token, isDraggable, (movedToken, newPos) => {
+        console.log(`Token ${movedToken.name} moved to:`, newPos);
+        this.gameState.updateTokenPosition(movedToken.tokenId, {
+          lat: newPos.lat,
+          lng: newPos.lng
+        });
+
+        // Emit to server
+        this.socket?.emit('token_move', {
+          tokenId: movedToken.tokenId,
+          gps: { lat: newPos.lat, lng: newPos.lng }
+        });
+      });
+    });
+  }
+
+  /**
+   * Enter tactical view for a location
+   * @private
+   */
+  _enterTacticalView(location) {
+    console.log(`Entering tactical view: ${location.title}`);
+
+    this.gameState.setActiveLocation(location);
+
+    // Enter tactical view on map
+    this.mapEngine.enterTacticalView(location);
+
+    // Show tactical container
+    this.tacticalContainer.style.display = 'block';
+
+    // Get tokens at this location
+    const tokens = this.gameState.getTokensAt(location.id);
+
+    console.log(`Found ${tokens.length} tokens at ${location.id}:`, tokens.map(t => t.name));
+
+    // Render tokens on canvas
+    this.canvasRenderer.setTokens(tokens);
+
+    // Show back button
+    this.backButton.style.display = 'block';
+
+    // Add tactical-active class for styling
+    document.body.classList.add('tactical-active');
+  }
+
+  /**
+   * Exit tactical view
+   * @private
+   */
+  _exitTacticalView() {
+    console.log('Exiting tactical view');
+
+    this.gameState.setActiveLocation(null);
+
+    // Exit tactical view on map
+    this.mapEngine.exitTacticalView();
+
+    // Hide tactical container
+    this.tacticalContainer.style.display = 'none';
+
+    // Clear canvas
+    this.canvasRenderer.clear();
+
+    // Hide back button
+    this.backButton.style.display = 'none';
+
+    // Remove tactical-active class
+    document.body.classList.remove('tactical-active');
+
+    // Re-render world map
+    this._renderWorldMap();
+  }
+
+  /**
+   * Toggle DM mode
+   * @private
+   */
+  _toggleDMMode() {
+    this.gameState.toggleMode();
+    const mode = this.gameState.getState().mode;
+    alert(`Switched to ${mode} Mode`);
+  }
+
+  /**
+   * Render current view (world or tactical)
+   * @private
+   */
+  _renderCurrentView() {
+    const state = this.gameState.getState();
+
+    if (state.ui.mapMode === 'tactical' && state.ui.activeLocation) {
+      // Re-render tactical view
+      const tokens = this.gameState.getTokensAt(state.ui.activeLocation.id);
+      this.canvasRenderer.setTokens(tokens);
+    } else {
+      // Re-render world map
+      this._renderWorldMap();
+    }
+  }
+
+  /**
+   * Show error message
+   * @private
+   */
+  _showError(message) {
+    const errorDiv = document.createElement('div');
+    errorDiv.style.cssText = `
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #f44336;
+      color: white;
+      padding: 20px 40px;
+      border-radius: 8px;
+      font-family: 'Cinzel', serif;
+      z-index: 10000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    `;
+    errorDiv.textContent = message;
+    document.body.appendChild(errorDiv);
+  }
 }
 
-initCampaign();
+// Initialize application when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    const app = new WarRoom1776();
+    app.init();
+  });
+} else {
+  const app = new WarRoom1776();
+  app.init();
+}
