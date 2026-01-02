@@ -1,0 +1,57 @@
+To stop chasing bugs, we need to separate the Map Logic (where things are) from the Game State (what is happening). Right now, your code is likely trying to do both in the same functions, which is why locations disappear or the screen goes black.
+
+Instead of generic "agent prompts," use these precise technical instructions to build the "DM vs. Player" foundation.
+
+1. The "Source of Truth" (Logistics)
+Create a new file called gameState.js (or add this object to the top of script.js). This object must be the only thing that decides what the map looks like.
+
+JavaScript
+
+const GMSession = {
+    mode: 'PLAYER', // Toggle: 'PLAYER' or 'DM'
+    fogOfWar: true,
+    partyGPS: { lat: 40.2985, lng: -74.8718 }, // Current location (McConkey's Ferry)
+    discoveredLocations: ['ferry_start'], // IDs of revealed locations
+    activeEncounter: null, // Tracks if we are in Act 1, 2, etc.
+};
+2. The "Discovery" Instruction
+Your marker rendering must be conditional. If you don't do this, "Player Mode" will always be broken because the code won't know what to hide.
+
+The Logic for your Marker Function:
+
+If Mode is DM: Show everything.
+
+If Mode is PLAYER: Only show markers if their ID is in GMSession.discoveredLocations.
+
+The "Reveal" Check: During "Command Travel," calculate the distance to nearby hidden locations. If distance < 0.5 miles, push the ID to discoveredLocations and re-render.
+
+3. Establishing "Player Mode" vs "DM Mode"
+Stop manually fixing bugs and implement a "God Mode" toggle. This allows you to bypass the "Travel" mechanics to test if your markers and JSON data are actually loading.
+
+Technical Setup:
+
+DM Mode: Enable draggable on all markers. Disable the "Travel" animation (teleport only). Show the "Tactical Intel" for all locations.
+
+Player Mode: Lock marker positions. Force the "Animated March". Hide the "Tactical Intel" until discovery.
+
+4. Implementation Instructions for the "Winter Ambush"
+Since we are starting at the beginning, follow these strict steps to avoid "agent crap":
+
+Hard-code the Start: Set GMSession.partyGPS to McConkey’s Ferry.
+
+Define the First Path: The "Road to McKinney's Ferry" is the only valid travel route.
+
+The Trigger Point: Create an invisible "Trigger Zone" halfway between the start and the destination.
+
+The Event: When the party hits that zone, the engine pauses movement and triggers the "Ambush!" popup.
+
+Act 1: Spawn Sergeant Crowe and 3 Militiamen.
+
+DM Option: In DM Mode, add a "Skip to Washington's Rescue" button to test the high-level Paladin stats.
+
+5. Managing Your JSON Libraries
+To prevent "undefined" errors, use a Reference Loader.
+
+Instruction: "Fetch spells.json once at startup and store it in a Map object."
+
+Instruction: "When Washington's turn starts, look up the ID saber_of_liberty in that Map to populate his Action Bar".

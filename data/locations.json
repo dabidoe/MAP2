@@ -1,0 +1,29 @@
+[
+  {
+    "id": "frozen_vigil",
+    "title": "McConkey's Ferry",
+    "lat": 40.2985,
+    "lng": -74.8718,
+    "description": "The embarkation point. The river is choked with ice cakes.",
+    "radius": 50,
+    "tacticalMapUrl": "/assets/maps/washingtons-camp/the-frozen-vigil-of-fortitude.png"
+  },
+  {
+    "id": "picket_post",
+    "title": "The Hessian Picket",
+    "lat": 40.2520,
+    "lng": -74.8010,
+    "description": "A small outpost guarding the river road. High risk of encounter.",
+    "radius": 50,
+    "tacticalMapUrl": "/assets/maps/trenton-barracks/the-barracks-of-trenton.png"
+  },
+  {
+    "id": "trenton_barracks",
+    "title": "Trenton Barracks",
+    "lat": 40.2178,
+    "lng": -74.7681,
+    "description": "The stone barracks housing the Rall Regiment.",
+    "radius": 50,
+    "tacticalMapUrl": "/assets/maps/trenton-barracks/the-barracks-of-trenton.png"
+  }
+]

@@ -1,0 +1,154 @@
+This is a great shift in direction. Moving from a "fly-over" style to a **Travel-based Exploration** system turns the map into a strategic tool rather than just a menu.
+
+To achieve this, we will remove the location pins from the map for "unvisited" or "enemy" areas. The user will only see these on the sidebar. When they click "Travel," the tokens on the map will physically move toward that coordinate.
+
+### 1. The Strategy Sidebar (Location-Centric)
+
+We’ll create a dedicated sidebar that displays current campaign stats (Date, Time, Weather) and a list of locations. We will remove the "active tokens" from this list and put them into a smaller, floating "Party Overlay."
+
+```javascript
+// Enrichment for the sidebar
+const campaignState = {
+    date: "December 25, 1776",
+    time: "23:00",
+    weather: "Violent Sleet & Snow",
+    morale: "Low",
+    isTraveling: false
+};
+
+function renderLocationSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.innerHTML = `
+        <div class="campaign-header">
+            <h2>${campaignState.date}</h2>
+            <div class="env-badges">
+                <span>🕒 ${campaignState.time}</span>
+                <span>❄️ ${campaignState.weather}</span>
+            </div>
+            <div class="morale-bar">Morale: ${campaignState.morale}</div>
+        </div>
+        <div id="location-list"></div>
+    `;
+
+    locationStorage.forEach((loc, id) => {
+        const div = document.createElement('div');
+        div.className = 'location-entry';
+        div.innerHTML = `
+            <h3>${loc.data.title}</h3>
+            <p>${loc.data.description}</p>
+            <button onclick="startTravel('${id}')">Travel to Location</button>
+        `;
+        document.getElementById('location-list').appendChild(div);
+    });
+}
+
+```
+
+### 2. The "Travel" Mechanic (Visual Movement)
+
+Instead of `map.flyTo`, we will animate the markers. We can use a simple `setInterval` or a CSS transition to move the character tokens toward the target location.
+
+```javascript
+function startTravel(locationId) {
+    if (campaignState.isTraveling) return;
+    
+    const loc = locationStorage.get(locationId).data;
+    const targetLatLng = [loc.lat, loc.lng];
+    
+    campaignState.isTraveling = true;
+    
+    // Find our main party tokens (e.g., Washington)
+    const partyTokens = currentTokens.filter(t => t.side === 'Continental');
+
+    // Visual cue: Change sidebar to "In Transit"
+    document.body.classList.add('traveling');
+
+    // Simulate movement: move markers every 100ms
+    let step = 0;
+    const totalSteps = 50;
+    
+    const moveInterval = setInterval(() => {
+        step++;
+        partyTokens.forEach(token => {
+            // Simple linear interpolation for demonstration
+            const currentLat = token.gps.lat + (loc.lat - token.gps.lat) * (step / totalSteps);
+            const currentLng = token.gps.lng + (loc.lng - token.gps.lng) * (step / totalSteps);
+            
+            // Update token data
+            token.gps.lat = currentLat;
+            token.gps.lng = currentLng;
+            
+            // Check for Random Encounter (2% chance per step)
+            if (Math.random() < 0.02) {
+                clearInterval(moveInterval);
+                triggerEncounter();
+            }
+        });
+        
+        renderWorldMarkers(); // Re-draw markers at new positions
+        
+        if (step >= totalSteps) {
+            clearInterval(moveInterval);
+            campaignState.isTraveling = false;
+            document.body.classList.remove('traveling');
+            enterTacticalView(locationStorage.get(locationId));
+        }
+    }, 100);
+}
+
+```
+
+### 3. Random Encounter Popups
+
+This adds the "threat" element you mentioned. When travel is interrupted, we throw a modal over the screen.
+
+```javascript
+function triggerEncounter() {
+    const encounterOverlay = document.createElement('div');
+    encounterOverlay.className = 'encounter-modal';
+    encounterOverlay.innerHTML = `
+        <div class="encounter-content">
+            <h1>⚠️ AMBUSH!</h1>
+            <p>A Hessian picket line has spotted your movement through the woods.</p>
+            <button onclick="resolveEncounter('fight')">Battle Stations</button>
+            <button onclick="resolveEncounter('flee')">Attempt to Retreat</button>
+        </div>
+    `;
+    document.body.appendChild(encounterOverlay);
+}
+
+```
+
+### 4. New Locations to Add
+
+Since the Continental Army is crossing the Delaware and marching toward Trenton, here are three high-stakes locations you can add to your `locations.json`:
+
+1. **McConkey's Ferry (The Launch):** The starting point. High ice hazard.
+2. **The Birmingham Meeting House:** A key fork in the road where the army splits into Greene’s and Sullivan’s columns.
+3. **The Hessian Picket Post:** A small outbuilding a mile north of town. This is the perfect spot for a forced "Travel" encounter.
+
+### CSS for the Travel State
+
+Add this to your stylesheet to give a visual "fog of war" or "movement" feel:
+
+```css
+body.traveling #map {
+    filter: sepia(0.3) contrast(1.1);
+    cursor: wait;
+}
+
+.encounter-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+```
+
+[The Battle of Trenton Strategy and Tactics](https://www.youtube.com/watch?v=GLK8nT976YM)
+
+This video provides a deep dive into the tactical movement and travel systems used in TTRPGs, which is perfect for refining how your "Travel" feature handles environmental challenges like the sleet and snow of 1776.
