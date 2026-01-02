@@ -43,6 +43,18 @@ export class CanvasRenderer {
       offsetY: 0
     };
 
+    // Pan and Zoom state for tactical map
+    this.panZoom = {
+      zoom: 1.0,
+      minZoom: 0.5,
+      maxZoom: 3.0,
+      panX: 0,
+      panY: 0,
+      isPanning: false,
+      panStartX: 0,
+      panStartY: 0
+    };
+
     this.selectedToken = null;
     this.hoveredToken = null;
 
@@ -82,6 +94,7 @@ export class CanvasRenderer {
     this.canvas.addEventListener('mouseup', (e) => this._onMouseUp(e));
     this.canvas.addEventListener('mouseleave', (e) => this._onMouseLeave(e));
     this.canvas.addEventListener('click', (e) => this._onClick(e));
+    this.canvas.addEventListener('wheel', (e) => this._onWheel(e));
 
     // Resize observer
     window.addEventListener('resize', () => this._resize());
@@ -213,11 +226,16 @@ export class CanvasRenderer {
   }
 
   /**
-   * Render background tactical map
+   * Render background tactical map WITH PAN AND ZOOM
    * @private
    */
   _renderBackground() {
     if (!this.backgroundImage) return;
+
+    // Apply pan and zoom transformations
+    this.ctx.save();
+    this.ctx.translate(this.panZoom.panX, this.panZoom.panY);
+    this.ctx.scale(this.panZoom.zoom, this.panZoom.zoom);
 
     // Draw background image to fill entire canvas
     // Use object-fit: contain logic to preserve aspect ratio
@@ -242,11 +260,13 @@ export class CanvasRenderer {
 
     this.ctx.drawImage(
       this.backgroundImage,
-      offsetX,
-      offsetY,
-      drawWidth,
-      drawHeight
+      offsetX / this.panZoom.zoom,
+      offsetY / this.panZoom.zoom,
+      drawWidth / this.panZoom.zoom,
+      drawHeight / this.panZoom.zoom
     );
+
+    this.ctx.restore();
   }
 
   /**
@@ -412,13 +432,23 @@ export class CanvasRenderer {
    * @private
    */
   _onMouseDown(e) {
-    if (!this.config.enableDrag) return;
-
     e.stopPropagation(); // Prevent map drag
 
     const rect = this.canvas.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
+
+    // Middle click or space+click for panning
+    if (e.button === 1 || (e.button === 0 && e.shiftKey)) {
+      this.panZoom.isPanning = true;
+      this.panZoom.panStartX = x - this.panZoom.panX;
+      this.panZoom.panStartY = y - this.panZoom.panY;
+      this.canvas.style.cursor = 'move';
+      return;
+    }
+
+    // Token dragging (DM mode only)
+    if (!this.config.enableDrag) return;
 
     const token = this._getTokenAt(x, y);
 
@@ -445,7 +475,15 @@ export class CanvasRenderer {
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
-    // Handle dragging
+    // Handle map panning
+    if (this.panZoom.isPanning) {
+      this.panZoom.panX = x - this.panZoom.panStartX;
+      this.panZoom.panY = y - this.panZoom.panStartY;
+      this.render();
+      return;
+    }
+
+    // Handle token dragging
     if (this.dragState.isDragging && this.dragState.draggedToken) {
       const token = this.dragState.draggedToken;
 
@@ -491,7 +529,37 @@ export class CanvasRenderer {
 
     this.dragState.isDragging = false;
     this.dragState.draggedToken = null;
+    this.panZoom.isPanning = false;
     this.canvas.style.cursor = this.hoveredToken ? 'pointer' : 'default';
+  }
+
+  /**
+   * Mouse wheel event (zoom)
+   * @private
+   */
+  _onWheel(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const rect = this.canvas.getBoundingClientRect();
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+
+    // Zoom in or out
+    const zoomDelta = e.deltaY > 0 ? 0.9 : 1.1;
+    const oldZoom = this.panZoom.zoom;
+    const newZoom = Math.max(
+      this.panZoom.minZoom,
+      Math.min(this.panZoom.maxZoom, oldZoom * zoomDelta)
+    );
+
+    // Adjust pan to zoom towards mouse cursor
+    const zoomRatio = newZoom / oldZoom;
+    this.panZoom.panX = mouseX - (mouseX - this.panZoom.panX) * zoomRatio;
+    this.panZoom.panY = mouseY - (mouseY - this.panZoom.panY) * zoomRatio;
+    this.panZoom.zoom = newZoom;
+
+    this.render();
   }
 
   /**

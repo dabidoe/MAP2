@@ -267,29 +267,8 @@ class WarRoom1776 {
       }, tokensAtLocation);
     });
 
-    // Render character tokens on world map
-    state.tokens.forEach(token => {
-      // Only show friendly tokens in PLAYER mode
-      if (state.mode === 'PLAYER' && token.side !== 'Continental') {
-        return;
-      }
-
-      const isDraggable = state.mode === 'DM';
-
-      this.mapEngine.addTokenMarker(token, isDraggable, (movedToken, newPos) => {
-        console.log(`Token ${movedToken.name} moved to:`, newPos);
-        this.gameState.updateTokenPosition(movedToken.tokenId, {
-          lat: newPos.lat,
-          lng: newPos.lng
-        });
-
-        // Emit to server
-        this.socket?.emit('token_move', {
-          tokenId: movedToken.tokenId,
-          gps: { lat: newPos.lat, lng: newPos.lng }
-        });
-      });
-    });
+    // DO NOT render character tokens on world map
+    // Characters are only visible in tactical view
   }
 
   /**

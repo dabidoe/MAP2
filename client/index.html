@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com; img-src 'self' data: https:; connect-src 'self';">
     <title>War Room 1776 - Episode 0.1: Winter Ambush</title>
 
     <!-- Leaflet CSS -->
@@ -77,6 +78,19 @@
             <h3>INITIATIVE</h3>
         </div>
         <div id="initiative-list"></div>
+    </div>
+
+    <!-- Floating HUD: Console/Chat (Bottom-Left) -->
+    <div id="floating-console" class="hud-panel">
+        <div class="console-header">
+            <h3>⚔️ WAR ROOM CONSOLE</h3>
+        </div>
+        <div id="console-messages" class="console-messages">
+            <div class="console-message npc-message">
+                <span class="message-sender">Gen. Washington:</span>
+                <span class="message-text">Greetings soldiers, get warm by the fire. I'll be addressing the camp in a few minutes.</span>
+            </div>
+        </div>
     </div>
 
     <!-- External Libraries -->
