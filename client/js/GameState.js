@@ -1,16 +1,7 @@
 /**
  * Game State Manager
  * Centralized state management for the VTT
- * Single source of truth for all game data
- *
- * @typedef {Object} GameStateData
- * @property {string} mode - 'PLAYER' | 'DM'
- * @property {Array} tokens - All tokens
- * @property {Array} locations - All locations
- * @property {Array} characters - All characters
- * @property {Object} campaign - Campaign metadata
- * @property {Object} encounter - Active encounter (if any)
- * @property {Object} party - Party state
+ * JSON-PRIMARY: Loads directly from /data/*.json files
  */
 
 export class GameState {
@@ -24,7 +15,7 @@ export class GameState {
       locations: [],
       characters: [],
 
-      // Campaign
+      // Campaign (will be loaded from .env via API)
       campaign: {
         date: 'December 23, 1776',
         time: '23:45',
@@ -52,7 +43,8 @@ export class GameState {
       ui: {
         selectedToken: null,
         activeLocation: null,
-        mapMode: 'world' // 'world' or 'tactical'
+        mapMode: 'world', // 'world' or 'tactical'
+        sidebarCollapsed: false
       }
     };
 
@@ -62,7 +54,6 @@ export class GameState {
 
   /**
    * Get full state
-   * @returns {GameStateData}
    */
   getState() {
     return this.state;
@@ -70,8 +61,6 @@ export class GameState {
 
   /**
    * Get tokens for specific location
-   * @param {string} locationId
-   * @returns {Array}
    */
   getTokensAt(locationId) {
     return this.state.tokens.filter(t => t.locationId === locationId);
@@ -79,8 +68,6 @@ export class GameState {
 
   /**
    * Get tokens by side
-   * @param {string} side - 'Continental' | 'Hessian'
-   * @returns {Array}
    */
   getTokensBySide(side) {
     return this.state.tokens.filter(t => t.side === side);
@@ -88,8 +75,6 @@ export class GameState {
 
   /**
    * Get location by ID
-   * @param {string} id
-   * @returns {Object|null}
    */
   getLocation(id) {
     return this.state.locations.find(l => l.id === id) || null;
@@ -97,8 +82,6 @@ export class GameState {
 
   /**
    * Get token by ID
-   * @param {string} tokenId
-   * @returns {Object|null}
    */
   getToken(tokenId) {
     return this.state.tokens.find(t => t.tokenId === tokenId) || null;
@@ -106,8 +89,6 @@ export class GameState {
 
   /**
    * Update token
-   * @param {string} tokenId
-   * @param {Object} updates
    */
   updateToken(tokenId, updates) {
     const token = this.getToken(tokenId);
@@ -119,9 +100,6 @@ export class GameState {
 
   /**
    * Update token position
-   * @param {string} tokenId
-   * @param {Object} gps - {lat, lng}
-   * @param {Object} grid - {posX, posY}
    */
   updateTokenPosition(tokenId, gps, grid) {
     const token = this.getToken(tokenId);
@@ -133,8 +111,7 @@ export class GameState {
   }
 
   /**
-   * Set tokens (from API)
-   * @param {Array} tokens
+   * Set tokens
    */
   setTokens(tokens) {
     this.state.tokens = tokens;
@@ -142,8 +119,7 @@ export class GameState {
   }
 
   /**
-   * Set locations (from API)
-   * @param {Array} locations
+   * Set locations
    */
   setLocations(locations) {
     this.state.locations = locations;
@@ -151,8 +127,7 @@ export class GameState {
   }
 
   /**
-   * Set characters (from API)
-   * @param {Array} characters
+   * Set characters
    */
   setCharacters(characters) {
     this.state.characters = characters;
@@ -161,7 +136,6 @@ export class GameState {
 
   /**
    * Update campaign state
-   * @param {Object} updates
    */
   updateCampaign(updates) {
     Object.assign(this.state.campaign, updates);
@@ -170,7 +144,6 @@ export class GameState {
 
   /**
    * Discover location
-   * @param {string} locationId
    */
   discoverLocation(locationId) {
     if (!this.state.party.discoveredLocations.includes(locationId)) {
@@ -181,8 +154,6 @@ export class GameState {
 
   /**
    * Check if location is discovered
-   * @param {string} locationId
-   * @returns {boolean}
    */
   isLocationDiscovered(locationId) {
     return this.state.party.discoveredLocations.includes(locationId);
@@ -190,7 +161,6 @@ export class GameState {
 
   /**
    * Start encounter
-   * @param {Object} encounter
    */
   startEncounter(encounter) {
     this.state.encounter = {
@@ -228,9 +198,6 @@ export class GameState {
 
   /**
    * Add to initiative
-   * @param {string} tokenId
-   * @param {string} name
-   * @param {number} roll
    */
   addToInitiative(tokenId, name, roll) {
     this.state.encounter.initiative.push({ tokenId, name, roll, hasActed: false });
@@ -248,7 +215,6 @@ export class GameState {
 
   /**
    * Set mode
-   * @param {string} mode - 'PLAYER' | 'DM'
    */
   setMode(mode) {
     this.state.mode = mode;
@@ -257,7 +223,6 @@ export class GameState {
 
   /**
    * Select token
-   * @param {Object|null} token
    */
   selectToken(token) {
     this.state.ui.selectedToken = token;
@@ -265,8 +230,7 @@ export class GameState {
   }
 
   /**
-   * Set active location (for tactical view)
-   * @param {Object|null} location
+   * Set active location
    */
   setActiveLocation(location) {
     this.state.ui.activeLocation = location;
@@ -275,9 +239,15 @@ export class GameState {
   }
 
   /**
+   * Toggle sidebar
+   */
+  toggleSidebar() {
+    this.state.ui.sidebarCollapsed = !this.state.ui.sidebarCollapsed;
+    this._notify('sidebarToggle', this.state.ui.sidebarCollapsed);
+  }
+
+  /**
    * Subscribe to state changes
-   * @param {string} event - Event name
-   * @param {Function} callback
    */
   on(event, callback) {
     if (!this.listeners.has(event)) {
@@ -287,9 +257,7 @@ export class GameState {
   }
 
   /**
-   * Unsubscribe from state changes
-   * @param {string} event
-   * @param {Function} callback
+   * Unsubscribe
    */
   off(event, callback) {
     if (this.listeners.has(event)) {
@@ -304,8 +272,6 @@ export class GameState {
   /**
    * Notify listeners
    * @private
-   * @param {string} event
-   * @param {*} data
    */
   _notify(event, data) {
     if (this.listeners.has(event)) {
@@ -318,58 +284,72 @@ export class GameState {
       });
     }
 
-    // Also trigger 'change' event for any state change
+    // Also trigger 'change' event
     if (event !== 'change') {
       this._notify('change', { event, data });
     }
   }
 
   /**
-   * Load state from API
-   * @param {string} apiUrl
+   * Load state from JSON files directly (JSON-PRIMARY strategy)
    */
-  async loadFromAPI(apiUrl = '/api/campaign') {
+  async loadFromJSON() {
     try {
-      const response = await fetch(apiUrl);
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      console.log('📦 Loading game data from JSON files...');
 
-      const data = await response.json();
+      // Load in parallel
+      const [tokensRes, locationsRes, charactersRes, configRes] = await Promise.all([
+        fetch('/data/tokens.json'),
+        fetch('/data/locations.json'),
+        fetch('/data/characters.json'),
+        fetch('/api/campaign').catch(() => null) // Optional: get env config
+      ]);
+
+      // Parse responses
+      const tokens = await tokensRes.json();
+      const locations = await locationsRes.json();
+      const characters = await charactersRes.json();
 
       // Set data
-      if (data.tokens) this.setTokens(data.tokens);
-      if (data.locations) this.setLocations(data.locations);
-      if (data.characters) this.setCharacters(data.characters);
+      this.setTokens(tokens);
+      this.setLocations(locations);
+      this.setCharacters(characters);
 
-      // Update campaign config
-      if (data.config) {
-        this.updateCampaign({
-          date: data.config.date || this.state.campaign.date,
-          time: data.config.time || this.state.campaign.time,
-          weather: data.config.weather || this.state.campaign.weather
-        });
+      // Update campaign config if available
+      if (configRes && configRes.ok) {
+        const config = await configRes.json();
+        if (config.config) {
+          this.updateCampaign({
+            date: config.config.date || this.state.campaign.date,
+            time: config.config.time || this.state.campaign.time,
+            weather: config.config.weather || this.state.campaign.weather
+          });
+        }
       }
 
-      console.log('✅ Game state loaded from API');
-      this._notify('stateLoaded', data);
+      console.log('✅ Game data loaded from JSON');
+      console.log(`  - ${tokens.length} tokens`);
+      console.log(`  - ${locations.length} locations`);
+      console.log(`  - ${characters.length} characters`);
 
-      return data;
+      this._notify('stateLoaded', { tokens, locations, characters });
+
+      return { tokens, locations, characters };
     } catch (error) {
-      console.error('Failed to load game state:', error);
+      console.error('❌ Failed to load game data:', error);
       throw error;
     }
   }
 
   /**
-   * Serialize state to JSON
-   * @returns {string}
+   * Serialize state
    */
   serialize() {
     return JSON.stringify(this.state, null, 2);
   }
 
   /**
-   * Load state from JSON
-   * @param {string} json
+   * Deserialize state
    */
   deserialize(json) {
     try {

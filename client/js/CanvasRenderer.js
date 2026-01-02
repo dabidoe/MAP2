@@ -188,29 +188,19 @@ export class CanvasRenderer {
     const size = this.config.tokenSize;
     const halfSize = size / 2;
 
-    // Draw selection highlight
-    if (this.selectedToken === token) {
-      this.ctx.strokeStyle = '#FFD700'; // Gold
-      this.ctx.lineWidth = 4;
-      this.ctx.beginPath();
-      this.ctx.arc(x, y, halfSize + 4, 0, Math.PI * 2);
-      this.ctx.stroke();
-    }
-
-    // Draw hover highlight
-    if (this.hoveredToken === token && this.selectedToken !== token) {
-      this.ctx.strokeStyle = '#FFF';
-      this.ctx.lineWidth = 2;
-      this.ctx.beginPath();
-      this.ctx.arc(x, y, halfSize + 2, 0, Math.PI * 2);
-      this.ctx.stroke();
-    }
+    // Draw drop shadow
+    this.ctx.save();
+    this.ctx.shadowColor = 'rgba(0, 0, 0, 0.6)';
+    this.ctx.shadowBlur = 8;
+    this.ctx.shadowOffsetX = 3;
+    this.ctx.shadowOffsetY = 3;
 
     // Draw token circle background
     this.ctx.fillStyle = '#000';
     this.ctx.beginPath();
     this.ctx.arc(x, y, halfSize, 0, Math.PI * 2);
     this.ctx.fill();
+    this.ctx.restore();
 
     // Draw token icon (clipped to circle)
     const img = this.images.get(token.icon);
@@ -229,13 +219,30 @@ export class CanvasRenderer {
       this.ctx.restore();
     }
 
-    // Draw side-colored border
-    const borderColor = token.side === 'Continental' ? '#4CAF50' : '#f44336';
-    this.ctx.strokeStyle = borderColor;
-    this.ctx.lineWidth = this.config.borderWidth;
+    // Draw gold border (VTT style)
+    this.ctx.strokeStyle = '#d4af37'; // Gold
+    this.ctx.lineWidth = 3;
     this.ctx.beginPath();
     this.ctx.arc(x, y, halfSize, 0, Math.PI * 2);
     this.ctx.stroke();
+
+    // Draw selection highlight (brighter gold)
+    if (this.selectedToken === token) {
+      this.ctx.strokeStyle = '#FFD700';
+      this.ctx.lineWidth = 4;
+      this.ctx.beginPath();
+      this.ctx.arc(x, y, halfSize + 4, 0, Math.PI * 2);
+      this.ctx.stroke();
+    }
+
+    // Draw hover highlight
+    if (this.hoveredToken === token && this.selectedToken !== token) {
+      this.ctx.strokeStyle = '#FFF';
+      this.ctx.lineWidth = 2;
+      this.ctx.beginPath();
+      this.ctx.arc(x, y, halfSize + 2, 0, Math.PI * 2);
+      this.ctx.stroke();
+    }
 
     // Draw HP bar (if enabled and stats available)
     if (this.config.showHP && token.stats && token.stats.hp !== undefined) {

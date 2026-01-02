@@ -38,8 +38,8 @@ class WarRoom1776 {
     console.log('═══════════════════════════════════════════');
 
     try {
-      // Load game data from API
-      await this.gameState.loadFromAPI('/api/campaign');
+      // Load game data from JSON files (JSON-PRIMARY strategy)
+      await this.gameState.loadFromJSON();
 
       // Initialize map engine
       this.mapEngine = new MapEngine('map', {
