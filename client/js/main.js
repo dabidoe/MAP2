@@ -78,25 +78,25 @@ class WarRoom1776 {
 
   /**
    * Setup tactical container for Canvas rendering
+   * TRUE FULLSCREEN (100vw x 100vh)
    * @private
    */
   _setupTacticalContainer() {
-    // Create tactical container (positioned over map)
+    // Create tactical container (TRUE FULLSCREEN)
     this.tacticalContainer = document.createElement('div');
-    this.tacticalContainer.id = 'tactical-container';
-    this.tacticalContainer.style.position = 'absolute';
-    this.tacticalContainer.style.top = '50%';
-    this.tacticalContainer.style.left = '50%';
-    this.tacticalContainer.style.transform = 'translate(-50%, -50%)';
-    this.tacticalContainer.style.width = '90vh';
-    this.tacticalContainer.style.height = '90vh';
-    this.tacticalContainer.style.zIndex = '5000';
-    this.tacticalContainer.style.display = 'none';
-    this.tacticalContainer.style.border = '5px solid #c5a959';
-    this.tacticalContainer.style.background = '#000';
-    this.tacticalContainer.style.boxShadow = '0 0 30px rgba(0,0,0,0.9)';
+    this.tacticalContainer.id = 'tactical-canvas-container';
+    this.tacticalContainer.style.cssText = `
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 100;
+      display: none;
+      background: #000;
+    `;
 
-    document.getElementById('map-viewport').appendChild(this.tacticalContainer);
+    document.body.appendChild(this.tacticalContainer);
 
     // Initialize Canvas renderer (will be shown when entering tactical view)
     this.canvasRenderer = new CanvasRenderer(this.tacticalContainer, {
@@ -147,12 +147,6 @@ class WarRoom1776 {
     this.dmToggle.style.zIndex = '6000';
     this.dmToggle.onclick = () => this._toggleDMMode();
     document.body.appendChild(this.dmToggle);
-
-    // Sidebar toggle button (already in HTML)
-    const sidebarToggle = document.getElementById('sidebar-toggle');
-    if (sidebarToggle) {
-      sidebarToggle.onclick = () => this._toggleSidebar();
-    }
 
     // DM Map Switcher (for cycling through tactical map variants)
     this._createMapSwitcher();
@@ -370,22 +364,6 @@ class WarRoom1776 {
     this.gameState.toggleMode();
     const mode = this.gameState.getState().mode;
     alert(`Switched to ${mode} Mode`);
-  }
-
-  /**
-   * Toggle sidebar collapse
-   * @private
-   */
-  _toggleSidebar() {
-    this.gameState.toggleSidebar();
-    const sidebar = document.getElementById('sidebar');
-    const isCollapsed = this.gameState.getState().ui.sidebarCollapsed;
-
-    if (isCollapsed) {
-      sidebar.classList.add('collapsed');
-    } else {
-      sidebar.classList.remove('collapsed');
-    }
   }
 
   /**

@@ -296,11 +296,21 @@ export class MapEngine {
       iconAnchor: [30, 30] // Center the icon
     });
 
+    // Create tactical briefing tooltip (on hover, above all tokens)
+    const tooltipContent = `
+      <div class="tactical-briefing">
+        <div class="briefing-header">${location.title}</div>
+        <div class="briefing-description">${location.description}</div>
+        <div class="briefing-hint">Click to enter tactical view</div>
+      </div>
+    `;
+
     const marker = L.marker([location.lat, location.lng], { icon })
-      .bindTooltip(`<b>${location.title}</b><br>${location.description}`, {
-        sticky: true,
-        className: 'location-tooltip',
-        offset: [0, -25]
+      .bindTooltip(tooltipContent, {
+        sticky: false,
+        className: 'briefing-tooltip',
+        offset: [0, -40],
+        direction: 'top'
       })
       .addTo(this.layers.markers);
 
@@ -483,6 +493,51 @@ export class MapEngine {
           opacity: 0.5;
           transform: translate(-50%, -50%) scale(0.95);
         }
+      }
+
+      /* Tactical Briefing Tooltip Styles (above all tokens) */
+      .briefing-tooltip {
+        background: rgba(26, 20, 16, 0.95) !important;
+        backdrop-filter: blur(10px);
+        border: 2px solid #c5a959 !important;
+        border-radius: 8px !important;
+        padding: 0 !important;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8) !important;
+        z-index: 6000 !important;
+      }
+
+      .tactical-briefing {
+        padding: 12px 16px;
+        min-width: 220px;
+        font-family: 'Cinzel', serif;
+      }
+
+      .briefing-header {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #c5a959;
+        letter-spacing: 1.5px;
+        margin-bottom: 8px;
+        text-align: center;
+        border-bottom: 1px solid rgba(197, 169, 89, 0.3);
+        padding-bottom: 6px;
+      }
+
+      .briefing-description {
+        font-size: 0.8rem;
+        color: #e2d1b3;
+        line-height: 1.4;
+        margin-bottom: 8px;
+      }
+
+      .briefing-hint {
+        font-size: 0.7rem;
+        color: #8b7355;
+        font-style: italic;
+        text-align: center;
+        margin-top: 8px;
+        padding-top: 6px;
+        border-top: 1px solid rgba(197, 169, 89, 0.2);
       }
     `;
     document.head.appendChild(style);
