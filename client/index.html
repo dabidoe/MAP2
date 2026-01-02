@@ -12,52 +12,66 @@
     <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
-    <div id="app-container">
-        <!-- Command Dashboard Sidebar -->
-        <div id="sidebar">
-            <button id="sidebar-toggle" class="sidebar-toggle" title="Toggle Sidebar">
-                <span class="toggle-icon">◀</span>
-            </button>
-            <div class="campaign-header">
-                <h2 class="cinzel">War Room 1776</h2>
-                <div class="env-info">
-                    <span id="campaign-date">Loading...</span><br>
-                    <span id="campaign-time">Loading...</span><br>
-                    <span id="campaign-weather">Loading...</span>
-                </div>
-                <div class="morale-box">
-                    <label>ARMY MORALE</label>
-                    <div class="morale-bar">
-                        <div class="fill" id="morale-fill" style="width: 30%;"></div>
-                    </div>
-                </div>
-            </div>
+    <!-- Full-Screen Map Container -->
+    <div id="map-viewport">
+        <div id="map"></div>
+    </div>
 
-            <!-- Module B: Selected Token Stats -->
-            <div id="token-info" class="sidebar-module" style="display: none;">
-                <h3 class="sidebar-subhead">SELECTED UNIT</h3>
-                <div id="token-stats">Select a token to view stats</div>
+    <!-- Floating HUD: Atlas Panel (Top-Left) -->
+    <div id="floating-atlas" class="hud-panel">
+        <div class="atlas-header">
+            <h2 class="cinzel">War Room 1776</h2>
+        </div>
+        <div class="atlas-info">
+            <div class="info-row">
+                <span class="info-label">DATE</span>
+                <span id="campaign-date" class="info-value">Loading...</span>
             </div>
-
-            <!-- Module C: Combat Tracker -->
-            <div id="combat-tracker" class="sidebar-module" style="display: none;">
-                <h3 class="sidebar-subhead">INITIATIVE</h3>
-                <div id="initiative-list"></div>
+            <div class="info-row">
+                <span class="info-label">TIME</span>
+                <span id="campaign-time" class="info-value">Loading...</span>
             </div>
-
-            <!-- Strategic Objectives -->
-            <div class="location-section">
-                <h3 class="sidebar-subhead">STRATEGIC OBJECTIVES</h3>
-                <p style="padding: 0 15px; font-size: 0.8rem; color: #a09580;">
-                    Click objective markers on the map to command travel.
-                </p>
+            <div class="info-row">
+                <span class="info-label">WEATHER</span>
+                <span id="campaign-weather" class="info-value">Loading...</span>
             </div>
         </div>
-
-        <!-- Map Viewport -->
-        <div id="map-viewport">
-            <div id="map"></div>
+        <div class="morale-section">
+            <label class="morale-label">ARMY MORALE</label>
+            <div class="morale-bar">
+                <div class="fill" id="morale-fill" style="width: 30%;"></div>
+            </div>
         </div>
+    </div>
+
+    <!-- Floating HUD: Unit Card (Bottom-Right, contextual) -->
+    <div id="floating-unit-card" class="hud-panel" style="display: none;">
+        <div class="card-header">
+            <h3 id="unit-name">Unit Name</h3>
+            <button id="close-unit-card" class="close-btn">✕</button>
+        </div>
+        <div class="card-stats">
+            <div class="stat-row">
+                <span class="stat-label">HP</span>
+                <span id="unit-hp" class="stat-value">0/0</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">AC</span>
+                <span id="unit-ac" class="stat-value">0</span>
+            </div>
+        </div>
+        <div class="card-actions">
+            <h4>Actions</h4>
+            <div id="unit-actions"></div>
+        </div>
+    </div>
+
+    <!-- Floating HUD: Combat Tracker (contextual) -->
+    <div id="floating-combat-tracker" class="hud-panel" style="display: none;">
+        <div class="tracker-header">
+            <h3>INITIATIVE</h3>
+        </div>
+        <div id="initiative-list"></div>
     </div>
 
     <!-- External Libraries -->

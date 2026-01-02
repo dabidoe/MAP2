@@ -1,138 +1,33 @@
+/* ===================================
+   WAR ROOM 1776 - FLOATING HUD STYLE
+   =================================== */
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Cinzel', serif;
-    background: #1a1410;
+    background: #000;
     color: #e2d1b3;
-    overflow: hidden;
-    height: 100vh;
-}
-
-#app-container {
-    display: flex;
+    overflow: hidden; /* No scrollbars - native desktop game feel */
     height: 100vh;
     width: 100vw;
 }
 
-#sidebar {
-    width: 230px; /* SHRUNK BY 40% (Original 380px) */
-    background: #1a1410;
-    border-right: 2px solid #c5a959;
-    display: flex;
-    flex-direction: column;
-    z-index: 1000;
-    overflow-y: auto;
-    position: relative;
-    transition: all 0.3s ease-in-out;
-}
-
-#sidebar.collapsed {
-    width: 0;
-    border-right: none;
-    overflow: hidden;
-}
-
-.sidebar-toggle {
-    position: absolute;
-    top: 50%;
-    right: -30px;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 60px;
-    background: #261f18;
-    border: 2px solid #c5a959;
-    border-left: none;
-    border-radius: 0 8px 8px 0;
-    color: #c5a959;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2000;
-    transition: all 0.2s ease;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.sidebar-toggle:hover {
-    background: #3a2f1f;
-    box-shadow: 2px 0 15px rgba(197, 169, 89, 0.3);
-}
-
-.toggle-icon {
-    font-size: 1.2rem;
-    transition: transform 0.3s ease;
-}
-
-#sidebar.collapsed .toggle-icon {
-    transform: rotate(180deg);
-}
-
-.sidebar-module {
-    transition: opacity 0.3s ease-in-out;
-}
-
-.sidebar-module.hidden {
-    display: none !important;
-}
-
-.campaign-header {
-    padding: 15px;
-    background: #261f18;
-    border-bottom: 1px solid #3d3024;
-}
-
-.cinzel { 
-    font-family: 'Cinzel', serif; 
-    letter-spacing: 1.5px;
-    margin: 0;
-    color: #c5a959;
-    font-size: 1.1rem;
-}
-
-.env-info {
-    font-size: 0.8rem;
-    margin: 8px 0;
-    color: #a09580;
-}
-
-.morale-box {
-    margin-top: 10px;
-}
-
-.morale-box label {
-    font-size: 0.65rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.morale-bar {
-    height: 6px;
-    background: #111;
-    border: 1px solid #4a3b2d;
-    margin-top: 4px;
-}
-
-.morale-bar .fill {
-    height: 100%;
-    background: #4CAF50;
-    transition: width 0.5s ease;
-}
-
-.location-section {
-    padding: 10px 0;
-}
-
-.sidebar-subhead {
-    font-size: 0.75rem;
-    padding: 0 15px;
-    color: #c5a959;
-    letter-spacing: 1.2px;
-}
-
+/* Full-Screen Map */
 #map-viewport {
-    flex: 1;
-    position: relative;
-    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
 }
 
 #map {
@@ -140,100 +35,340 @@ body {
     height: 100%;
 }
 
-.parchment-container {
-    filter: sepia(0.4) contrast(1.1) brightness(0.8);
-}
-
-.tactical-map-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90vh;
-    height: 90vh;
-    z-index: 5000;
+/* Tactical Canvas (100% viewport when active) */
+#tactical-canvas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
     display: none;
-    border: 5px solid #c5a959;
     background: #000;
 }
 
-body.tactical-active .tactical-map-container {
+#tactical-canvas {
+    width: 100%;
+    height: 100%;
     display: block;
 }
 
-.tactical-map-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
+/* ===================================
+   FLOATING HUD PANELS (Glassmorphism)
+   =================================== */
 
-.tactical-token {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-}
-
-.character-chip {
-    border: 2px solid #c5a959;
-    border-radius: 50%;
-    background: #000;
-}
-
-.location-token div {
-    transition: transform 0.2s;
-    cursor: pointer;
-}
-
-.location-token div:hover {
-    transform: scale(1.3);
-    background: #e2d1b3 !important;
-}
-
-.encounter-modal {
+.hud-panel {
     position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.85);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+    background: rgba(26, 20, 16, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 2px solid rgba(197, 169, 89, 0.6);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    z-index: 5000;
+    font-family: 'Cinzel', serif;
+    transition: all 0.3s ease-in-out;
 }
 
-.encounter-content {
-    background: #1a1410;
-    border: 3px solid #f44336;
-    padding: 30px;
+.hud-panel:hover {
+    border-color: rgba(197, 169, 89, 0.9);
+    box-shadow: 0 8px 40px rgba(197, 169, 89, 0.3);
+}
+
+/* ===================================
+   FLOATING ATLAS (Top-Left)
+   =================================== */
+
+#floating-atlas {
+    top: 20px;
+    left: 20px;
+    min-width: 280px;
+}
+
+.atlas-header h2 {
+    font-size: 1.2rem;
+    color: #c5a959;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.atlas-info {
+    margin-bottom: 15px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(197, 169, 89, 0.2);
+}
+
+.info-label {
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #8b7355;
+}
+
+.info-value {
+    font-size: 0.85rem;
+    color: #e2d1b3;
+}
+
+.morale-section {
+    margin-top: 15px;
+}
+
+.morale-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #8b7355;
+    margin-bottom: 6px;
+}
+
+.morale-bar {
+    height: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #4a3b2d;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.morale-bar .fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4CAF50, #66BB6A);
+    transition: width 0.5s ease;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.6);
+}
+
+/* ===================================
+   FLOATING UNIT CARD (Bottom-Right)
+   =================================== */
+
+#floating-unit-card {
+    bottom: 20px;
+    right: 20px;
+    min-width: 320px;
     max-width: 400px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(197, 169, 89, 0.4);
+}
+
+.card-header h3 {
+    font-size: 1.1rem;
+    color: #c5a959;
+    letter-spacing: 1.5px;
+}
+
+.close-btn {
+    background: transparent;
+    border: 1px solid rgba(197, 169, 89, 0.5);
+    color: #c5a959;
+    font-size: 1.2rem;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+    background: rgba(197, 169, 89, 0.2);
+    border-color: #c5a959;
+}
+
+.card-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.stat-row {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(197, 169, 89, 0.3);
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    color: #8b7355;
+    margin-bottom: 4px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.1rem;
+    color: #e2d1b3;
+    font-weight: bold;
+}
+
+.card-actions {
+    margin-top: 15px;
+}
+
+.card-actions h4 {
+    font-size: 0.8rem;
+    color: #c5a959;
+    letter-spacing: 1.2px;
+    margin-bottom: 10px;
+}
+
+#unit-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.action-btn {
+    background: rgba(197, 169, 89, 0.15);
+    border: 1px solid rgba(197, 169, 89, 0.5);
+    color: #e2d1b3;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    background: rgba(197, 169, 89, 0.3);
+    border-color: #c5a959;
+    transform: translateX(4px);
+}
+
+/* ===================================
+   FLOATING COMBAT TRACKER (Top-Right)
+   =================================== */
+
+#floating-combat-tracker {
+    top: 20px;
+    right: 20px;
+    min-width: 280px;
+}
+
+.tracker-header h3 {
+    font-size: 0.9rem;
+    color: #c5a959;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
     text-align: center;
 }
 
-.travel-btn {
-    width: 100%;
-    background: #c5a959;
-    color: #1a1410;
-    border: none;
-    padding: 10px;
-    margin-top: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    font-family: 'Cinzel', serif;
-    letter-spacing: 1px;
+#initiative-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-body.traveling #map {
-    filter: sepia(0.6) brightness(0.4);
-    cursor: wait;
+.initiative-item {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 6px;
+    border-left: 3px solid #c5a959;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.initiative-name {
+    font-size: 0.85rem;
+    color: #e2d1b3;
+}
+
+.initiative-roll {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #c5a959;
+}
+
+/* ===================================
+   UTILITY BUTTONS
+   =================================== */
 
 .cycle-button {
-    background: #c5a959;
-    color: #1a1410;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
+    background: rgba(26, 20, 16, 0.9);
+    border: 2px solid #c5a959;
+    color: #e2d1b3;
+    padding: 10px 20px;
+    border-radius: 8px;
     font-family: 'Cinzel', serif;
-    font-weight: bold;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.cycle-button:hover {
+    background: rgba(197, 169, 89, 0.2);
+    border-color: #FFD700;
+    box-shadow: 0 4px 20px rgba(197, 169, 89, 0.4);
+    transform: translateY(-2px);
+}
+
+/* ===================================
+   CINZEL FONT
+   =================================== */
+
+.cinzel {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1.5px;
+}
+
+/* ===================================
+   TACTICAL MODE OVERRIDES
+   =================================== */
+
+body.tactical-active #map-viewport {
+    display: none;
+}
+
+body.tactical-active #tactical-canvas-container {
+    display: block;
+}
+
+/* ===================================
+   RESPONSIVE (Keep HUD readable on smaller screens)
+   =================================== */
+
+@media (max-width: 768px) {
+    .hud-panel {
+        padding: 12px;
+        min-width: 220px;
+    }
+
+    #floating-atlas {
+        top: 10px;
+        left: 10px;
+    }
+
+    #floating-unit-card {
+        bottom: 10px;
+        right: 10px;
+        min-width: 260px;
+    }
+
+    #floating-combat-tracker {
+        top: 10px;
+        right: 10px;
+    }
 }
