@@ -257,18 +257,63 @@ function enterTacticalView(loc) {
 
 function renderTacticalTokens() {
     tokenPlane.innerHTML = '';
+    console.log(`Rendering tactical tokens for location: ${activeLocationId}`);
+    console.log(`Total tokens: ${currentTokens.length}`);
+
     currentTokens.forEach(token => {
+        console.log(`Token ${token.name}: locationId=${token.locationId}, activeLocationId=${activeLocationId}, hasGrid=${!!token.grid}`);
+
         if (token.locationId === activeLocationId && token.grid) {
             const tokenEl = document.createElement('div');
             tokenEl.className = 'tactical-token';
             tokenEl.style.left = `${token.grid.posX}%`;
             tokenEl.style.top = `${token.grid.posY}%`;
+            tokenEl.style.cursor = GMSession.mode === 'DM' ? 'grab' : 'default';
             tokenEl.innerHTML = `
                 <img src="${token.icon}" style="width:100%; height:100%; border-radius:50%; border: 3px solid ${token.side === 'Continental' ? '#4CAF50' : '#f44336'};">
             `;
+
+            // Add drag functionality for DM mode
+            if (GMSession.mode === 'DM') {
+                let isDragging = false;
+
+                tokenEl.addEventListener('mousedown', (e) => {
+                    isDragging = true;
+                    tokenEl.style.cursor = 'grabbing';
+                    e.preventDefault();
+                });
+
+                document.addEventListener('mousemove', (e) => {
+                    if (!isDragging) return;
+
+                    const rect = tacticalContainer.getBoundingClientRect();
+                    const x = ((e.clientX - rect.left) / rect.width) * 100;
+                    const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+                    // Clamp to container bounds
+                    token.grid.posX = Math.max(0, Math.min(100, x));
+                    token.grid.posY = Math.max(0, Math.min(100, y));
+
+                    tokenEl.style.left = `${token.grid.posX}%`;
+                    tokenEl.style.top = `${token.grid.posY}%`;
+                });
+
+                document.addEventListener('mouseup', () => {
+                    if (isDragging) {
+                        isDragging = false;
+                        tokenEl.style.cursor = 'grab';
+                        // TODO: Emit socket event to sync token position
+                        console.log(`Token ${token.name} moved to (${token.grid.posX}, ${token.grid.posY})`);
+                    }
+                });
+            }
+
             tokenPlane.appendChild(tokenEl);
+            console.log(`✓ Rendered token: ${token.name} at (${token.grid.posX}%, ${token.grid.posY}%)`);
         }
     });
+
+    console.log(`Rendered ${tokenPlane.children.length} tokens on tactical map`);
 }
 
 async function initCampaign() {
@@ -297,17 +342,26 @@ async function initCampaign() {
             const tokenData = await tokenRes.json();
 
             currentTokens = tokenData.map(token => {
-                const char = charData.find(c => (c._id?.$oid || c.characterId) === token.characterRef);
+                // Try to find matching character by name (since characterRef doesn't exist)
+                const char = charData.find(c => c.name === token.name);
                 return {
                     ...token,
-                    side: (token.name.includes('Washington') || token.name.includes('Greene') || token.side === 'Continental') ? 'Continental' : 'Hessian',
-                    icon: char ? char.icon : 'https://statsheet-cdn.b-cdn.net/images/placeholder.png',
-                    gps: { lat: token.lat, lng: token.lng },
-                    grid: { posX: token.posX, posY: token.posY }
+                    // Keep existing side or infer from name
+                    side: token.side || (token.name.includes('Washington') || token.name.includes('Greene')) ? 'Continental' : 'Hessian',
+                    // Use icon from token data (already defined) or fallback to character icon
+                    icon: token.icon || (char ? char.icon : 'https://statsheet-cdn.b-cdn.net/images/placeholder.png')
+                    // gps and grid already exist in token data - don't overwrite!
                 };
             });
+
+            console.log(`Loaded ${currentTokens.length} tokens:`);
+            currentTokens.forEach(t => {
+                console.log(`  - ${t.name} (${t.side}) at location ${t.locationId}`);
+                console.log(`    GPS: ${t.gps ? `(${t.gps.lat}, ${t.gps.lng})` : 'MISSING'}`);
+                console.log(`    Grid: ${t.grid ? `(${t.grid.posX}%, ${t.grid.posY}%)` : 'MISSING'}`);
+            });
         } catch (e) {
-            console.error("Data fetch failed.");
+            console.error("Data fetch failed:", e);
         }
 
         locations.forEach(loc => locationStorage.set(loc.id, { data: loc }));

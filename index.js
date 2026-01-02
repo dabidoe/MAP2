@@ -7,6 +7,7 @@ const path = require('path');
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
+app.use('/data', express.static(path.join(__dirname, 'data')));
 
 // Helper to flatten MongoDB objects
 function flattenMongo(obj) {
