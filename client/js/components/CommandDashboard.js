@@ -42,11 +42,35 @@ export class CommandDashboard {
     this.gameState.on('encounterStart', () => this._showCombat());
     this.gameState.on('encounterEnd', () => this._hideCombat());
     this.gameState.on('initiativeUpdate', (init) => this._updateInitiative(init));
+    this.gameState.on('locationChange', (location) => this._onMapModeChange(location));
 
     // Initial render
     this._updateCampaign(this.gameState.getState().campaign);
 
     console.log('✅ CommandDashboard initialized');
+  }
+
+  /**
+   * Handle map mode changes (world vs tactical)
+   * Context-aware module display
+   * @private
+   */
+  _onMapModeChange(location) {
+    const isTactical = location !== null;
+
+    if (isTactical) {
+      // Tactical mode: show token info and combat modules
+      this.elements.tokenInfo.classList.remove('hidden');
+      this.elements.combatTracker.classList.remove('hidden');
+    } else {
+      // World mode: hide token info (unless selected), hide combat (unless active)
+      if (!this.gameState.getState().ui.selectedToken) {
+        this.elements.tokenInfo.classList.add('hidden');
+      }
+      if (!this.gameState.getState().encounter.active) {
+        this.elements.combatTracker.classList.add('hidden');
+      }
+    }
   }
 
   /**

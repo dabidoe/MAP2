@@ -163,6 +163,46 @@ export class MapEngine {
   }
 
   /**
+   * Set tactical map image (for DM variant switching)
+   * @param {string} imageUrl - New tactical map URL
+   */
+  setTacticalMapImage(imageUrl) {
+    if (!this.layers.tactical || this.state.mode !== 'tactical') {
+      console.warn('Cannot change tactical map - not in tactical mode');
+      return;
+    }
+
+    const currentOpacity = this.layers.tactical.options.opacity || 1;
+    const bounds = this.layers.tactical.getBounds();
+
+    // Fade out current overlay
+    this.layers.tactical.setOpacity(0);
+
+    setTimeout(() => {
+      // Remove old overlay
+      this.map.removeLayer(this.layers.tactical);
+
+      // Create new overlay with same bounds
+      this.layers.tactical = L.imageOverlay(
+        imageUrl,
+        bounds,
+        {
+          opacity: 0,
+          interactive: false,
+          className: 'tactical-overlay'
+        }
+      ).addTo(this.map);
+
+      // Fade in new overlay
+      setTimeout(() => {
+        this.layers.tactical.setOpacity(currentOpacity);
+      }, 50);
+
+      console.log(`✨ Tactical map updated: ${imageUrl}`);
+    }, 300); // Wait for fade out
+  }
+
+  /**
    * Create tactical map overlay
    * @private
    * @param {Object} location - Location with tacticalMapUrl
@@ -210,6 +250,7 @@ export class MapEngine {
       .tactical-overlay {
         border: 3px solid #c5a959;
         box-shadow: 0 0 20px rgba(197, 169, 89, 0.5);
+        transition: opacity 0.3s ease-in-out;
       }
     `;
     if (!document.getElementById('tactical-overlay-style')) {
@@ -245,24 +286,30 @@ export class MapEngine {
     const icon = L.divIcon({
       className: 'location-marker',
       html: `
-        <div class="location-marker-inner"
-             style="background:#c5a959; border:2px solid #000; width:16px; height:16px;
-                    border-radius:50%; box-shadow: 0 0 10px rgba(0,0,0,0.5); cursor:pointer;">
+        <div class="location-portal-marker">
+          <div class="portal-ring"></div>
+          <div class="portal-ring-inner"></div>
+          <div class="portal-center"></div>
         </div>
       `,
-      iconSize: [16, 16]
+      iconSize: [60, 60],
+      iconAnchor: [30, 30] // Center the icon
     });
 
     const marker = L.marker([location.lat, location.lng], { icon })
       .bindTooltip(`<b>${location.title}</b><br>${location.description}`, {
         sticky: true,
-        className: 'location-tooltip'
+        className: 'location-tooltip',
+        offset: [0, -25]
       })
       .addTo(this.layers.markers);
 
     if (onClick) {
       marker.on('click', () => onClick(location));
     }
+
+    // Add portal marker styles
+    this._injectPortalStyles();
 
     return marker;
   }
@@ -346,6 +393,99 @@ export class MapEngine {
     } else if (event === 'locationExit') {
       this.listeners.onLocationExit = callback;
     }
+  }
+
+  /**
+   * Inject portal marker styles
+   * @private
+   */
+  _injectPortalStyles() {
+    if (document.getElementById('portal-marker-styles')) return;
+
+    const style = document.createElement('style');
+    style.id = 'portal-marker-styles';
+    style.textContent = `
+      .location-portal-marker {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+      }
+
+      .portal-ring {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+        border: 3px solid #c5a959;
+        border-radius: 50%;
+        box-shadow: 0 0 15px rgba(197, 169, 89, 0.6);
+        animation: portal-pulse 2s ease-in-out infinite;
+      }
+
+      .portal-ring-inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 35px;
+        height: 35px;
+        border: 2px solid rgba(197, 169, 89, 0.6);
+        border-radius: 50%;
+        animation: portal-pulse-inner 2s ease-in-out infinite reverse;
+      }
+
+      .portal-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        background: radial-gradient(circle, #c5a959, #8b7355);
+        border: 2px solid #000;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(197, 169, 89, 0.8),
+                    inset 0 0 5px rgba(0, 0, 0, 0.5);
+      }
+
+      .location-portal-marker:hover .portal-ring {
+        width: 55px;
+        height: 55px;
+        box-shadow: 0 0 25px rgba(197, 169, 89, 1);
+      }
+
+      .location-portal-marker:hover .portal-center {
+        background: radial-gradient(circle, #FFD700, #c5a959);
+        box-shadow: 0 0 20px rgba(255, 215, 0, 1),
+                    inset 0 0 5px rgba(0, 0, 0, 0.5);
+      }
+
+      @keyframes portal-pulse {
+        0%, 100% {
+          opacity: 1;
+          transform: translate(-50%, -50%) scale(1);
+        }
+        50% {
+          opacity: 0.7;
+          transform: translate(-50%, -50%) scale(1.05);
+        }
+      }
+
+      @keyframes portal-pulse-inner {
+        0%, 100% {
+          opacity: 0.8;
+          transform: translate(-50%, -50%) scale(1);
+        }
+        50% {
+          opacity: 0.5;
+          transform: translate(-50%, -50%) scale(0.95);
+        }
+      }
+    `;
+    document.head.appendChild(style);
   }
 
   /**

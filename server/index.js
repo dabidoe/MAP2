@@ -70,7 +70,10 @@ io.on('connection', (socket) => {
 // Connect to MongoDB and start server
 const startServer = async () => {
   try {
-    await connectDB();
+    // Start MongoDB connection (non-blocking - JSON files used as fallback)
+    connectDB().catch((err) => {
+      console.warn('⚠️  MongoDB unavailable, using JSON-only mode');
+    });
 
     httpServer.listen(PORT, '0.0.0.0', () => {
       console.log('═══════════════════════════════════════════');
@@ -80,6 +83,7 @@ const startServer = async () => {
       console.log(`📅 Campaign Date: ${process.env.CAMPAIGN_DATE}`);
       console.log(`⏰ Time: ${process.env.CAMPAIGN_START_TIME}`);
       console.log(`❄️  Weather: ${process.env.WEATHER}`);
+      console.log('💾 Data Mode: JSON-Primary (MongoDB optional)');
       console.log('═══════════════════════════════════════════');
     });
   } catch (error) {

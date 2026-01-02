@@ -22,6 +22,57 @@ body {
     flex-direction: column;
     z-index: 1000;
     overflow-y: auto;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+#sidebar.collapsed {
+    width: 0;
+    border-right: none;
+    overflow: hidden;
+}
+
+.sidebar-toggle {
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 60px;
+    background: #261f18;
+    border: 2px solid #c5a959;
+    border-left: none;
+    border-radius: 0 8px 8px 0;
+    color: #c5a959;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    transition: all 0.2s ease;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar-toggle:hover {
+    background: #3a2f1f;
+    box-shadow: 2px 0 15px rgba(197, 169, 89, 0.3);
+}
+
+.toggle-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+#sidebar.collapsed .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.sidebar-module {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.sidebar-module.hidden {
+    display: none !important;
 }
 
 .campaign-header {
