@@ -259,9 +259,12 @@ class WarRoom1776 {
         return;
       }
 
+      // Get tokens at this location for tooltip
+      const tokensAtLocation = this.gameState.getTokensAt(location.id);
+
       this.mapEngine.addLocationMarker(location, (loc) => {
         this._enterTacticalView(loc);
-      });
+      }, tokensAtLocation);
     });
 
     // Render character tokens on world map
@@ -291,9 +294,10 @@ class WarRoom1776 {
 
   /**
    * Enter tactical view for a location
+   * CRITICAL: Await background image load before rendering tokens
    * @private
    */
-  _enterTacticalView(location) {
+  async _enterTacticalView(location) {
     console.log(`Entering tactical view: ${location.title}`);
 
     this.gameState.setActiveLocation(location);
@@ -305,13 +309,24 @@ class WarRoom1776 {
     // Show tactical container
     this.tacticalContainer.style.display = 'block';
 
+    // Add tactical-active class for styling (hide world map)
+    document.body.classList.add('tactical-active');
+
+    // CRITICAL: Load background image FIRST, await completion
+    try {
+      console.log('⏳ Loading tactical map background...');
+      await this.canvasRenderer.setBackgroundImage(location.tacticalMapUrl);
+      console.log('✅ Background loaded, now loading tokens...');
+    } catch (error) {
+      console.error('❌ Failed to load tactical background:', error);
+    }
+
     // Get tokens at this location
     const tokens = this.gameState.getTokensAt(location.id);
-
     console.log(`Found ${tokens.length} tokens at ${location.id}:`, tokens.map(t => t.name));
 
-    // Render tokens on canvas
-    this.canvasRenderer.setTokens(tokens);
+    // AFTER background is loaded, render tokens on canvas
+    await this.canvasRenderer.setTokens(tokens);
 
     // Show back button
     this.backButton.style.display = 'block';
@@ -321,8 +336,7 @@ class WarRoom1776 {
       this.mapSwitcher.style.display = 'block';
     }
 
-    // Add tactical-active class for styling
-    document.body.classList.add('tactical-active');
+    console.log('✅ Tactical view fully loaded');
   }
 
   /**

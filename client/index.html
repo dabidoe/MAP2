@@ -17,12 +17,17 @@
         <div id="map"></div>
     </div>
 
-    <!-- Floating HUD: Atlas Panel (Top-Left) -->
+    <!-- Floating HUD: Atlas Panel (Top-Left) - Contextual -->
     <div id="floating-atlas" class="hud-panel">
         <div class="atlas-header">
-            <h2 class="cinzel">War Room 1776</h2>
+            <h2 id="atlas-title" class="cinzel">War Room 1776</h2>
         </div>
         <div class="atlas-info">
+            <!-- Current Objective (contextual to location) -->
+            <div id="current-objective-row" class="info-row" style="display: none;">
+                <span class="info-label">OBJECTIVE</span>
+                <span id="current-objective" class="info-value">None</span>
+            </div>
             <div class="info-row">
                 <span class="info-label">DATE</span>
                 <span id="campaign-date" class="info-value">Loading...</span>

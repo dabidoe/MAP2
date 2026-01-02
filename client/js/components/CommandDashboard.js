@@ -16,6 +16,9 @@ export class CommandDashboard {
     // DOM elements
     this.elements = {
       // Atlas Panel
+      atlasTitle: document.getElementById('atlas-title'),
+      currentObjectiveRow: document.getElementById('current-objective-row'),
+      currentObjective: document.getElementById('current-objective'),
       date: document.getElementById('campaign-date'),
       time: document.getElementById('campaign-time'),
       weather: document.getElementById('campaign-weather'),
@@ -48,6 +51,7 @@ export class CommandDashboard {
     this.gameState.on('encounterStart', () => this._showCombat());
     this.gameState.on('encounterEnd', () => this._hideCombat());
     this.gameState.on('initiativeUpdate', (init) => this._updateInitiative(init));
+    this.gameState.on('locationChange', (location) => this._updateAtlasContext(location));
 
     // Close button handler
     if (this.elements.closeUnitCard) {
@@ -76,6 +80,33 @@ export class CommandDashboard {
     }
     if (this.elements.moraleFill) {
       this.elements.moraleFill.style.width = `${campaign.morale || 0}%`;
+    }
+  }
+
+  /**
+   * Update Atlas Panel: Contextual to active location
+   * @private
+   */
+  _updateAtlasContext(location) {
+    if (location) {
+      // In tactical view - show location name and objective
+      if (this.elements.atlasTitle) {
+        this.elements.atlasTitle.textContent = location.title;
+      }
+      if (this.elements.currentObjective) {
+        this.elements.currentObjective.textContent = location.description || 'Secure the area';
+      }
+      if (this.elements.currentObjectiveRow) {
+        this.elements.currentObjectiveRow.style.display = 'flex';
+      }
+    } else {
+      // In world view - show campaign title, hide objective
+      if (this.elements.atlasTitle) {
+        this.elements.atlasTitle.textContent = 'War Room 1776';
+      }
+      if (this.elements.currentObjectiveRow) {
+        this.elements.currentObjectiveRow.style.display = 'none';
+      }
     }
   }
 

@@ -31,6 +31,8 @@ export class CanvasRenderer {
     this.ctx = null;
     this.tokens = [];
     this.images = new Map(); // Cache loaded images
+    this.backgroundImage = null; // Background tactical map
+    this.backgroundReady = false; // Track if background is loaded
 
     this.dragState = {
       isDragging: false,
@@ -89,12 +91,13 @@ export class CanvasRenderer {
 
   /**
    * Resize canvas to container
+   * CRITICAL: Explicitly set to window dimensions for fullscreen
    * @private
    */
   _resize() {
-    const rect = this.container.getBoundingClientRect();
-    this.canvas.width = rect.width;
-    this.canvas.height = rect.height;
+    // EXPLICIT FULLSCREEN SIZING
+    this.canvas.width = window.innerWidth;
+    this.canvas.height = window.innerHeight;
     this.render();
   }
 
@@ -133,6 +136,31 @@ export class CanvasRenderer {
   }
 
   /**
+   * Set background tactical map image
+   * CRITICAL: Await image load before rendering
+   * @param {string} imageUrl - Tactical map background URL
+   */
+  async setBackgroundImage(imageUrl) {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.onload = () => {
+        this.backgroundImage = img;
+        this.backgroundReady = true;
+        console.log('✅ Background image loaded:', imageUrl);
+        this.render();
+        resolve(img);
+      };
+      img.onerror = () => {
+        console.error('❌ Failed to load background image:', imageUrl);
+        this.backgroundReady = false;
+        reject(new Error(`Failed to load ${imageUrl}`));
+      };
+      img.src = imageUrl;
+    });
+  }
+
+  /**
    * Set tokens to render
    * @param {Array<Token>} tokens - Array of token data
    */
@@ -161,17 +189,64 @@ export class CanvasRenderer {
 
   /**
    * Render all tokens
+   * CRITICAL: Draw background FIRST, then tokens
    */
   render() {
     if (!this.ctx) return;
 
+    // EXPLICIT: Set canvas to fullscreen dimensions every frame
+    this.canvas.width = window.innerWidth;
+    this.canvas.height = window.innerHeight;
+
     // Clear canvas
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
-    // Render each token
+    // Draw background image FIRST (if loaded)
+    if (this.backgroundReady && this.backgroundImage) {
+      this._renderBackground();
+    }
+
+    // Render each token ON TOP
     this.tokens.forEach(token => {
       this._renderToken(token);
     });
+  }
+
+  /**
+   * Render background tactical map
+   * @private
+   */
+  _renderBackground() {
+    if (!this.backgroundImage) return;
+
+    // Draw background image to fill entire canvas
+    // Use object-fit: contain logic to preserve aspect ratio
+    const canvasAspect = this.canvas.width / this.canvas.height;
+    const imageAspect = this.backgroundImage.width / this.backgroundImage.height;
+
+    let drawWidth, drawHeight, offsetX, offsetY;
+
+    if (canvasAspect > imageAspect) {
+      // Canvas is wider - fit to height
+      drawHeight = this.canvas.height;
+      drawWidth = drawHeight * imageAspect;
+      offsetX = (this.canvas.width - drawWidth) / 2;
+      offsetY = 0;
+    } else {
+      // Canvas is taller - fit to width
+      drawWidth = this.canvas.width;
+      drawHeight = drawWidth / imageAspect;
+      offsetX = 0;
+      offsetY = (this.canvas.height - drawHeight) / 2;
+    }
+
+    this.ctx.drawImage(
+      this.backgroundImage,
+      offsetX,
+      offsetY,
+      drawWidth,
+      drawHeight
+    );
   }
 
   /**

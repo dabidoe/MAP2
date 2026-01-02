@@ -281,26 +281,37 @@ export class MapEngine {
    * Add location marker to map
    * @param {Object} location - Location data
    * @param {Function} onClick - Click handler
+   * @param {Array} tokens - Tokens at this location (for tooltip)
    */
-  addLocationMarker(location, onClick) {
+  addLocationMarker(location, onClick, tokens = []) {
+    // Create circular map preview icon
     const icon = L.divIcon({
       className: 'location-marker',
       html: `
         <div class="location-portal-marker">
           <div class="portal-ring"></div>
           <div class="portal-ring-inner"></div>
-          <div class="portal-center"></div>
+          <div class="portal-preview" style="background-image: url('${location.tacticalMapUrl}');"></div>
         </div>
       `,
       iconSize: [60, 60],
       iconAnchor: [30, 30] // Center the icon
     });
 
+    // Build character list for tooltip
+    const characterList = tokens.length > 0
+      ? `<div class="briefing-characters">
+           <strong>Units Present:</strong><br>
+           ${tokens.map(t => `• ${t.name} (${t.side})`).join('<br>')}
+         </div>`
+      : '';
+
     // Create tactical briefing tooltip (on hover, above all tokens)
     const tooltipContent = `
       <div class="tactical-briefing">
         <div class="briefing-header">${location.title}</div>
         <div class="briefing-description">${location.description}</div>
+        ${characterList}
         <div class="briefing-hint">Click to enter tactical view</div>
       </div>
     `;
@@ -447,14 +458,15 @@ export class MapEngine {
         animation: portal-pulse-inner 2s ease-in-out infinite reverse;
       }
 
-      .portal-center {
+      .portal-preview {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 20px;
-        height: 20px;
-        background: radial-gradient(circle, #c5a959, #8b7355);
+        width: 45px;
+        height: 45px;
+        background-size: cover;
+        background-position: center;
         border: 2px solid #000;
         border-radius: 50%;
         box-shadow: 0 0 10px rgba(197, 169, 89, 0.8),
@@ -467,8 +479,7 @@ export class MapEngine {
         box-shadow: 0 0 25px rgba(197, 169, 89, 1);
       }
 
-      .location-portal-marker:hover .portal-center {
-        background: radial-gradient(circle, #FFD700, #c5a959);
+      .location-portal-marker:hover .portal-preview {
         box-shadow: 0 0 20px rgba(255, 215, 0, 1),
                     inset 0 0 5px rgba(0, 0, 0, 0.5);
       }
@@ -538,6 +549,21 @@ export class MapEngine {
         margin-top: 8px;
         padding-top: 6px;
         border-top: 1px solid rgba(197, 169, 89, 0.2);
+      }
+
+      .briefing-characters {
+        font-size: 0.75rem;
+        color: #c5a959;
+        line-height: 1.5;
+        margin: 8px 0;
+        padding: 8px;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 4px;
+        border-left: 2px solid #c5a959;
+      }
+
+      .briefing-characters strong {
+        color: #FFD700;
       }
     `;
     document.head.appendChild(style);
