@@ -163,6 +163,46 @@ export class MapEngine {
   }
 
   /**
+   * Set tactical map image (for DM variant switching)
+   * @param {string} imageUrl - New tactical map URL
+   */
+  setTacticalMapImage(imageUrl) {
+    if (!this.layers.tactical || this.state.mode !== 'tactical') {
+      console.warn('Cannot change tactical map - not in tactical mode');
+      return;
+    }
+
+    const currentOpacity = this.layers.tactical.options.opacity || 1;
+    const bounds = this.layers.tactical.getBounds();
+
+    // Fade out current overlay
+    this.layers.tactical.setOpacity(0);
+
+    setTimeout(() => {
+      // Remove old overlay
+      this.map.removeLayer(this.layers.tactical);
+
+      // Create new overlay with same bounds
+      this.layers.tactical = L.imageOverlay(
+        imageUrl,
+        bounds,
+        {
+          opacity: 0,
+          interactive: false,
+          className: 'tactical-overlay'
+        }
+      ).addTo(this.map);
+
+      // Fade in new overlay
+      setTimeout(() => {
+        this.layers.tactical.setOpacity(currentOpacity);
+      }, 50);
+
+      console.log(`✨ Tactical map updated: ${imageUrl}`);
+    }, 300); // Wait for fade out
+  }
+
+  /**
    * Create tactical map overlay
    * @private
    * @param {Object} location - Location with tacticalMapUrl
@@ -210,6 +250,7 @@ export class MapEngine {
       .tactical-overlay {
         border: 3px solid #c5a959;
         box-shadow: 0 0 20px rgba(197, 169, 89, 0.5);
+        transition: opacity 0.3s ease-in-out;
       }
     `;
     if (!document.getElementById('tactical-overlay-style')) {

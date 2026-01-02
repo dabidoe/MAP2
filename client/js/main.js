@@ -27,6 +27,8 @@ class WarRoom1776 {
     // UI elements
     this.backButton = null;
     this.dmToggle = null;
+    this.mapSwitcher = null;
+    this.currentMapVariant = 0; // Track which variant is displayed
   }
 
   /**
@@ -151,6 +153,45 @@ class WarRoom1776 {
     if (sidebarToggle) {
       sidebarToggle.onclick = () => this._toggleSidebar();
     }
+
+    // DM Map Switcher (for cycling through tactical map variants)
+    this._createMapSwitcher();
+  }
+
+  /**
+   * Create DM map switcher UI
+   * @private
+   */
+  _createMapSwitcher() {
+    this.mapSwitcher = document.createElement('div');
+    this.mapSwitcher.id = 'map-switcher';
+    this.mapSwitcher.style.cssText = `
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+      background: rgba(26, 20, 16, 0.95);
+      border: 2px solid #c5a959;
+      border-radius: 8px;
+      padding: 10px 15px;
+      z-index: 6000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    `;
+
+    this.mapSwitcher.innerHTML = `
+      <div style="display: flex; align-items: center; gap: 10px; font-family: 'Cinzel', serif; color: #e2d1b3;">
+        <button id="map-prev" class="cycle-button" style="padding: 5px 10px; font-size: 0.9rem;">◀ Prev</button>
+        <span id="map-variant-label" style="font-size: 0.85rem; min-width: 100px; text-align: center; color: #c5a959;">Map Variant 1</span>
+        <button id="map-next" class="cycle-button" style="padding: 5px 10px; font-size: 0.9rem;">Next ▶</button>
+      </div>
+    `;
+
+    document.body.appendChild(this.mapSwitcher);
+
+    // Wire up buttons
+    document.getElementById('map-prev').onclick = () => this._cycleMapVariant(-1);
+    document.getElementById('map-next').onclick = () => this._cycleMapVariant(1);
   }
 
   /**
@@ -262,6 +303,7 @@ class WarRoom1776 {
     console.log(`Entering tactical view: ${location.title}`);
 
     this.gameState.setActiveLocation(location);
+    this.currentMapVariant = 0; // Reset to default variant
 
     // Enter tactical view on map
     this.mapEngine.enterTacticalView(location);
@@ -279,6 +321,11 @@ class WarRoom1776 {
 
     // Show back button
     this.backButton.style.display = 'block';
+
+    // Show map switcher if in DM mode
+    if (this.gameState.getState().mode === 'DM') {
+      this.mapSwitcher.style.display = 'block';
+    }
 
     // Add tactical-active class for styling
     document.body.classList.add('tactical-active');
@@ -304,6 +351,9 @@ class WarRoom1776 {
 
     // Hide back button
     this.backButton.style.display = 'none';
+
+    // Hide map switcher
+    this.mapSwitcher.style.display = 'none';
 
     // Remove tactical-active class
     document.body.classList.remove('tactical-active');
@@ -336,6 +386,39 @@ class WarRoom1776 {
     } else {
       sidebar.classList.remove('collapsed');
     }
+  }
+
+  /**
+   * Cycle through map variants (DM only)
+   * @private
+   */
+  _cycleMapVariant(direction) {
+    const state = this.gameState.getState();
+    if (state.mode !== 'DM' || !state.ui.activeLocation) return;
+
+    const location = state.ui.activeLocation;
+    const baseUrl = location.tacticalMapUrl;
+
+    // Determine available variants (we have variants 0, 1, 2, 3)
+    const maxVariants = 4;
+    this.currentMapVariant = (this.currentMapVariant + direction + maxVariants) % maxVariants;
+
+    // Generate new URL
+    let newUrl;
+    if (this.currentMapVariant === 0) {
+      newUrl = baseUrl; // Base variant has no suffix
+    } else {
+      // Replace .png with (1).png, (2).png, or (3).png
+      newUrl = baseUrl.replace('.png', ` (${this.currentMapVariant}).png`);
+    }
+
+    console.log(`Switching to map variant ${this.currentMapVariant}: ${newUrl}`);
+
+    // Update map overlay
+    this.mapEngine.setTacticalMapImage(newUrl);
+
+    // Update label
+    document.getElementById('map-variant-label').textContent = `Map Variant ${this.currentMapVariant + 1}`;
   }
 
   /**
