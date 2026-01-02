@@ -1,19 +1,25 @@
 {
-  "name": "nodejs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "war-room-1776",
+  "version": "0.1.0",
+  "description": "Revolutionary War VTT - Episode 0.1: Winter Ambush",
+  "type": "module",
+  "main": "server/index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["vtt", "tabletop", "revolutionary-war"],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^22.13.11",
+    "dotenv": "^16.4.5",
     "express": "^5.2.1",
+    "mongoose": "^8.8.4",
     "socket.io": "^4.8.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   }
 }

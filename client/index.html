@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War Room 1776 - Episode 0.1: Winter Ambush</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+    <div id="app-container">
+        <!-- Command Dashboard Sidebar -->
+        <div id="sidebar">
+            <div class="campaign-header">
+                <h2 class="cinzel">War Room 1776</h2>
+                <div class="env-info">
+                    <span id="campaign-date">Loading...</span><br>
+                    <span id="campaign-time">Loading...</span><br>
+                    <span id="campaign-weather">Loading...</span>
+                </div>
+                <div class="morale-box">
+                    <label>ARMY MORALE</label>
+                    <div class="morale-bar">
+                        <div class="fill" id="morale-fill" style="width: 30%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module B: Selected Token Stats -->
+            <div id="token-info" class="sidebar-module" style="display: none;">
+                <h3 class="sidebar-subhead">SELECTED UNIT</h3>
+                <div id="token-stats">Select a token to view stats</div>
+            </div>
+
+            <!-- Module C: Combat Tracker -->
+            <div id="combat-tracker" class="sidebar-module" style="display: none;">
+                <h3 class="sidebar-subhead">INITIATIVE</h3>
+                <div id="initiative-list"></div>
+            </div>
+
+            <!-- Strategic Objectives -->
+            <div class="location-section">
+                <h3 class="sidebar-subhead">STRATEGIC OBJECTIVES</h3>
+                <p style="padding: 0 15px; font-size: 0.8rem; color: #a09580;">
+                    Click objective markers on the map to command travel.
+                </p>
+            </div>
+        </div>
+
+        <!-- Map Viewport -->
+        <div id="map-viewport">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <!-- External Libraries -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- Application Scripts (load as ES6 modules) -->
+    <script type="module" src="/js/main.js"></script>
+</body>
+</html>
