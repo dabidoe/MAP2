@@ -70,6 +70,7 @@
             <h4>Actions</h4>
             <div id="unit-actions"></div>
         </div>
+        <button id="view-character-details" class="cycle-button" style="width: 100%; margin-top: 10px;">View Full Details</button>
     </div>
 
     <!-- Floating HUD: Combat Tracker (contextual) -->
@@ -112,6 +113,42 @@
         <div class="dice-custom">
             <input type="text" id="dice-custom-input" placeholder="e.g., 2d6+3" />
             <button id="dice-custom-roll" class="dice-btn dice-btn-secondary">Roll</button>
+        </div>
+    </div>
+
+    <!-- Detailed Character Sheet Modal -->
+    <div id="character-sheet-modal" class="modal-overlay" style="display: none;">
+        <div class="character-sheet">
+            <div class="sheet-header">
+                <h2 id="sheet-character-name">Character Name</h2>
+                <button id="close-character-sheet" class="close-btn">✕</button>
+            </div>
+            <div class="sheet-content">
+                <div class="sheet-column">
+                    <div class="sheet-section">
+                        <h3>Profile</h3>
+                        <div id="sheet-profile" class="profile-info"></div>
+                    </div>
+                    <div class="sheet-section">
+                        <h3>Attributes</h3>
+                        <div id="sheet-attributes" class="attributes-grid"></div>
+                    </div>
+                    <div class="sheet-section">
+                        <h3>Skills</h3>
+                        <div id="sheet-skills" class="skills-list"></div>
+                    </div>
+                </div>
+                <div class="sheet-column">
+                    <div class="sheet-section">
+                        <h3>Passive Traits</h3>
+                        <div id="sheet-traits" class="traits-list"></div>
+                    </div>
+                    <div class="sheet-section">
+                        <h3>Feats & Abilities</h3>
+                        <div id="sheet-feats" class="feats-list"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

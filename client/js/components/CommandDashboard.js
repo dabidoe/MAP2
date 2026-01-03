@@ -42,8 +42,22 @@ export class CommandDashboard {
       // Dice Roller
       diceResult: document.getElementById('dice-result'),
       diceCustomInput: document.getElementById('dice-custom-input'),
-      diceCustomRoll: document.getElementById('dice-custom-roll')
+      diceCustomRoll: document.getElementById('dice-custom-roll'),
+
+      // Character Sheet Modal
+      characterSheetModal: document.getElementById('character-sheet-modal'),
+      viewCharacterDetails: document.getElementById('view-character-details'),
+      closeCharacterSheet: document.getElementById('close-character-sheet'),
+      sheetCharacterName: document.getElementById('sheet-character-name'),
+      sheetProfile: document.getElementById('sheet-profile'),
+      sheetAttributes: document.getElementById('sheet-attributes'),
+      sheetSkills: document.getElementById('sheet-skills'),
+      sheetTraits: document.getElementById('sheet-traits'),
+      sheetFeats: document.getElementById('sheet-feats')
     };
+
+    // Current selected token for character sheet
+    this.currentToken = null;
 
     this._init();
   }
@@ -93,6 +107,22 @@ export class CommandDashboard {
 
     // Dice roller handlers
     this._initDiceRoller();
+
+    // Character sheet handlers
+    if (this.elements.viewCharacterDetails) {
+      this.elements.viewCharacterDetails.onclick = () => this._showCharacterSheet();
+    }
+    if (this.elements.closeCharacterSheet) {
+      this.elements.closeCharacterSheet.onclick = () => this._hideCharacterSheet();
+    }
+    // Close modal when clicking outside
+    if (this.elements.characterSheetModal) {
+      this.elements.characterSheetModal.onclick = (e) => {
+        if (e.target === this.elements.characterSheetModal) {
+          this._hideCharacterSheet();
+        }
+      };
+    }
 
     // Initial render
     this._updateCampaign(this.gameState.getState().campaign);
@@ -152,6 +182,9 @@ export class CommandDashboard {
    */
   _showUnitCard(token) {
     if (!token || !this.elements.unitCard) return;
+
+    // Save current token for character sheet
+    this.currentToken = token;
 
     // Populate unit data
     this.elements.unitName.textContent = token.name || 'Unknown Unit';
@@ -408,6 +441,113 @@ export class CommandDashboard {
     const messages = this.elements.consoleMessages.children;
     if (messages.length > 50) {
       this.elements.consoleMessages.removeChild(messages[0]);
+    }
+  }
+
+  /**
+   * Show detailed character sheet modal
+   * @private
+   */
+  async _showCharacterSheet() {
+    if (!this.currentToken) return;
+
+    // Fetch full character data
+    const character = await this._fetchCharacterData(this.currentToken.name);
+
+    if (!character) {
+      this._addConsoleMessage('system', `Could not load character data for ${this.currentToken.name}`);
+      return;
+    }
+
+    // Populate sheet
+    this.elements.sheetCharacterName.textContent = character.name;
+
+    // Profile
+    this.elements.sheetProfile.innerHTML = `
+      <p><span class="label">Class:</span> ${character.class || 'Unknown'}</p>
+      <p><span class="label">Race:</span> ${character.race || 'Unknown'}</p>
+      <p><span class="label">Level:</span> ${character.level || '?'}</p>
+      <p><span class="label">Alignment:</span> ${character.alignment || 'Unknown'}</p>
+      ${character.profile?.personality ? `<p><span class="label">Personality:</span> ${character.profile.personality}</p>` : ''}
+      ${character.profile?.backstory ? `<p><span class="label">Backstory:</span> ${character.profile.backstory}</p>` : ''}
+    `;
+
+    // Attributes
+    if (character.attributes) {
+      const attrs = ['str', 'dex', 'con', 'int', 'wis', 'cha'];
+      this.elements.sheetAttributes.innerHTML = attrs.map(attr => `
+        <div class="attribute-box">
+          <div class="attr-name">${attr.toUpperCase()}</div>
+          <div class="attr-value">${character.attributes[attr] || 10}</div>
+        </div>
+      `).join('');
+    }
+
+    // Skills
+    if (character.skills && character.skills.length > 0) {
+      this.elements.sheetSkills.innerHTML = character.skills.map(skill => `
+        <div class="skill-item">
+          <div class="skill-name">${skill.name}: ${skill.modifier >= 0 ? '+' : ''}${skill.modifier}</div>
+          ${skill.proficient ? '<span style="color: #c5a959;">✓ Proficient</span>' : ''}
+        </div>
+      `).join('');
+    } else {
+      this.elements.sheetSkills.innerHTML = '<p style="color: #8b7355;">No skills data</p>';
+    }
+
+    // Passive Traits
+    if (character.passiveTraits && character.passiveTraits.length > 0) {
+      this.elements.sheetTraits.innerHTML = character.passiveTraits.map(trait => `
+        <div class="trait-item">
+          <div class="trait-name">${trait.name}</div>
+          <div class="trait-desc">${trait.summary || trait.description || ''}</div>
+        </div>
+      `).join('');
+    } else {
+      this.elements.sheetTraits.innerHTML = '<p style="color: #8b7355;">No passive traits</p>';
+    }
+
+    // Feats
+    if (character.feats && character.feats.length > 0) {
+      this.elements.sheetFeats.innerHTML = character.feats.map(feat => `
+        <div class="feat-item">
+          <div class="feat-name">${feat.name}</div>
+          <div class="feat-desc">${feat.summary || feat.description || ''}</div>
+        </div>
+      `).join('');
+    } else {
+      this.elements.sheetFeats.innerHTML = '<p style="color: #8b7355;">No feats or abilities</p>';
+    }
+
+    // Show modal
+    this.elements.characterSheetModal.style.display = 'flex';
+  }
+
+  /**
+   * Hide character sheet modal
+   * @private
+   */
+  _hideCharacterSheet() {
+    if (this.elements.characterSheetModal) {
+      this.elements.characterSheetModal.style.display = 'none';
+    }
+  }
+
+  /**
+   * Fetch full character data by name
+   * @private
+   */
+  async _fetchCharacterData(characterName) {
+    try {
+      // Fetch from characters.json
+      const response = await fetch('/data/characters.json');
+      const characters = await response.json();
+
+      // Find matching character
+      return characters.find(c => c.name === characterName);
+    } catch (error) {
+      console.error('Failed to fetch character data:', error);
+      return null;
     }
   }
 
