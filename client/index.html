@@ -83,9 +83,6 @@
 
     <!-- Floating HUD: Chat History (Bottom-Left) -->
     <div id="floating-console" class="hud-panel">
-        <div class="console-header">
-            <h3>⚔️ WAR ROOM CHAT</h3>
-        </div>
         <div id="console-messages" class="console-messages">
             <!-- Messages will be added dynamically -->
         </div>
@@ -93,6 +90,9 @@
             <button id="dice-icon-btn" class="dice-icon-button-inline" title="Open Dice Tray">
                 🎲
             </button>
+            <select id="character-selector" class="character-selector">
+                <option value="">Player</option>
+            </select>
             <input type="text" id="chat-input" class="chat-input" placeholder="Type a command or message..." />
             <button id="chat-send" class="chat-send-btn">Send</button>
         </div>

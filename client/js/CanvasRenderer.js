@@ -98,6 +98,7 @@ export class CanvasRenderer {
     this.canvas.addEventListener('mouseleave', (e) => this._onMouseLeave(e));
     this.canvas.addEventListener('click', (e) => this._onClick(e));
     this.canvas.addEventListener('dblclick', (e) => this._onDoubleClick(e));
+    this.canvas.addEventListener('contextmenu', (e) => this._onRightClick(e));
     this.canvas.addEventListener('wheel', (e) => this._onWheel(e));
 
     // Resize observer
@@ -658,6 +659,26 @@ export class CanvasRenderer {
   }
 
   /**
+   * Right-click event - Set target
+   * @private
+   */
+  _onRightClick(e) {
+    e.preventDefault(); // Prevent context menu
+    e.stopPropagation();
+
+    const rect = this.canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const token = this._getTokenAt(x, y);
+
+    if (token && this.listeners.onTokenRightClick) {
+      this.listeners.onTokenRightClick(token);
+      this.render();
+    }
+  }
+
+  /**
    * Cycle to next image in token's gallery
    * @param {Token} token
    */
@@ -694,6 +715,8 @@ export class CanvasRenderer {
   on(event, callback) {
     if (event === 'tokenClick') {
       this.listeners.onTokenClick = callback;
+    } else if (event === 'tokenRightClick') {
+      this.listeners.onTokenRightClick = callback;
     } else if (event === 'tokenDragEnd') {
       this.listeners.onTokenDragEnd = callback;
     } else if (event === 'tokenHover') {
