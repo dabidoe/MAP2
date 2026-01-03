@@ -37,7 +37,12 @@ export class CommandDashboard {
       initiativeList: document.getElementById('initiative-list'),
 
       // Console
-      consoleMessages: document.getElementById('console-messages')
+      consoleMessages: document.getElementById('console-messages'),
+
+      // Dice Roller
+      diceResult: document.getElementById('dice-result'),
+      diceCustomInput: document.getElementById('dice-custom-input'),
+      diceCustomRoll: document.getElementById('dice-custom-roll')
     };
 
     this._init();
@@ -85,6 +90,9 @@ export class CommandDashboard {
     if (this.elements.closeUnitCard) {
       this.elements.closeUnitCard.onclick = () => this._hideUnitCard();
     }
+
+    // Dice roller handlers
+    this._initDiceRoller();
 
     // Initial render
     this._updateCampaign(this.gameState.getState().campaign);
@@ -237,6 +245,121 @@ export class CommandDashboard {
 
       this.elements.initiativeList.appendChild(item);
     });
+  }
+
+  /**
+   * Initialize dice roller
+   * @private
+   */
+  _initDiceRoller() {
+    // Quick dice buttons
+    const diceButtons = document.querySelectorAll('.dice-btn[data-dice]');
+    diceButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const diceType = button.getAttribute('data-dice');
+        this._rollDice(diceType);
+      });
+    });
+
+    // Custom roll button
+    if (this.elements.diceCustomRoll) {
+      this.elements.diceCustomRoll.addEventListener('click', () => {
+        const notation = this.elements.diceCustomInput.value.trim();
+        if (notation) {
+          this._rollDice(notation);
+        }
+      });
+    }
+
+    // Enter key on custom input
+    if (this.elements.diceCustomInput) {
+      this.elements.diceCustomInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          const notation = this.elements.diceCustomInput.value.trim();
+          if (notation) {
+            this._rollDice(notation);
+          }
+        }
+      });
+    }
+  }
+
+  /**
+   * Roll dice using standard notation
+   * @private
+   * @param {string} notation - Dice notation (e.g., "d20", "2d6+3", "d8-1")
+   */
+  _rollDice(notation) {
+    try {
+      const result = this._parseDiceNotation(notation);
+
+      // Display result
+      if (this.elements.diceResult) {
+        const resultValue = this.elements.diceResult.querySelector('.result-value');
+        if (resultValue) {
+          resultValue.textContent = result.total;
+
+          // Animate the result
+          this.elements.diceResult.classList.add('dice-roll-animation');
+          setTimeout(() => {
+            this.elements.diceResult.classList.remove('dice-roll-animation');
+          }, 500);
+        }
+      }
+
+      // Add to console
+      const detailText = result.rolls.length > 1
+        ? `${notation} = [${result.rolls.join(', ')}]${result.modifier !== 0 ? ` ${result.modifier >= 0 ? '+' : ''}${result.modifier}` : ''} = ${result.total}`
+        : `${notation} = ${result.total}`;
+
+      this._addConsoleMessage('action', `🎲 Rolled ${detailText}`);
+
+      console.log(`Dice roll: ${notation} = ${result.total}`, result);
+    } catch (error) {
+      console.error('Invalid dice notation:', notation, error);
+      this._addConsoleMessage('system', `❌ Invalid dice notation: ${notation}`);
+    }
+  }
+
+  /**
+   * Parse dice notation and roll
+   * @private
+   * @param {string} notation - Dice notation
+   * @returns {{total: number, rolls: number[], modifier: number}}
+   */
+  _parseDiceNotation(notation) {
+    // Remove spaces
+    notation = notation.toLowerCase().replace(/\s/g, '');
+
+    // Match patterns like "d20", "2d6", "3d8+5", "d12-2"
+    const match = notation.match(/^(\d*)d(\d+)([+-]\d+)?$/);
+
+    if (!match) {
+      throw new Error('Invalid dice notation');
+    }
+
+    const count = match[1] ? parseInt(match[1]) : 1;
+    const sides = parseInt(match[2]);
+    const modifier = match[3] ? parseInt(match[3]) : 0;
+
+    // Validate
+    if (count < 1 || count > 100) {
+      throw new Error('Dice count must be between 1 and 100');
+    }
+    if (sides < 2 || sides > 1000) {
+      throw new Error('Dice sides must be between 2 and 1000');
+    }
+
+    // Roll the dice
+    const rolls = [];
+    for (let i = 0; i < count; i++) {
+      rolls.push(Math.floor(Math.random() * sides) + 1);
+    }
+
+    const rollSum = rolls.reduce((sum, roll) => sum + roll, 0);
+    const total = rollSum + modifier;
+
+    return { total, rolls, modifier };
   }
 
   /**

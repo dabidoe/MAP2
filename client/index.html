@@ -93,6 +93,28 @@
         </div>
     </div>
 
+    <!-- Floating HUD: Dice Roller (Bottom-Right) -->
+    <div id="floating-dice-roller" class="hud-panel">
+        <div class="dice-header">
+            <h3>🎲 DICE ROLLER</h3>
+        </div>
+        <div class="dice-result" id="dice-result">
+            <span class="result-value">—</span>
+        </div>
+        <div class="dice-buttons">
+            <button class="dice-btn" data-dice="d4">d4</button>
+            <button class="dice-btn" data-dice="d6">d6</button>
+            <button class="dice-btn" data-dice="d8">d8</button>
+            <button class="dice-btn" data-dice="d10">d10</button>
+            <button class="dice-btn" data-dice="d12">d12</button>
+            <button class="dice-btn dice-btn-primary" data-dice="d20">d20</button>
+        </div>
+        <div class="dice-custom">
+            <input type="text" id="dice-custom-input" placeholder="e.g., 2d6+3" />
+            <button id="dice-custom-roll" class="dice-btn dice-btn-secondary">Roll</button>
+        </div>
+    </div>
+
     <!-- External Libraries -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="/socket.io/socket.io.js"></script>

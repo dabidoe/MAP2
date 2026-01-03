@@ -376,6 +376,137 @@ body {
 }
 
 /* ===================================
+   FLOATING DICE ROLLER (Bottom-Right)
+   =================================== */
+
+#floating-dice-roller {
+    bottom: 20px;
+    right: 20px;
+    min-width: 280px;
+}
+
+.dice-header h3 {
+    font-size: 0.9rem;
+    color: #c5a959;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.dice-result {
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    border: 2px solid rgba(197, 169, 89, 0.3);
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #FFD700;
+    text-shadow: 0 2px 8px rgba(255, 215, 0, 0.6);
+}
+
+.dice-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.dice-btn {
+    background: rgba(26, 20, 16, 0.9);
+    border: 2px solid #8b7355;
+    color: #e2d1b3;
+    padding: 10px;
+    border-radius: 6px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: bold;
+}
+
+.dice-btn:hover {
+    background: rgba(197, 169, 89, 0.2);
+    border-color: #c5a959;
+    transform: scale(1.05);
+}
+
+.dice-btn:active {
+    transform: scale(0.95);
+}
+
+.dice-btn-primary {
+    border-color: #FFD700;
+    color: #FFD700;
+    background: rgba(255, 215, 0, 0.1);
+}
+
+.dice-btn-primary:hover {
+    background: rgba(255, 215, 0, 0.2);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.dice-btn-secondary {
+    background: rgba(197, 169, 89, 0.2);
+    border-color: #c5a959;
+}
+
+.dice-custom {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+#dice-custom-input {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(197, 169, 89, 0.3);
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: #e2d1b3;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+}
+
+#dice-custom-input:focus {
+    outline: none;
+    border-color: #c5a959;
+}
+
+#dice-custom-input::placeholder {
+    color: rgba(226, 209, 179, 0.5);
+}
+
+/* Dice roll animation */
+.dice-roll-animation {
+    animation: dice-pulse 0.5s ease;
+}
+
+@keyframes dice-pulse {
+    0% {
+        transform: scale(1);
+        border-color: rgba(197, 169, 89, 0.3);
+    }
+    50% {
+        transform: scale(1.1);
+        border-color: #FFD700;
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+    }
+    100% {
+        transform: scale(1);
+        border-color: rgba(197, 169, 89, 0.3);
+    }
+}
+
+/* ===================================
    UTILITY BUTTONS
    =================================== */
 
