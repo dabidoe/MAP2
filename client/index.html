@@ -87,21 +87,16 @@
             <h3>⚔️ WAR ROOM CHAT</h3>
         </div>
         <div id="console-messages" class="console-messages">
-            <div class="console-message npc-message">
-                <span class="message-sender">Gen. Washington:</span>
-                <span class="message-text">Greetings soldiers, get warm by the fire. I'll be addressing the camp in a few minutes.</span>
-            </div>
+            <!-- Messages will be added dynamically -->
         </div>
         <div class="chat-input-container">
+            <button id="dice-icon-btn" class="dice-icon-button-inline" title="Open Dice Tray">
+                🎲
+            </button>
             <input type="text" id="chat-input" class="chat-input" placeholder="Type a command or message..." />
             <button id="chat-send" class="chat-send-btn">Send</button>
         </div>
     </div>
-
-    <!-- Dice Icon Button (Floating) -->
-    <button id="dice-icon-btn" class="dice-icon-button" title="Open Dice Tray">
-        🎲
-    </button>
 
     <!-- Dice Roller Popup (Hidden by default) -->
     <div id="dice-roller-popup" class="dice-popup" style="display: none;">

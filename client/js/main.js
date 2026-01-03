@@ -322,6 +322,14 @@ class WarRoom1776 {
       this.mapSwitcher.style.display = 'block';
     }
 
+    // Show GW welcome message only when entering camp (frozen_vigil)
+    if (location.id === 'frozen_vigil') {
+      this.dashboard.addConsoleMessage(
+        'npc',
+        "Gen. Washington: Greetings soldiers, get warm by the fire. I'll be addressing the camp in a few minutes."
+      );
+    }
+
     console.log('✅ Tactical view fully loaded');
   }
 

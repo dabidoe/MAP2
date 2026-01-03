@@ -233,7 +233,71 @@ export class CommandDashboard {
    */
   _useAction(token, action) {
     console.log(`${token.name} uses ${action.name}`);
-    alert(`${token.name} uses ${action.name}!\n${action.damage || action.effect}`);
+
+    // Determine action type and format message
+    let message = '';
+    let messageType = 'action';
+
+    if (action.type === 'Attack') {
+      // Roll attack
+      const attackRoll = Math.floor(Math.random() * 20) + 1;
+      const bonusMatch = action.bonus?.match(/[+-]\d+/);
+      const bonus = bonusMatch ? parseInt(bonusMatch[0]) : 0;
+      const total = attackRoll + bonus;
+
+      message = `⚔️ ${token.name} attacks with ${action.name}: [${attackRoll}] + ${bonus} = ${total}`;
+
+      // Roll damage if hit
+      if (attackRoll >= 10) { // Assuming hit
+        const damageMatch = action.damage?.match(/(\d+)d(\d+)([+-]\d+)?/);
+        if (damageMatch) {
+          const count = parseInt(damageMatch[1]);
+          const sides = parseInt(damageMatch[2]);
+          const mod = damageMatch[3] ? parseInt(damageMatch[3]) : 0;
+
+          let damageTotal = mod;
+          const rolls = [];
+          for (let i = 0; i < count; i++) {
+            const roll = Math.floor(Math.random() * sides) + 1;
+            rolls.push(roll);
+            damageTotal += roll;
+          }
+
+          message += `\n💥 Damage: [${rolls.join(', ')}]${mod !== 0 ? ` ${mod >= 0 ? '+' : ''}${mod}` : ''} = ${damageTotal} ${action.damage.split(' ')[1] || ''}`;
+        }
+      } else {
+        message += ' - MISS!';
+      }
+      messageType = 'combat';
+
+    } else if (action.type === 'Spell') {
+      // Spell cast
+      message = `✨ ${token.name} casts ${action.name}`;
+      if (action.bonus && action.bonus.includes('DC')) {
+        message += ` (${action.bonus})`;
+      }
+      messageType = 'action';
+
+    } else if (action.type === 'Ability') {
+      // Ability use
+      message = `💪 ${token.name} uses ${action.name}`;
+      if (action.damage) {
+        message += `: ${action.damage}`;
+      }
+      messageType = 'action';
+
+    } else {
+      // Generic action
+      message = `🎯 ${token.name} uses ${action.name}`;
+      if (action.damage || action.effect) {
+        message += `: ${action.damage || action.effect}`;
+      }
+      messageType = 'action';
+    }
+
+    // Post to chat
+    this._addConsoleMessage(messageType, message);
+
     // TODO: Emit action event for multiplayer
   }
 
@@ -319,10 +383,9 @@ export class CommandDashboard {
     const message = this.elements.chatInput.value.trim();
     if (!message) return;
 
-    // Check if it's a dice roll command (e.g., "/roll 2d6+3")
-    if (message.startsWith('/roll ')) {
-      const notation = message.substring(6).trim();
-      this._rollDice(notation);
+    // Process slash commands
+    if (message.startsWith('/')) {
+      this._processCommand(message);
     } else {
       // Regular player message
       this._addConsoleMessage('player', message);
@@ -330,6 +393,147 @@ export class CommandDashboard {
 
     // Clear input
     this.elements.chatInput.value = '';
+  }
+
+  /**
+   * Process slash commands
+   * @private
+   * @param {string} command - Command string
+   */
+  _processCommand(command) {
+    const parts = command.split(' ');
+    const cmd = parts[0].toLowerCase();
+    const args = parts.slice(1);
+
+    switch (cmd) {
+      case '/roll':
+        // Roll dice: /roll 2d6+3
+        if (args.length > 0) {
+          const notation = args.join('');
+          this._rollDice(notation);
+        } else {
+          this._addConsoleMessage('system', '❌ Usage: /roll [dice notation]  (e.g., /roll 2d6+3)');
+        }
+        break;
+
+      case '/help':
+        // Show available commands
+        this._showHelp();
+        break;
+
+      case '/clear':
+        // Clear chat history
+        if (this.elements.consoleMessages) {
+          this.elements.consoleMessages.innerHTML = '';
+          this._addConsoleMessage('system', '🧹 Chat cleared');
+        }
+        break;
+
+      case '/attack':
+        // Quick attack: /attack [target name]
+        if (this.currentToken) {
+          const targetName = args.join(' ') || 'enemy';
+          this._quickAttack(this.currentToken, targetName);
+        } else {
+          this._addConsoleMessage('system', '❌ No character selected. Click a token first.');
+        }
+        break;
+
+      case '/skill':
+        // Skill check: /skill [skill name]
+        if (args.length > 0) {
+          const skillName = args.join(' ');
+          this._skillCheck(skillName);
+        } else {
+          this._addConsoleMessage('system', '❌ Usage: /skill [skill name]  (e.g., /skill Perception)');
+        }
+        break;
+
+      case '/init':
+      case '/initiative':
+        // Roll initiative
+        this._rollInitiative();
+        break;
+
+      default:
+        this._addConsoleMessage('system', `❌ Unknown command: ${cmd}. Type /help for available commands.`);
+    }
+  }
+
+  /**
+   * Show help message with available commands
+   * @private
+   */
+  _showHelp() {
+    const helpText = `
+<strong>Available Commands:</strong>
+• /roll [dice] - Roll dice (e.g., /roll 2d6+3, /roll d20)
+• /attack [target] - Quick attack with selected character
+• /skill [name] - Make a skill check (e.g., /skill Perception)
+• /init - Roll initiative for selected character
+• /clear - Clear chat history
+• /help - Show this help message
+    `.trim();
+
+    this._addConsoleMessage('system', helpText);
+  }
+
+  /**
+   * Quick attack command
+   * @private
+   */
+  _quickAttack(token, targetName) {
+    if (!token.actions || token.actions.length === 0) {
+      this._addConsoleMessage('system', `❌ ${token.name} has no available attacks.`);
+      return;
+    }
+
+    // Use first attack action
+    const attackAction = token.actions.find(a => a.type === 'Attack') || token.actions[0];
+
+    // Roll attack
+    const attackRoll = Math.floor(Math.random() * 20) + 1;
+    const bonusMatch = attackAction.bonus?.match(/[+-]\d+/);
+    const bonus = bonusMatch ? parseInt(bonusMatch[0]) : 0;
+    const total = attackRoll + bonus;
+
+    this._addConsoleMessage('combat',
+      `⚔️ ${token.name} attacks ${targetName} with ${attackAction.name}: [${attackRoll}] + ${bonus} = ${total}`
+    );
+  }
+
+  /**
+   * Skill check command
+   * @private
+   */
+  _skillCheck(skillName) {
+    const characterName = this.currentToken ? this.currentToken.name : 'Player';
+    const roll = Math.floor(Math.random() * 20) + 1;
+
+    this._addConsoleMessage('action',
+      `🎯 ${characterName} makes a ${skillName} check: [${roll}]`
+    );
+  }
+
+  /**
+   * Roll initiative
+   * @private
+   */
+  _rollInitiative() {
+    if (!this.currentToken) {
+      this._addConsoleMessage('system', '❌ No character selected. Click a token first.');
+      return;
+    }
+
+    const roll = Math.floor(Math.random() * 20) + 1;
+    const initBonus = this.currentToken.stats?.init || 0;
+    const total = roll + initBonus;
+
+    this._addConsoleMessage('combat',
+      `🎲 ${this.currentToken.name} rolls initiative: [${roll}] + ${initBonus} = ${total}`
+    );
+
+    // TODO: Add to initiative tracker
   }
 
   /**
@@ -402,6 +606,13 @@ export class CommandDashboard {
    * @private
    */
   _showDicePopup() {
+    // Don't open if character sheet is already open
+    if (this.elements.characterSheetModal &&
+        this.elements.characterSheetModal.style.display === 'flex') {
+      this._addConsoleMessage('system', '⚠️ Close the character sheet first');
+      return;
+    }
+
     if (this.elements.dicePopup) {
       this.elements.dicePopup.style.display = 'flex';
     }
@@ -609,6 +820,12 @@ export class CommandDashboard {
       `).join('');
     } else {
       this.elements.sheetFeats.innerHTML = '<p style="color: #8b7355;">No feats or abilities</p>';
+    }
+
+    // Don't open if dice popup is already open
+    if (this.elements.dicePopup &&
+        this.elements.dicePopup.style.display === 'flex') {
+      this._hideDicePopup();
     }
 
     // Show modal
