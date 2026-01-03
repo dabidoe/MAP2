@@ -6,7 +6,16 @@
     "lng": -74.8718,
     "description": "The embarkation point. The river is choked with ice cakes.",
     "radius": 50,
-    "tacticalMapUrl": "/assets/maps/washingtons-camp/the-frozen-vigil-of-fortitude.png"
+    "tacticalMapUrl": "/assets/maps/washingtons-camp/the-frozen-vigil-of-fortitude.png",
+    "portals": [
+      {
+        "id": "exit_to_picket",
+        "position": { "x": 85, "y": 50 },
+        "radius": 5,
+        "destination": "picket_post",
+        "label": "Road to Hessian Picket"
+      }
+    ]
   },
   {
     "id": "picket_post",
@@ -15,7 +24,23 @@
     "lng": -74.8010,
     "description": "A small outpost guarding the river road. High risk of encounter.",
     "radius": 50,
-    "tacticalMapUrl": "/assets/maps/trenton-barracks/the-barracks-of-trenton.png"
+    "tacticalMapUrl": "/assets/maps/trenton-barracks/the-barracks-of-trenton.png",
+    "portals": [
+      {
+        "id": "door_to_barracks",
+        "position": { "x": 50, "y": 85 },
+        "radius": 5,
+        "destination": "trenton_barracks",
+        "label": "Road to Trenton"
+      },
+      {
+        "id": "back_to_ferry",
+        "position": { "x": 15, "y": 50 },
+        "radius": 5,
+        "destination": "frozen_vigil",
+        "label": "Back to McConkey's Ferry"
+      }
+    ]
   },
   {
     "id": "trenton_barracks",
@@ -24,6 +49,15 @@
     "lng": -74.7681,
     "description": "The stone barracks housing the Rall Regiment.",
     "radius": 50,
-    "tacticalMapUrl": "/assets/maps/trenton-barracks/the-barracks-of-trenton.png"
+    "tacticalMapUrl": "/assets/maps/trenton-barracks/the-barracks-of-trenton.png",
+    "portals": [
+      {
+        "id": "exit_barracks",
+        "position": { "x": 50, "y": 15 },
+        "radius": 5,
+        "destination": "picket_post",
+        "label": "Back to Picket Post"
+      }
+    ]
   }
 ]

@@ -36,11 +36,15 @@ export class CommandDashboard {
       combatTracker: document.getElementById('floating-combat-tracker'),
       initiativeList: document.getElementById('initiative-list'),
 
-      // Console
+      // Console/Chat
       consoleMessages: document.getElementById('console-messages'),
+      chatInput: document.getElementById('chat-input'),
+      chatSend: document.getElementById('chat-send'),
 
       // Dice Roller
-      diceResult: document.getElementById('dice-result'),
+      diceIconBtn: document.getElementById('dice-icon-btn'),
+      dicePopup: document.getElementById('dice-roller-popup'),
+      closeDicePopup: document.getElementById('close-dice-popup'),
       diceCustomInput: document.getElementById('dice-custom-input'),
       diceCustomRoll: document.getElementById('dice-custom-roll'),
 
@@ -104,6 +108,9 @@ export class CommandDashboard {
     if (this.elements.closeUnitCard) {
       this.elements.closeUnitCard.onclick = () => this._hideUnitCard();
     }
+
+    // Chat input handlers
+    this._initChatInput();
 
     // Dice roller handlers
     this._initDiceRoller();
@@ -281,16 +288,85 @@ export class CommandDashboard {
   }
 
   /**
+   * Initialize chat input
+   * @private
+   */
+  _initChatInput() {
+    // Send button
+    if (this.elements.chatSend) {
+      this.elements.chatSend.addEventListener('click', () => {
+        this._sendChatMessage();
+      });
+    }
+
+    // Enter key
+    if (this.elements.chatInput) {
+      this.elements.chatInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          this._sendChatMessage();
+        }
+      });
+    }
+  }
+
+  /**
+   * Send chat message
+   * @private
+   */
+  _sendChatMessage() {
+    if (!this.elements.chatInput) return;
+
+    const message = this.elements.chatInput.value.trim();
+    if (!message) return;
+
+    // Check if it's a dice roll command (e.g., "/roll 2d6+3")
+    if (message.startsWith('/roll ')) {
+      const notation = message.substring(6).trim();
+      this._rollDice(notation);
+    } else {
+      // Regular player message
+      this._addConsoleMessage('player', message);
+    }
+
+    // Clear input
+    this.elements.chatInput.value = '';
+  }
+
+  /**
    * Initialize dice roller
    * @private
    */
   _initDiceRoller() {
+    // Dice icon button - opens popup
+    if (this.elements.diceIconBtn) {
+      this.elements.diceIconBtn.addEventListener('click', () => {
+        this._showDicePopup();
+      });
+    }
+
+    // Close popup button
+    if (this.elements.closeDicePopup) {
+      this.elements.closeDicePopup.addEventListener('click', () => {
+        this._hideDicePopup();
+      });
+    }
+
+    // Click outside to close
+    if (this.elements.dicePopup) {
+      this.elements.dicePopup.addEventListener('click', (e) => {
+        if (e.target === this.elements.dicePopup) {
+          this._hideDicePopup();
+        }
+      });
+    }
+
     // Quick dice buttons
     const diceButtons = document.querySelectorAll('.dice-btn[data-dice]');
     diceButtons.forEach(button => {
       button.addEventListener('click', () => {
         const diceType = button.getAttribute('data-dice');
         this._rollDice(diceType);
+        this._hideDicePopup(); // Close popup after roll
       });
     });
 
@@ -300,6 +376,8 @@ export class CommandDashboard {
         const notation = this.elements.diceCustomInput.value.trim();
         if (notation) {
           this._rollDice(notation);
+          this.elements.diceCustomInput.value = ''; // Clear input
+          this._hideDicePopup(); // Close popup after roll
         }
       });
     }
@@ -311,9 +389,31 @@ export class CommandDashboard {
           const notation = this.elements.diceCustomInput.value.trim();
           if (notation) {
             this._rollDice(notation);
+            this.elements.diceCustomInput.value = ''; // Clear input
+            this._hideDicePopup(); // Close popup after roll
           }
         }
       });
+    }
+  }
+
+  /**
+   * Show dice popup
+   * @private
+   */
+  _showDicePopup() {
+    if (this.elements.dicePopup) {
+      this.elements.dicePopup.style.display = 'flex';
+    }
+  }
+
+  /**
+   * Hide dice popup
+   * @private
+   */
+  _hideDicePopup() {
+    if (this.elements.dicePopup) {
+      this.elements.dicePopup.style.display = 'none';
     }
   }
 
@@ -326,26 +426,18 @@ export class CommandDashboard {
     try {
       const result = this._parseDiceNotation(notation);
 
-      // Display result
-      if (this.elements.diceResult) {
-        const resultValue = this.elements.diceResult.querySelector('.result-value');
-        if (resultValue) {
-          resultValue.textContent = result.total;
+      // Get current token name if available
+      const characterName = this.currentToken ? this.currentToken.name : 'Player';
 
-          // Animate the result
-          this.elements.diceResult.classList.add('dice-roll-animation');
-          setTimeout(() => {
-            this.elements.diceResult.classList.remove('dice-roll-animation');
-          }, 500);
-        }
-      }
+      // Format result message for chat
+      const rollBreakdown = result.rolls.length > 1
+        ? `[${result.rolls.join(', ')}]${result.modifier !== 0 ? ` ${result.modifier >= 0 ? '+' : ''}${result.modifier}` : ''}`
+        : '';
 
-      // Add to console
-      const detailText = result.rolls.length > 1
-        ? `${notation} = [${result.rolls.join(', ')}]${result.modifier !== 0 ? ` ${result.modifier >= 0 ? '+' : ''}${result.modifier}` : ''} = ${result.total}`
-        : `${notation} = ${result.total}`;
+      const chatMessage = `🎲 ${characterName} rolled ${notation}: ${rollBreakdown ? rollBreakdown + ' = ' : ''}${result.total}`;
 
-      this._addConsoleMessage('action', `🎲 Rolled ${detailText}`);
+      // Post to chat
+      this._addConsoleMessage('action', chatMessage);
 
       console.log(`Dice roll: ${notation} = ${result.total}`, result);
     } catch (error) {

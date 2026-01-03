@@ -112,6 +112,10 @@ class WarRoom1776 {
 
     this.canvasRenderer.on('tokenDragEnd', (token) => {
       console.log(`Token ${token.name} moved to grid position:`, token.grid);
+
+      // Check for portal collision
+      this._checkPortals(token);
+
       // Emit to server
       this.socket?.emit('token_move', {
         tokenId: token.tokenId,
@@ -416,6 +420,85 @@ class WarRoom1776 {
 
       return token;
     });
+  }
+
+  /**
+   * Check if token landed on a portal/door
+   * @private
+   */
+  _checkPortals(token) {
+    const state = this.gameState.getState();
+    const currentLocation = state.locations.find(l => l.id === state.ui.activeLocation);
+
+    if (!currentLocation || !currentLocation.portals) return;
+
+    // Get token position (grid coordinates are in percentage)
+    const tokenX = token.grid.posX;
+    const tokenY = token.grid.posY;
+
+    // Check each portal for collision
+    for (const portal of currentLocation.portals) {
+      const portalX = portal.position.x;
+      const portalY = portal.position.y;
+      const portalRadius = portal.radius || 5;
+
+      // Calculate distance
+      const distance = Math.sqrt(
+        Math.pow(tokenX - portalX, 2) + Math.pow(tokenY - portalY, 2)
+      );
+
+      // Check if token is within portal radius
+      if (distance <= portalRadius) {
+        console.log(`🚪 Portal triggered: ${portal.label} → ${portal.destination}`);
+
+        // Show transition message in chat
+        if (this.dashboard) {
+          this.dashboard.addConsoleMessage(
+            'system',
+            `🚪 ${token.name} entered: ${portal.label}`
+          );
+        }
+
+        // Trigger scene transition after a short delay
+        setTimeout(() => {
+          this._transitionToLocation(portal.destination, token.tokenId);
+        }, 500);
+
+        return; // Only trigger one portal
+      }
+    }
+  }
+
+  /**
+   * Transition token to a new location
+   * @private
+   */
+  _transitionToLocation(destinationId, tokenId) {
+    const state = this.gameState.getState();
+    const destination = state.locations.find(l => l.id === destinationId);
+
+    if (!destination) {
+      console.error(`Destination location not found: ${destinationId}`);
+      return;
+    }
+
+    // Update token location
+    const token = state.tokens.find(t => t.tokenId === tokenId);
+    if (token) {
+      token.locationId = destinationId;
+      token.grid = { posX: 50, posY: 50 }; // Spawn in center of new location
+    }
+
+    // Show notification
+    if (this.dashboard) {
+      this.dashboard.addConsoleMessage(
+        'discovery',
+        `📍 Arrived at: ${destination.title}`
+      );
+    }
+
+    // Re-enter tactical view at new location
+    this._enterTacticalView(destination);
   }
 
   /**
