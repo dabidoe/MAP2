@@ -1,51 +1,33 @@
 /**
  * API Routes
  * RESTful endpoints for game data
+ * DIRECT FILE-SYSTEM READS - No MongoDB/Mongoose
  */
 
 import express from 'express';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import Token from '../models/Token.js';
-import Location from '../models/Location.js';
-import Character from '../models/Character.js';
-import Encounter from '../models/Encounter.js';
 
 const router = express.Router();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 /**
- * Helper: Try MongoDB first, fallback to JSON files
+ * Helper: Load JSON file directly from /data folder
  */
-const getFromDBOrFile = async (Model, jsonPath, fallbackData = []) => {
+const loadJSONFile = (filename) => {
   try {
-    // Try MongoDB first
-    const data = await Model.find({});
-    if (data && data.length > 0) return data;
-
-    // Fallback to JSON file
-    const filePath = path.join(__dirname, '../../data', jsonPath);
+    const filePath = path.join(__dirname, '../../data', filename);
     if (fs.existsSync(filePath)) {
-      const fileData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-      return fileData;
+      const fileData = fs.readFileSync(filePath, 'utf8');
+      return JSON.parse(fileData);
     }
-
-    return fallbackData;
+    console.warn(`File not found: ${filename}`);
+    return [];
   } catch (error) {
-    console.error(`Error fetching data:`, error.message);
-    // Last resort fallback
-    try {
-      const filePath = path.join(__dirname, '../../data', jsonPath);
-      if (fs.existsSync(filePath)) {
-        const fileData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-        return fileData;
-      }
-    } catch (fileError) {
-      console.error('File fallback also failed:', fileError.message);
-    }
-    return fallbackData;
+    console.error(`Error loading ${filename}:`, error.message);
+    return [];
   }
 };
 
@@ -57,9 +39,9 @@ const getFromDBOrFile = async (Model, jsonPath, fallbackData = []) => {
  * GET /api/tokens
  * Get all tokens
  */
-router.get('/tokens', async (req, res) => {
+router.get('/tokens', (req, res) => {
   try {
-    const tokens = await getFromDBOrFile(Token, 'tokens.json');
+    const tokens = loadJSONFile('tokens.json');
     res.json(tokens);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -70,10 +52,10 @@ router.get('/tokens', async (req, res) => {
  * GET /api/tokens/:id
  * Get token by ID
  */
-router.get('/tokens/:id', async (req, res) => {
+router.get('/tokens/:id', (req, res) => {
   try {
-    const token = await Token.findOne({ tokenId: req.params.id }) ||
-                  await Token.findById(req.params.id);
+    const tokens = loadJSONFile('tokens.json');
+    const token = tokens.find(t => t.tokenId === req.params.id);
     if (!token) return res.status(404).json({ error: 'Token not found' });
     res.json(token);
   } catch (error) {
@@ -85,10 +67,11 @@ router.get('/tokens/:id', async (req, res) => {
  * GET /api/tokens/location/:locationId
  * Get all tokens at a location
  */
-router.get('/tokens/location/:locationId', async (req, res) => {
+router.get('/tokens/location/:locationId', (req, res) => {
   try {
-    const tokens = await Token.findByLocation(req.params.locationId);
-    res.json(tokens);
+    const tokens = loadJSONFile('tokens.json');
+    const locationTokens = tokens.filter(t => t.locationId === req.params.locationId);
+    res.json(locationTokens);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -96,17 +79,20 @@ router.get('/tokens/location/:locationId', async (req, res) => {
 
 /**
  * PATCH /api/tokens/:id
- * Update token position or stats
+ * Update token position or stats (in-memory only, not persisted)
  */
-router.patch('/tokens/:id', async (req, res) => {
+router.patch('/tokens/:id', (req, res) => {
   try {
-    const token = await Token.findOneAndUpdate(
-      { tokenId: req.params.id },
-      req.body,
-      { new: true, runValidators: true }
-    );
+    const tokens = loadJSONFile('tokens.json');
+    const token = tokens.find(t => t.tokenId === req.params.id);
     if (!token) return res.status(404).json({ error: 'Token not found' });
+
+    // Merge updates
+    Object.assign(token, req.body);
     res.json(token);
+
+    // NOTE: Changes are NOT persisted to file (in-memory only for this session)
+    console.log(`⚠️  Token ${req.params.id} updated (in-memory only, not saved to file)`);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -120,9 +106,9 @@ router.patch('/tokens/:id', async (req, res) => {
  * GET /api/locations
  * Get all locations
  */
-router.get('/locations', async (req, res) => {
+router.get('/locations', (req, res) => {
   try {
-    const locations = await getFromDBOrFile(Location, 'locations.json');
+    const locations = loadJSONFile('locations.json');
     res.json(locations);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -133,10 +119,10 @@ router.get('/locations', async (req, res) => {
  * GET /api/locations/:id
  * Get location by ID
  */
-router.get('/locations/:id', async (req, res) => {
+router.get('/locations/:id', (req, res) => {
   try {
-    const location = await Location.findOne({ id: req.params.id }) ||
-                     await Location.findById(req.params.id);
+    const locations = loadJSONFile('locations.json');
+    const location = locations.find(l => l.id === req.params.id);
     if (!location) return res.status(404).json({ error: 'Location not found' });
     res.json(location);
   } catch (error) {
@@ -148,12 +134,21 @@ router.get('/locations/:id', async (req, res) => {
  * GET /api/locations/nearby/:lat/:lng
  * Find locations near coordinates
  */
-router.get('/locations/nearby/:lat/:lng', async (req, res) => {
+router.get('/locations/nearby/:lat/:lng', (req, res) => {
   try {
     const { lat, lng } = req.params;
-    const maxDistance = req.query.distance || 1000;
-    const locations = await Location.findNearby(parseFloat(lat), parseFloat(lng), parseFloat(maxDistance));
-    res.json(locations);
+    const maxDistance = parseFloat(req.query.distance) || 1000;
+    const locations = loadJSONFile('locations.json');
+
+    // Simple distance calculation (haversine approximation)
+    const nearbyLocations = locations.filter(loc => {
+      const latDiff = Math.abs(loc.lat - parseFloat(lat));
+      const lngDiff = Math.abs(loc.lng - parseFloat(lng));
+      const distanceKm = Math.sqrt(latDiff * latDiff + lngDiff * lngDiff) * 111; // rough km conversion
+      return distanceKm <= maxDistance;
+    });
+
+    res.json(nearbyLocations);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -167,9 +162,9 @@ router.get('/locations/nearby/:lat/:lng', async (req, res) => {
  * GET /api/characters
  * Get all characters
  */
-router.get('/characters', async (req, res) => {
+router.get('/characters', (req, res) => {
   try {
-    const characters = await getFromDBOrFile(Character, 'characters.json');
+    const characters = loadJSONFile('characters.json');
     res.json(characters);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -178,11 +173,15 @@ router.get('/characters', async (req, res) => {
 
 /**
  * GET /api/characters/:id
- * Get character by ID
+ * Get character by ID (MongoDB _id or legacy ID)
  */
-router.get('/characters/:id', async (req, res) => {
+router.get('/characters/:id', (req, res) => {
   try {
-    const character = await Character.findById(req.params.id);
+    const characters = loadJSONFile('characters.json');
+    const character = characters.find(c =>
+      c._id?.$oid === req.params.id ||
+      c.legacySourceId === req.params.id
+    );
     if (!character) return res.status(404).json({ error: 'Character not found' });
     res.json(character);
   } catch (error) {
@@ -194,9 +193,10 @@ router.get('/characters/:id', async (req, res) => {
  * GET /api/characters/name/:name
  * Get character by name
  */
-router.get('/characters/name/:name', async (req, res) => {
+router.get('/characters/name/:name', (req, res) => {
   try {
-    const character = await Character.findOne({ name: req.params.name });
+    const characters = loadJSONFile('characters.json');
+    const character = characters.find(c => c.name === req.params.name);
     if (!character) return res.status(404).json({ error: 'Character not found' });
     res.json(character);
   } catch (error) {
@@ -205,17 +205,17 @@ router.get('/characters/name/:name', async (req, res) => {
 });
 
 // ============================================
-// ENCOUNTERS
+// ENCOUNTERS (stub - no file yet)
 // ============================================
 
 /**
  * GET /api/encounters
- * Get all encounters
+ * Get all encounters (currently returns empty array)
  */
-router.get('/encounters', async (req, res) => {
+router.get('/encounters', (req, res) => {
   try {
-    const encounters = await Encounter.find({});
-    res.json(encounters);
+    // No encounters.json file yet - return empty
+    res.json([]);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -225,10 +225,9 @@ router.get('/encounters', async (req, res) => {
  * GET /api/encounters/active
  * Get currently active encounter
  */
-router.get('/encounters/active', async (req, res) => {
+router.get('/encounters/active', (req, res) => {
   try {
-    const encounter = await Encounter.findActive();
-    res.json(encounter || null);
+    res.json(null);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -238,12 +237,9 @@ router.get('/encounters/active', async (req, res) => {
  * GET /api/encounters/:id
  * Get encounter by ID
  */
-router.get('/encounters/:id', async (req, res) => {
+router.get('/encounters/:id', (req, res) => {
   try {
-    const encounter = await Encounter.findOne({ encounterId: req.params.id }) ||
-                      await Encounter.findById(req.params.id);
-    if (!encounter) return res.status(404).json({ error: 'Encounter not found' });
-    res.json(encounter);
+    res.status(404).json({ error: 'Encounter not found' });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -251,51 +247,26 @@ router.get('/encounters/:id', async (req, res) => {
 
 /**
  * POST /api/encounters/:id/start
- * Start an encounter
+ * Start an encounter (stub)
  */
-router.post('/encounters/:id/start', async (req, res) => {
-  try {
-    const encounter = await Encounter.findOne({ encounterId: req.params.id });
-    if (!encounter) return res.status(404).json({ error: 'Encounter not found' });
-
-    await encounter.start();
-    res.json(encounter);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
+router.post('/encounters/:id/start', (req, res) => {
+  res.status(501).json({ error: 'Encounters not yet implemented' });
 });
 
 /**
  * POST /api/encounters/:id/end
- * End an encounter
+ * End an encounter (stub)
  */
-router.post('/encounters/:id/end', async (req, res) => {
-  try {
-    const encounter = await Encounter.findOne({ encounterId: req.params.id });
-    if (!encounter) return res.status(404).json({ error: 'Encounter not found' });
-
-    await encounter.end();
-    res.json(encounter);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
+router.post('/encounters/:id/end', (req, res) => {
+  res.status(501).json({ error: 'Encounters not yet implemented' });
 });
 
 /**
  * POST /api/encounters/:id/initiative
- * Add combatant to initiative
+ * Add combatant to initiative (stub)
  */
-router.post('/encounters/:id/initiative', async (req, res) => {
-  try {
-    const { tokenId, name, roll } = req.body;
-    const encounter = await Encounter.findOne({ encounterId: req.params.id });
-    if (!encounter) return res.status(404).json({ error: 'Encounter not found' });
-
-    await encounter.addToInitiative(tokenId, name, roll);
-    res.json(encounter);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
+router.post('/encounters/:id/initiative', (req, res) => {
+  res.status(501).json({ error: 'Encounters not yet implemented' });
 });
 
 // ============================================
@@ -310,7 +281,7 @@ router.post('/encounters/:id/initiative', async (req, res) => {
  *   /api/library/ability/action-surge
  *   /api/library/item/saber-of-liberty
  */
-router.get('/library/:type/:id', async (req, res) => {
+router.get('/library/:type/:id', (req, res) => {
   try {
     const { type, id } = req.params;
 
@@ -336,24 +307,21 @@ router.get('/library/:type/:id', async (req, res) => {
  * GET /api/campaign
  * Get full campaign state
  */
-router.get('/campaign', async (req, res) => {
+router.get('/campaign', (req, res) => {
   try {
-    const [tokens, locations, characters, activeEncounter] = await Promise.all([
-      getFromDBOrFile(Token, 'tokens.json'),
-      getFromDBOrFile(Location, 'locations.json'),
-      getFromDBOrFile(Character, 'characters.json'),
-      Encounter.findActive().catch(() => null)
-    ]);
+    const tokens = loadJSONFile('tokens.json');
+    const locations = loadJSONFile('locations.json');
+    const characters = loadJSONFile('characters.json');
 
     res.json({
       tokens,
       locations,
       characters,
-      activeEncounter,
+      activeEncounter: null,
       config: {
-        date: process.env.CAMPAIGN_DATE,
-        time: process.env.CAMPAIGN_START_TIME,
-        weather: process.env.WEATHER
+        date: process.env.CAMPAIGN_DATE || 'December 25, 1776',
+        time: process.env.CAMPAIGN_START_TIME || '18:00',
+        weather: process.env.WEATHER || 'Heavy Snow'
       }
     });
   } catch (error) {

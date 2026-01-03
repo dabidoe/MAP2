@@ -81,10 +81,10 @@
         <div id="initiative-list"></div>
     </div>
 
-    <!-- Floating HUD: Console/Chat (Bottom-Left) -->
+    <!-- Floating HUD: Chat History (Bottom-Left) -->
     <div id="floating-console" class="hud-panel">
         <div class="console-header">
-            <h3>⚔️ WAR ROOM CONSOLE</h3>
+            <h3>⚔️ WAR ROOM CHAT</h3>
         </div>
         <div id="console-messages" class="console-messages">
             <div class="console-message npc-message">
@@ -92,27 +92,36 @@
                 <span class="message-text">Greetings soldiers, get warm by the fire. I'll be addressing the camp in a few minutes.</span>
             </div>
         </div>
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" class="chat-input" placeholder="Type a command or message..." />
+            <button id="chat-send" class="chat-send-btn">Send</button>
+        </div>
     </div>
 
-    <!-- Floating HUD: Dice Roller (Bottom-Right) -->
-    <div id="floating-dice-roller" class="hud-panel">
-        <div class="dice-header">
-            <h3>🎲 DICE ROLLER</h3>
-        </div>
-        <div class="dice-result" id="dice-result">
-            <span class="result-value">—</span>
-        </div>
-        <div class="dice-buttons">
-            <button class="dice-btn" data-dice="d4">d4</button>
-            <button class="dice-btn" data-dice="d6">d6</button>
-            <button class="dice-btn" data-dice="d8">d8</button>
-            <button class="dice-btn" data-dice="d10">d10</button>
-            <button class="dice-btn" data-dice="d12">d12</button>
-            <button class="dice-btn dice-btn-primary" data-dice="d20">d20</button>
-        </div>
-        <div class="dice-custom">
-            <input type="text" id="dice-custom-input" placeholder="e.g., 2d6+3" />
-            <button id="dice-custom-roll" class="dice-btn dice-btn-secondary">Roll</button>
+    <!-- Dice Icon Button (Floating) -->
+    <button id="dice-icon-btn" class="dice-icon-button" title="Open Dice Tray">
+        🎲
+    </button>
+
+    <!-- Dice Roller Popup (Hidden by default) -->
+    <div id="dice-roller-popup" class="dice-popup" style="display: none;">
+        <div class="dice-popup-content">
+            <div class="dice-header">
+                <h3>🎲 DICE TRAY</h3>
+                <button id="close-dice-popup" class="close-btn">✕</button>
+            </div>
+            <div class="dice-buttons">
+                <button class="dice-btn" data-dice="d4">d4</button>
+                <button class="dice-btn" data-dice="d6">d6</button>
+                <button class="dice-btn" data-dice="d8">d8</button>
+                <button class="dice-btn" data-dice="d10">d10</button>
+                <button class="dice-btn" data-dice="d12">d12</button>
+                <button class="dice-btn dice-btn-primary" data-dice="d20">d20</button>
+            </div>
+            <div class="dice-custom">
+                <input type="text" id="dice-custom-input" placeholder="e.g., 2d6+3" />
+                <button id="dice-custom-roll" class="dice-btn dice-btn-secondary">Roll</button>
+            </div>
         </div>
     </div>
 
