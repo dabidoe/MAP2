@@ -34,7 +34,10 @@ export class CommandDashboard {
 
       // Combat Tracker
       combatTracker: document.getElementById('floating-combat-tracker'),
-      initiativeList: document.getElementById('initiative-list')
+      initiativeList: document.getElementById('initiative-list'),
+
+      // Console
+      consoleMessages: document.getElementById('console-messages')
     };
 
     this._init();
@@ -52,6 +55,31 @@ export class CommandDashboard {
     this.gameState.on('encounterEnd', () => this._hideCombat());
     this.gameState.on('initiativeUpdate', (init) => this._updateInitiative(init));
     this.gameState.on('locationChange', (location) => this._updateAtlasContext(location));
+
+    // Console event listeners
+    this.gameState.on('stateLoaded', () => this._addConsoleMessage('system', 'Game data loaded successfully'));
+    this.gameState.on('tokenMove', (data) => {
+      const token = this.gameState.getToken(data.tokenId);
+      if (token) {
+        this._addConsoleMessage('action', `${token.name} moved position`);
+      }
+    });
+    this.gameState.on('encounterStart', (data) => {
+      this._addConsoleMessage('combat', `⚔️ Encounter started: ${data.id || 'Unknown'}`);
+    });
+    this.gameState.on('encounterEnd', () => {
+      this._addConsoleMessage('combat', '✅ Encounter ended');
+    });
+    this.gameState.on('roundAdvance', (round) => {
+      this._addConsoleMessage('combat', `Round ${round} begins!`);
+    });
+    this.gameState.on('locationDiscovered', (locationId) => {
+      const location = this.gameState.getLocation(locationId);
+      this._addConsoleMessage('discovery', `📍 Discovered: ${location?.title || locationId}`);
+    });
+    this.gameState.on('modeChange', (mode) => {
+      this._addConsoleMessage('system', `Switched to ${mode} mode`);
+    });
 
     // Close button handler
     if (this.elements.closeUnitCard) {
@@ -212,9 +240,65 @@ export class CommandDashboard {
   }
 
   /**
+   * Add message to console
+   * @private
+   * @param {string} type - Message type: 'system', 'action', 'combat', 'discovery', 'npc'
+   * @param {string} text - Message text
+   */
+  _addConsoleMessage(type, text) {
+    if (!this.elements.consoleMessages) return;
+
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `console-message ${type}-message`;
+
+    // Format based on type
+    let formattedMessage;
+    switch (type) {
+      case 'system':
+        formattedMessage = `<span class="message-sender">SYSTEM:</span><span class="message-text">${text}</span>`;
+        break;
+      case 'combat':
+        formattedMessage = `<span class="message-sender">COMBAT:</span><span class="message-text">${text}</span>`;
+        break;
+      case 'discovery':
+        formattedMessage = `<span class="message-sender">DISCOVERY:</span><span class="message-text">${text}</span>`;
+        break;
+      case 'action':
+        formattedMessage = `<span class="message-sender">ACTION:</span><span class="message-text">${text}</span>`;
+        break;
+      case 'npc':
+        formattedMessage = `<span class="message-sender">NPC:</span><span class="message-text">${text}</span>`;
+        break;
+      default:
+        formattedMessage = `<span class="message-text">${text}</span>`;
+    }
+
+    messageDiv.innerHTML = formattedMessage;
+
+    // Add to console
+    this.elements.consoleMessages.appendChild(messageDiv);
+
+    // Auto-scroll to bottom
+    this.elements.consoleMessages.scrollTop = this.elements.consoleMessages.scrollHeight;
+
+    // Limit message history to last 50 messages
+    const messages = this.elements.consoleMessages.children;
+    if (messages.length > 50) {
+      this.elements.consoleMessages.removeChild(messages[0]);
+    }
+  }
+
+  /**
    * Public API: Manually update campaign display
    */
   updateCampaign(data) {
     this._updateCampaign(data);
+  }
+
+  /**
+   * Public API: Add console message
+   */
+  addConsoleMessage(type, text) {
+    this._addConsoleMessage(type, text);
   }
 }

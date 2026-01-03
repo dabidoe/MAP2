@@ -345,6 +345,26 @@ body {
     border-left: 3px solid #4CAF50;
 }
 
+.system-message {
+    background: rgba(100, 100, 255, 0.15);
+    border-left: 3px solid #6464FF;
+}
+
+.combat-message {
+    background: rgba(255, 69, 0, 0.15);
+    border-left: 3px solid #FF4500;
+}
+
+.discovery-message {
+    background: rgba(255, 215, 0, 0.15);
+    border-left: 3px solid #FFD700;
+}
+
+.action-message {
+    background: rgba(139, 115, 85, 0.15);
+    border-left: 3px solid #8B7355;
+}
+
 .message-sender {
     font-weight: bold;
     color: #FFD700;
