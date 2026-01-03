@@ -20,7 +20,7 @@ Preferred communication style: Simple, everyday language.
 - **Socket.io client** for real-time token position updates
 
 ### Backend Architecture
-- **Express.js** server running on port 5000
+- **Express.js** server running on port 5001
 - **Socket.io** for WebSocket-based real-time communication
 - **Static file serving** from the `PUBLIC/` directory
 - **REST endpoint** (`/session`) for loading initial game state from JSON

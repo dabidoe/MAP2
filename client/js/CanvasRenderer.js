@@ -58,6 +58,9 @@ export class CanvasRenderer {
     this.selectedToken = null;
     this.hoveredToken = null;
 
+    // Track current gallery index for each token
+    this.tokenGalleryIndex = new Map();
+
     this.listeners = {
       onTokenClick: null,
       onTokenDragEnd: null,
@@ -94,6 +97,7 @@ export class CanvasRenderer {
     this.canvas.addEventListener('mouseup', (e) => this._onMouseUp(e));
     this.canvas.addEventListener('mouseleave', (e) => this._onMouseLeave(e));
     this.canvas.addEventListener('click', (e) => this._onClick(e));
+    this.canvas.addEventListener('dblclick', (e) => this._onDoubleClick(e));
     this.canvas.addEventListener('wheel', (e) => this._onWheel(e));
 
     // Resize observer
@@ -344,6 +348,11 @@ export class CanvasRenderer {
       this._renderHPBar(token, x, y - halfSize - 8);
     }
 
+    // Draw gallery indicator (if token has multiple images)
+    if (token.gallery && token.gallery.length > 1) {
+      this._renderGalleryIndicator(token, x + halfSize - 8, y - halfSize + 8);
+    }
+
     // Draw name label
     if (this.hoveredToken === token || this.selectedToken === token) {
       this._renderLabel(token.name, x, y + halfSize + 15);
@@ -398,6 +407,33 @@ export class CanvasRenderer {
     // Text
     this.ctx.fillStyle = '#e2d1b3';
     this.ctx.fillText(text, x, y);
+  }
+
+  /**
+   * Render gallery indicator badge
+   * @private
+   */
+  _renderGalleryIndicator(token, x, y) {
+    const size = 16;
+    const currentIndex = this.tokenGalleryIndex.get(token.tokenId) || 0;
+
+    // Circle background
+    this.ctx.fillStyle = 'rgba(197, 169, 89, 0.9)';
+    this.ctx.beginPath();
+    this.ctx.arc(x, y, size / 2, 0, Math.PI * 2);
+    this.ctx.fill();
+
+    // Border
+    this.ctx.strokeStyle = '#FFD700';
+    this.ctx.lineWidth = 1.5;
+    this.ctx.stroke();
+
+    // Gallery icon (camera or images icon)
+    this.ctx.fillStyle = '#1a1410';
+    this.ctx.font = 'bold 10px Arial';
+    this.ctx.textAlign = 'center';
+    this.ctx.textBaseline = 'middle';
+    this.ctx.fillText(`${currentIndex + 1}/${token.gallery.length}`, x, y);
   }
 
   /**
@@ -600,6 +636,54 @@ export class CanvasRenderer {
         this.render();
       }
     }
+  }
+
+  /**
+   * Double-click event - Cycle token image
+   * @private
+   */
+  _onDoubleClick(e) {
+    e.stopPropagation();
+    e.preventDefault();
+
+    const rect = this.canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const token = this._getTokenAt(x, y);
+
+    if (token) {
+      this._cycleTokenImage(token);
+    }
+  }
+
+  /**
+   * Cycle to next image in token's gallery
+   * @param {Token} token
+   */
+  _cycleTokenImage(token) {
+    if (!token.gallery || token.gallery.length <= 1) {
+      console.log(`Token ${token.name} has no gallery to cycle through`);
+      return;
+    }
+
+    // Get current index (default to 0)
+    let currentIndex = this.tokenGalleryIndex.get(token.tokenId) || 0;
+
+    // Increment and wrap
+    currentIndex = (currentIndex + 1) % token.gallery.length;
+
+    // Update index
+    this.tokenGalleryIndex.set(token.tokenId, currentIndex);
+
+    // Update token icon
+    token.icon = token.gallery[currentIndex];
+
+    // Preload new image and re-render
+    this._loadImage(token.icon).then(() => {
+      this.render();
+      console.log(`🔄 Cycled ${token.name} to image ${currentIndex + 1}/${token.gallery.length}`);
+    });
   }
 
   /**

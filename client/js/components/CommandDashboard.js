@@ -34,8 +34,30 @@ export class CommandDashboard {
 
       // Combat Tracker
       combatTracker: document.getElementById('floating-combat-tracker'),
-      initiativeList: document.getElementById('initiative-list')
+      initiativeList: document.getElementById('initiative-list'),
+
+      // Console
+      consoleMessages: document.getElementById('console-messages'),
+
+      // Dice Roller
+      diceResult: document.getElementById('dice-result'),
+      diceCustomInput: document.getElementById('dice-custom-input'),
+      diceCustomRoll: document.getElementById('dice-custom-roll'),
+
+      // Character Sheet Modal
+      characterSheetModal: document.getElementById('character-sheet-modal'),
+      viewCharacterDetails: document.getElementById('view-character-details'),
+      closeCharacterSheet: document.getElementById('close-character-sheet'),
+      sheetCharacterName: document.getElementById('sheet-character-name'),
+      sheetProfile: document.getElementById('sheet-profile'),
+      sheetAttributes: document.getElementById('sheet-attributes'),
+      sheetSkills: document.getElementById('sheet-skills'),
+      sheetTraits: document.getElementById('sheet-traits'),
+      sheetFeats: document.getElementById('sheet-feats')
     };
+
+    // Current selected token for character sheet
+    this.currentToken = null;
 
     this._init();
   }
@@ -53,9 +75,53 @@ export class CommandDashboard {
     this.gameState.on('initiativeUpdate', (init) => this._updateInitiative(init));
     this.gameState.on('locationChange', (location) => this._updateAtlasContext(location));
 
+    // Console event listeners
+    this.gameState.on('stateLoaded', () => this._addConsoleMessage('system', 'Game data loaded successfully'));
+    this.gameState.on('tokenMove', (data) => {
+      const token = this.gameState.getToken(data.tokenId);
+      if (token) {
+        this._addConsoleMessage('action', `${token.name} moved position`);
+      }
+    });
+    this.gameState.on('encounterStart', (data) => {
+      this._addConsoleMessage('combat', `⚔️ Encounter started: ${data.id || 'Unknown'}`);
+    });
+    this.gameState.on('encounterEnd', () => {
+      this._addConsoleMessage('combat', '✅ Encounter ended');
+    });
+    this.gameState.on('roundAdvance', (round) => {
+      this._addConsoleMessage('combat', `Round ${round} begins!`);
+    });
+    this.gameState.on('locationDiscovered', (locationId) => {
+      const location = this.gameState.getLocation(locationId);
+      this._addConsoleMessage('discovery', `📍 Discovered: ${location?.title || locationId}`);
+    });
+    this.gameState.on('modeChange', (mode) => {
+      this._addConsoleMessage('system', `Switched to ${mode} mode`);
+    });
+
     // Close button handler
     if (this.elements.closeUnitCard) {
       this.elements.closeUnitCard.onclick = () => this._hideUnitCard();
+    }
+
+    // Dice roller handlers
+    this._initDiceRoller();
+
+    // Character sheet handlers
+    if (this.elements.viewCharacterDetails) {
+      this.elements.viewCharacterDetails.onclick = () => this._showCharacterSheet();
+    }
+    if (this.elements.closeCharacterSheet) {
+      this.elements.closeCharacterSheet.onclick = () => this._hideCharacterSheet();
+    }
+    // Close modal when clicking outside
+    if (this.elements.characterSheetModal) {
+      this.elements.characterSheetModal.onclick = (e) => {
+        if (e.target === this.elements.characterSheetModal) {
+          this._hideCharacterSheet();
+        }
+      };
     }
 
     // Initial render
@@ -116,6 +182,9 @@ export class CommandDashboard {
    */
   _showUnitCard(token) {
     if (!token || !this.elements.unitCard) return;
+
+    // Save current token for character sheet
+    this.currentToken = token;
 
     // Populate unit data
     this.elements.unitName.textContent = token.name || 'Unknown Unit';
@@ -212,9 +281,287 @@ export class CommandDashboard {
   }
 
   /**
+   * Initialize dice roller
+   * @private
+   */
+  _initDiceRoller() {
+    // Quick dice buttons
+    const diceButtons = document.querySelectorAll('.dice-btn[data-dice]');
+    diceButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const diceType = button.getAttribute('data-dice');
+        this._rollDice(diceType);
+      });
+    });
+
+    // Custom roll button
+    if (this.elements.diceCustomRoll) {
+      this.elements.diceCustomRoll.addEventListener('click', () => {
+        const notation = this.elements.diceCustomInput.value.trim();
+        if (notation) {
+          this._rollDice(notation);
+        }
+      });
+    }
+
+    // Enter key on custom input
+    if (this.elements.diceCustomInput) {
+      this.elements.diceCustomInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          const notation = this.elements.diceCustomInput.value.trim();
+          if (notation) {
+            this._rollDice(notation);
+          }
+        }
+      });
+    }
+  }
+
+  /**
+   * Roll dice using standard notation
+   * @private
+   * @param {string} notation - Dice notation (e.g., "d20", "2d6+3", "d8-1")
+   */
+  _rollDice(notation) {
+    try {
+      const result = this._parseDiceNotation(notation);
+
+      // Display result
+      if (this.elements.diceResult) {
+        const resultValue = this.elements.diceResult.querySelector('.result-value');
+        if (resultValue) {
+          resultValue.textContent = result.total;
+
+          // Animate the result
+          this.elements.diceResult.classList.add('dice-roll-animation');
+          setTimeout(() => {
+            this.elements.diceResult.classList.remove('dice-roll-animation');
+          }, 500);
+        }
+      }
+
+      // Add to console
+      const detailText = result.rolls.length > 1
+        ? `${notation} = [${result.rolls.join(', ')}]${result.modifier !== 0 ? ` ${result.modifier >= 0 ? '+' : ''}${result.modifier}` : ''} = ${result.total}`
+        : `${notation} = ${result.total}`;
+
+      this._addConsoleMessage('action', `🎲 Rolled ${detailText}`);
+
+      console.log(`Dice roll: ${notation} = ${result.total}`, result);
+    } catch (error) {
+      console.error('Invalid dice notation:', notation, error);
+      this._addConsoleMessage('system', `❌ Invalid dice notation: ${notation}`);
+    }
+  }
+
+  /**
+   * Parse dice notation and roll
+   * @private
+   * @param {string} notation - Dice notation
+   * @returns {{total: number, rolls: number[], modifier: number}}
+   */
+  _parseDiceNotation(notation) {
+    // Remove spaces
+    notation = notation.toLowerCase().replace(/\s/g, '');
+
+    // Match patterns like "d20", "2d6", "3d8+5", "d12-2"
+    const match = notation.match(/^(\d*)d(\d+)([+-]\d+)?$/);
+
+    if (!match) {
+      throw new Error('Invalid dice notation');
+    }
+
+    const count = match[1] ? parseInt(match[1]) : 1;
+    const sides = parseInt(match[2]);
+    const modifier = match[3] ? parseInt(match[3]) : 0;
+
+    // Validate
+    if (count < 1 || count > 100) {
+      throw new Error('Dice count must be between 1 and 100');
+    }
+    if (sides < 2 || sides > 1000) {
+      throw new Error('Dice sides must be between 2 and 1000');
+    }
+
+    // Roll the dice
+    const rolls = [];
+    for (let i = 0; i < count; i++) {
+      rolls.push(Math.floor(Math.random() * sides) + 1);
+    }
+
+    const rollSum = rolls.reduce((sum, roll) => sum + roll, 0);
+    const total = rollSum + modifier;
+
+    return { total, rolls, modifier };
+  }
+
+  /**
+   * Add message to console
+   * @private
+   * @param {string} type - Message type: 'system', 'action', 'combat', 'discovery', 'npc'
+   * @param {string} text - Message text
+   */
+  _addConsoleMessage(type, text) {
+    if (!this.elements.consoleMessages) return;
+
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `console-message ${type}-message`;
+
+    // Format based on type
+    let formattedMessage;
+    switch (type) {
+      case 'system':
+        formattedMessage = `<span class="message-sender">SYSTEM:</span><span class="message-text">${text}</span>`;
+        break;
+      case 'combat':
+        formattedMessage = `<span class="message-sender">COMBAT:</span><span class="message-text">${text}</span>`;
+        break;
+      case 'discovery':
+        formattedMessage = `<span class="message-sender">DISCOVERY:</span><span class="message-text">${text}</span>`;
+        break;
+      case 'action':
+        formattedMessage = `<span class="message-sender">ACTION:</span><span class="message-text">${text}</span>`;
+        break;
+      case 'npc':
+        formattedMessage = `<span class="message-sender">NPC:</span><span class="message-text">${text}</span>`;
+        break;
+      default:
+        formattedMessage = `<span class="message-text">${text}</span>`;
+    }
+
+    messageDiv.innerHTML = formattedMessage;
+
+    // Add to console
+    this.elements.consoleMessages.appendChild(messageDiv);
+
+    // Auto-scroll to bottom
+    this.elements.consoleMessages.scrollTop = this.elements.consoleMessages.scrollHeight;
+
+    // Limit message history to last 50 messages
+    const messages = this.elements.consoleMessages.children;
+    if (messages.length > 50) {
+      this.elements.consoleMessages.removeChild(messages[0]);
+    }
+  }
+
+  /**
+   * Show detailed character sheet modal
+   * @private
+   */
+  async _showCharacterSheet() {
+    if (!this.currentToken) return;
+
+    // Fetch full character data
+    const character = await this._fetchCharacterData(this.currentToken.name);
+
+    if (!character) {
+      this._addConsoleMessage('system', `Could not load character data for ${this.currentToken.name}`);
+      return;
+    }
+
+    // Populate sheet
+    this.elements.sheetCharacterName.textContent = character.name;
+
+    // Profile
+    this.elements.sheetProfile.innerHTML = `
+      <p><span class="label">Class:</span> ${character.class || 'Unknown'}</p>
+      <p><span class="label">Race:</span> ${character.race || 'Unknown'}</p>
+      <p><span class="label">Level:</span> ${character.level || '?'}</p>
+      <p><span class="label">Alignment:</span> ${character.alignment || 'Unknown'}</p>
+      ${character.profile?.personality ? `<p><span class="label">Personality:</span> ${character.profile.personality}</p>` : ''}
+      ${character.profile?.backstory ? `<p><span class="label">Backstory:</span> ${character.profile.backstory}</p>` : ''}
+    `;
+
+    // Attributes
+    if (character.attributes) {
+      const attrs = ['str', 'dex', 'con', 'int', 'wis', 'cha'];
+      this.elements.sheetAttributes.innerHTML = attrs.map(attr => `
+        <div class="attribute-box">
+          <div class="attr-name">${attr.toUpperCase()}</div>
+          <div class="attr-value">${character.attributes[attr] || 10}</div>
+        </div>
+      `).join('');
+    }
+
+    // Skills
+    if (character.skills && character.skills.length > 0) {
+      this.elements.sheetSkills.innerHTML = character.skills.map(skill => `
+        <div class="skill-item">
+          <div class="skill-name">${skill.name}: ${skill.modifier >= 0 ? '+' : ''}${skill.modifier}</div>
+          ${skill.proficient ? '<span style="color: #c5a959;">✓ Proficient</span>' : ''}
+        </div>
+      `).join('');
+    } else {
+      this.elements.sheetSkills.innerHTML = '<p style="color: #8b7355;">No skills data</p>';
+    }
+
+    // Passive Traits
+    if (character.passiveTraits && character.passiveTraits.length > 0) {
+      this.elements.sheetTraits.innerHTML = character.passiveTraits.map(trait => `
+        <div class="trait-item">
+          <div class="trait-name">${trait.name}</div>
+          <div class="trait-desc">${trait.summary || trait.description || ''}</div>
+        </div>
+      `).join('');
+    } else {
+      this.elements.sheetTraits.innerHTML = '<p style="color: #8b7355;">No passive traits</p>';
+    }
+
+    // Feats
+    if (character.feats && character.feats.length > 0) {
+      this.elements.sheetFeats.innerHTML = character.feats.map(feat => `
+        <div class="feat-item">
+          <div class="feat-name">${feat.name}</div>
+          <div class="feat-desc">${feat.summary || feat.description || ''}</div>
+        </div>
+      `).join('');
+    } else {
+      this.elements.sheetFeats.innerHTML = '<p style="color: #8b7355;">No feats or abilities</p>';
+    }
+
+    // Show modal
+    this.elements.characterSheetModal.style.display = 'flex';
+  }
+
+  /**
+   * Hide character sheet modal
+   * @private
+   */
+  _hideCharacterSheet() {
+    if (this.elements.characterSheetModal) {
+      this.elements.characterSheetModal.style.display = 'none';
+    }
+  }
+
+  /**
+   * Fetch full character data by name
+   * @private
+   */
+  async _fetchCharacterData(characterName) {
+    try {
+      // Fetch from characters.json
+      const response = await fetch('/data/characters.json');
+      const characters = await response.json();
+
+      // Find matching character
+      return characters.find(c => c.name === characterName);
+    } catch (error) {
+      console.error('Failed to fetch character data:', error);
+      return null;
+    }
+  }
+
+  /**
    * Public API: Manually update campaign display
    */
   updateCampaign(data) {
     this._updateCampaign(data);
+  }
+
+  /**
+   * Public API: Add console message
+   */
+  addConsoleMessage(type, text) {
+    this._addConsoleMessage(type, text);
   }
 }
