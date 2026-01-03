@@ -304,8 +304,11 @@ class WarRoom1776 {
     const tokens = this.gameState.getTokensAt(location.id);
     console.log(`Found ${tokens.length} tokens at ${location.id}:`, tokens.map(t => t.name));
 
+    // Enhance tokens with character gallery data
+    const enhancedTokens = await this._enhanceTokensWithGallery(tokens);
+
     // AFTER background is loaded, render tokens on canvas
-    await this.canvasRenderer.setTokens(tokens);
+    await this.canvasRenderer.setTokens(enhancedTokens);
 
     // Show back button
     this.backButton.style.display = 'block';
@@ -390,6 +393,29 @@ class WarRoom1776 {
 
     // Update label
     document.getElementById('map-variant-label').textContent = `Map Variant ${this.currentMapVariant + 1}`;
+  }
+
+  /**
+   * Enhance tokens with character gallery data
+   * @private
+   */
+  async _enhanceTokensWithGallery(tokens) {
+    const characters = this.gameState.getState().characters;
+
+    return tokens.map(token => {
+      // Find matching character by name
+      const character = characters.find(c => c.name === token.name);
+
+      if (character && character.gallery && character.gallery.length > 0) {
+        // Add gallery to token
+        return {
+          ...token,
+          gallery: character.gallery
+        };
+      }
+
+      return token;
+    });
   }
 
   /**
