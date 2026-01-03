@@ -40,6 +40,7 @@ export class CommandDashboard {
       consoleMessages: document.getElementById('console-messages'),
       chatInput: document.getElementById('chat-input'),
       chatSend: document.getElementById('chat-send'),
+      characterSelector: document.getElementById('character-selector'),
 
       // Dice Roller
       diceIconBtn: document.getElementById('dice-icon-btn'),
@@ -63,7 +64,18 @@ export class CommandDashboard {
     // Current selected token for character sheet
     this.currentToken = null;
 
+    // Targeted token for attacks
+    this.targetToken = null;
+
     this._init();
+  }
+
+  /**
+   * Set target token
+   * @param {Object} token - Target token
+   */
+  setTarget(token) {
+    this.targetToken = token;
   }
 
   /**
@@ -77,10 +89,16 @@ export class CommandDashboard {
     this.gameState.on('encounterStart', () => this._showCombat());
     this.gameState.on('encounterEnd', () => this._hideCombat());
     this.gameState.on('initiativeUpdate', (init) => this._updateInitiative(init));
-    this.gameState.on('locationChange', (location) => this._updateAtlasContext(location));
+    this.gameState.on('locationChange', (location) => {
+      this._updateAtlasContext(location);
+      this._updateCharacterSelector();
+    });
 
     // Console event listeners
-    this.gameState.on('stateLoaded', () => this._addConsoleMessage('system', 'Game data loaded successfully'));
+    this.gameState.on('stateLoaded', () => {
+      this._addConsoleMessage('system', 'Game data loaded successfully');
+      this._updateCharacterSelector();
+    });
     this.gameState.on('tokenMove', (data) => {
       const token = this.gameState.getToken(data.tokenId);
       if (token) {
@@ -184,6 +202,44 @@ export class CommandDashboard {
   }
 
   /**
+   * Update character selector dropdown with available tokens
+   * @private
+   */
+  _updateCharacterSelector() {
+    if (!this.elements.characterSelector) return;
+
+    const state = this.gameState.getState();
+    const activeLocation = state.ui.activeLocation;
+
+    // Clear current options
+    this.elements.characterSelector.innerHTML = '<option value="">Player</option>';
+
+    // If in tactical view, show tokens at current location
+    if (activeLocation) {
+      const tokens = state.tokens.filter(t => t.locationId === activeLocation);
+      tokens.forEach(token => {
+        const option = document.createElement('option');
+        option.value = token.tokenId;
+        option.textContent = token.name;
+        this.elements.characterSelector.appendChild(option);
+      });
+
+      // Auto-select current token if set
+      if (this.currentToken) {
+        this.elements.characterSelector.value = this.currentToken.tokenId;
+      }
+    } else {
+      // In world view, show all tokens
+      state.tokens.forEach(token => {
+        const option = document.createElement('option');
+        option.value = token.tokenId;
+        option.textContent = token.name;
+        this.elements.characterSelector.appendChild(option);
+      });
+    }
+  }
+
+  /**
    * Show Unit Card (floating, bottom-right)
    * @private
    */
@@ -192,6 +248,11 @@ export class CommandDashboard {
 
     // Save current token for character sheet
     this.currentToken = token;
+
+    // Update character selector
+    if (this.elements.characterSelector) {
+      this.elements.characterSelector.value = token.tokenId;
+    }
 
     // Populate unit data
     this.elements.unitName.textContent = token.name || 'Unknown Unit';
@@ -245,34 +306,65 @@ export class CommandDashboard {
       const bonus = bonusMatch ? parseInt(bonusMatch[0]) : 0;
       const total = attackRoll + bonus;
 
-      message = `⚔️ ${token.name} attacks with ${action.name}: [${attackRoll}] + ${bonus} = ${total}`;
+      // Build attack message
+      const targetName = this.targetToken ? this.targetToken.name : 'target';
+      message = `⚔️ ${token.name} attacks ${targetName} with ${action.name}`;
+      message += `\n🎲 Attack Roll: [${attackRoll}] + ${bonus} = ${total}`;
 
-      // Roll damage if hit
-      if (attackRoll >= 10) { // Assuming hit
-        const damageMatch = action.damage?.match(/(\d+)d(\d+)([+-]\d+)?/);
-        if (damageMatch) {
-          const count = parseInt(damageMatch[1]);
-          const sides = parseInt(damageMatch[2]);
-          const mod = damageMatch[3] ? parseInt(damageMatch[3]) : 0;
+      // Check if target is selected
+      if (this.targetToken) {
+        const targetAC = this.targetToken.stats?.ac || this.targetToken.ac || 10;
+        const isHit = total >= targetAC;
+        const isCrit = attackRoll === 20;
+        const isMiss = attackRoll === 1 || !isHit;
 
-          let damageTotal = mod;
-          const rolls = [];
-          for (let i = 0; i < count; i++) {
-            const roll = Math.floor(Math.random() * sides) + 1;
-            rolls.push(roll);
-            damageTotal += roll;
+        if (isCrit) {
+          message += ` ✅ **CRITICAL HIT!** (AC ${targetAC})`;
+        } else if (isHit) {
+          message += ` ✅ **HIT!** (AC ${targetAC})`;
+        } else {
+          message += ` ❌ **MISS!** (AC ${targetAC})`;
+        }
+
+        // Roll damage if hit
+        if (isHit) {
+          const damageMatch = action.damage?.match(/(\d+)d(\d+)([+-]\d+)?/);
+          if (damageMatch) {
+            const count = parseInt(damageMatch[1]) * (isCrit ? 2 : 1); // Double dice on crit
+            const sides = parseInt(damageMatch[2]);
+            const mod = damageMatch[3] ? parseInt(damageMatch[3]) : 0;
+
+            let damageTotal = mod;
+            const rolls = [];
+            for (let i = 0; i < count; i++) {
+              const roll = Math.floor(Math.random() * sides) + 1;
+              rolls.push(roll);
+              damageTotal += roll;
+            }
+
+            const damageType = action.damage.split(' ')[1] || '';
+            message += `\n💥 Damage: [${rolls.join(', ')}]${mod !== 0 ? ` ${mod >= 0 ? '+' : ''}${mod}` : ''} = ${damageTotal} ${damageType}`;
+
+            // Apply damage to target
+            if (this.targetToken.stats?.hp !== undefined) {
+              this.targetToken.stats.hp = Math.max(0, this.targetToken.stats.hp - damageTotal);
+              message += `\n❤️ ${this.targetToken.name}: ${this.targetToken.stats.hp}/${this.targetToken.stats.hpMax} HP`;
+            } else if (this.targetToken.hp !== undefined) {
+              this.targetToken.hp = Math.max(0, this.targetToken.hp - damageTotal);
+              message += `\n❤️ ${this.targetToken.name}: ${this.targetToken.hp}/${this.targetToken.maxHp} HP`;
+            }
           }
-
-          message += `\n💥 Damage: [${rolls.join(', ')}]${mod !== 0 ? ` ${mod >= 0 ? '+' : ''}${mod}` : ''} = ${damageTotal} ${action.damage.split(' ')[1] || ''}`;
         }
       } else {
-        message += ' - MISS!';
+        // No target - just show rolls
+        message += ` (no target selected)`;
       }
       messageType = 'combat';
 
     } else if (action.type === 'Spell') {
       // Spell cast
-      message = `✨ ${token.name} casts ${action.name}`;
+      const targetName = this.targetToken ? this.targetToken.name : 'area';
+      message = `✨ ${token.name} casts ${action.name} on ${targetName}`;
       if (action.bonus && action.bonus.includes('DC')) {
         message += ` (${action.bonus})`;
       }
@@ -637,8 +729,16 @@ export class CommandDashboard {
     try {
       const result = this._parseDiceNotation(notation);
 
-      // Get current token name if available
-      const characterName = this.currentToken ? this.currentToken.name : 'Player';
+      // Get character name from selector
+      let characterName = 'Player';
+      if (this.elements.characterSelector && this.elements.characterSelector.value) {
+        const selectedToken = this.gameState.getToken(this.elements.characterSelector.value);
+        if (selectedToken) {
+          characterName = selectedToken.name;
+        }
+      } else if (this.currentToken) {
+        characterName = this.currentToken.name;
+      }
 
       // Format result message for chat
       const rollBreakdown = result.rolls.length > 1
@@ -714,19 +814,26 @@ export class CommandDashboard {
     let formattedMessage;
     switch (type) {
       case 'system':
-        formattedMessage = `<span class="message-sender">SYSTEM:</span><span class="message-text">${text}</span>`;
+        formattedMessage = `<span class="message-sender">SYSTEM:</span> <span class="message-text">${text}</span>`;
         break;
       case 'combat':
-        formattedMessage = `<span class="message-sender">COMBAT:</span><span class="message-text">${text}</span>`;
+        // Combat messages often have emoji/formatting, just display as-is
+        formattedMessage = `<span class="message-text">${text}</span>`;
         break;
       case 'discovery':
-        formattedMessage = `<span class="message-sender">DISCOVERY:</span><span class="message-text">${text}</span>`;
+        // Discovery messages often have emoji/formatting, just display as-is
+        formattedMessage = `<span class="message-text">${text}</span>`;
         break;
       case 'action':
-        formattedMessage = `<span class="message-sender">ACTION:</span><span class="message-text">${text}</span>`;
+        // Action messages often have emoji/formatting, just display as-is
+        formattedMessage = `<span class="message-text">${text}</span>`;
         break;
       case 'npc':
-        formattedMessage = `<span class="message-sender">NPC:</span><span class="message-text">${text}</span>`;
+        // NPC messages already contain character name in format "Name: message"
+        formattedMessage = `<span class="message-text">${text}</span>`;
+        break;
+      case 'player':
+        formattedMessage = `<span class="message-text">${text}</span>`;
         break;
       default:
         formattedMessage = `<span class="message-text">${text}</span>`;

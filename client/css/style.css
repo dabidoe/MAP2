@@ -308,8 +308,8 @@ body {
 #floating-console {
     bottom: 20px;
     left: 20px;
-    min-width: 400px;
-    max-width: 500px;
+    min-width: 500px;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
 }
@@ -323,7 +323,7 @@ body {
 }
 
 .console-messages {
-    max-height: 250px;
+    max-height: 350px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -337,6 +337,29 @@ body {
     margin-top: auto;
     padding-top: 12px;
     border-top: 1px solid rgba(197, 169, 89, 0.3);
+}
+
+.character-selector {
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(197, 169, 89, 0.3);
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: #e2d1b3;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    cursor: pointer;
+    min-width: 140px;
+    flex-shrink: 0;
+}
+
+.character-selector:focus {
+    outline: none;
+    border-color: #c5a959;
+}
+
+.character-selector option {
+    background: #1a1410;
+    color: #e2d1b3;
 }
 
 .chat-input {

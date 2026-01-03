@@ -29,6 +29,9 @@ class WarRoom1776 {
     this.dmToggle = null;
     this.mapSwitcher = null;
     this.currentMapVariant = 0; // Track which variant is displayed
+
+    // Targeting system
+    this.targetedToken = null;
   }
 
   /**
@@ -110,6 +113,25 @@ class WarRoom1776 {
       console.log('Token selected:', token.name);
     });
 
+    this.canvasRenderer.on('tokenRightClick', (token) => {
+      // Right-click to set target
+      if (this.targetedToken && this.targetedToken.tokenId === token.tokenId) {
+        // Untarget if clicking the same token
+        this.targetedToken = null;
+        this.dashboard.addConsoleMessage('system', '🎯 Target cleared');
+        console.log('Target cleared');
+      } else {
+        this.targetedToken = token;
+        this.dashboard.addConsoleMessage('system', `🎯 Targeting: ${token.name}`);
+        console.log('Target set:', token.name);
+      }
+
+      // Pass target to dashboard
+      if (this.dashboard) {
+        this.dashboard.setTarget(this.targetedToken);
+      }
+    });
+
     this.canvasRenderer.on('tokenDragEnd', (token) => {
       console.log(`Token ${token.name} moved to grid position:`, token.grid);
 
@@ -134,8 +156,8 @@ class WarRoom1776 {
     this.backButton.innerHTML = '← Return to Campaign Map';
     this.backButton.className = 'cycle-button';
     this.backButton.style.position = 'absolute';
-    this.backButton.style.bottom = '20px';
-    this.backButton.style.left = '250px';
+    this.backButton.style.top = '20px';
+    this.backButton.style.left = '20px';
     this.backButton.style.display = 'none';
     this.backButton.style.zIndex = '6000';
     this.backButton.onclick = () => this._exitTacticalView();
