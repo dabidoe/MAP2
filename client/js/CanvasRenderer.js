@@ -169,13 +169,27 @@ export class CanvasRenderer {
         // Calculate minimum zoom to prevent black void
         this._calculateMinZoom();
 
-        // Reset zoom/pan to fit image
-        this.panZoom.zoom = this.panZoom.minZoom;
-        this.panZoom.panX = 0;
-        this.panZoom.panY = 0;
+        // Calculate fit zoom to show entire image
+        const canvasAspect = this.canvas.width / this.canvas.height;
+        const imageAspect = img.width / img.height;
+        let fitZoom;
+        if (canvasAspect > imageAspect) {
+          fitZoom = this.canvas.height / img.height;
+        } else {
+          fitZoom = this.canvas.width / img.width;
+        }
+
+        // Start at fit zoom (shows entire image)
+        this.panZoom.zoom = fitZoom;
+
+        // Center the image
+        const scaledWidth = img.width * fitZoom;
+        const scaledHeight = img.height * fitZoom;
+        this.panZoom.panX = (this.canvas.width - scaledWidth) / 2;
+        this.panZoom.panY = (this.canvas.height - scaledHeight) / 2;
 
         console.log('✅ Background image loaded:', imageUrl);
-        console.log(`   Min zoom: ${this.panZoom.minZoom.toFixed(2)}, Image: ${img.width}x${img.height}`);
+        console.log(`   Fit zoom: ${fitZoom.toFixed(2)}, Min zoom: ${this.panZoom.minZoom.toFixed(2)}, Image: ${img.width}x${img.height}`);
         this.render();
         resolve(img);
       };
@@ -198,26 +212,27 @@ export class CanvasRenderer {
     const canvasAspect = this.canvas.width / this.canvas.height;
     const imageAspect = this.backgroundImage.width / this.backgroundImage.height;
 
-    // Calculate zoom needed to fill viewport (no black void)
-    let minZoom;
+    // Calculate zoom to fit image within viewport (show entire image)
+    let fitZoom;
     if (canvasAspect > imageAspect) {
-      // Canvas is wider - need to zoom to fill width
-      minZoom = this.canvas.width / this.backgroundImage.width;
+      // Canvas is wider - fit to height
+      fitZoom = this.canvas.height / this.backgroundImage.height;
     } else {
-      // Canvas is taller - need to zoom to fill height
-      minZoom = this.canvas.height / this.backgroundImage.height;
+      // Canvas is taller - fit to width
+      fitZoom = this.canvas.width / this.backgroundImage.width;
     }
 
-    this.panZoom.minZoom = minZoom;
+    // Set minZoom lower to allow zooming out
+    this.panZoom.minZoom = fitZoom * 0.5;
 
     // Ensure current zoom is not below minimum
-    if (this.panZoom.zoom < minZoom) {
-      this.panZoom.zoom = minZoom;
+    if (this.panZoom.zoom < this.panZoom.minZoom) {
+      this.panZoom.zoom = this.panZoom.minZoom;
     }
   }
 
   /**
-   * Constrain pan to prevent showing black void
+   * Constrain pan to keep image visible
    * @private
    */
   _constrainPan() {
@@ -226,13 +241,23 @@ export class CanvasRenderer {
     const scaledWidth = this.backgroundImage.width * this.panZoom.zoom;
     const scaledHeight = this.backgroundImage.height * this.panZoom.zoom;
 
-    // Calculate maximum pan offsets
-    const maxPanX = Math.max(0, scaledWidth - this.canvas.width);
-    const maxPanY = Math.max(0, scaledHeight - this.canvas.height);
+    if (scaledWidth > this.canvas.width) {
+      // Image wider than canvas - prevent showing edges
+      const maxPanX = scaledWidth - this.canvas.width;
+      this.panZoom.panX = Math.max(-maxPanX, Math.min(0, this.panZoom.panX));
+    } else {
+      // Image smaller than canvas - keep centered
+      this.panZoom.panX = (this.canvas.width - scaledWidth) / 2;
+    }
 
-    // Constrain pan to image bounds
-    this.panZoom.panX = Math.max(-maxPanX, Math.min(0, this.panZoom.panX));
-    this.panZoom.panY = Math.max(-maxPanY, Math.min(0, this.panZoom.panY));
+    if (scaledHeight > this.canvas.height) {
+      // Image taller than canvas - prevent showing edges
+      const maxPanY = scaledHeight - this.canvas.height;
+      this.panZoom.panY = Math.max(-maxPanY, Math.min(0, this.panZoom.panY));
+    } else {
+      // Image smaller than canvas - keep centered
+      this.panZoom.panY = (this.canvas.height - scaledHeight) / 2;
+    }
   }
 
   /**
@@ -488,18 +513,25 @@ export class CanvasRenderer {
    * @private
    */
   _getTokenAt(canvasX, canvasY) {
+    if (!this.backgroundImage) return null;
+
     const halfSize = this.config.tokenSize / 2;
+
+    // Convert canvas coordinates to image coordinates (accounting for zoom/pan)
+    const imageX = (canvasX - this.panZoom.panX) / this.panZoom.zoom;
+    const imageY = (canvasY - this.panZoom.panY) / this.panZoom.zoom;
 
     // Check in reverse order (top tokens first)
     for (let i = this.tokens.length - 1; i >= 0; i--) {
       const token = this.tokens[i];
       if (!token.grid) continue;
 
-      const x = (token.grid.posX / 100) * this.canvas.width;
-      const y = (token.grid.posY / 100) * this.canvas.height;
+      // Token position in image coordinates
+      const tokenX = (token.grid.posX / 100) * this.backgroundImage.width;
+      const tokenY = (token.grid.posY / 100) * this.backgroundImage.height;
 
       const distance = Math.sqrt(
-        Math.pow(canvasX - x, 2) + Math.pow(canvasY - y, 2)
+        Math.pow(imageX - tokenX, 2) + Math.pow(imageY - tokenY, 2)
       );
 
       if (distance <= halfSize) {
@@ -540,8 +572,15 @@ export class CanvasRenderer {
       this.dragState.draggedToken = token;
       this.dragState.startX = x;
       this.dragState.startY = y;
-      this.dragState.offsetX = x - (token.grid.posX / 100) * this.canvas.width;
-      this.dragState.offsetY = y - (token.grid.posY / 100) * this.canvas.height;
+
+      // Convert to image coordinates for offset calculation
+      const imageX = (x - this.panZoom.panX) / this.panZoom.zoom;
+      const imageY = (y - this.panZoom.panY) / this.panZoom.zoom;
+      const tokenX = (token.grid.posX / 100) * this.backgroundImage.width;
+      const tokenY = (token.grid.posY / 100) * this.backgroundImage.height;
+
+      this.dragState.offsetX = imageX - tokenX;
+      this.dragState.offsetY = imageY - tokenY;
 
       this.canvas.style.cursor = 'grabbing';
     }
@@ -571,9 +610,17 @@ export class CanvasRenderer {
     if (this.dragState.isDragging && this.dragState.draggedToken) {
       const token = this.dragState.draggedToken;
 
-      // Update position (percentage-based)
-      const newPosX = ((x - this.dragState.offsetX) / this.canvas.width) * 100;
-      const newPosY = ((y - this.dragState.offsetY) / this.canvas.height) * 100;
+      // Convert canvas coordinates to image coordinates
+      const imageX = (x - this.panZoom.panX) / this.panZoom.zoom;
+      const imageY = (y - this.panZoom.panY) / this.panZoom.zoom;
+
+      // Calculate new position accounting for offset
+      const newTokenX = imageX - this.dragState.offsetX;
+      const newTokenY = imageY - this.dragState.offsetY;
+
+      // Convert to percentage (0-100)
+      const newPosX = (newTokenX / this.backgroundImage.width) * 100;
+      const newPosY = (newTokenY / this.backgroundImage.height) * 100;
 
       token.grid.posX = Math.max(0, Math.min(100, newPosX));
       token.grid.posY = Math.max(0, Math.min(100, newPosY));

@@ -169,7 +169,7 @@ class WarRoom1776 {
     this.dmToggle.innerHTML = 'Toggle DM Mode';
     this.dmToggle.className = 'cycle-button';
     this.dmToggle.style.position = 'absolute';
-    this.dmToggle.style.top = '20px';
+    this.dmToggle.style.bottom = '20px';
     this.dmToggle.style.right = '20px';
     this.dmToggle.style.zIndex = '6000';
     this.dmToggle.onclick = () => this._toggleDMMode();

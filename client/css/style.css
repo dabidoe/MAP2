@@ -474,6 +474,10 @@ body {
     flex-shrink: 0;
 }
 
+.character-picker.empty {
+    display: none;
+}
+
 .character-picker-display {
     background: rgba(0, 0, 0, 0.4);
     border: 2px solid rgba(197, 169, 89, 0.3);

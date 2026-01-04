@@ -168,6 +168,11 @@ export class CommandDashboard {
     // Initial render
     this._updateCampaign(this.gameState.getState().campaign);
 
+    // Hide character picker initially
+    if (this.elements.characterPicker) {
+      this.elements.characterPicker.classList.add('empty');
+    }
+
     console.log('✅ CommandDashboard initialized (Floating HUD)');
   }
 
@@ -275,6 +280,9 @@ export class CommandDashboard {
     // Update display
     this.elements.characterPickerDisplay.textContent = token.name;
     this.elements.characterPickerDisplay.style.color = '#e2d1b3';
+
+    // Show character picker
+    this.elements.characterPicker.classList.remove('empty');
 
     // Update rolling as header
     this.elements.rollingCharacterName.textContent = token.name;
