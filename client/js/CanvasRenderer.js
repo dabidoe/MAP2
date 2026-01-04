@@ -410,7 +410,8 @@ export class CanvasRenderer {
    * @private
    */
   _renderHPBar(token, x, y) {
-    const { hp, hpMax } = token.stats;
+    const hp = token.stats?.hp || token.hp || 0;
+    const hpMax = token.stats?.hpMax || token.maxHp || 1;
     const barWidth = this.config.tokenSize;
     const barHeight = 6;
     const hpPercent = Math.max(0, Math.min(1, hp / hpMax));

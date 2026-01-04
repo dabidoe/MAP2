@@ -22,6 +22,7 @@ export class CommandDashboard {
       date: document.getElementById('campaign-date'),
       time: document.getElementById('campaign-time'),
       weather: document.getElementById('campaign-weather'),
+      locationBriefing: document.getElementById('location-briefing'),
       moraleFill: document.getElementById('morale-fill'),
 
       // Unit Card
@@ -195,63 +196,92 @@ export class CommandDashboard {
    */
   _updateAtlasContext(location) {
     if (location) {
-      // In tactical view - show location name and objective
+      // In tactical view - show location name and briefing
       if (this.elements.atlasTitle) {
         this.elements.atlasTitle.textContent = location.title;
       }
-      if (this.elements.currentObjective) {
-        this.elements.currentObjective.textContent = location.description || 'Secure the area';
-      }
-      if (this.elements.currentObjectiveRow) {
-        this.elements.currentObjectiveRow.style.display = 'flex';
+      if (this.elements.locationBriefing) {
+        this.elements.locationBriefing.textContent = location.description || 'Secure the area';
       }
     } else {
-      // In world view - show campaign title, hide objective
+      // In world view - show campaign title and default briefing
       if (this.elements.atlasTitle) {
         this.elements.atlasTitle.textContent = 'War Room 1776';
       }
-      if (this.elements.currentObjectiveRow) {
-        this.elements.currentObjectiveRow.style.display = 'none';
+      if (this.elements.locationBriefing) {
+        this.elements.locationBriefing.textContent = 'Select a location to view details...';
       }
     }
   }
 
   /**
-   * Update character selector dropdown with available tokens
+   * Update character picker with available tokens
    * @private
    */
   _updateCharacterSelector() {
-    if (!this.elements.characterSelector) return;
+    if (!this.elements.characterPickerDropdown) return;
 
     const state = this.gameState.getState();
     const activeLocation = state.ui.activeLocation;
 
-    // Clear current options
-    this.elements.characterSelector.innerHTML = '<option value="">Player</option>';
+    // Clear dropdown
+    this.elements.characterPickerDropdown.innerHTML = '';
 
-    // If in tactical view, show tokens at current location
-    if (activeLocation) {
-      const tokens = state.tokens.filter(t => t.locationId === activeLocation);
-      tokens.forEach(token => {
-        const option = document.createElement('option');
-        option.value = token.tokenId;
-        option.textContent = token.name;
-        this.elements.characterSelector.appendChild(option);
-      });
+    // Get tokens
+    let tokens = activeLocation
+      ? state.tokens.filter(t => t.locationId === activeLocation)
+      : state.tokens;
 
-      // Auto-select current token if set
-      if (this.currentToken) {
-        this.elements.characterSelector.value = this.currentToken.tokenId;
-      }
-    } else {
-      // In world view, show all tokens
-      state.tokens.forEach(token => {
-        const option = document.createElement('option');
-        option.value = token.tokenId;
-        option.textContent = token.name;
-        this.elements.characterSelector.appendChild(option);
+    // Populate dropdown
+    tokens.forEach(token => {
+      const option = document.createElement('div');
+      option.className = 'character-option';
+      option.textContent = token.name;
+      option.dataset.tokenId = token.tokenId;
+      option.onclick = () => this._selectCharacter(token);
+      this.elements.characterPickerDropdown.appendChild(option);
+    });
+
+    // Initialize picker click handler
+    if (this.elements.characterPickerDisplay && !this.characterPickerInitialized) {
+      this.elements.characterPickerDisplay.onclick = () => this._toggleCharacterPicker();
+      this.characterPickerInitialized = true;
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!this.elements.characterPicker.contains(e.target)) {
+          this.elements.characterPickerDropdown.style.display = 'none';
+        }
       });
     }
+  }
+
+  /**
+   * Toggle character picker dropdown
+   * @private
+   */
+  _toggleCharacterPicker() {
+    const dropdown = this.elements.characterPickerDropdown;
+    dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+  }
+
+  /**
+   * Select character from picker
+   * @private
+   */
+  _selectCharacter(token) {
+    this.selectedCharacter = token;
+
+    // Update display
+    this.elements.characterPickerDisplay.textContent = token.name;
+    this.elements.characterPickerDisplay.style.color = '#e2d1b3';
+
+    // Update rolling as header
+    this.elements.rollingCharacterName.textContent = token.name;
+    this.elements.rollingAsHeader.style.display = 'block';
+
+    // Close dropdown
+    this.elements.characterPickerDropdown.style.display = 'none';
   }
 
   /**
@@ -264,15 +294,16 @@ export class CommandDashboard {
     // Save current token for character sheet
     this.currentToken = token;
 
-    // Update character selector
-    if (this.elements.characterSelector) {
-      this.elements.characterSelector.value = token.tokenId;
-    }
-
     // Populate unit data
     this.elements.unitName.textContent = token.name || 'Unknown Unit';
-    this.elements.unitHp.textContent = `${token.hp || 0}/${token.maxHp || 0}`;
-    this.elements.unitAc.textContent = token.ac || '0';
+
+    // Access stats from nested stats object or fallback to root level
+    const hp = token.stats?.hp || token.hp || 0;
+    const hpMax = token.stats?.hpMax || token.maxHp || 0;
+    const ac = token.stats?.ac || token.ac || 0;
+
+    this.elements.unitHp.textContent = `${hp}/${hpMax}`;
+    this.elements.unitAc.textContent = ac;
 
     // Populate actions
     this.elements.unitActions.innerHTML = '';
@@ -363,10 +394,14 @@ export class CommandDashboard {
             // Apply damage to target
             if (this.targetToken.stats?.hp !== undefined) {
               this.targetToken.stats.hp = Math.max(0, this.targetToken.stats.hp - damageTotal);
-              message += `\n❤️ ${this.targetToken.name}: ${this.targetToken.stats.hp}/${this.targetToken.stats.hpMax} HP`;
+              const currentHp = this.targetToken.stats.hp;
+              const maxHp = this.targetToken.stats.hpMax || 1;
+              message += `\n❤️ ${this.targetToken.name}: ${currentHp}/${maxHp} HP`;
             } else if (this.targetToken.hp !== undefined) {
               this.targetToken.hp = Math.max(0, this.targetToken.hp - damageTotal);
-              message += `\n❤️ ${this.targetToken.name}: ${this.targetToken.hp}/${this.targetToken.maxHp} HP`;
+              const currentHp = this.targetToken.hp;
+              const maxHp = this.targetToken.maxHp || 1;
+              message += `\n❤️ ${this.targetToken.name}: ${currentHp}/${maxHp} HP`;
             }
           }
         }
@@ -771,13 +806,10 @@ export class CommandDashboard {
     try {
       const result = this._parseDiceNotation(notation);
 
-      // Get character name from selector
+      // Get character name from selected character
       let characterName = 'Player';
-      if (this.elements.characterSelector && this.elements.characterSelector.value) {
-        const selectedToken = this.gameState.getToken(this.elements.characterSelector.value);
-        if (selectedToken) {
-          characterName = selectedToken.name;
-        }
+      if (this.selectedCharacter) {
+        characterName = this.selectedCharacter.name;
       } else if (this.currentToken) {
         characterName = this.currentToken.name;
       }
