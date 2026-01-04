@@ -164,17 +164,6 @@ class WarRoom1776 {
     this.backButton.onclick = () => this._exitTacticalView();
     document.body.appendChild(this.backButton);
 
-    // DM Mode toggle
-    this.dmToggle = document.createElement('button');
-    this.dmToggle.innerHTML = 'Toggle DM Mode';
-    this.dmToggle.className = 'cycle-button';
-    this.dmToggle.style.position = 'absolute';
-    this.dmToggle.style.bottom = '20px';
-    this.dmToggle.style.right = '20px';
-    this.dmToggle.style.zIndex = '6000';
-    this.dmToggle.onclick = () => this._toggleDMMode();
-    document.body.appendChild(this.dmToggle);
-
     // DM Map Switcher (for cycling through tactical map variants)
     this._createMapSwitcher();
   }
@@ -460,6 +449,11 @@ class WarRoom1776 {
     }
 
     console.log(`Switching to map variant ${this.currentMapVariant}: ${newUrl}`);
+
+    // Update canvas renderer if in tactical view
+    if (this.canvasRenderer && this.canvasRenderer.backgroundReady) {
+      this.canvasRenderer.setBackgroundImage(newUrl);
+    }
 
     // Update map overlay
     this.mapEngine.setTacticalMapImage(newUrl);

@@ -166,30 +166,15 @@ export class CanvasRenderer {
         this.backgroundImage = img;
         this.backgroundReady = true;
 
-        // Calculate minimum zoom to prevent black void
-        this._calculateMinZoom();
-
-        // Calculate fit zoom to show entire image
-        const canvasAspect = this.canvas.width / this.canvas.height;
-        const imageAspect = img.width / img.height;
-        let fitZoom;
-        if (canvasAspect > imageAspect) {
-          fitZoom = this.canvas.height / img.height;
-        } else {
-          fitZoom = this.canvas.width / img.width;
-        }
-
-        // Start at fit zoom (shows entire image)
-        this.panZoom.zoom = fitZoom;
-
-        // Center the image
-        const scaledWidth = img.width * fitZoom;
-        const scaledHeight = img.height * fitZoom;
-        this.panZoom.panX = (this.canvas.width - scaledWidth) / 2;
-        this.panZoom.panY = (this.canvas.height - scaledHeight) / 2;
+        // Reset zoom/pan to defaults
+        this.panZoom.zoom = 1.0;
+        this.panZoom.panX = 0;
+        this.panZoom.panY = 0;
+        this.panZoom.minZoom = 0.3;
+        this.panZoom.maxZoom = 3.0;
 
         console.log('✅ Background image loaded:', imageUrl);
-        console.log(`   Fit zoom: ${fitZoom.toFixed(2)}, Min zoom: ${this.panZoom.minZoom.toFixed(2)}, Image: ${img.width}x${img.height}`);
+        console.log(`   Image size: ${img.width}x${img.height}, Canvas: ${this.canvas.width}x${this.canvas.height}`);
         this.render();
         resolve(img);
       };
@@ -202,37 +187,9 @@ export class CanvasRenderer {
     });
   }
 
-  /**
-   * Calculate minimum zoom to prevent black void
-   * @private
-   */
-  _calculateMinZoom() {
-    if (!this.backgroundImage) return;
-
-    const canvasAspect = this.canvas.width / this.canvas.height;
-    const imageAspect = this.backgroundImage.width / this.backgroundImage.height;
-
-    // Calculate zoom to fit image within viewport (show entire image)
-    let fitZoom;
-    if (canvasAspect > imageAspect) {
-      // Canvas is wider - fit to height
-      fitZoom = this.canvas.height / this.backgroundImage.height;
-    } else {
-      // Canvas is taller - fit to width
-      fitZoom = this.canvas.width / this.backgroundImage.width;
-    }
-
-    // Set minZoom lower to allow zooming out
-    this.panZoom.minZoom = fitZoom * 0.5;
-
-    // Ensure current zoom is not below minimum
-    if (this.panZoom.zoom < this.panZoom.minZoom) {
-      this.panZoom.zoom = this.panZoom.minZoom;
-    }
-  }
 
   /**
-   * Constrain pan to keep image visible
+   * Constrain pan to reasonable bounds
    * @private
    */
   _constrainPan() {
@@ -241,23 +198,12 @@ export class CanvasRenderer {
     const scaledWidth = this.backgroundImage.width * this.panZoom.zoom;
     const scaledHeight = this.backgroundImage.height * this.panZoom.zoom;
 
-    if (scaledWidth > this.canvas.width) {
-      // Image wider than canvas - prevent showing edges
-      const maxPanX = scaledWidth - this.canvas.width;
-      this.panZoom.panX = Math.max(-maxPanX, Math.min(0, this.panZoom.panX));
-    } else {
-      // Image smaller than canvas - keep centered
-      this.panZoom.panX = (this.canvas.width - scaledWidth) / 2;
-    }
+    // Allow some panning beyond edges but not too much
+    const maxPanX = scaledWidth * 0.5; // Can pan half the image width beyond edge
+    const maxPanY = scaledHeight * 0.5; // Can pan half the image height beyond edge
 
-    if (scaledHeight > this.canvas.height) {
-      // Image taller than canvas - prevent showing edges
-      const maxPanY = scaledHeight - this.canvas.height;
-      this.panZoom.panY = Math.max(-maxPanY, Math.min(0, this.panZoom.panY));
-    } else {
-      // Image smaller than canvas - keep centered
-      this.panZoom.panY = (this.canvas.height - scaledHeight) / 2;
-    }
+    this.panZoom.panX = Math.max(-scaledWidth + 100, Math.min(this.canvas.width - 100, this.panZoom.panX));
+    this.panZoom.panY = Math.max(-scaledHeight + 100, Math.min(this.canvas.height - 100, this.panZoom.panY));
   }
 
   /**
@@ -368,7 +314,12 @@ export class CanvasRenderer {
     this.ctx.beginPath();
     this.ctx.arc(x, y, halfSize, 0, Math.PI * 2);
     this.ctx.fill();
-    this.ctx.restore();
+
+    // Reset shadow for rest of drawing
+    this.ctx.shadowColor = 'transparent';
+    this.ctx.shadowBlur = 0;
+    this.ctx.shadowOffsetX = 0;
+    this.ctx.shadowOffsetY = 0;
 
     // Draw token icon (clipped to circle)
     const img = this.images.get(token.icon);
