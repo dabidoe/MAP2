@@ -166,15 +166,27 @@ export class CanvasRenderer {
         this.backgroundImage = img;
         this.backgroundReady = true;
 
-        // Reset zoom/pan to defaults
-        this.panZoom.zoom = 1.0;
-        this.panZoom.panX = 0;
-        this.panZoom.panY = 0;
-        this.panZoom.minZoom = 0.3;
-        this.panZoom.maxZoom = 3.0;
+        // Calculate zoom to fit image to canvas (fill screen)
+        const scaleX = this.canvas.width / img.width;
+        const scaleY = this.canvas.height / img.height;
+
+        // Use the larger scale to fill the screen (image will overflow on one axis)
+        const fillZoom = Math.max(scaleX, scaleY);
+
+        // Start at fill zoom
+        this.panZoom.zoom = fillZoom;
+        this.panZoom.minZoom = Math.min(scaleX, scaleY) * 0.5; // Can zoom out to half-fit
+        this.panZoom.maxZoom = fillZoom * 3; // Can zoom in 3x from fill
+
+        // Center the image
+        const scaledWidth = img.width * fillZoom;
+        const scaledHeight = img.height * fillZoom;
+        this.panZoom.panX = (this.canvas.width - scaledWidth) / 2;
+        this.panZoom.panY = (this.canvas.height - scaledHeight) / 2;
 
         console.log('✅ Background image loaded:', imageUrl);
-        console.log(`   Image size: ${img.width}x${img.height}, Canvas: ${this.canvas.width}x${this.canvas.height}`);
+        console.log(`   Image: ${img.width}x${img.height}, Canvas: ${this.canvas.width}x${this.canvas.height}`);
+        console.log(`   Fill zoom: ${fillZoom.toFixed(2)}, Pan: ${this.panZoom.panX.toFixed(0)}, ${this.panZoom.panY.toFixed(0)}`);
         this.render();
         resolve(img);
       };

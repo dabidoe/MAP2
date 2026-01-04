@@ -105,7 +105,7 @@ class WarRoom1776 {
     this.canvasRenderer = new CanvasRenderer(this.tacticalContainer, {
       tokenSize: 50,
       showHP: true,
-      enableDrag: false // Will be enabled in DM mode
+      enableDrag: true // DM mode always on
     });
 
     this.canvasRenderer.on('tokenClick', (token) => {
