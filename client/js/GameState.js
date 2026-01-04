@@ -8,7 +8,7 @@ export class GameState {
   constructor() {
     this.state = {
       // Mode
-      mode: 'PLAYER', // 'PLAYER' or 'DM'
+      mode: 'DM', // 'PLAYER' or 'DM'
 
       // Data
       tokens: [],

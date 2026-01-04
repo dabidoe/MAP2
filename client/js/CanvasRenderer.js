@@ -265,10 +265,10 @@ export class CanvasRenderer {
 
     this.ctx.drawImage(
       this.backgroundImage,
-      offsetX / this.panZoom.zoom,
-      offsetY / this.panZoom.zoom,
-      drawWidth / this.panZoom.zoom,
-      drawHeight / this.panZoom.zoom
+      offsetX,
+      offsetY,
+      drawWidth,
+      drawHeight
     );
 
     this.ctx.restore();

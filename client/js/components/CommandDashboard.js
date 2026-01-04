@@ -356,8 +356,27 @@ export class CommandDashboard {
           }
         }
       } else {
-        // No target - just show rolls
+        // No target - show attack roll and damage roll
         message += ` (no target selected)`;
+
+        // Still roll damage for reference
+        const damageMatch = action.damage?.match(/(\d+)d(\d+)([+-]\d+)?/);
+        if (damageMatch) {
+          const count = parseInt(damageMatch[1]);
+          const sides = parseInt(damageMatch[2]);
+          const mod = damageMatch[3] ? parseInt(damageMatch[3]) : 0;
+
+          let damageTotal = mod;
+          const rolls = [];
+          for (let i = 0; i < count; i++) {
+            const roll = Math.floor(Math.random() * sides) + 1;
+            rolls.push(roll);
+            damageTotal += roll;
+          }
+
+          const damageType = action.damage.split(' ')[1] || '';
+          message += `\n💥 Damage Roll: [${rolls.join(', ')}]${mod !== 0 ? ` ${mod >= 0 ? '+' : ''}${mod}` : ''} = ${damageTotal} ${damageType}`;
+        }
       }
       messageType = 'combat';
 

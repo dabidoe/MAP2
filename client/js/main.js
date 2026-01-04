@@ -157,7 +157,8 @@ class WarRoom1776 {
     this.backButton.className = 'cycle-button';
     this.backButton.style.position = 'absolute';
     this.backButton.style.top = '20px';
-    this.backButton.style.left = '20px';
+    this.backButton.style.left = '50%';
+    this.backButton.style.transform = 'translateX(-50%)';
     this.backButton.style.display = 'none';
     this.backButton.style.zIndex = '6000';
     this.backButton.onclick = () => this._exitTacticalView();
