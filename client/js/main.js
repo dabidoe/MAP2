@@ -189,30 +189,57 @@ class WarRoom1776 {
     this.mapSwitcher.style.cssText = `
       position: absolute;
       top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
+      right: 20px;
       display: none;
-      background: rgba(26, 20, 16, 0.95);
-      border: 2px solid #c5a959;
-      border-radius: 8px;
-      padding: 10px 15px;
       z-index: 6000;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
     `;
 
     this.mapSwitcher.innerHTML = `
-      <div style="display: flex; align-items: center; gap: 10px; font-family: 'Cinzel', serif; color: #e2d1b3;">
-        <button id="map-prev" class="cycle-button" style="padding: 5px 10px; font-size: 0.9rem;">◀ Prev</button>
-        <span id="map-variant-label" style="font-size: 0.85rem; min-width: 100px; text-align: center; color: #c5a959;">Map Variant 1</span>
-        <button id="map-next" class="cycle-button" style="padding: 5px 10px; font-size: 0.9rem;">Next ▶</button>
+      <div style="display: flex; align-items: center; gap: 8px; font-family: 'Cinzel', serif;">
+        <button id="map-prev" style="
+          background: none;
+          border: none;
+          color: #c5a959;
+          font-size: 1.2rem;
+          cursor: pointer;
+          padding: 4px;
+          line-height: 1;
+          opacity: 0.8;
+          transition: opacity 0.2s;
+        ">‹</button>
+        <span id="map-variant-label" style="
+          font-size: 0.9rem;
+          color: #c5a959;
+          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+          user-select: none;
+        ">1/4</span>
+        <button id="map-next" style="
+          background: none;
+          border: none;
+          color: #c5a959;
+          font-size: 1.2rem;
+          cursor: pointer;
+          padding: 4px;
+          line-height: 1;
+          opacity: 0.8;
+          transition: opacity 0.2s;
+        ">›</button>
       </div>
     `;
 
     document.body.appendChild(this.mapSwitcher);
 
-    // Wire up buttons
-    document.getElementById('map-prev').onclick = () => this._cycleMapVariant(-1);
-    document.getElementById('map-next').onclick = () => this._cycleMapVariant(1);
+    // Wire up buttons with hover effects
+    const prevBtn = document.getElementById('map-prev');
+    const nextBtn = document.getElementById('map-next');
+
+    prevBtn.onclick = () => this._cycleMapVariant(-1);
+    nextBtn.onclick = () => this._cycleMapVariant(1);
+
+    prevBtn.onmouseenter = () => prevBtn.style.opacity = '1';
+    prevBtn.onmouseleave = () => prevBtn.style.opacity = '0.8';
+    nextBtn.onmouseenter = () => nextBtn.style.opacity = '1';
+    nextBtn.onmouseleave = () => nextBtn.style.opacity = '0.8';
   }
 
   /**
@@ -438,7 +465,7 @@ class WarRoom1776 {
     this.mapEngine.setTacticalMapImage(newUrl);
 
     // Update label
-    document.getElementById('map-variant-label').textContent = `Map Variant ${this.currentMapVariant + 1}`;
+    document.getElementById('map-variant-label').textContent = `${this.currentMapVariant + 1}/4`;
   }
 
   /**
