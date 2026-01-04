@@ -299,33 +299,14 @@ export class CanvasRenderer {
     this.ctx.translate(this.panZoom.panX, this.panZoom.panY);
     this.ctx.scale(this.panZoom.zoom, this.panZoom.zoom);
 
-    // Draw background image to fill entire canvas
-    // Use object-fit: contain logic to preserve aspect ratio
-    const canvasAspect = this.canvas.width / this.canvas.height;
-    const imageAspect = this.backgroundImage.width / this.backgroundImage.height;
-
-    let drawWidth, drawHeight, offsetX, offsetY;
-
-    if (canvasAspect > imageAspect) {
-      // Canvas is wider - fit to height
-      drawHeight = this.canvas.height;
-      drawWidth = drawHeight * imageAspect;
-      offsetX = (this.canvas.width - drawWidth) / 2;
-      offsetY = 0;
-    } else {
-      // Canvas is taller - fit to width
-      drawWidth = this.canvas.width;
-      drawHeight = drawWidth / imageAspect;
-      offsetX = 0;
-      offsetY = (this.canvas.height - drawHeight) / 2;
-    }
-
+    // Draw image at 0,0 with its natural dimensions
+    // The zoom and pan will handle positioning
     this.ctx.drawImage(
       this.backgroundImage,
-      offsetX,
-      offsetY,
-      drawWidth,
-      drawHeight
+      0,
+      0,
+      this.backgroundImage.width,
+      this.backgroundImage.height
     );
 
     this.ctx.restore();
@@ -339,14 +320,19 @@ export class CanvasRenderer {
   _renderToken(token) {
     if (!token.grid) return;
 
+    // Apply transform for zoom/pan
+    this.ctx.save();
+    this.ctx.translate(this.panZoom.panX, this.panZoom.panY);
+    this.ctx.scale(this.panZoom.zoom, this.panZoom.zoom);
+
     const { posX, posY } = token.grid;
-    const x = (posX / 100) * this.canvas.width;
-    const y = (posY / 100) * this.canvas.height;
+    // Position tokens relative to background image dimensions
+    const x = (posX / 100) * this.backgroundImage.width;
+    const y = (posY / 100) * this.backgroundImage.height;
     const size = this.config.tokenSize;
     const halfSize = size / 2;
 
     // Draw drop shadow
-    this.ctx.save();
     this.ctx.shadowColor = 'rgba(0, 0, 0, 0.6)';
     this.ctx.shadowBlur = 8;
     this.ctx.shadowOffsetX = 3;
@@ -415,6 +401,8 @@ export class CanvasRenderer {
     if (this.hoveredToken === token || this.selectedToken === token) {
       this._renderLabel(token.name, x, y + halfSize + 15);
     }
+
+    this.ctx.restore();
   }
 
   /**

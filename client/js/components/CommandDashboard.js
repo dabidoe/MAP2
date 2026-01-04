@@ -40,7 +40,11 @@ export class CommandDashboard {
       consoleMessages: document.getElementById('console-messages'),
       chatInput: document.getElementById('chat-input'),
       chatSend: document.getElementById('chat-send'),
-      characterSelector: document.getElementById('character-selector'),
+      characterPicker: document.getElementById('character-picker'),
+      characterPickerDisplay: document.getElementById('character-picker-display'),
+      characterPickerDropdown: document.getElementById('character-picker-dropdown'),
+      rollingAsHeader: document.getElementById('rolling-as'),
+      rollingCharacterName: document.getElementById('rolling-character-name'),
 
       // Dice Roller
       diceIconBtn: document.getElementById('dice-icon-btn'),

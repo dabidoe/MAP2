@@ -83,6 +83,9 @@
 
     <!-- Floating HUD: Chat History (Bottom-Left) -->
     <div id="floating-console" class="hud-panel">
+        <div id="rolling-as" class="rolling-as-header" style="display: none;">
+            Rolling as: <span id="rolling-character-name"></span>
+        </div>
         <div id="console-messages" class="console-messages">
             <!-- Messages will be added dynamically -->
         </div>
@@ -93,9 +96,10 @@
             <button id="dice-icon-btn" class="dice-icon-button-inline" title="Open Dice Tray">
                 🎲
             </button>
-            <select id="character-selector" class="character-selector">
-                <option value="">Player</option>
-            </select>
+            <div id="character-picker" class="character-picker">
+                <div id="character-picker-display" class="character-picker-display">(none selected)</div>
+                <div id="character-picker-dropdown" class="character-picker-dropdown" style="display: none;"></div>
+            </div>
             <input type="text" id="chat-input" class="chat-input" placeholder="Type a command or message..." />
             <button id="chat-send" class="chat-send-btn">Send</button>
         </div>
