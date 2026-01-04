@@ -76,6 +76,17 @@ export class CommandDashboard {
    */
   setTarget(token) {
     this.targetToken = token;
+
+    // Update target label
+    const targetLabel = document.getElementById('target-label');
+    const targetName = document.getElementById('target-name');
+
+    if (token && targetLabel && targetName) {
+      targetName.textContent = token.name;
+      targetLabel.style.display = 'flex';
+    } else if (targetLabel) {
+      targetLabel.style.display = 'none';
+    }
   }
 
   /**
@@ -480,6 +491,14 @@ export class CommandDashboard {
         if (e.key === 'Enter') {
           this._sendChatMessage();
         }
+      });
+    }
+
+    // Clear target button
+    const clearTargetBtn = document.getElementById('clear-target');
+    if (clearTargetBtn) {
+      clearTargetBtn.addEventListener('click', () => {
+        this.setTarget(null);
       });
     }
   }

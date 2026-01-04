@@ -165,7 +165,17 @@ export class CanvasRenderer {
       img.onload = () => {
         this.backgroundImage = img;
         this.backgroundReady = true;
+
+        // Calculate minimum zoom to prevent black void
+        this._calculateMinZoom();
+
+        // Reset zoom/pan to fit image
+        this.panZoom.zoom = this.panZoom.minZoom;
+        this.panZoom.panX = 0;
+        this.panZoom.panY = 0;
+
         console.log('✅ Background image loaded:', imageUrl);
+        console.log(`   Min zoom: ${this.panZoom.minZoom.toFixed(2)}, Image: ${img.width}x${img.height}`);
         this.render();
         resolve(img);
       };
@@ -176,6 +186,53 @@ export class CanvasRenderer {
       };
       img.src = imageUrl;
     });
+  }
+
+  /**
+   * Calculate minimum zoom to prevent black void
+   * @private
+   */
+  _calculateMinZoom() {
+    if (!this.backgroundImage) return;
+
+    const canvasAspect = this.canvas.width / this.canvas.height;
+    const imageAspect = this.backgroundImage.width / this.backgroundImage.height;
+
+    // Calculate zoom needed to fill viewport (no black void)
+    let minZoom;
+    if (canvasAspect > imageAspect) {
+      // Canvas is wider - need to zoom to fill width
+      minZoom = this.canvas.width / this.backgroundImage.width;
+    } else {
+      // Canvas is taller - need to zoom to fill height
+      minZoom = this.canvas.height / this.backgroundImage.height;
+    }
+
+    this.panZoom.minZoom = minZoom;
+
+    // Ensure current zoom is not below minimum
+    if (this.panZoom.zoom < minZoom) {
+      this.panZoom.zoom = minZoom;
+    }
+  }
+
+  /**
+   * Constrain pan to prevent showing black void
+   * @private
+   */
+  _constrainPan() {
+    if (!this.backgroundImage) return;
+
+    const scaledWidth = this.backgroundImage.width * this.panZoom.zoom;
+    const scaledHeight = this.backgroundImage.height * this.panZoom.zoom;
+
+    // Calculate maximum pan offsets
+    const maxPanX = Math.max(0, scaledWidth - this.canvas.width);
+    const maxPanY = Math.max(0, scaledHeight - this.canvas.height);
+
+    // Constrain pan to image bounds
+    this.panZoom.panX = Math.max(-maxPanX, Math.min(0, this.panZoom.panX));
+    this.panZoom.panY = Math.max(-maxPanY, Math.min(0, this.panZoom.panY));
   }
 
   /**
@@ -516,6 +573,7 @@ export class CanvasRenderer {
     if (this.panZoom.isPanning) {
       this.panZoom.panX = x - this.panZoom.panStartX;
       this.panZoom.panY = y - this.panZoom.panStartY;
+      this._constrainPan();
       this.render();
       return;
     }
@@ -595,6 +653,9 @@ export class CanvasRenderer {
     this.panZoom.panX = mouseX - (mouseX - this.panZoom.panX) * zoomRatio;
     this.panZoom.panY = mouseY - (mouseY - this.panZoom.panY) * zoomRatio;
     this.panZoom.zoom = newZoom;
+
+    // Constrain pan to image bounds
+    this._constrainPan();
 
     this.render();
   }

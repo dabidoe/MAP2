@@ -345,6 +345,10 @@ class WarRoom1776 {
       this.mapSwitcher.style.display = 'block';
     }
 
+    // Show tactical UI elements (chat, unit card)
+    const chatPanel = document.getElementById('floating-console');
+    if (chatPanel) chatPanel.style.display = 'flex';
+
     // Show GW welcome message only when entering camp (frozen_vigil)
     if (location.id === 'frozen_vigil') {
       this.dashboard.addConsoleMessage(
@@ -379,6 +383,13 @@ class WarRoom1776 {
 
     // Hide map switcher
     this.mapSwitcher.style.display = 'none';
+
+    // Hide tactical UI elements (chat, unit card)
+    const chatPanel = document.getElementById('floating-console');
+    if (chatPanel) chatPanel.style.display = 'none';
+
+    const unitCard = document.getElementById('floating-unit-card');
+    if (unitCard) unitCard.style.display = 'none';
 
     // Remove tactical-active class
     document.body.classList.remove('tactical-active');
