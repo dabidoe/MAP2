@@ -10,96 +10,115 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/style-zones.css" />
 </head>
-<body>
-    <!-- Full-Screen Map Container -->
-    <div id="map-viewport">
-        <div id="map"></div>
-    </div>
-
-    <!-- Floating HUD: Atlas Panel (Top-Left) - Contextual -->
-    <div id="floating-atlas" class="hud-panel">
-        <div class="atlas-header">
-            <h2 id="atlas-title" class="cinzel">War Room 1776</h2>
+<body class="tactical-active">
+    <!-- ZONE A: Mini-Sidebar (Left) -->
+    <div id="mini-sidebar" class="mini-sidebar">
+        <div class="sidebar-icons">
+            <button class="sidebar-icon" title="Map" id="sidebar-map">
+                🗺️
+            </button>
+            <button class="sidebar-icon" title="Info" id="sidebar-info">
+                ℹ️
+            </button>
+            <button class="sidebar-icon" title="Settings" id="sidebar-settings">
+                ⚙️
+            </button>
         </div>
-        <div class="atlas-info">
-            <!-- Condensed Date/Time/Weather Row -->
-            <div class="info-row-condensed">
-                <span id="campaign-date" class="info-value">Loading...</span>
-                <span class="info-separator">•</span>
-                <span id="campaign-time" class="info-value">Loading...</span>
-                <span class="info-separator">•</span>
-                <span id="campaign-weather" class="info-value">Loading...</span>
+        <!-- Expandable info panel -->
+        <div id="sidebar-info-panel" class="sidebar-panel" style="display: none;">
+            <div class="sidebar-panel-header">
+                <h3 id="atlas-title">War Room 1776</h3>
             </div>
-            <!-- Location Briefing -->
-            <div class="briefing-section">
-                <h4 class="briefing-label">SITUATION REPORT</h4>
-                <div id="location-briefing" class="briefing-text">
-                    Select a location to view details...
+            <div class="sidebar-panel-content">
+                <div class="info-row-condensed">
+                    <span id="campaign-date" class="info-value">Loading...</span>
+                    <span class="info-separator">•</span>
+                    <span id="campaign-time" class="info-value">Loading...</span>
+                    <span class="info-separator">•</span>
+                    <span id="campaign-weather" class="info-value">Loading...</span>
+                </div>
+                <div class="morale-section">
+                    <label class="morale-label">ARMY MORALE</label>
+                    <div class="morale-bar">
+                        <div class="fill" id="morale-fill" style="width: 30%;"></div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="morale-section">
-            <label class="morale-label">ARMY MORALE</label>
-            <div class="morale-bar">
-                <div class="fill" id="morale-fill" style="width: 30%;"></div>
-            </div>
-        </div>
     </div>
 
-    <!-- Floating HUD: Unit Card (Bottom-Right, contextual) -->
-    <div id="floating-unit-card" class="hud-panel" style="display: none;">
-        <div class="card-header">
-            <h3 id="unit-name">Unit Name</h3>
-            <button id="close-unit-card" class="close-btn">✕</button>
-        </div>
-        <div class="card-stats">
-            <div class="stat-row">
-                <span class="stat-label">HP</span>
-                <span id="unit-hp" class="stat-value">0/0</span>
+    <!-- ZONE B: Canvas Viewer (Top 70%) -->
+    <div id="canvas-viewer" class="canvas-viewer">
+        <!-- Thin top bar for location info -->
+        <div id="location-bar" class="location-bar">
+            <div id="location-title" class="location-title">War Room 1776</div>
+            <div id="location-briefing" class="location-briefing">Select a location to view details...</div>
+            <div id="map-variant-controls" class="map-variant-controls" style="display: none;">
+                <button id="map-prev" class="variant-arrow">‹</button>
+                <span id="map-variant-label" class="variant-label">1/4</span>
+                <button id="map-next" class="variant-arrow">›</button>
             </div>
-            <div class="stat-row">
-                <span class="stat-label">AC</span>
-                <span id="unit-ac" class="stat-value">0</span>
-            </div>
+            <button id="return-to-map" class="return-button" style="display: none;">← Return to Campaign Map</button>
         </div>
-        <div class="card-actions">
-            <h4>Actions</h4>
-            <div id="unit-actions"></div>
+
+        <!-- Canvas container with overflow hidden -->
+        <div id="map-viewport" class="map-viewport">
+            <div id="map"></div>
         </div>
-        <button id="view-character-details" class="cycle-button" style="width: 100%; margin-top: 10px;">View Full Details</button>
+
+        <!-- Tactical canvas container (hidden by default) -->
+        <div id="tactical-canvas-container" class="tactical-canvas-container" style="display: none;"></div>
     </div>
 
-    <!-- Floating HUD: Combat Tracker (contextual) -->
-    <div id="floating-combat-tracker" class="hud-panel" style="display: none;">
-        <div class="tracker-header">
-            <h3>INITIATIVE</h3>
-        </div>
-        <div id="initiative-list"></div>
-    </div>
-
-    <!-- Floating HUD: Chat History (Bottom-Left) -->
-    <div id="floating-console" class="hud-panel">
-        <div id="rolling-as" class="rolling-as-header" style="display: none;">
-            Rolling as: <span id="rolling-character-name"></span>
-        </div>
-        <div id="console-messages" class="console-messages">
-            <!-- Messages will be added dynamically -->
-        </div>
-        <div id="target-label" class="target-label" style="display: none;">
-            Target: <span id="target-name"></span> <button id="clear-target" class="clear-target-btn">✕</button>
-        </div>
-        <div class="chat-input-container">
-            <button id="dice-icon-btn" class="dice-icon-button-inline" title="Open Dice Tray">
-                🎲
-            </button>
-            <div id="character-picker" class="character-picker">
-                <div id="character-picker-display" class="character-picker-display">(none selected)</div>
-                <div id="character-picker-dropdown" class="character-picker-dropdown" style="display: none;"></div>
+    <!-- ZONE C: Command Console (Bottom 30%) -->
+    <div id="command-console" class="command-console">
+        <!-- Left 70%: Chat Log -->
+        <div id="chat-panel" class="chat-panel">
+            <div id="rolling-as" class="rolling-as-header" style="display: none;">
+                Rolling as: <span id="rolling-character-name"></span>
             </div>
-            <input type="text" id="chat-input" class="chat-input" placeholder="Type a command or message..." />
-            <button id="chat-send" class="chat-send-btn">Send</button>
+            <div id="console-messages" class="console-messages">
+                <!-- Messages will be added dynamically -->
+            </div>
+            <div id="target-label" class="target-label" style="display: none;">
+                Target: <span id="target-name"></span> <button id="clear-target" class="clear-target-btn">✕</button>
+            </div>
+            <div class="chat-input-container">
+                <button id="dice-icon-btn" class="dice-icon-button-inline" title="Open Dice Tray">
+                    🎲
+                </button>
+                <div id="character-picker" class="character-picker">
+                    <div id="character-picker-display" class="character-picker-display">(none selected)</div>
+                    <div id="character-picker-dropdown" class="character-picker-dropdown" style="display: none;"></div>
+                </div>
+                <input type="text" id="chat-input" class="chat-input" placeholder="Type a command or message..." />
+                <button id="chat-send" class="chat-send-btn">Send</button>
+            </div>
+        </div>
+
+        <!-- Right 30%: Unit Card -->
+        <div id="unit-panel" class="unit-panel" style="display: none;">
+            <div class="card-header">
+                <h3 id="unit-name">Unit Name</h3>
+                <button id="close-unit-card" class="close-btn">✕</button>
+            </div>
+            <div class="card-stats">
+                <div class="stat-row">
+                    <span class="stat-label">HP</span>
+                    <span id="unit-hp" class="stat-value">0/0</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">AC</span>
+                    <span id="unit-ac" class="stat-value">0</span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <h4>Actions</h4>
+                <div id="unit-actions"></div>
+            </div>
+            <button id="view-character-details" class="cycle-button" style="width: 100%; margin-top: 10px;">View Full Details</button>
         </div>
     </div>
 
@@ -159,6 +178,14 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Combat Tracker (contextual) - kept as floating for now -->
+    <div id="floating-combat-tracker" class="hud-panel" style="display: none;">
+        <div class="tracker-header">
+            <h3>INITIATIVE</h3>
+        </div>
+        <div id="initiative-list"></div>
     </div>
 
     <!-- External Libraries -->

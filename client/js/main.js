@@ -26,8 +26,7 @@ class WarRoom1776 {
 
     // UI elements
     this.backButton = null;
-    this.dmToggle = null;
-    this.mapSwitcher = null;
+    this.mapVariantControls = null;
     this.currentMapVariant = 0; // Track which variant is displayed
 
     // Targeting system
@@ -81,25 +80,17 @@ class WarRoom1776 {
 
   /**
    * Setup tactical container for Canvas rendering
-   * TRUE FULLSCREEN (100vw x 100vh)
+   * Uses existing #tactical-canvas-container from HTML
    * @private
    */
   _setupTacticalContainer() {
-    // Create tactical container (TRUE FULLSCREEN)
-    this.tacticalContainer = document.createElement('div');
-    this.tacticalContainer.id = 'tactical-canvas-container';
-    this.tacticalContainer.style.cssText = `
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: 100;
-      display: none;
-      background: #000;
-    `;
+    // Get existing tactical container from HTML
+    this.tacticalContainer = document.getElementById('tactical-canvas-container');
 
-    document.body.appendChild(this.tacticalContainer);
+    if (!this.tacticalContainer) {
+      console.error('❌ Tactical canvas container not found in HTML');
+      return;
+    }
 
     // Initialize Canvas renderer (will be shown when entering tactical view)
     this.canvasRenderer = new CanvasRenderer(this.tacticalContainer, {
@@ -147,88 +138,27 @@ class WarRoom1776 {
   }
 
   /**
-   * Create UI controls
+   * Create UI controls - hook up existing HTML elements
    * @private
    */
   _createControls() {
-    // Back button (return to world map)
-    this.backButton = document.createElement('button');
-    this.backButton.innerHTML = '← Return to Campaign Map';
-    this.backButton.className = 'cycle-button';
-    this.backButton.style.position = 'absolute';
-    this.backButton.style.top = '20px';
-    this.backButton.style.left = '50%';
-    this.backButton.style.transform = 'translateX(-50%)';
-    this.backButton.style.display = 'none';
-    this.backButton.style.zIndex = '6000';
-    this.backButton.onclick = () => this._exitTacticalView();
-    document.body.appendChild(this.backButton);
+    // Get existing controls from HTML
+    this.backButton = document.getElementById('return-to-map');
+    const mapPrev = document.getElementById('map-prev');
+    const mapNext = document.getElementById('map-next');
+    const mapVariantControls = document.getElementById('map-variant-controls');
 
-    // DM Map Switcher (for cycling through tactical map variants)
-    this._createMapSwitcher();
-  }
+    if (this.backButton) {
+      this.backButton.onclick = () => this._exitTacticalView();
+    }
 
-  /**
-   * Create DM map switcher UI
-   * @private
-   */
-  _createMapSwitcher() {
-    this.mapSwitcher = document.createElement('div');
-    this.mapSwitcher.id = 'map-switcher';
-    this.mapSwitcher.style.cssText = `
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      display: none;
-      z-index: 6000;
-    `;
+    if (mapPrev && mapNext) {
+      mapPrev.onclick = () => this._cycleMapVariant(-1);
+      mapNext.onclick = () => this._cycleMapVariant(1);
+    }
 
-    this.mapSwitcher.innerHTML = `
-      <div style="display: flex; align-items: center; gap: 8px; font-family: 'Cinzel', serif;">
-        <button id="map-prev" style="
-          background: none;
-          border: none;
-          color: #c5a959;
-          font-size: 1.2rem;
-          cursor: pointer;
-          padding: 4px;
-          line-height: 1;
-          opacity: 0.8;
-          transition: opacity 0.2s;
-        ">‹</button>
-        <span id="map-variant-label" style="
-          font-size: 0.9rem;
-          color: #c5a959;
-          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-          user-select: none;
-        ">1/4</span>
-        <button id="map-next" style="
-          background: none;
-          border: none;
-          color: #c5a959;
-          font-size: 1.2rem;
-          cursor: pointer;
-          padding: 4px;
-          line-height: 1;
-          opacity: 0.8;
-          transition: opacity 0.2s;
-        ">›</button>
-      </div>
-    `;
-
-    document.body.appendChild(this.mapSwitcher);
-
-    // Wire up buttons with hover effects
-    const prevBtn = document.getElementById('map-prev');
-    const nextBtn = document.getElementById('map-next');
-
-    prevBtn.onclick = () => this._cycleMapVariant(-1);
-    nextBtn.onclick = () => this._cycleMapVariant(1);
-
-    prevBtn.onmouseenter = () => prevBtn.style.opacity = '1';
-    prevBtn.onmouseleave = () => prevBtn.style.opacity = '0.8';
-    nextBtn.onmouseenter = () => nextBtn.style.opacity = '1';
-    nextBtn.onmouseleave = () => nextBtn.style.opacity = '0.8';
+    // Store map variant controls reference
+    this.mapVariantControls = mapVariantControls;
   }
 
   /**
@@ -356,14 +286,13 @@ class WarRoom1776 {
     // Show back button
     this.backButton.style.display = 'block';
 
-    // Show map switcher if in DM mode
-    if (this.gameState.getState().mode === 'DM') {
-      this.mapSwitcher.style.display = 'block';
+    // Show map variant controls if in DM mode
+    if (this.mapVariantControls && this.gameState.getState().mode === 'DM') {
+      this.mapVariantControls.style.display = 'flex';
     }
 
-    // Show tactical UI elements (chat, unit card)
-    const chatPanel = document.getElementById('floating-console');
-    if (chatPanel) chatPanel.style.display = 'flex';
+    // Note: Chat panel and unit panel are now always visible in Zone C
+    // No need to show/hide them
 
     // Show GW welcome message only when entering camp (frozen_vigil)
     if (location.id === 'frozen_vigil') {
@@ -397,15 +326,13 @@ class WarRoom1776 {
     // Hide back button
     this.backButton.style.display = 'none';
 
-    // Hide map switcher
-    this.mapSwitcher.style.display = 'none';
+    // Hide map variant controls
+    if (this.mapVariantControls) {
+      this.mapVariantControls.style.display = 'none';
+    }
 
-    // Hide tactical UI elements (chat, unit card)
-    const chatPanel = document.getElementById('floating-console');
-    if (chatPanel) chatPanel.style.display = 'none';
-
-    const unitCard = document.getElementById('floating-unit-card');
-    if (unitCard) unitCard.style.display = 'none';
+    // Note: Chat panel and unit panel are now always visible in Zone C
+    // No need to hide them
 
     // Remove tactical-active class
     document.body.classList.remove('tactical-active');
