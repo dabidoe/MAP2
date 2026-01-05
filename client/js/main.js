@@ -310,6 +310,10 @@ class WarRoom1776 {
     // Add tactical-active class (CSS handles showing tactical container & console)
     document.body.classList.add('tactical-active');
 
+    // CRITICAL: Resize canvas now that container is visible
+    // (container was display:none, so canvas was sized to 0x0)
+    this.canvasRenderer._resize();
+
     // CRITICAL: Load background image FIRST, await completion
     try {
       console.log('⏳ Loading tactical map background...');
