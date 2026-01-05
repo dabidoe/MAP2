@@ -1,0 +1,1013 @@
+/* ===================================
+   WAR ROOM 1776 - FLOATING HUD STYLE
+   =================================== */
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cinzel', serif;
+    background: #000;
+    color: #e2d1b3;
+    overflow: hidden; /* No scrollbars - native desktop game feel */
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Full-Screen Map */
+#map-viewport {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/* Parchment filter for leaflet map */
+.parchment-container {
+    filter: sepia(0.4) contrast(1.1) brightness(0.95);
+}
+
+/* Tactical Canvas (100% viewport when active) */
+#tactical-canvas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    display: none;
+    background: #000;
+}
+
+#tactical-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* ===================================
+   FLOATING HUD PANELS (Glassmorphism)
+   =================================== */
+
+.hud-panel {
+    position: fixed;
+    background: rgba(26, 20, 16, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 2px solid rgba(197, 169, 89, 0.6);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    z-index: 5000;
+    font-family: 'Cinzel', serif;
+    transition: all 0.3s ease-in-out;
+}
+
+.hud-panel:hover {
+    border-color: rgba(197, 169, 89, 0.9);
+    box-shadow: 0 8px 40px rgba(197, 169, 89, 0.3);
+}
+
+/* ===================================
+   FLOATING ATLAS (Top-Left)
+   =================================== */
+
+#floating-atlas {
+    top: 20px;
+    left: 20px;
+    min-width: 280px;
+}
+
+.atlas-header h2 {
+    font-size: 1.2rem;
+    color: #c5a959;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.atlas-info {
+    margin-bottom: 15px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(197, 169, 89, 0.2);
+}
+
+.info-label {
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #8b7355;
+}
+
+.info-value {
+    font-size: 0.85rem;
+    color: #e2d1b3;
+}
+
+.info-row-condensed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    border: 1px solid rgba(197, 169, 89, 0.15);
+}
+
+.info-row-condensed .info-value {
+    font-size: 0.75rem;
+    color: #c5a959;
+    white-space: nowrap;
+}
+
+.info-separator {
+    color: #8b7355;
+    font-size: 0.7rem;
+    opacity: 0.6;
+}
+
+.briefing-section {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(197, 169, 89, 0.3);
+}
+
+.briefing-label {
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #8b7355;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.briefing-text {
+    font-size: 0.8rem;
+    color: #e2d1b3;
+    line-height: 1.4;
+    max-height: 100px;
+    overflow-y: auto;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    border: 1px solid rgba(197, 169, 89, 0.1);
+}
+
+.briefing-text::-webkit-scrollbar {
+    width: 4px;
+}
+
+.briefing-text::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+}
+
+.briefing-text::-webkit-scrollbar-thumb {
+    background: rgba(197, 169, 89, 0.4);
+    border-radius: 2px;
+}
+
+.briefing-text::-webkit-scrollbar-thumb:hover {
+    background: rgba(197, 169, 89, 0.6);
+}
+
+.morale-section {
+    margin-top: 15px;
+}
+
+.morale-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #8b7355;
+    margin-bottom: 6px;
+}
+
+.morale-bar {
+    height: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #4a3b2d;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.morale-bar .fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4CAF50, #66BB6A);
+    transition: width 0.5s ease;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.6);
+}
+
+/* ===================================
+   FLOATING UNIT CARD (Bottom-Right)
+   =================================== */
+
+#floating-unit-card {
+    bottom: 20px;
+    right: 20px;
+    min-width: 320px;
+    max-width: 400px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(197, 169, 89, 0.4);
+}
+
+.card-header h3 {
+    font-size: 1.1rem;
+    color: #c5a959;
+    letter-spacing: 1.5px;
+}
+
+.close-btn {
+    background: transparent;
+    border: 1px solid rgba(197, 169, 89, 0.5);
+    color: #c5a959;
+    font-size: 1.2rem;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+    background: rgba(197, 169, 89, 0.2);
+    border-color: #c5a959;
+}
+
+.card-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.stat-row {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(197, 169, 89, 0.3);
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    color: #8b7355;
+    margin-bottom: 4px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.1rem;
+    color: #e2d1b3;
+    font-weight: bold;
+}
+
+.card-actions {
+    margin-top: 15px;
+}
+
+.card-actions h4 {
+    font-size: 0.8rem;
+    color: #c5a959;
+    letter-spacing: 1.2px;
+    margin-bottom: 10px;
+}
+
+#unit-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.action-btn {
+    background: rgba(197, 169, 89, 0.15);
+    border: 1px solid rgba(197, 169, 89, 0.5);
+    color: #e2d1b3;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    background: rgba(197, 169, 89, 0.3);
+    border-color: #c5a959;
+    transform: translateX(4px);
+}
+
+/* ===================================
+   FLOATING COMBAT TRACKER (Top-Right)
+   =================================== */
+
+#floating-combat-tracker {
+    top: 20px;
+    right: 20px;
+    min-width: 280px;
+}
+
+.tracker-header h3 {
+    font-size: 0.9rem;
+    color: #c5a959;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+#initiative-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.initiative-item {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 6px;
+    border-left: 3px solid #c5a959;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.initiative-name {
+    font-size: 0.85rem;
+    color: #e2d1b3;
+}
+
+.initiative-roll {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #c5a959;
+}
+
+/* ===================================
+   FLOATING CHAT HISTORY (Bottom-Left)
+   =================================== */
+
+#floating-console {
+    bottom: 10px;
+    left: 10px;
+    min-width: 650px;
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+}
+
+.console-header h3 {
+    font-size: 0.9rem;
+    color: #c5a959;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.rolling-as-header {
+    padding: 6px 10px;
+    background: rgba(76, 175, 80, 0.15);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    border-radius: 4px;
+    font-size: 0.75rem;
+    color: #e2d1b3;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.rolling-as-header span {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.console-messages {
+    max-height: 350px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.target-label {
+    padding: 6px 10px;
+    background: rgba(197, 169, 89, 0.15);
+    border: 1px solid rgba(197, 169, 89, 0.3);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #e2d1b3;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.target-label span {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.clear-target-btn {
+    background: rgba(255, 69, 0, 0.3);
+    border: 1px solid rgba(255, 69, 0, 0.5);
+    color: #ff4500;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 0.7rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    transition: all 0.2s ease;
+}
+
+.clear-target-btn:hover {
+    background: rgba(255, 69, 0, 0.5);
+    border-color: #ff4500;
+}
+
+.chat-input-container {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid rgba(197, 169, 89, 0.3);
+}
+
+.character-picker {
+    position: relative;
+    min-width: 140px;
+    flex-shrink: 0;
+}
+
+.character-picker.empty {
+    display: none;
+}
+
+.character-picker-display {
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(197, 169, 89, 0.3);
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: #8b7355;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.character-picker-display:hover {
+    border-color: #c5a959;
+    color: #e2d1b3;
+}
+
+.character-picker-dropdown {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    margin-bottom: 4px;
+    background: rgba(26, 20, 16, 0.95);
+    border: 2px solid #c5a959;
+    border-radius: 6px;
+    min-width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.character-option {
+    padding: 8px 12px;
+    color: #e2d1b3;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(197, 169, 89, 0.2);
+    transition: all 0.2s ease;
+}
+
+.character-option:last-child {
+    border-bottom: none;
+}
+
+.character-option:hover {
+    background: rgba(197, 169, 89, 0.2);
+    color: #FFD700;
+}
+
+.chat-input {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(197, 169, 89, 0.3);
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: #e2d1b3;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+}
+
+.chat-input:focus {
+    outline: none;
+    border-color: #c5a959;
+}
+
+.chat-input::placeholder {
+    color: rgba(226, 209, 179, 0.5);
+}
+
+.chat-send-btn {
+    background: rgba(197, 169, 89, 0.2);
+    border: 2px solid #c5a959;
+    color: #e2d1b3;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.chat-send-btn:hover {
+    background: rgba(197, 169, 89, 0.3);
+    border-color: #FFD700;
+}
+
+.console-message {
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.npc-message {
+    background: rgba(197, 169, 89, 0.15);
+    border-left: 3px solid #c5a959;
+}
+
+.player-message {
+    background: rgba(76, 175, 80, 0.15);
+    border-left: 3px solid #4CAF50;
+}
+
+.system-message {
+    background: rgba(100, 100, 255, 0.15);
+    border-left: 3px solid #6464FF;
+}
+
+.combat-message {
+    background: rgba(255, 69, 0, 0.15);
+    border-left: 3px solid #FF4500;
+}
+
+.discovery-message {
+    background: rgba(255, 215, 0, 0.15);
+    border-left: 3px solid #FFD700;
+}
+
+.action-message {
+    background: rgba(139, 115, 85, 0.15);
+    border-left: 3px solid #8B7355;
+}
+
+.message-sender {
+    font-weight: bold;
+    color: #FFD700;
+    margin-right: 6px;
+}
+
+.message-text {
+    color: #e2d1b3;
+}
+
+/* ===================================
+   DICE ICON BUTTON & POPUP
+   =================================== */
+
+.dice-icon-button-inline {
+    background: rgba(197, 169, 89, 0.3);
+    border: 2px solid rgba(197, 169, 89, 0.5);
+    border-radius: 6px;
+    width: 42px;
+    height: 42px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.dice-icon-button-inline:hover {
+    background: rgba(197, 169, 89, 0.5);
+    border-color: #FFD700;
+    transform: scale(1.05);
+}
+
+.dice-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 8000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dice-popup-content {
+    background: rgba(26, 20, 16, 0.95);
+    border: 3px solid #c5a959;
+    border-radius: 12px;
+    padding: 25px;
+    min-width: 320px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.9);
+}
+
+.dice-header h3 {
+    font-size: 0.9rem;
+    color: #c5a959;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.dice-result {
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    border: 2px solid rgba(197, 169, 89, 0.3);
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #FFD700;
+    text-shadow: 0 2px 8px rgba(255, 215, 0, 0.6);
+}
+
+.dice-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.dice-btn {
+    background: rgba(26, 20, 16, 0.9);
+    border: 2px solid #8b7355;
+    color: #e2d1b3;
+    padding: 10px;
+    border-radius: 6px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: bold;
+}
+
+.dice-btn:hover {
+    background: rgba(197, 169, 89, 0.2);
+    border-color: #c5a959;
+    transform: scale(1.05);
+}
+
+.dice-btn:active {
+    transform: scale(0.95);
+}
+
+.dice-btn-primary {
+    border-color: #FFD700;
+    color: #FFD700;
+    background: rgba(255, 215, 0, 0.1);
+}
+
+.dice-btn-primary:hover {
+    background: rgba(255, 215, 0, 0.2);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.dice-btn-secondary {
+    background: rgba(197, 169, 89, 0.2);
+    border-color: #c5a959;
+}
+
+.dice-custom {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+#dice-custom-input {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(197, 169, 89, 0.3);
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: #e2d1b3;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+}
+
+#dice-custom-input:focus {
+    outline: none;
+    border-color: #c5a959;
+}
+
+#dice-custom-input::placeholder {
+    color: rgba(226, 209, 179, 0.5);
+}
+
+/* Dice roll animation */
+.dice-roll-animation {
+    animation: dice-pulse 0.5s ease;
+}
+
+@keyframes dice-pulse {
+    0% {
+        transform: scale(1);
+        border-color: rgba(197, 169, 89, 0.3);
+    }
+    50% {
+        transform: scale(1.1);
+        border-color: #FFD700;
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+    }
+    100% {
+        transform: scale(1);
+        border-color: rgba(197, 169, 89, 0.3);
+    }
+}
+
+/* ===================================
+   UTILITY BUTTONS
+   =================================== */
+
+.cycle-button {
+    background: rgba(26, 20, 16, 0.9);
+    border: 2px solid #c5a959;
+    color: #e2d1b3;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.cycle-button:hover {
+    background: rgba(197, 169, 89, 0.2);
+    border-color: #FFD700;
+    box-shadow: 0 4px 20px rgba(197, 169, 89, 0.4);
+    transform: translateY(-2px);
+}
+
+/* ===================================
+   CINZEL FONT
+   =================================== */
+
+.cinzel {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1.5px;
+}
+
+/* ===================================
+   TACTICAL MODE OVERRIDES
+   =================================== */
+
+body.tactical-active #map-viewport {
+    display: none;
+}
+
+body.tactical-active #tactical-canvas-container {
+    display: block;
+}
+
+/* ===================================
+   CHARACTER SHEET MODAL
+   =================================== */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 9000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.character-sheet {
+    background: rgba(26, 20, 16, 0.95);
+    border: 3px solid #c5a959;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.9);
+    font-family: 'Cinzel', serif;
+    color: #e2d1b3;
+}
+
+.sheet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    border-bottom: 2px solid rgba(197, 169, 89, 0.3);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.sheet-header h2 {
+    font-size: 1.5rem;
+    color: #FFD700;
+    margin: 0;
+}
+
+.sheet-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 25px;
+}
+
+.sheet-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sheet-section {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(197, 169, 89, 0.3);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.sheet-section h3 {
+    font-size: 1rem;
+    color: #c5a959;
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(197, 169, 89, 0.2);
+    padding-bottom: 8px;
+}
+
+.profile-info p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.profile-info .label {
+    font-weight: bold;
+    color: #c5a959;
+}
+
+.attributes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.attribute-box {
+    background: rgba(197, 169, 89, 0.1);
+    border: 1px solid rgba(197, 169, 89, 0.3);
+    border-radius: 6px;
+    padding: 10px;
+    text-align: center;
+}
+
+.attribute-box .attr-name {
+    font-size: 0.7rem;
+    color: #c5a959;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.attribute-box .attr-value {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.skills-list, .traits-list, .feats-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.skill-item, .trait-item, .feat-item {
+    background: rgba(197, 169, 89, 0.1);
+    border-left: 3px solid #8b7355;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.trait-item, .feat-item {
+    border-left-color: #c5a959;
+}
+
+.skill-item .skill-name, .trait-item .trait-name, .feat-item .feat-name {
+    font-weight: bold;
+    color: #FFD700;
+    margin-bottom: 4px;
+}
+
+.trait-item .trait-desc, .feat-item .feat-desc {
+    font-size: 0.8rem;
+    color: #e2d1b3;
+    line-height: 1.4;
+    margin-top: 6px;
+}
+
+/* Scrollbar styling for sheet sections */
+.skills-list::-webkit-scrollbar, .traits-list::-webkit-scrollbar, .feats-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.skills-list::-webkit-scrollbar-thumb, .traits-list::-webkit-scrollbar-thumb, .feats-list::-webkit-scrollbar-thumb {
+    background: rgba(197, 169, 89, 0.5);
+    border-radius: 3px;
+}
+
+/* ===================================
+   RESPONSIVE (Keep HUD readable on smaller screens)
+   =================================== */
+
+@media (max-width: 768px) {
+    .hud-panel {
+        padding: 12px;
+        min-width: 220px;
+    }
+
+    #floating-atlas {
+        top: 10px;
+        left: 10px;
+    }
+
+    #floating-unit-card {
+        bottom: 10px;
+        right: 10px;
+        min-width: 260px;
+    }
+
+    #floating-combat-tracker {
+        top: 10px;
+        right: 10px;
+    }
+}

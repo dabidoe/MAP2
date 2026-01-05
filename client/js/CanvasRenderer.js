@@ -109,13 +109,14 @@ export class CanvasRenderer {
 
   /**
    * Resize canvas to container
-   * CRITICAL: Explicitly set to window dimensions for fullscreen
+   * Uses container dimensions, not window (for Zone B layout)
    * @private
    */
   _resize() {
-    // EXPLICIT FULLSCREEN SIZING
-    this.canvas.width = window.innerWidth;
-    this.canvas.height = window.innerHeight;
+    // Size to container dimensions (not window)
+    this.canvas.width = this.container.clientWidth;
+    this.canvas.height = this.container.clientHeight;
+    console.log(`Canvas resized to: ${this.canvas.width}x${this.canvas.height}`);
     this.render();
   }
 
@@ -252,11 +253,7 @@ export class CanvasRenderer {
   render() {
     if (!this.ctx) return;
 
-    // EXPLICIT: Set canvas to fullscreen dimensions every frame
-    this.canvas.width = window.innerWidth;
-    this.canvas.height = window.innerHeight;
-
-    // Clear canvas
+    // Clear canvas (size is set by _resize())
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
     // Draw background image FIRST (if loaded)

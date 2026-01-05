@@ -26,7 +26,7 @@ export class CommandDashboard {
       moraleFill: document.getElementById('morale-fill'),
 
       // Unit Card
-      unitCard: document.getElementById('floating-unit-card'),
+      unitCard: document.getElementById('unit-panel'),
       unitName: document.getElementById('unit-name'),
       unitHp: document.getElementById('unit-hp'),
       unitAc: document.getElementById('unit-ac'),
