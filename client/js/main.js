@@ -60,6 +60,9 @@ class WarRoom1776 {
       // Create UI controls
       this._createControls();
 
+      // Initialize sidebar
+      this._initSidebar();
+
       // Setup tactical view container
       this._setupTacticalContainer();
 
@@ -162,6 +165,52 @@ class WarRoom1776 {
   }
 
   /**
+   * Initialize sidebar functionality
+   * @private
+   */
+  _initSidebar() {
+    const sidebarIcons = {
+      map: document.getElementById('sidebar-map'),
+      info: document.getElementById('sidebar-info'),
+      settings: document.getElementById('sidebar-settings')
+    };
+
+    const sidebarPanels = {
+      info: document.getElementById('sidebar-info-panel')
+    };
+
+    // Currently active panel
+    let activePanel = null;
+
+    // Toggle info panel
+    if (sidebarIcons.info && sidebarPanels.info) {
+      sidebarIcons.info.onclick = () => {
+        if (activePanel === 'info') {
+          // Close if already open
+          sidebarPanels.info.style.display = 'none';
+          activePanel = null;
+        } else {
+          // Close other panels
+          Object.values(sidebarPanels).forEach(panel => {
+            panel.style.display = 'none';
+          });
+          // Open this panel
+          sidebarPanels.info.style.display = 'block';
+          activePanel = 'info';
+        }
+      };
+    }
+
+    // Map icon - already functional (toggles between views)
+    // Settings icon - placeholder for future
+    if (sidebarIcons.settings) {
+      sidebarIcons.settings.onclick = () => {
+        console.log('Settings panel not yet implemented');
+      };
+    }
+  }
+
+  /**
    * Initialize Socket.io connection
    * @private
    */
@@ -258,10 +307,7 @@ class WarRoom1776 {
     // Enter tactical view on map
     this.mapEngine.enterTacticalView(location);
 
-    // Show tactical container
-    this.tacticalContainer.style.display = 'block';
-
-    // Add tactical-active class for styling (hide world map)
+    // Add tactical-active class (CSS handles showing tactical container & console)
     document.body.classList.add('tactical-active');
 
     // CRITICAL: Load background image FIRST, await completion
@@ -316,9 +362,6 @@ class WarRoom1776 {
 
     // Exit tactical view on map
     this.mapEngine.exitTacticalView();
-
-    // Hide tactical container
-    this.tacticalContainer.style.display = 'none';
 
     // Clear canvas
     this.canvasRenderer.clear();

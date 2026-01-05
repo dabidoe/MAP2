@@ -75,6 +75,7 @@ body {
     padding: 15px;
     z-index: 8999;
     box-shadow: 4px 0 20px rgba(0, 0, 0, 0.7);
+    display: none; /* Hidden by default, toggled by JS */
 }
 
 .sidebar-panel-header h3 {
@@ -190,12 +191,22 @@ body {
     min-height: 0;
 }
 
-.tactical-canvas-container {
-    width: 100%;
-    height: 100%;
+/* Hide map viewport in tactical mode */
+body.tactical-active .map-viewport {
+    display: none;
+}
+
+#tactical-canvas-container {
+    flex: 1;
     position: relative;
     overflow: hidden;
     background: #000;
+    display: none; /* Hidden by default */
+}
+
+/* Show tactical canvas in tactical mode */
+body.tactical-active #tactical-canvas-container {
+    display: block;
 }
 
 #tactical-canvas {
@@ -221,9 +232,14 @@ body {
     background: rgba(16, 12, 10, 0.95);
     z-index: 6000;
     flex-shrink: 0;
-    display: flex;
+    display: none; /* Hidden by default */
     flex-direction: column;
     padding: 15px;
+}
+
+/* Show command console only in tactical mode */
+body.tactical-active #command-console {
+    display: flex;
 }
 
 .console-messages {
