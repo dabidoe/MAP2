@@ -525,6 +525,19 @@ export class CommandDashboard {
    * @private
    */
   _initChatInput() {
+    // Command autocomplete elements
+    this.commandAutocomplete = document.getElementById('command-autocomplete');
+    this.selectedCommandIndex = -1;
+    this.availableCommands = [
+      { name: '/roll', usage: '/roll [dice notation]', description: 'Roll dice (e.g., /roll 2d6+3, /roll d20)' },
+      { name: '/attack', usage: '/attack [target]', description: 'Quick attack with selected character' },
+      { name: '/skill', usage: '/skill [name]', description: 'Make a skill check (e.g., /skill Perception)' },
+      { name: '/init', usage: '/init', description: 'Roll initiative for selected character' },
+      { name: '/initiative', usage: '/initiative', description: 'Roll initiative for selected character' },
+      { name: '/clear', usage: '/clear', description: 'Clear chat history' },
+      { name: '/help', usage: '/help', description: 'Show help message with all commands' }
+    ];
+
     // Send button
     if (this.elements.chatSend) {
       this.elements.chatSend.addEventListener('click', () => {
@@ -532,10 +545,59 @@ export class CommandDashboard {
       });
     }
 
-    // Enter key
+    // Input event listeners
     if (this.elements.chatInput) {
+      // Keydown for special keys (arrow keys, escape, tab)
+      this.elements.chatInput.addEventListener('keydown', (e) => {
+        const autocompleteVisible = this.commandAutocomplete && this.commandAutocomplete.style.display === 'block';
+
+        // Arrow keys for navigation
+        if (autocompleteVisible && (e.key === 'ArrowUp' || e.key === 'ArrowDown')) {
+          e.preventDefault();
+          this._navigateCommandList(e.key === 'ArrowDown' ? 1 : -1);
+          return;
+        }
+
+        // Tab or Enter to select
+        if (autocompleteVisible && (e.key === 'Tab' || e.key === 'Enter')) {
+          e.preventDefault();
+          this._selectCommand();
+          return;
+        }
+
+        // Escape to close
+        if (autocompleteVisible && e.key === 'Escape') {
+          e.preventDefault();
+          this._hideCommandAutocomplete();
+          return;
+        }
+
+        // Enter to send (if autocomplete not visible)
+        if (!autocompleteVisible && e.key === 'Enter') {
+          this._sendChatMessage();
+        }
+      });
+
+      // Input event for detecting "/" and filtering commands
+      this.elements.chatInput.addEventListener('input', (e) => {
+        const value = e.target.value;
+
+        if (value.startsWith('/')) {
+          // Show autocomplete with filtered commands
+          const query = value.toLowerCase();
+          const filtered = this.availableCommands.filter(cmd =>
+            cmd.name.toLowerCase().startsWith(query) ||
+            cmd.description.toLowerCase().includes(query.substring(1))
+          );
+          this._showCommandAutocomplete(filtered);
+        } else {
+          this._hideCommandAutocomplete();
+        }
+      });
+
+      // Keypress for backward compatibility (only for Enter without autocomplete)
       this.elements.chatInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
+        if (e.key === 'Enter' && (!this.commandAutocomplete || this.commandAutocomplete.style.display === 'none')) {
           this._sendChatMessage();
         }
       });
@@ -551,6 +613,106 @@ export class CommandDashboard {
   }
 
   /**
+   * Show command autocomplete popup
+   * @private
+   */
+  _showCommandAutocomplete(commands) {
+    if (!this.commandAutocomplete || commands.length === 0) {
+      this._hideCommandAutocomplete();
+      return;
+    }
+
+    // Clear previous items
+    this.commandAutocomplete.innerHTML = '';
+    this.selectedCommandIndex = -1;
+
+    // Populate with filtered commands
+    commands.forEach((cmd, index) => {
+      const item = document.createElement('div');
+      item.className = 'command-item';
+      item.dataset.index = index;
+      item.dataset.command = cmd.usage;
+
+      item.innerHTML = `
+        <div class="command-name">${cmd.usage}</div>
+        <div class="command-desc">${cmd.description}</div>
+      `;
+
+      // Click to select
+      item.addEventListener('click', () => {
+        this.selectedCommandIndex = index;
+        this._selectCommand();
+      });
+
+      this.commandAutocomplete.appendChild(item);
+    });
+
+    // Show popup
+    this.commandAutocomplete.style.display = 'block';
+    this.currentFilteredCommands = commands;
+  }
+
+  /**
+   * Hide command autocomplete popup
+   * @private
+   */
+  _hideCommandAutocomplete() {
+    if (this.commandAutocomplete) {
+      this.commandAutocomplete.style.display = 'none';
+      this.selectedCommandIndex = -1;
+      this.currentFilteredCommands = [];
+    }
+  }
+
+  /**
+   * Navigate command list with arrow keys
+   * @private
+   */
+  _navigateCommandList(direction) {
+    if (!this.currentFilteredCommands || this.currentFilteredCommands.length === 0) return;
+
+    // Update selected index
+    this.selectedCommandIndex += direction;
+
+    // Wrap around
+    if (this.selectedCommandIndex < 0) {
+      this.selectedCommandIndex = this.currentFilteredCommands.length - 1;
+    } else if (this.selectedCommandIndex >= this.currentFilteredCommands.length) {
+      this.selectedCommandIndex = 0;
+    }
+
+    // Update visual selection
+    const items = this.commandAutocomplete.querySelectorAll('.command-item');
+    items.forEach((item, index) => {
+      if (index === this.selectedCommandIndex) {
+        item.classList.add('selected');
+        item.scrollIntoView({ block: 'nearest' });
+      } else {
+        item.classList.remove('selected');
+      }
+    });
+  }
+
+  /**
+   * Select current command from autocomplete
+   * @private
+   */
+  _selectCommand() {
+    if (!this.currentFilteredCommands || this.selectedCommandIndex < 0) return;
+
+    const selected = this.currentFilteredCommands[this.selectedCommandIndex];
+    if (!selected) return;
+
+    // Fill input with command usage
+    this.elements.chatInput.value = selected.usage;
+    this._hideCommandAutocomplete();
+
+    // Focus input and move cursor to end
+    this.elements.chatInput.focus();
+    this.elements.chatInput.setSelectionRange(selected.usage.length, selected.usage.length);
+  }
+
+  /**
    * Send chat message
    * @private
    */
@@ -559,6 +721,9 @@ export class CommandDashboard {
 
     const message = this.elements.chatInput.value.trim();
     if (!message) return;
+
+    // Hide autocomplete
+    this._hideCommandAutocomplete();
 
     // Process slash commands
     if (message.startsWith('/')) {
