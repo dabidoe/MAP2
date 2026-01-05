@@ -7,6 +7,8 @@ export class Grimoire {
   constructor() {
     this.spells = [];
     this.filteredSpells = [];
+    this.sortBy = 'level'; // 'level' or 'name'
+    this.sortOrder = 'asc'; // 'asc' or 'desc'
 
     // DOM elements
     this.elements = {
@@ -17,6 +19,8 @@ export class Grimoire {
       spellList: document.getElementById('grimoire-spell-list'),
       spellCardModal: document.getElementById('spell-card-modal'),
       spellCardContainer: document.getElementById('spell-card-container'),
+      sortByLevel: null, // Will be created dynamically
+      sortByName: null,  // Will be created dynamically
 
       // Console elements
       commandConsole: document.getElementById('command-console'),
@@ -59,8 +63,8 @@ export class Grimoire {
    */
   async _loadSpells() {
     try {
-      console.log('Fetching spells from /data/CharacterFoundryWeb.spells.json...');
-      const response = await fetch('/data/CharacterFoundryWeb.spells.json');
+      console.log('Fetching spells from /data/SPELLS_MASTER.json...');
+      const response = await fetch('/data/SPELLS_MASTER.json');
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -78,7 +82,7 @@ export class Grimoire {
 
       this.filteredSpells = [...this.spells];
 
-      console.log(`✅ Loaded ${this.spells.length} spells from CharacterFoundryWeb database`);
+      console.log(`✅ Loaded ${this.spells.length} spells from SPELLS_MASTER.json`);
       if (this.spells.length > 0) {
         console.log('Sample spell:', this.spells[0].name, '- Icon:', this.spells[0].icon);
       }
@@ -130,6 +134,55 @@ export class Grimoire {
         this._expandConsole();
       });
     }
+
+    // Setup sort controls
+    this._setupSortControls();
+  }
+
+  /**
+   * Setup sorting controls
+   * @private
+   */
+  _setupSortControls() {
+    // Create sort controls if they don't exist
+    const searchContainer = this.elements.grimoirePanel?.querySelector('.grimoire-search');
+    if (!searchContainer) return;
+
+    // Check if controls already exist
+    if (searchContainer.querySelector('.grimoire-sort-controls')) return;
+
+    const sortControls = document.createElement('div');
+    sortControls.className = 'grimoire-sort-controls';
+    sortControls.innerHTML = `
+      <div class="sort-label">Sort by:</div>
+      <button class="sort-btn active" data-sort="level">Level</button>
+      <button class="sort-btn" data-sort="name">Name</button>
+    `;
+
+    searchContainer.appendChild(sortControls);
+
+    // Add event listeners
+    sortControls.querySelectorAll('.sort-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const sortType = btn.dataset.sort;
+
+        // Toggle order if clicking same button
+        if (this.sortBy === sortType) {
+          this.sortOrder = this.sortOrder === 'asc' ? 'desc' : 'asc';
+        } else {
+          this.sortBy = sortType;
+          this.sortOrder = 'asc';
+        }
+
+        // Update active state
+        sortControls.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Re-render list
+        this._sortSpells();
+        this._renderSpellList();
+      });
+    });
   }
 
   /**
@@ -226,7 +279,8 @@ export class Grimoire {
     // Show grimoire
     this.elements.grimoirePanel.style.display = 'block';
 
-    // Render spell list
+    // Sort and render spell list
+    this._sortSpells();
     this._renderSpellList();
   }
 
@@ -252,12 +306,44 @@ export class Grimoire {
         return (
           spell.name?.toLowerCase().includes(q) ||
           spell.description?.toLowerCase().includes(q) ||
-          spell.level?.toString().includes(q)
+          spell.level?.toString().includes(q) ||
+          spell.school?.toLowerCase().includes(q)
         );
       });
     }
 
+    this._sortSpells();
     this._renderSpellList();
+  }
+
+  /**
+   * Sort filtered spells
+   * @private
+   */
+  _sortSpells() {
+    this.filteredSpells.sort((a, b) => {
+      let comparison = 0;
+
+      if (this.sortBy === 'level') {
+        // Handle undefined/null levels - treat them as 999 so they sort to the end
+        const levelA = a.level !== undefined && a.level !== null ? a.level : 999;
+        const levelB = b.level !== undefined && b.level !== null ? b.level : 999;
+        comparison = levelA - levelB;
+
+        // If levels are equal, sort by name
+        if (comparison === 0) {
+          const nameA = (a.name || '').toLowerCase();
+          const nameB = (b.name || '').toLowerCase();
+          comparison = nameA.localeCompare(nameB);
+        }
+      } else if (this.sortBy === 'name') {
+        const nameA = (a.name || '').toLowerCase();
+        const nameB = (b.name || '').toLowerCase();
+        comparison = nameA.localeCompare(nameB);
+      }
+
+      return this.sortOrder === 'asc' ? comparison : -comparison;
+    });
   }
 
   /**
@@ -284,9 +370,20 @@ export class Grimoire {
       const item = document.createElement('div');
       item.className = 'spell-list-item';
 
+      // Get level color
+      const levelColor = this._getLevelColor(spell.level);
+
       item.innerHTML = `
-        <div class="spell-list-item-name">${spell.name || 'Unknown Spell'}</div>
-        <div class="spell-list-item-level">Level ${spell.level || '?'} ${spell.school || ''}</div>
+        <div class="spell-list-item-icon">
+          ${spell.icon ? `<img src="${spell.icon}" alt="${spell.name}" />` : '<div class="spell-icon-placeholder">?</div>'}
+        </div>
+        <div class="spell-list-item-content">
+          <div class="spell-list-item-name">${spell.name || 'Unknown Spell'}</div>
+          <div class="spell-list-item-meta">
+            <span class="spell-level-badge" style="background: ${levelColor};">Lv${spell.level !== undefined && spell.level !== null ? spell.level : '?'}</span>
+            <span class="spell-school">${spell.school || 'Unknown'}</span>
+          </div>
+        </div>
       `;
 
       item.addEventListener('click', () => {
@@ -298,6 +395,26 @@ export class Grimoire {
     });
 
     console.log('✅ Spell list rendered');
+  }
+
+  /**
+   * Get color for spell level badge
+   * @private
+   */
+  _getLevelColor(level) {
+    const colors = {
+      0: 'rgba(139, 115, 85, 0.4)',      // Brown - Cantrip
+      1: 'rgba(76, 175, 80, 0.4)',       // Green
+      2: 'rgba(33, 150, 243, 0.4)',      // Blue
+      3: 'rgba(156, 39, 176, 0.4)',      // Purple
+      4: 'rgba(255, 152, 0, 0.4)',       // Orange
+      5: 'rgba(244, 67, 54, 0.4)',       // Red
+      6: 'rgba(233, 30, 99, 0.4)',       // Pink
+      7: 'rgba(103, 58, 183, 0.4)',      // Deep Purple
+      8: 'rgba(63, 81, 181, 0.4)',       // Indigo
+      9: 'rgba(255, 215, 0, 0.4)'        // Gold
+    };
+    return colors[level] || 'rgba(197, 169, 89, 0.3)';
   }
 
   /**
@@ -350,11 +467,13 @@ export class Grimoire {
     const content = document.createElement('div');
     content.className = 'spell-card-content';
 
+    const displayLevel = spell.level !== undefined && spell.level !== null ? spell.level : '?';
+
     content.innerHTML = `
       <div class="spell-card-header">
         <div>
           <div class="spell-card-title">${spell.name || 'Unknown Spell'}</div>
-          <div class="spell-card-level">Level ${spell.level || '?'} ${spell.school || ''}</div>
+          <div class="spell-card-level">Level ${displayLevel} ${spell.school || ''}</div>
         </div>
         <button class="close-btn" onclick="document.getElementById('spell-card-modal').style.display='none'">✕</button>
       </div>
