@@ -1,5 +1,5 @@
 /* ===================================
-   3-ZONE FIXED LAYOUT
+   3-ZONE FIXED LAYOUT - REVISED
    =================================== */
 
 * {
@@ -33,11 +33,6 @@ body {
     flex-direction: column;
     z-index: 9000;
     position: relative;
-    transition: width 0.3s ease;
-}
-
-.mini-sidebar.expanded {
-    width: 250px;
 }
 
 .sidebar-icons {
@@ -95,16 +90,28 @@ body {
 }
 
 /* ===================================
-   ZONE B: Canvas Viewer (Top 70%)
+   MAIN AREA: Canvas + Console
    =================================== */
 
-.canvas-viewer {
+#main-area {
     flex: 1;
-    height: 100vh;
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#canvas-viewer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
     background: #000;
 }
+
+/* ===================================
+   ZONE B: Canvas Viewer (70vh)
+   =================================== */
 
 .location-bar {
     height: 40px;
@@ -115,6 +122,7 @@ body {
     padding: 0 20px;
     gap: 15px;
     z-index: 6001;
+    flex-shrink: 0;
 }
 
 .location-title {
@@ -179,6 +187,7 @@ body {
     flex: 1;
     position: relative;
     overflow: hidden;
+    min-height: 0;
 }
 
 .tactical-canvas-container {
@@ -201,24 +210,19 @@ body {
 }
 
 /* ===================================
-   ZONE C: Command Console (Bottom 30%)
+   ZONE C: Command Console (Bottom 30vh)
    =================================== */
 
-.command-console {
+#command-console {
     height: 30vh;
     min-height: 250px;
-    display: flex;
+    max-height: 400px;
     border-top: 2px solid rgba(197, 169, 89, 0.4);
     background: rgba(16, 12, 10, 0.95);
     z-index: 6000;
-}
-
-/* Left 70%: Chat Panel */
-.chat-panel {
-    flex: 7;
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    border-right: 2px solid rgba(197, 169, 89, 0.3);
     padding: 15px;
 }
 
@@ -232,6 +236,9 @@ body {
     margin-bottom: 10px;
     font-size: 0.9rem;
     line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .console-messages::-webkit-scrollbar {
@@ -292,6 +299,11 @@ body {
     color: #8b7355;
 }
 
+.chat-input:focus {
+    outline: none;
+    border-color: #c5a959;
+}
+
 .chat-send-btn {
     background: rgba(197, 169, 89, 0.3);
     border: 1px solid rgba(197, 169, 89, 0.5);
@@ -310,24 +322,34 @@ body {
     border-color: #c5a959;
 }
 
-/* Right 30%: Unit Panel */
-.unit-panel {
-    flex: 3;
-    display: flex;
-    flex-direction: column;
+/* ===================================
+   UNIT PANEL (Floating)
+   =================================== */
+
+#unit-panel {
+    position: fixed;
+    right: 20px;
+    bottom: calc(30vh + 40px);
+    width: 300px;
+    max-height: 400px;
+    background: rgba(26, 20, 16, 0.95);
+    border: 2px solid rgba(197, 169, 89, 0.6);
+    border-radius: 12px;
     padding: 15px;
+    z-index: 7000;
     overflow-y: auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
 }
 
-.unit-panel::-webkit-scrollbar {
+#unit-panel::-webkit-scrollbar {
     width: 6px;
 }
 
-.unit-panel::-webkit-scrollbar-track {
+#unit-panel::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.3);
 }
 
-.unit-panel::-webkit-scrollbar-thumb {
+#unit-panel::-webkit-scrollbar-thumb {
     background: rgba(197, 169, 89, 0.4);
     border-radius: 3px;
 }
@@ -575,7 +597,7 @@ body {
 
 .dice-popup {
     position: fixed;
-    bottom: 35vh;
+    bottom: calc(30vh + 20px);
     right: 20px;
     z-index: 10000;
     background: rgba(26, 20, 16, 0.98);
@@ -771,7 +793,7 @@ body {
     filter: sepia(0.4) contrast(1.1) brightness(0.95);
 }
 
-/* Combat tracker (floating for now) */
+/* Combat tracker (floating) */
 #floating-combat-tracker {
     position: fixed;
     top: 50%;
@@ -791,4 +813,10 @@ body {
     letter-spacing: 1.5px;
     margin-bottom: 15px;
     text-align: center;
+}
+
+/* Hide chat panel and unit panel wrappers since we restructured */
+.chat-panel,
+.unit-panel {
+    display: none;
 }

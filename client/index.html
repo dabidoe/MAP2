@@ -49,77 +49,76 @@
         </div>
     </div>
 
-    <!-- ZONE B: Canvas Viewer (Top 70%) -->
-    <div id="canvas-viewer" class="canvas-viewer">
-        <!-- Thin top bar for location info -->
-        <div id="location-bar" class="location-bar">
-            <div id="location-title" class="location-title">War Room 1776</div>
-            <div id="location-briefing" class="location-briefing">Select a location to view details...</div>
-            <div id="map-variant-controls" class="map-variant-controls" style="display: none;">
-                <button id="map-prev" class="variant-arrow">‹</button>
-                <span id="map-variant-label" class="variant-label">1/4</span>
-                <button id="map-next" class="variant-arrow">›</button>
+    <!-- Main Area (Canvas + Console) -->
+    <div id="main-area">
+        <!-- ZONE B: Canvas Viewer -->
+        <div id="canvas-viewer">
+            <!-- Thin top bar for location info -->
+            <div id="location-bar" class="location-bar">
+                <div id="location-title" class="location-title">War Room 1776</div>
+                <div id="location-briefing" class="location-briefing">Select a location to view details...</div>
+                <div id="map-variant-controls" class="map-variant-controls" style="display: none;">
+                    <button id="map-prev" class="variant-arrow">‹</button>
+                    <span id="map-variant-label" class="variant-label">1/4</span>
+                    <button id="map-next" class="variant-arrow">›</button>
+                </div>
+                <button id="return-to-map" class="return-button" style="display: none;">← Return to Campaign Map</button>
             </div>
-            <button id="return-to-map" class="return-button" style="display: none;">← Return to Campaign Map</button>
+
+            <!-- Canvas container with overflow hidden -->
+            <div id="map-viewport" class="map-viewport">
+                <div id="map"></div>
+            </div>
+
+            <!-- Tactical canvas container (hidden by default) -->
+            <div id="tactical-canvas-container" class="tactical-canvas-container" style="display: none;"></div>
         </div>
 
-        <!-- Canvas container with overflow hidden -->
-        <div id="map-viewport" class="map-viewport">
-            <div id="map"></div>
+        <!-- ZONE C: Command Console (Bottom) -->
+        <div id="command-console">
+        <div id="rolling-as" class="rolling-as-header" style="display: none;">
+            Rolling as: <span id="rolling-character-name"></span>
         </div>
-
-        <!-- Tactical canvas container (hidden by default) -->
-        <div id="tactical-canvas-container" class="tactical-canvas-container" style="display: none;"></div>
+        <div id="console-messages" class="console-messages">
+            <!-- Messages will be added dynamically -->
+        </div>
+        <div id="target-label" class="target-label" style="display: none;">
+            Target: <span id="target-name"></span> <button id="clear-target" class="clear-target-btn">✕</button>
+        </div>
+        <div class="chat-input-container">
+            <button id="dice-icon-btn" class="dice-icon-button-inline" title="Open Dice Tray">
+                🎲
+            </button>
+            <div id="character-picker" class="character-picker">
+                <div id="character-picker-display" class="character-picker-display">(none selected)</div>
+                <div id="character-picker-dropdown" class="character-picker-dropdown" style="display: none;"></div>
+            </div>
+            <input type="text" id="chat-input" class="chat-input" placeholder="Type a command or message..." />
+            <button id="chat-send" class="chat-send-btn">Send</button>
+        </div>
     </div>
 
-    <!-- ZONE C: Command Console (Bottom 30%) -->
-    <div id="command-console" class="command-console">
-        <!-- Left 70%: Chat Log -->
-        <div id="chat-panel" class="chat-panel">
-            <div id="rolling-as" class="rolling-as-header" style="display: none;">
-                Rolling as: <span id="rolling-character-name"></span>
+    <!-- Unit Panel (Floating) -->
+    <div id="unit-panel" style="display: none;">
+        <div class="card-header">
+            <h3 id="unit-name">Unit Name</h3>
+            <button id="close-unit-card" class="close-btn">✕</button>
+        </div>
+        <div class="card-stats">
+            <div class="stat-row">
+                <span class="stat-label">HP</span>
+                <span id="unit-hp" class="stat-value">0/0</span>
             </div>
-            <div id="console-messages" class="console-messages">
-                <!-- Messages will be added dynamically -->
-            </div>
-            <div id="target-label" class="target-label" style="display: none;">
-                Target: <span id="target-name"></span> <button id="clear-target" class="clear-target-btn">✕</button>
-            </div>
-            <div class="chat-input-container">
-                <button id="dice-icon-btn" class="dice-icon-button-inline" title="Open Dice Tray">
-                    🎲
-                </button>
-                <div id="character-picker" class="character-picker">
-                    <div id="character-picker-display" class="character-picker-display">(none selected)</div>
-                    <div id="character-picker-dropdown" class="character-picker-dropdown" style="display: none;"></div>
-                </div>
-                <input type="text" id="chat-input" class="chat-input" placeholder="Type a command or message..." />
-                <button id="chat-send" class="chat-send-btn">Send</button>
+            <div class="stat-row">
+                <span class="stat-label">AC</span>
+                <span id="unit-ac" class="stat-value">0</span>
             </div>
         </div>
-
-        <!-- Right 30%: Unit Card -->
-        <div id="unit-panel" class="unit-panel" style="display: none;">
-            <div class="card-header">
-                <h3 id="unit-name">Unit Name</h3>
-                <button id="close-unit-card" class="close-btn">✕</button>
-            </div>
-            <div class="card-stats">
-                <div class="stat-row">
-                    <span class="stat-label">HP</span>
-                    <span id="unit-hp" class="stat-value">0/0</span>
-                </div>
-                <div class="stat-row">
-                    <span class="stat-label">AC</span>
-                    <span id="unit-ac" class="stat-value">0</span>
-                </div>
-            </div>
-            <div class="card-actions">
-                <h4>Actions</h4>
-                <div id="unit-actions"></div>
-            </div>
-            <button id="view-character-details" class="cycle-button" style="width: 100%; margin-top: 10px;">View Full Details</button>
+        <div class="card-actions">
+            <h4>Actions</h4>
+            <div id="unit-actions"></div>
         </div>
+        <button id="view-character-details" class="cycle-button" style="width: 100%; margin-top: 10px;">View Full Details</button>
     </div>
 
     <!-- Dice Roller Popup (Hidden by default) -->
