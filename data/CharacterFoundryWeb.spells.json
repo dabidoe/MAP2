@@ -1,0 +1,190 @@
+[
+  {
+    "name": "Fireball",
+    "level": 3,
+    "school": "Evocation",
+    "castingTime": "1 action",
+    "range": "150 feet",
+    "components": "V, S, M (a tiny ball of bat guano and sulfur)",
+    "duration": "Instantaneous",
+    "description": "A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes 8d6 fire damage on a failed save, or half as much damage on a successful one. The fire spreads around corners. It ignites flammable objects in the area that aren't being worn or carried.",
+    "isPublic": true,
+    "icon": "https://via.placeholder.com/300x300/ff6600/ffffff?text=Fireball",
+    "iconLayers": [
+      {
+        "guid": "base-circle-red",
+        "json": "{\"positionX\":0,\"positionY\":0,\"rotation\":0,\"scale\":1.0}"
+      },
+      {
+        "guid": "flame-effect",
+        "json": "{\"positionX\":0,\"positionY\":-10,\"rotation\":0,\"scale\":0.8}"
+      },
+      {
+        "guid": "spark-overlay",
+        "json": "{\"positionX\":5,\"positionY\":5,\"rotation\":15,\"scale\":0.6}"
+      }
+    ]
+  },
+  {
+    "name": "Magic Missile",
+    "level": 1,
+    "school": "Evocation",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "You create three glowing darts of magical force. Each dart hits a creature of your choice that you can see within range. A dart deals 1d4 + 1 force damage to its target. The darts all strike simultaneously, and you can direct them to hit one creature or several.",
+    "isPublic": true,
+    "icon": "https://via.placeholder.com/300x300/4169e1/ffffff?text=Magic+Missile"
+  },
+  {
+    "name": "Shield",
+    "level": 1,
+    "school": "Abjuration",
+    "castingTime": "1 reaction",
+    "range": "Self",
+    "components": "V, S",
+    "duration": "1 round",
+    "description": "An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from magic missile.",
+    "isPublic": true,
+    "icon": "https://via.placeholder.com/300x300/silver/ffffff?text=Shield",
+    "iconLayers": [
+      {
+        "guid": "shield-base",
+        "json": "{\"positionX\":0,\"positionY\":0,\"rotation\":0,\"scale\":1.0}"
+      },
+      {
+        "guid": "arcane-runes",
+        "json": "{\"positionX\":0,\"positionY\":0,\"rotation\":0,\"scale\":0.9}"
+      }
+    ]
+  },
+  {
+    "name": "Cure Wounds",
+    "level": 1,
+    "school": "Evocation",
+    "castingTime": "1 action",
+    "range": "Touch",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
+    "isPublic": true,
+    "icon": "https://via.placeholder.com/300x300/32cd32/ffffff?text=Cure+Wounds"
+  },
+  {
+    "name": "Counterspell",
+    "level": 3,
+    "school": "Abjuration",
+    "castingTime": "1 reaction",
+    "range": "60 feet",
+    "components": "S",
+    "duration": "Instantaneous",
+    "description": "You attempt to interrupt a creature in the process of casting a spell. If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a success, the creature's spell fails and has no effect.",
+    "isPublic": true,
+    "icon": "https://via.placeholder.com/300x300/9370db/ffffff?text=Counterspell"
+  },
+  {
+    "name": "Polymorph",
+    "level": 4,
+    "school": "Transmutation",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "components": "V, S, M (a caterpillar cocoon)",
+    "duration": "Concentration, up to 1 hour",
+    "description": "This spell transforms a creature that you can see within range into a new form. An unwilling creature must make a Wisdom saving throw to avoid the effect. The spell has no effect on a shapechanger or a creature with 0 hit points.",
+    "isPublic": true,
+    "icon": "https://via.placeholder.com/300x300/ff69b4/ffffff?text=Polymorph",
+    "iconLayers": [
+      {
+        "guid": "morph-base",
+        "json": "{\"positionX\":0,\"positionY\":0,\"rotation\":0,\"scale\":1.0}"
+      },
+      {
+        "guid": "transformation-swirl",
+        "json": "{\"positionX\":0,\"positionY\":0,\"rotation\":45,\"scale\":1.1}"
+      },
+      {
+        "guid": "creature-silhouette",
+        "json": "{\"positionX\":0,\"positionY\":0,\"rotation\":0,\"scale\":0.7}"
+      }
+    ]
+  },
+  {
+    "name": "Eldritch Blast",
+    "level": 0,
+    "school": "Evocation",
+    "castingTime": "1 action",
+    "range": "120 feet",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "description": "A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage. The spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.",
+    "isPublic": true,
+    "icon": "https://via.placeholder.com/300x300/8b008b/ffffff?text=Eldritch+Blast"
+  },
+  {
+    "name": "Wish",
+    "level": 9,
+    "school": "Conjuration",
+    "castingTime": "1 action",
+    "range": "Self",
+    "components": "V",
+    "duration": "Instantaneous",
+    "description": "Wish is the mightiest spell a mortal creature can cast. By simply speaking aloud, you can alter the very foundations of reality in accord with your desires. The basic use of this spell is to duplicate any other spell of 8th level or lower. You don't need to meet any requirements in that spell, including costly components. The spell simply takes effect.",
+    "isPublic": true,
+    "icon": "https://via.placeholder.com/300x300/ffd700/ffffff?text=Wish",
+    "iconLayers": [
+      {
+        "guid": "cosmic-background",
+        "json": "{\"positionX\":0,\"positionY\":0,\"rotation\":0,\"scale\":1.2}"
+      },
+      {
+        "guid": "star-burst",
+        "json": "{\"positionX\":0,\"positionY\":0,\"rotation\":0,\"scale\":1.0}"
+      },
+      {
+        "guid": "reality-warp",
+        "json": "{\"positionX\":0,\"positionY\":0,\"rotation\":30,\"scale\":0.9}"
+      },
+      {
+        "guid": "divine-glow",
+        "json": "{\"positionX\":0,\"positionY\":0,\"rotation\":-30,\"scale\":0.8}"
+      }
+    ]
+  },
+  {
+    "name": "Mage Hand",
+    "level": 0,
+    "school": "Conjuration",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "components": "V, S",
+    "duration": "1 minute",
+    "description": "A spectral, floating hand appears at a point you choose within range. The hand lasts for the duration or until you dismiss it as an action. The hand vanishes if it is ever more than 30 feet away from you or if you cast this spell again. You can use your action to control the hand. You can use the hand to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contents out of a vial.",
+    "isPublic": true,
+    "icon": "https://via.placeholder.com/300x300/add8e6/ffffff?text=Mage+Hand"
+  },
+  {
+    "name": "Power Word Kill",
+    "level": 9,
+    "school": "Enchantment",
+    "castingTime": "1 action",
+    "range": "60 feet",
+    "components": "V",
+    "duration": "Instantaneous",
+    "description": "You utter a word of power that can compel one creature you can see within range to die instantly. If the creature you choose has 100 hit points or fewer, it dies. Otherwise, the spell has no effect.",
+    "isPublic": true,
+    "icon": "https://via.placeholder.com/300x300/8b0000/ffffff?text=Power+Word+Kill"
+  },
+  {
+    "name": "Arcane Eye",
+    "level": 4,
+    "school": "Divination",
+    "castingTime": "1 action",
+    "range": "30 feet",
+    "components": "V, S, M (a bit of bat fur)",
+    "duration": "Concentration, up to 1 hour",
+    "description": "You create an invisible, magical eye within range that hovers in the air for the duration. You mentally receive visual information from the eye, which has normal vision and darkvision out to 30 feet. The eye can look in every direction.",
+    "isPublic": false,
+    "icon": "https://via.placeholder.com/300x300/4682b4/ffffff?text=Arcane+Eye"
+  }
+]
