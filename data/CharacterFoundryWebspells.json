@@ -1,0 +1,1230 @@
+[{
+  "_id": {
+    "$oid": "691a85403a2492b6e4e30046"
+  },
+  "name": "Battlecry Spark",
+  "level": 1,
+  "description": "You unleash a resonant shout imbued with martial spirit, jolting enemies with force and bolstering nearby allies’ resolve.",
+  "castingTime": "1 bonus action",
+  "range": "15 feet",
+  "components": "V",
+  "duration": "Instantaneous",
+  "damage": "1d6 thunder damage to creatures in range",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1763531710797.png"
+},
+{
+  "_id": {
+    "$oid": "691bec327987f21746773718"
+  },
+  "name": "Maelstrom Crown",
+  "level": 9,
+  "description": "You summon a vast vortex of sovereign wind that descends in a spiraling mantle. The storm crushes foes with regal thunder, flings debris like blades, and forces all within its reach to brace or be swept into the gale.",
+  "castingTime": "1 action",
+  "range": "120 feet",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "10d6 thunder",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1763531729960.png"
+},
+{
+  "_id": {
+    "$oid": "69249c1ce83d14cb80858de5"
+  },
+  "name": "Frostweave Shroud",
+  "level": 3,
+  "description": "A frigid mantle lashes around a creature you can see, hardening into jagged frost that gnaws at flesh and hinders motion. Shards crackle softly as the veil tightens with each passing moment.",
+  "castingTime": "1 action",
+  "range": "90 feet",
+  "components": "V, S, M (a shard of winterglass)",
+  "duration": "Concentration, up to 1 minute",
+  "damage": "2d8 cold per turn",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/1efcd817-3b79-46c9-b4b6-600ab767b842.png"
+},
+{
+  "_id": {
+    "$oid": "694012a75648a6dce9f6e7d2"
+  },
+  "name": "Cure Wounds",
+  "level": 1,
+  "description": "A brief shimmer of starlight coils around your hand before sinking into a creature you touch, knitting flesh and spirit with quiet radiance.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "1d8 + your spellcasting modifier healing",
+  "school": "Conjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/a54876dd-b54a-44b9-af68-add3b3a911fc.png"
+},
+{
+  "_id": {
+    "$oid": "694012a95648a6dce9f6e7d6"
+  },
+  "name": "Fireball",
+  "level": 3,
+  "description": "You release a pulverizing ball of fire of primal might that detonates in a burst of immense heat, combusting everything in a 15 foot radius.",
+  "castingTime": "1 action",
+  "range": "120 ft",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "8d6 Fire",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1766870132065.png"
+},
+{
+  "_id": {
+    "$oid": "694012ad5648a6dce9f6e7da"
+  },
+  "name": "Healing Word",
+  "level": 1,
+  "description": "A resonant pulse of restorative sound washes over a creature you can see, stitching wounds and steadying breath with a soft harmonic glow.",
+  "castingTime": "1 action",
+  "range": "30 ft",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "Heals 1d4 + your spellcasting modifier",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/f90b69ba-0887-41b0-b97b-e19b5ca725be.png"
+},
+{
+  "_id": {
+    "$oid": "69504ada5648a6dce9f6f274"
+  },
+  "name": "Force Touch",
+  "level": 2,
+  "description": "Your hand flickers with unstable planar pressure. On a successful touch attack, the target takes force damage and must succeed on a Wisdom save or become briefly phase‑blurred, imposing disadvantage on its next attack roll.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "3d6 force",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/009c915c-e5b7-4c59-ae6f-539b1468e75f.png"
+},
+{
+  "_id": {
+    "$oid": "69504adc5648a6dce9f6f278"
+  },
+  "name": "Thornbind Grasp",
+  "level": 3,
+  "description": "Serrated vines surge from the earth and coil around up to two creatures you can see, dragging them to the ground with a thorny constriction. The area becomes choked with brambles that hinder movement until the spell ends.",
+  "castingTime": "1 action",
+  "range": "60 ft",
+  "components": "V, S, M (a dried briar stem)",
+  "duration": "Concentration, up to 1 minute",
+  "damage": "2d8 piercing to each restrained creature at the start of its turn",
+  "school": "Conjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/1546e678-b34d-4fb3-a462-1e9f2b4ddac0.png"
+},
+{
+  "_id": {
+    "$oid": "6954695b5648a6dce9f6f728"
+  },
+  "name": "Chromatic Orb",
+  "level": 2,
+  "description": "You conjure a needle-thin bolt of shifting light and launch it at a creature you can see. The dart flares into a chosen hue as it flies. Make a ranged spell attack; on a hit, the dart bursts with the selected energy type.",
+  "castingTime": "1 action",
+  "range": "120 ft",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "2d10 acid, cold, fire, lightning, radiant, or thunder (chosen when cast)",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/d6d95f57-83eb-40f6-b583-a373d444c133.png"
+},
+{
+  "_id": {
+    "$oid": "6954695e5648a6dce9f6f72c"
+  },
+  "name": "Chill Touch",
+  "level": 2,
+  "description": "A shadow-wreathed hand erupts from the ground beneath a creature you can see, clutching at its spirit. The target must make a Charisma saving throw or have its speed halved and suffer spectral harm as the grasp drags at its essence.",
+  "castingTime": "1 action",
+  "range": "60 feet",
+  "components": "V, S",
+  "duration": "1 minute",
+  "damage": "3d6 Necrotic",
+  "school": "Necromancy",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/cab61c88-2465-4ea5-b5db-92af3a9dd5b6.png"
+},
+{
+  "_id": {
+    "$oid": "695469615648a6dce9f6f730"
+  },
+  "name": "Burning Hands",
+  "level": 1,
+  "description": "You unleash a burst of ember-laced wind from your open hand. Creatures in a 20-foot cone must make a Dexterity saving throw, taking full damage on a failed save or half on a success. The blast singes surfaces and can briefly light loose tinder.",
+  "castingTime": "1 action",
+  "range": "Self (20-foot cone)",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "4d4 fire",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/ae533eb5-1c19-416e-8412-2ea743f32f0d.png"
+},
+{
+  "_id": {
+    "$oid": "695469645648a6dce9f6f734"
+  },
+  "name": "Blade Ward",
+  "level": 1,
+  "description": "You call forth a shimmering barrier of mirrored force that ripples around your body. The shield absorbs the next blow that strikes you, bursting into harmless motes of light as it disperses the impact.",
+  "castingTime": "1 bonus action",
+  "range": "Self",
+  "components": "V, S",
+  "duration": "1 round",
+  "damage": "Negates the next instance of weapon damage",
+  "school": "Abjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/c6bed855-c542-4899-83ae-da06d0631496.png"
+},
+{
+  "_id": {
+    "$oid": "695469785648a6dce9f6f738"
+  },
+  "name": "Alarm",
+  "level": 2,
+  "description": "You weave a thin veil of arcane vigilance over a doorway, chest, or boundary. Until the spell ends, the veil silently observes the warded space. When a creature other than those you designate crosses the threshold, a soft whisper blossoms in your mind, revealing the intruder’s direction and size category.",
+  "castingTime": "1 minute",
+  "range": "Touch",
+  "components": "V, S, M (a sliver of moonlit thread)",
+  "duration": "12 hours",
+  "damage": "None",
+  "school": "Abjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/71e7123d-05f9-4146-9f56-9137bba5d99a.png"
+},
+{
+  "_id": {
+    "$oid": "6954697a5648a6dce9f6f73c"
+  },
+  "name": "Acid Splash",
+  "level": 0,
+  "description": "You snap your fingers and release a dart of green flame‑tinged acid that lashes toward a creature you can see. On impact, it splashes in a brief corrosive flare, searing the target before evaporating.",
+  "castingTime": "1 action",
+  "range": "60 ft",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "1d6 acid",
+  "school": "Conjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/2c5bd895-fc51-40fe-8197-c8d6a9e6d07c.png"
+},
+{
+  "_id": {
+    "$oid": "695469865648a6dce9f6f740"
+  },
+  "name": "Charm Person",
+  "level": 1,
+  "description": "You speak a soft entreaty that drifts into the mind of one creature you can see. The target must succeed on a Wisdom saving throw or feel a gentle surge of trust toward you. For the duration, the creature treats you as a calm mediator and will avoid hostility toward you unless clearly threatened. If you or your allies are actively harming it, the target has advantage on the saving throw. When the effect ends, the creature senses your influence but not your intent.",
+  "castingTime": "1 action",
+  "range": "40 ft",
+  "components": "V, S",
+  "duration": "10 minutes",
+  "damage": "None",
+  "school": "Enchantment",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/6e6e4d7a-8184-4589-b556-48219cd1a3ed.png"
+},
+{
+  "_id": {
+    "$oid": "695469895648a6dce9f6f744"
+  },
+  "name": "Fireball",
+  "level": 3,
+  "description": "You call down a concentrated beam of radiant fire that spears a point you can see, erupting in a tight burst that sears everything caught within its glare.",
+  "castingTime": "1 action",
+  "range": "120 ft",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "6d8 radiant",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/8cae366b-76fc-4f81-b121-ddd999426609.png"
+},
+{
+  "_id": {
+    "$oid": "6954698c5648a6dce9f6f748"
+  },
+  "name": "Magic Missile",
+  "level": 2,
+  "description": "You loose a resonant bolt of compressed sound that fractures into smaller ripples mid‑flight. The main lance strikes your chosen target, while the ripples lash out at up to two additional creatures within 10 feet of the first.",
+  "castingTime": "1 action",
+  "range": "90 ft",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "Main hit 2d6 thunder; secondary ripples 1d6 thunder each",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/c3d16df6-731a-4766-8af9-e6a971a60980.png"
+},
+{
+  "_id": {
+    "$oid": "6954698f5648a6dce9f6f74c"
+  },
+  "name": "Mage Armor",
+  "level": 1,
+  "description": "You shroud a creature in a shimmering ward that deflects harm. The target gains a base AC of 14 plus its Dexterity modifier and sheds faint motes of light when struck. Creatures wearing armor cannot benefit from this spell.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "8 hours",
+  "damage": "None",
+  "school": "Abjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/f32ee1d8-f737-414c-9934-7ef8e6dac0bb.png"
+},
+{
+  "_id": {
+    "$oid": "695469925648a6dce9f6f750"
+  },
+  "name": "Invisibility",
+  "level": 3,
+  "description": "You wrap a willing creature in a shimmer of muted light, rendering its form translucent and muffling all movement. The target becomes nearly unseen and gains advantage on Stealth checks. The veil breaks early if the creature deals damage or casts a spell.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S, M (a pinch of powdered glass)",
+  "duration": "Concentration, up to 1 hour",
+  "damage": "None",
+  "school": "Illusion",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/9faa74bb-35e1-4703-bd40-ff08c5121468.png"
+},
+{
+  "_id": {
+    "$oid": "695469955648a6dce9f6f756"
+  },
+  "name": "Grease",
+  "level": 1,
+  "description": "You conjure a patch of writhing, sticky muck that clings to anything stepping into it. Creatures entering or starting their turn in the area must succeed on a Strength saving throw or have their speed reduced to 0 until the start of their next turn.",
+  "castingTime": "1 action",
+  "range": "60 ft",
+  "components": "V, S, M (a drop of tar)",
+  "duration": "1 minute",
+  "damage": "Restrains movement; no direct damage",
+  "school": "Conjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/70b2c009-f257-4058-acca-186230b30df1.png"
+},
+{
+  "_id": {
+    "$oid": "695469985648a6dce9f6f75a"
+  },
+  "name": "Friends",
+  "level": 1,
+  "description": "You infuse a creature with a subtle aura of camaraderie. For the duration, the target views you as a trusted ally and shares information freely. The magic gently steers emotions but does not control actions. When the spell ends, the target feels an uneasy sense of manipulation and becomes wary of you, though not immediately hostile unless provoked.",
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 hour",
+  "damage": "None",
+  "school": "Enchantment",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/f61dcc58-ffa7-41ad-b462-e0f80b1feb0c.png"
+},
+{
+  "_id": {
+    "$oid": "6954699b5648a6dce9f6f75e"
+  },
+  "name": "Fog Cloud",
+  "level": 2,
+  "description": "A low whispering fog pours from a point you choose, filling a 25-foot-radius sphere with shifting mist that coils around corners. The area becomes heavily obscured, and faint echoes distort sound within. A strong breeze quickly scatters the veil.",
+  "castingTime": "1 action",
+  "range": "90 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": "None",
+  "school": "Illusion",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/66ea449a-403b-4350-b753-f1ddab4b2991.png"
+},
+{
+  "_id": {
+    "$oid": "6954699d5648a6dce9f6f762"
+  },
+  "name": "Fire Bolt",
+  "level": 0,
+  "description": "You flick a spark of crackling embers toward a creature within sight. On a hit, the ember bursts into a sharp flare, scorching the target. Unattended flammable objects may smolder or ignite.",
+  "castingTime": "1 action",
+  "range": "90 ft",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "1d8 fire",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/0f820f83-5682-4524-b29c-13c08f60fe92.png"
+},
+{
+  "_id": {
+    "$oid": "695469a05648a6dce9f6f766"
+  },
+  "name": "Find Familiar",
+  "level": 1,
+  "description": "You summon a minor planar echo that coalesces into a tiny companion shaped as an animal or spirit of your choosing. It acts independently but loyally, relaying whispered impressions and magical signs. Though fragile, the echo can scout, deliver simple messages, or manifest faint glimmers of its home plane.",
+  "castingTime": "10 minutes",
+  "range": "30 feet",
+  "components": "V, S, M (a small charm of carved bone or crystal worth 5 gp)",
+  "duration": "8 hours",
+  "damage": "None",
+  "school": "Conjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/c42b08df-3c07-4210-a22e-35f4e9ea34c2.png"
+},
+{
+  "_id": {
+    "$oid": "695469a35648a6dce9f6f76a"
+  },
+  "name": "Feather Fall",
+  "level": 2,
+  "description": "You summon a swirl of buoyant air that envelopes up to three falling creatures. The magic cushions their descent, granting them a slow, spiraling drop and letting them land lightly on any surface.",
+  "castingTime": "1 reaction, triggered when a creature within range begins falling",
+  "range": "90 feet",
+  "components": "V, S",
+  "duration": "1 minute",
+  "damage": "None",
+  "school": "Transmutation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/9c54988a-6872-4574-bdad-8183a9fa04f6.png"
+},
+{
+  "_id": {
+    "$oid": "695469a55648a6dce9f6f76e"
+  },
+  "name": "False Life",
+  "level": 1,
+  "description": "A chill aura coils around you, shaping stray soul-echoes into a spectral shroud. The veil clings to your form, bracing your body with borrowed echoes of the dead.",
+  "castingTime": "1 action",
+  "range": "Self",
+  "components": "V, S",
+  "duration": "1 hour",
+  "damage": "Gain 1d8+3 temporary hit points.",
+  "school": "Necromancy",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/0a27ad4d-6f67-4003-8d82-ca32ca818880.png"
+},
+{
+  "_id": {
+    "$oid": "695469a85648a6dce9f6f772"
+  },
+  "name": "Expeditious Retreat",
+  "level": 1,
+  "description": "A burst of arcane vigor floods your limbs, sharpening reflexes and lightening your stride. Until the spell ends, your speed increases by 20 feet and you can take the Dash action as a bonus action on each of your turns.",
+  "castingTime": "1 bonus action",
+  "range": "Self",
+  "components": "V, S",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": "None",
+  "school": "Transmutation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/082af48d-e336-4424-bd57-617e9122ba1b.png"
+},
+{
+  "_id": {
+    "$oid": "695469aa5648a6dce9f6f776"
+  },
+  "name": "Faerie Fire",
+  "level": 1,
+  "description": "You spark a curtain of shimmering motes that cling to creatures in a small radius. Marked targets shine with shifting prismatic edges, making them easier to strike and revealing any attempt to hide or turn invisible.",
+  "castingTime": "1 action",
+  "range": "60 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 minute",
+  "damage": "No direct damage; attacks against affected creatures have advantage",
+  "school": "Illusion",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/00878c63-53bd-4ea1-8a14-e496e6cfaf9d.png"
+},
+{
+  "_id": {
+    "$oid": "695469b75648a6dce9f6f77a"
+  },
+  "name": "Disguise Self",
+  "level": 1,
+  "description": "You cloak yourself in a mutable illusion that subtly reshapes your appearance. You may alter facial features, coloration, hairstyle, and attire, though the illusion cannot change your size or body silhouette. Physical contact reveals the falsehood. A creature can use an action to inspect the illusion, detecting it with a successful Intelligence (Investigation) check against your spell save DC.",
+  "castingTime": "1 action",
+  "range": "Self",
+  "components": "V, S",
+  "duration": "1 hour",
+  "damage": "None",
+  "school": "Illusion",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/c948f2a3-24f7-47f8-8668-d3ba4e60806c.png"
+},
+{
+  "_id": {
+    "$oid": "695469ba5648a6dce9f6f77e"
+  },
+  "name": "Detect Magic",
+  "level": 2,
+  "description": "You attune your senses to disturbances in the hidden layers of reality, detecting supernatural presences within 60 feet. You perceive faint outlines of concealed creatures, illusions, or invisible forces. Using an action, you may focus on one presence to glean its nature.",
+  "castingTime": "1 action",
+  "range": "Self (60-foot radius)",
+  "components": "V, S",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": "None",
+  "school": "Divination",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/7761c38c-f0f9-47a2-9c76-252d2a2cc107.png"
+},
+{
+  "_id": {
+    "$oid": "695469bd5648a6dce9f6f782"
+  },
+  "name": "Dancing Lights",
+  "level": 0,
+  "description": "Conjure up to four tiny motes of sentient light that flit about as you command. Each sprite sheds dim light in a small radius and can rearrange into simple patterns or symbols on your turn.",
+  "castingTime": "1 action",
+  "range": "90 ft",
+  "components": "V, S",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": "None",
+  "school": "Illusion",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/2e51be05-b97d-4c74-9a18-c1209d8b29f4.png"
+},
+{
+  "_id": {
+    "$oid": "695469c05648a6dce9f6f786"
+  },
+  "name": "Comprehend Languages",
+  "level": 1,
+  "description": "For a brief interval, every utterance near you resonates with clarity. You instantly grasp the meaning of any spoken language within earshot and can interpret simple intent behind tone or cadence. Written script remains beyond your reach.",
+  "castingTime": "1 action",
+  "range": "Self",
+  "components": "V, S",
+  "duration": "10 minutes",
+  "damage": "None",
+  "school": "Divination",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/f358315f-89ff-4e0d-8ae9-d83a22bbeed0.png"
+},
+{
+  "_id": {
+    "$oid": "695469c25648a6dce9f6f78a"
+  },
+  "name": "Identify",
+  "level": 1,
+  "description": "By laying a steady hand upon an object or creature, you unveil hidden arcane truths. Objects reveal any magical traits, latent powers, or curse binds. Creatures disclose ongoing spells influencing them. The insight manifests as flashes of symbolic imagery only you can perceive.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "None",
+  "school": "Divination",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/7cff0e42-20a4-426e-9aa8-423b265b2dd3.png"
+},
+{
+  "_id": {
+    "$oid": "695469c55648a6dce9f6f78e"
+  },
+  "name": "Illusory Script",
+  "level": 1,
+  "description": "You inscribe a sigil that murmurs its hidden message only to a creature you designate. To all others it appears as an inert marking. The chosen recipient hears the true words when they touch or study the glyph.",
+  "castingTime": "1 minute",
+  "range": "Touch",
+  "components": "V, S, M (a silver-inked quill worth 5 gp, consumed)",
+  "duration": "7 days",
+  "damage": "None",
+  "school": "Illusion",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/e0a14b9d-8cb2-41b9-9d18-4e1ce5a96f5f.png"
+},
+{
+  "_id": {
+    "$oid": "695469c85648a6dce9f6f792"
+  },
+  "name": "Jump",
+  "level": 1,
+  "description": "You imbue a willing creature with a burst of buoyant magic, letting it bound through the air in weightless arcs. Until the spell ends, the target gains a powerful aerial leap, allowing brief, controlled midair adjustments.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "1 minute",
+  "damage": "None",
+  "school": "Transmutation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/126124cf-14ef-4885-910d-fa7828225f35.png"
+},
+{
+  "_id": {
+    "$oid": "695469cb5648a6dce9f6f796"
+  },
+  "name": "Light",
+  "level": 0,
+  "description": "You tap a creature or object, igniting a tiny mote of floating starlight that hovers within 5 feet of the target. The mote sheds bright light in a 15‑foot radius and dim light for another 15 feet. As a bonus action, you can move the mote up to 20 feet to a point you can see. The mote winks out if it leaves your range or you create a new one.",
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S",
+  "duration": "1 hour",
+  "damage": "None",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/17f0d361-f3b7-412d-9566-d0e2762ac9be.png"
+},
+{
+  "_id": {
+    "$oid": "695469ce5648a6dce9f6f79a"
+  },
+  "name": "Longstrider",
+  "level": 1,
+  "description": "You infuse a creature with flickering kinetic magic. For the duration, its speed increases by 15 feet and it can ignore the first 5 feet of difficult terrain it enters each turn.",
+  "castingTime": "1 bonus action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "10 minutes",
+  "damage": "None",
+  "school": "Transmutation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/7c065201-bc9b-4a80-b131-959b8b095409.png"
+},
+{
+  "_id": {
+    "$oid": "695469d15648a6dce9f6f7a0"
+  },
+  "name": "Mage Hand",
+  "level": 0,
+  "description": "You summon a faint, translucent force that mimics the motion of your own hand. The grip can lift and manipulate up to 15 pounds, delicately interact with small mechanisms, or steady unstable objects. The grip cannot activate magical items or engage in combat but can perform subtle tasks such as picking pockets, tightening knots, or tracing sigils in dust.",
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S",
+  "duration": "1 minute",
+  "damage": "None",
+  "school": "Conjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/dcb376d1-ce54-489e-b659-4f8526d4a9bd.png"
+},
+{
+  "_id": {
+    "$oid": "695469e65648a6dce9f6f7a4"
+  },
+  "name": "Mending",
+  "level": 1,
+  "description": "You fuse fractured materials with a pulse of stabilizing energy. Touch an object with cracks, chips, or stress lines no wider than 1 foot and bind them into a single solid piece. The repair is seamless but offers no restoration to lost magical properties.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "None",
+  "school": "Transmutation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/0c767b69-a452-43fb-8d46-3a2227c9f381.png"
+},
+{
+  "_id": {
+    "$oid": "695469e95648a6dce9f6f7a8"
+  },
+  "name": "Message",
+  "level": 0,
+  "description": "You send a thin strand of psychic sound toward one creature you can see. The target alone hears your brief message in its mind and may respond in a faint thought only you can perceive. The thread can bend around corners but cannot pass through magical silence or antimagic effects.",
+  "castingTime": "1 action",
+  "range": "90 feet",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "None",
+  "school": "Divination",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/889d6b0b-11c8-4972-99a7-65f9dcb55956.png"
+},
+{
+  "_id": {
+    "$oid": "695469ec5648a6dce9f6f7ac"
+  },
+  "name": "Minor Illusion",
+  "level": 0,
+  "description": "You conjure a fleeting glimmer or whisper that briefly distracts creatures within sight or hearing. The illusion fits within a 5‑foot cube and can appear as a flicker of light, a shifting silhouette, or a soft hiss. A creature may use its action to inspect the effect and, on a successful Intelligence (Investigation) check against your spell save DC, identifies it as false. The illusion offers no sensory substance beyond sight or sound.",
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "S",
+  "duration": "1 minute",
+  "damage": "None",
+  "school": "Illusion",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/4b7329eb-cb5a-4059-8de3-f3acdf8c9f91.png"
+},
+{
+  "_id": {
+    "$oid": "695469ef5648a6dce9f6f7b2"
+  },
+  "name": "Produce Flame",
+  "level": 0,
+  "description": "A bead of ember spins above your palm, shedding bright light in a 15‑foot radius and dim light for another 15 feet. As part of the same or a later action, you may snap the ember toward a creature you can see, turning it into a blazing mote that streaks to its target.",
+  "castingTime": "1 action",
+  "range": "Self (light), 20 feet (mote)",
+  "components": "V, S",
+  "duration": "10 minutes (light) or until fired",
+  "damage": "1d6 fire",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/241aabbf-d9b5-4dc8-87c2-b948e32c81a1.png"
+},
+{
+  "_id": {
+    "$oid": "695469f35648a6dce9f6f7b6"
+  },
+  "name": "Protection from Evil and Good",
+  "level": 2,
+  "description": "You enshroud a willing creature in a shimmering veil that turns aside otherworldly influence. For the duration, the target gains advantage on saving throws against charm, fear, and possession. Creatures from beyond the mortal realm—aberrations, fey, fiends, and spirits—have disadvantage on attack rolls against the target. The veil fades early if the target strikes a creature or casts a spell that harms an enemy.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S, M (a shard of translucent crystal)",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": "None",
+  "school": "Abjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/1126edf8-0a07-4af8-bbd3-7ee145cdc9ad.png"
+},
+{
+  "_id": {
+    "$oid": "695469f65648a6dce9f6f7ba"
+  },
+  "name": "Prestidigitation",
+  "level": 0,
+  "description": "A flicker of raw arcane potential performs tiny tasks at your command. Choose one effect within range: ignite or snuff a small flame; clean or smudge an object no larger than 1 cubic foot; chill, warm, or subtly flavor nonliving material; shift the color of a palm-sized surface; conjure a harmless hand‑held trinket that vanishes at the start of your next turn; or create a brief sensory flourish such as a drifting spark, soft chime, or fleeting scent.",
+  "castingTime": "1 action",
+  "range": "15 feet",
+  "components": "V, S",
+  "duration": "1 hour",
+  "damage": "None",
+  "school": "Illusion",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/2d2ef1a0-e6ce-4363-82b3-e004f87a3911.png"
+},
+{
+  "_id": {
+    "$oid": "695469f95648a6dce9f6f7be"
+  },
+  "name": "Ray of Frost",
+  "level": 0,
+  "description": "You snap your fingers and launch a glittering splinter of compressed ice that bursts on impact, numbing flesh and jolting reflexes.",
+  "castingTime": "1 action",
+  "range": "60 ft",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "1d6 cold",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/43c0d0c4-148e-4d64-a6f9-1b353e78927c.png"
+},
+{
+  "_id": {
+    "$oid": "695469fb5648a6dce9f6f7c2"
+  },
+  "name": "Ray of Sickness",
+  "level": 2,
+  "description": "You snap a crackling lash of sickly energy at a creature you can see. The bolt gnaws at flesh and spirit alike. The target must make a Constitution save. On a failure, it suffers full damage and is wracked with debilitating weakness, granting disadvantage on its next attack roll. On a success, it takes half damage and suffers no further effect.",
+  "castingTime": "1 action",
+  "range": "90 ft",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "2d10 necrotic",
+  "school": "Necromancy",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/d7f333f7-bdad-4fc7-a01d-a9154d33c3e0.png"
+},
+{
+  "_id": {
+    "$oid": "695469fd5648a6dce9f6f7c6"
+  },
+  "name": "Poison Spray",
+  "level": 0,
+  "description": "You hiss a chilling word that summons a curl of necrotic vapors around a creature you can see. The target must succeed on a Constitution save or have its life-essence scoured by spectral rot.",
+  "castingTime": "1 action",
+  "range": "15 ft",
+  "components": "V",
+  "duration": "Instantaneous",
+  "damage": "1d10 necrotic",
+  "school": "Necromancy",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/2c4f2b89-ea38-4fee-a923-75cc565d1cfc.png"
+},
+{
+  "_id": {
+    "$oid": "69546a005648a6dce9f6f7ca"
+  },
+  "name": "Remove Curse",
+  "level": 3,
+  "description": "You unleash a surge of cleansing force that targets a single curse clinging to a creature or object you touch. Minor and moderate hexes unravel instantly; more entrenched maledictions crack but may not fully break, instead weakening for a short time. This magic cannot unbind curses tied to a being’s core essence.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "None",
+  "school": "Abjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/98b81aed-b54e-4fd0-8c81-6b99f72bc94e.png"
+},
+{
+  "_id": {
+    "$oid": "69546a035648a6dce9f6f7ce"
+  },
+  "name": "Shocking Grasp",
+  "level": 1,
+  "description": "You snap a thread of charged aether at a creature you can touch, discharging a sharp jolt that rattles muscle and focus. The surge crackles loudly, leaving the target briefly disoriented.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "2d6 lightning",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/789f4802-3556-4af9-9adf-1aa8648f07a0.png"
+},
+{
+  "_id": {
+    "$oid": "69546a065648a6dce9f6f7d2"
+  },
+  "name": "Silent Image",
+  "level": 2,
+  "description": "Conjure a drifting phantasm up to a 20‑foot cube in size, its form shifting subtly as it glides within range. The illusion is purely visual but eerily lifelike, capable of adopting new poses or features as you direct it with your action. A creature that studies the illusion can attempt an Intelligence (Investigation) check against your spell save DC to pierce the ruse, after which the image becomes ghostlike and transparent to that creature.",
+  "castingTime": "1 action",
+  "range": "90 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": "None",
+  "school": "Illusion",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/e95a3a32-af15-4950-b2d3-a52b24532e55.png"
+},
+{
+  "_id": {
+    "$oid": "69546a0a5648a6dce9f6f7d6"
+  },
+  "name": "Sleep",
+  "level": 2,
+  "description": "You cast a tether of drowsy magic that latches onto a creature’s mind. The target must succeed on a Wisdom save or become heavy‑eyed and sluggish. On a failure, the creature collapses into a shallow trance, perceiving only muted shapes and sounds. While dream‑hooked, it is unconscious but can be roused by taking damage or being shaken awake.",
+  "castingTime": "1 action",
+  "range": "60 ft",
+  "components": "V, S, M (a loop of twine knotted in your sleep)",
+  "duration": "Up to 1 minute",
+  "damage": "None",
+  "school": "Enchantment",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/9529ec13-804b-45fb-a204-d89e4c7e2da2.png"
+},
+{
+  "_id": {
+    "$oid": "69546a0d5648a6dce9f6f7da"
+  },
+  "name": "Shield",
+  "level": 1,
+  "description": "A flash of warding light ripples across your form, diverting a blow at the last possible instant. The brief shimmer leaves a cool afterimage hanging in the air.",
+  "castingTime": "1 reaction, triggered when a creature you see targets you with an attack",
+  "range": "Self",
+  "components": "V, S",
+  "duration": "1 round",
+  "damage": "None",
+  "school": "Abjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/fcd7781a-c964-478e-a725-c4f6dd8b01dd.png"
+},
+{
+  "_id": {
+    "$oid": "69546a105648a6dce9f6f7de"
+  },
+  "name": "Thunderwave",
+  "level": 2,
+  "description": "A resonant shock ripples from your core, vibrating the air with harmonic force. Each creature in a 20‑foot radius must make a Constitution save or take full sonic damage and have its next movement reduced by half. Those who succeed take half damage and suffer no slow. Loose objects tremble and rattle but are not moved.",
+  "castingTime": "1 action",
+  "range": "Self (20‑foot radius)",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "3d8 Sonic",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/f9f2f406-d20a-480d-9d00-7ccc78444ed2.png"
+},
+{
+  "_id": {
+    "$oid": "69546a125648a6dce9f6f7e2"
+  },
+  "name": "Unseen Servant",
+  "level": 1,
+  "description": "You conjure a faint, translucent silhouette that flits about performing mundane tasks with uncanny precision. The hand cannot attack, but it can manipulate small objects, tidy spaces, and carry out any simple task a common servant could complete. It follows your verbal instructions faithfully until the spell ends.",
+  "castingTime": "1 action",
+  "range": "30 ft",
+  "components": "V, S",
+  "duration": "1 hour",
+  "damage": "None",
+  "school": "Conjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/ad3a48e9-2c76-48cc-87be-5b366740e17c.png"
+},
+{
+  "_id": {
+    "$oid": "69546a155648a6dce9f6f7e6"
+  },
+  "name": "Witch Bolt",
+  "level": 1,
+  "description": "A jagged strand of storm force lashes from your hand to a creature you can see, binding it in a flickering arc of wild energy. While the tether holds, you can channel additional bursts of power into the target as you concentrate.",
+  "castingTime": "1 action",
+  "range": "60 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 minute",
+  "damage": "1d10 lightning",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/811bb6b9-5ace-444c-81cc-8193b3203088.png"
+},
+{
+  "_id": {
+    "$oid": "695496005648a6dce9f6f88f"
+  },
+  "name": "Animal Friendship",
+  "level": 1,
+  "description": "You murmur a charm carried on a breeze only beasts can sense. Choose one non-hostile beast that can see and hear you. The creature must succeed on a Wisdom saving throw or become charmed for the duration. While charmed, it treats you as a trusted companion and will carry out simple commands within its natural ability, such as scouting ahead, carrying small items, or alerting you to danger.",
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S, M (a tuft of fur or feather)",
+  "duration": "8 hours",
+  "damage": "None",
+  "school": "Enchantment",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/3dae8ac9-ef18-4926-880a-b689efa002c2.png"
+},
+{
+  "_id": {
+    "$oid": "695496035648a6dce9f6f893"
+  },
+  "name": "Bane",
+  "level": 2,
+  "description": "You twist local gravity into a crushing knot around your foes. A faint ripple distorts the air as invisible weight drags at those caught in the effect. Each creature of your choice in range must succeed on a Strength saving throw or suffer impaired movement and difficulty escaping grapples until the spell ends.",
+  "castingTime": "1 action",
+  "range": "20 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 minute",
+  "damage": "None",
+  "school": "Transmutation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/ed910db2-ad55-4d58-a85c-46d50d8bf7df.png"
+},
+{
+  "_id": {
+    "$oid": "695496055648a6dce9f6f897"
+  },
+  "name": "Blade Ward",
+  "level": 0,
+  "description": "A shimmer of doubled silhouettes flickers around you, causing incoming strikes to falter as they struggle to find your true position.",
+  "castingTime": "1 action",
+  "range": "Self",
+  "components": "V, S",
+  "duration": "1 round",
+  "damage": "None",
+  "school": "Illusion",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/c6bed855-c542-4899-83ae-da06d0631496.png"
+},
+{
+  "_id": {
+    "$oid": "695496085648a6dce9f6f89b"
+  },
+  "name": "Bless",
+  "level": 1,
+  "description": "You grant up to three creatures a surge of tactical clarity. Until the spell ends, each target may roll a d4 once per turn and add the result to an attack roll or ability check they make. A faint glimmer outlines their movements, guiding strikes and steadying hands.",
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 minute",
+  "damage": "None",
+  "school": "Divination",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/e7dfc40f-b5ae-4142-a8ec-d6717b279c0b.png"
+},
+{
+  "_id": {
+    "$oid": "6954960b5648a6dce9f6f89f"
+  },
+  "name": "Command",
+  "level": 1,
+  "description": "You utter a resonant syllable that tugs at a creature’s will. One creature you can see must succeed on a Wisdom saving throw or be subtly compelled to take a simple, non-harmful action of your choice on its next turn. Commands like step closer, stand down, or cast aside are common. If the directive would place the creature in immediate danger, it has advantage on the save.",
+  "castingTime": "1 action",
+  "range": "60 feet",
+  "components": "V",
+  "duration": "1 round",
+  "damage": "None",
+  "school": "Enchantment",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/3b05fc88-3d77-416c-aa5b-24fa020e7b3b.png"
+},
+{
+  "_id": {
+    "$oid": "6954960e5648a6dce9f6f8ef"
+  },
+  "name": "Create or Destroy Water",
+  "level": 1,
+  "description": "Conjure a sudden bloom of life-giving moisture or wither it away. You create a gush of fresh water that fills a 5‑foot square or you desiccate the same area, draining moisture from soil, plants, or small pools.",
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "None",
+  "school": "Transmutation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/74ed0a7d-8176-4a5d-b0e8-92c2d7c9761a.png"
+},
+{
+  "_id": {
+    "$oid": "695496125648a6dce9f6f8f5"
+  },
+  "name": "Detect Evil and Good",
+  "level": 2,
+  "description": "You attune your sight to hidden presences, perceiving spectral traces of spirits, curses, and otherworldly intrusions within 40 feet. You learn the direction of each disturbance and whether its nature is spiritual, arcane, or other planar essence. The sense cannot pass through lead or more than a foot of stone.",
+  "castingTime": "1 action",
+  "range": "Self (40-foot radius)",
+  "components": "V, S",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": "None",
+  "school": "Divination",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/9e17ce48-f577-494c-bf65-cad7d38674cd.png"
+},
+{
+  "_id": {
+    "$oid": "695496145648a6dce9f6f8fa"
+  },
+  "name": "Detect Magic",
+  "level": 1,
+  "description": "You attune your senses to hidden forces. Until the spell ends, you perceive supernatural disturbances within 20 feet—shimmering outlines mark curses, illusions, enchantments, or other mystical effects. As an action, you can focus on one source to identify its general nature or intent.",
+  "castingTime": "1 action",
+  "range": "Self (20-foot radius)",
+  "components": "V, S",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": "None",
+  "school": "Divination",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/7761c38c-f0f9-47a2-9c76-252d2a2cc107.png"
+},
+{
+  "_id": {
+    "$oid": "695496175648a6dce9f6f901"
+  },
+  "name": "Detect Poison and Disease",
+  "level": 1,
+  "description": "You attune your senses to toxic energies, detecting any poison, venomous creature, or disease within 60 feet. You learn each source’s location and a faint impression of its severity. Thin barriers do not impede this sense, but dense stone or metal blocks it.",
+  "castingTime": "1 action",
+  "range": "Self (60-foot radius)",
+  "components": "V, S",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": "None",
+  "school": "Divination",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/fab72801-e7bb-48a1-b4f8-acb8cd5507c3.png"
+},
+{
+  "_id": {
+    "$oid": "6954961a5648a6dce9f6f905"
+  },
+  "name": "Disguise Self",
+  "level": 2,
+  "description": "You weave an illusory mask over yourself, borrowing the likeness of any humanoid you’ve observed within the last 24 hours. The imitation includes voice timbre and general posture. Physical contact reveals the ruse, passing through the illusion to your true form. Keen observers can attempt to discern the falsity.",
+  "castingTime": "1 action",
+  "range": "Self",
+  "components": "V, S",
+  "duration": "1 hour",
+  "damage": "None",
+  "school": "Illusion",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/c948f2a3-24f7-47f8-8668-d3ba4e60806c.png"
+},
+{
+  "_id": {
+    "$oid": "6954961d5648a6dce9f6f909"
+  },
+  "name": "Guidance",
+  "level": 0,
+  "description": "You brush a creature with a soft pulse of arcane clarity. Until the spell ends, the target may add a brief surge of mental precision to a single ability check it makes before the spell expires.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 minute",
+  "damage": "+1d4 to one ability check",
+  "school": "Enchantment",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/5bfb0610-76cc-425c-a431-4b52f108d489.png"
+},
+{
+  "_id": {
+    "$oid": "695496215648a6dce9f6f90d"
+  },
+  "name": "Guiding Bolt",
+  "level": 1,
+  "description": "You release a needle-thin lance of stellar fire at a creature you can see. Make a ranged spell attack. On a hit, the target erupts with shimmering sparks that outline its form, shedding dim light and revealing weak spots to your allies.",
+  "castingTime": "1 action",
+  "range": "90 ft",
+  "components": "V, S",
+  "duration": "1 round",
+  "damage": "3d8 radiant",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/9f01b03c-6e5f-44f1-acba-27662ddfa125.png"
+},
+{
+  "_id": {
+    "$oid": "695496245648a6dce9f6f911"
+  },
+  "name": "Hail of Thorns",
+  "level": 1,
+  "description": "Your next ranged weapon hit erupts into a tight explosion of spectral brambles. The target and nearby creatures take piercing damage, tearing at exposed gaps in armor.",
+  "castingTime": "1 action",
+  "range": "Self (next ranged weapon attack)",
+  "components": "V, S, M (a dried bramble twig)",
+  "duration": "Instantaneous",
+  "damage": "1d8 piercing, Dexterity save for half",
+  "school": "Conjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/45e2171a-7392-42ae-913e-2e331e9f1919.png"
+},
+{
+  "_id": {
+    "$oid": "695496265648a6dce9f6f915"
+  },
+  "name": "Inflict Wounds",
+  "level": 1,
+  "description": "Your hand darkens with starless void as you seize a creature, draining its vigor and chilling its spirit with creeping shadow.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "3d8 necrotic",
+  "school": "Necromancy",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/108e5078-ba2a-4dc7-9f60-2dd0e5fc45f1.png"
+},
+{
+  "_id": {
+    "$oid": "695496295648a6dce9f6f919"
+  },
+  "name": "Light",
+  "level": 0,
+  "description": "Your touch ignites a mote of harmless radiance that clings to an object no larger than 5 feet across. It sheds soft bright light in a 15‑foot radius and faint shimmer for 15 more. The glow subtly ripples like starlight and can be any color. Covering the object blocks the light. A new casting ends any previous instance.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "8 hours",
+  "damage": "None",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/17f0d361-f3b7-412d-9566-d0e2762ac9be.png"
+},
+{
+  "_id": {
+    "$oid": "6954962b5648a6dce9f6f91d"
+  },
+  "name": "Mending",
+  "level": 0,
+  "description": "You weave a faint shimmer across a damaged object, coaxing its structure back into harmony. You mend a fracture, split, or tear no larger than 1 foot in any direction, seamlessly restoring the item’s form. Arcane items regain only their physical integrity, not lost enchantments.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "None",
+  "school": "Transmutation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/0c767b69-a452-43fb-8d46-3a2227c9f381.png"
+},
+{
+  "_id": {
+    "$oid": "6954962e5648a6dce9f6f921"
+  },
+  "name": "Protection from Evil and Good",
+  "level": 1,
+  "description": "You cloak a willing creature in shimmering ward-light imperceptible to all but you. For the duration, the target gains advantage on saving throws against being charmed, frightened, or possessed. The first time each round a creature targets the warded ally with an attack or harmful spell, the aggressor must succeed on a Wisdom save or have the effect fizzle harmlessly. The aegis fades early if the target strikes a creature or forces a hostile saving throw.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S, M (a sliver of moon-glass)",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": "None",
+  "school": "Abjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/1126edf8-0a07-4af8-bbd3-7ee145cdc9ad.png"
+},
+{
+  "_id": {
+    "$oid": "695496315648a6dce9f6f925"
+  },
+  "name": "Produce Flame",
+  "level": 0,
+  "description": "A coil of emberlight spirals from your fingertips, swirling in place to illuminate your surroundings or lash out at a foe. You may hold the ember as a dancing spark or flick it toward a creature, where it bursts in a brief flash.",
+  "castingTime": "1 action",
+  "range": "Self (light), 20 ft (attack)",
+  "components": "V, S",
+  "duration": "1 minute (light), Instantaneous (attack)",
+  "damage": "1d6 fire",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/241aabbf-d9b5-4dc8-87c2-b948e32c81a1.png"
+},
+{
+  "_id": {
+    "$oid": "695496345648a6dce9f6f929"
+  },
+  "name": "Purify Food and Drink",
+  "level": 1,
+  "description": "You infuse a meal or drink with gentle household magic, banishing rot, foul tastes, and minor impurities. Creatures who consume the treated fare gain a faint sense of warmth and well‑being.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "None",
+  "school": "Transmutation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/cf7cd0ca-e113-4945-a925-6c1e8b727947.png"
+},
+{
+  "_id": {
+    "$oid": "695496365648a6dce9f6f933"
+  },
+  "name": "Remove Curse",
+  "level": 3,
+  "description": "You draw out a strand of malignant magic from a creature or object, unraveling one curse afflicting it. Curses born of ancient pacts or bound to a being’s essence resist total removal, but your magic weakens them briefly, granting the target relief until the curse reasserts itself.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "None",
+  "school": "Abjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/98b81aed-b54e-4fd0-8c81-6b99f72bc94e.png"
+},
+{
+  "_id": {
+    "$oid": "6954963c5648a6dce9f6f937"
+  },
+  "name": "Resistance",
+  "level": 1,
+  "description": "You brush a sigil of resolve onto a willing creature. Until the spell ends, the target gains a flickering ward that it may invoke once to gain advantage on a single saving throw of its choice. The ward dissipates immediately after use.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 minute",
+  "damage": "None",
+  "school": "Abjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/a887525a-9e73-416c-aea0-3eab6d05dc28.png"
+},
+{
+  "_id": {
+    "$oid": "6954963e5648a6dce9f6f93b"
+  },
+  "name": "Sacred Flame",
+  "level": 0,
+  "description": "You summon a spear of early-morning light that streaks toward a creature you can see. The shard pierces shadow and illusion, flashing with cleansing brilliance before fading.",
+  "castingTime": "1 action",
+  "range": "60 ft",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "1d6 radiant",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/baba19a2-2cc5-4a04-a15b-70baaca30513.png"
+},
+{
+  "_id": {
+    "$oid": "695496405648a6dce9f6f93f"
+  },
+  "name": "Sanctuary",
+  "level": 1,
+  "description": "A shimmer of bending air wraps a creature you choose, diverting hostile intent. Until the spell ends, any foe attempting to strike or cast a harmful spell on the target must succeed on a Wisdom save or have the effort simply glance aside, forcing them to choose another target or forfeit the attempt. The veil offers no protection against area effects.",
+  "castingTime": "1 bonus action",
+  "range": "30 feet",
+  "components": "V, S, M (a sliver of polished glass)",
+  "duration": "1 minute",
+  "damage": "None",
+  "school": "Abjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/19357c14-823f-466b-aee4-02ee090b9593.png"
+},
+{
+  "_id": {
+    "$oid": "695496435648a6dce9f6f943"
+  },
+  "name": "Shield of Faith",
+  "level": 1,
+  "description": "You trace a sigil in the air, summoning a thin veil of astral force that clings to a willing creature. The barrier bends incoming attacks and flickers with faint starlight visible only at the edge of vision.",
+  "castingTime": "1 bonus action",
+  "range": "30 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": "None",
+  "school": "Abjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/2784d256-a173-4d4e-938d-a392940a0f8c.png"
+},
+{
+  "_id": {
+    "$oid": "695496455648a6dce9f6f947"
+  },
+  "name": "Spare the Dying",
+  "level": 1,
+  "description": "A faint ember of life leaps from your hand into a creature on the brink of death. The target regains a spark of consciousness, allowing it to take one action or move on its next turn before falling unconscious and stable.",
+  "castingTime": "1 bonus action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "1 round",
+  "damage": "None",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/ff40cfd8-0b0d-432e-80cc-a2a06726d751.png"
+},
+{
+  "_id": {
+    "$oid": "695496485648a6dce9f6f94d"
+  },
+  "name": "Thaumaturgy",
+  "level": 0,
+  "description": "You invoke a flicker of respect from the spirits, producing one minor omen within range. You may cause a small object to gently levitate for a moment, etch a glowing rune that fades after a minute, or release a brief scent tied to a past memory. None of these effects cause harm, but each is unmistakably supernatural.",
+  "castingTime": "1 action",
+  "range": "20 ft.",
+  "components": "V, S",
+  "duration": "1 minute",
+  "damage": "None",
+  "school": "Illusion",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/cf59adf3-e5ab-4b01-84f0-46b4b5aa0d6c.png"
+},
+{
+  "_id": {
+    "$oid": "6956c8c55648a6dce9f6fb71"
+  },
+  "name": "Branding Smite",
+  "level": 2,
+  "description": "You wreathe your next weapon strike in stellar fire. On your first hit before the spell ends, the attack erupts in a burst of astral sparks, burning the target and outlining it in shimmering constellations that foil invisibility and reveal hidden movement.",
+  "castingTime": "1 bonus action",
+  "range": "Self",
+  "components": "V",
+  "duration": "Concentration, up to 1 minute",
+  "damage": "2d8 Radiant",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/ae37c97f-9318-44dd-849d-7be3117555be.png"
+}]
