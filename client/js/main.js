@@ -9,6 +9,7 @@ import { MapEngine } from './MapEngine.js';
 import { CanvasRenderer } from './CanvasRenderer.js';
 import { GameState } from './GameState.js';
 import { CommandDashboard } from './components/CommandDashboard.js';
+import { Grimoire } from './components/Grimoire.js';
 
 /**
  * Main Application Class
@@ -19,6 +20,7 @@ class WarRoom1776 {
     this.mapEngine = null;
     this.canvasRenderer = null;
     this.dashboard = null;
+    this.grimoire = null;
     this.socket = null;
 
     // Tactical view container
@@ -62,6 +64,9 @@ class WarRoom1776 {
 
       // Initialize sidebar
       this._initSidebar();
+
+      // Initialize Grimoire
+      this.grimoire = new Grimoire();
 
       // Setup tactical view container
       this._setupTacticalContainer();
