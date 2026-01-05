@@ -59,8 +59,16 @@ export class Grimoire {
    */
   async _loadSpells() {
     try {
+      console.log('Fetching spells from /data/CharacterFoundryWeb.spells.json...');
       const response = await fetch('/data/CharacterFoundryWeb.spells.json');
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
       const allSpells = await response.json();
+      console.log('Raw spell data loaded:', allSpells.length, 'total spells');
+      console.log('First spell:', allSpells[0]);
 
       // Use all spells if isPublic field doesn't exist, otherwise filter
       this.spells = allSpells.filter(spell => {
@@ -70,9 +78,12 @@ export class Grimoire {
 
       this.filteredSpells = [...this.spells];
 
-      console.log(`Loaded ${this.spells.length} spells from CharacterFoundryWeb database`);
+      console.log(`✅ Loaded ${this.spells.length} spells from CharacterFoundryWeb database`);
+      if (this.spells.length > 0) {
+        console.log('Sample spell:', this.spells[0].name, '- Icon:', this.spells[0].icon);
+      }
     } catch (error) {
-      console.error('Failed to load spells:', error);
+      console.error('❌ Failed to load spells:', error);
       this.spells = [];
       this.filteredSpells = [];
     }
@@ -254,12 +265,18 @@ export class Grimoire {
    * @private
    */
   _renderSpellList() {
-    if (!this.elements.spellList) return;
+    if (!this.elements.spellList) {
+      console.error('Spell list element not found!');
+      return;
+    }
+
+    console.log(`Rendering ${this.filteredSpells.length} spells to list`);
 
     this.elements.spellList.innerHTML = '';
 
     if (this.filteredSpells.length === 0) {
       this.elements.spellList.innerHTML = '<p style="padding: 20px; color: #8b7355; text-align: center;">No spells found</p>';
+      console.warn('No spells to display');
       return;
     }
 
@@ -269,15 +286,18 @@ export class Grimoire {
 
       item.innerHTML = `
         <div class="spell-list-item-name">${spell.name || 'Unknown Spell'}</div>
-        <div class="spell-list-item-level">Level ${spell.level || '?'}</div>
+        <div class="spell-list-item-level">Level ${spell.level || '?'} ${spell.school || ''}</div>
       `;
 
       item.addEventListener('click', () => {
+        console.log('Spell clicked:', spell.name);
         this._showSpellCard(spell);
       });
 
       this.elements.spellList.appendChild(item);
     });
+
+    console.log('✅ Spell list rendered');
   }
 
   /**
@@ -375,6 +395,8 @@ export class Grimoire {
     const stack = document.createElement('div');
     stack.className = 'spell-card-icon-stack';
 
+    console.log('Rendering spell icon for:', spell.name, 'icon URL:', spell.icon);
+
     // Check if spell has iconLayers (master format)
     if (spell.iconLayers && Array.isArray(spell.iconLayers) && spell.iconLayers.length > 0) {
       // Render layered composite
@@ -389,11 +411,26 @@ export class Grimoire {
       img.className = 'spell-card-icon-layer';
       img.style.width = '100%';
       img.style.height = '100%';
-      img.style.objectFit = 'contain';
+      img.style.objectFit = 'cover';
       img.style.transform = 'translate(-50%, -50%)';
+
+      // Add error handling
+      img.onerror = () => {
+        console.error('Failed to load spell icon:', spell.icon);
+        stack.innerHTML = `<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #8b7355; flex-direction: column; gap: 10px;">
+          <div>Failed to load icon</div>
+          <div style="font-size: 0.7rem; opacity: 0.6;">${spell.icon}</div>
+        </div>`;
+      };
+
+      img.onload = () => {
+        console.log('Successfully loaded spell icon:', spell.name);
+      };
+
       stack.appendChild(img);
     } else {
       // No icon available
+      console.warn('No icon available for spell:', spell.name);
       stack.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #8b7355;">No icon available</div>';
     }
 
