@@ -12,7 +12,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style-zones.css" />
 </head>
-<body class="tactical-active">
+<body>
     <!-- ZONE A: Mini-Sidebar (Left) -->
     <div id="mini-sidebar" class="mini-sidebar">
         <div class="sidebar-icons">
@@ -96,6 +96,9 @@
             <input type="text" id="chat-input" class="chat-input" placeholder="Type a command or message..." />
             <button id="chat-send" class="chat-send-btn">Send</button>
         </div>
+
+        <!-- Command Autocomplete Popup -->
+        <div id="command-autocomplete" class="command-autocomplete" style="display: none;"></div>
     </div>
 
     <!-- Unit Panel (Floating) -->
