@@ -62,11 +62,15 @@ export class Grimoire {
       const response = await fetch('/data/CharacterFoundryWeb.spells.json');
       const allSpells = await response.json();
 
-      // Filter to public spells only
-      this.spells = allSpells.filter(spell => spell.isPublic === true);
+      // Use all spells if isPublic field doesn't exist, otherwise filter
+      this.spells = allSpells.filter(spell => {
+        // If isPublic field exists, use it; otherwise treat as public
+        return spell.isPublic === undefined || spell.isPublic === true;
+      });
+
       this.filteredSpells = [...this.spells];
 
-      console.log(`Loaded ${this.spells.length} public spells`);
+      console.log(`Loaded ${this.spells.length} spells from CharacterFoundryWeb database`);
     } catch (error) {
       console.error('Failed to load spells:', error);
       this.spells = [];
