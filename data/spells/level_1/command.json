@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "6954960b5648a6dce9f6f89f"
+  },
+  "name": "Command",
+  "level": 1,
+  "description": "You utter a resonant syllable that tugs at a creature’s will. One creature you can see must succeed on a Wisdom saving throw or be subtly compelled to take a simple, non-harmful action of your choice on its next turn. Commands like step closer, stand down, or cast aside are common. If the directive would place the creature in immediate danger, it has advantage on the save.",
+  "castingTime": "1 action",
+  "range": "60 feet",
+  "components": "V",
+  "duration": "1 round",
+  "damage": "None",
+  "school": "Enchantment",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/3b05fc88-3d77-416c-aa5b-24fa020e7b3b.png"
+}

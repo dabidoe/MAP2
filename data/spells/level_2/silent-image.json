@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "69546a065648a6dce9f6f7d2"
+  },
+  "name": "Silent Image",
+  "level": 2,
+  "description": "Conjure a drifting phantasm up to a 20‑foot cube in size, its form shifting subtly as it glides within range. The illusion is purely visual but eerily lifelike, capable of adopting new poses or features as you direct it with your action. A creature that studies the illusion can attempt an Intelligence (Investigation) check against your spell save DC to pierce the ruse, after which the image becomes ghostlike and transparent to that creature.",
+  "castingTime": "1 action",
+  "range": "90 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": "None",
+  "school": "Illusion",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/e95a3a32-af15-4950-b2d3-a52b24532e55.png"
+}

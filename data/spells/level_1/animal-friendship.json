@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695496005648a6dce9f6f88f"
+  },
+  "name": "Animal Friendship",
+  "level": 1,
+  "description": "You murmur a charm carried on a breeze only beasts can sense. Choose one non-hostile beast that can see and hear you. The creature must succeed on a Wisdom saving throw or become charmed for the duration. While charmed, it treats you as a trusted companion and will carry out simple commands within its natural ability, such as scouting ahead, carrying small items, or alerting you to danger.",
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S, M (a tuft of fur or feather)",
+  "duration": "8 hours",
+  "damage": "None",
+  "school": "Enchantment",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/3dae8ac9-ef18-4926-880a-b689efa002c2.png"
+}

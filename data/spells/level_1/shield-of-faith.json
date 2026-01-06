@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695496435648a6dce9f6f943"
+  },
+  "name": "Shield of Faith",
+  "level": 1,
+  "description": "You trace a sigil in the air, summoning a thin veil of astral force that clings to a willing creature. The barrier bends incoming attacks and flickers with faint starlight visible only at the edge of vision.",
+  "castingTime": "1 bonus action",
+  "range": "30 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": "None",
+  "school": "Abjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/2784d256-a173-4d4e-938d-a392940a0f8c.png"
+}

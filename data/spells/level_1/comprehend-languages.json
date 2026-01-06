@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469c05648a6dce9f6f786"
+  },
+  "name": "Comprehend Languages",
+  "level": 1,
+  "description": "For a brief interval, every utterance near you resonates with clarity. You instantly grasp the meaning of any spoken language within earshot and can interpret simple intent behind tone or cadence. Written script remains beyond your reach.",
+  "castingTime": "1 action",
+  "range": "Self",
+  "components": "V, S",
+  "duration": "10 minutes",
+  "damage": "None",
+  "school": "Divination",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/f358315f-89ff-4e0d-8ae9-d83a22bbeed0.png"
+}

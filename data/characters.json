@@ -9,6 +9,7 @@
     "name": "George Washington",
     "slug": "george-washington-58cf7",
     "class": "Paladin",
+    "subclass": "Oath of Vengeance",
     "race": "Human",
     "level": 12,
     "alignment": "Neutral Good",
@@ -246,13 +247,35 @@
       }
     ],
     "spells": {
-      "slots": [],
+      "slots": [
+        { "level": 1, "total": 4, "used": 0 },
+        { "level": 2, "total": 3, "used": 0 },
+        { "level": 3, "total": 3, "used": 0 }
+      ],
       "known": [
+        {
+          "spellId": {
+            "$oid": "695496085648a6dce9f6f89b"
+          },
+          "prepared": true
+        },
+        {
+          "spellId": {
+            "$oid": "694012a75648a6dce9f6e7d2"
+          },
+          "prepared": true
+        },
+        {
+          "spellId": {
+            "$oid": "6954960b5648a6dce9f6f89f"
+          },
+          "prepared": true
+        },
         {
           "spellId": {
             "$oid": "6956c8c55648a6dce9f6fb71"
           },
-          "prepared": false
+          "prepared": true
         }
       ]
     },

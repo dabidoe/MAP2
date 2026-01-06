@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469615648a6dce9f6f730"
+  },
+  "name": "Burning Hands",
+  "level": 1,
+  "description": "You unleash a burst of ember-laced wind from your open hand. Creatures in a 20-foot cone must make a Dexterity saving throw, taking full damage on a failed save or half on a success. The blast singes surfaces and can briefly light loose tinder.",
+  "castingTime": "1 action",
+  "range": "Self (20-foot cone)",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "4d4 fire",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/ae533eb5-1c19-416e-8412-2ea743f32f0d.png"
+}

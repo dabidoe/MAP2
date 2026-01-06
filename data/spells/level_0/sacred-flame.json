@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "6954963e5648a6dce9f6f93b"
+  },
+  "name": "Sacred Flame",
+  "level": 0,
+  "description": "You summon a spear of early-morning light that streaks toward a creature you can see. The shard pierces shadow and illusion, flashing with cleansing brilliance before fading.",
+  "castingTime": "1 action",
+  "range": "60 ft",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "1d6 radiant",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/baba19a2-2cc5-4a04-a15b-70baaca30513.png"
+}

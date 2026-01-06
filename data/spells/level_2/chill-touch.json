@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "6954695e5648a6dce9f6f72c"
+  },
+  "name": "Chill Touch",
+  "level": 2,
+  "description": "A shadow-wreathed hand erupts from the ground beneath a creature you can see, clutching at its spirit. The target must make a Charisma saving throw or have its speed halved and suffer spectral harm as the grasp drags at its essence.",
+  "castingTime": "1 action",
+  "range": "60 feet",
+  "components": "V, S",
+  "duration": "1 minute",
+  "damage": "3d6 Necrotic",
+  "school": "Necromancy",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/cab61c88-2465-4ea5-b5db-92af3a9dd5b6.png"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "rogue-sneak-attack",
+  "name": "Sneak Attack",
+  "description": "Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack if you have advantage on the attack roll. The attack must use a finesse or a ranged weapon. The extra damage increases as you gain levels.",
+  "summary": "Extra damage once per turn when you have advantage.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/runware-sneak-attack.png",
+  "type": "passive",
+  "source": "rogue",
+  "mechanics": {
+    "trigger": "on_hit_with_advantage",
+    "damage": "scales_with_level",
+    "frequency": "1/turn"
+  }
+}

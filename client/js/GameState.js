@@ -301,7 +301,7 @@ export class GameState {
       const [tokensRes, locationsRes, charactersRes, configRes] = await Promise.all([
         fetch('/data/tokens.json'),
         fetch('/data/locations.json'),
-        fetch('/data/characters.json'),
+        fetch('/api/characters'), // Load characters from API (scans token folders)
         fetch('/api/campaign').catch(() => null) // Optional: get env config
       ]);
 

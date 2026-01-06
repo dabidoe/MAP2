@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "69546a005648a6dce9f6f7ca"
+  },
+  "name": "Remove Curse",
+  "level": 3,
+  "description": "You unleash a surge of cleansing force that targets a single curse clinging to a creature or object you touch. Minor and moderate hexes unravel instantly; more entrenched maledictions crack but may not fully break, instead weakening for a short time. This magic cannot unbind curses tied to a being’s core essence.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "None",
+  "school": "Abjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/98b81aed-b54e-4fd0-8c81-6b99f72bc94e.png"
+}

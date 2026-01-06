@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469a85648a6dce9f6f772"
+  },
+  "name": "Expeditious Retreat",
+  "level": 1,
+  "description": "A burst of arcane vigor floods your limbs, sharpening reflexes and lightening your stride. Until the spell ends, your speed increases by 20 feet and you can take the Dash action as a bonus action on each of your turns.",
+  "castingTime": "1 bonus action",
+  "range": "Self",
+  "components": "V, S",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": "None",
+  "school": "Transmutation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/082af48d-e336-4424-bd57-617e9122ba1b.png"
+}

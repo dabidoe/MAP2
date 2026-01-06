@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "69546a0d5648a6dce9f6f7da"
+  },
+  "name": "Shield",
+  "level": 1,
+  "description": "A flash of warding light ripples across your form, diverting a blow at the last possible instant. The brief shimmer leaves a cool afterimage hanging in the air.",
+  "castingTime": "1 reaction, triggered when a creature you see targets you with an attack",
+  "range": "Self",
+  "components": "V, S",
+  "duration": "1 round",
+  "damage": "None",
+  "school": "Abjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/fcd7781a-c964-478e-a725-c4f6dd8b01dd.png"
+}

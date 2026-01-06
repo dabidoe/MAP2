@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469ce5648a6dce9f6f79a"
+  },
+  "name": "Longstrider",
+  "level": 1,
+  "description": "You infuse a creature with flickering kinetic magic. For the duration, its speed increases by 15 feet and it can ignore the first 5 feet of difficult terrain it enters each turn.",
+  "castingTime": "1 bonus action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "10 minutes",
+  "damage": "None",
+  "school": "Transmutation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/7c065201-bc9b-4a80-b131-959b8b095409.png"
+}

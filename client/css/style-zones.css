@@ -69,22 +69,24 @@ body {
     left: 50px;
     top: 0;
     width: 200px;
-    height: 100%;
+    height: 100vh;
     background: rgba(26, 20, 16, 0.98);
     border-right: 2px solid rgba(197, 169, 89, 0.6);
     padding: 15px;
     z-index: 8999;
     box-shadow: 4px 0 20px rgba(0, 0, 0, 0.7);
     display: none; /* Hidden by default, toggled by JS */
+    box-sizing: border-box;
 }
 
 .sidebar-panel-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 12px;
+    padding: 15px 15px 12px 15px;
     border-bottom: 2px solid rgba(197, 169, 89, 0.3);
     margin-bottom: 0;
+    flex-shrink: 0;
 }
 
 .sidebar-panel-header h3 {
@@ -104,14 +106,18 @@ body {
 /* Grimoire Panel (Wider) */
 .grimoire-panel {
     width: 450px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 !important;
 }
 
 .grimoire-search {
     padding: 15px;
     border-bottom: 2px solid rgba(197, 169, 89, 0.3);
     background: rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
 }
 
 .grimoire-search-input {
@@ -179,7 +185,10 @@ body {
 .grimoire-spell-list {
     flex: 1;
     overflow-y: auto;
-    padding: 10px 0;
+    overflow-x: hidden;
+    padding: 10px 15px;
+    min-height: 0;
+    max-height: 100%;
 }
 
 .grimoire-spell-list::-webkit-scrollbar {
@@ -364,6 +373,18 @@ body {
     color: #c5a959;
 }
 
+.spell-card-damage {
+    grid-column: 1 / -1;
+    background: rgba(197, 169, 89, 0.1);
+    border: 1px solid rgba(197, 169, 89, 0.3);
+}
+
+.spell-card-damage .spell-card-meta-value {
+    color: #FFD700;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
 /* ===================================
    MAIN AREA: Canvas + Console
    =================================== */
@@ -506,9 +527,10 @@ body.tactical-active #tactical-canvas-container {
    =================================== */
 
 #command-console {
-    height: 80px; /* Default minimized state */
-    min-height: 80px;
-    max-height: 50vh;
+    height: 200px; /* Default size - fits multiple messages + input */
+    min-height: 200px;
+    max-height: 40vh;
+    transition: height 0.3s ease;
     border-top: 2px solid rgba(197, 169, 89, 0.4);
     background: rgba(16, 12, 10, 0.95);
     z-index: 6000;
@@ -520,9 +542,10 @@ body.tactical-active #tactical-canvas-container {
     position: relative;
 }
 
-/* Expanded state */
+/* Expanded state - 2x height */
 #command-console.expanded {
-    height: 35vh;
+    height: 400px;
+    transition: height 0.3s ease;
 }
 
 /* Show command console only in tactical mode */
@@ -530,31 +553,40 @@ body.tactical-active #command-console {
     display: flex;
 }
 
-/* Resize handle */
-.console-resize-handle {
-    width: 100%;
-    height: 20px;
-    background: linear-gradient(to bottom, rgba(197, 169, 89, 0.1), transparent);
-    border-bottom: 1px solid rgba(197, 169, 89, 0.3);
-    cursor: ns-resize;
+/* Expand/Collapse Button */
+.console-expand-btn {
+    position: absolute;
+    top: -30px;
+    right: 20px;
+    width: 60px;
+    height: 24px;
+    background: rgba(26, 20, 16, 0.95);
+    border: 2px solid rgba(197, 169, 89, 0.6);
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    color: #c5a959;
+    font-size: 14px;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
-    position: relative;
-    user-select: none;
+    z-index: 10;
+    transition: all 0.2s ease;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.4);
 }
 
-.console-resize-handle:hover {
-    background: linear-gradient(to bottom, rgba(197, 169, 89, 0.2), transparent);
-    border-bottom: 1px solid rgba(197, 169, 89, 0.5);
+.console-expand-btn:hover {
+    background: rgba(42, 32, 24, 0.95);
+    border-color: #c5a959;
+    color: #FFD700;
 }
 
-.console-resize-handle::before {
-    content: '⋯';
-    color: rgba(197, 169, 89, 0.5);
-    font-size: 1.2rem;
-    letter-spacing: 4px;
+.console-expand-btn .expand-icon {
+    transition: transform 0.2s ease;
+}
+
+#command-console.expanded .console-expand-btn .expand-icon {
+    transform: rotate(180deg);
 }
 
 .console-content {

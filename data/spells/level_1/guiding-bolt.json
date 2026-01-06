@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695496215648a6dce9f6f90d"
+  },
+  "name": "Guiding Bolt",
+  "level": 1,
+  "description": "You release a needle-thin lance of stellar fire at a creature you can see. Make a ranged spell attack. On a hit, the target erupts with shimmering sparks that outline its form, shedding dim light and revealing weak spots to your allies.",
+  "castingTime": "1 action",
+  "range": "90 ft",
+  "components": "V, S",
+  "duration": "1 round",
+  "damage": "3d8 radiant",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/9f01b03c-6e5f-44f1-acba-27662ddfa125.png"
+}

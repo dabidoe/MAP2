@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "69546a105648a6dce9f6f7de"
+  },
+  "name": "Thunderwave",
+  "level": 2,
+  "description": "A resonant shock ripples from your core, vibrating the air with harmonic force. Each creature in a 20‑foot radius must make a Constitution save or take full sonic damage and have its next movement reduced by half. Those who succeed take half damage and suffer no slow. Loose objects tremble and rattle but are not moved.",
+  "castingTime": "1 action",
+  "range": "Self (20‑foot radius)",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "3d8 Sonic",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/f9f2f406-d20a-480d-9d00-7ccc78444ed2.png"
+}

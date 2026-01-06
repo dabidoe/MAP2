@@ -1,0 +1,13 @@
+{
+  "id": "elf-fey-ancestry",
+  "name": "Fey Ancestry",
+  "description": "You have advantage on saving throws against being charmed, and magic can't put you to sleep.",
+  "summary": "Advantage vs charm, immune to magical sleep.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/runware-fey-ancestry.png",
+  "type": "passive",
+  "source": "elf",
+  "mechanics": {
+    "advantage": "charm_saves",
+    "immunity": "magical_sleep"
+  }
+}

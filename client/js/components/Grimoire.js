@@ -24,18 +24,12 @@ export class Grimoire {
 
       // Console elements
       commandConsole: document.getElementById('command-console'),
-      consoleResizeHandle: document.getElementById('console-resize-handle'),
+      consoleExpandBtn: document.getElementById('console-expand-btn'),
       chatInput: document.getElementById('chat-input')
     };
 
-    // Console resize state
-    this.consoleResize = {
-      isResizing: false,
-      startY: 0,
-      startHeight: 0,
-      minHeight: 80,
-      maxHeight: window.innerHeight * 0.5 // 50vh
-    };
+    // Console expansion state
+    this.consoleExpanded = false;
 
     this._init();
   }
@@ -45,34 +39,66 @@ export class Grimoire {
    * @private
    */
   async _init() {
+    // Ensure grimoire panel is closed on load
+    if (this.elements.grimoirePanel) {
+      this.elements.grimoirePanel.style.display = 'none';
+    }
+
+    // Ensure console starts at correct height (in case of cache issues)
+    if (this.elements.commandConsole) {
+      this.elements.commandConsole.style.height = '200px';
+    }
+
     // Load spells
     await this._loadSpells();
 
     // Setup event listeners
     this._setupEventListeners();
 
-    // Setup console resize
-    this._setupConsoleResize();
+    // Setup console expand button
+    this._setupConsoleExpand();
 
     console.log('✅ Grimoire initialized');
   }
 
   /**
-   * Load spells from JSON
+   * Load spells from individual JSON files
    * @private
    */
   async _loadSpells() {
     try {
-      console.log('Fetching spells from /data/SPELLS_MASTER.json...');
-      const response = await fetch('/data/SPELLS_MASTER.json');
+      console.log('📚 Fetching spell file list from /api/spells/list...');
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+      // Get list of spell files organized by level
+      const listResponse = await fetch('/api/spells/list');
+      if (!listResponse.ok) {
+        throw new Error(`HTTP error! status: ${listResponse.status}`);
       }
 
-      const allSpells = await response.json();
+      const spellFilesByLevel = await listResponse.json();
+      console.log('Spell files by level:', spellFilesByLevel);
+
+      // Load all individual spell files
+      const allSpells = [];
+      for (const [level, files] of Object.entries(spellFilesByLevel)) {
+        console.log(`Loading ${files.length} spells from level_${level}...`);
+
+        for (const filename of files) {
+          try {
+            const spellResponse = await fetch(`/data/spells/level_${level}/${filename}`);
+            if (spellResponse.ok) {
+              const spell = await spellResponse.json();
+              allSpells.push(spell);
+            } else {
+              console.warn(`Failed to load ${filename}:`, spellResponse.status);
+            }
+          } catch (fileError) {
+            console.error(`Error loading ${filename}:`, fileError.message);
+          }
+        }
+      }
+
       console.log('Raw spell data loaded:', allSpells.length, 'total spells');
-      console.log('First spell:', allSpells[0]);
 
       // Use all spells if isPublic field doesn't exist, otherwise filter
       this.spells = allSpells.filter(spell => {
@@ -82,7 +108,7 @@ export class Grimoire {
 
       this.filteredSpells = [...this.spells];
 
-      console.log(`✅ Loaded ${this.spells.length} spells from SPELLS_MASTER.json`);
+      console.log(`✅ Loaded ${this.spells.length} spells from individual files`);
       if (this.spells.length > 0) {
         console.log('Sample spell:', this.spells[0].name, '- Icon:', this.spells[0].icon);
       }
@@ -186,53 +212,39 @@ export class Grimoire {
   }
 
   /**
-   * Setup console resize functionality
+   * Setup console expand/collapse button
    * @private
    */
-  _setupConsoleResize() {
-    if (!this.elements.consoleResizeHandle || !this.elements.commandConsole) return;
+  _setupConsoleExpand() {
+    if (!this.elements.consoleExpandBtn) {
+      console.error('Console expand button not found!');
+      return;
+    }
+    if (!this.elements.commandConsole) {
+      console.error('Command console not found!');
+      return;
+    }
 
-    this.elements.consoleResizeHandle.addEventListener('mousedown', (e) => {
-      e.preventDefault();
-      this.consoleResize.isResizing = true;
-      this.consoleResize.startY = e.clientY;
-      this.consoleResize.startHeight = this.elements.commandConsole.offsetHeight;
+    console.log('Setting up console expand button');
 
-      // Disable transition during resize
-      this.elements.commandConsole.style.transition = 'none';
+    this.elements.consoleExpandBtn.addEventListener('click', () => {
+      console.log('Console expand button clicked');
+      this.consoleExpanded = !this.consoleExpanded;
 
-      document.body.style.cursor = 'ns-resize';
-      document.body.style.userSelect = 'none';
-    });
-
-    document.addEventListener('mousemove', (e) => {
-      if (!this.consoleResize.isResizing) return;
-
-      const deltaY = this.consoleResize.startY - e.clientY;
-      let newHeight = this.consoleResize.startHeight + deltaY;
-
-      // Constrain height
-      newHeight = Math.max(this.consoleResize.minHeight, newHeight);
-      newHeight = Math.min(this.consoleResize.maxHeight, newHeight);
-
-      this.elements.commandConsole.style.height = `${newHeight}px`;
-    });
-
-    document.addEventListener('mouseup', () => {
-      if (!this.consoleResize.isResizing) return;
-
-      this.consoleResize.isResizing = false;
-
-      // Re-enable transition
-      this.elements.commandConsole.style.transition = 'height 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
-
-      document.body.style.cursor = '';
-      document.body.style.userSelect = '';
+      if (this.consoleExpanded) {
+        this.elements.commandConsole.classList.add('expanded');
+        this.elements.consoleExpandBtn.title = 'Collapse Console';
+        console.log('Console expanded');
+      } else {
+        this.elements.commandConsole.classList.remove('expanded');
+        this.elements.consoleExpandBtn.title = 'Expand Console';
+        console.log('Console collapsed');
+      }
     });
   }
 
   /**
-   * Expand console to 35vh
+   * Expand console to 180px (~3 lines)
    * @private
    */
   _expandConsole() {
@@ -241,7 +253,7 @@ export class Grimoire {
   }
 
   /**
-   * Collapse console to 80px
+   * Collapse console to 120px (default)
    * @private
    */
   _collapseConsole() {
@@ -499,6 +511,12 @@ export class Grimoire {
           <div class="spell-card-meta-label">Duration</div>
           <div class="spell-card-meta-value">${spell.duration || 'Unknown'}</div>
         </div>
+        ${spell.damage ? `
+        <div class="spell-card-meta-item spell-card-damage">
+          <div class="spell-card-meta-label">Damage/Effect</div>
+          <div class="spell-card-meta-value">${spell.damage}</div>
+        </div>
+        ` : ''}
       </div>
     `;
 

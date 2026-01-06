@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "6954963c5648a6dce9f6f937"
+  },
+  "name": "Resistance",
+  "level": 1,
+  "description": "You brush a sigil of resolve onto a willing creature. Until the spell ends, the target gains a flickering ward that it may invoke once to gain advantage on a single saving throw of its choice. The ward dissipates immediately after use.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 minute",
+  "damage": "None",
+  "school": "Abjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/a887525a-9e73-416c-aea0-3eab6d05dc28.png"
+}

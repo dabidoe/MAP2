@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469f95648a6dce9f6f7be"
+  },
+  "name": "Ray of Frost",
+  "level": 0,
+  "description": "You snap your fingers and launch a glittering splinter of compressed ice that bursts on impact, numbing flesh and jolting reflexes.",
+  "castingTime": "1 action",
+  "range": "60 ft",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "1d6 cold",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/43c0d0c4-148e-4d64-a6f9-1b353e78927c.png"
+}

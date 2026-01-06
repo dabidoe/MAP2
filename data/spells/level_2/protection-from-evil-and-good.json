@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469f35648a6dce9f6f7b6"
+  },
+  "name": "Protection from Evil and Good",
+  "level": 2,
+  "description": "You enshroud a willing creature in a shimmering veil that turns aside otherworldly influence. For the duration, the target gains advantage on saving throws against charm, fear, and possession. Creatures from beyond the mortal realm—aberrations, fey, fiends, and spirits—have disadvantage on attack rolls against the target. The veil fades early if the target strikes a creature or casts a spell that harms an enemy.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S, M (a shard of translucent crystal)",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": "None",
+  "school": "Abjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/1126edf8-0a07-4af8-bbd3-7ee145cdc9ad.png"
+}

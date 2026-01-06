@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "6954699d5648a6dce9f6f762"
+  },
+  "name": "Fire Bolt",
+  "level": 0,
+  "description": "You flick a spark of crackling embers toward a creature within sight. On a hit, the ember bursts into a sharp flare, scorching the target. Unattended flammable objects may smolder or ignite.",
+  "castingTime": "1 action",
+  "range": "90 ft",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "1d8 fire",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/0f820f83-5682-4524-b29c-13c08f60fe92.png"
+}

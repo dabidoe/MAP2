@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "6954697a5648a6dce9f6f73c"
+  },
+  "name": "Acid Splash",
+  "level": 0,
+  "description": "You snap your fingers and release a dart of green flame‑tinged acid that lashes toward a creature you can see. On impact, it splashes in a brief corrosive flare, searing the target before evaporating.",
+  "castingTime": "1 action",
+  "range": "60 ft",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "1d6 acid",
+  "school": "Conjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/2c5bd895-fc51-40fe-8197-c8d6a9e6d07c.png"
+}

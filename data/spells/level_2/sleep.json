@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "69546a0a5648a6dce9f6f7d6"
+  },
+  "name": "Sleep",
+  "level": 2,
+  "description": "You cast a tether of drowsy magic that latches onto a creature’s mind. The target must succeed on a Wisdom save or become heavy‑eyed and sluggish. On a failure, the creature collapses into a shallow trance, perceiving only muted shapes and sounds. While dream‑hooked, it is unconscious but can be roused by taking damage or being shaken awake.",
+  "castingTime": "1 action",
+  "range": "60 ft",
+  "components": "V, S, M (a loop of twine knotted in your sleep)",
+  "duration": "Up to 1 minute",
+  "damage": "None",
+  "school": "Enchantment",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/9529ec13-804b-45fb-a204-d89e4c7e2da2.png"
+}

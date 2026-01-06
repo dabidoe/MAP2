@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469fb5648a6dce9f6f7c2"
+  },
+  "name": "Ray of Sickness",
+  "level": 2,
+  "description": "You snap a crackling lash of sickly energy at a creature you can see. The bolt gnaws at flesh and spirit alike. The target must make a Constitution save. On a failure, it suffers full damage and is wracked with debilitating weakness, granting disadvantage on its next attack roll. On a success, it takes half damage and suffers no further effect.",
+  "castingTime": "1 action",
+  "range": "90 ft",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "2d10 necrotic",
+  "school": "Necromancy",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/d7f333f7-bdad-4fc7-a01d-a9154d33c3e0.png"
+}

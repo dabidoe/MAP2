@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "6954962b5648a6dce9f6f91d"
+  },
+  "name": "Mending",
+  "level": 0,
+  "description": "You weave a faint shimmer across a damaged object, coaxing its structure back into harmony. You mend a fracture, split, or tear no larger than 1 foot in any direction, seamlessly restoring the item’s form. Arcane items regain only their physical integrity, not lost enchantments.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "None",
+  "school": "Transmutation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/0c767b69-a452-43fb-8d46-3a2227c9f381.png"
+}

@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469895648a6dce9f6f744"
+  },
+  "name": "Fireball",
+  "level": 3,
+  "description": "You call down a concentrated beam of radiant fire that spears a point you can see, erupting in a tight burst that sears everything caught within its glare.",
+  "castingTime": "1 action",
+  "range": "120 ft",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "6d8 radiant",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/8cae366b-76fc-4f81-b121-ddd999426609.png"
+}

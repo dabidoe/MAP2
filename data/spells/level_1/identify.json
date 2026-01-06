@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469c25648a6dce9f6f78a"
+  },
+  "name": "Identify",
+  "level": 1,
+  "description": "By laying a steady hand upon an object or creature, you unveil hidden arcane truths. Objects reveal any magical traits, latent powers, or curse binds. Creatures disclose ongoing spells influencing them. The insight manifests as flashes of symbolic imagery only you can perceive.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "None",
+  "school": "Divination",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/7cff0e42-20a4-426e-9aa8-423b265b2dd3.png"
+}

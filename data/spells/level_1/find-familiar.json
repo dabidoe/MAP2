@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469a05648a6dce9f6f766"
+  },
+  "name": "Find Familiar",
+  "level": 1,
+  "description": "You summon a minor planar echo that coalesces into a tiny companion shaped as an animal or spirit of your choosing. It acts independently but loyally, relaying whispered impressions and magical signs. Though fragile, the echo can scout, deliver simple messages, or manifest faint glimmers of its home plane.",
+  "castingTime": "10 minutes",
+  "range": "30 feet",
+  "components": "V, S, M (a small charm of carved bone or crystal worth 5 gp)",
+  "duration": "8 hours",
+  "damage": "None",
+  "school": "Conjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/c42b08df-3c07-4210-a22e-35f4e9ea34c2.png"
+}

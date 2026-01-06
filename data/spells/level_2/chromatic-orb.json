@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "6954695b5648a6dce9f6f728"
+  },
+  "name": "Chromatic Orb",
+  "level": 2,
+  "description": "You conjure a needle-thin bolt of shifting light and launch it at a creature you can see. The dart flares into a chosen hue as it flies. Make a ranged spell attack; on a hit, the dart bursts with the selected energy type.",
+  "castingTime": "1 action",
+  "range": "120 ft",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "2d10 acid, cold, fire, lightning, radiant, or thunder (chosen when cast)",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/d6d95f57-83eb-40f6-b583-a373d444c133.png"
+}

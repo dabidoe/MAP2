@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469cb5648a6dce9f6f796"
+  },
+  "name": "Light",
+  "level": 0,
+  "description": "You tap a creature or object, igniting a tiny mote of floating starlight that hovers within 5 feet of the target. The mote sheds bright light in a 15‑foot radius and dim light for another 15 feet. As a bonus action, you can move the mote up to 20 feet to a point you can see. The mote winks out if it leaves your range or you create a new one.",
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S",
+  "duration": "1 hour",
+  "damage": "None",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/17f0d361-f3b7-412d-9566-d0e2762ac9be.png"
+}

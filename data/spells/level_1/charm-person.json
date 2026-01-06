@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469865648a6dce9f6f740"
+  },
+  "name": "Charm Person",
+  "level": 1,
+  "description": "You speak a soft entreaty that drifts into the mind of one creature you can see. The target must succeed on a Wisdom saving throw or feel a gentle surge of trust toward you. For the duration, the creature treats you as a calm mediator and will avoid hostility toward you unless clearly threatened. If you or your allies are actively harming it, the target has advantage on the saving throw. When the effect ends, the creature senses your influence but not your intent.",
+  "castingTime": "1 action",
+  "range": "40 ft",
+  "components": "V, S",
+  "duration": "10 minutes",
+  "damage": "None",
+  "school": "Enchantment",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/6e6e4d7a-8184-4589-b556-48219cd1a3ed.png"
+}

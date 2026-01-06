@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "6954962e5648a6dce9f6f921"
+  },
+  "name": "Protection from Evil and Good",
+  "level": 1,
+  "description": "You cloak a willing creature in shimmering ward-light imperceptible to all but you. For the duration, the target gains advantage on saving throws against being charmed, frightened, or possessed. The first time each round a creature targets the warded ally with an attack or harmful spell, the aggressor must succeed on a Wisdom save or have the effect fizzle harmlessly. The aegis fades early if the target strikes a creature or forces a hostile saving throw.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S, M (a sliver of moon-glass)",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": "None",
+  "school": "Abjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/1126edf8-0a07-4af8-bbd3-7ee145cdc9ad.png"
+}

@@ -1,0 +1,254 @@
+{
+  "_id": {
+    "$oid": "6956ec655648a6dce9f6fcdd"
+  },
+  "userId": {
+    "$oid": "691f08ef96b2af2c7f0a183e"
+  },
+  "name": "Feldwebel Baum",
+  "slug": "feldwebel-baum-dacec",
+  "class": "Paladin/Fighter",
+  "race": "Human",
+  "level": 8,
+  "alignment": "Neutral Good",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/71a8a921-8ea8-4594-8507-f1de0d34b0bb.png",
+  "gallery": [
+    "https://statsheet-cdn.b-cdn.net/images/71a8a921-8ea8-4594-8507-f1de0d34b0bb.png",
+    "https://statsheet-cdn.b-cdn.net/images/bab27894-5b7b-4fc1-b68f-c05b15676d72.png",
+    "https://statsheet-cdn.b-cdn.net/images/1592953a-d93d-4733-917e-247384929f1b.png",
+    "https://statsheet-cdn.b-cdn.net/images/d2730f3f-290e-49a0-a966-4ce213500dde.png"
+  ],
+  "profile": {
+    "backstory": "Feldwebel Baum, a Hessian Sergeant, has risen through the ranks with iron discipline. As a Level 8 Paladin/Fighter hybrid, he commands respect and fear. His military career is marked by strict adherence to duty, leading his troops with an unyielding hand. His presence in the center of the main room is a testament to his leadership, providing a 'Lead by Example' aura that buffs the AC of nearby Hessian soldiers.",
+    "behavior": "Reviewing a ledger by candlelight, hand resting on his blade, embodying discipline and readiness.",
+    "personality": "Severe"
+  },
+  "attributes": {
+    "str": 16,
+    "dex": 12,
+    "con": 14,
+    "int": 10,
+    "wis": 13,
+    "cha": 15
+  },
+  "hp": {
+    "current": 59,
+    "max": 59
+  },
+  "ac": 19,
+  "initiative": 1,
+  "state": "Alert",
+  "isPublic": true,
+  "temporaryModifiers": [],
+  "passiveTraits": [
+    {
+      "traitId": {
+        "$oid": "6956ebf85648a6dce9f6fc79"
+      },
+      "name": "Lead by Example",
+      "description": "In turmoil, your poise becomes a shield for others. Nearby companions gain subtle protection as your unshakable focus anchors their resolve. Even chaos hesitates before your quiet certainty.",
+      "summary": "Your calm presence steadies allies, granting minor resilience under fire.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767304184168.png"
+    },
+    {
+      "traitId": {
+        "$oid": "6956ec005648a6dce9f6fc81"
+      },
+      "name": "Aura of Devotion",
+      "description": "Your presence emits a warm, unseen glow that anchors companions' spirits. Those close to you find their minds harder to sway, as if wrapped in quiet reassurance.",
+      "summary": "A soft radiance steadies nearby allies against fear and deceit.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767304192632.png"
+    },
+    {
+      "traitId": {
+        "$oid": "6956e8735648a6dce9f6fba5"
+      },
+      "name": "Second Wind",
+      "description": "Your inner spark flares when danger peaks, knitting wounds with warm, spectral fire. The blaze also clears your thoughts, granting a moment of fierce clarity. This power returns after a short rest.",
+      "summary": "Once per rest, ignite inner spirit to restore modest vitality and briefly sharpen resolve.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767303283571.png"
+    },
+    {
+      "traitId": {
+        "$oid": "6956ec0a5648a6dce9f6fc8a"
+      },
+      "name": "Improved Critical",
+      "description": "Your attacks hum with grim portent; whenever tension rises, even a near‑miss can become a brutal strike. Enemies often learn too late that fortune favors your wrath.",
+      "summary": "Your blows foreshadow carnage, striking with uncanny precision when fate leans your way.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767304202038.png"
+    },
+    {
+      "traitId": {
+        "$oid": "69503e8d5648a6dce9f6efd7"
+      },
+      "name": "Weapon",
+      "description": "Faint arcs dance over your skin, whispering warnings and jolting threats. Nearby creatures hesitate, sensing the air tighten. Once per scene, you may gain advantage on a reflexive check.",
+      "summary": "A crackling mantle of static energy that subtly shifts fate and startles foes.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1766866573841.png"
+    },
+    {
+      "traitId": {
+        "$oid": "6956ec115648a6dce9f6fc93"
+      },
+      "name": "Aura Effect",
+      "description": "Your steady focus manifests as a soft, protective pressure in the air. Allies within a few steps gain a slight defensive edge, as if your confidence shields them. Even in chaos, your quiet determination holds the line.",
+      "summary": "Your calm resolve radiates outward, granting nearby allies subtle protection.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767304209761.png"
+    },
+    {
+      "traitId": {
+        "$oid": "6956ec1a5648a6dce9f6fc9b"
+      },
+      "name": "Command Style",
+      "description": "Your serenity holds firm even in chaos, lending quiet courage to allies and denying enemies the satisfaction of rattling you. Once per scene, you may steady another's resolve with a measured word. Those who face you sense an unsettling, unbreakable patience.",
+      "summary": "Unshakable calm that steadies allies and unnerves foes.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767304219015.png"
+    },
+    {
+      "traitId": {
+        "$oid": "6956ec245648a6dce9f6fca3"
+      },
+      "name": "Location",
+      "description": "Soft echoes trail your steps, occasionally murmuring hints of hidden dangers or intentions. The effect is subtle, never fully reliable, but often unnervingly accurate.",
+      "summary": "Faint whispers cling to you, revealing scraps of nearby truths.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767304228770.png"
+    },
+    {
+      "traitId": {
+        "$oid": "6956ec2f5648a6dce9f6fcab"
+      },
+      "name": "Service Record",
+      "description": "Years of marching through distant conflicts have etched unshakable discipline into you. You rarely falter under pressure, drawing on battle-worn memory to steady allies and unsettle foes. Even peace carries the faint drumbeat of past campaigns.",
+      "summary": "Veteran instincts flare in tense moments, granting cool-headed focus born from long-forgotten wars.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767304239797.png"
+    },
+    {
+      "traitId": {
+        "$oid": "6956ec3d5648a6dce9f6fcb3"
+      },
+      "name": "Military Honors",
+      "description": "Faint echoes of long‑ended conflicts drift through their mind, granting uncanny awareness in tense moments. These ghostly impressions rarely speak plainly but nudge them toward bold or cautious action. Allies find their timing eerie but reliable.",
+      "summary": "Whispers of past battles guide their instincts and steady their resolve.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767304253104.png"
+    }
+  ],
+  "feats": [
+    {
+      "featId": {
+        "$oid": "6956ec455648a6dce9f6fcbb"
+      },
+      "name": "Protection",
+      "description": "When a nearby companion comes under threat, you step into the fray with instinctive precision, turning enemy blows aside with shield, steel, or sheer presence. Once per round, you may impose a hindrance on an attacker targeting an ally within arm's reach, forcing them to fight through your stalwart defense.",
+      "summary": "You interpose yourself to blunt harm aimed at nearby allies.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767304261546.png"
+    },
+    {
+      "featId": {
+        "$oid": "6956ec4f5648a6dce9f6fcc3"
+      },
+      "name": "Fighting Style (Defense)",
+      "description": "A lifetime of surviving close calls has honed your ability to raise a defense a heartbeat before danger strikes. When you brace yourself, your stance hardens, granting a subtle but reliable boost to your protection as long as you remain vigilant. Even when surprised, your body shifts just enough to lessen incoming harm.",
+      "summary": "Your reflexive guard turns even glancing blows aside.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767304271649.png"
+    },
+    {
+      "featId": {
+        "$oid": "6956c8665648a6dce9f6fb19"
+      },
+      "name": "Divine Smite",
+      "description": "You call down a shard of star-fire to lash your weapon strike with blistering brilliance. When you commit to the blow, the attack erupts in radiant power that scars both flesh and spirit, leaving foes dazzled by the afterimage. Creatures struck often feel as though the heavens themselves have judged them.",
+      "summary": "Imbue a weapon blow with searing celestial force.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767295078363.png"
+    },
+    {
+      "featId": {
+        "$oid": "6928d1b35648a6dce9f6def8"
+      },
+      "name": "Remarkable Athlete",
+      "description": "Your footwork becomes a fluid dance, letting you glide over unstable ground, squeeze through narrow gaps, and pivot out of danger with uncanny ease. Once per rest, you may ignore hindering terrain for a brief moment, treating the world as light and open while you pass through it. Observers often swear you're carried by a breeze only you can feel.",
+      "summary": "You move with drifting, effortless grace, slipping through tight spaces and terrain as though the air itself yields to you.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1764282803458.png"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Intimidation",
+      "modifier": 6,
+      "proficient": true,
+      "_id": {
+        "$oid": "6956ec655648a6dce9f6fcde"
+      }
+    },
+    {
+      "name": "Athletics",
+      "modifier": 6,
+      "proficient": true,
+      "_id": {
+        "$oid": "6956ec655648a6dce9f6fcdf"
+      }
+    },
+    {
+      "name": "Persuasion",
+      "modifier": 4,
+      "proficient": false,
+      "_id": {
+        "$oid": "6956ec655648a6dce9f6fce0"
+      }
+    },
+    {
+      "name": "Perception",
+      "modifier": 3,
+      "proficient": false,
+      "_id": {
+        "$oid": "6956ec655648a6dce9f6fce1"
+      }
+    },
+    {
+      "name": "History",
+      "modifier": 2,
+      "proficient": false,
+      "_id": {
+        "$oid": "6956ec655648a6dce9f6fce2"
+      }
+    }
+  ],
+  "abilities": [
+    {
+      "abilityId": {
+        "$oid": "6956ec565648a6dce9f6fccd"
+      }
+    },
+    {
+      "abilityId": {
+        "$oid": "6956ec605648a6dce9f6fcd5"
+      }
+    },
+    {
+      "abilityId": {
+        "$oid": "6956c8985648a6dce9f6fb49"
+      }
+    },
+    {
+      "abilityId": {
+        "$oid": "6928d1dd5648a6dce9f6df20"
+      }
+    }
+  ],
+  "spells": {
+    "slots": [],
+    "known": []
+  },
+  "inventory": {
+    "weapons": [],
+    "armor": [],
+    "items": []
+  },
+  "legacySourceId": "6956d739dbca74024f2d9b0b",
+  "createdAt": {
+    "$date": "2026-01-01T21:51:33.663Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-01T22:11:13.036Z"
+  },
+  "__v": 0
+}

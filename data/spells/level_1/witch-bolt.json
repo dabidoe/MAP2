@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "69546a155648a6dce9f6f7e6"
+  },
+  "name": "Witch Bolt",
+  "level": 1,
+  "description": "A jagged strand of storm force lashes from your hand to a creature you can see, binding it in a flickering arc of wild energy. While the tether holds, you can channel additional bursts of power into the target as you concentrate.",
+  "castingTime": "1 action",
+  "range": "60 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 minute",
+  "damage": "1d10 lightning",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/811bb6b9-5ace-444c-81cc-8193b3203088.png"
+}

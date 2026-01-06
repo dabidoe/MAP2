@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "6954960e5648a6dce9f6f8ef"
+  },
+  "name": "Create or Destroy Water",
+  "level": 1,
+  "description": "Conjure a sudden bloom of life-giving moisture or wither it away. You create a gush of fresh water that fills a 5‑foot square or you desiccate the same area, draining moisture from soil, plants, or small pools.",
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "None",
+  "school": "Transmutation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/74ed0a7d-8176-4a5d-b0e8-92c2d7c9761a.png"
+}

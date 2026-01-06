@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "6956c8c55648a6dce9f6fb71"
+  },
+  "name": "Branding Smite",
+  "level": 2,
+  "description": "You wreathe your next weapon strike in stellar fire. On your first hit before the spell ends, the attack erupts in a burst of astral sparks, burning the target and outlining it in shimmering constellations that foil invisibility and reveal hidden movement.",
+  "castingTime": "1 bonus action",
+  "range": "Self",
+  "components": "V",
+  "duration": "Concentration, up to 1 minute",
+  "damage": "2d8 Radiant",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/ae37c97f-9318-44dd-849d-7be3117555be.png"
+}

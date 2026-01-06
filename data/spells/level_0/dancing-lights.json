@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469bd5648a6dce9f6f782"
+  },
+  "name": "Dancing Lights",
+  "level": 0,
+  "description": "Conjure up to four tiny motes of sentient light that flit about as you command. Each sprite sheds dim light in a small radius and can rearrange into simple patterns or symbols on your turn.",
+  "castingTime": "1 action",
+  "range": "90 ft",
+  "components": "V, S",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": "None",
+  "school": "Illusion",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/2e51be05-b97d-4c74-9a18-c1209d8b29f4.png"
+}

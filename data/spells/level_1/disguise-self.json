@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469b75648a6dce9f6f77a"
+  },
+  "name": "Disguise Self",
+  "level": 1,
+  "description": "You cloak yourself in a mutable illusion that subtly reshapes your appearance. You may alter facial features, coloration, hairstyle, and attire, though the illusion cannot change your size or body silhouette. Physical contact reveals the falsehood. A creature can use an action to inspect the illusion, detecting it with a successful Intelligence (Investigation) check against your spell save DC.",
+  "castingTime": "1 action",
+  "range": "Self",
+  "components": "V, S",
+  "duration": "1 hour",
+  "damage": "None",
+  "school": "Illusion",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/c948f2a3-24f7-47f8-8668-d3ba4e60806c.png"
+}

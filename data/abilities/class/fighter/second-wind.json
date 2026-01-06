@@ -1,0 +1,14 @@
+{
+  "id": "fighter-second-wind",
+  "name": "Second Wind",
+  "description": "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level.",
+  "summary": "Heal yourself as a bonus action once per rest.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/runware-second-wind.png",
+  "type": "bonus_action",
+  "source": "fighter",
+  "mechanics": {
+    "action": "bonus_action",
+    "uses": "1/short_rest",
+    "healing": "1d10 + level"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469fd5648a6dce9f6f7c6"
+  },
+  "name": "Poison Spray",
+  "level": 0,
+  "description": "You hiss a chilling word that summons a curl of necrotic vapors around a creature you can see. The target must succeed on a Constitution save or have its life-essence scoured by spectral rot.",
+  "castingTime": "1 action",
+  "range": "15 ft",
+  "components": "V",
+  "duration": "Instantaneous",
+  "damage": "1d10 necrotic",
+  "school": "Necromancy",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/2c4f2b89-ea38-4fee-a923-75cc565d1cfc.png"
+}

@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695496455648a6dce9f6f947"
+  },
+  "name": "Spare the Dying",
+  "level": 1,
+  "description": "A faint ember of life leaps from your hand into a creature on the brink of death. The target regains a spark of consciousness, allowing it to take one action or move on its next turn before falling unconscious and stable.",
+  "castingTime": "1 bonus action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "1 round",
+  "damage": "None",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/ff40cfd8-0b0d-432e-80cc-a2a06726d751.png"
+}

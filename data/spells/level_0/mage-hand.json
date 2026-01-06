@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469d15648a6dce9f6f7a0"
+  },
+  "name": "Mage Hand",
+  "level": 0,
+  "description": "You summon a faint, translucent force that mimics the motion of your own hand. The grip can lift and manipulate up to 15 pounds, delicately interact with small mechanisms, or steady unstable objects. The grip cannot activate magical items or engage in combat but can perform subtle tasks such as picking pockets, tightening knots, or tracing sigils in dust.",
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S",
+  "duration": "1 minute",
+  "damage": "None",
+  "school": "Conjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/dcb376d1-ce54-489e-b659-4f8526d4a9bd.png"
+}

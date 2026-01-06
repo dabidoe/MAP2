@@ -1,0 +1,213 @@
+{
+  "_id": {
+    "$oid": "6956e8de5648a6dce9f6fc04"
+  },
+  "userId": {
+    "$oid": "691f08ef96b2af2c7f0a183e"
+  },
+  "name": "General Nathanael Greene",
+  "slug": "general-nathanael-greene-5d586",
+  "class": "Fighter",
+  "race": "Human",
+  "level": 9,
+  "alignment": "Neutral Good",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/32ce61a3-6e54-42e0-b508-aa5e0dde1fc3.png",
+  "gallery": [
+    "https://statsheet-cdn.b-cdn.net/images/32ce61a3-6e54-42e0-b508-aa5e0dde1fc3.png",
+    "https://statsheet-cdn.b-cdn.net/images/a849fb51-7e82-4a70-835e-61227da20621.png",
+    "https://statsheet-cdn.b-cdn.net/images/80344afc-4766-448c-83e3-e65eca264898.png",
+    "https://statsheet-cdn.b-cdn.net/images/ee09b510-eb63-416f-9214-da2716cf1590.png"
+  ],
+  "profile": {
+    "backstory": "A former Quaker who took up arms for liberty, General Nathanael Greene has risen to prominence in the Continental Army. His strategic mind has been crucial in several campaigns, always aiming to minimize casualties while maximizing effectiveness.",
+    "behavior": "He focuses on logistics and flanking maneuvers, valuing the lives of his scouts. He warns them of the Hessian's disciplined fire. In combat, he uses 'Commander's Strike' to let the party take extra actions.",
+    "personality": "Analytical"
+  },
+  "attributes": {
+    "str": 16,
+    "dex": 14,
+    "con": 15,
+    "int": 18,
+    "wis": 13,
+    "cha": 12
+  },
+  "hp": {
+    "current": 66,
+    "max": 66
+  },
+  "ac": 16,
+  "initiative": 2,
+  "state": "Anxious but focused",
+  "isPublic": false,
+  "temporaryModifiers": [],
+  "passiveTraits": [
+    {
+      "traitId": {
+        "$oid": "6956e8735648a6dce9f6fba5"
+      },
+      "name": "Second Wind",
+      "description": "Your inner spark flares when danger peaks, knitting wounds with warm, spectral fire. The blaze also clears your thoughts, granting a moment of fierce clarity. This power returns after a short rest.",
+      "summary": "Once per rest, ignite inner spirit to restore modest vitality and briefly sharpen resolve.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767303283571.png"
+    },
+    {
+      "traitId": {
+        "$oid": "6956e87c5648a6dce9f6fbad"
+      },
+      "name": "Know Your Enemy",
+      "description": "A quiet intuition lets you notice the tiniest hitch in an enemy's stance. This flash of perception can guide your next move or warn allies. Works best against overconfident opponents.",
+      "summary": "Sense subtle flaws in foes, granting momentary tactical insight.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767303292355.png"
+    },
+    {
+      "traitId": {
+        "$oid": "6928dcd55648a6dce9f6e2b3"
+      },
+      "name": "Evasion",
+      "description": "Your body reacts before thought, slipping between moments to evade destructive force. Once per perilous encounter, you may treat a failed agility-based defense as a partial success. Enemies soon learn why you're never where they strike.",
+      "summary": "When danger erupts, you blur aside, turning near-certain harm into harmless wind.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1764285653884.png"
+    },
+    {
+      "traitId": {
+        "$oid": "6956e8875648a6dce9f6fbb6"
+      },
+      "name": "Campaigns Led",
+      "description": "Your presence carries the weight of storied wins, subtly boosting resolve in tense moments. When pressure rises, allies sense your quiet certainty. Even enemies hesitate at the echo of your renown.",
+      "summary": "Past triumphs bolster allies' morale when you quietly recall the battles that shaped you.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767303303941.png"
+    },
+    {
+      "traitId": {
+        "$oid": "6956e8905648a6dce9f6fbbe"
+      },
+      "name": "Notable Victory",
+      "description": "You once overcame impossible odds, and the memory still radiates strength. Companions feel steadier in your presence, sensing the echo of that victory. Even foes hesitate at your unwavering resolve.",
+      "summary": "Your past win inspires allies, granting brief surges of courage when danger rises.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767303312860.png"
+    },
+    {
+      "traitId": {
+        "$oid": "6956e8995648a6dce9f6fbc6"
+      },
+      "name": "Respect for Life",
+      "description": "The character feels a soft, guiding pull toward preservation, often stepping between danger and the innocent. This instinct can stay their hand in combat, urging nonlethal solutions. Even hardened foes may sense their reluctance to kill.",
+      "summary": "Instinctively shields the vulnerable, hesitating only long enough to spare a life.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767303321831.png"
+    },
+    {
+      "traitId": {
+        "$oid": "6956e8a35648a6dce9f6fbce"
+      },
+      "name": "Motto",
+      "description": "You face turmoil with a soldier's poise, shrugging off fear and doubt. Your steadiness helps companions regroup when morale falters. Even in dire moments, your presence anchors the line.",
+      "summary": "Unshakable calm steadies you amid chaos, lending quiet strength to allies.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767303331865.png"
+    }
+  ],
+  "feats": [
+    {
+      "featId": {
+        "$oid": "6956e8ad5648a6dce9f6fbd6"
+      },
+      "name": "Commander's Strike",
+      "description": "With a sharp command or a guttural battle cry, you expose a fleeting weakness in an enemy's guard. One ally who can hear you may immediately exploit the moment with a decisive attack or maneuver. Even if the blow misses, your guidance leaves the foe off-balance and vulnerable.",
+      "summary": "Call out an opening that lets an ally strike with sudden precision.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767303341136.png"
+    },
+    {
+      "featId": {
+        "$oid": "6956e8b45648a6dce9f6fbde"
+      },
+      "name": "Evasive Footwork",
+      "description": "You flow across the battlefield with effortless grace, leaving attackers swinging at empty air. When you move at least a short distance on your turn, you gain a brief surge of evasive momentum that makes incoming blows falter. Observers see only a streak of motion where you once stood.",
+      "summary": "Your movements blur into swift arcs that make you harder to strike.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767303348456.png"
+    },
+    {
+      "featId": {
+        "$oid": "6956e8bb5648a6dce9f6fbe6"
+      },
+      "name": "Riposte",
+      "description": "When an enemy's swing cuts only through air, you draw on a flicker of otherworldly momentum—your blade blurs, leaving a brief afterimage as you strike back in the same heartbeat. This counterattack seems to originate from where you stood a moment before, unnerving foes who rely on predictable motion.",
+      "summary": "Turn a foe's failed strike into a flashing, spectral counterattack.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767303355578.png"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Athletics",
+      "modifier": 7,
+      "proficient": false,
+      "_id": {
+        "$oid": "6956e8de5648a6dce9f6fc05"
+      }
+    },
+    {
+      "name": "History",
+      "modifier": 8,
+      "proficient": true,
+      "_id": {
+        "$oid": "6956e8de5648a6dce9f6fc06"
+      }
+    },
+    {
+      "name": "Insight",
+      "modifier": 5,
+      "proficient": true,
+      "_id": {
+        "$oid": "6956e8de5648a6dce9f6fc07"
+      }
+    },
+    {
+      "name": "Intimidation",
+      "modifier": 5,
+      "proficient": false,
+      "_id": {
+        "$oid": "6956e8de5648a6dce9f6fc08"
+      }
+    },
+    {
+      "name": "Persuasion",
+      "modifier": 5,
+      "proficient": false,
+      "_id": {
+        "$oid": "6956e8de5648a6dce9f6fc09"
+      }
+    }
+  ],
+  "abilities": [
+    {
+      "abilityId": {
+        "$oid": "6956e8c25648a6dce9f6fbee"
+      }
+    },
+    {
+      "abilityId": {
+        "$oid": "6956e8cc5648a6dce9f6fbf6"
+      }
+    },
+    {
+      "abilityId": {
+        "$oid": "6956e8d65648a6dce9f6fbfe"
+      }
+    }
+  ],
+  "spells": {
+    "slots": [],
+    "known": []
+  },
+  "inventory": {
+    "weapons": [],
+    "armor": [],
+    "items": []
+  },
+  "legacySourceId": "6956bdbfdbca74024f2d9a3a",
+  "createdAt": {
+    "$date": "2026-01-01T21:36:30.145Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-01T21:36:30.145Z"
+  },
+  "__v": 0
+}

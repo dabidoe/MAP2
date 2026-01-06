@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469e95648a6dce9f6f7a8"
+  },
+  "name": "Message",
+  "level": 0,
+  "description": "You send a thin strand of psychic sound toward one creature you can see. The target alone hears your brief message in its mind and may respond in a faint thought only you can perceive. The thread can bend around corners but cannot pass through magical silence or antimagic effects.",
+  "castingTime": "1 action",
+  "range": "90 feet",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "None",
+  "school": "Divination",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/889d6b0b-11c8-4972-99a7-65f9dcb55956.png"
+}

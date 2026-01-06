@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "69546a035648a6dce9f6f7ce"
+  },
+  "name": "Shocking Grasp",
+  "level": 1,
+  "description": "You snap a thread of charged aether at a creature you can touch, discharging a sharp jolt that rattles muscle and focus. The surge crackles loudly, leaving the target briefly disoriented.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "2d6 lightning",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/789f4802-3556-4af9-9adf-1aa8648f07a0.png"
+}

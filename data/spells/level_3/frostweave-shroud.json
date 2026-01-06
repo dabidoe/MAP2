@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "69249c1ce83d14cb80858de5"
+  },
+  "name": "Frostweave Shroud",
+  "level": 3,
+  "description": "A frigid mantle lashes around a creature you can see, hardening into jagged frost that gnaws at flesh and hinders motion. Shards crackle softly as the veil tightens with each passing moment.",
+  "castingTime": "1 action",
+  "range": "90 feet",
+  "components": "V, S, M (a shard of winterglass)",
+  "duration": "Concentration, up to 1 minute",
+  "damage": "2d8 cold per turn",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/1efcd817-3b79-46c9-b4b6-600ab767b842.png"
+}

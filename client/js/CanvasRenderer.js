@@ -101,8 +101,11 @@ export class CanvasRenderer {
     this.canvas.addEventListener('contextmenu', (e) => this._onRightClick(e));
     this.canvas.addEventListener('wheel', (e) => this._onWheel(e));
 
-    // Resize observer
-    window.addEventListener('resize', () => this._resize());
+    // Observe container size changes (works better than window resize for flexbox layouts)
+    this.resizeObserver = new ResizeObserver(() => {
+      this._resize();
+    });
+    this.resizeObserver.observe(this.container);
 
     console.log('✅ CanvasRenderer initialized');
   }
@@ -117,6 +120,32 @@ export class CanvasRenderer {
     this.canvas.width = this.container.clientWidth;
     this.canvas.height = this.container.clientHeight;
     console.log(`Canvas resized to: ${this.canvas.width}x${this.canvas.height}`);
+
+    // Recalculate zoom to maintain aspect ratio when background exists
+    if (this.backgroundReady && this.backgroundImage) {
+      const img = this.backgroundImage;
+
+      // Calculate new zoom to fit image to canvas (fill screen)
+      const scaleX = this.canvas.width / img.width;
+      const scaleY = this.canvas.height / img.height;
+
+      // Use the larger scale to fill the screen (maintains aspect ratio)
+      const fillZoom = Math.max(scaleX, scaleY);
+
+      // Update zoom and limits
+      this.panZoom.zoom = fillZoom;
+      this.panZoom.minZoom = Math.min(scaleX, scaleY) * 0.5;
+      this.panZoom.maxZoom = fillZoom * 3;
+
+      // Recenter the image
+      const scaledWidth = img.width * fillZoom;
+      const scaledHeight = img.height * fillZoom;
+      this.panZoom.panX = (this.canvas.width - scaledWidth) / 2;
+      this.panZoom.panY = (this.canvas.height - scaledHeight) / 2;
+
+      console.log(`   Zoom recalculated: ${fillZoom.toFixed(2)}, Pan: ${this.panZoom.panX.toFixed(0)}, ${this.panZoom.panY.toFixed(0)}`);
+    }
+
     this.render();
   }
 
@@ -809,6 +838,12 @@ export class CanvasRenderer {
    * Destroy renderer
    */
   destroy() {
+    // Disconnect ResizeObserver
+    if (this.resizeObserver) {
+      this.resizeObserver.disconnect();
+      this.resizeObserver = null;
+    }
+
     if (this.canvas && this.canvas.parentNode) {
       this.canvas.parentNode.removeChild(this.canvas);
     }

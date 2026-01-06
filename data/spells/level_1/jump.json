@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469c85648a6dce9f6f792"
+  },
+  "name": "Jump",
+  "level": 1,
+  "description": "You imbue a willing creature with a burst of buoyant magic, letting it bound through the air in weightless arcs. Until the spell ends, the target gains a powerful aerial leap, allowing brief, controlled midair adjustments.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "1 minute",
+  "damage": "None",
+  "school": "Transmutation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/126124cf-14ef-4885-910d-fa7828225f35.png"
+}

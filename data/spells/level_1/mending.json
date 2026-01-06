@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469e65648a6dce9f6f7a4"
+  },
+  "name": "Mending",
+  "level": 1,
+  "description": "You fuse fractured materials with a pulse of stabilizing energy. Touch an object with cracks, chips, or stress lines no wider than 1 foot and bind them into a single solid piece. The repair is seamless but offers no restoration to lost magical properties.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "None",
+  "school": "Transmutation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/0c767b69-a452-43fb-8d46-3a2227c9f381.png"
+}

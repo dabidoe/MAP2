@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "694012a75648a6dce9f6e7d2"
+  },
+  "name": "Cure Wounds",
+  "level": 1,
+  "description": "A brief shimmer of starlight coils around your hand before sinking into a creature you touch, knitting flesh and spirit with quiet radiance.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "1d8 + your spellcasting modifier healing",
+  "school": "Conjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/a54876dd-b54a-44b9-af68-add3b3a911fc.png"
+}

@@ -11,6 +11,8 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style-zones.css" />
+    <link rel="stylesheet" href="/css/hotbar.css" />
+    <link rel="stylesheet" href="/css/character-sheet.css" />
 </head>
 <body>
     <!-- ZONE A: Mini-Sidebar (Left) -->
@@ -100,8 +102,10 @@
 
         <!-- ZONE C: Command Console (Bottom) -->
         <div id="command-console">
-            <!-- Resize Handle -->
-            <div class="console-resize-handle" id="console-resize-handle"></div>
+            <!-- Expand/Collapse Button -->
+            <button class="console-expand-btn" id="console-expand-btn" title="Expand Console">
+                <span class="expand-icon">▲</span>
+            </button>
 
             <!-- Console Content -->
             <div class="console-content">
@@ -131,28 +135,8 @@
             </div>
         </div>
 
-    <!-- Unit Panel (Floating) -->
-    <div id="unit-panel" style="display: none;">
-        <div class="card-header">
-            <h3 id="unit-name">Unit Name</h3>
-            <button id="close-unit-card" class="close-btn">✕</button>
-        </div>
-        <div class="card-stats">
-            <div class="stat-row">
-                <span class="stat-label">HP</span>
-                <span id="unit-hp" class="stat-value">0/0</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">AC</span>
-                <span id="unit-ac" class="stat-value">0</span>
-            </div>
-        </div>
-        <div class="card-actions">
-            <h4>Actions</h4>
-            <div id="unit-actions"></div>
-        </div>
-        <button id="view-character-details" class="cycle-button" style="width: 100%; margin-top: 10px;">View Full Details</button>
-    </div>
+    <!-- OLD Unit Panel - DEPRECATED - Replaced by HotbarUI -->
+    <!-- <div id="unit-panel" style="display: none;"></div> -->
 
     <!-- Dice Roller Popup (Hidden by default) -->
     <div id="dice-roller-popup" class="dice-popup" style="display: none;">

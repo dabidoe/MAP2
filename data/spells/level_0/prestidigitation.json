@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469f65648a6dce9f6f7ba"
+  },
+  "name": "Prestidigitation",
+  "level": 0,
+  "description": "A flicker of raw arcane potential performs tiny tasks at your command. Choose one effect within range: ignite or snuff a small flame; clean or smudge an object no larger than 1 cubic foot; chill, warm, or subtly flavor nonliving material; shift the color of a palm-sized surface; conjure a harmless hand‑held trinket that vanishes at the start of your next turn; or create a brief sensory flourish such as a drifting spark, soft chime, or fleeting scent.",
+  "castingTime": "1 action",
+  "range": "15 feet",
+  "components": "V, S",
+  "duration": "1 hour",
+  "damage": "None",
+  "school": "Illusion",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/2d2ef1a0-e6ce-4363-82b3-e004f87a3911.png"
+}

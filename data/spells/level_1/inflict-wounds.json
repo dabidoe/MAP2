@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695496265648a6dce9f6f915"
+  },
+  "name": "Inflict Wounds",
+  "level": 1,
+  "description": "Your hand darkens with starless void as you seize a creature, draining its vigor and chilling its spirit with creeping shadow.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "3d8 necrotic",
+  "school": "Necromancy",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/108e5078-ba2a-4dc7-9f60-2dd0e5fc45f1.png"
+}

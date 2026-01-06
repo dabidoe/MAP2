@@ -1,0 +1,9 @@
+{
+  "id": "6956c82e5648a6dce9f6fae7",
+  "name": "Aura of Protection",
+  "description": "Your presence projects a soft, warding stillness that subtly shifts fortune toward those within arm's reach. Allies feel danger moments before it strikes, gaining a flicker of extra resilience.",
+  "summary": "A calm, unseen force cushions nearby allies from harm, sharpening reflexes and steadying nerves.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767295022851.png",
+  "type": "passive",
+  "source": "paladin"
+}

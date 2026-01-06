@@ -1,0 +1,14 @@
+{
+  "id": "fighter-action-surge",
+  "name": "Action Surge",
+  "description": "You push yourself beyond normal limits for a moment. On your turn, you can take one additional action. Once you use this feature, you must finish a short or long rest before you can use it again.",
+  "summary": "Take an extra action on your turn once per rest.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/runware-action-surge.png",
+  "type": "action",
+  "source": "fighter",
+  "mechanics": {
+    "action": "bonus_action",
+    "uses": "1/short_rest",
+    "effect": "+1 action this turn"
+  }
+}

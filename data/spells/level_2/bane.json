@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695496035648a6dce9f6f893"
+  },
+  "name": "Bane",
+  "level": 2,
+  "description": "You twist local gravity into a crushing knot around your foes. A faint ripple distorts the air as invisible weight drags at those caught in the effect. Each creature of your choice in range must succeed on a Strength saving throw or suffer impaired movement and difficulty escaping grapples until the spell ends.",
+  "castingTime": "1 action",
+  "range": "20 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 minute",
+  "damage": "None",
+  "school": "Transmutation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/ed910db2-ad55-4d58-a85c-46d50d8bf7df.png"
+}

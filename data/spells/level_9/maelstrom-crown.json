@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "691bec327987f21746773718"
+  },
+  "name": "Maelstrom Crown",
+  "level": 9,
+  "description": "You summon a vast vortex of sovereign wind that descends in a spiraling mantle. The storm crushes foes with regal thunder, flings debris like blades, and forces all within its reach to brace or be swept into the gale.",
+  "castingTime": "1 action",
+  "range": "120 feet",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "10d6 thunder",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1763531729960.png"
+}

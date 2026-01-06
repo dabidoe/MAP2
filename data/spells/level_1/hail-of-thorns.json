@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695496245648a6dce9f6f911"
+  },
+  "name": "Hail of Thorns",
+  "level": 1,
+  "description": "Your next ranged weapon hit erupts into a tight explosion of spectral brambles. The target and nearby creatures take piercing damage, tearing at exposed gaps in armor.",
+  "castingTime": "1 action",
+  "range": "Self (next ranged weapon attack)",
+  "components": "V, S, M (a dried bramble twig)",
+  "duration": "Instantaneous",
+  "damage": "1d8 piercing, Dexterity save for half",
+  "school": "Conjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/45e2171a-7392-42ae-913e-2e331e9f1919.png"
+}

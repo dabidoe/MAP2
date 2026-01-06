@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469c55648a6dce9f6f78e"
+  },
+  "name": "Illusory Script",
+  "level": 1,
+  "description": "You inscribe a sigil that murmurs its hidden message only to a creature you designate. To all others it appears as an inert marking. The chosen recipient hears the true words when they touch or study the glyph.",
+  "castingTime": "1 minute",
+  "range": "Touch",
+  "components": "V, S, M (a silver-inked quill worth 5 gp, consumed)",
+  "duration": "7 days",
+  "damage": "None",
+  "school": "Illusion",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/e0a14b9d-8cb2-41b9-9d18-4e1ce5a96f5f.png"
+}

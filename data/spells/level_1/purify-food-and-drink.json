@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695496345648a6dce9f6f929"
+  },
+  "name": "Purify Food and Drink",
+  "level": 1,
+  "description": "You infuse a meal or drink with gentle household magic, banishing rot, foul tastes, and minor impurities. Creatures who consume the treated fare gain a faint sense of warmth and well‑being.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "None",
+  "school": "Transmutation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/cf7cd0ca-e113-4945-a925-6c1e8b727947.png"
+}

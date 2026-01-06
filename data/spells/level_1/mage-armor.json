@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "6954698f5648a6dce9f6f74c"
+  },
+  "name": "Mage Armor",
+  "level": 1,
+  "description": "You shroud a creature in a shimmering ward that deflects harm. The target gains a base AC of 14 plus its Dexterity modifier and sheds faint motes of light when struck. Creatures wearing armor cannot benefit from this spell.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "8 hours",
+  "damage": "None",
+  "school": "Abjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/f32ee1d8-f737-414c-9934-7ef8e6dac0bb.png"
+}

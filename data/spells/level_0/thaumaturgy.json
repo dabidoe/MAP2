@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695496485648a6dce9f6f94d"
+  },
+  "name": "Thaumaturgy",
+  "level": 0,
+  "description": "You invoke a flicker of respect from the spirits, producing one minor omen within range. You may cause a small object to gently levitate for a moment, etch a glowing rune that fades after a minute, or release a brief scent tied to a past memory. None of these effects cause harm, but each is unmistakably supernatural.",
+  "castingTime": "1 action",
+  "range": "20 ft.",
+  "components": "V, S",
+  "duration": "1 minute",
+  "damage": "None",
+  "school": "Illusion",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/cf59adf3-e5ab-4b01-84f0-46b4b5aa0d6c.png"
+}

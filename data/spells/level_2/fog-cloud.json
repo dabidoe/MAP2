@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "6954699b5648a6dce9f6f75e"
+  },
+  "name": "Fog Cloud",
+  "level": 2,
+  "description": "A low whispering fog pours from a point you choose, filling a 25-foot-radius sphere with shifting mist that coils around corners. The area becomes heavily obscured, and faint echoes distort sound within. A strong breeze quickly scatters the veil.",
+  "castingTime": "1 action",
+  "range": "90 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": "None",
+  "school": "Illusion",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/66ea449a-403b-4350-b753-f1ddab4b2991.png"
+}

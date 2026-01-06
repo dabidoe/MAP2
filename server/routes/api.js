@@ -31,6 +31,147 @@ const loadJSONFile = (filename) => {
   }
 };
 
+/**
+ * Helper: Resolve a reference path to actual data
+ * @param {string} refPath - Path like "spells/level_1/bless.json" or "traits/divine-health.json"
+ * @returns {object|null} - The loaded JSON data or null if not found
+ */
+const resolveReference = (refPath) => {
+  try {
+    const fullPath = path.join(__dirname, '../../data', refPath);
+    if (fs.existsSync(fullPath)) {
+      const fileData = fs.readFileSync(fullPath, 'utf8');
+      return JSON.parse(fileData);
+    }
+    return null;
+  } catch (error) {
+    console.error(`Error resolving reference ${refPath}:`, error.message);
+    return null;
+  }
+};
+
+/**
+ * Helper: Expand references in a character object
+ * @param {object} character - The character with ref fields
+ * @param {boolean} expand - Whether to expand references inline (default: false)
+ * @returns {object} - Character with expanded references
+ */
+const expandCharacterReferences = (character, expand = false) => {
+  if (!character) return character;
+
+  const expanded = { ...character };
+
+  // If not expanding, return as-is (refs remain as pointers)
+  if (!expand) return expanded;
+
+  // Expand traits
+  if (expanded.traits && Array.isArray(expanded.traits)) {
+    expanded.traits = expanded.traits.map(trait => {
+      if (trait.ref) {
+        const resolved = resolveReference(trait.ref);
+        return resolved || trait;
+      }
+      return trait;
+    });
+  }
+
+  // Expand abilities
+  if (expanded.abilities && Array.isArray(expanded.abilities)) {
+    expanded.abilities = expanded.abilities.map(ability => {
+      if (ability.ref) {
+        const resolved = resolveReference(ability.ref);
+        return resolved || ability;
+      }
+      return ability;
+    });
+  }
+
+  // Expand feats
+  if (expanded.feats && Array.isArray(expanded.feats)) {
+    expanded.feats = expanded.feats.map(feat => {
+      if (feat.ref) {
+        const resolved = resolveReference(feat.ref);
+        return resolved || feat;
+      }
+      return feat;
+    });
+  }
+
+  // Expand hotbar items
+  if (expanded.hotbar) {
+    Object.keys(expanded.hotbar).forEach(slot => {
+      const item = expanded.hotbar[slot];
+      if (item.ref) {
+        const resolved = resolveReference(item.ref);
+        if (resolved) {
+          expanded.hotbar[slot] = { ...item, ...resolved };
+        }
+      }
+    });
+  }
+
+  // Expand spellbook
+  if (expanded.spellbook) {
+    Object.keys(expanded.spellbook).forEach(level => {
+      if (Array.isArray(expanded.spellbook[level])) {
+        expanded.spellbook[level] = expanded.spellbook[level].map(spell => {
+          if (spell.ref) {
+            const resolved = resolveReference(spell.ref);
+            return resolved ? { ...spell, ...resolved } : spell;
+          }
+          return spell;
+        });
+      }
+    });
+  }
+
+  return expanded;
+};
+
+/**
+ * Helper: Recursively load all character JSON files from /data/tokens folder
+ */
+const loadCharactersFromTokens = (expand = false) => {
+  const characters = [];
+  const tokensDir = path.join(__dirname, '../../data/tokens');
+
+  const scanDirectory = (dir) => {
+    try {
+      if (!fs.existsSync(dir)) return;
+
+      const items = fs.readdirSync(dir);
+
+      for (const item of items) {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
+
+        if (stat.isDirectory()) {
+          // Recursively scan subdirectories
+          scanDirectory(fullPath);
+        } else if (item.endsWith('.json') && item !== 'party.json' && item !== 'npcs.json' && item !== 'beastiary.json') {
+          // Load individual character JSON files (skip index files)
+          try {
+            const fileData = fs.readFileSync(fullPath, 'utf8');
+            const character = JSON.parse(fileData);
+            if (character && character.name) {
+              // Expand references if requested
+              const processedCharacter = expandCharacterReferences(character, expand);
+              characters.push(processedCharacter);
+            }
+          } catch (error) {
+            console.error(`Error loading character file ${fullPath}:`, error.message);
+          }
+        }
+      }
+    } catch (error) {
+      console.error(`Error scanning directory ${dir}:`, error.message);
+    }
+  };
+
+  scanDirectory(tokensDir);
+  return characters;
+};
+
 // ============================================
 // TOKENS
 // ============================================
@@ -160,11 +301,13 @@ router.get('/locations/nearby/:lat/:lng', (req, res) => {
 
 /**
  * GET /api/characters
- * Get all characters
+ * Get all characters from individual token files
+ * Query params: ?expand=true to resolve all references inline
  */
 router.get('/characters', (req, res) => {
   try {
-    const characters = loadJSONFile('characters.json');
+    const expand = req.query.expand === 'true';
+    const characters = loadCharactersFromTokens(expand);
     res.json(characters);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -174,11 +317,14 @@ router.get('/characters', (req, res) => {
 /**
  * GET /api/characters/:id
  * Get character by ID (MongoDB _id or legacy ID)
+ * Query params: ?expand=true to resolve all references inline
  */
 router.get('/characters/:id', (req, res) => {
   try {
-    const characters = loadJSONFile('characters.json');
+    const expand = req.query.expand === 'true';
+    const characters = loadCharactersFromTokens(expand);
     const character = characters.find(c =>
+      c._id === req.params.id ||
       c._id?.$oid === req.params.id ||
       c.legacySourceId === req.params.id
     );
@@ -195,7 +341,7 @@ router.get('/characters/:id', (req, res) => {
  */
 router.get('/characters/name/:name', (req, res) => {
   try {
-    const characters = loadJSONFile('characters.json');
+    const characters = loadCharactersFromTokens();
     const character = characters.find(c => c.name === req.params.name);
     if (!character) return res.status(404).json({ error: 'Character not found' });
     res.json(character);
@@ -270,6 +416,38 @@ router.post('/encounters/:id/initiative', (req, res) => {
 });
 
 // ============================================
+// SPELLS
+// ============================================
+
+/**
+ * GET /api/spells/list
+ * Get list of all spell files organized by level
+ * Returns: { 0: ['spell1.json', 'spell2.json'], 1: [...], ... }
+ */
+router.get('/spells/list', (req, res) => {
+  try {
+    const levels = [0, 1, 2, 3, 9];
+    const spellFiles = {};
+
+    levels.forEach(level => {
+      const dirPath = path.join(__dirname, '../../data/spells', `level_${level}`);
+      if (fs.existsSync(dirPath)) {
+        spellFiles[level] = fs.readdirSync(dirPath)
+          .filter(file => file.endsWith('.json'))
+          .sort();
+      } else {
+        spellFiles[level] = [];
+      }
+    });
+
+    res.json(spellFiles);
+  } catch (error) {
+    console.error('Error listing spells:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// ============================================
 // LIBRARY (Lazy Loading)
 // ============================================
 
@@ -311,7 +489,7 @@ router.get('/campaign', (req, res) => {
   try {
     const tokens = loadJSONFile('tokens.json');
     const locations = loadJSONFile('locations.json');
-    const characters = loadJSONFile('characters.json');
+    const characters = loadCharactersFromTokens();
 
     res.json({
       tokens,

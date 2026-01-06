@@ -1,0 +1,19 @@
+{
+  "id": "human-versatile",
+  "name": "Versatile",
+  "description": "Humans are adaptable and ambitious, with diverse talents and abilities. You gain +1 to all ability scores.",
+  "summary": "+1 to all ability scores.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/runware-human-versatile.png",
+  "type": "passive",
+  "source": "human",
+  "mechanics": {
+    "bonus": {
+      "str": 1,
+      "dex": 1,
+      "con": 1,
+      "int": 1,
+      "wis": 1,
+      "cha": 1
+    }
+  }
+}

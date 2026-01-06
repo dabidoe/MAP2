@@ -1,0 +1,14 @@
+{
+  "id": "6956c8665648a6dce9f6fb19",
+  "name": "Divine Smite",
+  "description": "You call down a shard of star-fire to lash your weapon strike with blistering brilliance. When you commit to the blow, the attack erupts in radiant power that scars both flesh and spirit, leaving foes dazzled by the afterimage. Creatures struck often feel as though the heavens themselves have judged them.",
+  "summary": "Imbue a weapon blow with searing celestial force.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767295078363.png",
+  "type": "bonus_action",
+  "source": "paladin",
+  "mechanics": {
+    "damage": "2d8+1d8/slot",
+    "damage_type": "radiant",
+    "trigger": "on_hit"
+  }
+}

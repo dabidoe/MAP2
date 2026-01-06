@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469955648a6dce9f6f756"
+  },
+  "name": "Grease",
+  "level": 1,
+  "description": "You conjure a patch of writhing, sticky muck that clings to anything stepping into it. Creatures entering or starting their turn in the area must succeed on a Strength saving throw or have their speed reduced to 0 until the start of their next turn.",
+  "castingTime": "1 action",
+  "range": "60 ft",
+  "components": "V, S, M (a drop of tar)",
+  "duration": "1 minute",
+  "damage": "Restrains movement; no direct damage",
+  "school": "Conjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/70b2c009-f257-4058-acca-186230b30df1.png"
+}

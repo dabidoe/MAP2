@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695496085648a6dce9f6f89b"
+  },
+  "name": "Bless",
+  "level": 1,
+  "description": "You grant up to three creatures a surge of tactical clarity. Until the spell ends, each target may roll a d4 once per turn and add the result to an attack roll or ability check they make. A faint glimmer outlines their movements, guiding strikes and steadying hands.",
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 minute",
+  "damage": "None",
+  "school": "Divination",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/e7dfc40f-b5ae-4142-a8ec-d6717b279c0b.png"
+}

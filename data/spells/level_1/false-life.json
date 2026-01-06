@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469a55648a6dce9f6f76e"
+  },
+  "name": "False Life",
+  "level": 1,
+  "description": "A chill aura coils around you, shaping stray soul-echoes into a spectral shroud. The veil clings to your form, bracing your body with borrowed echoes of the dead.",
+  "castingTime": "1 action",
+  "range": "Self",
+  "components": "V, S",
+  "duration": "1 hour",
+  "damage": "Gain 1d8+3 temporary hit points.",
+  "school": "Necromancy",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/0a27ad4d-6f67-4003-8d82-ca32ca818880.png"
+}

@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469985648a6dce9f6f75a"
+  },
+  "name": "Friends",
+  "level": 1,
+  "description": "You infuse a creature with a subtle aura of camaraderie. For the duration, the target views you as a trusted ally and shares information freely. The magic gently steers emotions but does not control actions. When the spell ends, the target feels an uneasy sense of manipulation and becomes wary of you, though not immediately hostile unless provoked.",
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 hour",
+  "damage": "None",
+  "school": "Enchantment",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/f61dcc58-ffa7-41ad-b462-e0f80b1feb0c.png"
+}

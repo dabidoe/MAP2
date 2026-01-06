@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "691a85403a2492b6e4e30046"
+  },
+  "name": "Battlecry Spark",
+  "level": 1,
+  "description": "You unleash a resonant shout imbued with martial spirit, jolting enemies with force and bolstering nearby allies’ resolve.",
+  "castingTime": "1 bonus action",
+  "range": "15 feet",
+  "components": "V",
+  "duration": "Instantaneous",
+  "damage": "1d6 thunder damage to creatures in range",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1763531710797.png"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "wizard-arcane-recovery",
+  "name": "Arcane Recovery",
+  "description": "You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level equal to or less than half your wizard level (rounded up).",
+  "summary": "Recover spell slots during a short rest once per day.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/runware-arcane-recovery.png",
+  "type": "action",
+  "source": "wizard",
+  "mechanics": {
+    "action": "short_rest",
+    "uses": "1/long_rest",
+    "recovery": "spell_slots_up_to_half_level"
+  }
+}

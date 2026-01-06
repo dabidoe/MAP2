@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469925648a6dce9f6f750"
+  },
+  "name": "Invisibility",
+  "level": 3,
+  "description": "You wrap a willing creature in a shimmer of muted light, rendering its form translucent and muffling all movement. The target becomes nearly unseen and gains advantage on Stealth checks. The veil breaks early if the creature deals damage or casts a spell.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S, M (a pinch of powdered glass)",
+  "duration": "Concentration, up to 1 hour",
+  "damage": "None",
+  "school": "Illusion",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/9faa74bb-35e1-4703-bd40-ff08c5121468.png"
+}

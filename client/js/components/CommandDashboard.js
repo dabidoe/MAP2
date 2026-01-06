@@ -534,6 +534,7 @@ export class CommandDashboard {
       { name: '/skill', usage: '/skill [name]', description: 'Make a skill check (e.g., /skill Perception)' },
       { name: '/init', usage: '/init', description: 'Roll initiative for selected character' },
       { name: '/initiative', usage: '/initiative', description: 'Roll initiative for selected character' },
+      { name: '/cast', usage: '/cast', description: 'Show available spells for selected character' },
       { name: '/clear', usage: '/clear', description: 'Clear chat history' },
       { name: '/help', usage: '/help', description: 'Show help message with all commands' }
     ];
@@ -797,6 +798,12 @@ export class CommandDashboard {
         this._rollInitiative();
         break;
 
+      case '/cast':
+        // Show available spells for selected character
+        console.log('🎯 /cast command triggered');
+        this._showAvailableSpells();
+        break;
+
       default:
         this._addConsoleMessage('system', `❌ Unknown command: ${cmd}. Type /help for available commands.`);
     }
@@ -813,6 +820,7 @@ export class CommandDashboard {
 • /attack [target] - Quick attack with selected character
 • /skill [name] - Make a skill check (e.g., /skill Perception)
 • /init - Roll initiative for selected character
+• /cast - Show available spells for selected character
 • /clear - Clear chat history
 • /help - Show this help message
     `.trim();
@@ -876,6 +884,133 @@ export class CommandDashboard {
     );
 
     // TODO: Add to initiative tracker
+  }
+
+  /**
+   * Show available spells for selected character
+   * @private
+   */
+  async _showAvailableSpells() {
+    // Get selected character
+    const character = this.selectedCharacter || this.currentToken;
+
+    console.log('📚 _showAvailableSpells called', { selectedCharacter: this.selectedCharacter, currentToken: this.currentToken, character });
+
+    if (!character) {
+      this._addConsoleMessage('system', '❌ No character selected. Click a token first.');
+      return;
+    }
+
+    try {
+      // Show loading message
+      this._addConsoleMessage('system', `📚 Loading spells for ${character.name}...`);
+
+      // Fetch full character data
+      const characterData = await this._fetchCharacterData(character.name);
+
+      if (!characterData) {
+        this._addConsoleMessage('system', `❌ Could not load character data for ${character.name}`);
+        return;
+      }
+
+      // Check if character has any spells
+      if (!characterData.spells || !characterData.spells.known || characterData.spells.known.length === 0) {
+        this._addConsoleMessage('system', `📖 ${character.name} has no spells available.`);
+        return;
+      }
+
+      // Load all spells
+      const allSpells = await this._loadAllSpells();
+
+      // Match character's known spells with spell data
+      const knownSpells = [];
+      for (const spellRef of characterData.spells.known) {
+        const spellId = spellRef.spellId?.$oid;
+        if (spellId) {
+          const spell = allSpells.find(s => s._id?.$oid === spellId);
+          if (spell) {
+            knownSpells.push({
+              ...spell,
+              prepared: spellRef.prepared
+            });
+          }
+        }
+      }
+
+      // Sort by level then name
+      knownSpells.sort((a, b) => {
+        if (a.level !== b.level) return a.level - b.level;
+        return a.name.localeCompare(b.name);
+      });
+
+      // Display spells
+      if (knownSpells.length === 0) {
+        this._addConsoleMessage('system', `📖 ${character.name} has no spells loaded.`);
+        return;
+      }
+
+      // Build spell list message
+      let spellMessage = `<strong>✨ ${character.name}'s Spells:</strong><br>`;
+
+      let currentLevel = -1;
+      knownSpells.forEach(spell => {
+        if (spell.level !== currentLevel) {
+          currentLevel = spell.level;
+          const levelName = spell.level === 0 ? 'Cantrips' : `Level ${spell.level}`;
+          spellMessage += `<br><strong>${levelName}:</strong><br>`;
+        }
+
+        const preparedMark = spell.prepared ? '⭐' : '•';
+        spellMessage += `${preparedMark} <strong>${spell.name}</strong> - ${spell.school}<br>`;
+        spellMessage += `&nbsp;&nbsp;<em>${spell.castingTime} | ${spell.range} | ${spell.duration}</em><br>`;
+        if (spell.damage) {
+          spellMessage += `&nbsp;&nbsp;💥 ${spell.damage}<br>`;
+        }
+      });
+
+      this._addConsoleMessage('action', spellMessage);
+
+    } catch (error) {
+      console.error('Error loading spells:', error);
+      this._addConsoleMessage('system', '❌ Failed to load spells. Please try again.');
+    }
+  }
+
+  /**
+   * Load all spells from server
+   * @private
+   */
+  async _loadAllSpells() {
+    try {
+      // Get list of spell files organized by level
+      const listResponse = await fetch('/api/spells/list');
+      if (!listResponse.ok) {
+        throw new Error(`HTTP error! status: ${listResponse.status}`);
+      }
+
+      const spellFilesByLevel = await listResponse.json();
+
+      // Load all individual spell files
+      const allSpells = [];
+      for (const [level, files] of Object.entries(spellFilesByLevel)) {
+        for (const filename of files) {
+          try {
+            const spellResponse = await fetch(`/data/spells/level_${level}/${filename}`);
+            if (spellResponse.ok) {
+              const spell = await spellResponse.json();
+              allSpells.push(spell);
+            }
+          } catch (error) {
+            console.warn(`Failed to load spell ${filename}:`, error);
+          }
+        }
+      }
+
+      return allSpells;
+    } catch (error) {
+      console.error('Failed to load spells:', error);
+      return [];
+    }
   }
 
   /**
@@ -1120,8 +1255,12 @@ export class CommandDashboard {
     this.elements.sheetCharacterName.textContent = character.name;
 
     // Profile
+    const classDisplay = character.subclass
+      ? `${character.class} (${character.subclass})`
+      : (character.class || 'Unknown');
+
     this.elements.sheetProfile.innerHTML = `
-      <p><span class="label">Class:</span> ${character.class || 'Unknown'}</p>
+      <p><span class="label">Class:</span> ${classDisplay}</p>
       <p><span class="label">Race:</span> ${character.race || 'Unknown'}</p>
       <p><span class="label">Level:</span> ${character.level || '?'}</p>
       <p><span class="label">Alignment:</span> ${character.alignment || 'Unknown'}</p>

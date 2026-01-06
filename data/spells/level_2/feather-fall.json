@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469a35648a6dce9f6f76a"
+  },
+  "name": "Feather Fall",
+  "level": 2,
+  "description": "You summon a swirl of buoyant air that envelopes up to three falling creatures. The magic cushions their descent, granting them a slow, spiraling drop and letting them land lightly on any surface.",
+  "castingTime": "1 reaction, triggered when a creature within range begins falling",
+  "range": "90 feet",
+  "components": "V, S",
+  "duration": "1 minute",
+  "damage": "None",
+  "school": "Transmutation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/9c54988a-6872-4574-bdad-8183a9fa04f6.png"
+}

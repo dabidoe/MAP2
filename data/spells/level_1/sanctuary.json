@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695496405648a6dce9f6f93f"
+  },
+  "name": "Sanctuary",
+  "level": 1,
+  "description": "A shimmer of bending air wraps a creature you choose, diverting hostile intent. Until the spell ends, any foe attempting to strike or cast a harmful spell on the target must succeed on a Wisdom save or have the effort simply glance aside, forcing them to choose another target or forfeit the attempt. The veil offers no protection against area effects.",
+  "castingTime": "1 bonus action",
+  "range": "30 feet",
+  "components": "V, S, M (a sliver of polished glass)",
+  "duration": "1 minute",
+  "damage": "None",
+  "school": "Abjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/19357c14-823f-466b-aee4-02ee090b9593.png"
+}

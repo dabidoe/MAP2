@@ -10,6 +10,8 @@ import { CanvasRenderer } from './CanvasRenderer.js';
 import { GameState } from './GameState.js';
 import { CommandDashboard } from './components/CommandDashboard.js';
 import { Grimoire } from './components/Grimoire.js';
+import { HotbarUI } from './components/HotbarUI.js';
+import { CharacterSheet } from './components/CharacterSheet.js';
 
 /**
  * Main Application Class
@@ -21,6 +23,8 @@ class WarRoom1776 {
     this.canvasRenderer = null;
     this.dashboard = null;
     this.grimoire = null;
+    this.hotbar = null;
+    this.characterSheet = null;
     this.socket = null;
 
     // Tactical view container
@@ -67,6 +71,30 @@ class WarRoom1776 {
 
       // Initialize Grimoire
       this.grimoire = new Grimoire();
+
+      // Initialize Hotbar UI (after dashboard, pass grimoire for spell icons)
+      this.hotbar = new HotbarUI(this.gameState, this.dashboard, this.grimoire);
+
+      // Initialize Character Sheet (pass grimoire for spell lookups)
+      this.characterSheet = new CharacterSheet(this.grimoire);
+
+      // Listen for character sheet open events
+      window.addEventListener('openCharacterSheet', (e) => {
+        this.characterSheet.open(e.detail.character);
+      });
+
+      // Listen for spell cast events
+      window.addEventListener('castSpell', (e) => {
+        const { spell, damage, character } = e.detail;
+        if (!this.dashboard) return;
+
+        this.dashboard._addConsoleMessage('action', `✨ ${character || 'Character'} casts ${spell}!`);
+
+        // Only roll if damage exists and is not "None"
+        if (damage && damage !== 'None' && damage.trim() !== '') {
+          this.dashboard._rollDice(damage);
+        }
+      });
 
       // Setup tactical view container
       this._setupTacticalContainer();

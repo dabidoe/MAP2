@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469aa5648a6dce9f6f776"
+  },
+  "name": "Faerie Fire",
+  "level": 1,
+  "description": "You spark a curtain of shimmering motes that cling to creatures in a small radius. Marked targets shine with shifting prismatic edges, making them easier to strike and revealing any attempt to hide or turn invisible.",
+  "castingTime": "1 action",
+  "range": "60 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 minute",
+  "damage": "No direct damage; attacks against affected creatures have advantage",
+  "school": "Illusion",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/00878c63-53bd-4ea1-8a14-e496e6cfaf9d.png"
+}

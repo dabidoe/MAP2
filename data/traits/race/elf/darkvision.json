@@ -1,0 +1,13 @@
+{
+  "id": "elf-darkvision",
+  "name": "Darkvision",
+  "description": "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.",
+  "summary": "See in the dark up to 60 feet.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/runware-darkvision.png",
+  "type": "passive",
+  "source": "elf",
+  "mechanics": {
+    "range": "60 feet",
+    "effect": "dim_light_as_bright_darkness_as_dim"
+  }
+}

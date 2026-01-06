@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "69504ada5648a6dce9f6f274"
+  },
+  "name": "Force Touch",
+  "level": 2,
+  "description": "Your hand flickers with unstable planar pressure. On a successful touch attack, the target takes force damage and must succeed on a Wisdom save or become briefly phase‑blurred, imposing disadvantage on its next attack roll.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "3d6 force",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/009c915c-e5b7-4c59-ae6f-539b1468e75f.png"
+}

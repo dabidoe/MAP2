@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695496145648a6dce9f6f8fa"
+  },
+  "name": "Detect Magic",
+  "level": 1,
+  "description": "You attune your senses to hidden forces. Until the spell ends, you perceive supernatural disturbances within 20 feet—shimmering outlines mark curses, illusions, enchantments, or other mystical effects. As an action, you can focus on one source to identify its general nature or intent.",
+  "castingTime": "1 action",
+  "range": "Self (20-foot radius)",
+  "components": "V, S",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": "None",
+  "school": "Divination",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/7761c38c-f0f9-47a2-9c76-252d2a2cc107.png"
+}

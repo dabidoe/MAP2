@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695496175648a6dce9f6f901"
+  },
+  "name": "Detect Poison and Disease",
+  "level": 1,
+  "description": "You attune your senses to toxic energies, detecting any poison, venomous creature, or disease within 60 feet. You learn each source’s location and a faint impression of its severity. Thin barriers do not impede this sense, but dense stone or metal blocks it.",
+  "castingTime": "1 action",
+  "range": "Self (60-foot radius)",
+  "components": "V, S",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": "None",
+  "school": "Divination",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/fab72801-e7bb-48a1-b4f8-acb8cd5507c3.png"
+}

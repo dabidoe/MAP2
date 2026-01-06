@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "694012ad5648a6dce9f6e7da"
+  },
+  "name": "Healing Word",
+  "level": 1,
+  "description": "A resonant pulse of restorative sound washes over a creature you can see, stitching wounds and steadying breath with a soft harmonic glow.",
+  "castingTime": "1 action",
+  "range": "30 ft",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "Heals 1d4 + your spellcasting modifier",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/f90b69ba-0887-41b0-b97b-e19b5ca725be.png"
+}

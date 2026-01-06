@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "6954961d5648a6dce9f6f909"
+  },
+  "name": "Guidance",
+  "level": 0,
+  "description": "You brush a creature with a soft pulse of arcane clarity. Until the spell ends, the target may add a brief surge of mental precision to a single ability check it makes before the spell expires.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 minute",
+  "damage": "+1d4 to one ability check",
+  "school": "Enchantment",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/5bfb0610-76cc-425c-a431-4b52f108d489.png"
+}

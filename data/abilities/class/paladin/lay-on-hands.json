@@ -1,0 +1,14 @@
+{
+  "id": "6956c85d5648a6dce9f6fb11",
+  "name": "Lay on Hands",
+  "description": "You carry a reservoir of luminous vitality that flares to life when you lay your hand upon an injured creature. Once per rest, you may release a portion of this inner radiance to restore health, purge minor ailments, or stabilize a fading ally. The more dire the need, the brighter your spark burns—though drawing too deeply leaves you momentarily light‑headed and warm to the touch.",
+  "summary": "Channel a stored reserve of life‑energy to mend wounds with a touch.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767295069159.png",
+  "type": "action",
+  "source": "paladin",
+  "mechanics": {
+    "pool": "level * 5",
+    "action": "action",
+    "range": "touch"
+  }
+}

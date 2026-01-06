@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "69546a125648a6dce9f6f7e2"
+  },
+  "name": "Unseen Servant",
+  "level": 1,
+  "description": "You conjure a faint, translucent silhouette that flits about performing mundane tasks with uncanny precision. The hand cannot attack, but it can manipulate small objects, tidy spaces, and carry out any simple task a common servant could complete. It follows your verbal instructions faithfully until the spell ends.",
+  "castingTime": "1 action",
+  "range": "30 ft",
+  "components": "V, S",
+  "duration": "1 hour",
+  "damage": "None",
+  "school": "Conjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/ad3a48e9-2c76-48cc-87be-5b366740e17c.png"
+}

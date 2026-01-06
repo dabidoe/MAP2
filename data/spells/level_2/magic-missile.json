@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "6954698c5648a6dce9f6f748"
+  },
+  "name": "Magic Missile",
+  "level": 2,
+  "description": "You loose a resonant bolt of compressed sound that fractures into smaller ripples mid‑flight. The main lance strikes your chosen target, while the ripples lash out at up to two additional creatures within 10 feet of the first.",
+  "castingTime": "1 action",
+  "range": "90 ft",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "Main hit 2d6 thunder; secondary ripples 1d6 thunder each",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/c3d16df6-731a-4766-8af9-e6a971a60980.png"
+}

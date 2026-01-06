@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469ef5648a6dce9f6f7b2"
+  },
+  "name": "Produce Flame",
+  "level": 0,
+  "description": "A bead of ember spins above your palm, shedding bright light in a 15‑foot radius and dim light for another 15 feet. As part of the same or a later action, you may snap the ember toward a creature you can see, turning it into a blazing mote that streaks to its target.",
+  "castingTime": "1 action",
+  "range": "Self (light), 20 feet (mote)",
+  "components": "V, S",
+  "duration": "10 minutes (light) or until fired",
+  "damage": "1d6 fire",
+  "school": "Evocation",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/241aabbf-d9b5-4dc8-87c2-b948e32c81a1.png"
+}

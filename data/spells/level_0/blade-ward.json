@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695496055648a6dce9f6f897"
+  },
+  "name": "Blade Ward",
+  "level": 0,
+  "description": "A shimmer of doubled silhouettes flickers around you, causing incoming strikes to falter as they struggle to find your true position.",
+  "castingTime": "1 action",
+  "range": "Self",
+  "components": "V, S",
+  "duration": "1 round",
+  "damage": "None",
+  "school": "Illusion",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/c6bed855-c542-4899-83ae-da06d0631496.png"
+}

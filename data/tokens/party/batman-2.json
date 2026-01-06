@@ -1,0 +1,58 @@
+{
+  "_id": {
+    "$oid": "695410765648a6dce9f6f4e8"
+  },
+  "userId": {
+    "$oid": "694071035648a6dce9f6ec9b"
+  },
+  "name": "BATMAN 2",
+  "slug": "batman-2-476d5feb",
+  "class": "Rogue",
+  "race": "Human",
+  "level": 7,
+  "alignment": "Neutral Good",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767116946693.png",
+  "gallery": [],
+  "profile": {
+    "backstory": "Cloaked in myth and half‑truths, BATMAN 2 emerged from a grim metropolis where justice bent under the weight of corruption. A nameless street orphan taken in by an enigmatic order of shadow‑walkers, he learned to fight without being seen and to listen where others spoke too loudly. Now he wanders the world as an unregistered guardian, slipping into cities that need him and vanishing once balance is restored.",
+    "behavior": "He keeps to high vantage points, moves with measured silence, and intervenes only when darkness overtakes the innocent. He prefers intimidation, ambushes, and evidence‑driven justice over open confrontation.",
+    "personality": "Brooding but principled, he speaks in short, weighted sentences. He distrusts institutions but believes strongly in personal responsibility. Beneath the quiet edge is a fierce protective streak, especially for the overlooked."
+  },
+  "attributes": {
+    "str": 12,
+    "dex": 18,
+    "con": 14,
+    "int": 14,
+    "wis": 13,
+    "cha": 10
+  },
+  "hp": {
+    "current": 54,
+    "max": 54
+  },
+  "ac": 17,
+  "initiative": 4,
+  "state": "Vigilant",
+  "isPublic": false,
+  "spells": {
+    "slots": [],
+    "known": []
+  },
+  "inventory": {
+    "weapons": [],
+    "armor": [],
+    "items": []
+  },
+  "temporaryModifiers": [],
+  "passiveTraits": [],
+  "feats": [],
+  "skills": [],
+  "abilities": [],
+  "createdAt": {
+    "$date": "2025-12-30T17:48:38.013Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-30T17:49:47.752Z"
+  },
+  "__v": 0
+}

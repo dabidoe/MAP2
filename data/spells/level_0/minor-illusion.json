@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469ec5648a6dce9f6f7ac"
+  },
+  "name": "Minor Illusion",
+  "level": 0,
+  "description": "You conjure a fleeting glimmer or whisper that briefly distracts creatures within sight or hearing. The illusion fits within a 5‑foot cube and can appear as a flicker of light, a shifting silhouette, or a soft hiss. A creature may use its action to inspect the effect and, on a successful Intelligence (Investigation) check against your spell save DC, identifies it as false. The illusion offers no sensory substance beyond sight or sound.",
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "S",
+  "duration": "1 minute",
+  "damage": "None",
+  "school": "Illusion",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/4b7329eb-cb5a-4059-8de3-f3acdf8c9f91.png"
+}

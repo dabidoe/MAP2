@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "695469785648a6dce9f6f738"
+  },
+  "name": "Alarm",
+  "level": 2,
+  "description": "You weave a thin veil of arcane vigilance over a doorway, chest, or boundary. Until the spell ends, the veil silently observes the warded space. When a creature other than those you designate crosses the threshold, a soft whisper blossoms in your mind, revealing the intruder’s direction and size category.",
+  "castingTime": "1 minute",
+  "range": "Touch",
+  "components": "V, S, M (a sliver of moonlit thread)",
+  "duration": "12 hours",
+  "damage": "None",
+  "school": "Abjuration",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/71e7123d-05f9-4146-9f56-9137bba5d99a.png"
+}
