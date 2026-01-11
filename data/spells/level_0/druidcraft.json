@@ -1,0 +1,39 @@
+{
+  "_id": {
+    "$oid": "6964199ec603fa716eb2b000"
+  },
+  "name": "Druidcraft",
+  "level": 0,
+  "description": "Whispering to the spirits of nature, you create one of the following effects within range:\n\n* You create a tiny, harmless sensory effect that predicts what the weather will be at your location for the next 24 hours. The effect might manifest as a golden orb for clear skies, a cloud for rain, falling snowflakes for snow, and so on. This effect persists for 1 round.\n\n* You instantly make a flower bloom, a seed pod open, or a leaf bud bloom.\n\n* You create an instantenous, harmless sensory effect, such as falling leaves, a puff of wind, the sound of a small animal, or the faint order of skunk. The effect must fit in a 5-foot cube.\n\n* You instantly light or snuff out a candle, a torch, or a small campfire.",
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": null,
+  "school": "Transmutation",
+  "isPublic": true,
+  "classes": [
+    "druid"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "a75c1222-dbaf-4a8a-8340-5f855a4cfc1b${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"df325e96-db7c-4e54-a96f-cfd5b7566862\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "634501a6-dbae-4f78-a178-dcd3f5a21335${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"7736c609-fd30-40c6-8ae6-0f2fc0c519d0\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "5ede0b81-a3a9-473e-9457-0c4a44d9fd34${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1553b7fc-91d1-42de-89fe-5f73e2449cd2\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "281accec-3e1d-474e-ac17-95ac8049b669${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"f3154758-3013-4d75-81e1-50f8c6d35260\"}",
+      "json": "{}"
+    }
+  ]
+}

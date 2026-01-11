@@ -1,0 +1,15 @@
+{
+    "tokenId": "token_greene_001",
+    "name": "General Nathanael Greene",
+    "side": "Continental",
+    "locationId": "frozen_vigil",
+    "gps": { "lat": 40.2984, "lng": -74.8719 },
+    "grid": { "posX": 55, "posY": 75 },
+    "stats": { "hp": 66, "hpMax": 66, "ac": 16, "init": 2 },
+    "icon": "https://statsheet-cdn.b-cdn.net/images/32ce61a3-6e54-42e0-b508-aa5e0dde1fc3.png",
+    "actions": [
+      { "name": "Tactical Saber", "type": "Attack", "is_bonus": false, "bonus": "+7", "damage": "1d8+4 Slashing" },
+      { "name": "Commander's Strike", "type": "Ability", "is_bonus": false, "bonus": "N/A", "damage": "N/A" },
+      { "name": "Action Surge", "type": "Ability", "is_bonus": false, "bonus": "N/A", "damage": "N/A" }
+    ]
+  }

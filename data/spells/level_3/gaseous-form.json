@@ -1,0 +1,41 @@
+{
+  "_id": {
+    "$oid": "6964199e9c14e8ed27369000"
+  },
+  "name": "Gaseous Form",
+  "level": 3,
+  "description": "You transform a willing creature you touch, along with everything it’s wearing and carrying, into a misty cloud for the duration. The spell ends if the creature drops to 0 hit points. An incorporeal creature isn’t affected.\n\nWhile in this form, the target’s only method of movement is a flying speed of 10 feet. The target can enter and occupy the space of another creature. The target has resistance to nonmagical damage, and it has advantage on Strength, Dexterity, and Constitution saving throws. The target can pass through small holes, narrow openings, and even mere cracks, though it treats liquids as though they were solid surfaces. The target can't fall and remains hovering in the air even when stunned or otherwise incapacitated.\n\nWhile in the form of a misty cloud, the target can’t talk or manipulate objects, and any objects it w as carrying or holding can’t be dropped, used, or otherwise interacted with. The target can’t attack or cast spells.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S, M (a bit of gauze and a wisp of smoke)",
+  "duration": "Concentration, up to 1 hour",
+  "damage": null,
+  "school": "Transmutation",
+  "isPublic": true,
+  "classes": [
+    "sorcerer",
+    "warlock",
+    "wizard"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "b3e83490-926e-49fb-a5f2-2fa72d84a154${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"256a38f6-7faa-4945-bf23-3d0458945ed2\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "46503f18-fe49-438f-8411-c495ea1522f0${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d9b9a603-6e78-46ce-ac4a-e256adeef531\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "2ed46bfd-39c6-469e-a78f-871b2e6dfce4${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"938b7c2f-63c4-4c05-870d-2d6171595524\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "8829317e-7a04-49e0-b7ce-4c47ab635e5d",
+      "json": "{}"
+    }
+  ]
+}

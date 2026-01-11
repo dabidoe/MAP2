@@ -1,0 +1,24 @@
+{
+  "_id": {
+    "$oid": "6964199e686e863266f8e000"
+  },
+  "name": "Wind Wall",
+  "level": 3,
+  "description": "A wall of strong wind rises from the ground at a point you choose within range. You can make the wall up to 50 feet long, 15 feet high, and 1 foot thick. You can shape the wall in any way you choose so long as it makes one continuous path along the ground. The wall lasts for the duration.\n\nWhen the wall appears, each creature within its area must make a Strength saving throw. A creature takes 3d8 bludgeoning damage on a failed save, or half as much damage on a successful one.\n\nThe strong wind keeps fog, smoke, and other gases at bay. Small or smaller flying creatures or objects can't pass through the wall. Loose, lightweight materials brought into the wall fly upward. Arrows, bolts, and other ordinary projectiles launched at targets behind the wall are deflected upward and automatically miss. (Boulders hurled by giants or siege engines, and similar projectiles, are unaffected.) Creatures in gaseous form can’t pass through it.",
+  "castingTime": "1 action",
+  "range": "120 feet",
+  "components": "V, S, M (a tiny fan and a feather of exotic origin)",
+  "duration": "Concentration, up to 1 minute",
+  "damage": "3d8 bludgeoning",
+  "school": "Evocation",
+  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+  "iconStatus": "missing",
+  "isPublic": true,
+  "classes": [
+    "druid",
+    "ranger"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1"
+}

@@ -1,0 +1,42 @@
+{
+  "_id": {
+    "$oid": "6964199e453bf4ee97c89000"
+  },
+  "name": "Blindness/Deafness",
+  "level": 2,
+  "description": "You can blind or deafen a foe. Choose one creature that you can see within range to make a Constitution saving throw. If it fails, the target is either blinded or deafened (your choice) for the duration. At the end of each of its turns, the target can make a Constitution saving throw. On a success, the spell ends.",
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V",
+  "duration": "1 minute",
+  "damage": null,
+  "school": "Necromancy",
+  "isPublic": true,
+  "classes": [
+    "bard",
+    "cleric",
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
+  "higherLevels": "When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.",
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "42f12565-603b-4e87-9def-e2141f6f203f",
+      "json": "{}"
+    },
+    {
+      "guid": "e915518f-e82a-4b5e-a3eb-4d92e2235357",
+      "json": "{}"
+    },
+    {
+      "guid": "49e71eca-3c18-4964-920c-1aef57a81f7a",
+      "json": "{}"
+    },
+    {
+      "guid": "05ea62c7-e5f0-412d-9607-60a5a260f500",
+      "json": "{}"
+    }
+  ]
+}

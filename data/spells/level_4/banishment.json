@@ -1,0 +1,44 @@
+{
+  "_id": {
+    "$oid": "6964199e950e6c5b2e443000"
+  },
+  "name": "Banishment",
+  "level": 4,
+  "description": "You attempt to send one creature that you can see within range to another plane of existence. The target must succeed on a Charisma saving throw or be banished.\n\nIf the target is native to the plane of existance you're on, you banish the target to a harmless demiplane. While there, the target is incapacitated. The target remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.\n\nIf the target is native to a different plane of existance than the one you're on, the target is banished with a faint popping noise, returning to its home plane. If the spell ends before 1 minute has passed, the target reappears in the space it left or in the nearest unoccupied space if that space is occupied. Otherwise, the target doesn't return.",
+  "castingTime": "1 action",
+  "range": "60 feet",
+  "components": "V, S, M (an item distasteful to the target)",
+  "duration": "Concentration, up to 1 minute",
+  "damage": null,
+  "school": "Abjuration",
+  "isPublic": true,
+  "classes": [
+    "cleric",
+    "paladin",
+    "sorcerer",
+    "warlock",
+    "wizard"
+  ],
+  "ritual": false,
+  "higherLevels": "When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th.",
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "fee79441-5363-4172-925f-58fd684df30f${\"position\":\"0.5224301,0.465086\",\"rotation\":0.0,\"scale\":\"1.115642,1.115642\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"151b902e-0fc0-4e4b-ba10-0bcd83a33cdb\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "e6950c6a-1a72-4145-bc20-29cd4405866e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"fba319c9-1bcb-496d-a97c-90c6015e640d\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "e1ecdea3-8612-4870-89e0-0459d8b3d0d8${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4205f3e7-a56e-4aed-a520-7b3e16dcdef0\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "7d48b9f3-3889-4007-aef8-01d4ed06f6cb",
+      "json": "{}"
+    }
+  ],
+  "video": "/SPELL_VIDEOS/Banishment_You_attempt_to_send_one_creature_that_you_can_see__f5770791-6965-405d-ae0d-9c8e1776d7ef_0.mp4"
+}

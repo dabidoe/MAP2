@@ -1,0 +1,42 @@
+{
+  "_id": {
+    "$oid": "6964199ee4967baaf08c4000"
+  },
+  "name": "Sending",
+  "level": 3,
+  "description": "You send a short message of twenty-five words or less to a creature with which you are familiar. The creature hears the message in its mind, recognizes you as the sender if it knows you, and can answer in a like manner immediately. The spell enables creatures with Intelligence scores of at least 1 to understand the meaning of your message.\n\nYou can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a 5 percent chance that the message doesn’t arrive.",
+  "castingTime": "1 action",
+  "range": "Unlimited",
+  "components": "V, S, M (a short piece of fine copper wire)",
+  "duration": "1 round",
+  "damage": null,
+  "school": "Evocation",
+  "isPublic": true,
+  "classes": [
+    "bard",
+    "cleric",
+    "wizard"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "e29b9dc5-ce0f-42e4-82a0-e6eeea15c2de${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"8cae8931-059c-4a60-9ec6-e0e9a60eb824\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "3c4623ef-960e-4475-b72f-55fb739b7f89${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"94a06069-1190-4f28-87da-b2c3bd06ad25\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "f72ae672-872d-4ee4-9a89-1fdf567aeb39${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"908fd5c2-d269-4da3-8998-7a20341a047c\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "4e05cbba-4c0a-484a-a6f2-d17c20619427",
+      "json": "{}"
+    }
+  ],
+  "video": "/SPELL_VIDEOS/Sending_You_send_a_short_message_of_twenty-five_words_or_less_93dbffd4-2e9d-46a8-991e-87dfa6efffed_0.mp4"
+}

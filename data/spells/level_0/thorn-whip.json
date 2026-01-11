@@ -1,0 +1,39 @@
+{
+  "_id": {
+    "$oid": "6964199e8087e53fb2ac8000"
+  },
+  "name": "Thorn Whip",
+  "level": 0,
+  "description": "You create a long, vine-like whip covered in thorns that lashes out at your command toward a creature in range. Make a melee spell attack against the target. If the attack hits, the creature takes 1d6 piercing damage, and if the creature is Large or smaller, you pull the creature up to 10 feet closer to you.\n\nThis spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).",
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S, M (the stem of a plant with thorns)",
+  "duration": "Instantaneous",
+  "damage": "1d6 piercing",
+  "school": "Transmutation",
+  "isPublic": true,
+  "classes": [
+    "druid"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "62c26ec4-cce9-428e-a381-5e09a40ec377${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"84a05055-3bfe-46b5-b6b9-c6b8cdcf6f13\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "725ad7ab-2eae-4d04-a436-9b43b94ca617${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c6e51c28-66a6-4844-a5eb-8656e3be1f5b\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "c22a05e9-7e95-454b-a544-8265fe6d8b3c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"15ca3ede-5b34-44e9-8843-9c160665499e\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "23e467ca-0fc4-4ebb-a7cb-f1f5b4e76aa7",
+      "json": "{}"
+    }
+  ]
+}

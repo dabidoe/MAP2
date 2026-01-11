@@ -1,0 +1,39 @@
+{
+  "_id": {
+    "$oid": "6964199e5630bdb490959000"
+  },
+  "name": "Thunderous Smite",
+  "level": 1,
+  "description": "The first time you hit with a melee weapon attack during this spell's duration, your weapon rings with thunder that is audible within 300 feet of you, and the attack deals an extra 2d6 thunder damage to the target. Additionally, if the target is a creature, it must succeed on a Strength saving throw or be pushed 10 feet away from you and knocked prone.",
+  "castingTime": "1 bonus action",
+  "range": "Self",
+  "components": "V",
+  "duration": "Concentration, up to 1 minute",
+  "damage": "2d6 thunder",
+  "school": "Evocation",
+  "isPublic": true,
+  "classes": [
+    "paladin"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "ede662e2-549c-45f6-a1f4-d280471cab46${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"6ff0bac5-c71e-4709-a543-5abd46e6d283\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "2799c47b-8f63-4a19-a00b-0da79b95c034${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"3820b964-274b-4c2d-ace1-aac063325aa2\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "5cb6f739-f647-47ba-8800-330a4c55e8a2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"211450e8-91f8-43c6-8f57-5e9ddf981e5c\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "7f1e385c-ddb6-413e-b78a-fd2bc784177b${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"bf6603ed-90f4-4dce-92f1-4101a2c27cef\"}",
+      "json": "{}"
+    }
+  ]
+}

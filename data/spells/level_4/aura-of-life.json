@@ -1,0 +1,40 @@
+{
+  "_id": {
+    "$oid": "6964199ece4dd3e8d40df000"
+  },
+  "name": "Aura of Life",
+  "level": 4,
+  "description": "Life-preserving energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. Each nonhostile creature in the aura (including you) has resistance to necrotic damage, and its hit point maximum can't be reduced. In addition, a nonhostile, living creature regains 1 hit point when it starts its turn in the aura with 0 hit points.",
+  "castingTime": "1 action",
+  "range": "Self (30-foot radius)",
+  "components": "V",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": null,
+  "school": "Abjuration",
+  "isPublic": true,
+  "classes": [
+    "paladin"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "29822105-47ce-4dfa-9978-39f9121bc33f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1.231827,1.231827\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"890f4c60-178f-4c11-9881-7c706eb6c49e\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "4ea7812e-8dd7-4144-84b5-00f1740c8ff7${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"a96268b7-eac4-4642-8bf3-f9099733a5f6\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "57b90d40-b7e9-41f5-bbaf-8ea2d10284a7${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"9926e09c-16f6-43e6-b1c8-dafac610e305\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "f3e731e0-1b74-4e8e-b0ca-63d5044b6379${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"0a1030e0-8e10-4ff2-87ef-93baa27bb471\"}",
+      "json": "{}"
+    }
+  ],
+  "video": "/SPELL_VIDEOS/Aura_of_Life_You_create_a_soothing_aura_of_positive_energy_ar_2f0408be-ae52-44b9-8f0c-f936bbdaed9c_0.mp4"
+}

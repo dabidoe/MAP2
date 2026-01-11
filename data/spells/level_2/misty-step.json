@@ -1,0 +1,41 @@
+{
+  "_id": {
+    "$oid": "6964199e2e6f76847f109000"
+  },
+  "name": "Misty Step",
+  "level": 2,
+  "description": "Briefly surrounded by silvery mist, you teleport up to 30 feet to an unoccupied space that you can see.",
+  "castingTime": "1 bonus action",
+  "range": "Self",
+  "components": "V",
+  "duration": "Instantaneous",
+  "damage": null,
+  "school": "Conjuration",
+  "isPublic": true,
+  "classes": [
+    "sorcerer",
+    "warlock",
+    "wizard"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "f28d5ef9db7a3f8eb490252f44de87146c7fd8a5bdc6b727d7787689f34aff08${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"64c2e8cb-e718-4f09-9b41-4808e45eaaf3\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "be467f96-4ebf-405c-a1fb-26f073dc37df${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"362d8a24-e4b1-43a1-b166-ddebcbc6f5ca\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "acd3d7c0-d0ad-4b51-b6c4-46662f8da313${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"bc197e9d-bc7d-4df0-9820-f6439f7ecb24\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "47f6f54b-f074-40b0-bbee-60b8a22d8ff8${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"2bd88ffa-631d-4615-9ca6-b8f23fafdab3\"}",
+      "json": "{}"
+    }
+  ]
+}

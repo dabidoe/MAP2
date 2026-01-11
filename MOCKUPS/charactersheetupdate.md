@@ -63,3 +63,32 @@ Clicking the "Spellbook" icon re-skins the 3x3 grid. It opens a "folder" view:
 3. **Set the AI System Prompt:** Instruct the AI to use the `desc` for quick results and the `ref` for "Cinematic" results.
 
 **Would you like me to generate the first "Master Folder" for Washington's Level 1 spells so we can test the /cast select logic?**
+The Component Breakdown
+1. Traits (The Background "Flavor" & Rules)
+These are your intrinsic properties.
+Visual: Borderless or low-opacity grey chips.
+Interaction: Non-clickable.
+Hover: Triggers a Mini-Card (a scrunched version of the card) that shows the full rule text.
+Toggleable? Usually no, but you could have a "Condition" trait (like Invisibility) that can be toggled to update the AI's math.
+2. Feats (The Tactical Mix)
+Feats are "Hybrid" entries.
+Passive Feats: (e.g., Tough or War Caster). These stay grey/borderless because they just modify your stats behind the scenes.
+Active Feats: (e.g., Great Weapon Master or Sentinel). These get a Red Border because they are specific actions you choose to take.
+Toggle Feats: Some feats act as "Stances" (e.g., Sharpshooter on/off). These could have a "Glow" when active.
+3. Abilities & Spells (The Combat Engine)
+These are your primary high-value actions.
+Abilities: Class-specific moves like Lay on Hands (White) or Divine Smite (Red).
+Spells: High-res icons with color-coded borders (Red for Damage, Blue for Buff, etc.).
+Interaction: Left-click to Action (AI rolls), Long-hover or click-corner for Card View (Bells and Whistles).
+The Folder Structure for the AI
+To support this, your "Library" folders would look like this:
+/traits/: Mostly borderless, clickable: false.
+/feats/: A mixed bag. clickable: true if it has a roll, false if it’s a passive stat boost.
+/abilities/class/: Almost always clickable: true with a colored border.
+/spells/: Organized by level, always clickable: true with intent-based borders.
+Why the "2s Hover" is the Hero here
+By making the hover just a Bigger Image/Mini-Card, you provide a "Pre-flight check."
+Glance: You see the icon and the red border (I'm going to do damage).
+Hover (2s): You see the expanded detail (It's a Bonus Action, 30ft range).
+Click: You commit, and the AI handles the cinematic narration and dice.
+Would you like me to take Washington's "Passive Traits" from the screenshot and write the JSON for them as "Grey Chips" so we can see how they look in the new format?

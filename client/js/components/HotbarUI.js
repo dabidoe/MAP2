@@ -87,7 +87,10 @@ export class HotbarUI {
         ${this._generateGridSlots()}
       </div>
 
-      <button class="hotbar-view-sheet-btn" id="hotbar-view-sheet-btn">📋 View Full Sheet</button>
+      <div class="hotbar-buttons">
+        <button class="hotbar-view-sheet-btn" id="hotbar-view-sheet-btn">📋 View Sheet</button>
+        <button class="hotbar-customize-btn" id="hotbar-customize-btn">⚙️ Customize</button>
+      </div>
 
       <!-- Hover Card (hidden by default) -->
       <div id="hotbar-hover-card" class="hotbar-hover-card" style="display: none;">
@@ -159,6 +162,11 @@ export class HotbarUI {
     document.getElementById('hotbar-view-sheet-btn')?.addEventListener('click', () => {
       this._openCharacterSheet();
     });
+
+    // Customize hotbar button
+    document.getElementById('hotbar-customize-btn')?.addEventListener('click', () => {
+      this._openCustomizeModal();
+    });
   }
 
   /**
@@ -172,6 +180,99 @@ export class HotbarUI {
       detail: { character: this.currentCharacter }
     });
     window.dispatchEvent(event);
+  }
+
+  /**
+   * Open hotbar customization modal
+   */
+  _openCustomizeModal() {
+    if (!this.currentCharacter) return;
+
+    // Create modal overlay
+    const modal = document.createElement('div');
+    modal.className = 'hotbar-customize-modal';
+    modal.innerHTML = `
+      <div class="customize-modal-content">
+        <div class="customize-modal-header">
+          <h2>Customize Hotbar - ${this.currentCharacter.name}</h2>
+          <button class="customize-close-btn">✕</button>
+        </div>
+        <div class="customize-modal-body">
+          <div class="customize-instructions">
+            Click a hotbar slot, then select an ability or spell to assign
+          </div>
+          <div class="customize-hotbar-preview">
+            ${Array.from({ length: 9 }).map((_, i) => {
+              const slotNum = i + 1;
+              const slotData = this._getCurrentHotbar()[slotNum];
+              return `
+                <div class="customize-slot" data-slot="${slotNum}">
+                  <div class="customize-slot-number">${slotNum}</div>
+                  <div class="customize-slot-content">
+                    ${slotData ? `
+                      ${slotData.icon ? `<img src="${slotData.icon}" alt="${slotData.name}" />` : this._getTypeEmoji(slotData.type)}
+                      <div class="customize-slot-name">${slotData.name}</div>
+                    ` : '<div class="empty-slot">Empty</div>'}
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+          <div class="customize-available-actions">
+            <h3>Available Actions</h3>
+            <div class="customize-actions-grid">
+              ${this._renderAvailableActions()}
+            </div>
+          </div>
+        </div>
+        <div class="customize-modal-footer">
+          <button class="customize-reset-btn">Reset to Default</button>
+          <button class="customize-save-btn">Save</button>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    // Attach event listeners
+    modal.querySelector('.customize-close-btn').addEventListener('click', () => {
+      modal.remove();
+    });
+
+    modal.querySelector('.customize-save-btn').addEventListener('click', () => {
+      this._saveCustomHotbar();
+      modal.remove();
+      this._refreshCharacter();
+    });
+
+    modal.querySelector('.customize-reset-btn').addEventListener('click', () => {
+      this._resetHotbar();
+      modal.remove();
+      this._refreshCharacter();
+    });
+
+    // Handle slot selection
+    let selectedSlot = null;
+    modal.querySelectorAll('.customize-slot').forEach(slot => {
+      slot.addEventListener('click', () => {
+        modal.querySelectorAll('.customize-slot').forEach(s => s.classList.remove('selected'));
+        slot.classList.add('selected');
+        selectedSlot = parseInt(slot.dataset.slot);
+      });
+    });
+
+    // Handle action selection
+    modal.querySelectorAll('.customize-action-item').forEach(action => {
+      action.addEventListener('click', () => {
+        if (selectedSlot) {
+          this._assignActionToSlot(selectedSlot, JSON.parse(action.dataset.action));
+          modal.remove();
+          this._openCustomizeModal(); // Reopen to show updated hotbar
+        } else {
+          alert('Please select a hotbar slot first');
+        }
+      });
+    });
   }
 
   /**
@@ -204,6 +305,126 @@ export class HotbarUI {
   }
 
   /**
+   * Get current hotbar configuration (custom or default)
+   */
+  _getCurrentHotbar() {
+    if (!this.currentCharacter) return {};
+
+    // Check for custom hotbar in localStorage
+    const customKey = `hotbar_${this.currentCharacter.name}`;
+    const customHotbar = localStorage.getItem(customKey);
+
+    if (customHotbar) {
+      return JSON.parse(customHotbar);
+    }
+
+    // Fall back to default or character's hotbar
+    return this.currentCharacter.hotbar || this._generateDefaultHotbar(this.currentCharacter);
+  }
+
+  /**
+   * Render available actions for customization
+   */
+  _renderAvailableActions() {
+    const actions = [];
+
+    // Add abilities
+    if (this.currentCharacter.abilities && Array.isArray(this.currentCharacter.abilities)) {
+      this.currentCharacter.abilities.forEach(ability => {
+        const abilityRoll = ability.mechanics?.damage || ability.damage || '';
+        const parsedRoll = abilityRoll ? this._parseFormula(abilityRoll) : '';
+
+        actions.push({
+          name: ability.name,
+          type: 'ability',
+          icon: ability.icon,
+          roll: parsedRoll || abilityRoll,
+          summary: ability.summary || ability.description || '',
+          description: ability.description
+        });
+      });
+    }
+
+    // Add spells
+    if (this.currentCharacter.spells && this.currentCharacter.spells.known) {
+      this.currentCharacter.spells.known.forEach(spellRef => {
+        const spellId = spellRef.spellId?.$oid || spellRef.spellId;
+        if (!spellId || !this.grimoire?.spells) return;
+
+        const spell = this.grimoire.spells.find(s => {
+          const sid = s._id?.$oid || s._id || s.spellId?.$oid || s.spellId || s.id;
+          return sid === spellId;
+        });
+
+        if (spell) {
+          const parsedRoll = spell.damage ? this._parseFormula(spell.damage) : '';
+          actions.push({
+            name: spell.name,
+            type: 'spell',
+            icon: spell.icon,
+            roll: parsedRoll || spell.damage || '',
+            summary: spell.summary || spell.description || '',
+            description: spell.description
+          });
+        }
+      });
+    }
+
+    // Add feats (optional)
+    if (this.currentCharacter.feats && Array.isArray(this.currentCharacter.feats)) {
+      this.currentCharacter.feats.forEach(feat => {
+        actions.push({
+          name: feat.name,
+          type: 'feat',
+          icon: feat.icon,
+          roll: '',
+          summary: feat.summary || feat.description || '',
+          description: feat.description
+        });
+      });
+    }
+
+    return actions.map(action => `
+      <div class="customize-action-item" data-action='${JSON.stringify(action)}'>
+        <div class="action-icon">
+          ${action.icon ? `<img src="${action.icon}" alt="${action.name}" />` : this._getTypeEmoji(action.type)}
+        </div>
+        <div class="action-info">
+          <div class="action-name">${action.name}</div>
+          <div class="action-type">${action.type}</div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  /**
+   * Assign action to hotbar slot
+   */
+  _assignActionToSlot(slotNumber, action) {
+    const customKey = `hotbar_${this.currentCharacter.name}`;
+    const hotbar = this._getCurrentHotbar();
+    hotbar[slotNumber] = action;
+    localStorage.setItem(customKey, JSON.stringify(hotbar));
+  }
+
+  /**
+   * Save custom hotbar
+   */
+  _saveCustomHotbar() {
+    // Already saved via _assignActionToSlot
+    console.log('Hotbar customization saved');
+  }
+
+  /**
+   * Reset hotbar to default
+   */
+  _resetHotbar() {
+    const customKey = `hotbar_${this.currentCharacter.name}`;
+    localStorage.removeItem(customKey);
+    console.log('Hotbar reset to default');
+  }
+
+  /**
    * Render character to hotbar
    */
   _renderCharacter(character) {
@@ -224,8 +445,8 @@ export class HotbarUI {
       ? `+${character.initiative}`
       : character.initiative;
 
-    // Use existing hotbar or generate default
-    const hotbar = character.hotbar || this._generateDefaultHotbar(character);
+    // Use custom hotbar if exists, otherwise use default
+    const hotbar = this._getCurrentHotbar();
 
     // Render hotbar slots
     this._renderHotbar(hotbar);
@@ -236,6 +457,7 @@ export class HotbarUI {
    */
   _generateDefaultHotbar(character) {
     console.log('Generating default hotbar for:', character.name);
+
     const hotbar = {};
     const strMod = character.attributes?.str ? Math.floor((character.attributes.str - 10) / 2) : 0;
     const dexMod = character.attributes?.dex ? Math.floor((character.attributes.dex - 10) / 2) : 0;
@@ -258,34 +480,23 @@ export class HotbarUI {
       summary: 'Standard ranged weapon attack'
     };
 
-    // Slots 3-9: Fill with abilities, feats, and spells
+    // Slots 3-9: Fill with abilities and spells
     let slotIndex = 3;
 
-    // Add feats first
-    if (character.feats && Array.isArray(character.feats)) {
-      for (const feat of character.feats.slice(0, 3)) {
-        if (slotIndex > 9) break;
-        hotbar[slotIndex] = {
-          name: feat.name,
-          type: 'feat',
-          icon: feat.icon || null,
-          roll: '',
-          summary: feat.summary || feat.description || '',
-          description: feat.description
-        };
-        slotIndex++;
-      }
-    }
-
-    // Add abilities
+    // Add abilities first (active abilities with damage/effects)
     if (character.abilities && Array.isArray(character.abilities)) {
       for (const ability of character.abilities) {
         if (slotIndex > 9) break;
+
+        // Parse formula for abilities too
+        const abilityRoll = ability.mechanics?.damage || ability.damage || '';
+        const parsedRoll = abilityRoll ? this._parseFormula(abilityRoll) : '';
+
         hotbar[slotIndex] = {
           name: ability.name,
           type: 'ability',
           icon: ability.icon || null,
-          roll: ability.mechanics?.damage || '',
+          roll: parsedRoll || abilityRoll,
           summary: ability.summary || ability.description || '',
           description: ability.description
         };
@@ -293,42 +504,51 @@ export class HotbarUI {
       }
     }
 
-    // Add spells (if spellcaster)
-    if (character.spellbook) {
-      const spellLevels = ['L0', 'L1', 'L2', 'L3', 'L4', 'L5'];
-      for (const level of spellLevels) {
+    // Add spells (fill remaining slots)
+    if (character.spells && character.spells.known && character.spells.known.length > 0) {
+      // Get remaining spell slots for hotbar
+      const spellsToAdd = character.spells.known.slice(0, Math.min(7, 9 - slotIndex + 1));
+
+      for (const spellRef of spellsToAdd) {
         if (slotIndex > 9) break;
-        const spells = character.spellbook[level];
-        if (spells && spells.length > 0) {
-          const charSpell = spells[0];
 
-          // Character spell is already expanded by server API
-          let spellData = charSpell;
+        // Get spell ID from ObjectID reference
+        const spellId = spellRef.spellId?.$oid || spellRef.spellId;
 
-          // Try grimoire lookup for better data if needed
-          if (this.grimoire && this.grimoire.spells && this.grimoire.spells.length > 0) {
-            const spellName = typeof charSpell === 'string' ? charSpell : charSpell.name;
-            const fullSpell = this.grimoire.spells.find(s => s.name === spellName);
-            if (fullSpell) {
-              console.log(`Found ${spellName} in Grimoire with icon:`, fullSpell.icon);
-              spellData = fullSpell;
-            } else {
-              console.warn(`Spell ${spellName} not found in Grimoire (${this.grimoire.spells.length} spells loaded)`);
-            }
-          } else {
-            console.warn('Grimoire not available or spells not loaded');
-          }
-
-          hotbar[slotIndex] = {
-            name: spellData.name || 'Unknown Spell',
-            type: 'spell',
-            icon: spellData.icon || null,
-            roll: spellData.damage || '',
-            summary: spellData.summary || spellData.description || '',
-            description: spellData.description || ''
-          };
-          slotIndex++;
+        if (!spellId) {
+          console.warn('Spell reference missing ID');
+          continue;
         }
+
+        // Find spell in Grimoire by matching ObjectID
+        let spellData = null;
+        if (this.grimoire && this.grimoire.spells && this.grimoire.spells.length > 0) {
+          spellData = this.grimoire.spells.find(s => {
+            const sid = s._id?.$oid || s._id || s.spellId?.$oid || s.spellId || s.id;
+            return sid === spellId;
+          });
+
+          if (!spellData) {
+            console.warn(`Spell ${spellId} not found in Grimoire`);
+            continue;
+          }
+        } else {
+          console.warn('Grimoire not available');
+          continue;
+        }
+
+        // Parse formula to replace text modifiers with actual values
+        const parsedRoll = spellData.damage ? this._parseFormula(spellData.damage) : '';
+
+        hotbar[slotIndex] = {
+          name: spellData.name || 'Unknown Spell',
+          type: 'spell',
+          icon: spellData.icon || null,
+          roll: parsedRoll || spellData.damage || '',
+          summary: spellData.summary || spellData.description || '',
+          description: spellData.description || ''
+        };
+        slotIndex++;
       }
     }
 
@@ -508,6 +728,80 @@ export class HotbarUI {
   }
 
   /**
+   * Get spellcasting modifier for character based on class
+   */
+  _getSpellcastingModifier() {
+    if (!this.currentCharacter || !this.currentCharacter.attributes) return 0;
+
+    const charClass = this.currentCharacter.class?.toLowerCase() || '';
+    const attrs = this.currentCharacter.attributes;
+
+    // Map class to spellcasting ability
+    const spellcastingAbility = {
+      'bard': 'cha',
+      'cleric': 'wis',
+      'druid': 'wis',
+      'paladin': 'cha',
+      'ranger': 'wis',
+      'sorcerer': 'cha',
+      'warlock': 'cha',
+      'wizard': 'int',
+      'artificer': 'int'
+    }[charClass];
+
+    if (!spellcastingAbility) return 0;
+
+    const abilityScore = attrs[spellcastingAbility] || 10;
+    return Math.floor((abilityScore - 10) / 2);
+  }
+
+  /**
+   * Parse damage formula and replace text modifiers with actual values
+   */
+  _parseFormula(formulaString) {
+    if (!formulaString || typeof formulaString !== 'string') return '';
+
+    let formula = formulaString.trim();
+
+    // Remove descriptive text like "healing", "damage", etc.
+    formula = formula.replace(/\s*(healing|damage|fire|cold|lightning|poison|acid|psychic|necrotic|radiant|force|thunder).*$/i, '');
+
+    // Replace "your spellcasting modifier" or "spellcasting modifier"
+    const spellMod = this._getSpellcastingModifier();
+    formula = formula.replace(/your\s+spellcasting\s+modifier/gi, spellMod.toString());
+    formula = formula.replace(/spellcasting\s+modifier/gi, spellMod.toString());
+
+    // Replace ability modifiers if present
+    const attrs = this.currentCharacter?.attributes || {};
+    const replacements = {
+      'strength modifier': Math.floor((attrs.str - 10) / 2),
+      'dexterity modifier': Math.floor((attrs.dex - 10) / 2),
+      'constitution modifier': Math.floor((attrs.con - 10) / 2),
+      'intelligence modifier': Math.floor((attrs.int - 10) / 2),
+      'wisdom modifier': Math.floor((attrs.wis - 10) / 2),
+      'charisma modifier': Math.floor((attrs.cha - 10) / 2),
+      'str modifier': Math.floor((attrs.str - 10) / 2),
+      'dex modifier': Math.floor((attrs.dex - 10) / 2),
+      'con modifier': Math.floor((attrs.con - 10) / 2),
+      'int modifier': Math.floor((attrs.int - 10) / 2),
+      'wis modifier': Math.floor((attrs.wis - 10) / 2),
+      'cha modifier': Math.floor((attrs.cha - 10) / 2)
+    };
+
+    for (const [text, value] of Object.entries(replacements)) {
+      const regex = new RegExp(text, 'gi');
+      formula = formula.replace(regex, value.toString());
+    }
+
+    // Clean up extra spaces around operators
+    formula = formula.replace(/\s*\+\s*/g, '+').replace(/\s*-\s*/g, '-');
+
+    // Extract just the dice formula (XdY±Z format)
+    const match = formula.match(/(\d+d\d+(?:[+-]\d+)?)/i);
+    return match ? match[1] : '';
+  }
+
+  /**
    * Execute slot action
    */
   _executeSlotAction(slotData) {
@@ -525,23 +819,83 @@ export class HotbarUI {
 
     console.log('Executing action:', slotData);
 
-    // Weapon/Attack: Show to-hit and damage, but don't auto-roll
+    // Weapon/Attack: Roll to-hit and damage
     if (slotData.type === 'weapon' || slotData.type === 'attack') {
-      const attackMod = slotData.name.toLowerCase().includes('bow') || slotData.name.toLowerCase().includes('ranged')
+      const isRanged = slotData.name.toLowerCase().includes('bow') || slotData.name.toLowerCase().includes('ranged');
+      const attackMod = isRanged
         ? (this.currentCharacter?.attributes?.dex ? Math.floor((this.currentCharacter.attributes.dex - 10) / 2) : 0)
         : (this.currentCharacter?.attributes?.str ? Math.floor((this.currentCharacter.attributes.str - 10) / 2) : 0);
 
       this.dashboard._addConsoleMessage('action', `⚔️ ${characterName} attacks with ${slotData.name}!`);
-      this.dashboard._addConsoleMessage('system', `To Hit: d20+${attackMod} | Damage: ${slotData.roll}`);
+
+      // Roll to-hit
+      const toHitRoll = `1d20${attackMod >= 0 ? '+' : ''}${attackMod}`;
+      this.dashboard._rollDice(toHitRoll, 'To Hit');
+
+      // Roll damage if available
+      if (slotData.roll && slotData.roll.trim() !== '') {
+        this.dashboard._rollDice(slotData.roll, 'Damage');
+      }
     }
-    // Spell/Ability with roll
-    else if (slotData.roll && slotData.roll.trim() !== '' && slotData.roll !== 'None') {
-      this.dashboard._addConsoleMessage('action', `✨ ${characterName} casts ${slotData.name}!`);
-      this.dashboard._rollDice(slotData.roll);
+    // Special case: Lay on Hands (level-based healing pool)
+    else if (slotData.type === 'ability' && slotData.name.toLowerCase().includes('lay on hands')) {
+      const level = this.currentCharacter?.level || 1;
+      const healingPool = level * 5;
+      const defaultHeal = Math.min(10, healingPool); // Heal 10 HP by default or pool max
+
+      this.dashboard._addConsoleMessage('action', `✨ ${characterName} uses ${slotData.name}!`);
+      this.dashboard._addConsoleMessage('healing', `💚 Restores ${defaultHeal} HP (Pool: ${healingPool} HP available)`);
     }
-    // No roll - just description
+    // Ability with roll/damage
+    else if (slotData.type === 'ability' && slotData.roll && slotData.roll.trim() !== '' && slotData.roll !== 'None') {
+      this.dashboard._addConsoleMessage('action', `✨ ${characterName} uses ${slotData.name}!`);
+      const parsedFormula = this._parseFormula(slotData.roll);
+      if (parsedFormula) {
+        this.dashboard._rollDice(parsedFormula, slotData.name);
+      } else {
+        // If no dice formula found, just show the description
+        if (slotData.summary) {
+          this.dashboard._addConsoleMessage('system', `📖 ${slotData.summary}`);
+        }
+      }
+    }
+    // Spell with roll/damage
+    else if (slotData.type === 'spell' && slotData.roll && slotData.roll.trim() !== '' && slotData.roll !== 'None') {
+      this.dashboard._addConsoleMessage('action', `🔮 ${characterName} casts ${slotData.name}!`);
+      const parsedFormula = this._parseFormula(slotData.roll);
+      if (parsedFormula) {
+        const isHealing = slotData.roll.toLowerCase().includes('healing');
+        const label = isHealing ? `${slotData.name} Healing` : `${slotData.name} Damage`;
+        this.dashboard._rollDice(parsedFormula, label);
+      } else {
+        // If no dice formula, just show effect description
+        if (slotData.summary) {
+          this.dashboard._addConsoleMessage('system', `📖 ${slotData.summary}`);
+        }
+      }
+    }
+    // Feat with roll/damage
+    else if (slotData.type === 'feat' && slotData.roll && slotData.roll.trim() !== '' && slotData.roll !== 'None') {
+      this.dashboard._addConsoleMessage('action', `⭐ ${characterName} uses ${slotData.name}!`);
+      const parsedFormula = this._parseFormula(slotData.roll);
+      if (parsedFormula) {
+        this.dashboard._rollDice(parsedFormula, slotData.name);
+      } else {
+        if (slotData.summary) {
+          this.dashboard._addConsoleMessage('system', `📖 ${slotData.summary}`);
+        }
+      }
+    }
+    // No roll - just activation with description
     else {
-      this.dashboard._addConsoleMessage('action', `✨ ${characterName} activates ${slotData.name}!`);
+      const emoji = {
+        'ability': '✨',
+        'spell': '🔮',
+        'feat': '⭐',
+        'trait': '🛡️'
+      }[slotData.type] || '✨';
+
+      this.dashboard._addConsoleMessage('action', `${emoji} ${characterName} activates ${slotData.name}!`);
       if (slotData.summary && slotData.summary.trim() !== '') {
         this.dashboard._addConsoleMessage('system', `📖 ${slotData.summary}`);
       }

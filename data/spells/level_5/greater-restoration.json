@@ -1,0 +1,25 @@
+{
+  "_id": {
+    "$oid": "6964199e18ad9270a900e000"
+  },
+  "name": "Greater Restoration",
+  "level": 5,
+  "description": "You imbue a creature you touch with positive energy to undo a debilitating effect.  You can reduce the taret's exhaustion level by one, or end one of the following effects on the target:\n\n* One effect that charmed or petrified the target\n\n* One curse, including the target’s attunement to a cursed magic item\n\n* Any reduction to one of the target’s ability scores\n\n* One effect reducing the target’s hit point maximum",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S, M (diamond dust worth at least 100 gp, which the spell consumes)",
+  "duration": "Instantaneous",
+  "damage": null,
+  "school": "Abjuration",
+  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+  "iconStatus": "missing",
+  "isPublic": true,
+  "classes": [
+    "cleric",
+    "druid",
+    "bard"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1"
+}

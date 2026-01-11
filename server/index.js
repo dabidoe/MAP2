@@ -33,6 +33,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../client')));
 app.use('/assets', express.static(path.join(__dirname, '../client/assets')));
 app.use('/data', express.static(path.join(__dirname, '../data')));
+app.use('/SPELL_VIDEOS', express.static(path.join(__dirname, '../SPELL_VIDEOS')));
 
 // API Routes
 app.use('/api', apiRoutes);

@@ -1,0 +1,42 @@
+{
+  "_id": {
+    "$oid": "6964199e881d070d76817000"
+  },
+  "name": "Cloud of Daggers",
+  "level": 2,
+  "description": "You fill the air with spinning daggers in a cube 5 feet on each side, centered on a point you choose within range. A creature takes 4d4 slashing damage when it enters the spell’s area for the first time on a turn or starts its turn there.",
+  "castingTime": "1 action",
+  "range": "60 feet",
+  "components": "V, S, M (a sliver of glass)",
+  "duration": "Concentration, up to 1 minute",
+  "damage": "4d4 slashing",
+  "school": "Conjuration",
+  "isPublic": true,
+  "classes": [
+    "bard",
+    "sorcerer",
+    "warlock",
+    "wizard"
+  ],
+  "ritual": false,
+  "higherLevels": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 2d4 for each slot level above 2nd.",
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "ec086665-d011-4987-b454-7caa2a0cc446${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"26253500-09dc-4533-9b36-4843b304c4ee\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "d04aabd8-68fe-4a57-b48b-02735c76fd42${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"a7b71fad-e5ba-4211-9562-34f66a0ed2d8\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "6c389d4a-4c10-4751-8dc6-3e61dc380931${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e0c8ee51-7940-4bd8-820d-236206970cad\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "d6c25f1a-81ad-4abc-b1b1-4cfb8aac23ad${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4bce308a-0b9c-45c7-8d27-71cb550f4004\"}",
+      "json": "{}"
+    }
+  ]
+}

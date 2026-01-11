@@ -1,0 +1,42 @@
+{
+  "_id": {
+    "$oid": "6964199ee890b74ada828000"
+  },
+  "name": "Sleet Storm",
+  "level": 3,
+  "description": "Until the spell ends, freezing rain and sleet fall in a 20-foot-tall cylinder with a 40-foot radius centered on a point you choose within range. The area is heavily obscured, and exposed flames in the area are doused.\n\nThe ground in the area is covered with slick ice, making it difficult terrain. When a creature enters the spell’s area for the first time on a turn or starts its turn there, it must make a Dexterity saving throw. On a failed save, it falls prone.\n\nIf a creature is concentrating in the spell’s area, the creature must make a successful Constitution saving throw against your spell save DC or lose concentration.",
+  "castingTime": "1 action",
+  "range": "150 feet",
+  "components": "V, S, M (a pinch of dust and a few drops of water)",
+  "duration": "Concentration, up to 1 minute",
+  "damage": null,
+  "school": "Conjuration",
+  "isPublic": true,
+  "classes": [
+    "druid",
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "20caf9d2-2516-4dbe-b06c-b9d1d84456d9${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1.109877,1.109877\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"79893b89-23e2-45ac-9f4e-b7ee48abf16f\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "b3f40d6b-8891-4cac-972e-d1d0870c87f5${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"31b17e5c-22fa-4d31-9786-d57e26a38ed6\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "e104bea4-f88b-4da2-ac9c-41082823e4e0${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1.210491,1.210491\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"bff9faf0-d29a-47d9-a5ab-78526e3d8ae9\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "7a6f4d0e-eb26-4165-8980-3bd8480a23f8${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ba27e10a-7544-4704-a7e0-124113d2c72a\"}",
+      "json": "{}"
+    }
+  ],
+  "video": "/SPELL_VIDEOS/Sleet_Storm_You_create_a_visual_effect_of_a_storm_of_sleet_fa_edb89ab9-f1ae-42bb-a440-d39fae9c4952_0.mp4"
+}

@@ -1,0 +1,41 @@
+{
+  "_id": {
+    "$oid": "6964199ea96bab668015f000"
+  },
+  "name": "Revivify",
+  "level": 3,
+  "description": "You touch a creature that has died within the last minute. That creature returns to life with 1 hit point. This spell can’t return to life a creature that has died of old age, nor can it restore any missing body parts.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S, M (diamonds worth 300 gp, which the spell consumes)",
+  "duration": "Instantaneous",
+  "damage": null,
+  "school": "Conjuration",
+  "isPublic": true,
+  "classes": [
+    "cleric",
+    "paladin"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "ec713ddd-0794-4c0f-9f90-a51e40026bea${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"42dc01bc-2c80-46ae-aa50-a02fc084f5a8\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "96553564-8771-403c-bb7d-eca93c75f23c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ef668b7a-d1e2-4211-b65c-3a0f1b0d3fc9\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "7972f04f-46db-46ed-b484-c3c02b23f495${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"8bb21371-8086-4e90-8f5f-ce138a33e49d\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "c2c58aef-a5e5-47cf-9751-3a2175b888e4${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"3cb04416-6f9d-410b-8cde-98adf3b30d3a\"}",
+      "json": "{}"
+    }
+  ],
+  "video": "/SPELL_VIDEOS/Revivify_You_touch_a_creature_that_has_been_incapacitated_in__84d0dffc-10b2-4a54-aa3c-3e920ba6f102_0.mp4"
+}

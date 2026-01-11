@@ -1,0 +1,40 @@
+{
+  "_id": {
+    "$oid": "6964199e0c4c3fb1761b9000"
+  },
+  "name": "Animate Dead",
+  "level": 3,
+  "description": "This spell creates an undead servant. Choose a pile of bones or a corpse of a Medium or Small humanoid within range. Your spell imbues the target with a foul mimicry of life, raising it as an undead creature. The target becomes a skeleton if you chose bones or a zombie if you chose a corpse (the DM has the creature’s game statistics).\n\nOn each of your turns, you can use a bonus action to mentally command any creature you made with this spell if the creature is within 60 feet of you (if you control multiple creatures, you can command any or all of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it will move during its next turn, or you can issue a general command, such as to guard a particular chamber or corridor. If you issue no commands, the creature only defends itself against hostile creatures. Once given an order, the creature continues to follow it until its task is complete.\n\nThe creature is under your control for 24 hours, after which it stops obeying any command you’ve given it. To maintain control of the creature for another 24 hours, you must cast this spell on the creature again before the current 24-hour period ends. This use of the spell reasserts your control over up to four creatures you have animated with this spell, rather than animating a new one.",
+  "castingTime": "1 minute",
+  "range": "10 feet",
+  "components": "V, S, M (a drop of blood, a piece of flesh, and a pinch of bone dust)",
+  "duration": "Instantaneous",
+  "damage": null,
+  "school": "Necromancy",
+  "isPublic": true,
+  "classes": [
+    "cleric",
+    "wizard"
+  ],
+  "ritual": false,
+  "higherLevels": "When you cast this spell using a spell slot of 4th level or higher, you animate or reassert control over two additional undead creatures for each slot level above 3rd. Each of the creatures must come from a different corpse or pile of bones.",
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "8c04519d-10b3-45cf-bb84-4ec7de295c35${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c3e92571-0094-49f8-b9f4-748aac9922fd\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "3bd2823c-8b68-470c-bf8e-76278a0dd133${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d39208c8-5677-4da9-8259-f9cce33ca592\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "3891b3ee-ec30-4ec9-98c7-5777249ca9f0${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"31b05080-406d-4d73-9840-2a0839e0fe77\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "f2707569-aa91-4d90-8bfb-07ce6359439d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"095650df-e715-432d-880f-2298bf7d3f17\"}",
+      "json": "{}"
+    }
+  ]
+}

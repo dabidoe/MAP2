@@ -1,0 +1,43 @@
+{
+  "_id": {
+    "$oid": "6964199e95f92cf57aa96000"
+  },
+  "name": "Lesser Restoration",
+  "level": 2,
+  "description": "You touch a creature and can end either one disease or one condition afflicting it. The condition can be blinded, deafened, paralyzed, or poisoned.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": null,
+  "school": "Abjuration",
+  "isPublic": true,
+  "classes": [
+    "bard",
+    "cleric",
+    "druid",
+    "paladin",
+    "ranger"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "c3fcde6a-ecda-4856-84cf-78778a30d83a${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"7994b3c4-223f-4e79-9dbe-6e38e347132a\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "c9418f42-efc3-4947-870f-6e8b6b2fc172${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"6fb8251c-c783-4820-ac7a-2c631b335d85\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "b8eaa022-f109-4515-b1c7-42526863afc7${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"68b79d2c-ec62-41fd-9ead-2560176464d2\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "6049a2e0-6b33-416c-b7a1-0ec632ec3ca6${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1298f2c6-1d74-4f0b-9fd9-248dc5a2734b\"}",
+      "json": "{}"
+    }
+  ]
+}

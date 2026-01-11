@@ -1,0 +1,40 @@
+{
+  "_id": {
+    "$oid": "6964199e8b3bad0e7acfa000"
+  },
+  "name": "Slow",
+  "level": 3,
+  "description": "You alter time around up to six creatures of your choice in a 40-foot cube within range. Each target must succeed on a wisdom saving throwor be affected by this spell for the duration.\n\nAn affected target’s speed is halved, it takes a -2 penalty to AC and Dexterity saving throws, and it can’t use reactions. On its turn, it can use either an action or a bonus action, not both. Regardless of the creature’s abilities or magic items, it can’t make more than one melee or ranged attack during its turn.\n\nIf the creature attempts to cast a spell with a casting time of 1 action, roll a d20. On an 11 or higher, the spell doesn’t take effect until the creature’s next turn, and the creature must use its action on that turn to complete the spell. If it can’t, the spell is wasted.\n\nA creature affected by this spell makes another Wisdom saving throwat the end of its turn. On a successful save, the effect ends for it.",
+  "castingTime": "1 action",
+  "range": "120 feet",
+  "components": "V, S, M (a drop of molasses)",
+  "duration": "Concentration, up to 1 minute",
+  "damage": null,
+  "school": "Transmutation",
+  "isPublic": true,
+  "classes": [
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "db342782-da7c-4555-b9d0-9200dd564ab0${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"56e87ed0-db49-49c0-8779-1ce7302837e0\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "7251f183-e5c3-4005-b64c-daaa54354e7a",
+      "json": "{}"
+    },
+    {
+      "guid": "d12708c8-fb39-4650-9af1-ec7040b3f38d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c6aa11b4-7a45-4dd2-b04e-656984a4930f\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "39e4dcc4-c1ec-44a6-8363-6c458b0c3aa0",
+      "json": "{}"
+    }
+  ]
+}

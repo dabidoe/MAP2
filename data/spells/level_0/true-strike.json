@@ -1,0 +1,42 @@
+{
+  "_id": {
+    "$oid": "6964199e0f2f49b330f4e000"
+  },
+  "name": "True Strike",
+  "level": 0,
+  "description": "You extend your hand and point a finger at a target in range. Your magic grants you a brief insight into the target's defenses. On your next turn, you gain advantage on your first attack roll against the target, provided that this spell hasn't ended.",
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "S",
+  "duration": "Concentration, up to 1 round",
+  "damage": null,
+  "school": "Divination",
+  "isPublic": true,
+  "classes": [
+    "bard",
+    "sorcerer",
+    "warlock",
+    "wizard"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "9fcdc525-8c4b-4420-bc0f-7a65b189c8d9${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"bd4ddb96-4a1f-4cf0-9dbb-18ecd8ee2936\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "db016369-45aa-4150-b9b4-a9781087420d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ce6d3c8e-fc2d-493d-873d-c0301513c20a\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "8e327ed7-484a-4acf-bc5c-7b9e5f97382f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4a1defb6-ca23-43dc-ba75-65e70cf726de\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "fe477888-969d-4f03-8e44-113ef07ffc3f",
+      "json": "{}"
+    }
+  ]
+}

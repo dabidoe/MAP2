@@ -1,0 +1,44 @@
+{
+  "_id": {
+    "$oid": "6964199e253d643600b7b000"
+  },
+  "name": "Daylight",
+  "level": 3,
+  "description": "A 60-foot-radius sphere of light spreads out from a point you choose within range. The sphere is bright light and sheds dim light for an additional 60 feet.\n\nIf you chose a point on an object you are holding or one that isn’t being worn or carried, the light shines from the object and moves with it. Completely covering the affected object with an opaque object, such as a bowl or a helm, blocks the light.\n\nIf any of this spell’s area overlaps with an area of darkness created by a spell of 3rd level or lower, the spell that created the darkness is dispelled.",
+  "castingTime": "1 action",
+  "range": "60 feet",
+  "components": "V, S",
+  "duration": "1 hour",
+  "damage": null,
+  "school": "Evocation",
+  "isPublic": true,
+  "classes": [
+    "cleric",
+    "druid",
+    "paladin",
+    "ranger",
+    "sorcerer"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "4285fea9-94a4-417d-81d3-4b8390a1240d${\"position\":\"0.4664488,0.4776293\",\"rotation\":0.0,\"scale\":\"1.133563,1.133563\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"46ad6b8b-2a58-4b1d-bff2-2336bb28c333\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "367ae661-f355-4836-b030-1cd32d59c084${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"799a9102-989a-41f0-8c02-bdfbfec83c9a\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "cf402df1-6565-413a-a3a7-e064f8fb3c7c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ec1129e8-6faa-442b-958e-d20c0c9fc4e3\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "23180434-3c74-4da5-9022-293ceb72b2d6${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"2b68bee0-2ff0-4897-a06a-edfa39861061\"}",
+      "json": "{}"
+    }
+  ],
+  "video": "/SPELL_VIDEOS/Daylight_You_touch_one_object_that_is_no_larger_than_10_feet__05d44152-4c3c-4bb6-ab34-c29f8bf45e23_0.mp4"
+}

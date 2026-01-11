@@ -1,0 +1,40 @@
+{
+  "_id": {
+    "$oid": "6964199e1388d43c6cc4e000"
+  },
+  "name": "Call Lightning",
+  "level": 3,
+  "description": "A storm cloud appears in the shape of a cylinder that is 10 feet tall with a 60-foot radius, centered on a point you can see 100 feet directly above you. The spell fails if you can’t see a point in the air where the storm cloud could appear (for example, if you are in a room that can’t accommodate the cloud).\n\nWhen you cast the spell, choose a point you can see within range. A bolt of lightning flashes down from the cloud to that point. Each creature within 5 feet of that point must make a Dexterity saving throw. A creature takes 3d10 lightning damage on a failed save, or half as much damage on a successful one. On each of your turns until the spell ends, you can use your action to call down lightning in this way again, targeting the same point or a different one.\n\nIf you are outdoors in stormy conditions when you cast this spell, the spell gives you control over the existing storm instead of creating a new one. Under such conditions, the spell’s damage increases by 1d10.",
+  "castingTime": "1 action",
+  "range": "120 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": "3d10 lightning",
+  "school": "Conjuration",
+  "isPublic": true,
+  "classes": [
+    "druid"
+  ],
+  "ritual": false,
+  "higherLevels": "When you cast this spell using a spell slot of 4th or higher level, the damage increases by 1d10 for each slot level above 3rd.",
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "fdb5c6bc-bbf4-4661-a0f5-a53efbe5ff16${\"position\":\"0.4632149,0.3808337\",\"rotation\":0.0,\"scale\":\"1.4,1.4\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"fe0131e8-88ec-499c-86c7-ffdd161a1479\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "ab713c9a-9dfb-46d9-8a9b-0c5de7ef524d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"8dc13067-a67d-427b-82c8-5ec7fa16f1b9\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "2f1ebf29-ee0a-4a24-87ec-e2b7b5b8cc89${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d3af6fab-ac1c-4266-9019-f6687a527d3c\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "0bde4e40-7a4e-4a0e-94ad-2b025c10ad8a${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"de14b116-0e1b-4dab-9850-d50453501881\"}",
+      "json": "{}"
+    }
+  ],
+  "video": "/SPELL_VIDEOS/Call_Lightning_You_summon_a_storm_cloud_directly_overhead_fro_808d7b27-4ed2-465a-b9fe-03a445cf35e0_0.mp4"
+}

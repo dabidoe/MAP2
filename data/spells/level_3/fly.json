@@ -1,0 +1,41 @@
+{
+  "_id": {
+    "$oid": "6964199e495298093b618000"
+  },
+  "name": "Fly",
+  "level": 3,
+  "description": "You touch a willing creature. The target gains a flying speed of 60 feet for the duration. When the spell ends, the target falls if it is still aloft, unless it can stop the fall.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S, M (a wing feather from any bird)",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": null,
+  "school": "Transmutation",
+  "isPublic": true,
+  "classes": [
+    "sorcerer",
+    "warlock",
+    "wizard"
+  ],
+  "ritual": false,
+  "higherLevels": "When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd.",
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "7c356403-5e65-40aa-815d-5f3faa5a73e5${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"7ba2c646-1df2-4b7f-a488-f55414e6f144\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "8c948277-5988-452c-939d-1b9da2245274${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"dab160d0-5a7c-4719-a307-8f37e19867a4\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "7a3978a6-4fbc-419e-a784-acd347429804${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"3b1b3493-9c6f-4979-a1a1-25bd4c74fd43\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "2c06c6b8-f828-4704-849a-1fe1cef36b4a${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e97546b6-93f5-46af-bad0-60a6c77c5797\"}",
+      "json": "{}"
+    }
+  ]
+}

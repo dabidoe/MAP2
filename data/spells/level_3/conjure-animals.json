@@ -1,0 +1,40 @@
+{
+  "_id": {
+    "$oid": "6964199e54f39851d93f5000"
+  },
+  "name": "Conjure Animals",
+  "level": 3,
+  "description": "You summon fey spirits that take the form of beasts and appear in unoccupied spaces that you can see whithin range.  Choose one of the following options for what appears:\n\n* One beast of challenge rating 2 or lower\n\n* Two beasts of challenge rating 1 or lower\n\n* Four beasts of challenge rating 1/2 or lower\n\n* Eight beasts of challenge rating 1/4 or lower\n\nEach beast is also considered fey, and it disappears when it drops to 0 hit points or when the spell ends.\n\nThe summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which has its own turns. They obey any verbal commands that you issue to them (no action required by you). If you don’t issue any commands to them, they defend themselves from hostile creatures, but otherwise take no actions.\n\nThe DM has the creatures’ statistics.",
+  "castingTime": "1 action",
+  "range": "60 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 hour",
+  "damage": null,
+  "school": "Conjuration",
+  "isPublic": true,
+  "classes": [
+    "druid",
+    "ranger"
+  ],
+  "ritual": false,
+  "higherLevels": "When you cast this spell using certain higher-level spell slots, you choose one of the summoning options above, and more creatures appear: twice as many with a 5th-level slot, three times as many with a 7th-level",
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "32437770-45cc-417f-90db-5faf40822f2b${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"20e94466-3a61-485b-b683-0774e417204d\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "65edba4c-e7f5-4937-9d4c-0b1995002643${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d6112dc6-32b8-4c24-a204-17a10c455362\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "73c58b51-6039-4e2f-8246-181edba2c13b${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"2d3307bc-a60b-4ef4-b14c-7a6f8a53e43d\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "4ff84228-b568-479b-9f4d-ea52ce4844eb${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"2fc11e3c-39ae-42ba-b760-221b88421b11\"}",
+      "json": "{}"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "_id": {
+    "$oid": "6964199ead53c10e85d08000"
+  },
+  "name": "Fire Shield",
+  "level": 4,
+  "description": "Thin and wispy flames wreathe your body for the duration, shedding bright light in a 10-foot radius and dim light for an additional 10 feet, You can end the spell early by using an action to dismiss it.\n\nThe flames provide you with a warm shield or a chill shield, as you choose. The warm shield grants you resistance to cold damage, and the chill shield grants you resistance to fire damage.\n\nIn addition, whenever a creature within 5 feet of you hits you with a melee attack, the shield erupts with flame. The attacker takes 2d8 fire damage from a warm shield, or 2d8 cold damage from a cold shield.",
+  "castingTime": "1 action",
+  "range": "Self",
+  "components": "V, S, M (a bit of phosphorous or a firefly)",
+  "duration": "10 minutes",
+  "damage": "2d8 fire",
+  "school": "Evocation",
+  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+  "iconStatus": "missing",
+  "isPublic": true,
+  "classes": [
+    "wizard"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1"
+}

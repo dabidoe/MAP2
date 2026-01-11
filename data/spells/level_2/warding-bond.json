@@ -1,0 +1,39 @@
+{
+  "_id": {
+    "$oid": "6964199ee4a20d3fc40bb000"
+  },
+  "name": "Warding Bond",
+  "level": 2,
+  "description": "This spell wards a willing creature you touch and creates a mystic connection between you and the target until the spell ends. While the target is within 60 feet of you, it gains a +1 bonus to AC and saving throws, and it has resistance to all damage. Also, each time it takes damage, you take the same amount of damage.\n\nThe spell ends if you drop to 0 hit points or if you and the  target become separated by more than 60 feet. It also ends if the spell is cast again on either of the connected creatures. You can also dismiss the spell as an action.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S, M (a pair of platinum rings worth at least 50 gp each, which you and the target must wear for the duration)",
+  "duration": "1 hour",
+  "damage": null,
+  "school": "Abjuration",
+  "isPublic": true,
+  "classes": [
+    "cleric"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "a66331c1-4c10-4728-bf63-9e01da9ebec4${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"3d5cc5c8-c15c-4bf3-bbf5-bdcf6e19b4ae\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "384e5c04-aad2-4724-80a7-77846a859fd6${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"80fdc1ec-55be-4d0d-8c4b-eaa4620c8e05\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "8ce24911-6ebf-430f-a3f4-4f99b3e242d9${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d498619d-8755-47ac-a21d-9756c372c458\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "b4f22bc6-b65a-4b50-a1f6-c980ef5c3eb5${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"5b5cb8b8-a392-4c81-8947-d6177ec3be65\"}",
+      "json": "{}"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "_id": {
+    "$oid": "6964199e6325e423bc6e1000"
+  },
+  "name": "Blink",
+  "level": 3,
+  "description": "Roll a d20 at the end of each of your turns for the duration of the spell. On a roll of 11 or higher, you vanish from your current plane of existence and appear in the Ethereal Plane (the spell fails and the casting is wasted if you were already on that plane). At the start of your next turn, and when the spell ends if you are on the Ethereal Plane, you return to an unoccupied space of your choice that you can see within 10 feet of the space you vanished from. If no unoccupied space is available within that range, you appear in the nearest unoccupied space (chosen at random if more than one space is equally near). You can dismiss this spell as an action.\n\nWhile on the Ethereal Plane, you can see and hear the plane you originated from, which is cast in shades of gray, and you can’t see anything there more than 60 feet away. You can only affect and be affected by other creatures on the Ethereal Plane. Creatures that aren’t there can’t perceive you or interact with you, unless they have the ability to do so.",
+  "castingTime": "1 action",
+  "range": "Self",
+  "components": "V, S",
+  "duration": "1 minute",
+  "damage": null,
+  "school": "Transmutation",
+  "isPublic": true,
+  "classes": [
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "ee27c1c5-61ae-4a41-8965-d12dc0542229${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e2e6e2b9-4c7a-488f-91c5-2154ee02a17f\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "6a759691-44a1-4328-b52f-c9b94de0c1bc${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ea8bc5b6-088d-4c5e-ac94-a16a2fd5b320\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "58fb40fd-0c2b-4aae-9eaa-b7257c802f82${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"fe9127ea-c767-4ffc-a89b-b772ae1a16b8\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "45859a06-a612-44e0-baaa-d3b8108b1393${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"866dba0f-3451-4caa-a089-2d2340e1bab0\"}",
+      "json": "{}"
+    }
+  ],
+  "video": "/SPELL_VIDEOS/Blink_With_a_flicker_of_concentration_you_momentarily_shift_o_9290f71f-7632-4f7f-b267-e9650145723c_0.mp4"
+}

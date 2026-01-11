@@ -1,0 +1,26 @@
+{
+  "_id": {
+    "$oid": "6964199ea6bdbc5eadd3c000"
+  },
+  "name": "Darkvision",
+  "level": 2,
+  "description": "You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 60 feet.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S, M (either a pinch of dried carrot or an agate)",
+  "duration": "8 hours",
+  "damage": null,
+  "school": "Transmutation",
+  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+  "iconStatus": "missing",
+  "isPublic": true,
+  "classes": [
+    "druid",
+    "ranger",
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1"
+}

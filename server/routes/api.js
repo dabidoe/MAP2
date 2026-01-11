@@ -338,10 +338,12 @@ router.get('/characters/:id', (req, res) => {
 /**
  * GET /api/characters/name/:name
  * Get character by name
+ * Query params: ?expand=true to resolve all references inline
  */
 router.get('/characters/name/:name', (req, res) => {
   try {
-    const characters = loadCharactersFromTokens();
+    const expand = req.query.expand === 'true';
+    const characters = loadCharactersFromTokens(expand);
     const character = characters.find(c => c.name === req.params.name);
     if (!character) return res.status(404).json({ error: 'Character not found' });
     res.json(character);

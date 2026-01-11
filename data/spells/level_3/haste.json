@@ -1,0 +1,41 @@
+{
+  "_id": {
+    "$oid": "6964199eada834f1dc5d2000"
+  },
+  "name": "Haste",
+  "level": 3,
+  "description": "Choose a willing creature that you can see within range. Until the spell ends, the target’s speed is doubled, it gains a +2 bonus to AC, it has advantage on Dexterity saving throws, and it gains an additional action on each of its turns. That action can be used only to take the Attack (one weapon attack only), Dash, Disengage, Hide, or Use an Object action.\n\nWhen the spell ends, the target can’t move or take actions until after its next turn, as a wave of lethargy sweeps over it.",
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S, M (a shaving of licorice root)",
+  "duration": "Concentration, up to 1 minute",
+  "damage": null,
+  "school": "Transmutation",
+  "isPublic": true,
+  "classes": [
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "cfa4387e-5faa-4b1d-b02f-d7117cbb9eec${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"966411ed-3876-40e2-91aa-5d04bd0b54cd\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "c2f81d38-77c3-4e4b-91f7-b62936dfcec7${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"5713b970-aab4-4e05-bf7a-9e649bc74568\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "1d8de46d-07e2-4dd8-8d7e-495aed937ab0${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"88423435-450e-41ab-afa4-bb3dd1454b04\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "ee2d957e-7314-438f-82c5-5a5d22b526ac${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c7b65e32-56f2-4f48-b9b5-38bfe6ffa229\"}",
+      "json": "{}"
+    }
+  ],
+  "video": "/SPELL_VIDEOS/Haste_You_touch_a_creature_enhancing_its_movements_and_action_2cafd4c1-052e-40be-9569-5bac227e1eb3_0.mp4"
+}

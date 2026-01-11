@@ -1,0 +1,52 @@
+{
+    "name": "Mage Armor",
+    "type": "spell",
+    "img": "assets/icons/spells/mage-armor.webp",
+    "classes": ["wizard", "sorcerer"],
+    "tags": ["buff", "defense", "wizard", "sorcerer", "abjuration"],
+    "system": {
+      "level": 1,
+      "school": "abj",
+      "activation": {
+        "type": "action",
+        "cost": 1,
+        "condition": ""
+      },
+      "duration": {
+        "value": "8",
+        "units": "hours"
+      },
+      "target": {
+        "value": 1,
+        "units": "",
+        "type": "creature"
+      },
+      "range": {
+        "value": null,
+        "long": null,
+        "units": "touch"
+      },
+      "components": {
+        "vocal": true,
+        "somatic": true,
+        "material": true,
+        "materialDescription": "a piece of cured leather",
+        "concentration": false,
+        "ritual": false
+      },
+      "scaling": {
+        "mode": "none",
+        "formula": ""
+      },
+      "description": {
+        "value": "<p>You touch a willing creature who isn't wearing armor, and a protective magical force surrounds it until the spell ends.</p><p>The target's base AC becomes 13 + its Dexterity modifier.</p>",
+        "chat": ""
+      }
+    },
+    "flags": {
+      "mythos": {
+        "isPublic": true,
+        "sourceDoc": "SRD 5.1"
+      }
+    }
+  }

@@ -1,0 +1,40 @@
+{
+  "_id": {
+    "$oid": "6964199ef711d5c68078b000"
+  },
+  "name": "Mass Healing Word",
+  "level": 3,
+  "description": "As you call out words of restoration, up to six creatures of your choice that you can see within range regain hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
+  "castingTime": "1 bonus action",
+  "range": "60 feet",
+  "components": "V",
+  "duration": "Instantaneous",
+  "damage": null,
+  "school": "Evocation",
+  "isPublic": true,
+  "classes": [
+    "cleric"
+  ],
+  "ritual": false,
+  "higherLevels": "When you cast this spell using a spell slot of 4th level or higher, the healing increases by 1d4 for each slot level above 3rd.",
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "cfaed63f-3536-4a02-be7a-6a32dcfeec37${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"fb2e9f0e-87f9-469c-9311-3e149498d661\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "8ecbf78b-5650-485c-bcd8-dcfce56ef4b4${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"10513cdc-67ca-4603-ba90-7edda1d0dab5\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "408ee89d-5f19-48fd-8893-db19933e90df${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"75441bcf-f44e-4aa9-864f-dc1c39dae36e\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "1cb9a7bd-c63e-4d21-9286-617b86bcc0a1${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"53f7ac6b-5376-4f7b-8bec-2355fd454ccc\"}",
+      "json": "{}"
+    }
+  ],
+  "video": "/SPELL_VIDEOS/Mass_Healing_Word_You_call_upon_the_divine_power_of_healing_u_1cf13f40-616e-40cf-b462-28987d1bea54_0.mp4"
+}

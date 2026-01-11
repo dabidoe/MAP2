@@ -1,0 +1,42 @@
+{
+  "_id": {
+    "$oid": "6964199e9c9fccb9916d1000"
+  },
+  "name": "Counterspell",
+  "level": 3,
+  "description": "You attempt to interrupt a creature in the process of casting a spell. If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell’s level. On a success, the creature’s spell fails and has no effect.",
+  "castingTime": "1 reaction, which you take when you see a creature within 60 feet of you casting a spell.",
+  "range": "60 feet",
+  "components": "S",
+  "duration": "Instantaneous",
+  "damage": null,
+  "school": "Abjuration",
+  "isPublic": true,
+  "classes": [
+    "sorcerer",
+    "warlock",
+    "wizard"
+  ],
+  "ritual": false,
+  "higherLevels": "When you cast this spell using a spell slot of 4th level or higher, the interrupted spell has no effect if its level is less than or equal to the level of the spell slot you used.",
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "2bf2d98a-e8b1-4868-a045-653a05488efe${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"95efafbd-bf03-4e8e-984b-1a1743a96dde\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "a61eff4a-77c1-43c8-a671-22a9df975bdf",
+      "json": "{}"
+    },
+    {
+      "guid": "95b39d7e-0f80-4360-b483-8f893814f7e2",
+      "json": "{}"
+    },
+    {
+      "guid": "7650472c-67d5-4baf-8eaa-0adce3ec7b07",
+      "json": "{}"
+    }
+  ],
+  "video": "/SPELL_VIDEOS/Counterspell_You_attempt_to_interrupt_a_creature_in_the_proce_d68e9196-1203-4b39-9a1a-6619389bc97b_0.mp4"
+}

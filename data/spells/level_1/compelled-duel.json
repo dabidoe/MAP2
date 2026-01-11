@@ -1,0 +1,39 @@
+{
+  "_id": {
+    "$oid": "6964199e7e26b8b1c6322000"
+  },
+  "name": "Compelled Duel",
+  "level": 1,
+  "description": "You attempt to compel a creature into a duel. One creature that you can see within range must make a Wisdom saving throw. On a failed save, the creature is drawn to you, compelled by your divine demand. For the duration, it has disadvantage on attack rolls against creatures other than you, and must make a Wisdom saving throw each time it attempts to move into a space that is more than 30 feet away from you; if it succeeds on this saving throw, the spell doesn't restrict the target's movement for that turn.\n\nThe spell ends if you attack any other creature, if you cast a spell that targets a hostile creature other than the target, if a creature friendly to you damages the target or casts a harmful spell on it, or if you end your turn more than 30 feet away from the target.",
+  "castingTime": "1 bonus action",
+  "range": "30 feet",
+  "components": "V",
+  "duration": "Concentration, up to 1 minute",
+  "damage": null,
+  "school": "Enchantment",
+  "isPublic": true,
+  "classes": [
+    "paladin"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "3ad1cd4f-df9b-4405-a111-1b43c1ff676f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ca58104b-efcd-4c83-ba76-652ce8c6ba1b\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "b0d4bf6f-24c8-45bf-8a0b-b50e34fe0217${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ddc5eaaa-59b0-4fa6-bc0d-d1b4cb0e28cd\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "6c189185-0152-4087-80d0-ba14361ea604${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"cb512b60-106c-48fd-bcd3-2e5715372e99\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "b9e642f0-26c7-483e-a060-746947e16a1f",
+      "json": "{}"
+    }
+  ]
+}

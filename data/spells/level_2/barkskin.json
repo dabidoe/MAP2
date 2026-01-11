@@ -1,0 +1,41 @@
+{
+  "_id": {
+    "$oid": "6964199ea75153aa35395000"
+  },
+  "name": "Barkskin",
+  "level": 2,
+  "description": "You touch a willing creature. Until the spell ends, the target’s skin has a rough, bark-like appearance, and the target’s AC can’t be less than 16, regardless of what kind of armor it is wearing.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S, M (a handful of oak bark)",
+  "duration": "Concentration, up to 1 hour",
+  "damage": null,
+  "school": "Transmutation",
+  "isPublic": true,
+  "classes": [
+    "druid",
+    "ranger"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "ab1fe53b-a426-4f18-9500-05581e132fd5",
+      "json": "{}"
+    },
+    {
+      "guid": "01c0a813-ce01-4c8d-9416-b5c103f331db",
+      "json": "{}"
+    },
+    {
+      "guid": "d85e868b-e751-4bdb-9be7-ce78a86c9680",
+      "json": "{}"
+    },
+    {
+      "guid": "9ab90831-d57e-4a8e-9ac0-4af8fe065b2e",
+      "json": "{}"
+    }
+  ],
+  "video": "/SPELL_VIDEOS/Barkskin_You_touch_a_willing_creature_and_its_skin_hardens_an_18346490-65bf-4f3a-8e73-40e82e7bb1ae_0.mp4"
+}

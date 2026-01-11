@@ -1,6 +1,10 @@
 {
-  "_id": "6956c8c55648a6dce9f6fb73",
-  "userId": "691f08ef96b2af2c7f0a183e",
+  "_id": {
+    "$oid": "6956c8c55648a6dce9f6fb73"
+  },
+  "userId": {
+    "$oid": "691f08ef96b2af2c7f0a183e"
+  },
   "name": "George Washington",
   "slug": "george-washington-58cf7",
   "class": "Paladin",
@@ -36,102 +40,287 @@
   "initiative": 1,
   "state": "Resolute",
   "isPublic": false,
-  "spellSlots": {
-    "L1": { "total": 4, "used": 0 },
-    "L2": { "total": 3, "used": 0 },
-    "L3": { "total": 3, "used": 0 }
-  },
-  "hotbar": {
-    "1": {
-      "name": "Saber of Liberty",
-      "type": "weapon",
-      "roll": "1d8+3",
-      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-weapon-saber.png"
+  "temporaryModifiers": [],
+  "passiveTraits": [
+    {
+      "traitId": {
+        "$oid": "6956c8265648a6dce9f6fadf"
+      },
+      "name": "Divine Health",
+      "description": "A quiet glow clings to your spirit, turning back rot and contagion before they take hold. Even foul magic struggles to find purchase. Allies often draw courage from your steady presence.",
+      "summary": "Sacred vigor wards off sickness and miasma, keeping you hale in cursed places.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767295014282.png"
     },
-    "2": {
-      "name": "Flintlock Pistol",
-      "type": "weapon",
-      "roll": "1d10+1",
-      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-weapon-pistol.png"
+    {
+      "traitId": {
+        "$oid": "6956c82e5648a6dce9f6fae7"
+      },
+      "name": "Aura of Protection",
+      "description": "Your presence projects a soft, warding stillness that subtly shifts fortune toward those within arm’s reach. Allies feel danger moments before it strikes, gaining a flicker of extra resilience.",
+      "summary": "A calm, unseen force cushions nearby allies from harm, sharpening reflexes and steadying nerves.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767295022851.png"
     },
-    "3": {
-      "name": "Divine Smite",
-      "type": "ability",
-      "roll": "2d8 radiant",
-      "ref": "abilities/class/paladin/divine-smite.json"
+    {
+      "traitId": {
+        "$oid": "6956c8395648a6dce9f6faef"
+      },
+      "name": "Turn the Tide",
+      "description": "Whenever turmoil breaks around you, allies within reach feel a surge of inner steadiness, gaining a small buffer of resolve. Your quiet certainty becomes their shield. Even dire moments slow when you stand firm.",
+      "summary": "Your calm presence anchors allies, granting them brief resolve when chaos erupts.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767295033495.png"
     },
-    "4": {
-      "name": "GWM",
-      "type": "attack",
-      "roll": "1d12+13",
-      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-gwm.png"
+    {
+      "traitId": {
+        "$oid": "6956c8425648a6dce9f6faf7"
+      },
+      "name": "Unyielding Spirit",
+      "description": "Your mind feels like hammered iron, granting small bursts of clarity when danger looms. Once per scene, you may steady yourself to reduce a setback or resist mental strain. Others can sense your quiet, immovable confidence.",
+      "summary": "Your steady heart shrugs off peril and doubt.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767295042825.png"
     },
-    "5": {
-      "name": "Cure Wounds",
-      "type": "spell",
-      "roll": "1d8+4",
-      "ref": "spells/level_1/cure-wounds.json"
+    {
+      "traitId": {
+        "$oid": "6928da435648a6dce9f6e0eb"
+      },
+      "name": "Deity",
+      "description": "You carry a calm, ever-watchful presence, as if some ancient pact urges you to stand firm. Allies sense safety near you, while foes find their ambushes faltering. This vigilance rarely wavers, even in exhaustion.",
+      "summary": "An unshakable sense of duty that keeps you alert, steady, and ready to guard others when danger lurks.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1764284995130.png"
     },
-    "6": {
-      "name": "Bless",
-      "type": "spell",
-      "roll": "+1d4 atk/saves",
-      "ref": "spells/level_1/bless.json"
+    {
+      "traitId": {
+        "$oid": "69504a685648a6dce9f6f214"
+      },
+      "name": "Spell Caster Bonus",
+      "description": "An unseen whisper steadies your hand and clarifies incantations, making minor spells strike truer and resonate farther. Allies sometimes feel the hush before your magic flares. Few notice the whisper’s source—and fewer dare ask.",
+      "summary": "Your presence sharpens nearby magic, granting uncanny accuracy to subtle spells.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1766869608060.png"
     },
-    "7": {
-      "name": "Compelled Duel",
-      "type": "spell",
-      "roll": "DC 16 WIS",
-      "ref": "spells/level_1/compelled-duel.json"
+    {
+      "traitId": {
+        "$oid": "6956c84b5648a6dce9f6fb01"
+      },
+      "name": "Symbol",
+      "description": "Your presence carries a subtle resonance of long‑won freedom, lending courage to companions and drawing wary attention from oppressive forces. Those nearby feel history pressing at their backs.",
+      "summary": "A quiet aura of rebellion that heartens allies and unsettles tyrants.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767295051117.png"
     },
-    "8": {
-      "name": "Aura of Prot",
-      "type": "trait",
-      "roll": "+4 saves",
-      "ref": "traits/class/paladin/aura-of-protection.json"
-    },
-    "9": {
-      "name": "Spellbook",
-      "type": "menu",
-      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-spellbook.png"
+    {
+      "traitId": {
+        "$oid": "6956c8545648a6dce9f6fb09"
+      },
+      "name": "Mount",
+      "description": "You’re never truly alone—your seasoned companion pads beside you, sensing danger and easing long journeys. Its presence grants subtle confidence and softens the harshness of the road.",
+      "summary": "A loyal beast follows you everywhere, offering steady travel and quiet vigilance.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767295060676.png"
     }
-  },
-  "spellbook": {
-    "L1": [
-      { "name": "Cure Wounds", "ref": "spells/level_1/cure-wounds.json" },
-      { "name": "Bless", "ref": "spells/level_1/bless.json" },
-      { "name": "Compelled Duel", "ref": "spells/level_1/compelled-duel.json" },
-      { "name": "Command", "ref": "spells/level_1/command.json" }
-    ],
-    "L2": [
-      { "name": "Aid", "ref": "spells/level_2/aid.json" },
-      { "name": "Find Steed", "ref": "spells/level_2/find-steed.json" },
-      { "name": "Zone of Truth", "ref": "spells/level_2/zone-of-truth.json" }
-    ],
-    "L3": [
-      { "name": "Haste", "ref": "spells/level_3/haste.json" },
-      { "name": "Revivify", "ref": "spells/level_3/revivify.json" }
-    ]
-  },
-  "traits": [
-    { "ref": "traits/class/paladin/divine-health.json" },
-    { "ref": "traits/class/paladin/aura-of-protection.json" }
+  ],
+  "feats": [
+    {
+      "featId": {
+        "$oid": "6956c85d5648a6dce9f6fb11"
+      },
+      "name": "Lay on Hands",
+      "description": "You carry a reservoir of luminous vitality that flares to life when you lay your hand upon an injured creature. Once per rest, you may release a portion of this inner radiance to restore health, purge minor ailments, or stabilize a fading ally. The more dire the need, the brighter your spark burns—though drawing too deeply leaves you momentarily light‑headed and warm to the touch.",
+      "summary": "Channel a stored reserve of life‑energy to mend wounds with a touch.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767295069159.png"
+    },
+    {
+      "featId": {
+        "$oid": "6956c8665648a6dce9f6fb19"
+      },
+      "name": "Divine Smite",
+      "description": "You call down a shard of star-fire to lash your weapon strike with blistering brilliance. When you commit to the blow, the attack erupts in radiant power that scars both flesh and spirit, leaving foes dazzled by the afterimage. Creatures struck often feel as though the heavens themselves have judged them.",
+      "summary": "Imbue a weapon blow with searing celestial force.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767295078363.png"
+    },
+    {
+      "featId": {
+        "$oid": "6956c86e5648a6dce9f6fb21"
+      },
+      "name": "Compelled Duel",
+      "description": "You unleash a resonant battle cry or striking gesture that compels a chosen foe to focus on you above all others. For a short time, their attacks and movement skew toward engaging you directly, as though unable to shake your daring provocation. While the effect lasts, you gain a subtle insight into their intent, allowing you to anticipate their next move.",
+      "summary": "You draw an enemy’s attention with a bold challenge they can scarcely ignore.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767295086445.png"
+    },
+    {
+      "featId": {
+        "$oid": "6956c8775648a6dce9f6fb29"
+      },
+      "name": "Champion Challenge",
+      "description": "You utter a radiant oath that flares like a beacon, marking an enemy’s spirit and daring them to confront you. The target feels an intangible pull, finding it difficult to ignore your presence or redirect their aggression. While the vow holds, your stance sharpens, granting you poise and clarity against their strikes.",
+      "summary": "You draw hostile eyes with a blazing vow that compels foes to face you directly.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767295095593.png"
+    },
+    {
+      "featId": {
+        "$oid": "6956c87f5648a6dce9f6fb31"
+      },
+      "name": "Divine Allegiance",
+      "description": "You project a protective aura that snaps into place the moment an ally is threatened. When a nearby companion is targeted by an attack or harmful effect, you may shift the danger onto yourself, drawing the blow or curse with supernatural resolve. This transfer leaves a faint shimmer in the air as though your will alone has bent fate’s trajectory.",
+      "summary": "Interpose your spirit as a shield to spare an ally from harm.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767295103522.png"
+    },
+    {
+      "featId": {
+        "$oid": "6956c8895648a6dce9f6fb39"
+      },
+      "name": "Exalted Champion",
+      "description": "You channel the first light of day into your presence, causing your weapon or voice to shine with subtle brilliance. Once per conflict, when you strike an enemy or raise a rallying cry, nearby allies gain a brief surge of courage, granting them a small bonus to their next action. Enemies sensitive to light or hope hesitate for a heartbeat, giving you a momentary edge. The dawn’s glow lingers on you until the encounter ends.",
+      "summary": "You fight with radiant conviction, bolstering allies as your strikes blaze with renewed purpose.",
+      "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1767295113196.png"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Athletics",
+      "modifier": 7,
+      "proficient": true,
+      "_id": {
+        "$oid": "6956c8c55648a6dce9f6fb74"
+      }
+    },
+    {
+      "name": "Persuasion",
+      "modifier": 8,
+      "proficient": true,
+      "_id": {
+        "$oid": "6956c8c55648a6dce9f6fb75"
+      }
+    },
+    {
+      "name": "Intimidation",
+      "modifier": 8,
+      "proficient": true,
+      "_id": {
+        "$oid": "6956c8c55648a6dce9f6fb76"
+      }
+    },
+    {
+      "name": "History",
+      "modifier": 5,
+      "proficient": false,
+      "_id": {
+        "$oid": "6956c8c55648a6dce9f6fb77"
+      }
+    },
+    {
+      "name": "Perception",
+      "modifier": 6,
+      "proficient": false,
+      "_id": {
+        "$oid": "6956c8c55648a6dce9f6fb78"
+      }
+    }
   ],
   "abilities": [
-    { "ref": "abilities/class/paladin/lay-on-hands.json" },
-    { "ref": "abilities/class/paladin/divine-smite.json" }
+    {
+      "abilityId": {
+        "$oid": "6956c8915648a6dce9f6fb41"
+      }
+    },
+    {
+      "abilityId": {
+        "$oid": "6956c8985648a6dce9f6fb49"
+      }
+    },
+    {
+      "abilityId": {
+        "$oid": "6956c89e5648a6dce9f6fb51"
+      }
+    },
+    {
+      "abilityId": {
+        "$oid": "6956c8a75648a6dce9f6fb59"
+      }
+    },
+    {
+      "abilityId": {
+        "$oid": "6956c8b35648a6dce9f6fb61"
+      }
+    },
+    {
+      "abilityId": {
+        "$oid": "6956c8bd5648a6dce9f6fb69"
+      }
+    }
   ],
-  "feats": [],
-  "skills": [
-    { "name": "Athletics", "modifier": 7, "proficient": true },
-    { "name": "Persuasion", "modifier": 8, "proficient": true },
-    { "name": "Intimidation", "modifier": 8, "proficient": true },
-    { "name": "History", "modifier": 5, "proficient": false },
-    { "name": "Perception", "modifier": 6, "proficient": false }
-  ],
+  "spells": {
+    "slots": [
+      { "level": 1, "total": 4, "used": 0 },
+      { "level": 2, "total": 3, "used": 0 },
+      { "level": 3, "total": 3, "used": 0 }
+    ],
+    "known": [
+      {
+        "spellId": {
+          "$oid": "695496085648a6dce9f6f89b"
+        },
+        "prepared": true
+      },
+      {
+        "spellId": {
+          "$oid": "694012a75648a6dce9f6e7d2"
+        },
+        "prepared": true
+      },
+      {
+        "spellId": {
+          "$oid": "6954960b5648a6dce9f6f89f"
+        },
+        "prepared": true
+      },
+      {
+        "spellId": {
+          "$oid": "695496405648a6dce9f6f93f"
+        },
+        "prepared": true
+      },
+      {
+        "spellId": {
+          "$oid": "695496435648a6dce9f6f943"
+        },
+        "prepared": true
+      },
+      {
+        "spellId": {
+          "$oid": "6956c8c55648a6dce9f6fb71"
+        },
+        "prepared": true
+      },
+      {
+        "spellId": {
+          "$oid": "695469f35648a6dce9f6f7b6"
+        },
+        "prepared": true
+      },
+      {
+        "spellId": {
+          "$oid": "69546a005648a6dce9f6f7ca"
+        },
+        "prepared": true
+      }
+    ]
+  },
   "inventory": {
-    "weapons": [],
-    "armor": [],
-    "items": []
-  }
+    "weapons": [
+      {"name": "Longsword +2", "damage": "1d8+2 slashing", "properties": "Versatile (1d10)", "equipped": true}
+    ],
+    "armor": [
+      {"name": "Plate Armor", "ac": 18, "equipped": true}
+    ],
+    "items": [
+      {"name": "Holy Symbol", "description": "Symbol of divine power"},
+      {"name": "Healing Potion", "quantity": 3, "description": "Restores 2d4+2 HP"},
+      {"name": "Rope (50 ft)", "quantity": 1}
+    ]
+  },
+  "legacySourceId": "6956bda2dbca74024f2d9a2e",
+  "createdAt": {
+    "$date": "2026-01-01T19:19:33.946Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-01T19:19:33.946Z"
+  },
+  "__v": 0
 }

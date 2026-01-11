@@ -75,8 +75,8 @@ class WarRoom1776 {
       // Initialize Hotbar UI (after dashboard, pass grimoire for spell icons)
       this.hotbar = new HotbarUI(this.gameState, this.dashboard, this.grimoire);
 
-      // Initialize Character Sheet (pass grimoire for spell lookups)
-      this.characterSheet = new CharacterSheet(this.grimoire);
+      // Initialize Character Sheet (pass grimoire for spell lookups and dashboard for console output)
+      this.characterSheet = new CharacterSheet(this.grimoire, this.dashboard);
 
       // Listen for character sheet open events
       window.addEventListener('openCharacterSheet', (e) => {

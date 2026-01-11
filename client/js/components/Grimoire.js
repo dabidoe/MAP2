@@ -24,12 +24,18 @@ export class Grimoire {
 
       // Console elements
       commandConsole: document.getElementById('command-console'),
-      consoleExpandBtn: document.getElementById('console-expand-btn'),
+      consoleResizeHandle: document.getElementById('console-resize-handle'),
       chatInput: document.getElementById('chat-input')
     };
 
-    // Console expansion state
-    this.consoleExpanded = false;
+    // Console resize state
+    this.consoleResize = {
+      isResizing: false,
+      startY: 0,
+      startHeight: 0,
+      minHeight: 80,
+      maxHeight: window.innerHeight * 0.5 // 50vh
+    };
 
     this._init();
   }
@@ -39,83 +45,146 @@ export class Grimoire {
    * @private
    */
   async _init() {
-    // Ensure grimoire panel is closed on load
-    if (this.elements.grimoirePanel) {
-      this.elements.grimoirePanel.style.display = 'none';
-    }
-
-    // Ensure console starts at correct height (in case of cache issues)
-    if (this.elements.commandConsole) {
-      this.elements.commandConsole.style.height = '200px';
-    }
-
     // Load spells
     await this._loadSpells();
 
     // Setup event listeners
     this._setupEventListeners();
 
-    // Setup console expand button
-    this._setupConsoleExpand();
+    // Setup console resize
+    this._setupConsoleResize();
 
     console.log('✅ Grimoire initialized');
   }
 
   /**
-   * Load spells from individual JSON files
+   * Load spells from individual folder files using manifest
    * @private
    */
   async _loadSpells() {
     try {
-      console.log('📚 Fetching spell file list from /api/spells/list...');
+      console.log('Loading spells from data/spells/ using manifest...');
 
-      // Get list of spell files organized by level
-      const listResponse = await fetch('/api/spells/list');
-      if (!listResponse.ok) {
-        throw new Error(`HTTP error! status: ${listResponse.status}`);
+      // Load the spell manifest
+      const manifestResponse = await fetch('/data/spells/spell-manifest.json');
+      if (!manifestResponse.ok) {
+        throw new Error(`Failed to load spell manifest: ${manifestResponse.status}`);
       }
 
-      const spellFilesByLevel = await listResponse.json();
-      console.log('Spell files by level:', spellFilesByLevel);
-
-      // Load all individual spell files
+      const manifest = await manifestResponse.json();
       const allSpells = [];
-      for (const [level, files] of Object.entries(spellFilesByLevel)) {
-        console.log(`Loading ${files.length} spells from level_${level}...`);
 
-        for (const filename of files) {
+      // Load each spell file listed in the manifest
+      for (const [levelFolder, fileList] of Object.entries(manifest)) {
+        for (const filename of fileList) {
           try {
-            const spellResponse = await fetch(`/data/spells/level_${level}/${filename}`);
+            const spellResponse = await fetch(`/data/spells/${levelFolder}/${filename}`);
             if (spellResponse.ok) {
-              const spell = await spellResponse.json();
-              allSpells.push(spell);
-            } else {
-              console.warn(`Failed to load ${filename}:`, spellResponse.status);
+              const spellData = await spellResponse.json();
+              const normalizedSpell = this._normalizeSpellData(spellData);
+              allSpells.push(normalizedSpell);
             }
-          } catch (fileError) {
-            console.error(`Error loading ${filename}:`, fileError.message);
+          } catch (err) {
+            console.warn(`Failed to load ${levelFolder}/${filename}:`, err);
           }
         }
       }
 
       console.log('Raw spell data loaded:', allSpells.length, 'total spells');
 
-      // Use all spells if isPublic field doesn't exist, otherwise filter
+      // Filter by isPublic flag
       this.spells = allSpells.filter(spell => {
-        // If isPublic field exists, use it; otherwise treat as public
         return spell.isPublic === undefined || spell.isPublic === true;
       });
 
       this.filteredSpells = [...this.spells];
 
-      console.log(`✅ Loaded ${this.spells.length} spells from individual files`);
+      console.log(`✅ Loaded ${this.spells.length} spells from data/spells/ folders`);
       if (this.spells.length > 0) {
-        console.log('Sample spell:', this.spells[0].name, '- Icon:', this.spells[0].icon);
+        console.log('Sample spell:', this.spells[0].name, '- ID:', this.spells[0]._id?.$oid || this.spells[0].id, '- Icon:', this.spells[0].icon);
       }
     } catch (error) {
       console.error('❌ Failed to load spells:', error);
       this.spells = [];
       this.filteredSpells = [];
+    }
+  }
+
+  /**
+   * Normalize spell data from different formats
+   * @private
+   */
+  _normalizeSpellData(spellData) {
+    // Handle two formats: simple flat format and complex nested format
+    const isComplexFormat = spellData.system !== undefined;
+
+    if (isComplexFormat) {
+      // Complex format (e.g., Mage Armor)
+      const system = spellData.system;
+      const components = system.components || {};
+
+      // Build components string
+      let componentsStr = '';
+      if (components.vocal) componentsStr += 'V';
+      if (components.somatic) componentsStr += (componentsStr ? ', ' : '') + 'S';
+      if (components.material) {
+        componentsStr += (componentsStr ? ', ' : '') + 'M';
+        if (components.materialDescription) {
+          componentsStr += ` (${components.materialDescription})`;
+        }
+      }
+
+      // Map abbreviated school names to full names
+      const schoolMap = {
+        'abj': 'Abjuration',
+        'con': 'Conjuration',
+        'div': 'Divination',
+        'enc': 'Enchantment',
+        'evo': 'Evocation',
+        'ill': 'Illusion',
+        'nec': 'Necromancy',
+        'trs': 'Transmutation'
+      };
+
+      return {
+        _id: spellData._id,
+        id: spellData._id?.$oid,
+        name: spellData.name,
+        level: system.level ?? null,
+        description: system.description?.value || '',
+        school: schoolMap[system.school] || system.school || 'Unknown',
+        icon: spellData.img,
+        video: spellData.video,
+        castingTime: system.activation ? `${system.activation.cost} ${system.activation.type}` : 'Unknown',
+        range: system.range?.units || 'Unknown',
+        components: componentsStr || 'Unknown',
+        duration: system.duration ? `${system.duration.value || ''} ${system.duration.units || ''}`.trim() : 'Unknown',
+        damage: system.damage,
+        isPublic: spellData.flags?.mythos?.isPublic
+      };
+    } else {
+      // Simple format (from SPELLS_MASTER.json)
+      return {
+        _id: spellData._id,
+        id: spellData._id?.$oid || spellData.id,
+        name: spellData.name,
+        level: spellData.level ?? null,
+        description: spellData.description || '',
+        school: spellData.school || 'Unknown',
+        icon: spellData.icon,
+        video: spellData.video,
+        iconStatus: spellData.iconStatus,
+        castingTime: spellData.castingTime || 'Unknown',
+        range: spellData.range || 'Unknown',
+        components: spellData.components || 'Unknown',
+        duration: spellData.duration || 'Unknown',
+        damage: spellData.damage,
+        isPublic: spellData.isPublic,
+        classes: spellData.classes,
+        ritual: spellData.ritual,
+        higherLevels: spellData.higherLevels,
+        source: spellData.source
+      };
     }
   }
 
@@ -165,6 +234,8 @@ export class Grimoire {
     this._setupSortControls();
   }
 
+  //
+
   /**
    * Setup sorting controls
    * @private
@@ -212,39 +283,53 @@ export class Grimoire {
   }
 
   /**
-   * Setup console expand/collapse button
+   * Setup console resize functionality
    * @private
    */
-  _setupConsoleExpand() {
-    if (!this.elements.consoleExpandBtn) {
-      console.error('Console expand button not found!');
-      return;
-    }
-    if (!this.elements.commandConsole) {
-      console.error('Command console not found!');
-      return;
-    }
+  _setupConsoleResize() {
+    if (!this.elements.consoleResizeHandle || !this.elements.commandConsole) return;
 
-    console.log('Setting up console expand button');
+    this.elements.consoleResizeHandle.addEventListener('mousedown', (e) => {
+      e.preventDefault();
+      this.consoleResize.isResizing = true;
+      this.consoleResize.startY = e.clientY;
+      this.consoleResize.startHeight = this.elements.commandConsole.offsetHeight;
 
-    this.elements.consoleExpandBtn.addEventListener('click', () => {
-      console.log('Console expand button clicked');
-      this.consoleExpanded = !this.consoleExpanded;
+      // Disable transition during resize
+      this.elements.commandConsole.style.transition = 'none';
 
-      if (this.consoleExpanded) {
-        this.elements.commandConsole.classList.add('expanded');
-        this.elements.consoleExpandBtn.title = 'Collapse Console';
-        console.log('Console expanded');
-      } else {
-        this.elements.commandConsole.classList.remove('expanded');
-        this.elements.consoleExpandBtn.title = 'Expand Console';
-        console.log('Console collapsed');
-      }
+      document.body.style.cursor = 'ns-resize';
+      document.body.style.userSelect = 'none';
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (!this.consoleResize.isResizing) return;
+
+      const deltaY = this.consoleResize.startY - e.clientY;
+      let newHeight = this.consoleResize.startHeight + deltaY;
+
+      // Constrain height
+      newHeight = Math.max(this.consoleResize.minHeight, newHeight);
+      newHeight = Math.min(this.consoleResize.maxHeight, newHeight);
+
+      this.elements.commandConsole.style.height = `${newHeight}px`;
+    });
+
+    document.addEventListener('mouseup', () => {
+      if (!this.consoleResize.isResizing) return;
+
+      this.consoleResize.isResizing = false;
+
+      // Re-enable transition
+      this.elements.commandConsole.style.transition = 'height 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+
+      document.body.style.cursor = '';
+      document.body.style.userSelect = '';
     });
   }
 
   /**
-   * Expand console to 180px (~3 lines)
+   * Expand console to 35vh
    * @private
    */
   _expandConsole() {
@@ -253,7 +338,7 @@ export class Grimoire {
   }
 
   /**
-   * Collapse console to 120px (default)
+   * Collapse console to 80px
    * @private
    */
   _collapseConsole() {
@@ -268,7 +353,7 @@ export class Grimoire {
   _toggleGrimoire() {
     if (!this.elements.grimoirePanel) return;
 
-    const isVisible = this.elements.grimoirePanel.style.display === 'block';
+    const isVisible = this.elements.grimoirePanel.style.display === 'flex';
 
     if (isVisible) {
       this._hideGrimoire();
@@ -288,8 +373,8 @@ export class Grimoire {
     const allPanels = document.querySelectorAll('.sidebar-panel');
     allPanels.forEach(panel => panel.style.display = 'none');
 
-    // Show grimoire
-    this.elements.grimoirePanel.style.display = 'block';
+    // Show grimoire (use flex since grimoire-panel uses flexbox)
+    this.elements.grimoirePanel.style.display = 'flex';
 
     // Sort and render spell list
     this._sortSpells();
@@ -382,15 +467,21 @@ export class Grimoire {
       const item = document.createElement('div');
       item.className = 'spell-list-item';
 
+      // Add class for missing icon spells
+      if (spell.iconStatus === 'missing') {
+        item.classList.add('spell-missing-icon');
+      }
+
       // Get level color
       const levelColor = this._getLevelColor(spell.level);
 
       item.innerHTML = `
         <div class="spell-list-item-icon">
           ${spell.icon ? `<img src="${spell.icon}" alt="${spell.name}" />` : '<div class="spell-icon-placeholder">?</div>'}
+          ${spell.iconStatus === 'missing' ? '<div class="icon-missing-badge">📌</div>' : ''}
         </div>
         <div class="spell-list-item-content">
-          <div class="spell-list-item-name">${spell.name || 'Unknown Spell'}</div>
+          <div class="spell-list-item-name">${spell.name || 'Unknown Spell'}${spell.iconStatus === 'missing' ? ' <span class="missing-tag">NEEDS ICON</span>' : ''}</div>
           <div class="spell-list-item-meta">
             <span class="spell-level-badge" style="background: ${levelColor};">Lv${spell.level !== undefined && spell.level !== null ? spell.level : '?'}</span>
             <span class="spell-school">${spell.school || 'Unknown'}</span>
@@ -512,8 +603,8 @@ export class Grimoire {
           <div class="spell-card-meta-value">${spell.duration || 'Unknown'}</div>
         </div>
         ${spell.damage ? `
-        <div class="spell-card-meta-item spell-card-damage">
-          <div class="spell-card-meta-label">Damage/Effect</div>
+        <div class="spell-card-meta-item">
+          <div class="spell-card-meta-label">Damage/Healing</div>
           <div class="spell-card-meta-value">${spell.damage}</div>
         </div>
         ` : ''}
@@ -525,16 +616,56 @@ export class Grimoire {
   }
 
   /**
-   * Render icon stack from iconLayers or fallback to single icon
+   * Render icon stack from video, iconLayers, or fallback to single icon
    * @private
    */
   _renderIconStack(spell) {
     const stack = document.createElement('div');
     stack.className = 'spell-card-icon-stack';
 
-    console.log('Rendering spell icon for:', spell.name, 'icon URL:', spell.icon);
+    console.log('Rendering spell visual for:', spell.name, 'video:', spell.video, 'icon:', spell.icon);
 
-    // Check if spell has iconLayers (master format)
+    // Priority 1: Video (if available)
+    if (spell.video) {
+      const video = document.createElement('video');
+      video.src = spell.video;
+      video.className = 'spell-card-video';
+      video.loop = true;
+      video.autoplay = true;
+      video.muted = true;
+      video.style.width = '100%';
+      video.style.height = '100%';
+      video.style.objectFit = 'cover';
+      video.style.transform = 'translate(-50%, -50%)';
+
+      // Add error handling
+      video.onerror = () => {
+        console.error('Failed to load spell video:', spell.video);
+        // Fallback to icon if video fails
+        if (spell.icon) {
+          stack.innerHTML = '';
+          const img = document.createElement('img');
+          img.src = spell.icon;
+          img.className = 'spell-card-icon-layer';
+          img.style.width = '100%';
+          img.style.height = '100%';
+          img.style.objectFit = 'cover';
+          img.style.transform = 'translate(-50%, -50%)';
+          stack.appendChild(img);
+        } else {
+          stack.innerHTML = `<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #8b7355;">Failed to load video</div>`;
+        }
+      };
+
+      video.onloadeddata = () => {
+        console.log('Successfully loaded spell video:', spell.name);
+      };
+
+      stack.appendChild(video);
+      return stack;
+    }
+
+    // Priority 2: Icon Layers (master format)
     if (spell.iconLayers && Array.isArray(spell.iconLayers) && spell.iconLayers.length > 0) {
       // Render layered composite
       spell.iconLayers.forEach((layer, index) => {
@@ -542,7 +673,7 @@ export class Grimoire {
         if (img) stack.appendChild(img);
       });
     } else if (spell.icon) {
-      // Fallback to single icon
+      // Priority 3: Single icon
       const img = document.createElement('img');
       img.src = spell.icon;
       img.className = 'spell-card-icon-layer';
@@ -566,9 +697,9 @@ export class Grimoire {
 
       stack.appendChild(img);
     } else {
-      // No icon available
-      console.warn('No icon available for spell:', spell.name);
-      stack.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #8b7355;">No icon available</div>';
+      // No icon or video available
+      console.warn('No icon or video available for spell:', spell.name);
+      stack.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #8b7355;">No visual available</div>';
     }
 
     return stack;
@@ -584,12 +715,19 @@ export class Grimoire {
     if (!layer.guid) return null;
 
     try {
+      // Clean GUID - extract just the GUID portion if there's extra data appended
+      let cleanGuid = layer.guid;
+      const dollarSignIndex = cleanGuid.indexOf('${');
+      if (dollarSignIndex !== -1) {
+        cleanGuid = cleanGuid.substring(0, dollarSignIndex);
+      }
+
       // Parse JSON string for transform data
       const transform = layer.json ? JSON.parse(layer.json) : {};
 
       const img = document.createElement('img');
       img.className = 'spell-card-icon-layer';
-      img.src = `/icons/${layer.guid}.png`; // Assuming icons are stored in /icons/
+      img.src = `/icons/${cleanGuid}.png`; // Assuming icons are stored in /icons/
 
       // Apply transform
       const scale = transform.scale || 1;

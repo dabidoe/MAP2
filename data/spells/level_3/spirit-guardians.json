@@ -1,0 +1,40 @@
+{
+  "_id": {
+    "$oid": "6964199e064b4422ea71d000"
+  },
+  "name": "Spirit Guardians",
+  "level": 3,
+  "description": "You call forth spirits to protect you. They flit around you to a distance of 15 feet for the duration. If you are good or neutral, their spectral form appears angelic or fey (your choice). If you are evil, they appear fiendish.\n\nWhen you cast this spell, you can designate any number of creatures you can see to be unaffected by it. An affected creature’s speed is halved in the area, and when the creature enters the area for the first time on a turn or starts its turn there, it must make a Wisdom saving throw. On a failed save, the creature takes 3d8 radiant damage (if you are good or neutral) or 3d8 necrotic damage (if you are evil). On a successful save, the creature takes half as much damage.",
+  "castingTime": "1 action",
+  "range": "Self (15-foot radius)",
+  "components": "V, S, M (a holy symbol)",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": "3d8 radiant",
+  "school": "Conjuration",
+  "isPublic": true,
+  "classes": [
+    "cleric"
+  ],
+  "ritual": false,
+  "higherLevels": "When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d8 for each slot level above 3rd.",
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "81853668-d0a3-4131-a3cb-2e47d978684e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"5f59dd50-634c-43aa-ac99-70201b3047e3\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "8f18cbeb-74bb-4704-bcd7-acd4bb439a51${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"034c7908-1276-4eef-83a6-c6ffe953976d\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "982223f3-c9e5-4bce-815a-1dea86ef5e27${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"0a0db72b-9203-4809-9817-f9b268d04f0e\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "e0d68a41-e036-49bb-90c5-d1a06461a788",
+      "json": "{}"
+    }
+  ],
+  "video": "/SPELL_VIDEOS/Spirit_Guardians_You_call_forth_spirits_to_protect_you._They__7db57124-40d3-4f7f-984c-750b41480d82_0.mp4"
+}

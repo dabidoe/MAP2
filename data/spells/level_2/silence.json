@@ -1,0 +1,41 @@
+{
+  "_id": {
+    "$oid": "6964199e4b15604ee9825000"
+  },
+  "name": "Silence",
+  "level": 2,
+  "description": "For the duration, no sound can be created within or pass through a 20-foot-radius sphere centered on a point you choose within range. Any creature or object entirely inside the sphere is immune to thunder damage, and creatures are deafened while entirely inside it.",
+  "castingTime": "1 action",
+  "range": "120 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": null,
+  "school": "Illusion",
+  "isPublic": true,
+  "classes": [
+    "bard",
+    "cleric",
+    "ranger"
+  ],
+  "ritual": true,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "1d03d2f8-39bf-4096-a389-c8a912b42d65${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"a750f982-f24e-42ea-8e3f-8372e47a8ce6\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "de918e5c-f27e-4bc6-8889-38af7af282af${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"27e0e814-d07e-468f-a15d-67811b48e0bd\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "2430da08-ad5b-456d-957e-3cdc8eb614fd${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"a20b5d0c-30a1-4e77-a4b8-ff4a97a11e0d\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "585ba769-88e9-4e9b-a53d-24aa08965e9d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"2d966e17-4368-48c0-9cfe-85e56bc70cf5\"}",
+      "json": "{}"
+    }
+  ]
+}

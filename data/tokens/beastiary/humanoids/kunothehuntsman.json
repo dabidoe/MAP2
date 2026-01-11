@@ -1,0 +1,14 @@
+{
+    "tokenId": "token_kuno_001",
+    "name": "Kuno the Huntsman",
+    "side": "Hessian",
+    "locationId": "trenton_barracks",
+    "gps": { "lat": 40.2179, "lng": -74.7682 },
+    "grid": { "posX": 40, "posY": 20 },
+    "stats": { "hp": 38, "hpMax": 38, "ac": 15, "init": 4 },
+    "icon": "https://statsheet-cdn.b-cdn.net/images/f22bcb15-9adc-4979-9fb9-25c7ecbff880.png",
+    "actions": [
+      { "name": "Jaeger Rifled Musket", "type": "Attack", "is_bonus": false, "bonus": "+9", "damage": "1d12+4 Piercing" },
+      { "name": "Hunter's Mark", "type": "Spell", "is_bonus": true, "bonus": "N/A", "damage": "+1d6" }
+    ]
+  }

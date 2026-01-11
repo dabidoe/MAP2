@@ -1,0 +1,14 @@
+{
+    "tokenId": "token_baum_001",
+    "name": "Feldwebel Baum",
+    "side": "Hessian",
+    "locationId": "trenton_barracks",
+    "gps": { "lat": 40.2178, "lng": -74.7680 },
+    "grid": { "posX": 48, "posY": 42 },
+    "stats": { "hp": 59, "hpMax": 59, "ac": 19, "init": 1 },
+    "icon": "https://statsheet-cdn.b-cdn.net/images/71a8a921-8ea8-4594-8507-f1de0d34b0bb.png",
+    "actions": [
+      { "name": "Iron Saber", "type": "Attack", "is_bonus": false, "bonus": "+7", "damage": "1d8+4 Slashing" },
+      { "name": "Shield of Faith", "type": "Spell", "is_bonus": true, "bonus": "N/A", "damage": "N/A" }
+    ]
+  }

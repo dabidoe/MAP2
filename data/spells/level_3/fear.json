@@ -1,0 +1,42 @@
+{
+  "_id": {
+    "$oid": "6964199eee1a90fad0c19000"
+  },
+  "name": "Fear",
+  "level": 3,
+  "description": "You project a phantasmal image of a creature’s worst fears. Each creature in a 30-foot cone must succeed on a Wisdom saving throw or drop whatever it is holding and become frightened for the duration.\n\nWhile frightened by this spell, a creature must take the Dash action and move away from you by the safest available route on each of its turns, unless there is nowhere to move. If the creature ends its turn in a location where it doesn’t have line of sight to you, the creature can make a Wisdom saving throw. On a successful save, the spell ends for that creature.",
+  "castingTime": "1 action",
+  "range": "Self (30-foot cone)",
+  "components": "V, S, M (a white feather or the heart of a hen)",
+  "duration": "Concentration, up to 1 minute",
+  "damage": null,
+  "school": "Illusion",
+  "isPublic": true,
+  "classes": [
+    "bard",
+    "sorcerer",
+    "warlock",
+    "wizard"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "971b14ca-2ff7-490b-8a68-895b839d8de3${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c65bec84-57eb-4cc8-aa24-93c27e60f38b\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "427c10d8-cb73-44a9-b953-7235ab203a3c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"64bb8f52-8582-46b3-ad02-245ff2304707\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "84e9c78d-be6d-400d-9f5c-ce8ddfb31828${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"01072f03-9e8d-424a-b5df-d1b5a84904d2\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "70a592b4-b8af-4288-892f-f283b33c6341${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ce80eb1f-0cf5-473c-82f9-3d69b27e999f\"}",
+      "json": "{}"
+    }
+  ]
+}

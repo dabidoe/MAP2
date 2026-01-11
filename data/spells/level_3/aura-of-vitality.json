@@ -1,0 +1,39 @@
+{
+  "_id": {
+    "$oid": "6964199e362e1aeda9c36000"
+  },
+  "name": "Aura Of Vitality",
+  "level": 3,
+  "description": "Healing energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. You can use a bonus action to cause one creature in the aura (including you) to regain 2d6 hit points.",
+  "castingTime": "1 action",
+  "range": "Self (30-foot radius)",
+  "components": "V",
+  "duration": "Concentration, up to 1 minute",
+  "damage": "2d6 healing",
+  "school": "Evocation",
+  "isPublic": true,
+  "classes": [
+    "paladin"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "856813ff-37ac-4deb-b077-8772969e5f37${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1.2,1.2\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"fd199716-725a-4b3f-8dfa-55746a305107\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "cdbdce3d-9589-4a22-ae76-173dd0793bb5${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"44819351-2adf-47fb-9b4e-810891f1e945\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "338b6dc4-2478-41a3-b1ee-f8e13c4e548d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"2663c24e-7ce8-4500-83bd-949451b70188\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "6a9628dc-6f53-4fa8-b99c-1c663fc3cfcf${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"63f9a2b0-b418-499f-9c9c-4e4617e02b12\"}",
+      "json": "{}"
+    }
+  ]
+}

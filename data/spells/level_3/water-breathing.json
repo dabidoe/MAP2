@@ -1,0 +1,26 @@
+{
+  "_id": {
+    "$oid": "6964199e73239bbe40175000"
+  },
+  "name": "Water Breathing",
+  "level": 3,
+  "description": "This spell grants up to ten willing creatures you can see within range the abilily to breathe underwater until the spell ends. Affected creatures also retain their normal mode of respiration.",
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S, M (a short reed or piece of straw)",
+  "duration": "24 hours",
+  "damage": null,
+  "school": "Transmutation",
+  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+  "iconStatus": "missing",
+  "isPublic": true,
+  "classes": [
+    "druid",
+    "ranger",
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": true,
+  "higherLevels": null,
+  "source": "SRD 5.1"
+}

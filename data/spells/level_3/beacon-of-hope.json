@@ -1,0 +1,40 @@
+{
+  "_id": {
+    "$oid": "6964199e4b89e9d1539da000"
+  },
+  "name": "Beacon of Hope",
+  "level": 3,
+  "description": "This spell bestows hope and vitality. Choose any number of creatures within range. For the duration, each target has advantage on Wisdom saving throws and death saving throws, and regains the maximum number of hit points possible from any healing.",
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 minute",
+  "damage": null,
+  "school": "Abjuration",
+  "isPublic": true,
+  "classes": [
+    "cleric"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "34c4170e-fd9f-4224-a635-b0c91d1b3446${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d2874a9f-03de-438c-b63a-6daf523e1ab0\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "076d8d2a-d38b-4824-8224-fe263398cc12${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"b52f7543-59dc-4d1f-bce6-7ae5fc41bfaa\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "0d06e212-bd4e-47d4-8438-e424f6f4dd22${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"2c431128-e191-4a57-bff1-2e869f3f58a5\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "1ae9c925-1ce1-40fb-9e90-6c50eb793a6d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"3999bb11-1130-434b-8536-5304fc03b6c7\"}",
+      "json": "{}"
+    }
+  ],
+  "video": "/SPELL_VIDEOS/Beacon_of_Hope_You_channel_divine_energy_to_create_a_glowing__2d679c66-4a80-456b-85d9-586a936a49f8_0.mp4"
+}

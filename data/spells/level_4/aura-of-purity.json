@@ -1,0 +1,40 @@
+{
+  "_id": {
+    "$oid": "6964199e8eb708ed22a13000"
+  },
+  "name": "Aura of Purity",
+  "level": 4,
+  "description": "Purifying energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. Each nonhostile creature in the aura (including you) can't become diseased, has resistance to poison damage, and has advantage on saving throws against effects that cause any of the following conditions: blinded, charmed, deafened, frightened, paralyzed, poisoned, and stunned.",
+  "castingTime": "1 action",
+  "range": "Self (30-foot radius)",
+  "components": "V",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": null,
+  "school": "Abjuration",
+  "isPublic": true,
+  "classes": [
+    "paladin"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "0cda9710-771f-4335-bfed-d50b33c2dad0",
+      "json": "{}"
+    },
+    {
+      "guid": "d7232f3d-6b5f-4e66-81f6-1c632821634e",
+      "json": "{}"
+    },
+    {
+      "guid": "48bbaf17-1051-493d-a085-15ce3086601b",
+      "json": "{}"
+    },
+    {
+      "guid": "1d0eb811-9fc1-4369-a1af-da8c44da0bd6",
+      "json": "{}"
+    }
+  ],
+  "video": "/SPELL_VIDEOS/Aura_of_Purity_You_create_a_radiant_aura_around_yourself_that_2dd8aca6-ad9b-43c9-8e4e-8dd2a41ae26a_0.mp4"
+}

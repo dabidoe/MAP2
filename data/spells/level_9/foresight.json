@@ -1,0 +1,26 @@
+{
+  "_id": {
+    "$oid": "6964199e8a480a27d1819000"
+  },
+  "name": "Foresight",
+  "level": 9,
+  "description": "You touch a willing creature and bestow a limited ability to see into the immediate future. For the duration the target can't be surprised and has advantage on attack rolls, ability checks, and saving throws. Additionally, other creatures have disadvantage on attack rolls against the target for the duration.\n\nThis spell immediately ends if you cast it again before its duration ends.",
+  "castingTime": "1 minute",
+  "range": "Touch",
+  "components": "V, S, M (a hummingbird feather)",
+  "duration": "8 hours",
+  "damage": null,
+  "school": "Divination",
+  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+  "iconStatus": "missing",
+  "isPublic": true,
+  "classes": [
+    "bard",
+    "druid",
+    "warlock",
+    "wizard"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1"
+}

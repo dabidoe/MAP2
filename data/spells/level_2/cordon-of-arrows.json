@@ -1,0 +1,39 @@
+{
+  "_id": {
+    "$oid": "6964199e1fa1ba3365e95000"
+  },
+  "name": "Cordon Of Arrows",
+  "level": 2,
+  "description": "You plant four pieces of nonmagical ammunition—arrows or crossbow bolts—in the ground within range and lay magic upon them to protect an area. Until the spell ends, whenever a creature other than you comes within 30 feet of the ammunition for the first time on a turn or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a Dexterity saving throw or take 1d6 piercing damage. The piece of ammunition is then destroyed. The spell ends when no ammunition remains.\n\nWhen you cast this spell, you can designate any creatures you choose, and the spell ignores them.",
+  "castingTime": "1 action",
+  "range": "5 feet",
+  "components": "V, S, M (four or more arrows or bolts)",
+  "duration": "8 hours",
+  "damage": "1d6 piercing",
+  "school": "Transmutation",
+  "isPublic": true,
+  "classes": [
+    "ranger"
+  ],
+  "ritual": false,
+  "higherLevels": "When you cast this spell using a spell slot of 3rd level or higher, the amount of ammunition that can be affected increases by two for each slot level above 2nd.",
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "719c8a3a-0ad4-4040-b4f1-18d21b89406f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1.340595,1.340595\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4828c06e-f83c-4737-b604-955666211f05\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "3cd5a561-b066-437a-9ba1-91f70e40f22c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"720e75e2-4aa2-4d5a-83f4-5f9acf693b00\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "6c3876fe-8f69-403f-b6ba-8482e54b2fb4${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"3b25138f-084b-4cfe-af74-bd598d0ea871\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "3a546d9c-2b23-4929-8da6-1d94a4ee8a75${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"efc5c9a4-14b3-48aa-a9ee-e693f66c296c\"}",
+      "json": "{}"
+    }
+  ]
+}

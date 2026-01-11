@@ -1,0 +1,39 @@
+{
+  "_id": {
+    "$oid": "6964199ec9ea94de3ddbb000"
+  },
+  "name": "Wrathful Smite",
+  "level": 1,
+  "description": "The next time you hit with a melee weapon attack during this spell's duration, your attack deals an extra 1d6 psychic damage. Additionally, if the target is a creature, it must make a Wisdom saving throw or be frightened of you until the spell ends. As an action, the creature can make a Wisdom check against your spell save DC to steel its resolve and end this spell.",
+  "castingTime": "1 bonus action",
+  "range": "Self",
+  "components": "V",
+  "duration": "Concentration, up to 1 minute",
+  "damage": "1d6 psychic",
+  "school": "Evocation",
+  "isPublic": true,
+  "classes": [
+    "paladin"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "1a7abc5f-346f-4c6e-b532-572644ea8365${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"eb229f71-4ae4-48a7-b3eb-d27916d0ac6c\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "796f4cfb-1a55-4238-846d-05c67a64ba4c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"7e4bcc3c-4f2b-4bea-881a-6b584bcf5500\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "15c9c985-3c34-4b33-aa1a-3c07e6e0d8a1${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"9f23967a-91c2-44f8-926c-582a334b4dee\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "528f66c2-6168-4c8a-b080-04d0f9d1a28e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"992db12b-e102-4310-ad6f-50dde31a097e\"}",
+      "json": "{}"
+    }
+  ]
+}

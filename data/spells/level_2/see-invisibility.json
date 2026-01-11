@@ -1,0 +1,25 @@
+{
+  "_id": {
+    "$oid": "6964199e878822a850db5000"
+  },
+  "name": "See Invisibility",
+  "level": 2,
+  "description": "For the duration, you see invisible creatures and objects as if they were visible, and you can see into the Ethereal Plane. Ethereal creatures and objects appear ghostly and translucent.",
+  "castingTime": "1 action",
+  "range": "Self",
+  "components": "V, S, M (a pinch of tale and a small sprinkling of powdered silver)",
+  "duration": "1 hour",
+  "damage": null,
+  "school": "Divination",
+  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+  "iconStatus": "missing",
+  "isPublic": true,
+  "classes": [
+    "bard",
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1"
+}

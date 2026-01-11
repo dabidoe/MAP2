@@ -1,0 +1,39 @@
+{
+  "_id": {
+    "$oid": "6964199e13a1e889c4bae000"
+  },
+  "name": "Shillelagh",
+  "level": 0,
+  "description": "The wood of a club or a quarterstaff you are holding is imbued with nature's power. For the duration, you can use your spellcasting ability instead of Strength for the attack and damage rolls of melee attacks using that weapon, and the weapon's damage die becomes a d8. The weapon also becomes magical, if it isn't already. The spell ends if you cast it again or if you let go of the weapon.",
+  "castingTime": "1 bonus action",
+  "range": "Touch",
+  "components": "V, S, M (mistletoe, a shamrock leaf, and a club or quarterstaff)",
+  "duration": "1 minute",
+  "damage": null,
+  "school": "Transmutation",
+  "isPublic": true,
+  "classes": [
+    "druid"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "61861a9e-4899-4dc0-bc72-bf88e5f184e0${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"a65fc544-f620-48e5-89dc-c079a256da43\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "6c1816b3-ead7-4213-a4a9-1e5f743c4e70${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d38f6e3a-042b-4255-bae1-a8e1da465e18\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "27ba42d0-4768-40d2-afae-bc30750a6a09${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4a5cb2dd-c486-4a10-8657-29f15700096f\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "cae6d3e3-a5ce-483a-8cc0-7171bd5b9609${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"9237d637-5353-4cec-bb4b-45677c455d6b\"}",
+      "json": "{}"
+    }
+  ]
+}

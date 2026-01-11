@@ -1,0 +1,40 @@
+{
+  "_id": {
+    "$oid": "6964199ef4023ec263cf5000"
+  },
+  "name": "Compulsion",
+  "level": 4,
+  "description": "Creatures of your choice that you can see within range and that can hear you must make a Wisdom saving throw. A target automatically succeeds on this saving throw if it can't be charmed. On a failed save, a target is affected by this spell. Until the spell ends, you can use a bonus action on each of your turns to designate a direction that is horizontal to you. Each affected target must use as much of its movement as possible to move in that direction on its next turn. It can take any action before it moves. After moving in this way, it can make another Wisdom save to try to end the effect.\n\nA target isn't compelled to move into an obviously deadly hazard, such as a fire or a pit, but it will provoke opportunity attacks to move in the designated direction.",
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 minute",
+  "damage": null,
+  "school": "Enchantment",
+  "isPublic": true,
+  "classes": [
+    "bard"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "74dcd8d4-f80f-45bd-b9c8-29e960f662ee${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"364eebd3-7508-445e-975f-bba3fb3ab6fd\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "dc6eef78-11a8-4e05-8694-650d45ea7fad${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"20c2e643-6b03-4be2-9f44-1bee9bbfec67\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "3e1cdf8b-3321-492a-9bc8-a15ced895772",
+      "json": "{}"
+    },
+    {
+      "guid": "fdf9e728-cef7-4638-901c-e1fd3fe17e27",
+      "json": "{}"
+    }
+  ],
+  "video": "/SPELL_VIDEOS/Compulsion_You_exert_a_magical_influence_over_the_actions_of__5b71e9f5-7fcb-42d2-bbfd-dc7676586f6c_0.mp4"
+}

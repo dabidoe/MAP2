@@ -1,0 +1,40 @@
+{
+  "_id": {
+    "$oid": "6964199e4f6b18562fc92000"
+  },
+  "name": "Calm Emotions",
+  "level": 2,
+  "description": "You attempt to suppress strong emotions in a group of people. Each humanoid in a 20-foot-radius sphere centered on a point you choose within range must make a Charisma saving throw; a creature can choose to fail this saving throw if it wishes. If a creature fails its saving throw, choose one of the following two effects. You can suppress any effect causing a target to be charmed or frightened. When this spell ends, any suppressed effect resumes, provided that its duration has not expired in the meantime.\n\nAlternatively, you can make a target indifferent about creatures o f your choice that it is hostile toward. This indifference ends if the target is attacked or harmed by a spell or if it witnesses any of its friends being harmed. When the spell ends, the creature becomes hostile again, unless the DM rules otherwise.",
+  "castingTime": "1 action",
+  "range": "60 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 minute",
+  "damage": null,
+  "school": "Enchantment",
+  "isPublic": true,
+  "classes": [
+    "bard",
+    "cleric"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "338430ea-fac5-4fc9-b89f-cef9540919ee${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4e9d4e84-a84c-4cbf-b171-8aabe44f4d96\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "60143d88-2638-4bf5-bc61-1ad7143374e3${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"0b3f1704-6b57-4959-a45e-6c46c362535a\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "6520ec13-b2ae-4e22-818a-d595f9472320${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"fb62998f-fa69-4b75-8853-a5ea62dcd6e8\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "1d0e5eaa-e80a-487c-aab1-0d1df96edeca${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"f0b090cb-cb51-4a49-8dcf-15066988c170\"}",
+      "json": "{}"
+    }
+  ]
+}

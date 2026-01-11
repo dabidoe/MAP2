@@ -1,0 +1,41 @@
+{
+  "_id": {
+    "$oid": "6964199e1c60bee123d96000"
+  },
+  "name": "Bestow Curse",
+  "level": 3,
+  "description": "* Choose one ability score. While cursed, the target has disadvantage on ability checks and saving throws made with that ability score.\n\n* While cursed, the target has disadvantage on attack rolls against you.\n\n* While cursed, the target must make a Wisdom saving throw at the start of each of its turns. If it fails, it wastes its action that turn doing nothing.\n\n* While the target is cursed, your attacks and spells deal an extra 1d8 necrotic damage to the target.\n\nA *[remove curse](../remove-curse/ \"remove curse (lvl 3)\")* spell ends this effect. At the DM’s option, you may choose an alternative curse effect, but it should be no more powerful than those described above. The DM has final say on such a curse’s effect.",
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 minute",
+  "damage": "1d8 necrotic",
+  "school": "Necromancy",
+  "isPublic": true,
+  "classes": [
+    "bard",
+    "cleric",
+    "wizard"
+  ],
+  "ritual": false,
+  "higherLevels": "If you cast this spell using a spell slot of 4th level or higher, the duration is concentration, up to 10 minutes. If you use a spell slot of 5th level or higher, the duration is 8 hours. If you use a spell slot of 7th level or higher, the duration is 24 hours. If you use a 9th level spell slot, the spell lasts until it is dispelled. Using a spell slot of 5th level or higher grants a duration that doesn’t require concentration.",
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "4f90d262-724d-433e-8b0f-4613b0476c08${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"7bd67d84-9b56-4dc3-8648-a528df11816c\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "e35583bc-8955-47fe-b1db-e50741488260${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1e9fd200-38a4-4d6c-ae15-f4af80a95988\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "b03b8409-ff58-401d-97b9-d977e9131ec2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"02e27dc0-6053-4bff-8302-f7492e5b0bd8\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "d73f453e-a20b-4eee-abe8-27943cddb5c0${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"21a55e4d-ad96-4efb-9a9c-5dabd22f0978\"}",
+      "json": "{}"
+    }
+  ]
+}

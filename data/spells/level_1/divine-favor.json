@@ -1,0 +1,39 @@
+{
+  "_id": {
+    "$oid": "6964199e9752f76b9c0db000"
+  },
+  "name": "Divine Favor",
+  "level": 1,
+  "description": "Your prayer empowers you with divine radiance. Until the spell ends, your weapon attacks deal an extra 1d4 radiant damage on a hit.",
+  "castingTime": "1 bonus action",
+  "range": "Self",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 minute",
+  "damage": "1d4 radiant",
+  "school": "Evocation",
+  "isPublic": true,
+  "classes": [
+    "paladin"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "54c2f643-0fef-4d36-9aa1-03995437bb52${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"49f356ee-e319-420e-a02b-55fe528953d6\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "db198051-2fbb-450e-ac3d-039048462b50${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"29532ded-e046-419a-b1d7-eb53015604eb\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "a3a3360b-268d-40f0-8831-c32657a8e768",
+      "json": "{}"
+    },
+    {
+      "guid": "cf2639b5-eaa4-4363-abaf-e1ba43ff1e46",
+      "json": "{}"
+    }
+  ]
+}

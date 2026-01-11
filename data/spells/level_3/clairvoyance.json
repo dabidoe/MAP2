@@ -1,0 +1,42 @@
+{
+  "_id": {
+    "$oid": "6964199e1d2e94db07392000"
+  },
+  "name": "Clairvoyance",
+  "level": 3,
+  "description": "You create an invisible sensor within range in a location familiar to you (a place you have visited or seen before) or in an obvious location that is unfamiliar to you (such as behind a door, around a corner, or in a grove of trees). The sensor remains in place for the duration, and it can’t be attacked or otherwise interacted with.\n\nWhen you cast the spell, you choose seeing or hearing. You can use the chosen sense through the sensor as if you were in its space. As your action, you can switch between seeing and hearing.\n\nA creature that can see the sensor (such as a creature benefiting from *[see invisibility](../see-invisibility/ \"see invisibility (lvl 2)\")* or truesight) sees a luminous, intangible orb about the size of your fist.",
+  "castingTime": "10 minutes",
+  "range": "1 mile",
+  "components": "V, S, M (a focus worth at least 100gp, either a jeweled horn for hearing or a glass eye for seeing)",
+  "duration": "Concentration, up to 10 minutes",
+  "damage": null,
+  "school": "Divination",
+  "isPublic": true,
+  "classes": [
+    "bard",
+    "cleric",
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
+  "higherLevels": null,
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "db287c5b-a9a6-48d8-a3af-b44bc9d4bf3d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"b6a00011-b1b5-48c3-9c29-75898c1ee393\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "7161db5c-e029-4577-802b-6c79bacced85${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"155306b0-8de7-4a10-a495-6d8d6bc10364\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "c27d16e4-9dd4-4ce7-8149-69484214f380${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"f5aff6d9-730f-424d-98f5-879f8507d153\"}",
+      "json": "{}"
+    },
+    {
+      "guid": "7011f8bf-8eb8-4315-9b34-469ee7bbeac9${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"322df766-f1ec-4266-877f-d24c80598876\"}",
+      "json": "{}"
+    }
+  ]
+}

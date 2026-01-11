@@ -1,0 +1,21 @@
+[
+   
+    {
+      "id": "trenton_barracks",
+      "title": "Trenton Barracks",
+      "lat": 40.2178,
+      "lng": -74.7681,
+      "description": "The stone barracks housing the Rall Regiment.",
+      "radius": 50,
+      "tacticalMapUrl": "/assets/maps/trenton-barracks/the-barracks-of-trenton.png",
+      "portals": [
+        {
+          "id": "exit_barracks",
+          "position": { "x": 50, "y": 15 },
+          "radius": 5,
+          "destination": "picket_post",
+          "label": "Back to Picket Post"
+        }
+      ]
+    }
+  ]

@@ -1,0 +1,43 @@
+{
+  "_id": {
+    "$oid": "6964199e27788df3fece5000"
+  },
+  "name": "Blight",
+  "level": 4,
+  "description": "Necromantic energy washes over a creature of your choice that you can see within range, draining moisture and vitality from it. The target must make a Constitution saving throw. The target takes 8d8 necrotic damage on a failed save, or half as much damage on a successful one. The spell has no effect on undead or constructs.\n\nIf you target a plant creature or a magical plant, it makes the saving throw with disadvantage, and the spell deals maximum damage to it.\n\nIf you target a nonmagical plant that isn't a creature, such as a tree or shrub, it doesn't make a saving throw; it simply withers and dies.",
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "damage": "8d8 necrotic",
+  "school": "Necromancy",
+  "isPublic": true,
+  "classes": [
+    "druid",
+    "sorcerer",
+    "warlock",
+    "wizard"
+  ],
+  "ritual": false,
+  "higherLevels": "When you cast this spell using a spell slot of 5th level of higher, the damage increases by 1d8 for each slot level above 4th.",
+  "source": "SRD 5.1",
+  "iconLayers": [
+    {
+      "guid": "48f580ee-41a9-4d78-9c0f-eb83f610a1cf",
+      "json": "{}"
+    },
+    {
+      "guid": "497f6ac7-9ae0-490e-9dc8-a43a0fcc02a4",
+      "json": "{}"
+    },
+    {
+      "guid": "90e1c2a1-bdf7-42c6-8ba7-289f3721ccdf",
+      "json": "{}"
+    },
+    {
+      "guid": "e5e39bd3-0071-486e-8ce1-cc817e23e397",
+      "json": "{}"
+    }
+  ],
+  "video": "/SPELL_VIDEOS/Blight_You_invoke_a_mystical_energy_that_affects_a_creature_o_1dfab303-5356-4036-a1ab-18d488f32d22_0.mp4"
+}
