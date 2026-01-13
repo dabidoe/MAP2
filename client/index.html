@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/style-zones.css" />
     <link rel="stylesheet" href="/css/hotbar.css" />
     <link rel="stylesheet" href="/css/character-sheet.css" />
+    <link rel="stylesheet" href="/css/ai-assistant.css" />
 </head>
 <body>
     <!-- ZONE A: Mini-Sidebar (Left) -->
@@ -28,10 +29,19 @@
                 📖
             </button>
             <button class="sidebar-icon" title="Armory" id="sidebar-armory">
+                🛡️
+            </button>
+            <button class="sidebar-icon" title="Party" id="sidebar-party">
+                👥
+            </button>
+            <button class="sidebar-icon" title="Combat Tracker" id="sidebar-combat">
                 ⚔️
             </button>
             <button class="sidebar-icon" title="Settings" id="sidebar-settings">
                 ⚙️
+            </button>
+            <button class="sidebar-icon" title="Timmilander the Summoner" id="sidebar-ai">
+                🧙‍♂️
             </button>
         </div>
         <!-- Expandable info panel -->
@@ -81,6 +91,28 @@
             </div>
             <div id="armory-item-list" class="grimoire-spell-list">
                 <!-- Items will be populated here -->
+            </div>
+        </div>
+
+        <!-- Party Panel -->
+        <div id="sidebar-party-panel" class="sidebar-panel grimoire-panel">
+            <div class="sidebar-panel-header">
+                <h3>The Party</h3>
+                <button id="close-party" class="close-btn">✕</button>
+            </div>
+            <div id="party-member-list" class="grimoire-spell-list">
+                <!-- Party members will be populated here -->
+            </div>
+        </div>
+
+        <!-- Combat Tracker Panel -->
+        <div id="sidebar-combat-panel" class="sidebar-panel grimoire-panel">
+            <div class="sidebar-panel-header">
+                <h3>Combat Tracker</h3>
+                <button id="close-combat" class="close-btn">✕</button>
+            </div>
+            <div id="sidebar-initiative-list" class="grimoire-spell-list">
+                <!-- Initiative order will be populated here -->
             </div>
         </div>
     </div>
@@ -226,6 +258,11 @@
             <h3>INITIATIVE</h3>
         </div>
         <div id="initiative-list"></div>
+    </div>
+
+    <!-- AI Assistant Panel -->
+    <div id="ai-assistant-panel" class="ai-assistant-panel">
+        <!-- AI Assistant content will be rendered by AIAssistant.js -->
     </div>
 
     <!-- External Libraries -->

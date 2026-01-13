@@ -13,6 +13,7 @@ import { Grimoire } from './components/Grimoire.js';
 import { Armory } from './components/Armory.js';
 import { HotbarUI } from './components/HotbarUI.js';
 import { CharacterSheet } from './components/CharacterSheet.js';
+import AIAssistant from './components/AIAssistant.js';
 
 /**
  * Main Application Class
@@ -27,6 +28,7 @@ class WarRoom1776 {
     this.armory = null;
     this.hotbar = null;
     this.characterSheet = null;
+    this.aiAssistant = null;
     this.socket = null;
 
     // Tactical view container
@@ -83,6 +85,81 @@ class WarRoom1776 {
       // Initialize Character Sheet (pass grimoire for spell lookups and dashboard for console output)
       this.characterSheet = new CharacterSheet(this.grimoire, this.dashboard);
 
+      // Initialize AI Assistant
+      this.aiAssistant = new AIAssistant('ai-assistant-panel');
+      this.aiAssistant.setGameState(this.gameState);
+
+      // Setup AI Assistant sidebar button
+      const aiSidebarBtn = document.getElementById('sidebar-ai');
+      if (aiSidebarBtn) {
+        aiSidebarBtn.addEventListener('click', () => {
+          this.aiAssistant.toggle();
+          aiSidebarBtn.classList.toggle('active');
+        });
+      }
+
+      // Setup Party panel toggle
+      const partyBtn = document.getElementById('sidebar-party');
+      const partyPanel = document.getElementById('sidebar-party-panel');
+      const closePartyBtn = document.getElementById('close-party');
+      if (partyBtn && partyPanel) {
+        partyBtn.addEventListener('click', () => {
+          const isVisible = partyPanel.style.display === 'flex';
+
+          if (isVisible) {
+            // Close party panel
+            partyPanel.style.display = 'none';
+            partyBtn.classList.remove('active');
+          } else {
+            // Close other panels first
+            const allPanels = document.querySelectorAll('.sidebar-panel');
+            allPanels.forEach(panel => panel.style.display = 'none');
+
+            // Open party panel
+            partyPanel.style.display = 'flex';
+            partyBtn.classList.add('active');
+            this._populatePartyPanel();
+          }
+        });
+      }
+      if (closePartyBtn && partyPanel) {
+        closePartyBtn.addEventListener('click', () => {
+          partyPanel.style.display = 'none';
+          partyBtn?.classList.remove('active');
+        });
+      }
+
+      // Setup Combat Tracker panel toggle
+      const combatBtn = document.getElementById('sidebar-combat');
+      const combatPanel = document.getElementById('sidebar-combat-panel');
+      const closeCombatBtn = document.getElementById('close-combat');
+      if (combatBtn && combatPanel) {
+        combatBtn.addEventListener('click', () => {
+          const isVisible = combatPanel.style.display === 'flex';
+
+          if (isVisible) {
+            // Close combat panel
+            combatPanel.style.display = 'none';
+            combatBtn.classList.remove('active');
+          } else {
+            // Close other panels first
+            const allPanels = document.querySelectorAll('.sidebar-panel');
+            allPanels.forEach(panel => panel.style.display = 'none');
+
+            // Open combat panel
+            combatPanel.style.display = 'flex';
+            combatBtn.classList.add('active');
+            this._populateSidebarCombatTracker();
+          }
+        });
+      }
+      if (closeCombatBtn && combatPanel) {
+        closeCombatBtn.addEventListener('click', () => {
+          combatPanel.style.display = 'none';
+          combatBtn?.classList.remove('active');
+        });
+      }
+
       // Listen for character sheet open events
       window.addEventListener('openCharacterSheet', (e) => {
         this.characterSheet.open(e.detail.character);
@@ -98,6 +175,65 @@ class WarRoom1776 {
         // Only roll if damage exists and is not "None"
         if (damage && damage !== 'None' && damage.trim() !== '') {
           this.dashboard._rollDice(damage);
+        }
+      });
+
+      // Listen for Timmilander's token summoning
+      window.addEventListener('summonToken', (e) => {
+        const { token } = e.detail;
+        console.log('🧙‍♂️ Timmilander summons token:', token);
+
+        // Add token to game state using the proper method
+        this.gameState.addToken(token);
+
+        // Add to dashboard console
+        if (this.dashboard) {
+          this.dashboard._addConsoleMessage('combat', `⚔️ Timmilander summons: ${token.name} (HP: ${token.hp}, AC: ${token.ac})`);
+        }
+
+        // Render token on map if in tactical view
+        const state = this.gameState.getState();
+        if (state.ui.mapMode === 'tactical' && state.ui.activeLocation && this.canvasRenderer) {
+          // Get all tokens at current location and refresh renderer
+          const tokens = this.gameState.getTokensAt(state.ui.activeLocation.id);
+          this.canvasRenderer.setTokens(tokens);
+          console.log('✨ Token rendered on tactical map:', token.name);
+        }
+
+        // Broadcast to other clients via socket.io
+        if (this.socket) {
+          this.socket.emit('token_summoned', { token });
+        }
+      });
+
+      // Listen for encounter start (for combat tracker)
+      window.addEventListener('encounterStart', (e) => {
+        const { encounter, enemies } = e.detail;
+        console.log('⚔️ Encounter started:', encounter);
+
+        if (this.dashboard) {
+          this.dashboard._addConsoleMessage('combat', `🎲 Initiative! ${encounter.name} - ${enemies.length} enemies`);
+        }
+
+        // Broadcast encounter start via socket.io
+        if (this.socket) {
+          this.socket.emit('encounter_started', { encounter, enemies });
+        }
+
+        // Populate both combat trackers (floating and sidebar)
+        this._populateCombatTracker(encounter, enemies);
+        this._populateSidebarCombatTracker();
+
+        // Auto-open sidebar combat tracker
+        const combatPanel = document.getElementById('sidebar-combat-panel');
+        const combatBtn = document.getElementById('sidebar-combat');
+        if (combatPanel && combatBtn) {
+          // Close other panels first
+          const allPanels = document.querySelectorAll('.sidebar-panel');
+          allPanels.forEach(panel => panel.style.display = 'none');
+
+          combatPanel.style.display = 'flex';
+          combatBtn.classList.add('active');
         }
       });
 
@@ -273,6 +409,34 @@ class WarRoom1776 {
     this.socket.on('initiative_update', (data) => {
       console.log('Initiative update:', data);
       this.gameState.addToInitiative(data.tokenId, data.name, data.roll);
+    });
+
+    // Listen for Timmilander token summoning from other clients
+    this.socket.on('token_summoned_remote', (data) => {
+      console.log('🧙‍♂️ Timmilander summoned token (remote):', data.token.name);
+
+      // Add token to game state
+      this.gameState.tokens.push(data.token);
+
+      // Render on map if in tactical view
+      const state = this.gameState.getState();
+      if (state.ui.mapMode === 'tactical' && state.ui.activeLocation && this.canvasRenderer) {
+        const tokens = this.gameState.getTokensAt(state.ui.activeLocation.id);
+        this.canvasRenderer.setTokens(tokens);
+      }
+
+      // Add to console
+      if (this.dashboard) {
+        this.dashboard._addConsoleMessage('combat', `⚔️ ${data.token.name} appears! (Summoned remotely)`);
+      }
+    });
+
+    // Listen for encounter start from other clients
+    this.socket.on('encounter_started_remote', (data) => {
+      console.log('⚔️ Encounter started (remote):', data.encounter.name);
+      if (this.dashboard) {
+        this.dashboard._addConsoleMessage('combat', `🎲 ${data.encounter.name} begins!`);
+      }
     });
 
     this.socket.on('disconnect', () => {
@@ -591,6 +755,246 @@ class WarRoom1776 {
       // Re-render world map
       this._renderWorldMap();
     }
+  }
+
+  /**
+   * Populate combat tracker with encounter
+   * @private
+   */
+  _populateCombatTracker(encounter, enemies) {
+    const combatTracker = document.getElementById('floating-combat-tracker');
+    const initiativeList = document.getElementById('initiative-list');
+
+    if (!combatTracker || !initiativeList) {
+      console.warn('Combat tracker elements not found');
+      return;
+    }
+
+    // Show combat tracker
+    combatTracker.style.display = 'block';
+
+    // Clear existing initiative
+    initiativeList.innerHTML = '';
+
+    // Roll initiative for each enemy
+    const initiativeEntries = enemies.map(enemy => {
+      const roll = Math.floor(Math.random() * 20) + 1;
+      const bonus = 0; // Could calculate from enemy stats
+      const total = roll + bonus;
+
+      return {
+        name: enemy.name,
+        roll: roll,
+        bonus: bonus,
+        total: total,
+        hp: enemy.hp,
+        maxHp: enemy.hp,
+        ac: enemy.ac,
+        type: 'enemy'
+      };
+    });
+
+    // Sort by initiative (highest first)
+    initiativeEntries.sort((a, b) => b.total - a.total);
+
+    // Render initiative list
+    initiativeEntries.forEach((entry, index) => {
+      const entryDiv = document.createElement('div');
+      entryDiv.className = 'initiative-entry';
+      entryDiv.innerHTML = `
+        <div class="initiative-number">${index + 1}</div>
+        <div class="initiative-details">
+          <div class="initiative-name">${entry.name} ${entry.type === 'enemy' ? '🪖' : ''}</div>
+          <div class="initiative-stats">
+            Initiative: ${entry.total} (${entry.roll}${entry.bonus > 0 ? '+' + entry.bonus : ''}) |
+            HP: ${entry.hp}/${entry.maxHp} |
+            AC: ${entry.ac}
+          </div>
+        </div>
+      `;
+      initiativeList.appendChild(entryDiv);
+    });
+
+    // Log to console
+    console.log('⚔️ Combat Tracker populated:', initiativeEntries);
+  }
+
+  /**
+   * Populate sidebar combat tracker (alternative to floating tracker)
+   * @private
+   */
+  _populateSidebarCombatTracker() {
+    const sidebarInitiativeList = document.getElementById('sidebar-initiative-list');
+    const combatPanel = document.getElementById('sidebar-combat-panel');
+
+    if (!sidebarInitiativeList || !combatPanel) {
+      console.warn('Sidebar combat tracker elements not found');
+      return;
+    }
+
+    // Get current combat state from game state
+    const state = this.gameState.getState();
+    const currentLocation = state.ui.activeLocation?.id || state.ui.currentLocation;
+    const tokens = this.gameState.getTokensAt(currentLocation);
+
+    if (!tokens || tokens.length === 0) {
+      sidebarInitiativeList.innerHTML = '<div style="padding: 20px; text-align: center; color: #8b7355;">No active combat encounter</div>';
+      return;
+    }
+
+    // Clear existing list
+    sidebarInitiativeList.innerHTML = '';
+
+    // Create initiative entries from tokens
+    const initiativeEntries = tokens.map(token => {
+      // Roll initiative if not set
+      if (token.initiative === null || token.initiative === undefined) {
+        const roll = Math.floor(Math.random() * 20) + 1;
+        token.initiative = roll;
+      }
+
+      return {
+        name: token.name,
+        initiative: token.initiative,
+        hp: token.hp || token.stats?.hp || 0,
+        maxHp: token.maxHp || token.stats?.hp || 0,
+        ac: token.ac || token.stats?.ac || 10,
+        type: token.type || 'unknown',
+        icon: token.icon || '🎭'
+      };
+    });
+
+    // Sort by initiative (highest first)
+    initiativeEntries.sort((a, b) => b.initiative - a.initiative);
+
+    // Render initiative list
+    initiativeEntries.forEach((entry, index) => {
+      const entryDiv = document.createElement('div');
+      entryDiv.className = 'initiative-entry';
+      entryDiv.style.cssText = `
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px;
+        margin-bottom: 8px;
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(197, 169, 89, 0.3);
+        border-left: 3px solid ${entry.type === 'enemy' ? '#c5393b' : '#4a7c59'};
+        border-radius: 4px;
+      `;
+
+      entryDiv.innerHTML = `
+        <div style="
+          background: linear-gradient(135deg, #8b4513 0%, #654321 100%);
+          color: #f4e8d0;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: bold;
+          font-size: 14px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        ">${index + 1}</div>
+        <div style="flex: 1;">
+          <div style="color: #f4e8d0; font-weight: bold; margin-bottom: 4px;">
+            ${entry.icon} ${entry.name}
+          </div>
+          <div style="color: #c5a959; font-size: 11px;">
+            Initiative: ${entry.initiative} |
+            HP: ${entry.hp}/${entry.maxHp} |
+            AC: ${entry.ac}
+          </div>
+        </div>
+      `;
+      sidebarInitiativeList.appendChild(entryDiv);
+    });
+
+    console.log('⚔️ Sidebar Combat Tracker populated:', initiativeEntries);
+  }
+
+  /**
+   * Populate party panel with current party members
+   * @private
+   */
+  _populatePartyPanel() {
+    const partyMemberList = document.getElementById('party-member-list');
+    const partyPanel = document.getElementById('sidebar-party-panel');
+
+    if (!partyMemberList || !partyPanel) {
+      console.warn('Party panel elements not found');
+      return;
+    }
+
+    // Get all player tokens from game state
+    const allTokens = this.gameState.tokens || [];
+    const partyMembers = allTokens.filter(token => token.type === 'player' || token.type === 'pc');
+
+    // Clear existing list
+    partyMemberList.innerHTML = '';
+
+    if (partyMembers.length === 0) {
+      partyMemberList.innerHTML = '<div style="padding: 20px; text-align: center; color: #8b7355;">No party members found</div>';
+      return;
+    }
+
+    // Render party members
+    partyMembers.forEach((member, index) => {
+      const memberDiv = document.createElement('div');
+      memberDiv.className = 'party-member-entry';
+      memberDiv.style.cssText = `
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px;
+        margin-bottom: 8px;
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(197, 169, 89, 0.3);
+        border-left: 3px solid #4a7c59;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.2s;
+      `;
+
+      memberDiv.addEventListener('mouseenter', () => {
+        memberDiv.style.background = 'rgba(74, 124, 89, 0.2)';
+      });
+      memberDiv.addEventListener('mouseleave', () => {
+        memberDiv.style.background = 'rgba(0, 0, 0, 0.3)';
+      });
+
+      // Click to open character sheet
+      memberDiv.addEventListener('click', () => {
+        window.dispatchEvent(new CustomEvent('openCharacterSheet', {
+          detail: { character: member.name }
+        }));
+      });
+
+      const icon = member.icon || member.portraitUrl || '🎭';
+      const hp = member.hp ?? member.stats?.hp ?? 0;
+      const maxHp = member.maxHp ?? member.stats?.hp ?? 0;
+      const ac = member.ac ?? member.stats?.ac ?? 10;
+      const location = member.location || 'Unknown';
+
+      memberDiv.innerHTML = `
+        <div style="font-size: 32px;">${icon}</div>
+        <div style="flex: 1;">
+          <div style="color: #f4e8d0; font-weight: bold; margin-bottom: 4px;">
+            ${member.name}
+          </div>
+          <div style="color: #c5a959; font-size: 11px; margin-bottom: 4px;">
+            HP: ${hp}/${maxHp} | AC: ${ac}
+          </div>
+          <div style="color: #8b7355; font-size: 10px;">
+            📍 ${location}
+          </div>
+        </div>
+      `;
+      partyMemberList.appendChild(memberDiv);
+    });
+
+    console.log('👥 Party panel populated with', partyMembers.length, 'members');
   }
 
   /**

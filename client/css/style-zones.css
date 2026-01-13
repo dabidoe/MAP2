@@ -1667,7 +1667,77 @@ body.tactical-active #command-console {
     border-radius: 12px;
     padding: 20px;
     z-index: 7000;
-    max-width: 250px;
+    max-width: 320px;
+    max-height: 60vh;
+    overflow-y: auto;
+    font-family: 'Cinzel', 'Georgia', serif;
+}
+
+#initiative-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.initiative-entry {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(197, 169, 89, 0.3);
+    border-left: 3px solid #c5a959;
+    border-radius: 6px;
+    padding: 12px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.initiative-entry:hover {
+    background: rgba(197, 169, 89, 0.1);
+    border-left-color: #d4af37;
+}
+
+.initiative-number {
+    background: linear-gradient(135deg, #8b4513 0%, #654321 100%);
+    color: #f4e8d0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    flex-shrink: 0;
+    border: 2px solid #c5a959;
+}
+
+.initiative-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.initiative-name {
+    color: #e8d9b8;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.initiative-stats {
+    color: #8b7355;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.tracker-header h3 {
+    color: #c5a959;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .tracker-header h3 {

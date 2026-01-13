@@ -11,6 +11,9 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import connectDB from './config/db.js';
 import apiRoutes from './routes/api.js';
+import aiRoutes from './routes/aiRoutes.js';
+import tokenRoutes from './routes/tokenRoutes.js';
+import encounterRoutes from './routes/encounterRoutes.js';
 
 // ES6 module dirname workaround
 const __filename = fileURLToPath(import.meta.url);
@@ -35,8 +38,11 @@ app.use('/assets', express.static(path.join(__dirname, '../client/assets')));
 app.use('/data', express.static(path.join(__dirname, '../data')));
 app.use('/SPELL_VIDEOS', express.static(path.join(__dirname, '../SPELL_VIDEOS')));
 
-// API Routes
-app.use('/api', apiRoutes);
+// API Routes (order matters - more specific routes first!)
+app.use('/api/summon', tokenRoutes);      // Character summoning (specific)
+app.use('/api/encounters', encounterRoutes); // Encounter management (specific)
+app.use('/api/ai', aiRoutes);             // AI endpoints (specific)
+app.use('/api', apiRoutes);               // General routes (catch-all, must be last)
 
 // Socket.io connection handling
 io.on('connection', (socket) => {
@@ -61,6 +67,20 @@ io.on('connection', (socket) => {
 
   socket.on('action_taken', (data) => {
     io.emit('action_broadcast', data);
+  });
+
+  // Timmilander token summoning
+  socket.on('token_summoned', (data) => {
+    console.log('🧙‍♂️ Token summoned by Timmilander:', data.token.name);
+    // Broadcast to all other clients
+    socket.broadcast.emit('token_summoned_remote', data);
+  });
+
+  // Encounter start from Timmilander
+  socket.on('encounter_started', (data) => {
+    console.log('⚔️ Encounter started:', data.encounter.name);
+    // Broadcast to all clients
+    io.emit('encounter_started_remote', data);
   });
 
   socket.on('disconnect', () => {

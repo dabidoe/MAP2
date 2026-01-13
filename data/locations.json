@@ -10,7 +10,10 @@
     "portals": [
       {
         "id": "exit_to_picket",
-        "position": { "x": 85, "y": 50 },
+        "position": {
+          "x": 85,
+          "y": 50
+        },
         "radius": 5,
         "destination": "picket_post",
         "label": "Road to Hessian Picket"
@@ -20,22 +23,28 @@
   {
     "id": "picket_post",
     "title": "The Hessian Picket",
-    "lat": 40.2520,
-    "lng": -74.8010,
+    "lat": 40.252,
+    "lng": -74.801,
     "description": "A small outpost guarding the river road. High risk of encounter.",
     "radius": 50,
     "tacticalMapUrl": "/assets/maps/trenton-barracks/the-barracks-of-trenton.png",
     "portals": [
       {
         "id": "door_to_barracks",
-        "position": { "x": 50, "y": 85 },
+        "position": {
+          "x": 50,
+          "y": 85
+        },
         "radius": 5,
         "destination": "trenton_barracks",
         "label": "Road to Trenton"
       },
       {
         "id": "back_to_ferry",
-        "position": { "x": 15, "y": 50 },
+        "position": {
+          "x": 15,
+          "y": 50
+        },
         "radius": 5,
         "destination": "frozen_vigil",
         "label": "Back to McConkey's Ferry"
@@ -53,11 +62,27 @@
     "portals": [
       {
         "id": "exit_barracks",
-        "position": { "x": 50, "y": 15 },
+        "position": {
+          "x": 50,
+          "y": 15
+        },
         "radius": 5,
         "destination": "picket_post",
         "label": "Back to Picket Post"
       }
+    ]
+  },
+  {
+    "id": "princeton_road",
+    "title": "Princeton Road",
+    "lat": 40.3493,
+    "lng": -74.6593,
+    "description": "The road to Princeton, where the next battle awaits",
+    "radius": 50,
+    "tacticalMapUrl": "/assets/maps/princeton/princeton-road.png",
+    "portals": [],
+    "encounters": [
+      "encounter_1768311494541_hk9sf4vd5"
     ]
   }
 ]

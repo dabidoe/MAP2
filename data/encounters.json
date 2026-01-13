@@ -1,0 +1,20 @@
+[
+  {
+    "id": "encounter_1768311494541_hk9sf4vd5",
+    "name": "Hessian Patrol",
+    "description": "A small patrol of Hessian soldiers",
+    "difficulty": "easy",
+    "enemies": [
+      {
+        "name": "Hessian Jäger",
+        "hp": 15,
+        "ac": 14,
+        "cr": "1/4"
+      }
+    ],
+    "tactics": "Patrol in formation",
+    "locationId": "frozen_vigil",
+    "createdAt": "2026-01-13T13:38:14.541Z",
+    "usedCount": 0
+  }
+]

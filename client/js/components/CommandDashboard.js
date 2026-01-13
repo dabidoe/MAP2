@@ -804,6 +804,20 @@ export class CommandDashboard {
         this._showAvailableSpells();
         break;
 
+      case '/ai':
+      case '/summon':
+      case '/timmilander':
+        // Open Timmilander with optional message
+        if (args.length > 0) {
+          // Send message to Timmilander
+          const message = args.join(' ');
+          this._sendToAI(message);
+        } else {
+          // Just open Timmilander
+          this._openAIAssistant();
+        }
+        break;
+
       default:
         this._addConsoleMessage('system', `❌ Unknown command: ${cmd}. Type /help for available commands.`);
     }
@@ -821,11 +835,55 @@ export class CommandDashboard {
 • /skill [name] - Make a skill check (e.g., /skill Perception)
 • /init - Roll initiative for selected character
 • /cast - Show available spells for selected character
+• /timmilander - Summon Timmilander the Summoner (AI advisor)
+• /ai [message] - Send message to Timmilander
 • /clear - Clear chat history
 • /help - Show this help message
     `.trim();
 
     this._addConsoleMessage('system', helpText);
+  }
+
+  /**
+   * Open Timmilander panel
+   * @private
+   */
+  _openAIAssistant() {
+    // Find Timmilander via sidebar button
+    const aiSidebarBtn = document.getElementById('sidebar-ai');
+    if (aiSidebarBtn) {
+      aiSidebarBtn.click(); // Trigger toggle
+      this._addConsoleMessage('system', '🧙‍♂️ Timmilander the Summoner appears...');
+    } else {
+      this._addConsoleMessage('system', '❌ Timmilander is unavailable');
+    }
+  }
+
+  /**
+   * Send message to Timmilander
+   * @private
+   */
+  _sendToAI(message) {
+    // Open Timmilander and set input
+    const aiSidebarBtn = document.getElementById('sidebar-ai');
+    const aiInput = document.getElementById('ai-input');
+
+    if (aiSidebarBtn && aiInput) {
+      // Open panel if not already open
+      const aiPanel = document.getElementById('ai-assistant-panel');
+      if (aiPanel && !aiPanel.classList.contains('ai-assistant-open')) {
+        aiSidebarBtn.click();
+      }
+
+      // Set input and focus
+      setTimeout(() => {
+        aiInput.value = message;
+        aiInput.focus();
+        this._addConsoleMessage('system', `🧙‍♂️ You speak to Timmilander: "${message}"`);
+      }, 300); // Wait for panel to open
+    } else {
+      this._addConsoleMessage('system', '❌ Timmilander is unavailable');
+    }
   }
 
   /**

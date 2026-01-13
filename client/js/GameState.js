@@ -63,7 +63,9 @@ export class GameState {
    * Get tokens for specific location
    */
   getTokensAt(locationId) {
-    return this.state.tokens.filter(t => t.locationId === locationId);
+    return this.state.tokens.filter(t =>
+      t.locationId === locationId || t.location === locationId
+    );
   }
 
   /**
@@ -85,6 +87,24 @@ export class GameState {
    */
   getToken(tokenId) {
     return this.state.tokens.find(t => t.tokenId === tokenId) || null;
+  }
+
+  /**
+   * Add a new token to the game state
+   */
+  addToken(token) {
+    // Check if token already exists
+    const existingToken = this.getToken(token.tokenId);
+    if (existingToken) {
+      console.warn('Token already exists, updating instead:', token.tokenId);
+      this.updateToken(token.tokenId, token);
+      return existingToken;
+    }
+
+    // Add new token
+    this.state.tokens.push(token);
+    this._notify('tokenAdded', token);
+    return token;
   }
 
   /**
