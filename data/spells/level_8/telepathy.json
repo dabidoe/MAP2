@@ -4,20 +4,46 @@
   },
   "name": "Telepathy",
   "level": 8,
+  "flavorText": "You create a telepathic link between yourself and a willing creature with which you are familiar. The creature can be anywhere on the same plane of existence as you. The spell ends if you or the target are no longer on the same plane.\n\nUntil the spell ends, you and the target can instantaneously share words, images, sounds and other sensory messages with one another through the link, and the target recognizes you as the creature it is communicating with. The spell enables a creature with an Intelligence score of at least 1 to understand the meaning of your words and take in the scope of any sensory messages you send to it.",
   "description": "You create a telepathic link between yourself and a willing creature with which you are familiar. The creature can be anywhere on the same plane of existence as you. The spell ends if you or the target are no longer on the same plane.\n\nUntil the spell ends, you and the target can instantaneously share words, images, sounds and other sensory messages with one another through the link, and the target recognizes you as the creature it is communicating with. The spell enables a creature with an Intelligence score of at least 1 to understand the meaning of your words and take in the scope of any sensory messages you send to it.",
-  "castingTime": "1 action",
-  "range": "Unlimited",
-  "components": "V, S, M (a pair of linked silver rings)",
-  "duration": "24 hours",
-  "damage": null,
   "school": "Evocation",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Unlimited",
+  "components": "V, S, M (a pair of linked silver rings)",
+  "duration": "24 hours",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a pair of linked silver rings"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/17371b5e-7ca1-44c4-b85e-2a48ab2bcc31.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "wizard",
+    "level8"
+  ],
+  "iconLayers": [
+    [
+      "17371b5e-7ca1-44c4-b85e-2a48ab2bcc31${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1b1a5017-565b-482d-b7f2-a89a34119ead\"}"
+    ],
+    [
+      "b6886228-0da0-4142-a8df-310f769d4d07${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"f62bc677-c669-4a55-8692-4bc15a93146b\"}"
+    ],
+    [
+      "2b198988-4caf-4ef6-95be-0450669e32e6${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"55058e07-bc3c-4857-9a9e-23cd12b5d02d\"}"
+    ],
+    [
+      "4f148134-01ec-4992-8150-444c35e8cc5e"
+    ]
+  ]
 }

@@ -4,12 +4,48 @@
   },
   "name": "Identify",
   "level": 1,
-  "description": "By laying a steady hand upon an object or creature, you unveil hidden arcane truths. Objects reveal any magical traits, latent powers, or curse binds. Creatures disclose ongoing spells influencing them. The insight manifests as flashes of symbolic imagery only you can perceive.",
-  "castingTime": "1 action",
-  "range": "Touch",
-  "components": "V, S",
-  "duration": "Instantaneous",
-  "damage": "None",
+  "flavorText": "By laying a steady hand upon an object or creature, you unveil hidden arcane truths. Objects reveal any magical traits, latent powers, or curse binds. Creatures disclose ongoing spells influencing them. The insight manifests as flashes of symbolic imagery only you can perceive.",
+  "description": "You choose one object that you must touch throughout the casting of the spell. If it is a magic item or some other magic-imbued object, you learn its properties and how to use them, whether it requires attunement to use, and how many charges it has, if any. You learn whether any spells are affecting the item and what they are. If the item was created by a spell, you learn which spell created it.\n\nIf you instead touch a creature throughout the casting, you learn what spells, if any, are currently affecting it.",
   "school": "Divination",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/7cff0e42-20a4-426e-9aa8-423b265b2dd3.png"
+  "classes": [
+    "bard",
+    "wizard"
+  ],
+  "ritual": true,
+  "castingTime": "1 minute",
+  "range": "Touch",
+  "components": "V, S, M (a pearl worth at least 100 gp and an owl feather)",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a pearl worth at least 100 gp and an owl feather"
+    ]
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/7cff0e42-20a4-426e-9aa8-423b265b2dd3.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "None",
+  "tags": [
+    "bard",
+    "wizard",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "7cff0e42-20a4-426e-9aa8-423b265b2dd3${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"29067991-5c1f-47b2-9e40-11510ba3f0d9\"}"
+    ],
+    [
+      "3d8d4fed-325e-4e70-9cc5-840855e59119${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"cc59c27f-27c4-4c47-94be-08969a2c0587\"}"
+    ],
+    [
+      "3777c835-e98e-4570-b63c-5d0dd41aac15${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d76638ae-a9bb-4129-ad28-cc5de4ee2768\"}"
+    ],
+    [
+      "86666419-42ee-400f-ad57-e1e1f00336d8${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"2ce565da-bedb-4a06-8b6e-251992fffef1\"}"
+    ]
+  ]
 }

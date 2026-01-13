@@ -1,0 +1,16 @@
+{
+  "id": "potion-greater-healing",
+  "name": "Potion of Greater Healing",
+  "category": "potion",
+  "rarity": "uncommon",
+  "weight": 0.5,
+  "value": 150,
+  "quantity": 1,
+  "description": "A powerful healing potion",
+  "consumable": {
+    "effect": "Heal 4d4+4",
+    "duration": "Instant"
+  },
+  "icon": "🧪",
+  "iconStatus": "placeholder"
+}

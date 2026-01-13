@@ -4,20 +4,30 @@
   },
   "name": "Primordial Ward",
   "level": 6,
+  "flavorText": "You have resistance to acid, cold, fire, lightning, and thunder damage for the spell’s duration.\n\nWhen you take damage of one of those types, you can use your reaction to gain immunity to that type of damage, including against the triggering damage. If you do so, the resistances end, and you have the immunity until the end of your next turn, at which time the spell ends.",
   "description": "You have resistance to acid, cold, fire, lightning, and thunder damage for the spell’s duration.\n\nWhen you take damage of one of those types, you can use your reaction to gain immunity to that type of damage, including against the triggering damage. If you do so, the resistances end, and you have the immunity until the end of your next turn, at which time the spell ends.",
-  "castingTime": "1 action",
-  "range": "Self",
-  "components": "V, S",
-  "duration": "Concentration, up to 1 minute",
-  "damage": null,
   "school": "Abjuration",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "druid"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Self",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+  "iconStatus": "missing",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "druid",
+    "level6"
+  ]
 }

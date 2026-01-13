@@ -1,0 +1,16 @@
+{
+  "id": "scroll-revivify",
+  "name": "Scroll of Revivify",
+  "category": "scroll",
+  "rarity": "rare",
+  "weight": 0.1,
+  "value": 1000,
+  "quantity": 1,
+  "description": "Spell scroll containing revivify",
+  "consumable": {
+    "effect": "Bring a creature that died within 1 minute back to life with 1 HP",
+    "duration": "Instant"
+  },
+  "icon": "📜",
+  "iconStatus": "placeholder"
+}

@@ -4,37 +4,44 @@
   },
   "name": "Blinding Smite",
   "level": 3,
+  "flavorText": "The next time you hit a creature with a melee weapon attack during this spell’s duration, your weapon flares with bright light, and the attack deals an extra 3d8 radiant damage to the target. Additionally, the target must succeed on a Constitution saving throw or be blinded until the spell ends.\n\nA creature blinded by this spell makes another Constitution saving throw at the end of each of its turns. On a successful save, it is no longer blinded.",
   "description": "The next time you hit a creature with a melee weapon attack during this spell’s duration, your weapon flares with bright light, and the attack deals an extra 3d8 radiant damage to the target. Additionally, the target must succeed on a Constitution saving throw or be blinded until the spell ends.\n\nA creature blinded by this spell makes another Constitution saving throw at the end of each of its turns. On a successful save, it is no longer blinded.",
-  "castingTime": "1 bonus action",
-  "range": "Self",
-  "components": "V",
-  "duration": "Concentration, up to 1 minute",
-  "damage": "3d8 radiant",
   "school": "Evocation",
-  "isPublic": true,
   "classes": [
     "paladin"
   ],
   "ritual": false,
+  "castingTime": "1 bonus action",
+  "range": "Self",
+  "components": "V",
+  "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": false,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
-  "iconLayers": [
-    {
-      "guid": "a9e10400-5ec4-4538-b619-18e73d87c059${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"6ea90126-055e-4370-a388-ac5ed180f804\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "451f0f30-9c67-40f9-8a99-e0b6e0471af5${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"6d9c7f02-fae8-4d79-9744-75588efe0904\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "e2107f5f-5433-457d-8a37-810aa09e1b67${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"238ff132-1b14-4560-99ca-7864da9ddab2\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "689aaeed-2588-474f-bf3b-9cf9f300d67c",
-      "json": "{}"
-    }
+  "icon": "https://statsheet-cdn.b-cdn.net/images/a9e10400-5ec4-4538-b619-18e73d87c059.png",
+  "iconStatus": "ready",
+  "video": "/SPELL_VIDEOS/Blinding_Smite_You_call_upon_divine_radiance_to_coat_your_wea_6a50dff3-0e7d-4ca0-9542-7a7be8ce3d98_0.mp4",
+  "damage": "3d8 radiant",
+  "tags": [
+    "paladin",
+    "level3"
   ],
-  "video": "/SPELL_VIDEOS/Blinding_Smite_You_call_upon_divine_radiance_to_coat_your_wea_6a50dff3-0e7d-4ca0-9542-7a7be8ce3d98_0.mp4"
+  "iconLayers": [
+    [
+      "a9e10400-5ec4-4538-b619-18e73d87c059${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"6ea90126-055e-4370-a388-ac5ed180f804\"}"
+    ],
+    [
+      "451f0f30-9c67-40f9-8a99-e0b6e0471af5${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"6d9c7f02-fae8-4d79-9744-75588efe0904\"}"
+    ],
+    [
+      "e2107f5f-5433-457d-8a37-810aa09e1b67${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"238ff132-1b14-4560-99ca-7864da9ddab2\"}"
+    ],
+    [
+      "689aaeed-2588-474f-bf3b-9cf9f300d67c"
+    ]
+  ]
 }

@@ -4,12 +4,44 @@
   },
   "name": "Produce Flame",
   "level": 0,
-  "description": "A bead of ember spins above your palm, shedding bright light in a 15‑foot radius and dim light for another 15 feet. As part of the same or a later action, you may snap the ember toward a creature you can see, turning it into a blazing mote that streaks to its target.",
+  "flavorText": "A bead of ember spins above your palm, shedding bright light in a 15‑foot radius and dim light for another 15 feet. As part of the same or a later action, you may snap the ember toward a creature you can see, turning it into a blazing mote that streaks to its target.",
+  "description": "A flickering flame appears in your hand. The flame remains there for the duration and harms neither you nor your equipment. The flame sheds bright light in a 10-foot radius and dim light for an additional 10 feet. The spell ends if you dismiss it as an action or if you cast it again.\n\nYou can also attack with the flame, although doing so ends the spell. When you cast this spell, or as an action on a later turn, you can hurl the flame at a creature within 30 feet of you. Make a ranged spell attack. On a hit, the target takes 1d8 fire damage.\n\nThis spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
+  "school": "Conjuration",
+  "classes": [
+    "druid"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
-  "range": "Self (light), 20 feet (mote)",
+  "range": "Self",
   "components": "V, S",
-  "duration": "10 minutes (light) or until fired",
+  "duration": "10 minutes",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/241aabbf-d9b5-4dc8-87c2-b948e32c81a1.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "1d6 fire",
-  "school": "Evocation",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/241aabbf-d9b5-4dc8-87c2-b948e32c81a1.png"
+  "tags": [
+    "druid",
+    "cantrip"
+  ],
+  "iconLayers": [
+    [
+      "241aabbf-d9b5-4dc8-87c2-b948e32c81a1"
+    ],
+    [
+      "db832321-a557-4d36-a7a0-672ea5e022bd"
+    ],
+    [
+      "0fe80fe5-687b-409d-9750-6f06bdae1dfd"
+    ],
+    [
+      "dc892c01-b291-4cb4-b33b-a610a16ec84b"
+    ]
+  ]
 }

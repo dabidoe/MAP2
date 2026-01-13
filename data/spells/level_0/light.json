@@ -4,12 +4,52 @@
   },
   "name": "Light",
   "level": 0,
-  "description": "You tap a creature or object, igniting a tiny mote of floating starlight that hovers within 5 feet of the target. The mote sheds bright light in a 15‑foot radius and dim light for another 15 feet. As a bonus action, you can move the mote up to 20 feet to a point you can see. The mote winks out if it leaves your range or you create a new one.",
-  "castingTime": "1 action",
-  "range": "30 feet",
-  "components": "V, S",
-  "duration": "1 hour",
-  "damage": "None",
+  "flavorText": "You tap a creature or object, igniting a tiny mote of floating starlight that hovers within 5 feet of the target. The mote sheds bright light in a 15‑foot radius and dim light for another 15 feet. As a bonus action, you can move the mote up to 20 feet to a point you can see. The mote winks out if it leaves your range or you create a new one.",
+  "description": "You touch one object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds bright light in a 20-foot radius and dim light for an additional 20 feet. The light can be colored as you like. Completely covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an action.\n\nIf you target an object held or worn by a hostile creature, that creature must succeed on a Dexterity saving throw to avoid the spell.",
   "school": "Evocation",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/17f0d361-f3b7-412d-9566-d0e2762ac9be.png"
+  "classes": [
+    "bard",
+    "cleric",
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, M (a firefly or phosphorescent moss)",
+  "duration": "1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": false,
+    "material": true,
+    "materialsNeeded": [
+      "a firefly or phosphorescent moss"
+    ]
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/17f0d361-f3b7-412d-9566-d0e2762ac9be.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "None",
+  "tags": [
+    "bard",
+    "cleric",
+    "sorcerer",
+    "wizard",
+    "cantrip"
+  ],
+  "iconLayers": [
+    [
+      "17f0d361-f3b7-412d-9566-d0e2762ac9be${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"455b3c33-b347-4fe8-9dfe-315a3a436367\"}"
+    ],
+    [
+      "d3b3fad1-bd31-4fa9-8c2d-604b5f813822${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"399bfe27-b6eb-4270-825f-d7cf46482f70\"}"
+    ],
+    [
+      "3ce17a88-2c02-4cd8-baf4-67f90eb0414e"
+    ],
+    [
+      "a78518fe-ca9e-4c2e-9b80-b32b1ea30e61${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c29c498b-9c92-4778-bdcf-93f1ce5ca5c4\"}"
+    ]
+  ]
 }

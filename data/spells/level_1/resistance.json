@@ -3,13 +3,49 @@
     "$oid": "6954963c5648a6dce9f6f937"
   },
   "name": "Resistance",
-  "level": 1,
-  "description": "You brush a sigil of resolve onto a willing creature. Until the spell ends, the target gains a flickering ward that it may invoke once to gain advantage on a single saving throw of its choice. The ward dissipates immediately after use.",
+  "level": 0,
+  "flavorText": "You brush a sigil of resolve onto a willing creature. Until the spell ends, the target gains a flickering ward that it may invoke once to gain advantage on a single saving throw of its choice. The ward dissipates immediately after use.",
+  "description": "You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one saving throw of its choice. It can roll the die before or after making the saving throw. The spell then ends.",
+  "school": "Abjuration",
+  "classes": [
+    "cleric",
+    "druid"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
   "range": "Touch",
-  "components": "V, S",
+  "components": "V, S, M (a miniature cloak)",
   "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a miniature cloak"
+    ]
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/a887525a-9e73-416c-aea0-3eab6d05dc28.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "None",
-  "school": "Abjuration",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/a887525a-9e73-416c-aea0-3eab6d05dc28.png"
+  "tags": [
+    "cleric",
+    "druid",
+    "cantrip"
+  ],
+  "iconLayers": [
+    [
+      "a887525a-9e73-416c-aea0-3eab6d05dc28${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"7b8ba154-67e5-4505-b3fe-384fc8c708d1\"}"
+    ],
+    [
+      "943f0992-9b4e-43cd-844d-ce8c2ba0c374${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"425c421c-5669-42e2-8727-06bae26cf1ba\"}"
+    ],
+    [
+      "1baa47ae-e7ab-421f-bbc8-b2c1c2e48aa9${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"54136cde-fbeb-4b76-afb1-0fcac475345c\"}"
+    ],
+    [
+      "cb0416ef-d8a3-42ae-80d2-e895c86d267c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"b4c2e3a1-6a68-4fb7-af42-e4797cc8ad6f\"}"
+    ]
+  ]
 }

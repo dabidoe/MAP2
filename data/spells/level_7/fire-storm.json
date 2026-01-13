@@ -4,22 +4,48 @@
   },
   "name": "Fire Storm",
   "level": 7,
+  "flavorText": "A storm made up of sheets of roaring flame appears in a location you choose within range. The area of the storm consists of up to ten 10-foot-cubes, which you can arrange as you wish. Each cube must have at least one face adjacent to the face of another cube. Each creature in the area must make a Dexterity saving throw. It takes 7d10 fire damage on a failed save, or half as much damage on a successful one.\n\nThe fire damages objects in the area and ignites flammable objects that aren't being worn or carried. If you choose, plant life in the area is unaffected by this spell.",
   "description": "A storm made up of sheets of roaring flame appears in a location you choose within range. The area of the storm consists of up to ten 10-foot-cubes, which you can arrange as you wish. Each cube must have at least one face adjacent to the face of another cube. Each creature in the area must make a Dexterity saving throw. It takes 7d10 fire damage on a failed save, or half as much damage on a successful one.\n\nThe fire damages objects in the area and ignites flammable objects that aren't being worn or carried. If you choose, plant life in the area is unaffected by this spell.",
-  "castingTime": "1 action",
-  "range": "150 feet",
-  "components": "V, S",
-  "duration": "Instantaneous",
-  "damage": "7d10 fire",
   "school": "Evocation",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "cleric",
     "druid",
     "sorcerer"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "150 feet",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/c293d70f-51c2-4b3f-aa68-c7dfb8b5e43b.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "7d10 fire",
+  "tags": [
+    "cleric",
+    "druid",
+    "sorcerer",
+    "level7"
+  ],
+  "iconLayers": [
+    [
+      "c293d70f-51c2-4b3f-aa68-c7dfb8b5e43b"
+    ],
+    [
+      "37edb8ff-087d-4c20-b48d-292a8593866c"
+    ],
+    [
+      "40f81f4c-8e45-4316-b7f0-911f42809bec"
+    ],
+    [
+      "a4c31320-d730-4a7b-a1f6-a0da46b923b1"
+    ]
+  ]
 }

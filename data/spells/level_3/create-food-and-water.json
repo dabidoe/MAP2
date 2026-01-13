@@ -4,37 +4,46 @@
   },
   "name": "Create Food and Water",
   "level": 3,
+  "flavorText": "You create 45 pounds of food and 30 gallons of water on the ground or in containers within range, enough to sustain up to fifteen humanoids or five steeds for 24 hours. The food is bland but nourishing, and spoils if uneaten after 24 hours. The water is clean and doesn’t go bad.",
   "description": "You create 45 pounds of food and 30 gallons of water on the ground or in containers within range, enough to sustain up to fifteen humanoids or five steeds for 24 hours. The food is bland but nourishing, and spoils if uneaten after 24 hours. The water is clean and doesn’t go bad.",
-  "castingTime": "1 action",
-  "range": "30 feet",
-  "components": "V, S",
-  "duration": "Instantaneous",
-  "damage": null,
   "school": "Conjuration",
-  "isPublic": true,
   "classes": [
     "cleric",
     "paladin"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/ba9c7701-1886-47c2-9e2a-0431043c4e5e.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "cleric",
+    "paladin",
+    "level3"
+  ],
   "iconLayers": [
-    {
-      "guid": "ba9c7701-1886-47c2-9e2a-0431043c4e5e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"bb030ef3-0e08-4b72-bcc3-2e107ced6b72\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "a85f002f-5d5a-4e5b-a75b-3249253986f8${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"14276271-8f77-4c45-b15d-96e840a34b6c\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "08bd16ec-8e90-4d5d-81d6-ee32413da98f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"cce4dd49-7f8e-414d-bee3-4c7a69393334\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "1e7ebdce-1a52-4bca-afd7-55cdc5fac64e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"f7ec6dd9-484d-4a42-8e91-d1c12af74aab\"}",
-      "json": "{}"
-    }
+    [
+      "ba9c7701-1886-47c2-9e2a-0431043c4e5e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"bb030ef3-0e08-4b72-bcc3-2e107ced6b72\"}"
+    ],
+    [
+      "a85f002f-5d5a-4e5b-a75b-3249253986f8${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"14276271-8f77-4c45-b15d-96e840a34b6c\"}"
+    ],
+    [
+      "08bd16ec-8e90-4d5d-81d6-ee32413da98f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"cce4dd49-7f8e-414d-bee3-4c7a69393334\"}"
+    ],
+    [
+      "1e7ebdce-1a52-4bca-afd7-55cdc5fac64e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"f7ec6dd9-484d-4a42-8e91-d1c12af74aab\"}"
+    ]
   ]
 }

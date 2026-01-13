@@ -4,21 +4,32 @@
   },
   "name": "Telepathic Bond",
   "level": 5,
+  "flavorText": "You forge a Telepathic link among up to eight willing Creatures of your choice within range, psychically linking each creature to all the others for the Duration. Creatures with Intelligence scores of 2 or less aren’t affected by this spell.\n\nUntil the spell ends, the Targets can communicate telepathically through the bond whether or not they have a Common language. The Communication is possible over any distance, though it can’t extend to Other Planes of existence.",
   "description": "You forge a Telepathic link among up to eight willing Creatures of your choice within range, psychically linking each creature to all the others for the Duration. Creatures with Intelligence scores of 2 or less aren’t affected by this spell.\n\nUntil the spell ends, the Targets can communicate telepathically through the bond whether or not they have a Common language. The Communication is possible over any distance, though it can’t extend to Other Planes of existence.",
-  "castingTime": "1 action",
-  "range": "30 feet",
-  "components": "V, S, M (Pieces of eggshell from two different kinds of creatures)",
-  "duration": "1 hour",
-  "damage": null,
   "school": "Divination",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "wizard",
     "bard"
   ],
   "ritual": true,
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S, M (Pieces of eggshell from two different kinds of creatures)",
+  "duration": "1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+  "iconStatus": "missing",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "wizard",
+    "level5",
+    "bard"
+  ]
 }

@@ -3,13 +3,51 @@
     "$oid": "6954699b5648a6dce9f6f75e"
   },
   "name": "Fog Cloud",
-  "level": 2,
-  "description": "A low whispering fog pours from a point you choose, filling a 25-foot-radius sphere with shifting mist that coils around corners. The area becomes heavily obscured, and faint echoes distort sound within. A strong breeze quickly scatters the veil.",
+  "level": 1,
+  "flavorText": "A low whispering fog pours from a point you choose, filling a 25-foot-radius sphere with shifting mist that coils around corners. The area becomes heavily obscured, and faint echoes distort sound within. A strong breeze quickly scatters the veil.",
+  "description": "You create a 20-foot-radius sphere of fog centered on a point within range. The sphere spreads around corners, and its area is heavily obscured. It lasts for the duration or until a wind of moderate or greater speed (at least 10 miles per hour) disperses it.",
+  "school": "Conjuration",
+  "classes": [
+    "druid",
+    "ranger",
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
-  "range": "90 feet",
+  "range": "120 feet",
   "components": "V, S",
-  "duration": "Concentration, up to 10 minutes",
+  "duration": "Concentration, up to 1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, the radius of the fog increases by 20 feet for each slot level above 1st.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/66ea449a-403b-4350-b753-f1ddab4b2991.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "None",
-  "school": "Illusion",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/66ea449a-403b-4350-b753-f1ddab4b2991.png"
+  "tags": [
+    "druid",
+    "ranger",
+    "sorcerer",
+    "wizard",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "66ea449a-403b-4350-b753-f1ddab4b2991${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d4a5e2dd-527c-4680-a818-f839aa5cbaab\"}"
+    ],
+    [
+      "4d7280cf-d9a4-40aa-b52d-cb3f36ce9fa3${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ec71eb8d-3d64-4ec1-b4cd-a024848aa678\"}"
+    ],
+    [
+      "76b9ff23-0361-4206-9d95-5af9170fe5ee${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"b91c8359-88bc-4b03-98c8-0af175dd03d9\"}"
+    ],
+    [
+      "ae191701-6144-4f57-8ad9-c9eb36af4e69${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"a34c3b91-8e03-4762-91c1-942fcbe8f32c\"}"
+    ]
+  ]
 }

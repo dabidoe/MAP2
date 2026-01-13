@@ -1,0 +1,12 @@
+{
+  "id": "bedroll",
+  "name": "Bedroll",
+  "category": "gear",
+  "rarity": "common",
+  "weight": 7,
+  "value": 1,
+  "quantity": 1,
+  "description": "Simple sleeping gear",
+  "icon": "🎒",
+  "iconStatus": "placeholder"
+}

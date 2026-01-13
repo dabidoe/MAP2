@@ -4,21 +4,48 @@
   },
   "name": "True Resurrection",
   "level": 9,
+  "flavorText": "You touch a creature that has been dead for no longer than 200 years and that died for any reason except old age. If the creature's soul is free and willing, the creature is restored to life with all its hit points.\n\nThis spell closes all wounds, neutralizes any poison, cures all diseases, and lifts any curses affecting the creature when it died. The spell replaces damaged or missing organs and limbs.\n\nThe spell can even provide a new body if the original no longer exists, in which case you must speak the creature's name. The creature then appears in an unoccupied space you choose within 10 feet of you.",
   "description": "You touch a creature that has been dead for no longer than 200 years and that died for any reason except old age. If the creature's soul is free and willing, the creature is restored to life with all its hit points.\n\nThis spell closes all wounds, neutralizes any poison, cures all diseases, and lifts any curses affecting the creature when it died. The spell replaces damaged or missing organs and limbs.\n\nThe spell can even provide a new body if the original no longer exists, in which case you must speak the creature's name. The creature then appears in an unoccupied space you choose within 10 feet of you.",
-  "castingTime": "1 hour",
-  "range": "Touch",
-  "components": "V, S, M (a sprinkle of holy water and diamonds worth at least 25,000 gp, which the spell consumes)",
-  "duration": "Instantaneous",
-  "damage": null,
   "school": "Necromancy",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "cleric",
     "druid"
   ],
   "ritual": false,
+  "castingTime": "1 hour",
+  "range": "Touch",
+  "components": "V, S, M (a sprinkle of holy water and diamonds worth at least 25,000 gp, which the spell consumes)",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a sprinkle of holy water and diamonds worth at least 25,000 gp, which the spell consumes"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/7bbb0468-baa0-42a0-b7d4-1551cf748cac.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "cleric",
+    "druid",
+    "level9"
+  ],
+  "iconLayers": [
+    [
+      "7bbb0468-baa0-42a0-b7d4-1551cf748cac"
+    ],
+    [
+      "b3e99142-dfd3-489b-b4ff-7e24a43ec462"
+    ],
+    [
+      "15ce2d35-7439-4440-9ade-e48cb8dfdce6"
+    ],
+    [
+      "b8d16e97-002d-4111-86ea-d7aff860a66b"
+    ]
+  ]
 }

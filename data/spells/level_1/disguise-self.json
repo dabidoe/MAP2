@@ -11,5 +11,20 @@
   "duration": "1 hour",
   "damage": "None",
   "school": "Illusion",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/c948f2a3-24f7-47f8-8668-d3ba4e60806c.png"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/c948f2a3-24f7-47f8-8668-d3ba4e60806c.png",
+  "iconStatus": "ready",
+  "iconLayers": [
+    [
+      "c948f2a3-24f7-47f8-8668-d3ba4e60806c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"3badda9f-b922-41e8-bb58-892c7cc89df9\"}"
+    ],
+    [
+      "b89cfc12-c1db-48e9-aaec-be2b5e91ae4a${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ead028e4-649e-4326-950c-7bee6ac146e0\"}"
+    ],
+    [
+      "979dcdbb-3aff-4107-b5cf-ca313be73346${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1ac3232d-a09c-475b-abd0-5bdb2e7b31bf\"}"
+    ],
+    [
+      "b7894a21-da1e-452f-a819-1f32cf6d776e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"07527f7d-f582-4cda-859b-8e74bcbbd3ab\"}"
+    ]
+  ]
 }

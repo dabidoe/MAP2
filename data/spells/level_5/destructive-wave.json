@@ -4,20 +4,44 @@
   },
   "name": "Destructive Wave",
   "level": 5,
+  "flavorText": "You strike the ground, creating a burst of divine energy that ripples outward from you. Each creature you choose within 30 feet of you must succeed on a Constitution saving throw or take 5d6 thunder damage, as well as 5d6 radiant or necrotic damage (your choice), and be knocked prone. A creature that succeeds on its saving throw takes half as much damage and isn't knocked prone.",
   "description": "You strike the ground, creating a burst of divine energy that ripples outward from you. Each creature you choose within 30 feet of you must succeed on a Constitution saving throw or take 5d6 thunder damage, as well as 5d6 radiant or necrotic damage (your choice), and be knocked prone. A creature that succeeds on its saving throw takes half as much damage and isn't knocked prone.",
-  "castingTime": "1 action",
-  "range": "Self (30-foot radius)",
-  "components": "V",
-  "duration": "Instantaneous",
-  "damage": "5d6 thunder",
   "school": "Evocation",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "paladin"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Self (30-foot radius)",
+  "components": "V",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": false,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/a261a98f-3978-47c4-a294-c38e11c36436.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "5d6 thunder",
+  "tags": [
+    "paladin",
+    "level5"
+  ],
+  "iconLayers": [
+    [
+      "a261a98f-3978-47c4-a294-c38e11c36436"
+    ],
+    [
+      "75b3dc23-72b6-4380-a32a-d66d7508f31a"
+    ],
+    [
+      "59fca9c7-b5e4-4f26-b2bf-be7b938edaab"
+    ],
+    [
+      "1b98fc39-2838-4f6b-a71b-d2de265768e0"
+    ]
+  ]
 }

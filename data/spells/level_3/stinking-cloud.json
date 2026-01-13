@@ -4,38 +4,50 @@
   },
   "name": "Stinking Cloud",
   "level": 3,
+  "flavorText": "You create a 20-foot-radius sphere of yellow, nauseating gas centered on a point within range. The cloud spreads around corners, and its area is heavily obscured. The cloud lingers in the air for the duration.\n\nEach creature that is completely within the cloud at the start of its turn must make a Constitution saving throw against poison. On a failed save, the creature spends its action that turn retching and reeling. Creatures that don’t need to breathe or are immune to poison automatically succeed on this saving throw.\n\nA moderate wind (at least 10 miles per hour) disperses the cloud after 4 rounds. A strong wind (at least 20 miles per hour) disperses it after 1 round.",
   "description": "You create a 20-foot-radius sphere of yellow, nauseating gas centered on a point within range. The cloud spreads around corners, and its area is heavily obscured. The cloud lingers in the air for the duration.\n\nEach creature that is completely within the cloud at the start of its turn must make a Constitution saving throw against poison. On a failed save, the creature spends its action that turn retching and reeling. Creatures that don’t need to breathe or are immune to poison automatically succeed on this saving throw.\n\nA moderate wind (at least 10 miles per hour) disperses the cloud after 4 rounds. A strong wind (at least 20 miles per hour) disperses it after 1 round.",
-  "castingTime": "1 action",
-  "range": "90 feet",
-  "components": "V, S, M (a rotten egg or several skunk cabbage leaves)",
-  "duration": "Concentration, up to 1 minute",
-  "damage": null,
   "school": "Conjuration",
-  "isPublic": true,
   "classes": [
     "bard",
     "sorcerer",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "90 feet",
+  "components": "V, S, M (a rotten egg or several skunk cabbage leaves)",
+  "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a rotten egg or several skunk cabbage leaves"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/662c993d-6dd4-454a-aae4-8d6f7b3a782c.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "bard",
+    "sorcerer",
+    "wizard",
+    "level3"
+  ],
   "iconLayers": [
-    {
-      "guid": "662c993d-6dd4-454a-aae4-8d6f7b3a782c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"b49a7dff-4ad3-4233-936c-62844986801f\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "48e1d5f4-2163-42ba-81a1-776accadcbeb${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"5c453214-86d0-4678-9cc8-d6214fc0c62c\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "fd6da185-7d83-4d40-a003-4728b53a105d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"aea21caa-7e67-452d-a4f9-f8cdb4cfb72a\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "db4789cf-3fa3-409f-a556-b2f752b1e14e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ca6d6577-c4a5-4fa9-ab76-0c2b17f146da\"}",
-      "json": "{}"
-    }
+    [
+      "662c993d-6dd4-454a-aae4-8d6f7b3a782c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"b49a7dff-4ad3-4233-936c-62844986801f\"}"
+    ],
+    [
+      "48e1d5f4-2163-42ba-81a1-776accadcbeb${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"5c453214-86d0-4678-9cc8-d6214fc0c62c\"}"
+    ],
+    [
+      "fd6da185-7d83-4d40-a003-4728b53a105d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"aea21caa-7e67-452d-a4f9-f8cdb4cfb72a\"}"
+    ],
+    [
+      "db4789cf-3fa3-409f-a556-b2f752b1e14e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ca6d6577-c4a5-4fa9-ab76-0c2b17f146da\"}"
+    ]
   ]
 }

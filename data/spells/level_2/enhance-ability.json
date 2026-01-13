@@ -4,16 +4,9 @@
   },
   "name": "Enhance Ability",
   "level": 2,
+  "flavorText": "You touch a creature and bestow upon it a magical enhancement. Choose one of the following effects; the target gains that effect until the spell ends.\n\nBear's Endurance: The target has advantage on Constitution Checks. It also gains 2d6 Temporary Hit Points, which are lost when the spell ends.\nBull's Strength: The target has advantage on Strength Checks, and his or her carrying Capacity doubles.\nCat's Grace: The target has advantage on Dexterity Checks. It also doesn't take damage from Falling 20 feet or less if it isn't Incapacitated.\nEagle's Splendor: The target has advantage on Charisma Checks.\nFox's Cunning: The target has advantage on Intelligence Checks.\nOwl's Wisdom: The target has advantage on Wisdom Checks.",
   "description": "You touch a creature and bestow upon it a magical enhancement. Choose one of the following effects; the target gains that effect until the spell ends.\n\nBear's Endurance: The target has advantage on Constitution Checks. It also gains 2d6 Temporary Hit Points, which are lost when the spell ends.\nBull's Strength: The target has advantage on Strength Checks, and his or her carrying Capacity doubles.\nCat's Grace: The target has advantage on Dexterity Checks. It also doesn't take damage from Falling 20 feet or less if it isn't Incapacitated.\nEagle's Splendor: The target has advantage on Charisma Checks.\nFox's Cunning: The target has advantage on Intelligence Checks.\nOwl's Wisdom: The target has advantage on Wisdom Checks.",
-  "castingTime": "1 action",
-  "range": "Touch",
-  "components": "V, S, M (fur or a feather from a beast)",
-  "duration": "Concentration, up to 1 hour",
-  "damage": null,
   "school": "Transmutation",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "bard",
     "cleric",
@@ -21,6 +14,42 @@
     "sorcerer"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S, M (fur or a feather from a beast)",
+  "duration": "Concentration, up to 1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "fur or a feather from a beast"
+    ]
+  },
   "higherLevels": "When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.",
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/04641b07-97f7-48f5-ad59-e7d6e355fc5d.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "bard",
+    "cleric",
+    "druid",
+    "sorcerer",
+    "level2"
+  ],
+  "iconLayers": [
+    [
+      "04641b07-97f7-48f5-ad59-e7d6e355fc5d"
+    ],
+    [
+      "385d8088-ea59-4db9-a183-7a3f148d4955"
+    ],
+    [
+      "a3132226-c5a7-4114-9c3a-aafb3e3f8d71"
+    ],
+    [
+      "0a50829a-936a-4ced-b307-8c403327662d"
+    ]
+  ]
 }

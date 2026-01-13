@@ -4,12 +4,48 @@
   },
   "name": "False Life",
   "level": 1,
-  "description": "A chill aura coils around you, shaping stray soul-echoes into a spectral shroud. The veil clings to your form, bracing your body with borrowed echoes of the dead.",
+  "flavorText": "A chill aura coils around you, shaping stray soul-echoes into a spectral shroud. The veil clings to your form, bracing your body with borrowed echoes of the dead.",
+  "description": "Bolstering yourself with a necromantic facsimile of life, you gain 1d4 + 4 temporary hit points for the duration.",
+  "school": "Necromancy",
+  "classes": [
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
   "range": "Self",
-  "components": "V, S",
+  "components": "V, S, M (a small amount of alcohol or distilled spirits)",
   "duration": "1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a small amount of alcohol or distilled spirits"
+    ]
+  },
+  "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, you gain 5 additional temporary hit points for each slot level above 1st.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/0a27ad4d-6f67-4003-8d82-ca32ca818880.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "Gain 1d8+3 temporary hit points.",
-  "school": "Necromancy",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/0a27ad4d-6f67-4003-8d82-ca32ca818880.png"
+  "tags": [
+    "sorcerer",
+    "wizard",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "0a27ad4d-6f67-4003-8d82-ca32ca818880${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1cf6ee8b-1406-4f45-b110-991a2a298312\"}"
+    ],
+    [
+      "46b01f5a-643c-4a27-9f95-c24d68da06fe${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"7bc96ad6-a009-4c88-b56c-80106d53338d\"}"
+    ],
+    [
+      "16ab3182-4d2f-4a2f-a726-1a4fb64da24b${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"9ebbc1a1-208f-4ed7-bb08-1590ea4aa98d\"}"
+    ],
+    [
+      "defdf9af-4a2d-4414-9cf0-fd086681825c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"8dc1b9da-6307-4240-888c-b8f180b34add\"}"
+    ]
+  ]
 }

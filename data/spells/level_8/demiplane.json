@@ -4,21 +4,46 @@
   },
   "name": "Demiplane",
   "level": 8,
+  "flavorText": "You create a shadowy door on a flat solid surface that you can see within range. The door is large enough to allow Medium creatures to pass through unhindered. When opened, the door leads to a demiplane that appears to be an empty room 30 feet in each dimension, made of wood or stone. When the spell ends, the door disappears, and any creatures or objects inside the demiplane remain trapped there, as the door also disappears from the other side.\n\nEach time you cast this spell, you can create a new demiplane, or have the shadowy door connect to a demiplane you created with a previous casting of this spell.  Additionally, if you know the nature and contents of a demiplane created by a casting of this spell by another creature, you can have the shadowy door connect to its demiplane instead.",
   "description": "You create a shadowy door on a flat solid surface that you can see within range. The door is large enough to allow Medium creatures to pass through unhindered. When opened, the door leads to a demiplane that appears to be an empty room 30 feet in each dimension, made of wood or stone. When the spell ends, the door disappears, and any creatures or objects inside the demiplane remain trapped there, as the door also disappears from the other side.\n\nEach time you cast this spell, you can create a new demiplane, or have the shadowy door connect to a demiplane you created with a previous casting of this spell.  Additionally, if you know the nature and contents of a demiplane created by a casting of this spell by another creature, you can have the shadowy door connect to its demiplane instead.",
-  "castingTime": "1 action",
-  "range": "60 feet",
-  "components": "S",
-  "duration": "1 hour",
-  "damage": null,
   "school": "Conjuration",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "warlock",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "60 feet",
+  "components": "S",
+  "duration": "1 hour",
+  "componentsDetail": {
+    "verbal": false,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/e46073b8-fa2f-4d70-9f80-c6d7067de933.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "warlock",
+    "wizard",
+    "level8"
+  ],
+  "iconLayers": [
+    [
+      "e46073b8-fa2f-4d70-9f80-c6d7067de933${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"9578925f-0879-46cb-9c4f-8c44f138b30f\"}"
+    ],
+    [
+      "8509a04c-6e87-4f26-9070-253b001502c9${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"45928692-7dfe-4ec1-8b8b-667a80cb5109\"}"
+    ],
+    [
+      "1e09ffc4-dd8f-43db-8ca5-1f6905cc5b1a${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1a97384e-31db-402e-9c0a-8a729191a3f0\"}"
+    ],
+    [
+      "eb1c32b8-8a94-4303-9b60-604de157983f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"7efa6689-724b-437a-b7d4-3e4c78f2a066\"}"
+    ]
+  ]
 }

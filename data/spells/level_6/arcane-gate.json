@@ -4,22 +4,48 @@
   },
   "name": "Arcane Gate",
   "level": 6,
+  "flavorText": "You create linked teleportation portals that remain open for the duration. Choose two points on the ground that you can see, one point within 10 feet of you and one point within 500 feet of you. A circular portal, 10 feet in diameter, opens over each point. If the portal would open in the space occupied by a creature, the spell fails, and the casting is lost.\n\nThe portals are two-dimensional glowing rings filled with mist, hovering inches from the ground and perpendicular to it at the points you choose. A ring is visible only from one side (your choice), which is the side that functions as a portal.\n\nAny creature or object entering the portal exits from the other portal as if the two were adjacent to each other; passing through a portal from the nonportal side has no effect. The mist that fills each portal is opaque and blocks vision through it. On your turn, you can rotate the rings as a bonus action so that the active side faces in a different direction.",
   "description": "You create linked teleportation portals that remain open for the duration. Choose two points on the ground that you can see, one point within 10 feet of you and one point within 500 feet of you. A circular portal, 10 feet in diameter, opens over each point. If the portal would open in the space occupied by a creature, the spell fails, and the casting is lost.\n\nThe portals are two-dimensional glowing rings filled with mist, hovering inches from the ground and perpendicular to it at the points you choose. A ring is visible only from one side (your choice), which is the side that functions as a portal.\n\nAny creature or object entering the portal exits from the other portal as if the two were adjacent to each other; passing through a portal from the nonportal side has no effect. The mist that fills each portal is opaque and blocks vision through it. On your turn, you can rotate the rings as a bonus action so that the active side faces in a different direction.",
-  "castingTime": "1 action",
-  "range": "500 feet",
-  "components": "V, S",
-  "duration": "Concentration, up to 10 minutes",
-  "damage": null,
   "school": "Conjuration",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "sorcerer",
     "warlock",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "500 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 10 minutes",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/e6b9935d-0b5a-4a7b-9f8c-5779ebcef4c6.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "sorcerer",
+    "warlock",
+    "wizard",
+    "level6"
+  ],
+  "iconLayers": [
+    [
+      "e6b9935d-0b5a-4a7b-9f8c-5779ebcef4c6"
+    ],
+    [
+      "90431541-4dd7-4d53-a7af-6d0d72b82ac0"
+    ],
+    [
+      "12805666-f866-40ad-b4cb-22bbe4e7edcd"
+    ],
+    [
+      "2eb6e9ba-4d9f-40a8-a32f-a0c30c5004c8"
+    ]
+  ]
 }

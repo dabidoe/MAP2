@@ -4,14 +4,9 @@
   },
   "name": "Protection from Energy",
   "level": 3,
+  "flavorText": "For the duration, the willing creature you touch has resistance to one damage type of your choice: acid, cold, fire, lightning, or thunder.",
   "description": "For the duration, the willing creature you touch has resistance to one damage type of your choice: acid, cold, fire, lightning, or thunder.",
-  "castingTime": "1 action",
-  "range": "Touch",
-  "components": "V, S",
-  "duration": "Concentration, up to 1 minute",
-  "damage": null,
   "school": "Abjuration",
-  "isPublic": true,
   "classes": [
     "cleric",
     "druid",
@@ -20,25 +15,41 @@
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
-  "iconLayers": [
-    {
-      "guid": "a9c26d1c-c55e-481e-847f-02978fbf1d2c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1.1,1.1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1277cbe5-c034-4982-9b31-a83fa514064e\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "e7ba44a5-7da5-410c-9b94-fedbb57bccd2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"8285d33f-318a-4c2c-88a8-28b068cfb2f8\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "0a247caf-3172-4473-a695-b103752236b5${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"6d6b395c-e8c4-4171-8380-74812beceb1a\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "252767f0-2e7e-45a6-93f1-2c70acb32316${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c81d0243-78f3-4539-bf7f-3665d99ede8c\"}",
-      "json": "{}"
-    }
+  "icon": "https://statsheet-cdn.b-cdn.net/images/a9c26d1c-c55e-481e-847f-02978fbf1d2c.png",
+  "iconStatus": "ready",
+  "video": "/SPELL_VIDEOS/Protection_from_Energy_You_touch_a_creature_and_imbue_it_with_39c99f20-5b01-4643-ba04-cd80d2357ac9_0.mp4",
+  "damage": null,
+  "tags": [
+    "cleric",
+    "druid",
+    "ranger",
+    "sorcerer",
+    "wizard",
+    "level3"
   ],
-  "video": "/SPELL_VIDEOS/Protection_from_Energy_You_touch_a_creature_and_imbue_it_with_39c99f20-5b01-4643-ba04-cd80d2357ac9_0.mp4"
+  "iconLayers": [
+    [
+      "a9c26d1c-c55e-481e-847f-02978fbf1d2c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1.1,1.1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1277cbe5-c034-4982-9b31-a83fa514064e\"}"
+    ],
+    [
+      "e7ba44a5-7da5-410c-9b94-fedbb57bccd2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"8285d33f-318a-4c2c-88a8-28b068cfb2f8\"}"
+    ],
+    [
+      "0a247caf-3172-4473-a695-b103752236b5${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"6d6b395c-e8c4-4171-8380-74812beceb1a\"}"
+    ],
+    [
+      "252767f0-2e7e-45a6-93f1-2c70acb32316${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c81d0243-78f3-4539-bf7f-3665d99ede8c\"}"
+    ]
+  ]
 }

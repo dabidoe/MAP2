@@ -4,20 +4,32 @@
   },
   "name": "Private Sanctum",
   "level": 4,
+  "flavorText": "You make an area within range magically secure. The area is a cube that can be as small as 5 feet to as large as 100 feet on each side. The spell lasts for the Duration or until you use an Action to dismiss it.\n\nWhen you cast the spell, you decide what sort of security the spell provides, choosing any or all of the following properties:\n  • Sound can’t pass through the barrier at The Edge of the warded area.\n    • The barrier of the warded area appears dark and foggy, preventing Vision (including darkvision) through it.\n • Sensors created by Divination s⁠pells can’t appear inside the protected area or pass through the barrier at its perimeter.\n  • Creatures in the area can’t be targeted by d⁠ivination s⁠pells.\n • Nothing can Teleport into or out of the warded area.\n    • Planar Travel is blocked within the warded area.\n\nCasting this spell on the same spot every day for a year makes this Effect permanent.",
   "description": "You make an area within range magically secure. The area is a cube that can be as small as 5 feet to as large as 100 feet on each side. The spell lasts for the Duration or until you use an Action to dismiss it.\n\nWhen you cast the spell, you decide what sort of security the spell provides, choosing any or all of the following properties:\n  • Sound can’t pass through the barrier at The Edge of the warded area.\n    • The barrier of the warded area appears dark and foggy, preventing Vision (including darkvision) through it.\n • Sensors created by Divination s⁠pells can’t appear inside the protected area or pass through the barrier at its perimeter.\n  • Creatures in the area can’t be targeted by d⁠ivination s⁠pells.\n • Nothing can Teleport into or out of the warded area.\n    • Planar Travel is blocked within the warded area.\n\nCasting this spell on the same spot every day for a year makes this Effect permanent.",
-  "castingTime": "10 minutes",
-  "range": "120 feet",
-  "components": "V, S, M (A thin sheet of lead, a piece of opaque glass, a wad of cotton or cloth, and powdered chrysolite)",
-  "duration": "24 hours",
-  "damage": null,
   "school": "Abjuration",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "10 minutes",
+  "range": "120 feet",
+  "components": "V, S, M (A thin sheet of lead, a piece of opaque glass, a wad of cotton or cloth, and powdered chrysolite)",
+  "duration": "24 hours",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "A thin sheet of lead, a piece of opaque glass, a wad of cotton or cloth, and powdered chrysolite"
+    ]
+  },
   "higherLevels": "When you cast this spell using a spell slot of 5th Level or higher, you can increase the size of the cube by 100 feet for each slot level beyond 4th. Thus you could protect a cube that can be up to 200 feet on one side by using a spell slot of 5th Level.",
-  "source": "SRD 5.1"
+  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+  "iconStatus": "missing",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "wizard",
+    "level4"
+  ]
 }

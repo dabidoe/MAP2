@@ -1,0 +1,21 @@
+{
+  "id": "gloves-thievery",
+  "name": "Gloves of Thievery",
+  "category": "gear",
+  "rarity": "uncommon",
+  "slot": "hands",
+  "weight": 0.5,
+  "value": 5000,
+  "requiresAttunement": false,
+  "description": "These gloves are invisible while worn and grant +5 bonus to Sleight of Hand checks and Dexterity checks to pick locks",
+  "magic": {
+    "effects": [
+      {
+        "name": "Enhanced Dexterity",
+        "description": "+5 to Sleight of Hand and lockpicking checks"
+      }
+    ]
+  },
+  "icon": "🎒",
+  "iconStatus": "placeholder"
+}

@@ -4,21 +4,32 @@
   },
   "name": "Scorching Ray",
   "level": 2,
+  "flavorText": "You create three rays of fire and hurl them at targets within range. You can hurl them at one target or several.\n\nMake a ranged spell attack for each ray. On a hit, the target takes 2d6 fire damage.",
   "description": "You create three rays of fire and hurl them at targets within range. You can hurl them at one target or several.\n\nMake a ranged spell attack for each ray. On a hit, the target takes 2d6 fire damage.",
-  "castingTime": "1 action",
-  "range": "120 feet",
-  "components": "V, S",
-  "duration": "Instantaneous",
-  "damage": "2d6 fire",
   "school": "Evocation",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "sorcerer",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "120 feet",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": "When you cast this spell using a spell slot of 3rd level or higher, you create one additional ray for each slot level above 2nd.",
-  "source": "SRD 5.1"
+  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+  "iconStatus": "missing",
+  "video": null,
+  "damage": "2d6 fire",
+  "tags": [
+    "sorcerer",
+    "wizard",
+    "level2"
+  ]
 }

@@ -4,21 +4,48 @@
   },
   "name": "Chain Lightning",
   "level": 6,
+  "flavorText": "You create a bolt of lightning that arcs toward a target of your choice that you can see within range. Three bolts then leap from that target to as many as three other targets, each of which must be within 30 feet of the first target. A target can be a creature or an object and can be targeted by only one of the bolts.\n\nA target must make a Dexterity saving throw. The target takes 10d8 lightning damage on a failed save, or half as much damage on a successful one.",
   "description": "You create a bolt of lightning that arcs toward a target of your choice that you can see within range. Three bolts then leap from that target to as many as three other targets, each of which must be within 30 feet of the first target. A target can be a creature or an object and can be targeted by only one of the bolts.\n\nA target must make a Dexterity saving throw. The target takes 10d8 lightning damage on a failed save, or half as much damage on a successful one.",
-  "castingTime": "1 action",
-  "range": "150 feet",
-  "components": "V, S, M (a bit of fur; a piece of amber, glass or a crystal rod; and three silver pins)",
-  "duration": "Instantaneous",
-  "damage": "10d8 lightning",
   "school": "Evocation",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "sorcerer",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "150 feet",
+  "components": "V, S, M (a bit of fur; a piece of amber, glass or a crystal rod; and three silver pins)",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a bit of fur; a piece of amber, glass or a crystal rod; and three silver pins"
+    ]
+  },
   "higherLevels": "When you cast this spell using a spell slot of 7th level or higher, one additional bolt leaps from the first target to another target for each slot level above 6th.",
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/15e8f5fa-add0-4697-a53a-293d5f694c8e.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "10d8 lightning",
+  "tags": [
+    "sorcerer",
+    "wizard",
+    "level6"
+  ],
+  "iconLayers": [
+    [
+      "15e8f5fa-add0-4697-a53a-293d5f694c8e"
+    ],
+    [
+      "7bbc0646-1346-47cb-a024-5a8f911372d9"
+    ],
+    [
+      "4f4a3e63-6406-4dea-936d-83930452d55d"
+    ],
+    [
+      "9c4260b1-1f2b-44f0-9be1-59c809e86bc8"
+    ]
+  ]
 }

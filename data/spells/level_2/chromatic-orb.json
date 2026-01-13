@@ -3,13 +3,49 @@
     "$oid": "6954695b5648a6dce9f6f728"
   },
   "name": "Chromatic Orb",
-  "level": 2,
-  "description": "You conjure a needle-thin bolt of shifting light and launch it at a creature you can see. The dart flares into a chosen hue as it flies. Make a ranged spell attack; on a hit, the dart bursts with the selected energy type.",
-  "castingTime": "1 action",
-  "range": "120 ft",
-  "components": "V, S",
-  "duration": "Instantaneous",
-  "damage": "2d10 acid, cold, fire, lightning, radiant, or thunder (chosen when cast)",
+  "level": 1,
+  "flavorText": "You conjure a needle-thin bolt of shifting light and launch it at a creature you can see. The dart flares into a chosen hue as it flies. Make a ranged spell attack; on a hit, the dart bursts with the selected energy type.",
+  "description": "You hurl a 4-inch-diameter sphere of energy at a creature that you can see within range. You choose acid, cold, fire, lightning, poison, or thunder for the type of orb you create, and then make a ranged spell attack against the target. If the attack hits, the creature takes 3d8 of the type you chose.",
   "school": "Evocation",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/d6d95f57-83eb-40f6-b583-a373d444c133.png"
+  "classes": [
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
+  "castingTime": "1 action",
+  "range": "90 feet",
+  "components": "V, S, M (a diamond worth at least 50gp)",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a diamond worth at least 50gp"
+    ]
+  },
+  "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/d6d95f57-83eb-40f6-b583-a373d444c133.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "2d10 acid, cold, fire, lightning, radiant, or thunder (chosen when cast)",
+  "tags": [
+    "sorcerer",
+    "wizard",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "d6d95f57-83eb-40f6-b583-a373d444c133"
+    ],
+    [
+      "1a86ecf6-99f1-4dc5-984a-f76736a8adf0"
+    ],
+    [
+      "48ec898a-a493-4e0c-97bf-e7c9781d3e30"
+    ],
+    [
+      "ab9be8af-be1a-4c6f-bbd9-7b234df40b97"
+    ]
+  ]
 }

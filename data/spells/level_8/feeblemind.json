@@ -4,14 +4,9 @@
   },
   "name": "Feeblemind",
   "level": 8,
+  "flavorText": "You blast the mind of a creature that you can see within range, attempting to shatter its intellect and personality. The target takes 4d6 psychic damage and must amke an Intelligence saving throw.\n\nOn a failed save, the creature's Intelligence and Charisma scores become 1. The creature can't cast spells, activate magic items, understand language, or communicate in any intelligible way. The creature can, however, identify its friends, follow them, and even protect them.\n\nAt the end of every 30 days, the creature can repeat its saving throw against this spell. If it succeeds on its saving throw, the spell ends.\n\nThe spell can also be ended by _[greater restoration](../greater-restoration/ \"greater restoration (lvl 5)\")_, _[heal](../heal/ \"heal (lvl 6)\")_, or _[wish](../wish/ \"wish (lvl 9)\")_.",
   "description": "You blast the mind of a creature that you can see within range, attempting to shatter its intellect and personality. The target takes 4d6 psychic damage and must amke an Intelligence saving throw.\n\nOn a failed save, the creature's Intelligence and Charisma scores become 1. The creature can't cast spells, activate magic items, understand language, or communicate in any intelligible way. The creature can, however, identify its friends, follow them, and even protect them.\n\nAt the end of every 30 days, the creature can repeat its saving throw against this spell. If it succeeds on its saving throw, the spell ends.\n\nThe spell can also be ended by _[greater restoration](../greater-restoration/ \"greater restoration (lvl 5)\")_, _[heal](../heal/ \"heal (lvl 6)\")_, or _[wish](../wish/ \"wish (lvl 9)\")_.",
-  "castingTime": "1 action",
-  "range": "150 feet",
-  "components": "V, S, M (a handful fo clay, crystal, glass, or mineral spheres)",
-  "duration": "Instantaneous",
-  "damage": "4d6 psychic",
   "school": "Enchantment",
-  "isPublic": true,
   "classes": [
     "bard",
     "druid",
@@ -19,12 +14,42 @@
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "150 feet",
+  "components": "V, S, M (a handful fo clay, crystal, glass, or mineral spheres)",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a handful fo clay, crystal, glass, or mineral spheres"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/88ce1fc4-9cea-4385-971f-dc182f00d961.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "4d6 psychic",
+  "tags": [
+    "bard",
+    "druid",
+    "warlock",
+    "wizard",
+    "level8"
+  ],
   "iconLayers": [
-    {
-      "guid": "9a2144f3da26f1b867040367b7eff43e34e23cd9908ecc99b884df66172f7e57",
-      "json": "{}"
-    }
+    [
+      "88ce1fc4-9cea-4385-971f-dc182f00d961${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"90661142-6c9d-4b60-b0d5-1022c6a13418\"}"
+    ],
+    [
+      "5f460a4d-1f78-4ea2-8955-f723160dfcf1${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"5af5186a-644e-49bd-966e-018bfe340c4a\"}"
+    ],
+    [
+      "e9a32933-61dd-4a60-b53b-19ef5eeaf964${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d9d6f496-a641-47a8-8d07-3cbc4b0dcae3\"}"
+    ],
+    [
+      "cd17bf1f-4d57-40d7-9f46-815dfaa57d4e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4396b0bd-511f-44cc-9d3c-987883563948\"}"
+    ]
   ]
 }

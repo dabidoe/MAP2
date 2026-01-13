@@ -1,0 +1,21 @@
+{
+  "id": "handaxe",
+  "name": "Handaxe",
+  "category": "weapon",
+  "rarity": "common",
+  "slot": "mainHand",
+  "weight": 2,
+  "value": 5,
+  "description": "A light throwable axe, useful in melee or at range",
+  "weapon": {
+    "damage": "1d6",
+    "damageType": "slashing",
+    "properties": [
+      "light",
+      "thrown"
+    ],
+    "range": "20/60 ft"
+  },
+  "icon": "⚔️",
+  "iconStatus": "placeholder"
+}

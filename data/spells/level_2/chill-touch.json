@@ -3,13 +3,49 @@
     "$oid": "6954695e5648a6dce9f6f72c"
   },
   "name": "Chill Touch",
-  "level": 2,
-  "description": "A shadow-wreathed hand erupts from the ground beneath a creature you can see, clutching at its spirit. The target must make a Charisma saving throw or have its speed halved and suffer spectral harm as the grasp drags at its essence.",
-  "castingTime": "1 action",
-  "range": "60 feet",
-  "components": "V, S",
-  "duration": "1 minute",
-  "damage": "3d6 Necrotic",
+  "level": 0,
+  "flavorText": "A shadow-wreathed hand erupts from the ground beneath a creature you can see, clutching at its spirit. The target must make a Charisma saving throw or have its speed halved and suffer spectral harm as the grasp drags at its essence.",
+  "description": "You create a ghostly, skeletal hand in the space of a creature within range. Make a ranged spell attack against the creature to assail it with the chill of the grave. On a hit, the target takes 1d8 necrotic damage, and it can't regain hit points until the start of your next turn. Until then, the hand clings to the target.\n\nIf you hit an undead target, it also has disadvantage on attack rolls against you until the end of your next turn.\n\nThis spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
   "school": "Necromancy",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/cab61c88-2465-4ea5-b5db-92af3a9dd5b6.png"
+  "classes": [
+    "sorcerer",
+    "warlock",
+    "wizard"
+  ],
+  "ritual": false,
+  "castingTime": "1 action",
+  "range": "120 feet",
+  "components": "V, S",
+  "duration": "1 round",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/cab61c88-2465-4ea5-b5db-92af3a9dd5b6.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "3d6 Necrotic",
+  "tags": [
+    "sorcerer",
+    "warlock",
+    "wizard",
+    "cantrip"
+  ],
+  "iconLayers": [
+    [
+      "cab61c88-2465-4ea5-b5db-92af3a9dd5b6${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"10080fe5-5ab9-405b-b6f8-56395afc3ef8\"}"
+    ],
+    [
+      "0fd2ec12-8475-4ea3-ade4-16ee7f3276ff${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d2b218ff-1494-48b8-ab19-e2696252f5d1\"}"
+    ],
+    [
+      "3001b819-5730-4051-8df0-38a71c39d7b4${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4362e94e-00b6-426b-a7de-35ca70f9dac3\"}"
+    ],
+    [
+      "9544ead8-8cf8-4ef6-b598-091f43273ab5${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"3af4c407-783b-42bf-99e1-5a0a6e7f17c1\"}"
+    ]
+  ]
 }

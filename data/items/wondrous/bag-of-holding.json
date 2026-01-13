@@ -1,0 +1,21 @@
+{
+  "id": "bag-of-holding",
+  "name": "Bag of Holding",
+  "category": "wondrous",
+  "rarity": "uncommon",
+  "weight": 15,
+  "value": 4000,
+  "quantity": 1,
+  "requiresAttunement": false,
+  "description": "Magical bag that can hold 500 lbs in a 64 cubic foot space",
+  "magic": {
+    "effects": [
+      {
+        "name": "Extradimensional Storage",
+        "description": "Holds up to 500 lbs, not exceeding 64 cubic feet"
+      }
+    ]
+  },
+  "icon": "✨",
+  "iconStatus": "placeholder"
+}

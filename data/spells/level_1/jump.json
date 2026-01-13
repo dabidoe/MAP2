@@ -4,12 +4,52 @@
   },
   "name": "Jump",
   "level": 1,
-  "description": "You imbue a willing creature with a burst of buoyant magic, letting it bound through the air in weightless arcs. Until the spell ends, the target gains a powerful aerial leap, allowing brief, controlled midair adjustments.",
+  "flavorText": "You imbue a willing creature with a burst of buoyant magic, letting it bound through the air in weightless arcs. Until the spell ends, the target gains a powerful aerial leap, allowing brief, controlled midair adjustments.",
+  "description": "You touch a creature. The creature's jump distance is tripled until the spell ends.",
+  "school": "Transmutation",
+  "classes": [
+    "druid",
+    "ranger",
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
   "range": "Touch",
-  "components": "V, S",
+  "components": "V, S, M (a grasshopper's hind leg)",
   "duration": "1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a grasshopper's hind leg"
+    ]
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/126124cf-14ef-4885-910d-fa7828225f35.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "None",
-  "school": "Transmutation",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/126124cf-14ef-4885-910d-fa7828225f35.png"
+  "tags": [
+    "druid",
+    "ranger",
+    "sorcerer",
+    "wizard",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "126124cf-14ef-4885-910d-fa7828225f35${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c2445ec1-3600-43d8-bd49-0d469547785c\"}"
+    ],
+    [
+      "6ed35b7d-f194-4a32-b74a-f56d93ad2e25${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e187cfef-55a8-471a-af55-bb3046a89534\"}"
+    ],
+    [
+      "946fb6f4-b283-43e8-814c-0e5bba85ad17${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"277d5d7b-6145-4e19-8dcc-13604c8d96b8\"}"
+    ],
+    [
+      "2264edf4-db98-437d-9579-f14e6545836a${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"38071b74-510e-4660-a543-cba523d89a2f\"}"
+    ]
+  ]
 }

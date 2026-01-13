@@ -4,21 +4,48 @@
   },
   "name": "Conjure Elemental",
   "level": 5,
+  "flavorText": "You call forth an elemental servant. Choose an area of air, earth, fire, or water that fills a 10-foot cube within range. An elemental of challenge rating 5 or lower appropriate to the area you chose appears in an unoccupied space within 10 feet of it. For example, a fire elemental emerges from a bonfire, and an earth elemental rises up from the ground. The elemental disappears when it drops to 0 hit points or when the spell ends.\n\nThe elemental is friendly to you and your companions for the duration. Roll initiative for the elemental, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you). If you don't issue any commands to the elemental, it defends itself from hostile creatures but otherwise takes no actions.\n\nIf your concentration is broken, the elemental doesn't disappear. Instead, you lose control of the elemental, it becomes hostile toward you and your companions, and it might attack. An uncontrolled elemental can't be dismissed by you, and it disappears 1 hour after you summoned it.\n\nThe DM has the elemental's statistics.",
   "description": "You call forth an elemental servant. Choose an area of air, earth, fire, or water that fills a 10-foot cube within range. An elemental of challenge rating 5 or lower appropriate to the area you chose appears in an unoccupied space within 10 feet of it. For example, a fire elemental emerges from a bonfire, and an earth elemental rises up from the ground. The elemental disappears when it drops to 0 hit points or when the spell ends.\n\nThe elemental is friendly to you and your companions for the duration. Roll initiative for the elemental, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you). If you don't issue any commands to the elemental, it defends itself from hostile creatures but otherwise takes no actions.\n\nIf your concentration is broken, the elemental doesn't disappear. Instead, you lose control of the elemental, it becomes hostile toward you and your companions, and it might attack. An uncontrolled elemental can't be dismissed by you, and it disappears 1 hour after you summoned it.\n\nThe DM has the elemental's statistics.",
-  "castingTime": "1 minute",
-  "range": "90 feet",
-  "components": "V, S, M (burning incense for air, soft clay for earth, sulfur and phosphorus for fire, or water and sand for water)",
-  "duration": "Concentration, up to 1 hour",
-  "damage": null,
   "school": "Conjuration",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "druid",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 minute",
+  "range": "90 feet",
+  "components": "V, S, M (burning incense for air, soft clay for earth, sulfur and phosphorus for fire, or water and sand for water)",
+  "duration": "Concentration, up to 1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "burning incense for air, soft clay for earth, sulfur and phosphorus for fire, or water and sand for water"
+    ]
+  },
   "higherLevels": "When you cast this spell using a spell slot of 6th level or higher, the challenge rating increases by 1 for each slot level above 5th.",
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/b6088839-99a6-492a-90d8-0f9a78520744.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "druid",
+    "wizard",
+    "level5"
+  ],
+  "iconLayers": [
+    [
+      "b6088839-99a6-492a-90d8-0f9a78520744"
+    ],
+    [
+      "b8eecdba-3e97-4160-8512-93f631fbb6d9"
+    ],
+    [
+      "dc43917d-2b99-4c77-a9f7-fa6c6be6c58c"
+    ],
+    [
+      "d36236a1-3834-4d57-8a64-c8a2e2430a0b"
+    ]
+  ]
 }

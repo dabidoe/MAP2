@@ -4,12 +4,50 @@
   },
   "name": "Message",
   "level": 0,
-  "description": "You send a thin strand of psychic sound toward one creature you can see. The target alone hears your brief message in its mind and may respond in a faint thought only you can perceive. The thread can bend around corners but cannot pass through magical silence or antimagic effects.",
+  "flavorText": "You send a thin strand of psychic sound toward one creature you can see. The target alone hears your brief message in its mind and may respond in a faint thought only you can perceive. The thread can bend around corners but cannot pass through magical silence or antimagic effects.",
+  "description": "You point your finger toward a creature within range and whisper a message. The target (and only the target) hears the message and can reply in a whisper that only you can hear.\n\nYou can cast this spell through solid objects if you are familiar with the target and know it is beyond the barrier. Magical silence, 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood blocks the spell. The spell doesn't have to follow a straight line and can travel freely around corners or through openings.",
+  "school": "Transmutation",
+  "classes": [
+    "bard",
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
-  "range": "90 feet",
-  "components": "V, S",
-  "duration": "Instantaneous",
+  "range": "120 feet",
+  "components": "V, S, M (a short piece of copper wire)",
+  "duration": "1 round",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a short piece of copper wire"
+    ]
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/889d6b0b-11c8-4972-99a7-65f9dcb55956.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "None",
-  "school": "Divination",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/889d6b0b-11c8-4972-99a7-65f9dcb55956.png"
+  "tags": [
+    "bard",
+    "sorcerer",
+    "wizard",
+    "cantrip"
+  ],
+  "iconLayers": [
+    [
+      "889d6b0b-11c8-4972-99a7-65f9dcb55956${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"22adf9f6-250e-4be2-b74e-a861eb72a159\"}"
+    ],
+    [
+      "e6932f14-30ef-4174-b022-ed42bcdc61c4${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ea7be704-7ee2-429b-a7ea-6a419a832225\"}"
+    ],
+    [
+      "0c6c5cd6-924e-4ff3-bdc1-a53debd31aa3"
+    ],
+    [
+      "e6b39534-16a9-4d9e-9f09-ac4e7ba0e512"
+    ]
+  ]
 }

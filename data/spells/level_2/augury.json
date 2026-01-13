@@ -4,36 +4,46 @@
   },
   "name": "Augury",
   "level": 2,
+  "flavorText": "By casting gem-inlaid sticks, rolling dragon bones, laying out ornate cards, or employing some other divining tool, you receive an omen from an otherworldly entity about the results of a specific course of action that you plan to take within the next 30 minutes. The DM chooses from the following possible omens:\n\n* *Weal*, for good results\n\n* *Woe*, for bad results\n\n* *Weal and woe*, for both good and bad results\n\n* *Nothing*, for results that aren’t especially good or bad\n\nThe spell doesn’t take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion.\n\nIf you cast the spell two or more times before completing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The DM makes this roll in secret.",
   "description": "By casting gem-inlaid sticks, rolling dragon bones, laying out ornate cards, or employing some other divining tool, you receive an omen from an otherworldly entity about the results of a specific course of action that you plan to take within the next 30 minutes. The DM chooses from the following possible omens:\n\n* *Weal*, for good results\n\n* *Woe*, for bad results\n\n* *Weal and woe*, for both good and bad results\n\n* *Nothing*, for results that aren’t especially good or bad\n\nThe spell doesn’t take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion.\n\nIf you cast the spell two or more times before completing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The DM makes this roll in secret.",
-  "castingTime": "1 minute",
-  "range": "Self",
-  "components": "V, S, M (specially marked sticks, bones, or similar tokens worth at least 25 gp)",
-  "duration": "Instantaneous",
-  "damage": null,
   "school": "Divination",
-  "isPublic": true,
   "classes": [
     "cleric"
   ],
   "ritual": true,
+  "castingTime": "1 minute",
+  "range": "Self",
+  "components": "V, S, M (specially marked sticks, bones, or similar tokens worth at least 25 gp)",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "specially marked sticks, bones, or similar tokens worth at least 25 gp"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/de123680-b8f8-401a-8040-6a7df057cac7.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "cleric",
+    "level2"
+  ],
   "iconLayers": [
-    {
-      "guid": "de123680-b8f8-401a-8040-6a7df057cac7",
-      "json": "{}"
-    },
-    {
-      "guid": "357cc697-ed07-4866-88de-30d2f5324b4a",
-      "json": "{}"
-    },
-    {
-      "guid": "18406ded-022c-4b26-846f-de9955eb23f5",
-      "json": "{}"
-    },
-    {
-      "guid": "fccc0ba2-c046-49fc-9499-771f771dd3ca",
-      "json": "{}"
-    }
+    [
+      "de123680-b8f8-401a-8040-6a7df057cac7"
+    ],
+    [
+      "357cc697-ed07-4866-88de-30d2f5324b4a"
+    ],
+    [
+      "18406ded-022c-4b26-846f-de9955eb23f5"
+    ],
+    [
+      "fccc0ba2-c046-49fc-9499-771f771dd3ca"
+    ]
   ]
 }

@@ -4,12 +4,46 @@
   },
   "name": "Faerie Fire",
   "level": 1,
-  "description": "You spark a curtain of shimmering motes that cling to creatures in a small radius. Marked targets shine with shifting prismatic edges, making them easier to strike and revealing any attempt to hide or turn invisible.",
+  "flavorText": "You spark a curtain of shimmering motes that cling to creatures in a small radius. Marked targets shine with shifting prismatic edges, making them easier to strike and revealing any attempt to hide or turn invisible.",
+  "description": "Each object in a 20-foot cube within range is outlined in blue, green, or violet light (your choice). Any creature in the area when the spell is cast is also outlined in light if it fails a Dexterity saving throw. For the duration, objects and affected creatures shed dim light in a 10-foot radius.\n\nAny attack roll against an affected creature or object has advantage if the attacker can see it, and the affected creature or object can't benefit from being invisible.",
+  "school": "Evocation",
+  "classes": [
+    "bard",
+    "druid"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
   "range": "60 feet",
-  "components": "V, S",
+  "components": "V",
   "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": false,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/00878c63-53bd-4ea1-8a14-e496e6cfaf9d.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "No direct damage; attacks against affected creatures have advantage",
-  "school": "Illusion",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/00878c63-53bd-4ea1-8a14-e496e6cfaf9d.png"
+  "tags": [
+    "bard",
+    "druid",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "00878c63-53bd-4ea1-8a14-e496e6cfaf9d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"bb454c03-67c3-4467-8094-362458383a29\"}"
+    ],
+    [
+      "32bbcf77-f51e-4bf9-8b9e-cd2472c9f1ff${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ed03f1d2-9858-4f5a-873e-f6bd9dd2d55d\"}"
+    ],
+    [
+      "9eb50480-fd52-419b-b983-1f909bc2706f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e752a85f-5071-4f86-89c5-6c178099467e\"}"
+    ],
+    [
+      "0030b719-3335-4ea1-85a5-f47a443e8c77"
+    ]
+  ]
 }

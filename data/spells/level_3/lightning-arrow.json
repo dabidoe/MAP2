@@ -4,37 +4,44 @@
   },
   "name": "Lightning Arrow",
   "level": 3,
+  "flavorText": "The next time you make a ranged w eapon attack during the spell’s duration, the weapon’s ammunition, or the weapon itself if it’s a thrown weapon, transforms into a bolt of lightning. Make the attack roll as normal. The target takes 4d8 lightning damage on a hit, or half as much damage on a miss, instead of the weapon’s normal damage.\n\nWhether you hit or miss, each creature within 10 feet of the target must make a Dexterity saving throw. Each of these creatures takes 2d8 lightning damage on a failed save, or half as much damage on a successful one.\n\nThe piece of ammunition or weapon then returns to its normal form.",
   "description": "The next time you make a ranged w eapon attack during the spell’s duration, the weapon’s ammunition, or the weapon itself if it’s a thrown weapon, transforms into a bolt of lightning. Make the attack roll as normal. The target takes 4d8 lightning damage on a hit, or half as much damage on a miss, instead of the weapon’s normal damage.\n\nWhether you hit or miss, each creature within 10 feet of the target must make a Dexterity saving throw. Each of these creatures takes 2d8 lightning damage on a failed save, or half as much damage on a successful one.\n\nThe piece of ammunition or weapon then returns to its normal form.",
-  "castingTime": "1 bonus action",
-  "range": "Self",
-  "components": "V, S",
-  "duration": "Concentration, up to 1 minute",
-  "damage": "4d8 lightning",
   "school": "Transmutation",
-  "isPublic": true,
   "classes": [
     "ranger"
   ],
   "ritual": false,
+  "castingTime": "1 bonus action",
+  "range": "Self",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": "When you cast this spell using a spell slot of 4th level or higher, the damage for both effects of the spell increases by 1d8 for each slot level above 3rd.",
-  "source": "SRD 5.1",
-  "iconLayers": [
-    {
-      "guid": "63ccb05f-1d06-40ee-99c0-7a05538307bd${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"34d3b686-1fcc-41a1-bbc3-fc9dbf74606c\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "10b43ff0-45a6-43e8-bafc-61a4acdd2284",
-      "json": "{}"
-    },
-    {
-      "guid": "443b25d7-fe92-403e-adb1-1700c9ce11dd",
-      "json": "{}"
-    },
-    {
-      "guid": "9b07091b-8543-49db-824f-771949b102fe",
-      "json": "{}"
-    }
+  "icon": "https://statsheet-cdn.b-cdn.net/images/63ccb05f-1d06-40ee-99c0-7a05538307bd.png",
+  "iconStatus": "ready",
+  "video": "/SPELL_VIDEOS/Lightning_Arrow_You_channel_the_power_of_the_storm_into_your__3ff134c0-32e4-47ad-9219-06f7a2e1979f_0.mp4",
+  "damage": "4d8 lightning",
+  "tags": [
+    "ranger",
+    "level3"
   ],
-  "video": "/SPELL_VIDEOS/Lightning_Arrow_You_channel_the_power_of_the_storm_into_your__3ff134c0-32e4-47ad-9219-06f7a2e1979f_0.mp4"
+  "iconLayers": [
+    [
+      "63ccb05f-1d06-40ee-99c0-7a05538307bd${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"34d3b686-1fcc-41a1-bbc3-fc9dbf74606c\"}"
+    ],
+    [
+      "10b43ff0-45a6-43e8-bafc-61a4acdd2284"
+    ],
+    [
+      "443b25d7-fe92-403e-adb1-1700c9ce11dd"
+    ],
+    [
+      "9b07091b-8543-49db-824f-771949b102fe"
+    ]
+  ]
 }

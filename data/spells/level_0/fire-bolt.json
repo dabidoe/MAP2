@@ -4,12 +4,46 @@
   },
   "name": "Fire Bolt",
   "level": 0,
-  "description": "You flick a spark of crackling embers toward a creature within sight. On a hit, the ember bursts into a sharp flare, scorching the target. Unattended flammable objects may smolder or ignite.",
+  "flavorText": "You flick a spark of crackling embers toward a creature within sight. On a hit, the ember bursts into a sharp flare, scorching the target. Unattended flammable objects may smolder or ignite.",
+  "description": "You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn't being worn or carried. This spell’s damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).",
+  "school": "Evocation",
+  "classes": [
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
-  "range": "90 ft",
+  "range": "120 feet",
   "components": "V, S",
   "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/0f820f83-5682-4524-b29c-13c08f60fe92.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "1d8 fire",
-  "school": "Evocation",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/0f820f83-5682-4524-b29c-13c08f60fe92.png"
+  "tags": [
+    "sorcerer",
+    "wizard",
+    "cantrip"
+  ],
+  "iconLayers": [
+    [
+      "0f820f83-5682-4524-b29c-13c08f60fe92${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"223d2cf3-1ba1-4859-a636-b110e92964d4\"}"
+    ],
+    [
+      "0d39c20e-c380-44bc-a45e-837492b5c055${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"72dd08ce-385f-4580-a1a2-a30c70a1f1b2\"}"
+    ],
+    [
+      "166eabb3-a107-4fbb-ad1e-97a90d95bd6f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"6c9b7d25-22d7-4274-908a-f5ef4c4000cb\"}"
+    ],
+    [
+      "8e5d03e8-7720-473a-b516-aa63ca84d004${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"0e39efaa-9e17-49ec-8eb8-bb49ece94efe\"}"
+    ]
+  ]
 }

@@ -4,12 +4,44 @@
   },
   "name": "Thaumaturgy",
   "level": 0,
-  "description": "You invoke a flicker of respect from the spirits, producing one minor omen within range. You may cause a small object to gently levitate for a moment, etch a glowing rune that fades after a minute, or release a brief scent tied to a past memory. None of these effects cause harm, but each is unmistakably supernatural.",
+  "flavorText": "You invoke a flicker of respect from the spirits, producing one minor omen within range. You may cause a small object to gently levitate for a moment, etch a glowing rune that fades after a minute, or release a brief scent tied to a past memory. None of these effects cause harm, but each is unmistakably supernatural.",
+  "description": "You manifest a minor wonder, a sign of supernatural power, within range.  You create one of the following magial effects within range:\n\n* Your voice booms up to three times as loud as normal for 1 minute.\n\n* You cause flames to flicker, brighten, dim, or change color for 1 minute.\n\n* You cause harmless tremors in the ground for 1 minute.\n\n* You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers.\n\n* You instantaneously cause an unlocked door or window to fly open or slam shut.\n\n* You alter the appearance of your eyes for 1 minute.\n\nIf you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time, and you can dismiss such an effect as an action.",
+  "school": "Transmutation",
+  "classes": [
+    "cleric"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
-  "range": "20 ft.",
-  "components": "V, S",
-  "duration": "1 minute",
+  "range": "30 feet",
+  "components": "V",
+  "duration": "Up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": false,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/cf59adf3-e5ab-4b01-84f0-46b4b5aa0d6c.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "None",
-  "school": "Illusion",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/cf59adf3-e5ab-4b01-84f0-46b4b5aa0d6c.png"
+  "tags": [
+    "cleric",
+    "cantrip"
+  ],
+  "iconLayers": [
+    [
+      "cf59adf3-e5ab-4b01-84f0-46b4b5aa0d6c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4b5983e6-0fb6-4350-b8bb-61ed01fd0734\"}"
+    ],
+    [
+      "70b47034-29ea-4f67-a74f-d833279606cf${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"3552e9c5-4c75-4e5a-9f5d-f20222b0e58d\"}"
+    ],
+    [
+      "de1e0d40-4bdf-4f65-b493-e94f9c754f39${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"0def065b-880c-46cc-a581-464548e0de41\"}"
+    ],
+    [
+      "add93c54-a343-4331-af32-33514996bb58${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"b923dc12-afda-4302-a2e6-94a2e6e2c712\"}"
+    ]
+  ]
 }

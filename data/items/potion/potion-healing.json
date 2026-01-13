@@ -1,0 +1,16 @@
+{
+  "id": "potion-healing",
+  "name": "Potion of Healing",
+  "category": "potion",
+  "rarity": "common",
+  "weight": 0.5,
+  "value": 50,
+  "quantity": 1,
+  "description": "A magical elixir that restores health",
+  "consumable": {
+    "effect": "Heal 2d4+2",
+    "duration": "Instant"
+  },
+  "icon": "🧪",
+  "iconStatus": "placeholder"
+}

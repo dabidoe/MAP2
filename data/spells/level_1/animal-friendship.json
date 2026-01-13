@@ -4,12 +4,50 @@
   },
   "name": "Animal Friendship",
   "level": 1,
-  "description": "You murmur a charm carried on a breeze only beasts can sense. Choose one non-hostile beast that can see and hear you. The creature must succeed on a Wisdom saving throw or become charmed for the duration. While charmed, it treats you as a trusted companion and will carry out simple commands within its natural ability, such as scouting ahead, carrying small items, or alerting you to danger.",
+  "flavorText": "You murmur a charm carried on a breeze only beasts can sense. Choose one non-hostile beast that can see and hear you. The creature must succeed on a Wisdom saving throw or become charmed for the duration. While charmed, it treats you as a trusted companion and will carry out simple commands within its natural ability, such as scouting ahead, carrying small items, or alerting you to danger.",
+  "description": "This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range. It must see and hear you. If the beast's Intelligence is 4 or higher, the spell fails. Otherwise, the beast must succeed on a Wisdom saving throw or be charmed by you for the spell's duration. If you or one of your companions harms the target, the spell ends.",
+  "school": "Enchantment",
+  "classes": [
+    "bard",
+    "druid",
+    "ranger"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
   "range": "30 feet",
-  "components": "V, S, M (a tuft of fur or feather)",
-  "duration": "8 hours",
+  "components": "V, S, M (a morsel of food)",
+  "duration": "24 hours",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a morsel of food"
+    ]
+  },
+  "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast for each slot level above 1st.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/3dae8ac9-ef18-4926-880a-b689efa002c2.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "None",
-  "school": "Enchantment",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/3dae8ac9-ef18-4926-880a-b689efa002c2.png"
+  "tags": [
+    "bard",
+    "druid",
+    "ranger",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "3dae8ac9-ef18-4926-880a-b689efa002c2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"94d21fd9-d247-4244-abfb-c17d4e0cbbef\"}"
+    ],
+    [
+      "f62162da-2432-41cd-93a7-ae53d1822e13${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"90f79c48-7be9-470d-8d0c-7793ea676b01\"}"
+    ],
+    [
+      "bf3abd1a-111d-4318-9b78-32e4ace8d2fb${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"2db433f0-3887-4743-a076-9ee28ec4c0e2\"}"
+    ],
+    [
+      "20bb932d-042f-4e1d-bc72-d3344cae0f4d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4f75c58a-3b72-47d3-a015-ad43f1d09df7\"}"
+    ]
+  ]
 }

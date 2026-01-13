@@ -4,12 +4,52 @@
   },
   "name": "Detect Poison and Disease",
   "level": 1,
-  "description": "You attune your senses to toxic energies, detecting any poison, venomous creature, or disease within 60 feet. You learn each source’s location and a faint impression of its severity. Thin barriers do not impede this sense, but dense stone or metal blocks it.",
-  "castingTime": "1 action",
-  "range": "Self (60-foot radius)",
-  "components": "V, S",
-  "duration": "Concentration, up to 10 minutes",
-  "damage": "None",
+  "flavorText": "You attune your senses to toxic energies, detecting any poison, venomous creature, or disease within 60 feet. You learn each source’s location and a faint impression of its severity. Thin barriers do not impede this sense, but dense stone or metal blocks it.",
+  "description": "For the duration, you can sense the presence and location of poisons, poisonous creatures, and diseases within 30 feet of you. You also identify the kind of poison, poisonous creature, or disease in each case.\n\nThe spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.",
   "school": "Divination",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/fab72801-e7bb-48a1-b4f8-acb8cd5507c3.png"
+  "classes": [
+    "cleric",
+    "druid",
+    "paladin",
+    "ranger"
+  ],
+  "ritual": true,
+  "castingTime": "1 action",
+  "range": "Self",
+  "components": "V, S, M (a yew leaf)",
+  "duration": "Concentration, up to 10 minutes",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a yew leaf"
+    ]
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/fab72801-e7bb-48a1-b4f8-acb8cd5507c3.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "None",
+  "tags": [
+    "cleric",
+    "druid",
+    "paladin",
+    "ranger",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "fab72801-e7bb-48a1-b4f8-acb8cd5507c3${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"dc4b63f4-4428-4147-8839-10c05d8e6d23\"}"
+    ],
+    [
+      "194fd1c2-6f8e-4d42-8f09-253e7e967c86${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"07c2c1b9-c695-47d2-be37-b41b9a03b974\"}"
+    ],
+    [
+      "dba42547-711e-44e7-a8f5-f52663654e09${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c9ffc030-bd25-44b3-b998-17f6d7c4d032\"}"
+    ],
+    [
+      "9fc1b9ce-6368-4847-b608-9703effa6950${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ca19815e-87cc-4ed5-8ab1-c7a90807821e\"}"
+    ]
+  ]
 }

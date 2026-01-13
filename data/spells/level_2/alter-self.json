@@ -4,37 +4,46 @@
   },
   "name": "Alter Self",
   "level": 2,
+  "flavorText": "You assume a different form. When you cast the spell, choose one of the following options, the effects of which last for the duration of the spell. While the spell lasts, you can end one option as an action to gain the benefits of a different one.\n\n* Aquatic Adaptation: You adapt your body to an aquatic Environment, sprouting gills, and growing webbing between your fingers. You can breathe Underwater and gain a Swimming speed equal to your walking speed.\n\n* Change Appearance: You transform your Appearance. You decide what you look like, including your height, weight, facial features, sound of your voice, hair length, coloration, and distinguishing Characteristics, if any. You can make yourself appear as a member of another race, though none of your Statistics change. You also don't appear as a creature of a different size than you, and your basic shape stays the same, if you're bipedal, you can't use this spell to become quadrupedal, for instance. At any time for the Duration of the spell, you can use your action to change your Appearance in this way again.\n\n* Natural Weapons: You grow claws, fangs, spines, horns, or a different natural weapon of your choice. Your unarmed strikes deal 1d6 bludgeoning, piercing, or slashing damage, as appropriate to the natural weapon you chose, and you are proficient with your unarmed strikes. Finally, the natural weapon is magic and you have a +1 bonus to the Attack and Damage Rolls you make using it.",
   "description": "You assume a different form. When you cast the spell, choose one of the following options, the effects of which last for the duration of the spell. While the spell lasts, you can end one option as an action to gain the benefits of a different one.\n\n* Aquatic Adaptation: You adapt your body to an aquatic Environment, sprouting gills, and growing webbing between your fingers. You can breathe Underwater and gain a Swimming speed equal to your walking speed.\n\n* Change Appearance: You transform your Appearance. You decide what you look like, including your height, weight, facial features, sound of your voice, hair length, coloration, and distinguishing Characteristics, if any. You can make yourself appear as a member of another race, though none of your Statistics change. You also don't appear as a creature of a different size than you, and your basic shape stays the same, if you're bipedal, you can't use this spell to become quadrupedal, for instance. At any time for the Duration of the spell, you can use your action to change your Appearance in this way again.\n\n* Natural Weapons: You grow claws, fangs, spines, horns, or a different natural weapon of your choice. Your unarmed strikes deal 1d6 bludgeoning, piercing, or slashing damage, as appropriate to the natural weapon you chose, and you are proficient with your unarmed strikes. Finally, the natural weapon is magic and you have a +1 bonus to the Attack and Damage Rolls you make using it.",
-  "castingTime": "1 action",
-  "range": "Self",
-  "components": "V, S",
-  "duration": "Concentration, up to 1 hour",
-  "damage": null,
   "school": "Transmutation",
-  "isPublic": true,
   "classes": [
     "sorcerer",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Self",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/f12d2b6f-6e5d-4ecc-983d-54265e5f8a53.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "sorcerer",
+    "wizard",
+    "level2"
+  ],
   "iconLayers": [
-    {
-      "guid": "f12d2b6f-6e5d-4ecc-983d-54265e5f8a53${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"b50dc84f-4bfe-43a4-bdbf-1220e5d03f49\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "a9884f62-02ec-40df-a886-731c9eae40e6${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"18710096-fb01-4047-845e-087916add894\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "54e3574d-9ecb-4056-a6e1-bc47848c2f7a${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"54877d97-127c-4f3b-b5c3-ba065d600354\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "a88e27ba-51ed-44a4-bf44-42907d34149b",
-      "json": "{}"
-    }
+    [
+      "f12d2b6f-6e5d-4ecc-983d-54265e5f8a53${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"b50dc84f-4bfe-43a4-bdbf-1220e5d03f49\"}"
+    ],
+    [
+      "a9884f62-02ec-40df-a886-731c9eae40e6${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"18710096-fb01-4047-845e-087916add894\"}"
+    ],
+    [
+      "54e3574d-9ecb-4056-a6e1-bc47848c2f7a${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"54877d97-127c-4f3b-b5c3-ba065d600354\"}"
+    ],
+    [
+      "a88e27ba-51ed-44a4-bf44-42907d34149b"
+    ]
   ]
 }

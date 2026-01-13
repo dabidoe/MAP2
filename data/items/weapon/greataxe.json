@@ -1,0 +1,21 @@
+{
+  "id": "greataxe",
+  "name": "Greataxe",
+  "category": "weapon",
+  "rarity": "common",
+  "slot": "mainHand",
+  "weight": 7,
+  "value": 30,
+  "description": "A massive two-handed axe favored by barbarians",
+  "weapon": {
+    "damage": "1d12",
+    "damageType": "slashing",
+    "properties": [
+      "two-handed",
+      "heavy"
+    ],
+    "range": "5 ft"
+  },
+  "icon": "⚔️",
+  "iconStatus": "placeholder"
+}

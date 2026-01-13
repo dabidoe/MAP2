@@ -1,0 +1,21 @@
+{
+  "id": "gauntlets-ogre-power",
+  "name": "Gauntlets of Ogre Power",
+  "category": "wondrous",
+  "rarity": "uncommon",
+  "weight": 2,
+  "value": 5000,
+  "quantity": 1,
+  "requiresAttunement": true,
+  "description": "Your Strength becomes 19 while wearing these gauntlets",
+  "magic": {
+    "effects": [
+      {
+        "name": "Enhanced Strength",
+        "description": "Strength becomes 19"
+      }
+    ]
+  },
+  "icon": "✨",
+  "iconStatus": "placeholder"
+}

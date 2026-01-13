@@ -4,16 +4,9 @@
   },
   "name": "Power Word Kill",
   "level": 9,
+  "flavorText": "You utter a word of power that can compel one creature you can see within range to die instantly.  If the creature you choose has 100 hit points or fewer, it dies. Otherwise, the spell has no effect.",
   "description": "You utter a word of power that can compel one creature you can see within range to die instantly.  If the creature you choose has 100 hit points or fewer, it dies. Otherwise, the spell has no effect.",
-  "castingTime": "1 action",
-  "range": "60 feet",
-  "components": "V",
-  "duration": "Instantaneous",
-  "damage": null,
   "school": "Enchantment",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "bard",
     "sorcerer",
@@ -21,6 +14,40 @@
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "60 feet",
+  "components": "V",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": false,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/9efef3b2-e759-4307-b65f-963d3e15a034.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "bard",
+    "sorcerer",
+    "warlock",
+    "wizard",
+    "level9"
+  ],
+  "iconLayers": [
+    [
+      "9efef3b2-e759-4307-b65f-963d3e15a034${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"13b2cef4-c839-4305-9ca9-21d543566352\"}"
+    ],
+    [
+      "a3750b5e-1903-4e77-bd9f-f46ecae63803${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"cc1bee16-9ab2-40a8-9e3c-c099aa95e46b\"}"
+    ],
+    [
+      "89c867e6-ea6e-4e71-9256-4c1e23062bc2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"5e8f2fa6-24e3-4f1f-9983-fd88b84553c7\"}"
+    ],
+    [
+      "1719e3a4-829a-418d-91a5-ace202a5fef8${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c4a42f9e-d077-4a80-aadb-4ede9eaf246c\"}"
+    ]
+  ]
 }

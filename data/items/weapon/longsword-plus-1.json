@@ -1,0 +1,26 @@
+{
+  "id": "longsword-plus-1",
+  "name": "Longsword +1",
+  "category": "weapon",
+  "rarity": "uncommon",
+  "slot": "mainHand",
+  "weight": 3,
+  "value": 500,
+  "requiresAttunement": false,
+  "description": "A magically enhanced longsword",
+  "weapon": {
+    "damage": "1d8",
+    "damageType": "slashing",
+    "properties": [
+      "versatile"
+    ],
+    "versatileDamage": "1d10",
+    "range": "5 ft",
+    "attackBonus": 1
+  },
+  "magic": {
+    "bonus": 1
+  },
+  "icon": "⚔️",
+  "iconStatus": "placeholder"
+}

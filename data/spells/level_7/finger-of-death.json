@@ -4,22 +4,48 @@
   },
   "name": "Finger of Death",
   "level": 7,
+  "flavorText": "You send negative engery coursing through a creature that you can see within range, causing it searing pain. The target must make a Constitution saving throw. It takes 7d8 + 30 necrotic damage on a failed save, or half as much damage on a successful one.\n\nA humanoid killed by this spell rises at the start of your next turn as a zombie that is permanently under your command, following your verbal orders to the best of its ability.",
   "description": "You send negative engery coursing through a creature that you can see within range, causing it searing pain. The target must make a Constitution saving throw. It takes 7d8 + 30 necrotic damage on a failed save, or half as much damage on a successful one.\n\nA humanoid killed by this spell rises at the start of your next turn as a zombie that is permanently under your command, following your verbal orders to the best of its ability.",
-  "castingTime": "1 action",
-  "range": "60 feet",
-  "components": "V, S",
-  "duration": "Instantaneous",
-  "damage": "7d8 + 30 necrotic",
   "school": "Necromancy",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "sorcerer",
     "warlock",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "60 feet",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/a176c264-25b5-4546-a0bc-7389c9a1fa9a.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "7d8 + 30 necrotic",
+  "tags": [
+    "sorcerer",
+    "warlock",
+    "wizard",
+    "level7"
+  ],
+  "iconLayers": [
+    [
+      "a176c264-25b5-4546-a0bc-7389c9a1fa9a"
+    ],
+    [
+      "9f460d0c-2b82-4035-b172-0ab4e18473ab"
+    ],
+    [
+      "6e5565fa-14e8-4409-bfda-a9a04e12bd8d"
+    ],
+    [
+      "e1a2d584-f579-4663-b562-a8c16e69afca"
+    ]
+  ]
 }

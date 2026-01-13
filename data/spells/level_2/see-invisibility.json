@@ -4,22 +4,36 @@
   },
   "name": "See Invisibility",
   "level": 2,
+  "flavorText": "For the duration, you see invisible creatures and objects as if they were visible, and you can see into the Ethereal Plane. Ethereal creatures and objects appear ghostly and translucent.",
   "description": "For the duration, you see invisible creatures and objects as if they were visible, and you can see into the Ethereal Plane. Ethereal creatures and objects appear ghostly and translucent.",
-  "castingTime": "1 action",
-  "range": "Self",
-  "components": "V, S, M (a pinch of tale and a small sprinkling of powdered silver)",
-  "duration": "1 hour",
-  "damage": null,
   "school": "Divination",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "bard",
     "sorcerer",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Self",
+  "components": "V, S, M (a pinch of tale and a small sprinkling of powdered silver)",
+  "duration": "1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a pinch of tale and a small sprinkling of powdered silver"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+  "iconStatus": "missing",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "bard",
+    "sorcerer",
+    "wizard",
+    "level2"
+  ]
 }

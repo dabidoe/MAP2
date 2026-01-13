@@ -1,0 +1,16 @@
+{
+  "id": "scroll-fireball",
+  "name": "Scroll of Fireball",
+  "category": "scroll",
+  "rarity": "uncommon",
+  "weight": 0.1,
+  "value": 250,
+  "quantity": 1,
+  "description": "Spell scroll containing a 3rd-level fireball spell",
+  "consumable": {
+    "effect": "Cast Fireball (8d6 fire damage, 20 ft radius)",
+    "duration": "Instant"
+  },
+  "icon": "📜",
+  "iconStatus": "placeholder"
+}

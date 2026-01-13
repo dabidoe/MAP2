@@ -1,0 +1,21 @@
+{
+  "id": "belt-giant-strength",
+  "name": "Belt of Giant Strength (Hill)",
+  "category": "wondrous",
+  "rarity": "rare",
+  "weight": 2,
+  "value": 8000,
+  "quantity": 1,
+  "requiresAttunement": true,
+  "description": "Your Strength becomes 21 while wearing this belt",
+  "magic": {
+    "effects": [
+      {
+        "name": "Giant Strength",
+        "description": "Strength becomes 21"
+      }
+    ]
+  },
+  "icon": "✨",
+  "iconStatus": "placeholder"
+}

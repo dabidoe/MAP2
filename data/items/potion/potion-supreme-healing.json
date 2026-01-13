@@ -1,0 +1,16 @@
+{
+  "id": "potion-supreme-healing",
+  "name": "Potion of Supreme Healing",
+  "category": "potion",
+  "rarity": "very-rare",
+  "weight": 0.5,
+  "value": 1350,
+  "quantity": 1,
+  "description": "The most powerful healing potion available",
+  "consumable": {
+    "effect": "Heal 10d4+20",
+    "duration": "Instant"
+  },
+  "icon": "🧪",
+  "iconStatus": "placeholder"
+}

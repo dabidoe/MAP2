@@ -1,0 +1,38 @@
+{
+  "id": "staff-power",
+  "name": "Staff of Power",
+  "category": "wand",
+  "rarity": "very-rare",
+  "slot": "mainHand",
+  "weight": 4,
+  "value": 95500,
+  "requiresAttunement": true,
+  "description": "This staff can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls. It has 20 charges for various powers.",
+  "weapon": {
+    "damage": "1d6",
+    "damageType": "bludgeoning",
+    "properties": [
+      "versatile"
+    ],
+    "versatileDamage": "1d8",
+    "range": "5 ft",
+    "attackBonus": 2
+  },
+  "customProperties": {
+    "bonuses": {
+      "ac": 2
+    }
+  },
+  "magic": {
+    "bonus": 2,
+    "charges": 20,
+    "effects": [
+      {
+        "name": "Spellcasting",
+        "description": "Can cast various spells by expending charges"
+      }
+    ]
+  },
+  "icon": "🪄",
+  "iconStatus": "placeholder"
+}

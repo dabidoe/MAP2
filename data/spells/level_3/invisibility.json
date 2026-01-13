@@ -3,13 +3,53 @@
     "$oid": "695469925648a6dce9f6f750"
   },
   "name": "Invisibility",
-  "level": 3,
-  "description": "You wrap a willing creature in a shimmer of muted light, rendering its form translucent and muffling all movement. The target becomes nearly unseen and gains advantage on Stealth checks. The veil breaks early if the creature deals damage or casts a spell.",
+  "level": 2,
+  "flavorText": "You wrap a willing creature in a shimmer of muted light, rendering its form translucent and muffling all movement. The target becomes nearly unseen and gains advantage on Stealth checks. The veil breaks early if the creature deals damage or casts a spell.",
+  "description": "A creature you touch becomes invisible until the spell ends. Anything the target is wearing or carrying is invisible as long as it is on the target's person. The spell ends for a target that attacks or casts a spell.",
+  "school": "Illusion",
+  "classes": [
+    "bard",
+    "sorcerer",
+    "warlock",
+    "wizard"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
   "range": "Touch",
-  "components": "V, S, M (a pinch of powdered glass)",
+  "components": "V, S, M (an eyelash encased in gum arabic)",
   "duration": "Concentration, up to 1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "an eyelash encased in gum arabic"
+    ]
+  },
+  "higherLevels": "When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/86267b05-da00-4c19-a2b0-586600fd7d0e.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "None",
-  "school": "Illusion",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/9faa74bb-35e1-4703-bd40-ff08c5121468.png"
+  "tags": [
+    "bard",
+    "sorcerer",
+    "warlock",
+    "wizard",
+    "level2"
+  ],
+  "iconLayers": [
+    [
+      "86267b05-da00-4c19-a2b0-586600fd7d0e"
+    ],
+    [
+      "14baeb0d-8cac-45b7-b162-bbe557a45ee5"
+    ],
+    [
+      "61ae20c2-98b6-435b-a5e1-230478fe1468"
+    ],
+    [
+      "b3a3f747-c6ba-4016-beb4-a314b1f29a92"
+    ]
+  ]
 }

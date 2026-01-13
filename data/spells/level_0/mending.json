@@ -11,5 +11,20 @@
   "duration": "Instantaneous",
   "damage": "None",
   "school": "Transmutation",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/0c767b69-a452-43fb-8d46-3a2227c9f381.png"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/0c767b69-a452-43fb-8d46-3a2227c9f381.png",
+  "iconStatus": "ready",
+  "iconLayers": [
+    [
+      "0c767b69-a452-43fb-8d46-3a2227c9f381${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"bfb184e6-1f9c-4986-90fd-d99c1d98d764\"}"
+    ],
+    [
+      "7ef45327-16e4-4633-9268-2252eebc1b6e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"093f3b72-5e48-4b45-be00-18937f7f8791\"}"
+    ],
+    [
+      "a9f8d1ca-6fbb-4836-98a9-80c1091e059f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"9628ac41-c90b-4eb3-b7bd-6c4acc56b482\"}"
+    ],
+    [
+      "25a3ddd6-5709-4470-a1be-7695398714f0${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1d80e86a-cbb1-4b7e-932b-cccf0ce42813\"}"
+    ]
+  ]
 }

@@ -1,0 +1,12 @@
+{
+  "id": "healer-kit",
+  "name": "Healer's Kit",
+  "category": "tool",
+  "rarity": "common",
+  "weight": 3,
+  "value": 5,
+  "quantity": 1,
+  "description": "Has 10 uses. Can stabilize a dying creature without a Medicine check",
+  "icon": "🔧",
+  "iconStatus": "placeholder"
+}

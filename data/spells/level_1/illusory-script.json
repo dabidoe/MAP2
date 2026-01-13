@@ -4,12 +4,50 @@
   },
   "name": "Illusory Script",
   "level": 1,
-  "description": "You inscribe a sigil that murmurs its hidden message only to a creature you designate. To all others it appears as an inert marking. The chosen recipient hears the true words when they touch or study the glyph.",
+  "flavorText": "You inscribe a sigil that murmurs its hidden message only to a creature you designate. To all others it appears as an inert marking. The chosen recipient hears the true words when they touch or study the glyph.",
+  "description": "You write on parchment, paper, or some other suitable writing material and imbue it with a potent illusion that lasts for the duration.\n\nTo you and any creatures you designate when you cast the spell, the writing appears normal, written in your hand, and conveys whatever meaning you intended when you wrote the text. To all others, the writing appears as if it were written in an unknown or magical script that is unintelligible. Alternatively, you can cause the writing to appear to be an entirely different message, written in a different hand and language, though the language must be one you know.\n\nShould the spell be dispelled, the original script and the illusion both disappear.\n\nA creature with truesight can read the hidden message.",
+  "school": "Illusion",
+  "classes": [
+    "bard",
+    "warlock",
+    "wizard"
+  ],
+  "ritual": true,
   "castingTime": "1 minute",
   "range": "Touch",
-  "components": "V, S, M (a silver-inked quill worth 5 gp, consumed)",
-  "duration": "7 days",
+  "components": "S, M (a lead-based ink worth at least 10gp, which this spell consumes)",
+  "duration": "10 days",
+  "componentsDetail": {
+    "verbal": false,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a lead-based ink worth at least 10gp, which this spell consumes"
+    ]
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/e0a14b9d-8cb2-41b9-9d18-4e1ce5a96f5f.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "None",
-  "school": "Illusion",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/e0a14b9d-8cb2-41b9-9d18-4e1ce5a96f5f.png"
+  "tags": [
+    "bard",
+    "warlock",
+    "wizard",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "e0a14b9d-8cb2-41b9-9d18-4e1ce5a96f5f"
+    ],
+    [
+      "54bbde52-b671-40d9-9f51-b3fb1bbfc0b0"
+    ],
+    [
+      "762bdcb4-0937-4b5b-a7dd-d72c59c3fd53"
+    ],
+    [
+      "4fc02462-8b2e-4810-8a05-5104af94ed93"
+    ]
+  ]
 }

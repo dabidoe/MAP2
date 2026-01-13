@@ -1,0 +1,12 @@
+{
+  "id": "backpack",
+  "name": "Backpack",
+  "category": "gear",
+  "rarity": "common",
+  "weight": 5,
+  "value": 2,
+  "quantity": 1,
+  "description": "Can hold 30 lbs or 1 cubic foot of gear",
+  "icon": "🎒",
+  "iconStatus": "placeholder"
+}

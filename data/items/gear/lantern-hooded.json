@@ -1,0 +1,12 @@
+{
+  "id": "lantern-hooded",
+  "name": "Lantern, Hooded",
+  "category": "gear",
+  "rarity": "common",
+  "weight": 2,
+  "value": 5,
+  "quantity": 1,
+  "description": "Casts bright light 30 ft, dim 30 ft. Burns oil for 6 hours",
+  "icon": "🎒",
+  "iconStatus": "placeholder"
+}

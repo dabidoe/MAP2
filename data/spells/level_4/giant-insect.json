@@ -4,20 +4,44 @@
   },
   "name": "Giant Insect",
   "level": 4,
+  "flavorText": "You transform up to ten centipedes, three spiders, five wasps, or one scorpion within range into versions of their natural forms for the duration. A centipede becomes a giant centipede, a spider becomes a giant spider, a wasp becomes a giant wasp, a wasp becomes a giant wasp, and a scorpion becomes a giant scorpion.\n\nEach creature obeys your verbal commands, and in combat they act on your turn each round. The DM has the statistics for these creatures and resolves their actions and moment.\n\nA creature remains in its giant size for the duration until it drops to 0 hit points, or until you use an action to dismiss the effect on it.\n\nThe DM might allow you to choose different targets. for example, if you transform a bee, its giant version might have the same stats as a giant wasp.",
   "description": "You transform up to ten centipedes, three spiders, five wasps, or one scorpion within range into versions of their natural forms for the duration. A centipede becomes a giant centipede, a spider becomes a giant spider, a wasp becomes a giant wasp, a wasp becomes a giant wasp, and a scorpion becomes a giant scorpion.\n\nEach creature obeys your verbal commands, and in combat they act on your turn each round. The DM has the statistics for these creatures and resolves their actions and moment.\n\nA creature remains in its giant size for the duration until it drops to 0 hit points, or until you use an action to dismiss the effect on it.\n\nThe DM might allow you to choose different targets. for example, if you transform a bee, its giant version might have the same stats as a giant wasp.",
-  "castingTime": "1 action",
-  "range": "30 feet",
-  "components": "V, S",
-  "duration": "Concentration, up to 10 minutes",
-  "damage": null,
   "school": "Transmutation",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "druid"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 10 minutes",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/ee252c70-6a7b-4541-8831-ce98db3f54b9.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "druid",
+    "level4"
+  ],
+  "iconLayers": [
+    [
+      "ee252c70-6a7b-4541-8831-ce98db3f54b9"
+    ],
+    [
+      "65332c8c-e0ed-435a-a2fa-51a0c0a553f3"
+    ],
+    [
+      "48b64859-c35c-4c76-b4de-573963512ba9"
+    ],
+    [
+      "257e3318-246a-4a2c-a48e-93183199805f"
+    ]
+  ]
 }

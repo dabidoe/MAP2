@@ -4,25 +4,48 @@
   },
   "name": "Flaming Sphere",
   "level": 2,
+  "flavorText": "A 5-foot-diameter sphere of fire appears in an unoccupied space of your choice within range and lasts for the duration. Any creature that ends its turn within 5 feet of the sphere must make a Dexterity saving throw. The creature takes 2d6 fire damage on a failed save, or half as much damage on a successful one.\n\nAs a bonus action, you can move the sphere up to 30 feet. If you ram the sphere into a creature, that creature must make the saving throw against the sphere's damage, and the sphere stops moving this turn.\n\nWhen you move the sphere, you can direct it over barriers up to 5 feet tall and jump it across pits up to 10 feet wide. The sphere ignites flammable objects not being worn or carried, and it sheds bright light in a 20-foot radius and dim light for an additional 20 feet.",
   "description": "A 5-foot-diameter sphere of fire appears in an unoccupied space of your choice within range and lasts for the duration. Any creature that ends its turn within 5 feet of the sphere must make a Dexterity saving throw. The creature takes 2d6 fire damage on a failed save, or half as much damage on a successful one.\n\nAs a bonus action, you can move the sphere up to 30 feet. If you ram the sphere into a creature, that creature must make the saving throw against the sphere's damage, and the sphere stops moving this turn.\n\nWhen you move the sphere, you can direct it over barriers up to 5 feet tall and jump it across pits up to 10 feet wide. The sphere ignites flammable objects not being worn or carried, and it sheds bright light in a 20-foot radius and dim light for an additional 20 feet.",
-  "castingTime": "1 action",
-  "range": "60 feet",
-  "components": "V, S, M (a bit of tallow, a pinch of brimstone, and a dusting of powdered iron)",
-  "duration": "Concentration, up to 1 minute",
-  "damage": "2d6 fire",
   "school": "Conjuration",
-  "isPublic": true,
   "classes": [
     "druid",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "60 feet",
+  "components": "V, S, M (a bit of tallow, a pinch of brimstone, and a dusting of powdered iron)",
+  "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a bit of tallow, a pinch of brimstone, and a dusting of powdered iron"
+    ]
+  },
   "higherLevels": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd.",
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/a150c0e6-e2b8-4549-ab3f-6ab1f1506165.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "2d6 fire",
+  "tags": [
+    "druid",
+    "wizard",
+    "level2"
+  ],
   "iconLayers": [
-    {
-      "guid": "1eace6f6875ac192612a6b6b396c49e62c587c28b162aa0153fd7574cd99cb1e",
-      "json": "{}"
-    }
+    [
+      "a150c0e6-e2b8-4549-ab3f-6ab1f1506165"
+    ],
+    [
+      "fa69315b-7a2c-4c1e-886c-721589c021e5"
+    ],
+    [
+      "c241974b-fb94-4089-ba57-3cc661443d64"
+    ],
+    [
+      "99df0b09-0183-49f9-a7a5-8a9564da94b2"
+    ]
   ]
 }

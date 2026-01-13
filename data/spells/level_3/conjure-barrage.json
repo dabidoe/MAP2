@@ -4,37 +4,46 @@
   },
   "name": "Conjure Barrage",
   "level": 3,
+  "flavorText": "You throw a nonmagical weapon or fire a piece of nonmagical ammunition into the air to create a cone of identical weapons that shoot forward and then disappear. Each creature in a 60-foot cone must succeed on a Dexterity saving throw. A creature takes 3d8 damage on a failed save, or half as much damage on a successful one. The damage type is the same as that of the weapon or ammunition used as a component.",
   "description": "You throw a nonmagical weapon or fire a piece of nonmagical ammunition into the air to create a cone of identical weapons that shoot forward and then disappear. Each creature in a 60-foot cone must succeed on a Dexterity saving throw. A creature takes 3d8 damage on a failed save, or half as much damage on a successful one. The damage type is the same as that of the weapon or ammunition used as a component.",
-  "castingTime": "1 action",
-  "range": "Self (60-foot cone)",
-  "components": "V, S, M (one piece of ammunition or a thrown weapon)",
-  "duration": "Instantaneous",
-  "damage": null,
   "school": "Conjuration",
-  "isPublic": true,
   "classes": [
     "ranger"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Self (60-foot cone)",
+  "components": "V, S, M (one piece of ammunition or a thrown weapon)",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "one piece of ammunition or a thrown weapon"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
-  "iconLayers": [
-    {
-      "guid": "12ad84fe-f021-42f6-8f85-77df48f6eae6${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d3488e2f-d1d4-4469-b060-0563270b0e4a\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "a0f9cec1-1785-4c50-a492-d0e8b79a78fa${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e765bc35-1b0c-4fed-bfd3-72a0dc84e432\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "015c7bdd-27ca-4044-8021-e943f48fcd16${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"246dfcef-c724-4708-b458-1777049dac9b\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "cb3450ca-ee7b-467c-9285-0873667e5b2c",
-      "json": "{}"
-    }
+  "icon": "https://statsheet-cdn.b-cdn.net/images/12ad84fe-f021-42f6-8f85-77df48f6eae6.png",
+  "iconStatus": "ready",
+  "video": "/SPELL_VIDEOS/Conjure_Barrage_With_a_swift_incantation_you_summon_a_storm_o_1758d54f-e07d-4a29-93e3-bfc44e8d246f_0.mp4",
+  "damage": null,
+  "tags": [
+    "ranger",
+    "level3"
   ],
-  "video": "/SPELL_VIDEOS/Conjure_Barrage_With_a_swift_incantation_you_summon_a_storm_o_1758d54f-e07d-4a29-93e3-bfc44e8d246f_0.mp4"
+  "iconLayers": [
+    [
+      "12ad84fe-f021-42f6-8f85-77df48f6eae6${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d3488e2f-d1d4-4469-b060-0563270b0e4a\"}"
+    ],
+    [
+      "a0f9cec1-1785-4c50-a492-d0e8b79a78fa${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e765bc35-1b0c-4fed-bfd3-72a0dc84e432\"}"
+    ],
+    [
+      "015c7bdd-27ca-4044-8021-e943f48fcd16${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"246dfcef-c724-4708-b458-1777049dac9b\"}"
+    ],
+    [
+      "cb3450ca-ee7b-467c-9285-0873667e5b2c"
+    ]
+  ]
 }

@@ -4,20 +4,44 @@
   },
   "name": "Conjure Celestial",
   "level": 7,
+  "flavorText": "You summon a celestial of challenge rating 4 or lower, which apperas in an unoccupied space that you can see within range. The celestial disappears when it drops to 0 hit points or when the spell ends.\n\nThe celestial is friendly to you and your companions for the duration. Roll initiative for the celestial, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you), as long as they don't violate its alignment. If you don't issue any commands to the celestial, it defends itself from hostile creatures but otherwise takes no actions.\n\nThe DM has the celestial's statistics.",
   "description": "You summon a celestial of challenge rating 4 or lower, which apperas in an unoccupied space that you can see within range. The celestial disappears when it drops to 0 hit points or when the spell ends.\n\nThe celestial is friendly to you and your companions for the duration. Roll initiative for the celestial, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you), as long as they don't violate its alignment. If you don't issue any commands to the celestial, it defends itself from hostile creatures but otherwise takes no actions.\n\nThe DM has the celestial's statistics.",
-  "castingTime": "1 minute",
-  "range": "90 feet",
-  "components": "V, S",
-  "duration": "Concentration, up to 1 hour",
-  "damage": null,
   "school": "Conjuration",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "cleric"
   ],
   "ritual": false,
+  "castingTime": "1 minute",
+  "range": "90 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": "When you cast this spell using a 9th-level spell slot, you summon a celestial of challenge rating 5 or lower.",
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/558bf898-b16a-4414-9cee-555ac58d3b8f.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "cleric",
+    "level7"
+  ],
+  "iconLayers": [
+    [
+      "558bf898-b16a-4414-9cee-555ac58d3b8f"
+    ],
+    [
+      "01a66574-1056-4eeb-b8b6-625ebe153df1"
+    ],
+    [
+      "036ff49d-31ed-4bbe-84e2-db25742b87cb"
+    ],
+    [
+      "0df5331e-066f-4f02-981c-b4332b268a5e"
+    ]
+  ]
 }

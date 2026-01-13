@@ -3,13 +3,45 @@
     "$oid": "695496455648a6dce9f6f947"
   },
   "name": "Spare the Dying",
-  "level": 1,
-  "description": "A faint ember of life leaps from your hand into a creature on the brink of death. The target regains a spark of consciousness, allowing it to take one action or move on its next turn before falling unconscious and stable.",
-  "castingTime": "1 bonus action",
+  "level": 0,
+  "flavorText": "A faint ember of life leaps from your hand into a creature on the brink of death. The target regains a spark of consciousness, allowing it to take one action or move on its next turn before falling unconscious and stable.",
+  "description": "You touch a living creature that has 0 hit points. The creature becomes stable. This spell has no effect on undead or constructs.",
+  "school": "Necromancy",
+  "classes": [
+    "cleric"
+  ],
+  "ritual": false,
+  "castingTime": "1 action",
   "range": "Touch",
   "components": "V, S",
-  "duration": "1 round",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/ff40cfd8-0b0d-432e-80cc-a2a06726d751.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "None",
-  "school": "Evocation",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/ff40cfd8-0b0d-432e-80cc-a2a06726d751.png"
+  "tags": [
+    "cleric",
+    "cantrip"
+  ],
+  "iconLayers": [
+    [
+      "ff40cfd8-0b0d-432e-80cc-a2a06726d751${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"b7f00250-152d-408e-8663-220dc1861219\"}"
+    ],
+    [
+      "aab2a8d6-e8d5-48ec-9965-87809d0961eb${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"3b3317d8-8931-4b89-8525-b33be64b0824\"}"
+    ],
+    [
+      "31217c93-485d-44c0-a7b5-ff4a3545f8c2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"05c9cb04-edbb-47c5-96c8-c33dbff5ce54\"}"
+    ],
+    [
+      "93aa68b5-0ee6-415a-b173-c04ab4de8c4f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1f3157e7-a992-4623-93aa-56ffc01fafd2\"}"
+    ]
+  ]
 }

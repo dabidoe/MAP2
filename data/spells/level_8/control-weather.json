@@ -4,22 +4,50 @@
   },
   "name": "Control Weather",
   "level": 8,
+  "flavorText": "You take control of the weather within 5 miles of you for the duration. You must be outdoors to cast this spell. Moving to a place where you don't have a clear path to the sky ends the spell early.\n\nWhen you cast the spell, you change the current weather conditions, which are determined by the DM based on the climate and season. You can change precipitation, temperature, and wind. It takes 1d4 x 10 minutes for the new conditions to take effect. Once they do so, you can change the conditions again. When the spell ends, the weather gradually returns to normal.\n\nWhen you change the weather conditions, find a current condition on the following tables and change its stage by one, up or down. When changing the wind, you can change its direction.\n\n## Precipitation\n\n|Stage|Condition|\n|---|---|\n| 1 | Clear |\n| 2 | Light clouds |\n| 3 | Overcast or ground fog |\n| 4 | Rain, hail, or snow |\n| 5 | Torrential rain, driving hail, or blizzard |\n\n## Temperature\n\n|Stage|Condition|\n|---|---|\n| 1 | Unbearable heat |\n| 2 | Hot |\n| 3 | Warm |\n| 4 | Cool |\n| 5 | Cold |\n| 6 | Arctic cold |\n\n## Wind\n\n|Stage|Condition|\n|---|---|\n| 1 | Calm |\n| 2 | Moderate wind |\n| 3 | Strong wind |\n| 4 | Gale |\n| 5 | Storm |",
   "description": "You take control of the weather within 5 miles of you for the duration. You must be outdoors to cast this spell. Moving to a place where you don't have a clear path to the sky ends the spell early.\n\nWhen you cast the spell, you change the current weather conditions, which are determined by the DM based on the climate and season. You can change precipitation, temperature, and wind. It takes 1d4 x 10 minutes for the new conditions to take effect. Once they do so, you can change the conditions again. When the spell ends, the weather gradually returns to normal.\n\nWhen you change the weather conditions, find a current condition on the following tables and change its stage by one, up or down. When changing the wind, you can change its direction.\n\n## Precipitation\n\n|Stage|Condition|\n|---|---|\n| 1 | Clear |\n| 2 | Light clouds |\n| 3 | Overcast or ground fog |\n| 4 | Rain, hail, or snow |\n| 5 | Torrential rain, driving hail, or blizzard |\n\n## Temperature\n\n|Stage|Condition|\n|---|---|\n| 1 | Unbearable heat |\n| 2 | Hot |\n| 3 | Warm |\n| 4 | Cool |\n| 5 | Cold |\n| 6 | Arctic cold |\n\n## Wind\n\n|Stage|Condition|\n|---|---|\n| 1 | Calm |\n| 2 | Moderate wind |\n| 3 | Strong wind |\n| 4 | Gale |\n| 5 | Storm |",
-  "castingTime": "10 minutes",
-  "range": "Self (5-mile radius)",
-  "components": "V, S, M (burning incense and bits of earth and wood mixed in water)",
-  "duration": "Concentration, up to 8 hours",
-  "damage": null,
   "school": "Transmutation",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "cleric",
     "druid",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "10 minutes",
+  "range": "Self (5-mile radius)",
+  "components": "V, S, M (burning incense and bits of earth and wood mixed in water)",
+  "duration": "Concentration, up to 8 hours",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "burning incense and bits of earth and wood mixed in water"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/ed252e66-7bec-436a-bf34-c54b7fcf1e3f.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "cleric",
+    "druid",
+    "wizard",
+    "level8"
+  ],
+  "iconLayers": [
+    [
+      "ed252e66-7bec-436a-bf34-c54b7fcf1e3f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"36e9a962-a5e9-435b-b7e7-e574c69becbd\"}"
+    ],
+    [
+      "aab9d8b1-1ae2-4189-bc5f-279635ea9b3c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"17b8c797-6bf5-4f9c-82d2-42b93f27b45e\"}"
+    ],
+    [
+      "b39f64d8-fa5c-4b97-bd35-8064ce078baf${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"fc701acc-6d75-4d46-afb2-546b6d164796\"}"
+    ],
+    [
+      "282b3be2-35ef-4b63-b933-9845275a462d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4ad13611-3656-48e2-a7ac-9efafe65e210\"}"
+    ]
+  ]
 }

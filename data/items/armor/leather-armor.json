@@ -1,0 +1,18 @@
+{
+  "id": "leather-armor",
+  "name": "Leather Armor",
+  "category": "armor",
+  "rarity": "common",
+  "slot": "body",
+  "weight": 10,
+  "value": 10,
+  "description": "Flexible light armor",
+  "armor": {
+    "ac": 11,
+    "type": "light",
+    "maxDexBonus": null,
+    "stealthDisadvantage": false
+  },
+  "icon": "🛡️",
+  "iconStatus": "placeholder"
+}

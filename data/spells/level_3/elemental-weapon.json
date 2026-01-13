@@ -4,37 +4,44 @@
   },
   "name": "Elemental Weapon",
   "level": 3,
+  "flavorText": "A nonmagical weapon you touch becomes a magic weapon. Choose one of the following damage types: acid, cold, fire, lightning, or thunder. For the duration, the weapon has a +1 bonus to attack rolls and deals an extra 1d4 damage of the chosen type when it hits.",
   "description": "A nonmagical weapon you touch becomes a magic weapon. Choose one of the following damage types: acid, cold, fire, lightning, or thunder. For the duration, the weapon has a +1 bonus to attack rolls and deals an extra 1d4 damage of the chosen type when it hits.",
-  "castingTime": "1 action",
-  "range": "Touch",
-  "components": "V, S",
-  "duration": "Concentration, up to 1 hour",
-  "damage": null,
   "school": "Transmutation",
-  "isPublic": true,
   "classes": [
     "paladin"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": "When you cast this spell using a spell slot of 5th or 6th level, the bonus to attack rolls increases to +2 and the extra damage increases to 2d4. When you use a spell slot of 7th level or higher, the bonus increases to +3 and the extra damage increases to 3d4.",
-  "source": "SRD 5.1",
-  "iconLayers": [
-    {
-      "guid": "d3aaab8e-fb91-4991-91e9-ec2fe38b2a1a${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"3c1b00e5-6f9c-4ec9-a361-3d0f796951c0\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "a0430130-ad66-4fd6-a019-f75ba7bdcc02${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"2da921c9-5f5b-45da-84fd-a01771456195\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "c993e52c-7080-4e6a-b14e-7ce531e116dc",
-      "json": "{}"
-    },
-    {
-      "guid": "6c100592-4544-4220-88ec-8c4b5e1b2baf",
-      "json": "{}"
-    }
+  "icon": "https://statsheet-cdn.b-cdn.net/images/d3aaab8e-fb91-4991-91e9-ec2fe38b2a1a.png",
+  "iconStatus": "ready",
+  "video": "/SPELL_VIDEOS/Elemental_Weapon_You_touch_a_nonmagical_weapon_imbuing_it_wit_6f0a19b0-8b51-4382-bc04-0a2468da0afa_0.mp4",
+  "damage": null,
+  "tags": [
+    "paladin",
+    "level3"
   ],
-  "video": "/SPELL_VIDEOS/Elemental_Weapon_You_touch_a_nonmagical_weapon_imbuing_it_wit_6f0a19b0-8b51-4382-bc04-0a2468da0afa_0.mp4"
+  "iconLayers": [
+    [
+      "d3aaab8e-fb91-4991-91e9-ec2fe38b2a1a${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"3c1b00e5-6f9c-4ec9-a361-3d0f796951c0\"}"
+    ],
+    [
+      "a0430130-ad66-4fd6-a019-f75ba7bdcc02${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"2da921c9-5f5b-45da-84fd-a01771456195\"}"
+    ],
+    [
+      "c993e52c-7080-4e6a-b14e-7ce531e116dc"
+    ],
+    [
+      "6c100592-4544-4220-88ec-8c4b5e1b2baf"
+    ]
+  ]
 }

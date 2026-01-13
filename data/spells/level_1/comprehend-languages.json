@@ -4,12 +4,52 @@
   },
   "name": "Comprehend Languages",
   "level": 1,
-  "description": "For a brief interval, every utterance near you resonates with clarity. You instantly grasp the meaning of any spoken language within earshot and can interpret simple intent behind tone or cadence. Written script remains beyond your reach.",
+  "flavorText": "For a brief interval, every utterance near you resonates with clarity. You instantly grasp the meaning of any spoken language within earshot and can interpret simple intent behind tone or cadence. Written script remains beyond your reach.",
+  "description": "For the duration, you understand the literal meaning of any spoken language that you hear. You also understand any written language that you see, but you must be touching the surface on which the words are written. It takes about 1 minute to read one page of text.\n\nThis spell doesn’t decode secret messages in a text or a glyph, such as an arcane sigil, that isn’t part of a written language.",
+  "school": "Divination",
+  "classes": [
+    "bard",
+    "sorcerer",
+    "warlock",
+    "wizard"
+  ],
+  "ritual": true,
   "castingTime": "1 action",
   "range": "Self",
-  "components": "V, S",
-  "duration": "10 minutes",
+  "components": "V, S, M (a pinch of soot and salt)",
+  "duration": "1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a pinch of soot and salt"
+    ]
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/f358315f-89ff-4e0d-8ae9-d83a22bbeed0.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "None",
-  "school": "Divination",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/f358315f-89ff-4e0d-8ae9-d83a22bbeed0.png"
+  "tags": [
+    "bard",
+    "sorcerer",
+    "warlock",
+    "wizard",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "f358315f-89ff-4e0d-8ae9-d83a22bbeed0${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d3d050a0-5c54-4644-90e9-dddf2b3290f3\"}"
+    ],
+    [
+      "c729d514-3d1a-4873-94e6-8850b17d28e6${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"80d30129-960c-4e57-9e08-ee047ca053cc\"}"
+    ],
+    [
+      "6c70a504-dd37-46c1-969f-6340443f2313"
+    ],
+    [
+      "de87a1ee-8353-4c9d-b57c-52e8a248db24"
+    ]
+  ]
 }

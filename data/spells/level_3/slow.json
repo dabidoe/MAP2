@@ -4,37 +4,48 @@
   },
   "name": "Slow",
   "level": 3,
+  "flavorText": "You alter time around up to six creatures of your choice in a 40-foot cube within range. Each target must succeed on a wisdom saving throwor be affected by this spell for the duration.\n\nAn affected target’s speed is halved, it takes a -2 penalty to AC and Dexterity saving throws, and it can’t use reactions. On its turn, it can use either an action or a bonus action, not both. Regardless of the creature’s abilities or magic items, it can’t make more than one melee or ranged attack during its turn.\n\nIf the creature attempts to cast a spell with a casting time of 1 action, roll a d20. On an 11 or higher, the spell doesn’t take effect until the creature’s next turn, and the creature must use its action on that turn to complete the spell. If it can’t, the spell is wasted.\n\nA creature affected by this spell makes another Wisdom saving throwat the end of its turn. On a successful save, the effect ends for it.",
   "description": "You alter time around up to six creatures of your choice in a 40-foot cube within range. Each target must succeed on a wisdom saving throwor be affected by this spell for the duration.\n\nAn affected target’s speed is halved, it takes a -2 penalty to AC and Dexterity saving throws, and it can’t use reactions. On its turn, it can use either an action or a bonus action, not both. Regardless of the creature’s abilities or magic items, it can’t make more than one melee or ranged attack during its turn.\n\nIf the creature attempts to cast a spell with a casting time of 1 action, roll a d20. On an 11 or higher, the spell doesn’t take effect until the creature’s next turn, and the creature must use its action on that turn to complete the spell. If it can’t, the spell is wasted.\n\nA creature affected by this spell makes another Wisdom saving throwat the end of its turn. On a successful save, the effect ends for it.",
-  "castingTime": "1 action",
-  "range": "120 feet",
-  "components": "V, S, M (a drop of molasses)",
-  "duration": "Concentration, up to 1 minute",
-  "damage": null,
   "school": "Transmutation",
-  "isPublic": true,
   "classes": [
     "sorcerer",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "120 feet",
+  "components": "V, S, M (a drop of molasses)",
+  "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a drop of molasses"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/bbedfd40-43db-4226-a9ae-f09c782ed624.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "sorcerer",
+    "wizard",
+    "level3"
+  ],
   "iconLayers": [
-    {
-      "guid": "db342782-da7c-4555-b9d0-9200dd564ab0${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"56e87ed0-db49-49c0-8779-1ce7302837e0\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "7251f183-e5c3-4005-b64c-daaa54354e7a",
-      "json": "{}"
-    },
-    {
-      "guid": "d12708c8-fb39-4650-9af1-ec7040b3f38d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c6aa11b4-7a45-4dd2-b04e-656984a4930f\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "39e4dcc4-c1ec-44a6-8363-6c458b0c3aa0",
-      "json": "{}"
-    }
+    [
+      "bbedfd40-43db-4226-a9ae-f09c782ed624${\"position\":\"0.5137841,0.4588853\",\"rotation\":0.0,\"scale\":\"1.749805,1.749805\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e854d1a3-e3a1-48d3-b4b1-75c1ed3a2d74\"}"
+    ],
+    [
+      "6695cde8-509a-491a-a175-95a387794c99${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"a5217c47-b640-4ec6-a4c8-f719bbf496dd\"}"
+    ],
+    [
+      "5e467148-d5f5-4bc6-ab25-49f93e1f3389${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4f5d1178-fc57-45ae-918a-6a5b45e97148\"}"
+    ],
+    [
+      "22c343dc-4cf4-41e2-bb58-41409b9a0884${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"940690f3-209c-40d6-bc7f-50e3b933da97\"}"
+    ]
   ]
 }

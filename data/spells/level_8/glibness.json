@@ -4,21 +4,46 @@
   },
   "name": "Glibness",
   "level": 8,
+  "flavorText": "Until the spell ends, when you make a Charisma check, you can replace the number you roll with a 15. Additionally, no matter what you say, magic that would determine if you are telling the truth indicates that you are being truthful.",
   "description": "Until the spell ends, when you make a Charisma check, you can replace the number you roll with a 15. Additionally, no matter what you say, magic that would determine if you are telling the truth indicates that you are being truthful.",
-  "castingTime": "1 action",
-  "range": "Self",
-  "components": "V",
-  "duration": "1 hour",
-  "damage": null,
   "school": "Transmutation",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "bard",
     "warlock"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Self",
+  "components": "V",
+  "duration": "1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": false,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/32003a01-d9ce-4007-bcff-72d43c4bb706.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "bard",
+    "warlock",
+    "level8"
+  ],
+  "iconLayers": [
+    [
+      "32003a01-d9ce-4007-bcff-72d43c4bb706${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"cd6ede22-81af-48a5-8606-730b13e139e4\"}"
+    ],
+    [
+      "99e4a8dd-aa59-43ad-8ae1-6204f4f19bea${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d236f573-f259-4128-83e3-6420b476dc41\"}"
+    ],
+    [
+      "cb874106-d8b4-4248-bd23-a39a78501023${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e3dcdcc8-fb7b-4834-9e7c-968cc732c551\"}"
+    ],
+    [
+      "c5ad799d-5d58-436f-b4d3-57ed81a180d2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"a1a527ca-0804-46e6-b260-39fa2e0553dc\"}"
+    ]
+  ]
 }

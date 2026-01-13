@@ -1,0 +1,5342 @@
+[
+  {
+    "name": "Acid Splash",
+    "level": 0,
+    "school": "Conjuration",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/2c5bd895-fc51-40fe-8197-c8d6a9e6d07c.png",
+    "iconStatus": "ready",
+    "_path": "level_0/acid-splash.json"
+  },
+  {
+    "name": "Blade Ward",
+    "level": 0,
+    "school": "Illusion",
+    "classes": [],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/c6bed855-c542-4899-83ae-da06d0631496.png",
+    "iconStatus": "ready",
+    "_path": "level_0/blade-ward.json"
+  },
+  {
+    "name": "Chill Touch",
+    "level": 0,
+    "school": "Necromancy",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/cab61c88-2465-4ea5-b5db-92af3a9dd5b6.png",
+    "iconStatus": "ready",
+    "_path": "level_2/chill-touch.json"
+  },
+  {
+    "name": "Control Flames",
+    "level": 0,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_0/control-flames.json"
+  },
+  {
+    "name": "Create Bonfire",
+    "level": 0,
+    "school": "Conjuration",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_0/create-bonfire.json"
+  },
+  {
+    "name": "Dancing Lights",
+    "level": 0,
+    "school": "Evocation",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/2e51be05-b97d-4c74-9a18-c1209d8b29f4.png",
+    "iconStatus": "ready",
+    "_path": "level_0/dancing-lights.json"
+  },
+  {
+    "name": "Druidcraft",
+    "level": 0,
+    "school": "Transmutation",
+    "classes": [
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/a75c1222-dbaf-4a8a-8340-5f855a4cfc1b.png",
+    "iconStatus": "ready",
+    "_path": "level_0/druidcraft.json"
+  },
+  {
+    "name": "Eldritch Blast",
+    "level": 0,
+    "school": "Evocation",
+    "classes": [
+      "warlock"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/af9bfe83-6bb3-4611-abdf-fe8b26a2bc81.png",
+    "iconStatus": "ready",
+    "_path": "level_0/eldritch-blast.json"
+  },
+  {
+    "name": "Fire Bolt",
+    "level": 0,
+    "school": "Evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/0f820f83-5682-4524-b29c-13c08f60fe92.png",
+    "iconStatus": "ready",
+    "_path": "level_0/fire-bolt.json"
+  },
+  {
+    "name": "Friends",
+    "level": 0,
+    "school": "Enchantment",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/f61dcc58-ffa7-41ad-b462-e0f80b1feb0c.png",
+    "iconStatus": "ready",
+    "_path": "level_1/friends.json"
+  },
+  {
+    "name": "Frostbite",
+    "level": 0,
+    "school": "Evocation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_0/frostbite.json"
+  },
+  {
+    "name": "Guidance",
+    "level": 0,
+    "school": "Divination",
+    "classes": [
+      "cleric",
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/5bfb0610-76cc-425c-a431-4b52f108d489.png",
+    "iconStatus": "ready",
+    "_path": "level_0/guidance.json"
+  },
+  {
+    "name": "Gust",
+    "level": 0,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_0/gust.json"
+  },
+  {
+    "name": "Light",
+    "level": 0,
+    "school": "Evocation",
+    "classes": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/17f0d361-f3b7-412d-9566-d0e2762ac9be.png",
+    "iconStatus": "ready",
+    "_path": "level_0/light.json"
+  },
+  {
+    "name": "Mage Hand",
+    "level": 0,
+    "school": "Conjuration",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/dcb376d1-ce54-489e-b659-4f8526d4a9bd.png",
+    "iconStatus": "ready",
+    "_path": "level_0/mage-hand.json"
+  },
+  {
+    "name": "Magic Stone",
+    "level": 0,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "warlock"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_0/magic-stone.json"
+  },
+  {
+    "name": "Mending",
+    "level": 0,
+    "school": "Transmutation",
+    "classes": [],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/0c767b69-a452-43fb-8d46-3a2227c9f381.png",
+    "iconStatus": "ready",
+    "_path": "level_0/mending.json"
+  },
+  {
+    "name": "Message",
+    "level": 0,
+    "school": "Transmutation",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/889d6b0b-11c8-4972-99a7-65f9dcb55956.png",
+    "iconStatus": "ready",
+    "_path": "level_0/message.json"
+  },
+  {
+    "name": "Minor Illusion",
+    "level": 0,
+    "school": "Illusion",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/4b7329eb-cb5a-4059-8de3-f3acdf8c9f91.png",
+    "iconStatus": "ready",
+    "_path": "level_0/minor-illusion.json"
+  },
+  {
+    "name": "Mold Earth",
+    "level": 0,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_0/mold-earth.json"
+  },
+  {
+    "name": "Poison Spray",
+    "level": 0,
+    "school": "Conjuration",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/2c4f2b89-ea38-4fee-a923-75cc565d1cfc.png",
+    "iconStatus": "ready",
+    "_path": "level_0/poison-spray.json"
+  },
+  {
+    "name": "Prestidigitation",
+    "level": 0,
+    "school": "Transmutation",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/2d2ef1a0-e6ce-4363-82b3-e004f87a3911.png",
+    "iconStatus": "ready",
+    "_path": "level_0/prestidigitation.json"
+  },
+  {
+    "name": "Produce Flame",
+    "level": 0,
+    "school": "Conjuration",
+    "classes": [
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/241aabbf-d9b5-4dc8-87c2-b948e32c81a1.png",
+    "iconStatus": "ready",
+    "_path": "level_0/produce-flame.json"
+  },
+  {
+    "name": "Ray of Frost",
+    "level": 0,
+    "school": "Evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/43c0d0c4-148e-4d64-a6f9-1b353e78927c.png",
+    "iconStatus": "ready",
+    "_path": "level_0/ray-of-frost.json"
+  },
+  {
+    "name": "Resistance",
+    "level": 0,
+    "school": "Abjuration",
+    "classes": [
+      "cleric",
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/a887525a-9e73-416c-aea0-3eab6d05dc28.png",
+    "iconStatus": "ready",
+    "_path": "level_1/resistance.json"
+  },
+  {
+    "name": "Sacred Flame",
+    "level": 0,
+    "school": "Evocation",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/baba19a2-2cc5-4a04-a15b-70baaca30513.png",
+    "iconStatus": "ready",
+    "_path": "level_0/sacred-flame.json"
+  },
+  {
+    "name": "Shape Water",
+    "level": 0,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_0/shape-water.json"
+  },
+  {
+    "name": "Shillelagh",
+    "level": 0,
+    "school": "Transmutation",
+    "classes": [
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/61861a9e-4899-4dc0-bc72-bf88e5f184e0.png",
+    "iconStatus": "ready",
+    "_path": "level_0/shillelagh.json"
+  },
+  {
+    "name": "Shocking Grasp",
+    "level": 0,
+    "school": "Evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/789f4802-3556-4af9-9adf-1aa8648f07a0.png",
+    "iconStatus": "ready",
+    "_path": "level_1/shocking-grasp.json"
+  },
+  {
+    "name": "Spare the Dying",
+    "level": 0,
+    "school": "Necromancy",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/ff40cfd8-0b0d-432e-80cc-a2a06726d751.png",
+    "iconStatus": "ready",
+    "_path": "level_1/spare-the-dying.json"
+  },
+  {
+    "name": "Thaumaturgy",
+    "level": 0,
+    "school": "Transmutation",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/cf59adf3-e5ab-4b01-84f0-46b4b5aa0d6c.png",
+    "iconStatus": "ready",
+    "_path": "level_0/thaumaturgy.json"
+  },
+  {
+    "name": "Thorn Whip",
+    "level": 0,
+    "school": "Transmutation",
+    "classes": [
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/62c26ec4-cce9-428e-a381-5e09a40ec377.png",
+    "iconStatus": "ready",
+    "_path": "level_0/thorn-whip.json"
+  },
+  {
+    "name": "Thunderclap",
+    "level": 0,
+    "school": "Evocation",
+    "classes": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_0/thunderclap.json"
+  },
+  {
+    "name": "True Strike",
+    "level": 0,
+    "school": "Divination",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/9fcdc525-8c4b-4420-bc0f-7a65b189c8d9.png",
+    "iconStatus": "ready",
+    "_path": "level_0/true-strike.json"
+  },
+  {
+    "name": "Vicious Mockery",
+    "level": 0,
+    "school": "Enchantment",
+    "classes": [
+      "bard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/748a19ac-4126-483a-a708-90b7d9ac6994.png",
+    "iconStatus": "ready",
+    "_path": "level_0/vicious-mockery.json"
+  },
+  {
+    "name": "Absorb Elements",
+    "level": 1,
+    "school": "Abjuration",
+    "classes": [
+      "druid",
+      "ranger",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_1/absorb-elements.json"
+  },
+  {
+    "name": "Alarm",
+    "level": 1,
+    "school": "Abjuration",
+    "classes": [
+      "ranger",
+      "wizard"
+    ],
+    "ritual": true,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/71e7123d-05f9-4146-9f56-9137bba5d99a.png",
+    "iconStatus": "ready",
+    "_path": "level_2/alarm.json"
+  },
+  {
+    "name": "Animal Friendship",
+    "level": 1,
+    "school": "Enchantment",
+    "classes": [
+      "bard",
+      "druid",
+      "ranger"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/3dae8ac9-ef18-4926-880a-b689efa002c2.png",
+    "iconStatus": "ready",
+    "_path": "level_1/animal-friendship.json"
+  },
+  {
+    "name": "Bane",
+    "level": 1,
+    "school": "Enchantment",
+    "classes": [
+      "bard",
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/ed910db2-ad55-4d58-a85c-46d50d8bf7df.png",
+    "iconStatus": "ready",
+    "_path": "level_2/bane.json"
+  },
+  {
+    "name": "Battlecry Spark",
+    "level": 1,
+    "school": "Evocation",
+    "classes": [],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1763531710797.png",
+    "iconStatus": "placeholder",
+    "_path": "level_1/battlecry-spark.json"
+  },
+  {
+    "name": "Beast Bond",
+    "level": 1,
+    "school": "Divination",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_1/beast-bond.json"
+  },
+  {
+    "name": "Bless",
+    "level": 1,
+    "school": "Enchantment",
+    "classes": [
+      "cleric",
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/8042dff1e2643fac0a31f9d695074d0a879ddcdd520704d89421a128fd1be2cb.png",
+    "iconStatus": "ready",
+    "_path": "level_1/bless.json"
+  },
+  {
+    "name": "Burning Hands",
+    "level": 1,
+    "school": "Evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/ae533eb5-1c19-416e-8412-2ea743f32f0d.png",
+    "iconStatus": "ready",
+    "_path": "level_1/burning-hands.json"
+  },
+  {
+    "name": "Catapult",
+    "level": 1,
+    "school": "Transmutation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_1/catapult.json"
+  },
+  {
+    "name": "Charm Person",
+    "level": 1,
+    "school": "Enchantment",
+    "classes": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/6e6e4d7a-8184-4589-b556-48219cd1a3ed.png",
+    "iconStatus": "ready",
+    "_path": "level_1/charm-person.json"
+  },
+  {
+    "name": "Chromatic Orb",
+    "level": 1,
+    "school": "Evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/d6d95f57-83eb-40f6-b583-a373d444c133.png",
+    "iconStatus": "ready",
+    "_path": "level_2/chromatic-orb.json"
+  },
+  {
+    "name": "Color Spray",
+    "level": 1,
+    "school": "Illusion",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/fb8932fd-b271-47cb-89ec-3497480b1a46.png",
+    "iconStatus": "ready",
+    "_path": "level_1/color-spray.json"
+  },
+  {
+    "name": "Command",
+    "level": 1,
+    "school": "Enchantment",
+    "classes": [
+      "cleric",
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/3b05fc88-3d77-416c-aa5b-24fa020e7b3b.png",
+    "iconStatus": "ready",
+    "_path": "level_1/command.json"
+  },
+  {
+    "name": "Compelled Duel",
+    "level": 1,
+    "school": "Enchantment",
+    "classes": [
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/3ad1cd4f-df9b-4405-a111-1b43c1ff676f.png",
+    "iconStatus": "ready",
+    "_path": "level_1/compelled-duel.json"
+  },
+  {
+    "name": "Comprehend Languages",
+    "level": 1,
+    "school": "Divination",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": true,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/f358315f-89ff-4e0d-8ae9-d83a22bbeed0.png",
+    "iconStatus": "ready",
+    "_path": "level_1/comprehend-languages.json"
+  },
+  {
+    "name": "Create or Destroy Water",
+    "level": 1,
+    "school": "Transmutation",
+    "classes": [
+      "cleric",
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/74ed0a7d-8176-4a5d-b0e8-92c2d7c9761a.png",
+    "iconStatus": "ready",
+    "_path": "level_1/create-or-destroy-water.json"
+  },
+  {
+    "name": "Cure Wounds",
+    "level": 1,
+    "school": "Evocation",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/0fc3e96e-b38b-4472-adc8-c89da44b15fa.png",
+    "iconStatus": "ready",
+    "_path": "level_1/cure-wounds.json"
+  },
+  {
+    "name": "Detect Evil and Good",
+    "level": 1,
+    "school": "Divination",
+    "classes": [
+      "cleric",
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/9e17ce48-f577-494c-bf65-cad7d38674cd.png",
+    "iconStatus": "ready",
+    "_path": "level_2/detect-evil-and-good.json"
+  },
+  {
+    "name": "Detect Magic",
+    "level": 1,
+    "school": "Divination",
+    "classes": [],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/7761c38c-f0f9-47a2-9c76-252d2a2cc107.png",
+    "iconStatus": "ready",
+    "_path": "level_1/detect-magic.json"
+  },
+  {
+    "name": "Detect Poison and Disease",
+    "level": 1,
+    "school": "Divination",
+    "classes": [
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger"
+    ],
+    "ritual": true,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/fab72801-e7bb-48a1-b4f8-acb8cd5507c3.png",
+    "iconStatus": "ready",
+    "_path": "level_1/detect-poison-and-disease.json"
+  },
+  {
+    "name": "Disguise Self",
+    "level": 1,
+    "school": "Illusion",
+    "classes": [],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/c948f2a3-24f7-47f8-8668-d3ba4e60806c.png",
+    "iconStatus": "ready",
+    "_path": "level_1/disguise-self.json"
+  },
+  {
+    "name": "Dissonant Whispers",
+    "level": 1,
+    "school": "Enchantment",
+    "classes": [
+      "bard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/e77acf22-06b0-47de-b5fe-fb42ebed832b.png",
+    "iconStatus": "ready",
+    "_path": "level_1/dissonant-whispers.json"
+  },
+  {
+    "name": "Divine Favor",
+    "level": 1,
+    "school": "Evocation",
+    "classes": [
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/54c2f643-0fef-4d36-9aa1-03995437bb52.png",
+    "iconStatus": "ready",
+    "_path": "level_1/divine-favor.json"
+  },
+  {
+    "name": "Earth Tremor",
+    "level": 1,
+    "school": "Evocation",
+    "classes": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_1/earth-tremor.json"
+  },
+  {
+    "name": "Ensnaring Strike",
+    "level": 1,
+    "school": "Conjuration",
+    "classes": [
+      "ranger"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/74abe523-f54b-4c6b-ad0c-9bfc57583c14.png",
+    "iconStatus": "ready",
+    "_path": "level_1/ensnaring-strike.json"
+  },
+  {
+    "name": "Entangle",
+    "level": 1,
+    "school": "Conjuration",
+    "classes": [
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/c236ac72-2b47-407d-98c9-7a57140c19e2.png",
+    "iconStatus": "ready",
+    "_path": "level_1/entangle.json"
+  },
+  {
+    "name": "Expeditious Retreat",
+    "level": 1,
+    "school": "Transmutation",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/082af48d-e336-4424-bd57-617e9122ba1b.png",
+    "iconStatus": "ready",
+    "_path": "level_1/expeditious-retreat.json"
+  },
+  {
+    "name": "Faerie Fire",
+    "level": 1,
+    "school": "Evocation",
+    "classes": [
+      "bard",
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/00878c63-53bd-4ea1-8a14-e496e6cfaf9d.png",
+    "iconStatus": "ready",
+    "_path": "level_1/faerie-fire.json"
+  },
+  {
+    "name": "False Life",
+    "level": 1,
+    "school": "Necromancy",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/0a27ad4d-6f67-4003-8d82-ca32ca818880.png",
+    "iconStatus": "ready",
+    "_path": "level_1/false-life.json"
+  },
+  {
+    "name": "Feather Fall",
+    "level": 1,
+    "school": "Transmutation",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/9c54988a-6872-4574-bdad-8183a9fa04f6.png",
+    "iconStatus": "ready",
+    "_path": "level_2/feather-fall.json"
+  },
+  {
+    "name": "Find Familiar",
+    "level": 1,
+    "school": "Conjuration",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": true,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/c42b08df-3c07-4210-a22e-35f4e9ea34c2.png",
+    "iconStatus": "ready",
+    "_path": "level_1/find-familiar.json"
+  },
+  {
+    "name": "Floating Disk",
+    "level": 1,
+    "school": "Conjuration",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": true,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_1/floating-disk.json"
+  },
+  {
+    "name": "Fog Cloud",
+    "level": 1,
+    "school": "Conjuration",
+    "classes": [
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/66ea449a-403b-4350-b753-f1ddab4b2991.png",
+    "iconStatus": "ready",
+    "_path": "level_2/fog-cloud.json"
+  },
+  {
+    "name": "Goodberry",
+    "level": 1,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/f90898bb-b7fd-4944-894c-f2405f675ffa.png",
+    "iconStatus": "ready",
+    "_path": "level_1/goodberry.json"
+  },
+  {
+    "name": "Grease",
+    "level": 1,
+    "school": "Conjuration",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/70b2c009-f257-4058-acca-186230b30df1.png",
+    "iconStatus": "ready",
+    "_path": "level_1/grease.json"
+  },
+  {
+    "name": "Guiding Bolt",
+    "level": 1,
+    "school": "Evocation",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/9f01b03c-6e5f-44f1-acba-27662ddfa125.png",
+    "iconStatus": "ready",
+    "_path": "level_1/guiding-bolt.json"
+  },
+  {
+    "name": "Hail of Thorns",
+    "level": 1,
+    "school": "Conjuration",
+    "classes": [
+      "ranger"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/45e2171a-7392-42ae-913e-2e331e9f1919.png",
+    "iconStatus": "ready",
+    "_path": "level_1/hail-of-thorns.json"
+  },
+  {
+    "name": "Healing Word",
+    "level": 1,
+    "school": "Evocation",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/020e02f4-7b49-410f-bdaf-72cf50e89c81.png",
+    "iconStatus": "ready",
+    "_path": "level_1/healing-word.json"
+  },
+  {
+    "name": "Hellish Rebuke",
+    "level": 1,
+    "school": "Evocation",
+    "classes": [
+      "warlock"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/eaf8469e-7151-43cf-85f6-02efae59cf39.png",
+    "iconStatus": "ready",
+    "_path": "level_1/hellish-rebuke.json"
+  },
+  {
+    "name": "Heroism",
+    "level": 1,
+    "school": "Enchantment",
+    "classes": [
+      "bard",
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/bb45808e-f6e3-45b4-945d-a0e87a6eda6b.png",
+    "iconStatus": "ready",
+    "_path": "level_1/heroism.json"
+  },
+  {
+    "name": "Hex",
+    "level": 1,
+    "school": "Enchantment",
+    "classes": [
+      "warlock"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/b0c56c91-1fc9-43c1-875d-cbc179eafd1d.png",
+    "iconStatus": "ready",
+    "_path": "level_1/hex.json"
+  },
+  {
+    "name": "Hideous Laughter",
+    "level": 1,
+    "school": "Enchantment",
+    "classes": [
+      "wizard",
+      "bard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_1/hideous-laughter.json"
+  },
+  {
+    "name": "Hunter's Mark",
+    "level": 1,
+    "school": "Divination",
+    "classes": [
+      "ranger"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/05717b06-4d84-48e5-9cb7-d76e4490b256.png",
+    "iconStatus": "ready",
+    "_path": "level_1/hunters-mark.json"
+  },
+  {
+    "name": "Ice Knife",
+    "level": 1,
+    "school": "Conjuration",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_1/ice-knife.json"
+  },
+  {
+    "name": "Identify",
+    "level": 1,
+    "school": "Divination",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "ritual": true,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/7cff0e42-20a4-426e-9aa8-423b265b2dd3.png",
+    "iconStatus": "ready",
+    "_path": "level_1/identify.json"
+  },
+  {
+    "name": "Illusory Script",
+    "level": 1,
+    "school": "Illusion",
+    "classes": [
+      "bard",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": true,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/e0a14b9d-8cb2-41b9-9d18-4e1ce5a96f5f.png",
+    "iconStatus": "ready",
+    "_path": "level_1/illusory-script.json"
+  },
+  {
+    "name": "Inflict Wounds",
+    "level": 1,
+    "school": "Necromancy",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/108e5078-ba2a-4dc7-9f60-2dd0e5fc45f1.png",
+    "iconStatus": "ready",
+    "_path": "level_1/inflict-wounds.json"
+  },
+  {
+    "name": "Jump",
+    "level": 1,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/126124cf-14ef-4885-910d-fa7828225f35.png",
+    "iconStatus": "ready",
+    "_path": "level_1/jump.json"
+  },
+  {
+    "name": "Longstrider",
+    "level": 1,
+    "school": "Transmutation",
+    "classes": [
+      "bard",
+      "druid",
+      "ranger",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/7c065201-bc9b-4a80-b131-959b8b095409.png",
+    "iconStatus": "ready",
+    "_path": "level_1/longstrider.json"
+  },
+  {
+    "name": "Mage Armor",
+    "level": 1,
+    "school": "Abjuration",
+    "classes": [],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/f32ee1d8-f737-414c-9934-7ef8e6dac0bb.png",
+    "iconStatus": "placeholder",
+    "_path": "level_1/mage-armor.json"
+  },
+  {
+    "name": "Mage Armor",
+    "level": 1,
+    "school": "Abjuration",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/75672142-5c49-4735-9703-54865a4d083b.png",
+    "iconStatus": "ready",
+    "_path": "level_1/magearmor.json"
+  },
+  {
+    "name": "Magic Missile",
+    "level": 1,
+    "school": "Evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/747eea45-7a72-47f8-9820-d731d3f4c051.png",
+    "iconStatus": "ready",
+    "_path": "level_2/magic-missile.json"
+  },
+  {
+    "name": "Protection from Evil and Good",
+    "level": 1,
+    "school": "Abjuration",
+    "classes": [],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/1126edf8-0a07-4af8-bbd3-7ee145cdc9ad.png",
+    "iconStatus": "ready",
+    "_path": "level_1/protection-from-evil-and-good.json"
+  },
+  {
+    "name": "Purify Food and Drink",
+    "level": 1,
+    "school": "Transmutation",
+    "classes": [
+      "cleric",
+      "druid",
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/cf7cd0ca-e113-4945-a925-6c1e8b727947.png",
+    "iconStatus": "ready",
+    "_path": "level_1/purify-food-and-drink.json"
+  },
+  {
+    "name": "Ray of Sickness",
+    "level": 1,
+    "school": "Necromancy",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/d7f333f7-bdad-4fc7-a01d-a9154d33c3e0.png",
+    "iconStatus": "ready",
+    "_path": "level_2/ray-of-sickness.json"
+  },
+  {
+    "name": "Sanctuary",
+    "level": 1,
+    "school": "Abjuration",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/19357c14-823f-466b-aee4-02ee090b9593.png",
+    "iconStatus": "ready",
+    "_path": "level_1/sanctuary.json"
+  },
+  {
+    "name": "Searing Smite",
+    "level": 1,
+    "school": "Evocation",
+    "classes": [
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/cdfb9eee-a1f2-43c9-98ec-0c38c8b3cb5e.png",
+    "iconStatus": "ready",
+    "_path": "level_1/searing-smite.json"
+  },
+  {
+    "name": "Shield",
+    "level": 1,
+    "school": "Abjuration",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/fcd7781a-c964-478e-a725-c4f6dd8b01dd.png",
+    "iconStatus": "ready",
+    "_path": "level_1/shield.json"
+  },
+  {
+    "name": "Shield of Faith",
+    "level": 1,
+    "school": "Abjuration",
+    "classes": [
+      "cleric",
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/2784d256-a173-4d4e-938d-a392940a0f8c.png",
+    "iconStatus": "ready",
+    "_path": "level_1/shield-of-faith.json"
+  },
+  {
+    "name": "Silent Image",
+    "level": 1,
+    "school": "Illusion",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/e95a3a32-af15-4950-b2d3-a52b24532e55.png",
+    "iconStatus": "ready",
+    "_path": "level_2/silent-image.json"
+  },
+  {
+    "name": "Sleep",
+    "level": 1,
+    "school": "Enchantment",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/9529ec13-804b-45fb-a204-d89e4c7e2da2.png",
+    "iconStatus": "ready",
+    "_path": "level_2/sleep.json"
+  },
+  {
+    "name": "Speak with Animals",
+    "level": 1,
+    "school": "Divination",
+    "classes": [
+      "bard",
+      "druid",
+      "ranger"
+    ],
+    "ritual": true,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/cf33d339-b717-4b57-a5cf-03b38586f5fe.png",
+    "iconStatus": "ready",
+    "_path": "level_1/speak-with-animals.json"
+  },
+  {
+    "name": "Thunderous Smite",
+    "level": 1,
+    "school": "Evocation",
+    "classes": [
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/ede662e2-549c-45f6-a1f4-d280471cab46.png",
+    "iconStatus": "ready",
+    "_path": "level_1/thunderous-smite.json"
+  },
+  {
+    "name": "Thunderwave",
+    "level": 1,
+    "school": "Evocation",
+    "classes": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/f9f2f406-d20a-480d-9d00-7ccc78444ed2.png",
+    "iconStatus": "ready",
+    "_path": "level_2/thunderwave.json"
+  },
+  {
+    "name": "Unseen Servant",
+    "level": 1,
+    "school": "Conjuration",
+    "classes": [
+      "bard",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": true,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/ad3a48e9-2c76-48cc-87be-5b366740e17c.png",
+    "iconStatus": "ready",
+    "_path": "level_1/unseen-servant.json"
+  },
+  {
+    "name": "Witch Bolt",
+    "level": 1,
+    "school": "Evocation",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/811bb6b9-5ace-444c-81cc-8193b3203088.png",
+    "iconStatus": "ready",
+    "_path": "level_1/witch-bolt.json"
+  },
+  {
+    "name": "Wrathful Smite",
+    "level": 1,
+    "school": "Evocation",
+    "classes": [
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/1a7abc5f-346f-4c6e-b532-572644ea8365.png",
+    "iconStatus": "ready",
+    "_path": "level_1/wrathful-smite.json"
+  },
+  {
+    "name": "Acid Arrow",
+    "level": 2,
+    "school": "Evocation",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/acid-arrow.json"
+  },
+  {
+    "name": "Aid",
+    "level": 2,
+    "school": "Abjuration",
+    "classes": [
+      "cleric",
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/339e9c57-e085-4289-8fc1-ed436cd94f4b.png",
+    "iconStatus": "ready",
+    "_path": "level_2/aid.json"
+  },
+  {
+    "name": "Alter Self",
+    "level": 2,
+    "school": "Transmutation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/f12d2b6f-6e5d-4ecc-983d-54265e5f8a53.png",
+    "iconStatus": "ready",
+    "_path": "level_2/alter-self.json"
+  },
+  {
+    "name": "Animal Messenger",
+    "level": 2,
+    "school": "Enchantment",
+    "classes": [
+      "bard",
+      "druid",
+      "ranger"
+    ],
+    "ritual": true,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/25538df2-2b14-4b97-879f-495c348be1b6.png",
+    "iconStatus": "ready",
+    "_path": "level_2/animal-messenger.json"
+  },
+  {
+    "name": "Arcane Lock",
+    "level": 2,
+    "school": "Abjuration",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/4713fac1-ad7d-4ba5-a04e-66a4dd9296db.png",
+    "iconStatus": "ready",
+    "_path": "level_2/arcane-lock.json"
+  },
+  {
+    "name": "Arcanist’s Magic Aura",
+    "level": 2,
+    "school": "Illusion",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/arcanists-magic-aura.json"
+  },
+  {
+    "name": "Augury",
+    "level": 2,
+    "school": "Divination",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": true,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/de123680-b8f8-401a-8040-6a7df057cac7.png",
+    "iconStatus": "ready",
+    "_path": "level_2/augury.json"
+  },
+  {
+    "name": "Barkskin",
+    "level": 2,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/ab1fe53b-a426-4f18-9500-05581e132fd5.png",
+    "iconStatus": "ready",
+    "_path": "level_2/barkskin.json"
+  },
+  {
+    "name": "Beast Sense",
+    "level": 2,
+    "school": "Divination",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "ritual": true,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/6f50b1a0-fe33-4e77-a437-bd6024d01d9f.png",
+    "iconStatus": "ready",
+    "_path": "level_2/beast-sense.json"
+  },
+  {
+    "name": "Blindness/Deafness",
+    "level": 2,
+    "school": "Necromancy",
+    "classes": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/42f12565-603b-4e87-9def-e2141f6f203f.png",
+    "iconStatus": "ready",
+    "_path": "level_2/blindnessdeafness.json"
+  },
+  {
+    "name": "Blur",
+    "level": 2,
+    "school": "Illusion",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/756b7f8b-7471-4e7c-916c-851d6f14c33b.png",
+    "iconStatus": "ready",
+    "_path": "level_2/blur.json"
+  },
+  {
+    "name": "Branding Smite",
+    "level": 2,
+    "school": "Evocation",
+    "classes": [
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/ae37c97f-9318-44dd-849d-7be3117555be.png",
+    "iconStatus": "ready",
+    "_path": "level_2/branding-smite.json"
+  },
+  {
+    "name": "Calm Emotions",
+    "level": 2,
+    "school": "Enchantment",
+    "classes": [
+      "bard",
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/338430ea-fac5-4fc9-b89f-cef9540919ee.png",
+    "iconStatus": "ready",
+    "_path": "level_2/calm-emotions.json"
+  },
+  {
+    "name": "Cloud of Daggers",
+    "level": 2,
+    "school": "Conjuration",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/ec086665-d011-4987-b454-7caa2a0cc446.png",
+    "iconStatus": "ready",
+    "_path": "level_2/cloud-of-daggers.json"
+  },
+  {
+    "name": "Continual Flame",
+    "level": 2,
+    "school": "Evocation",
+    "classes": [
+      "cleric",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/caa49f22-f7ba-4dd3-8e19-f0479ccf8459.png",
+    "iconStatus": "ready",
+    "_path": "level_2/continual-flame.json"
+  },
+  {
+    "name": "Cordon Of Arrows",
+    "level": 2,
+    "school": "Transmutation",
+    "classes": [
+      "ranger"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/719c8a3a-0ad4-4040-b4f1-18d21b89406f.png",
+    "iconStatus": "ready",
+    "_path": "level_2/cordon-of-arrows.json"
+  },
+  {
+    "name": "Crown of Madness",
+    "level": 2,
+    "school": "Enchantment",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/ca7559f9-fea2-4956-b9d5-3a8a92d9f1f0.png",
+    "iconStatus": "ready",
+    "_path": "level_2/crown-of-madness.json"
+  },
+  {
+    "name": "Darkness",
+    "level": 2,
+    "school": "Evocation",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/63e3dfa6-c250-41ca-81a5-bfb52cb5b93f.png",
+    "iconStatus": "ready",
+    "_path": "level_2/darkness.json"
+  },
+  {
+    "name": "Darkvision",
+    "level": 2,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/9a333be1-b07e-4157-958d-29ab64169ca2.png",
+    "iconStatus": "ready",
+    "_path": "level_2/darkvision.json"
+  },
+  {
+    "name": "Detect Thoughts",
+    "level": 2,
+    "school": "Divination",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/9e7579b9-a9f6-46a1-a30e-c71beb1bf169.png",
+    "iconStatus": "ready",
+    "_path": "level_2/detect-thoughts.json"
+  },
+  {
+    "name": "Dust Devil",
+    "level": 2,
+    "school": "Conjuration",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/dust-devil.json"
+  },
+  {
+    "name": "Earthbind",
+    "level": 2,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/earthbind.json"
+  },
+  {
+    "name": "Enhance Ability",
+    "level": 2,
+    "school": "Transmutation",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "sorcerer"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/04641b07-97f7-48f5-ad59-e7d6e355fc5d.png",
+    "iconStatus": "ready",
+    "_path": "level_2/enhance-ability.json"
+  },
+  {
+    "name": "Enlarge/Reduce",
+    "level": 2,
+    "school": "Transmutation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/f12133ae-11ed-41fb-abf3-e48f62bd24a9.png",
+    "iconStatus": "ready",
+    "_path": "level_2/enlargereduce.json"
+  },
+  {
+    "name": "Enthrall",
+    "level": 2,
+    "school": "Enchantment",
+    "classes": [
+      "bard",
+      "warlock"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/0dd30804-cee0-46d2-9881-d8c8523c2e0c.png",
+    "iconStatus": "ready",
+    "_path": "level_2/enthrall.json"
+  },
+  {
+    "name": "Find Steed",
+    "level": 2,
+    "school": "Conjuration",
+    "classes": [
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/0f2f2ac1-a94a-44f6-9c1b-4a667065e03b.png",
+    "iconStatus": "ready",
+    "_path": "level_2/find-steed.json"
+  },
+  {
+    "name": "Find Traps",
+    "level": 2,
+    "school": "Divination",
+    "classes": [
+      "cleric",
+      "druid",
+      "ranger"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/cc78625c-d388-4534-aff8-42e744886559.png",
+    "iconStatus": "ready",
+    "_path": "level_2/find-traps.json"
+  },
+  {
+    "name": "Flame Blade",
+    "level": 2,
+    "school": "Evocation",
+    "classes": [
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/f0aacd44-4cbc-4f3f-bce7-184be7040221.png",
+    "iconStatus": "ready",
+    "_path": "level_2/flame-blade.json"
+  },
+  {
+    "name": "Flaming Sphere",
+    "level": 2,
+    "school": "Conjuration",
+    "classes": [
+      "druid",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/a150c0e6-e2b8-4549-ab3f-6ab1f1506165.png",
+    "iconStatus": "ready",
+    "_path": "level_2/flaming-sphere.json"
+  },
+  {
+    "name": "Force Touch",
+    "level": 2,
+    "school": "Evocation",
+    "classes": [],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/009c915c-e5b7-4c59-ae6f-539b1468e75f.png",
+    "iconStatus": "ready",
+    "_path": "level_2/force-touch.json"
+  },
+  {
+    "name": "Gentle Repose",
+    "level": 2,
+    "school": "Necromancy",
+    "classes": [
+      "cleric",
+      "wizard"
+    ],
+    "ritual": true,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/0c807cb2-753e-4209-9589-95eff5dce2b5.png",
+    "iconStatus": "ready",
+    "_path": "level_2/gentle-repose.json"
+  },
+  {
+    "name": "Gust of Wind",
+    "level": 2,
+    "school": "Evocation",
+    "classes": [
+      "sorcerer",
+      "wizard",
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/gust-of-wind.json"
+  },
+  {
+    "name": "Heat Metal",
+    "level": 2,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "bard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/heat-metal.json"
+  },
+  {
+    "name": "Hold Person",
+    "level": 2,
+    "school": "Enchantment",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": true,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/f3f485e8-1d67-4400-8fc7-f4f0d264dcfb.png",
+    "iconStatus": "ready",
+    "_path": "level_2/hold-person.json"
+  },
+  {
+    "name": "Invisibility",
+    "level": 2,
+    "school": "Illusion",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/86267b05-da00-4c19-a2b0-586600fd7d0e.png",
+    "iconStatus": "ready",
+    "_path": "level_3/invisibility.json"
+  },
+  {
+    "name": "Knock",
+    "level": 2,
+    "school": "Transmutation",
+    "classes": [
+      "sorcerer",
+      "wizard",
+      "bard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/knock.json"
+  },
+  {
+    "name": "Lesser Restoration",
+    "level": 2,
+    "school": "Abjuration",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/c3fcde6a-ecda-4856-84cf-78778a30d83a.png",
+    "iconStatus": "ready",
+    "_path": "level_2/lesser-restoration.json"
+  },
+  {
+    "name": "Levitate",
+    "level": 2,
+    "school": "Transmutation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/levitate.json"
+  },
+  {
+    "name": "Locate Animals or Plants",
+    "level": 2,
+    "school": "Divination",
+    "classes": [
+      "bard",
+      "druid",
+      "ranger"
+    ],
+    "ritual": true,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/locate-animals-or-plants.json"
+  },
+  {
+    "name": "Locate Object",
+    "level": 2,
+    "school": "Divination",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/locate-object.json"
+  },
+  {
+    "name": "Magic Mouth",
+    "level": 2,
+    "school": "Illusion",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "ritual": true,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/magic-mouth.json"
+  },
+  {
+    "name": "Magic Weapon",
+    "level": 2,
+    "school": "Transmutation",
+    "classes": [
+      "paladin",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/magic-weapon.json"
+  },
+  {
+    "name": "Mirror Image",
+    "level": 2,
+    "school": "Illusion",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/ba1ec099999cf716c0f37811dfd330b4a6573a20b06464c7114376432c30b051.png",
+    "iconStatus": "ready",
+    "_path": "level_2/mirror-image.json"
+  },
+  {
+    "name": "Misty Step",
+    "level": 2,
+    "school": "Conjuration",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/f28d5ef9db7a3f8eb490252f44de87146c7fd8a5bdc6b727d7787689f34aff08.png",
+    "iconStatus": "ready",
+    "_path": "level_2/misty-step.json"
+  },
+  {
+    "name": "Moonbeam",
+    "level": 2,
+    "school": "Evocation",
+    "classes": [
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/503d2cad-a597-4f02-8f51-8e354fdac055.png",
+    "iconStatus": "ready",
+    "_path": "level_2/moonbeam.json"
+  },
+  {
+    "name": "Pass without Trace",
+    "level": 2,
+    "school": "Abjuration",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/pass-without-trace.json"
+  },
+  {
+    "name": "Phantasmal Force",
+    "level": 2,
+    "school": "Illusion",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/phantasmal-force.json"
+  },
+  {
+    "name": "Prayer of Healing",
+    "level": 2,
+    "school": "Evocation",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/3ca4c22b-48bc-4c5a-b8b5-e0646e9de713.png",
+    "iconStatus": "ready",
+    "_path": "level_2/prayer-of-healing.json"
+  },
+  {
+    "name": "Protection from Poison",
+    "level": 2,
+    "school": "Abjuration",
+    "classes": [
+      "cleric",
+      "ranger",
+      "paladin",
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/protection-from-poison.json"
+  },
+  {
+    "name": "Pyrotechnics",
+    "level": 2,
+    "school": "Transmutation",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/pyrotechnics.json"
+  },
+  {
+    "name": "Ray of Enfeeblement",
+    "level": 2,
+    "school": "Necromancy",
+    "classes": [
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/ray-of-enfeeblement.json"
+  },
+  {
+    "name": "Rope Trick",
+    "level": 2,
+    "school": "Transmutation",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/rope-trick.json"
+  },
+  {
+    "name": "Scorching Ray",
+    "level": 2,
+    "school": "Evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/scorching-ray.json"
+  },
+  {
+    "name": "See Invisibility",
+    "level": 2,
+    "school": "Divination",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/see-invisibility.json"
+  },
+  {
+    "name": "Shatter",
+    "level": 2,
+    "school": "Evocation",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/shatter.json"
+  },
+  {
+    "name": "Silence",
+    "level": 2,
+    "school": "Illusion",
+    "classes": [
+      "bard",
+      "cleric",
+      "ranger"
+    ],
+    "ritual": true,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/1d03d2f8-39bf-4096-a389-c8a912b42d65.png",
+    "iconStatus": "ready",
+    "_path": "level_2/silence.json"
+  },
+  {
+    "name": "Skywrite",
+    "level": 2,
+    "school": "Transmutation",
+    "classes": [
+      "bard",
+      "druid",
+      "wizard"
+    ],
+    "ritual": true,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/skywrite.json"
+  },
+  {
+    "name": "Spider Climb",
+    "level": 2,
+    "school": "Transmutation",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/spider-climb.json"
+  },
+  {
+    "name": "Spike Growth",
+    "level": 2,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/spike-growth.json"
+  },
+  {
+    "name": "Spiritual Weapon",
+    "level": 2,
+    "school": "Evocation",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/a646f622-3650-4cad-b2de-36dfddbd0317.png",
+    "iconStatus": "ready",
+    "_path": "level_2/spiritual-weapon.json"
+  },
+  {
+    "name": "Suggestion",
+    "level": 2,
+    "school": "Enchantment",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/d15337a4-e5d0-47ce-8266-b6b1b4c7cc0d.png",
+    "iconStatus": "ready",
+    "_path": "level_2/suggestion.json"
+  },
+  {
+    "name": "Warding Bond",
+    "level": 2,
+    "school": "Abjuration",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/a66331c1-4c10-4728-bf63-9e01da9ebec4.png",
+    "iconStatus": "ready",
+    "_path": "level_2/warding-bond.json"
+  },
+  {
+    "name": "Warding Wind",
+    "level": 2,
+    "school": "Evocation",
+    "classes": [
+      "bard",
+      "druid",
+      "sorcerer"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/warding-wind.json"
+  },
+  {
+    "name": "Web",
+    "level": 2,
+    "school": "Conjuration",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/web.json"
+  },
+  {
+    "name": "Zone of Truth",
+    "level": 2,
+    "school": "Enchantment",
+    "classes": [
+      "bard",
+      "cleric",
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_2/zone-of-truth.json"
+  },
+  {
+    "name": "Animate Dead",
+    "level": 3,
+    "school": "Necromancy",
+    "classes": [
+      "cleric",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/8c04519d-10b3-45cf-bb84-4ec7de295c35.png",
+    "iconStatus": "ready",
+    "_path": "level_3/animate-dead.json"
+  },
+  {
+    "name": "Aura Of Vitality",
+    "level": 3,
+    "school": "Evocation",
+    "classes": [
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": null,
+    "iconStatus": "placeholder",
+    "_path": "level_3/aura-of-vitality.json"
+  },
+  {
+    "name": "Beacon of Hope",
+    "level": 3,
+    "school": "Abjuration",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/34c4170e-fd9f-4224-a635-b0c91d1b3446.png",
+    "iconStatus": "ready",
+    "_path": "level_3/beacon-of-hope.json"
+  },
+  {
+    "name": "Bestow Curse",
+    "level": 3,
+    "school": "Necromancy",
+    "classes": [
+      "bard",
+      "cleric",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/4f90d262-724d-433e-8b0f-4613b0476c08.png",
+    "iconStatus": "ready",
+    "_path": "level_3/bestow-curse.json"
+  },
+  {
+    "name": "Blinding Smite",
+    "level": 3,
+    "school": "Evocation",
+    "classes": [
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/a9e10400-5ec4-4538-b619-18e73d87c059.png",
+    "iconStatus": "ready",
+    "_path": "level_3/blinding-smite.json"
+  },
+  {
+    "name": "Blink",
+    "level": 3,
+    "school": "Transmutation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/ee27c1c5-61ae-4a41-8965-d12dc0542229.png",
+    "iconStatus": "ready",
+    "_path": "level_3/blink.json"
+  },
+  {
+    "name": "Call Lightning",
+    "level": 3,
+    "school": "Conjuration",
+    "classes": [
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/fdb5c6bc-bbf4-4661-a0f5-a53efbe5ff16.png",
+    "iconStatus": "ready",
+    "_path": "level_3/call-lightning.json"
+  },
+  {
+    "name": "Clairvoyance",
+    "level": 3,
+    "school": "Divination",
+    "classes": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/db287c5b-a9a6-48d8-a3af-b44bc9d4bf3d.png",
+    "iconStatus": "ready",
+    "_path": "level_3/clairvoyance.json"
+  },
+  {
+    "name": "Conjure Animals",
+    "level": 3,
+    "school": "Conjuration",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/32437770-45cc-417f-90db-5faf40822f2b.png",
+    "iconStatus": "ready",
+    "_path": "level_3/conjure-animals.json"
+  },
+  {
+    "name": "Conjure Barrage",
+    "level": 3,
+    "school": "Conjuration",
+    "classes": [
+      "ranger"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/12ad84fe-f021-42f6-8f85-77df48f6eae6.png",
+    "iconStatus": "ready",
+    "_path": "level_3/conjure-barrage.json"
+  },
+  {
+    "name": "Counterspell",
+    "level": 3,
+    "school": "Abjuration",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/2bf2d98a-e8b1-4868-a045-653a05488efe.png",
+    "iconStatus": "ready",
+    "_path": "level_3/counterspell.json"
+  },
+  {
+    "name": "Create Food and Water",
+    "level": 3,
+    "school": "Conjuration",
+    "classes": [
+      "cleric",
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/ba9c7701-1886-47c2-9e2a-0431043c4e5e.png",
+    "iconStatus": "ready",
+    "_path": "level_3/create-food-and-water.json"
+  },
+  {
+    "name": "Crusader's Mantle",
+    "level": 3,
+    "school": "Evocation",
+    "classes": [
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/76a1ad0b-e4a9-4121-ba16-4229a87e537c.png",
+    "iconStatus": "ready",
+    "_path": "level_3/crusaders-mantle.json"
+  },
+  {
+    "name": "Daylight",
+    "level": 3,
+    "school": "Evocation",
+    "classes": [
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger",
+      "sorcerer"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/4285fea9-94a4-417d-81d3-4b8390a1240d.png",
+    "iconStatus": "ready",
+    "_path": "level_3/daylight.json"
+  },
+  {
+    "name": "Dispel Magic",
+    "level": 3,
+    "school": "Abjuration",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/8daf03db-3029-4c5d-9d63-15beabda6514.png",
+    "iconStatus": "ready",
+    "_path": "level_3/dispel-magic.json"
+  },
+  {
+    "name": "Elemental Weapon",
+    "level": 3,
+    "school": "Transmutation",
+    "classes": [
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/d3aaab8e-fb91-4991-91e9-ec2fe38b2a1a.png",
+    "iconStatus": "ready",
+    "_path": "level_3/elemental-weapon.json"
+  },
+  {
+    "name": "Erupting Earth",
+    "level": 3,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_3/erupting-earth.json"
+  },
+  {
+    "name": "Fear",
+    "level": 3,
+    "school": "Illusion",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/971b14ca-2ff7-490b-8a68-895b839d8de3.png",
+    "iconStatus": "ready",
+    "_path": "level_3/fear.json"
+  },
+  {
+    "name": "Feign Death",
+    "level": 3,
+    "school": "Necromancy",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "wizard"
+    ],
+    "ritual": true,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/3d5782a2-9a62-4c8c-9da0-875009d99098.png",
+    "iconStatus": "ready",
+    "_path": "level_3/feign-death.json"
+  },
+  {
+    "name": "Fireball",
+    "level": 3,
+    "school": "Evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/8cae366b-76fc-4f81-b121-ddd999426609.png",
+    "iconStatus": "ready",
+    "_path": "level_3/fireball.json"
+  },
+  {
+    "name": "Flame Arrows",
+    "level": 3,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_3/flame-arrows.json"
+  },
+  {
+    "name": "Fly",
+    "level": 3,
+    "school": "Transmutation",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/7c356403-5e65-40aa-815d-5f3faa5a73e5.png",
+    "iconStatus": "ready",
+    "_path": "level_3/fly.json"
+  },
+  {
+    "name": "Frostweave Shroud",
+    "level": 3,
+    "school": "Evocation",
+    "classes": [],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/1efcd817-3b79-46c9-b4b6-600ab767b842.png",
+    "iconStatus": "ready",
+    "_path": "level_3/frostweave-shroud.json"
+  },
+  {
+    "name": "Gaseous Form",
+    "level": 3,
+    "school": "Transmutation",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/b3e83490-926e-49fb-a5f2-2fa72d84a154.png",
+    "iconStatus": "ready",
+    "_path": "level_3/gaseous-form.json"
+  },
+  {
+    "name": "Glyph of Warding",
+    "level": 3,
+    "school": "Abjuration",
+    "classes": [
+      "cleric",
+      "wizard",
+      "bard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_3/glyph-of-warding.json"
+  },
+  {
+    "name": "Haste",
+    "level": 3,
+    "school": "Transmutation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/cfa4387e-5faa-4b1d-b02f-d7117cbb9eec.png",
+    "iconStatus": "ready",
+    "_path": "level_3/haste.json"
+  },
+  {
+    "name": "Hypnotic Pattern",
+    "level": 3,
+    "school": "Illusion",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/a130592d-9010-4752-9c52-26c595b40bc2.png",
+    "iconStatus": "ready",
+    "_path": "level_3/hypnotic-pattern.json"
+  },
+  {
+    "name": "Lightning Arrow",
+    "level": 3,
+    "school": "Transmutation",
+    "classes": [
+      "ranger"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/63ccb05f-1d06-40ee-99c0-7a05538307bd.png",
+    "iconStatus": "ready",
+    "_path": "level_3/lightning-arrow.json"
+  },
+  {
+    "name": "Lightning Bolt",
+    "level": 3,
+    "school": "Evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_3/lightning-bolt.json"
+  },
+  {
+    "name": "Magic Circle",
+    "level": 3,
+    "school": "Abjuration",
+    "classes": [
+      "cleric",
+      "paladin",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/bc880aad-3163-496e-bde1-777702a62637.png",
+    "iconStatus": "ready",
+    "_path": "level_3/magic-circle.json"
+  },
+  {
+    "name": "Major Image",
+    "level": 3,
+    "school": "Illusion",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/857ed608-0e2c-4805-9cfb-941c76a83f5b.png",
+    "iconStatus": "ready",
+    "_path": "level_3/major-image.json"
+  },
+  {
+    "name": "Mass Healing Word",
+    "level": 3,
+    "school": "Evocation",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/cfaed63f-3536-4a02-be7a-6a32dcfeec37.png",
+    "iconStatus": "ready",
+    "_path": "level_3/mass-healing-word.json"
+  },
+  {
+    "name": "Meld into Stone",
+    "level": 3,
+    "school": "Transmutation",
+    "classes": [
+      "cleric",
+      "druid"
+    ],
+    "ritual": true,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/d313c3ee-2a7d-4f80-a53f-d2a33a2e9f38.png",
+    "iconStatus": "ready",
+    "_path": "level_3/meld-into-stone.json"
+  },
+  {
+    "name": "Nondetection",
+    "level": 3,
+    "school": "Abjuration",
+    "classes": [
+      "bard",
+      "ranger",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/319b96f8-0abe-4fa8-83d9-1019bc4239e4.png",
+    "iconStatus": "ready",
+    "_path": "level_3/nondetection.json"
+  },
+  {
+    "name": "Phantom Steed",
+    "level": 3,
+    "school": "Illusion",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": true,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/1a0df93d-1841-4974-8d25-0c61636311a2.png",
+    "iconStatus": "ready",
+    "_path": "level_3/phantom-steed.json"
+  },
+  {
+    "name": "Plant Growth",
+    "level": 3,
+    "school": "Transmutation",
+    "classes": [
+      "bard",
+      "druid",
+      "ranger"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/c6b50cee-9ef4-4b60-8358-29eed0ba6f1f.png",
+    "iconStatus": "ready",
+    "_path": "level_3/plant-growth.json"
+  },
+  {
+    "name": "Protection from Energy",
+    "level": 3,
+    "school": "Abjuration",
+    "classes": [
+      "cleric",
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/a9c26d1c-c55e-481e-847f-02978fbf1d2c.png",
+    "iconStatus": "ready",
+    "_path": "level_3/protection-from-energy.json"
+  },
+  {
+    "name": "Remove Curse",
+    "level": 3,
+    "school": "Abjuration",
+    "classes": [
+      "cleric",
+      "paladin",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/98b81aed-b54e-4fd0-8c81-6b99f72bc94e.png",
+    "iconStatus": "ready",
+    "_path": "level_3/remove-curse.json"
+  },
+  {
+    "name": "Revivify",
+    "level": 3,
+    "school": "Conjuration",
+    "classes": [
+      "cleric",
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/ec713ddd-0794-4c0f-9f90-a51e40026bea.png",
+    "iconStatus": "ready",
+    "_path": "level_3/revivify.json"
+  },
+  {
+    "name": "Sending",
+    "level": 3,
+    "school": "Evocation",
+    "classes": [
+      "bard",
+      "cleric",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/e29b9dc5-ce0f-42e4-82a0-e6eeea15c2de.png",
+    "iconStatus": "ready",
+    "_path": "level_3/sending.json"
+  },
+  {
+    "name": "Sleet Storm",
+    "level": 3,
+    "school": "Conjuration",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/20caf9d2-2516-4dbe-b06c-b9d1d84456d9.png",
+    "iconStatus": "ready",
+    "_path": "level_3/sleet-storm.json"
+  },
+  {
+    "name": "Slow",
+    "level": 3,
+    "school": "Transmutation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/bbedfd40-43db-4226-a9ae-f09c782ed624.png",
+    "iconStatus": "ready",
+    "_path": "level_3/slow.json"
+  },
+  {
+    "name": "Speak with Dead",
+    "level": 3,
+    "school": "Necromancy",
+    "classes": [
+      "bard",
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/850bb2c3-1096-4c5b-8706-c6151727a7e3.png",
+    "iconStatus": "ready",
+    "_path": "level_3/speak-with-dead.json"
+  },
+  {
+    "name": "Speak with Plants",
+    "level": 3,
+    "school": "Transmutation",
+    "classes": [
+      "bard",
+      "druid",
+      "ranger"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/5ab38c9c-511f-43c3-abe3-3e9112df1de8.png",
+    "iconStatus": "ready",
+    "_path": "level_3/speak-with-plants.json"
+  },
+  {
+    "name": "Spirit Guardians",
+    "level": 3,
+    "school": "Conjuration",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/81853668-d0a3-4131-a3cb-2e47d978684e.png",
+    "iconStatus": "ready",
+    "_path": "level_3/spirit-guardians.json"
+  },
+  {
+    "name": "Stinking Cloud",
+    "level": 3,
+    "school": "Conjuration",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/662c993d-6dd4-454a-aae4-8d6f7b3a782c.png",
+    "iconStatus": "ready",
+    "_path": "level_3/stinking-cloud.json"
+  },
+  {
+    "name": "Thornbind Grasp",
+    "level": 3,
+    "school": "Conjuration",
+    "classes": [],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/1546e678-b34d-4fb3-a462-1e9f2b4ddac0.png",
+    "iconStatus": "ready",
+    "_path": "level_3/thornbind-grasp.json"
+  },
+  {
+    "name": "Tidal Wave",
+    "level": 3,
+    "school": "Conjuration",
+    "classes": [
+      "druid",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_3/tidal-wave.json"
+  },
+  {
+    "name": "Tiny Hut",
+    "level": 3,
+    "school": "Evocation",
+    "classes": [
+      "wizard",
+      "bard"
+    ],
+    "ritual": true,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_3/tiny-hut.json"
+  },
+  {
+    "name": "Tongues",
+    "level": 3,
+    "school": "Divination",
+    "classes": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/099caf32-8a55-4b67-a49a-9421d01c90b1.png",
+    "iconStatus": "ready",
+    "_path": "level_3/tongues.json"
+  },
+  {
+    "name": "Vampiric Touch",
+    "level": 3,
+    "school": "Necromancy",
+    "classes": [
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_3/vampiric-touch.json"
+  },
+  {
+    "name": "Wall of Sand",
+    "level": 3,
+    "school": "Evocation",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_3/wall-of-sand.json"
+  },
+  {
+    "name": "Wall of Water",
+    "level": 3,
+    "school": "Evocation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_3/wall-of-water.json"
+  },
+  {
+    "name": "Water Breathing",
+    "level": 3,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": true,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_3/water-breathing.json"
+  },
+  {
+    "name": "Water Walk",
+    "level": 3,
+    "school": "Transmutation",
+    "classes": [
+      "cleric",
+      "druid",
+      "ranger",
+      "sorcerer"
+    ],
+    "ritual": true,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/ade8328ec83875c3d5f1404eca705c3d03eeb9026b1e14a8cce8d9b52269dbf2.png",
+    "iconStatus": "ready",
+    "_path": "level_3/water-walk.json"
+  },
+  {
+    "name": "Wind Wall",
+    "level": 3,
+    "school": "Evocation",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_3/wind-wall.json"
+  },
+  {
+    "name": "Arcane Eye",
+    "level": 4,
+    "school": "Divination",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/f2b0d6d0-e715-4507-8220-ffd697532f23.png",
+    "iconStatus": "ready",
+    "_path": "level_4/arcane-eye.json"
+  },
+  {
+    "name": "Aura of Life",
+    "level": 4,
+    "school": "Abjuration",
+    "classes": [
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/29822105-47ce-4dfa-9978-39f9121bc33f.png",
+    "iconStatus": "ready",
+    "_path": "level_4/aura-of-life.json"
+  },
+  {
+    "name": "Aura of Purity",
+    "level": 4,
+    "school": "Abjuration",
+    "classes": [
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/0cda9710-771f-4335-bfed-d50b33c2dad0.png",
+    "iconStatus": "ready",
+    "_path": "level_4/aura-of-purity.json"
+  },
+  {
+    "name": "Banishment",
+    "level": 4,
+    "school": "Abjuration",
+    "classes": [
+      "cleric",
+      "paladin",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/fee79441-5363-4172-925f-58fd684df30f.png",
+    "iconStatus": "ready",
+    "_path": "level_4/banishment.json"
+  },
+  {
+    "name": "Black Tentacles",
+    "level": 4,
+    "school": "Conjuration",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_4/black-tentacles.json"
+  },
+  {
+    "name": "Blight",
+    "level": 4,
+    "school": "Necromancy",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/48f580ee-41a9-4d78-9c0f-eb83f610a1cf.png",
+    "iconStatus": "ready",
+    "_path": "level_4/blight.json"
+  },
+  {
+    "name": "Compulsion",
+    "level": 4,
+    "school": "Enchantment",
+    "classes": [
+      "bard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/74dcd8d4-f80f-45bd-b9c8-29e960f662ee.png",
+    "iconStatus": "ready",
+    "_path": "level_4/compulsion.json"
+  },
+  {
+    "name": "Confusion",
+    "level": 4,
+    "school": "Enchantment",
+    "classes": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/894bdbb8-e912-438b-a4f8-030508b7e728.png",
+    "iconStatus": "ready",
+    "_path": "level_4/confusion.json"
+  },
+  {
+    "name": "Conjure Minor Elementals",
+    "level": 4,
+    "school": "Conjuration",
+    "classes": [
+      "druid",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/436cea92-c652-4b73-9f0d-30d8e2cd5c57.png",
+    "iconStatus": "ready",
+    "_path": "level_4/conjure-minor-elementals.json"
+  },
+  {
+    "name": "Conjure Woodland Beings",
+    "level": 4,
+    "school": "Conjuration",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/908f91c0-b0f9-4ac4-a768-130b4687934f.png",
+    "iconStatus": "ready",
+    "_path": "level_4/conjure-woodland-beings.json"
+  },
+  {
+    "name": "Control Water",
+    "level": 4,
+    "school": "Transmutation",
+    "classes": [
+      "cleric",
+      "druid",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/2bd8e235-334d-416d-8d5a-1569f1230a33.png",
+    "iconStatus": "ready",
+    "_path": "level_4/control-water.json"
+  },
+  {
+    "name": "Death Ward",
+    "level": 4,
+    "school": "Abjuration",
+    "classes": [
+      "cleric",
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/6d2b424b-0035-4000-8f09-9f7c91291ba7.png",
+    "iconStatus": "ready",
+    "_path": "level_4/death-ward.json"
+  },
+  {
+    "name": "Dimension Door",
+    "level": 4,
+    "school": "Conjuration",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/61c1e439-32f5-49e7-a814-795c16e03d46.png",
+    "iconStatus": "ready",
+    "_path": "level_4/dimension-door.json"
+  },
+  {
+    "name": "Divination",
+    "level": 4,
+    "school": "Divination",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": true,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/120e7144-af9b-47af-adee-39cfb712df79.png",
+    "iconStatus": "ready",
+    "_path": "level_4/divination.json"
+  },
+  {
+    "name": "Dominate Beast",
+    "level": 4,
+    "school": "Enchantment",
+    "classes": [
+      "druid",
+      "sorcerer"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/40b15bf0-f243-4f70-a521-366194b77a7d.png",
+    "iconStatus": "ready",
+    "_path": "level_4/dominate-beast.json"
+  },
+  {
+    "name": "Elemental Bane",
+    "level": 4,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_4/elemental-bane.json"
+  },
+  {
+    "name": "Fabricate",
+    "level": 4,
+    "school": "Transmutation",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/b22b60d4-7c5c-47c4-89f7-42c322c09e75.png",
+    "iconStatus": "ready",
+    "_path": "level_4/fabricate.json"
+  },
+  {
+    "name": "Faithful Hound",
+    "level": 4,
+    "school": "Conjuration",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_4/faithful-hound.json"
+  },
+  {
+    "name": "Fire Shield",
+    "level": 4,
+    "school": "Evocation",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/7feef143-1d9e-4ed8-befe-f4118a5f992a.png",
+    "iconStatus": "ready",
+    "_path": "level_4/fire-shield.json"
+  },
+  {
+    "name": "Freedom of Movement",
+    "level": 4,
+    "school": "Abjuration",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "ranger"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/f3475cde-6c3a-49e1-8398-856ebd777a20.png",
+    "iconStatus": "ready",
+    "_path": "level_4/freedom-of-movement.json"
+  },
+  {
+    "name": "Giant Insect",
+    "level": 4,
+    "school": "Transmutation",
+    "classes": [
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/ee252c70-6a7b-4541-8831-ce98db3f54b9.png",
+    "iconStatus": "ready",
+    "_path": "level_4/giant-insect.json"
+  },
+  {
+    "name": "Grasping Vine",
+    "level": 4,
+    "school": "Conjuration",
+    "classes": [
+      "ranger",
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_4/grasping-vine.json"
+  },
+  {
+    "name": "Greater Invisibility",
+    "level": 4,
+    "school": "Illusion",
+    "classes": [
+      "sorcerer",
+      "wizard",
+      "bard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_4/greater-invisibility.json"
+  },
+  {
+    "name": "Guardian of Faith",
+    "level": 4,
+    "school": "Conjuration",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_4/guardian-of-faith.json"
+  },
+  {
+    "name": "Hallucinatory Terrain",
+    "level": 4,
+    "school": "Illusion",
+    "classes": [
+      "bard",
+      "druid",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_4/hallucinatory-terrain.json"
+  },
+  {
+    "name": "Ice Storm",
+    "level": 4,
+    "school": "Evocation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/dd20e3cd8997e8aa4e89ef941c1b06f4b2147702c41c400e279cec881475f4e0.png",
+    "iconStatus": "ready",
+    "_path": "level_4/ice-storm.json"
+  },
+  {
+    "name": "Locate Creature",
+    "level": 4,
+    "school": "Divination",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_4/locate-creature.json"
+  },
+  {
+    "name": "Phantasmal Killer",
+    "level": 4,
+    "school": "Illusion",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_4/phantasmal-killer.json"
+  },
+  {
+    "name": "Polymorph",
+    "level": 4,
+    "school": "Transmutation",
+    "classes": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_4/polymorph.json"
+  },
+  {
+    "name": "Private Sanctum",
+    "level": 4,
+    "school": "Abjuration",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_4/private-sanctum.json"
+  },
+  {
+    "name": "Resilient Sphere",
+    "level": 4,
+    "school": "Evocation",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_4/resilient-sphere.json"
+  },
+  {
+    "name": "Secret Chest",
+    "level": 4,
+    "school": "Conjuration",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_4/secret-chest.json"
+  },
+  {
+    "name": "Staggering Smite",
+    "level": 4,
+    "school": "Evocation",
+    "classes": [
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_4/staggering-smite.json"
+  },
+  {
+    "name": "Stone Shape",
+    "level": 4,
+    "school": "Transmutation",
+    "classes": [
+      "cleric",
+      "druid",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_4/stone-shape.json"
+  },
+  {
+    "name": "Stoneskin",
+    "level": 4,
+    "school": "Abjuration",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "ranger",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_4/stoneskin.json"
+  },
+  {
+    "name": "Storm Sphere",
+    "level": 4,
+    "school": "Evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_4/storm-sphere.json"
+  },
+  {
+    "name": "Vitriolic Sphere",
+    "level": 4,
+    "school": "Evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_4/vitriolic-sphere.json"
+  },
+  {
+    "name": "Wall of Fire",
+    "level": 4,
+    "school": "Evocation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_4/wall-of-fire.json"
+  },
+  {
+    "name": "Watery Sphere",
+    "level": 4,
+    "school": "Conjuration",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_4/watery-sphere.json"
+  },
+  {
+    "name": "Animate Objects",
+    "level": 5,
+    "school": "Transmutation",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/df0d4c22-daeb-43d6-a7ed-02f9ad6c3e0c.png",
+    "iconStatus": "ready",
+    "_path": "level_5/animate-objects.json"
+  },
+  {
+    "name": "Antilife Shell",
+    "level": 5,
+    "school": "Abjuration",
+    "classes": [
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/2b691e85-e088-485f-9790-23398c99e527.png",
+    "iconStatus": "ready",
+    "_path": "level_5/antilife-shell.json"
+  },
+  {
+    "name": "Arcane Hand",
+    "level": 5,
+    "school": "Evocation",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/arcane-hand.json"
+  },
+  {
+    "name": "Awaken",
+    "level": 5,
+    "school": "Transmutation",
+    "classes": [
+      "bard",
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/awaken.json"
+  },
+  {
+    "name": "Banishing Smite",
+    "level": 5,
+    "school": "Abjuration",
+    "classes": [
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/979ac3ab-a113-4024-a7b2-ce45e99d3b7b.png",
+    "iconStatus": "ready",
+    "_path": "level_5/banishing-smite.json"
+  },
+  {
+    "name": "Circle of Power",
+    "level": 5,
+    "school": "Abjuration",
+    "classes": [
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/b0455e85-d9d3-4751-9516-45cd65d4e706.png",
+    "iconStatus": "ready",
+    "_path": "level_5/circle-of-power.json"
+  },
+  {
+    "name": "Cloudkill",
+    "level": 5,
+    "school": "Conjuration",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/456ea977-0735-4604-a283-401ae7e44883.png",
+    "iconStatus": "ready",
+    "_path": "level_5/cloudkill.json"
+  },
+  {
+    "name": "Commune",
+    "level": 5,
+    "school": "Divination",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": true,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/abab3d1e-28e7-419b-9601-980dc793cb32.png",
+    "iconStatus": "ready",
+    "_path": "level_5/commune.json"
+  },
+  {
+    "name": "Commune with Nature",
+    "level": 5,
+    "school": "Divination",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "ritual": true,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/e7c4dad1-0aba-4b28-bf5e-e6e5c1011699.png",
+    "iconStatus": "ready",
+    "_path": "level_5/commune-with-nature.json"
+  },
+  {
+    "name": "Cone of Cold",
+    "level": 5,
+    "school": "Evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/cea121fc-dda0-47d1-b7f7-0359a32cc039.png",
+    "iconStatus": "ready",
+    "_path": "level_5/cone-of-cold.json"
+  },
+  {
+    "name": "Conjure Elemental",
+    "level": 5,
+    "school": "Conjuration",
+    "classes": [
+      "druid",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/b6088839-99a6-492a-90d8-0f9a78520744.png",
+    "iconStatus": "ready",
+    "_path": "level_5/conjure-elemental.json"
+  },
+  {
+    "name": "Conjure Volley",
+    "level": 5,
+    "school": "Conjuration",
+    "classes": [
+      "ranger"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/96153b94-a8c6-4c55-98fe-07b6f2d794b3.png",
+    "iconStatus": "ready",
+    "_path": "level_5/conjure-volley.json"
+  },
+  {
+    "name": "Contact Other Plane",
+    "level": 5,
+    "school": "Divination",
+    "classes": [
+      "warlock",
+      "wizard"
+    ],
+    "ritual": true,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/b10b1430-c751-4e53-a818-263ab44b5a1b.png",
+    "iconStatus": "ready",
+    "_path": "level_5/contact-other-plane.json"
+  },
+  {
+    "name": "Contagion",
+    "level": 5,
+    "school": "Necromancy",
+    "classes": [
+      "cleric",
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/8e94c637-c8ed-4db1-88ab-4b0c4c436c8b.png",
+    "iconStatus": "ready",
+    "_path": "level_5/contagion.json"
+  },
+  {
+    "name": "Control Winds",
+    "level": 5,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/control-winds.json"
+  },
+  {
+    "name": "Creation",
+    "level": 5,
+    "school": "Illusion",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/creation.json"
+  },
+  {
+    "name": "Destructive Wave",
+    "level": 5,
+    "school": "Evocation",
+    "classes": [
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/a261a98f-3978-47c4-a294-c38e11c36436.png",
+    "iconStatus": "ready",
+    "_path": "level_5/destructive-wave.json"
+  },
+  {
+    "name": "Dispel Evil and Good",
+    "level": 5,
+    "school": "Abjuration",
+    "classes": [
+      "cleric",
+      "paladin"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/0f74fc67-6525-48d6-9b63-0b7dea4dd4d5.png",
+    "iconStatus": "ready",
+    "_path": "level_5/dispel-evil-and-good.json"
+  },
+  {
+    "name": "Dominate Person",
+    "level": 5,
+    "school": "Enchantment",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/8a2fc51e-d664-4254-9f1b-044ec9bd6e3d.png",
+    "iconStatus": "ready",
+    "_path": "level_5/dominate-person.json"
+  },
+  {
+    "name": "Dream",
+    "level": 5,
+    "school": "Illusion",
+    "classes": [
+      "bard",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/8f1fee07-41e9-4507-af29-783b301909df.png",
+    "iconStatus": "ready",
+    "_path": "level_5/dream.json"
+  },
+  {
+    "name": "Flame Strike",
+    "level": 5,
+    "school": "Evocation",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/6064a9b2-1c52-412e-ac1b-e22fd1f35afe.png",
+    "iconStatus": "ready",
+    "_path": "level_5/flame-strike.json"
+  },
+  {
+    "name": "Geas",
+    "level": 5,
+    "school": "Enchantment",
+    "classes": [
+      "cleric",
+      "wizard",
+      "paladin",
+      "druid",
+      "bard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/6da008d8-d854-4317-a666-b4af15b5ebcf.png",
+    "iconStatus": "ready",
+    "_path": "level_5/geas.json"
+  },
+  {
+    "name": "Greater Restoration",
+    "level": 5,
+    "school": "Abjuration",
+    "classes": [
+      "cleric",
+      "druid",
+      "bard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/greater-restoration.json"
+  },
+  {
+    "name": "Hallow",
+    "level": 5,
+    "school": "Evocation",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/hallow.json"
+  },
+  {
+    "name": "Hold Monster",
+    "level": 5,
+    "school": "Enchantment",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/hold-monster.json"
+  },
+  {
+    "name": "Immolation",
+    "level": 5,
+    "school": "Evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/immolation.json"
+  },
+  {
+    "name": "Insect Plague",
+    "level": 5,
+    "school": "Conjuration",
+    "classes": [
+      "cleric",
+      "druid",
+      "sorcerer"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/insect-plague.json"
+  },
+  {
+    "name": "Legend Lore",
+    "level": 5,
+    "school": "Divination",
+    "classes": [
+      "cleric",
+      "wizard",
+      "bard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/legend-lore.json"
+  },
+  {
+    "name": "Maelstrom",
+    "level": 5,
+    "school": "Evocation",
+    "classes": [
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/maelstrom.json"
+  },
+  {
+    "name": "Mass Cure Wounds",
+    "level": 5,
+    "school": "Conjuration",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/mass-cure-wounds.json"
+  },
+  {
+    "name": "Mislead",
+    "level": 5,
+    "school": "Illusion",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/mislead.json"
+  },
+  {
+    "name": "Modify Memory",
+    "level": 5,
+    "school": "Enchantment",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/modify-memory.json"
+  },
+  {
+    "name": "Passwall",
+    "level": 5,
+    "school": "Transmutation",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/passwall.json"
+  },
+  {
+    "name": "Planar Binding",
+    "level": 5,
+    "school": "Abjuration",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/planar-binding.json"
+  },
+  {
+    "name": "Raise Dead",
+    "level": 5,
+    "school": "Necromancy",
+    "classes": [
+      "cleric",
+      "paladin",
+      "bard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/raise-dead.json"
+  },
+  {
+    "name": "Reincarnate",
+    "level": 5,
+    "school": "Transmutation",
+    "classes": [
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/reincarnate.json"
+  },
+  {
+    "name": "Scrying",
+    "level": 5,
+    "school": "Divination",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/scrying.json"
+  },
+  {
+    "name": "Seeming",
+    "level": 5,
+    "school": "Illusion",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/seeming.json"
+  },
+  {
+    "name": "Swift Quiver",
+    "level": 5,
+    "school": "Transmutation",
+    "classes": [
+      "ranger"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/swift-quiver.json"
+  },
+  {
+    "name": "Telekinesis",
+    "level": 5,
+    "school": "Transmutation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/telekinesis.json"
+  },
+  {
+    "name": "Telepathic Bond",
+    "level": 5,
+    "school": "Divination",
+    "classes": [
+      "wizard",
+      "bard"
+    ],
+    "ritual": true,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/telepathic-bond.json"
+  },
+  {
+    "name": "Teleportation Circle",
+    "level": 5,
+    "school": "Conjuration",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/teleportation-circle.json"
+  },
+  {
+    "name": "Transmute Rock",
+    "level": 5,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/transmute-rock.json"
+  },
+  {
+    "name": "Tree Stride",
+    "level": 5,
+    "school": "Conjuration",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/tree-stride.json"
+  },
+  {
+    "name": "Wall of Force",
+    "level": 5,
+    "school": "Evocation",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/wall-of-force.json"
+  },
+  {
+    "name": "Wall of Stone",
+    "level": 5,
+    "school": "Evocation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_5/wall-of-stone.json"
+  },
+  {
+    "name": "Arcane Gate",
+    "level": 6,
+    "school": "Conjuration",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/e6b9935d-0b5a-4a7b-9f8c-5779ebcef4c6.png",
+    "iconStatus": "ready",
+    "_path": "level_6/arcane-gate.json"
+  },
+  {
+    "name": "Blade Barrier",
+    "level": 6,
+    "school": "Evocation",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/724fd90f-2bf0-4f63-84c8-457145dd863d.png",
+    "iconStatus": "ready",
+    "_path": "level_6/blade-barrier.json"
+  },
+  {
+    "name": "Bones of the Earth",
+    "level": 6,
+    "school": "Transmutation",
+    "classes": [
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/bones-of-the-earth.json"
+  },
+  {
+    "name": "Chain Lightning",
+    "level": 6,
+    "school": "Evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/15e8f5fa-add0-4697-a53a-293d5f694c8e.png",
+    "iconStatus": "ready",
+    "_path": "level_6/chain-lightning.json"
+  },
+  {
+    "name": "Circle of Death",
+    "level": 6,
+    "school": "Necromancy",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/1700ebb7-2bb3-4f79-bcd0-651e33b2cba5.png",
+    "iconStatus": "ready",
+    "_path": "level_6/circle-of-death.json"
+  },
+  {
+    "name": "Conjure Fey",
+    "level": 6,
+    "school": "Conjuration",
+    "classes": [
+      "druid",
+      "warlock"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/e21bffa2-5316-4925-a853-816ca9a32ca4.png",
+    "iconStatus": "ready",
+    "_path": "level_6/conjure-fey.json"
+  },
+  {
+    "name": "Contingency",
+    "level": 6,
+    "school": "Evocation",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/ef00555f-2224-4c8d-8e4c-6bb5cf44587c.png",
+    "iconStatus": "ready",
+    "_path": "level_6/contingency.json"
+  },
+  {
+    "name": "Create Undead",
+    "level": 6,
+    "school": "Necromancy",
+    "classes": [
+      "cleric",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/ef9129b9-4994-4579-ac79-c6a9d5bc7a57.png",
+    "iconStatus": "ready",
+    "_path": "level_6/create-undead.json"
+  },
+  {
+    "name": "Disintegrate",
+    "level": 6,
+    "school": "Transmutation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/7f058ae7-9056-417d-bdbb-2f049a40b96f.png",
+    "iconStatus": "ready",
+    "_path": "level_6/disintegrate.json"
+  },
+  {
+    "name": "Eyebite",
+    "level": 6,
+    "school": "Necromancy",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/967f51b8-e454-46bf-8621-ad2cd6db27fd.png",
+    "iconStatus": "ready",
+    "_path": "level_6/eyebite.json"
+  },
+  {
+    "name": "Find the Path",
+    "level": 6,
+    "school": "Divination",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/42ccb67e-fb3f-4e88-b404-49820ca81e1d.png",
+    "iconStatus": "ready",
+    "_path": "level_6/find-the-path.json"
+  },
+  {
+    "name": "Flesh to Stone",
+    "level": 6,
+    "school": "Transmutation",
+    "classes": [
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/594fa253-bfd7-4f38-a5e7-14091f977df8.png",
+    "iconStatus": "ready",
+    "_path": "level_6/flesh-to-stone.json"
+  },
+  {
+    "name": "Forbiddance",
+    "level": 6,
+    "school": "Abjuration",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": true,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/cb1ef10c-3e57-488b-aff8-174f6acd856c.png",
+    "iconStatus": "ready",
+    "_path": "level_6/forbiddance.json"
+  },
+  {
+    "name": "Freezing Sphere",
+    "level": 6,
+    "school": "Evocation",
+    "classes": [
+      "wizard",
+      "sorcerer"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/freezing-sphere.json"
+  },
+  {
+    "name": "Globe of Invulnerability",
+    "level": 6,
+    "school": "Abjuration",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/globe-of-invulnerability.json"
+  },
+  {
+    "name": "Guards and Wards",
+    "level": 6,
+    "school": "Abjuration",
+    "classes": [
+      "wizard",
+      "bard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/guards-and-wards.json"
+  },
+  {
+    "name": "Harm",
+    "level": 6,
+    "school": "Necromancy",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/harm.json"
+  },
+  {
+    "name": "Heal",
+    "level": 6,
+    "school": "Evocation",
+    "classes": [
+      "cleric",
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/heal.json"
+  },
+  {
+    "name": "Heroes' Feast",
+    "level": 6,
+    "school": "Conjuration",
+    "classes": [
+      "cleric",
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/heroes-feast.json"
+  },
+  {
+    "name": "Instant Summons",
+    "level": 6,
+    "school": "Conjuration",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": true,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/instant-summons.json"
+  },
+  {
+    "name": "Investiture of Flame",
+    "level": 6,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/investiture-of-flame.json"
+  },
+  {
+    "name": "Investiture of Ice",
+    "level": 6,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/investiture-of-ice.json"
+  },
+  {
+    "name": "Investiture of Stone",
+    "level": 6,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/investiture-of-stone.json"
+  },
+  {
+    "name": "Investiture of Wind",
+    "level": 6,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/investiture-of-wind.json"
+  },
+  {
+    "name": "Irresistible Dance",
+    "level": 6,
+    "school": "Enchantment",
+    "classes": [
+      "wizard",
+      "bard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/irresistible-dance.json"
+  },
+  {
+    "name": "Magic Jar",
+    "level": 6,
+    "school": "Necromancy",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/0558572ac4feed0e8ce25487b2ef85740635517d74ad62f46f68962d46726a3c.png",
+    "iconStatus": "ready",
+    "_path": "level_6/magic-jar.json"
+  },
+  {
+    "name": "Mass Suggestion",
+    "level": 6,
+    "school": "Enchantment",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/mass-suggestion.json"
+  },
+  {
+    "name": "Move Earth",
+    "level": 6,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/move-earth.json"
+  },
+  {
+    "name": "Planar Ally",
+    "level": 6,
+    "school": "Conjuration",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/planar-ally.json"
+  },
+  {
+    "name": "Primordial Ward",
+    "level": 6,
+    "school": "Abjuration",
+    "classes": [
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/primordial-ward.json"
+  },
+  {
+    "name": "Programmed Illusion",
+    "level": 6,
+    "school": "Illusion",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/programmed-illusion.json"
+  },
+  {
+    "name": "Sunbeam",
+    "level": 6,
+    "school": "Evocation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/sunbeam.json"
+  },
+  {
+    "name": "Transport via Plants",
+    "level": 6,
+    "school": "Conjuration",
+    "classes": [
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/transport-via-plants.json"
+  },
+  {
+    "name": "True Seeing",
+    "level": 6,
+    "school": "Divination",
+    "classes": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/true-seeing.json"
+  },
+  {
+    "name": "Wall of Ice",
+    "level": 6,
+    "school": "Evocation",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/wall-of-ice.json"
+  },
+  {
+    "name": "Wall of Thorns",
+    "level": 6,
+    "school": "Conjuration",
+    "classes": [
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/wall-of-thorns.json"
+  },
+  {
+    "name": "Wind Walk",
+    "level": 6,
+    "school": "Transmutation",
+    "classes": [
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/wind-walk.json"
+  },
+  {
+    "name": "Word of Recall",
+    "level": 6,
+    "school": "Conjuration",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_6/word-of-recall.json"
+  },
+  {
+    "name": "Arcane Sword",
+    "level": 7,
+    "school": "Evocation",
+    "classes": [
+      "wizard",
+      "bard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_7/arcane-sword.json"
+  },
+  {
+    "name": "Conjure Celestial",
+    "level": 7,
+    "school": "Conjuration",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/558bf898-b16a-4414-9cee-555ac58d3b8f.png",
+    "iconStatus": "ready",
+    "_path": "level_7/conjure-celestial.json"
+  },
+  {
+    "name": "Delayed Blast Fireball",
+    "level": 7,
+    "school": "Evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/4eb8344a-5d68-479a-83ce-26910db7d90f.png",
+    "iconStatus": "ready",
+    "_path": "level_7/delayed-blast-fireball.json"
+  },
+  {
+    "name": "Divine Word",
+    "level": 7,
+    "school": "Evocation",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/47bf9bff-edf1-4137-910a-1281db97009d.png",
+    "iconStatus": "ready",
+    "_path": "level_7/divine-word.json"
+  },
+  {
+    "name": "Etherealness",
+    "level": 7,
+    "school": "Transmutation",
+    "classes": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/34a55b0f-6749-4787-9738-6f52a0d7baa2.png",
+    "iconStatus": "ready",
+    "_path": "level_7/etherealness.json"
+  },
+  {
+    "name": "Finger of Death",
+    "level": 7,
+    "school": "Necromancy",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/a176c264-25b5-4546-a0bc-7389c9a1fa9a.png",
+    "iconStatus": "ready",
+    "_path": "level_7/finger-of-death.json"
+  },
+  {
+    "name": "Fire Storm",
+    "level": 7,
+    "school": "Evocation",
+    "classes": [
+      "cleric",
+      "druid",
+      "sorcerer"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/c293d70f-51c2-4b3f-aa68-c7dfb8b5e43b.png",
+    "iconStatus": "ready",
+    "_path": "level_7/fire-storm.json"
+  },
+  {
+    "name": "Forcecage",
+    "level": 7,
+    "school": "Evocation",
+    "classes": [
+      "bard",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/d5814314-cd33-4717-acbf-2bdf51a90efc.png",
+    "iconStatus": "ready",
+    "_path": "level_7/forcecage.json"
+  },
+  {
+    "name": "Magnificent Mansion",
+    "level": 7,
+    "school": "Conjuration",
+    "classes": [
+      "wizard",
+      "bard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_7/magnificent-mansion.json"
+  },
+  {
+    "name": "Mirage Arcane",
+    "level": 7,
+    "school": "Illusion",
+    "classes": [
+      "bard",
+      "druid",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/9ea0448b-d4e4-4a8d-814f-b0f1dfc12934.png",
+    "iconStatus": "ready",
+    "_path": "level_7/mirage-arcane.json"
+  },
+  {
+    "name": "Plane Shift",
+    "level": 7,
+    "school": "Conjuration",
+    "classes": [
+      "cleric",
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/45361eb0-b142-46c9-b0c7-99c6f18715ba.png",
+    "iconStatus": "ready",
+    "_path": "level_7/plane-shift.json"
+  },
+  {
+    "name": "Prismatic Spray",
+    "level": 7,
+    "school": "Evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/1f0823da-79b3-44c1-924c-5e9e626eff46.png",
+    "iconStatus": "ready",
+    "_path": "level_7/prismatic-spray.json"
+  },
+  {
+    "name": "Project Image",
+    "level": 7,
+    "school": "Illusion",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/61c28dc6-4c31-42b6-938d-c0ada7a088c6.png",
+    "iconStatus": "ready",
+    "_path": "level_7/project-image.json"
+  },
+  {
+    "name": "Regenerate",
+    "level": 7,
+    "school": "Transmutation",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/d2bcf54a-5a36-4b84-b06a-615166a8f6ca.png",
+    "iconStatus": "ready",
+    "_path": "level_7/regenerate.json"
+  },
+  {
+    "name": "Resurrection",
+    "level": 7,
+    "school": "Necromancy",
+    "classes": [
+      "bard",
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/3f5f3c7e-2caf-436c-8bd4-f5e8beb66f4f.png",
+    "iconStatus": "ready",
+    "_path": "level_7/resurrection.json"
+  },
+  {
+    "name": "Reverse Gravity",
+    "level": 7,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/073a8a4a-3f68-4a59-bfe0-b184b8acabeb.png",
+    "iconStatus": "ready",
+    "_path": "level_7/reverse-gravity.json"
+  },
+  {
+    "name": "Sequester",
+    "level": 7,
+    "school": "Transmutation",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/207da36b-04ce-42de-9af9-6e3725cb4f96.png",
+    "iconStatus": "ready",
+    "_path": "level_7/sequester.json"
+  },
+  {
+    "name": "Simulacrum",
+    "level": 7,
+    "school": "Illusion",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/ff499c38-a19c-44c9-bfd4-050663965a0c.png",
+    "iconStatus": "ready",
+    "_path": "level_7/simulacrum.json"
+  },
+  {
+    "name": "Symbol",
+    "level": 7,
+    "school": "Abjuration",
+    "classes": [
+      "bard",
+      "cleric",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/e663417c-06b8-4b2d-b2f5-b49e7675dc0c.png",
+    "iconStatus": "ready",
+    "_path": "level_7/symbol.json"
+  },
+  {
+    "name": "Teleport",
+    "level": 7,
+    "school": "Conjuration",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/dea70e1d-dbc3-43ce-9859-997b0c24dd81.png",
+    "iconStatus": "ready",
+    "_path": "level_7/teleport.json"
+  },
+  {
+    "name": "Whirlwind",
+    "level": 7,
+    "school": "Evocation",
+    "classes": [
+      "druid",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/b0c5fa3f8372ee06eb408356d0a1bd15a553cf8ce5a5ff88eccb8053b6582a45.png",
+    "iconStatus": "ready",
+    "_path": "level_7/whirlwind.json"
+  },
+  {
+    "name": "Animal Shapes",
+    "level": 8,
+    "school": "Transmutation",
+    "classes": [
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/7405663b-dfce-49ea-a159-a825cbacbbc3.png",
+    "iconStatus": "ready",
+    "_path": "level_8/animal-shapes.json"
+  },
+  {
+    "name": "Antimagic Field",
+    "level": 8,
+    "school": "Abjuration",
+    "classes": [
+      "cleric",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/d15046cd-4364-452d-8e44-1f3e6ba35929.png",
+    "iconStatus": "ready",
+    "_path": "level_8/antimagic-field.json"
+  },
+  {
+    "name": "Antipathy/Sympathy",
+    "level": 8,
+    "school": "Enchantment",
+    "classes": [
+      "druid",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/bdb84343-1be4-4aec-a49e-427121f33da1.png",
+    "iconStatus": "ready",
+    "_path": "level_8/antipathysympathy.json"
+  },
+  {
+    "name": "Clone",
+    "level": 8,
+    "school": "Necromancy",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/90a7bade-b84a-49e7-8ce3-6b8ead6b4023.png",
+    "iconStatus": "ready",
+    "_path": "level_8/clone.json"
+  },
+  {
+    "name": "Control Weather",
+    "level": 8,
+    "school": "Transmutation",
+    "classes": [
+      "cleric",
+      "druid",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/ed252e66-7bec-436a-bf34-c54b7fcf1e3f.png",
+    "iconStatus": "ready",
+    "_path": "level_8/control-weather.json"
+  },
+  {
+    "name": "Demiplane",
+    "level": 8,
+    "school": "Conjuration",
+    "classes": [
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/e46073b8-fa2f-4d70-9f80-c6d7067de933.png",
+    "iconStatus": "ready",
+    "_path": "level_8/demiplane.json"
+  },
+  {
+    "name": "Dominate Monster",
+    "level": 8,
+    "school": "Enchantment",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/b0d12994-9a62-461f-994f-104e0ea42b3c.png",
+    "iconStatus": "ready",
+    "_path": "level_8/dominate-monster.json"
+  },
+  {
+    "name": "Earthquake",
+    "level": 8,
+    "school": "Evocation",
+    "classes": [
+      "cleric",
+      "druid",
+      "sorcerer"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/2d1bc95e-9b35-4f67-91e5-d906d4e6f868.png",
+    "iconStatus": "ready",
+    "_path": "level_8/earthquake.json"
+  },
+  {
+    "name": "Feeblemind",
+    "level": 8,
+    "school": "Enchantment",
+    "classes": [
+      "bard",
+      "druid",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/88ce1fc4-9cea-4385-971f-dc182f00d961.png",
+    "iconStatus": "ready",
+    "_path": "level_8/feeblemind.json"
+  },
+  {
+    "name": "Glibness",
+    "level": 8,
+    "school": "Transmutation",
+    "classes": [
+      "bard",
+      "warlock"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/32003a01-d9ce-4007-bcff-72d43c4bb706.png",
+    "iconStatus": "ready",
+    "_path": "level_8/glibness.json"
+  },
+  {
+    "name": "Holy Aura",
+    "level": 8,
+    "school": "Abjuration",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/548507cc-5971-426e-8284-c1577cd4c43e.png",
+    "iconStatus": "ready",
+    "_path": "level_8/holy-aura.json"
+  },
+  {
+    "name": "Incendiary Cloud",
+    "level": 8,
+    "school": "Conjuration",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/f358cdb8-3742-42f0-b7f7-0a37a98ad08d.png",
+    "iconStatus": "ready",
+    "_path": "level_8/incendiary-cloud.json"
+  },
+  {
+    "name": "Maze",
+    "level": 8,
+    "school": "Conjuration",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_8/maze.json"
+  },
+  {
+    "name": "Mind Blank",
+    "level": 8,
+    "school": "Abjuration",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/c4f782fe-09b8-4d07-ab1e-24a5a0f20e39.png",
+    "iconStatus": "ready",
+    "_path": "level_8/mind-blank.json"
+  },
+  {
+    "name": "Power Word Stun",
+    "level": 8,
+    "school": "Enchantment",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/d9257c63-0b41-43db-af6d-956a35bd1eac.png",
+    "iconStatus": "ready",
+    "_path": "level_8/power-word-stun.json"
+  },
+  {
+    "name": "Sunburst",
+    "level": 8,
+    "school": "Evocation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/6b663df2-5af6-4bd9-a91c-34a5b7d4702d.png",
+    "iconStatus": "ready",
+    "_path": "level_8/sunburst.json"
+  },
+  {
+    "name": "Telepathy",
+    "level": 8,
+    "school": "Evocation",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/17371b5e-7ca1-44c4-b85e-2a48ab2bcc31.png",
+    "iconStatus": "ready",
+    "_path": "level_8/telepathy.json"
+  },
+  {
+    "name": "Tsunami",
+    "level": 8,
+    "school": "Conjuration",
+    "classes": [
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/e0ba7388-cc0e-49ef-af82-03d110d1dd55.png",
+    "iconStatus": "ready",
+    "_path": "level_8/tsunami.json"
+  },
+  {
+    "name": "Astral Projection",
+    "level": 9,
+    "school": "Necromancy",
+    "classes": [
+      "cleric",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/7530b0db-ce85-449b-ae81-3d878f788294.png",
+    "iconStatus": "ready",
+    "_path": "level_9/astral-projection.json"
+  },
+  {
+    "name": "Foresight",
+    "level": 9,
+    "school": "Divination",
+    "classes": [
+      "bard",
+      "druid",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/02d960fe-28a2-4e92-b67f-e984ae745aa9.png",
+    "iconStatus": "ready",
+    "_path": "level_9/foresight.json"
+  },
+  {
+    "name": "Gate",
+    "level": 9,
+    "school": "Conjuration",
+    "classes": [
+      "cleric",
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/1428a834-d348-4fc5-bb82-e3f6d801c961.png",
+    "iconStatus": "ready",
+    "_path": "level_9/gate.json"
+  },
+  {
+    "name": "Imprisonment",
+    "level": 9,
+    "school": "Abjuration",
+    "classes": [
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/ebfd6a45-cdc8-4feb-b221-ec888732f80d.png",
+    "iconStatus": "ready",
+    "_path": "level_9/imprisonment.json"
+  },
+  {
+    "name": "Maelstrom Crown",
+    "level": 9,
+    "school": "Evocation",
+    "classes": [],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/runware-1763531729960.png",
+    "iconStatus": "placeholder",
+    "_path": "level_9/maelstrom-crown.json"
+  },
+  {
+    "name": "Mass Heal",
+    "level": 9,
+    "school": "Conjuration",
+    "classes": [
+      "cleric"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/a9a8e211-96ba-4291-8f3e-1d7bac583055.png",
+    "iconStatus": "ready",
+    "_path": "level_9/mass-heal.json"
+  },
+  {
+    "name": "Meteor Swarm",
+    "level": 9,
+    "school": "Evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/6a2163bd-d600-4717-8151-1bff55fa8292.png",
+    "iconStatus": "ready",
+    "_path": "level_9/meteor-swarm.json"
+  },
+  {
+    "name": "Power Word Heal",
+    "level": 9,
+    "school": "Evocation",
+    "classes": [
+      "bard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/c47eb326-c2ab-42ba-a6c2-03f96d37495b.png",
+    "iconStatus": "ready",
+    "_path": "level_9/power-word-heal.json"
+  },
+  {
+    "name": "Power Word Kill",
+    "level": 9,
+    "school": "Enchantment",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/9efef3b2-e759-4307-b65f-963d3e15a034.png",
+    "iconStatus": "ready",
+    "_path": "level_9/power-word-kill.json"
+  },
+  {
+    "name": "Prismatic Wall",
+    "level": 9,
+    "school": "Abjuration",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/4abc8899-f0c8-47be-8ae2-6a74c77b021c.png",
+    "iconStatus": "ready",
+    "_path": "level_9/prismatic-wall.json"
+  },
+  {
+    "name": "Shapechange",
+    "level": 9,
+    "school": "Transmutation",
+    "classes": [
+      "druid",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/7d0cfe8f-2d71-4e7c-9bb6-f01436ffac1b.png",
+    "iconStatus": "ready",
+    "_path": "level_9/shapechange.json"
+  },
+  {
+    "name": "Storm of Vengeance",
+    "level": 9,
+    "school": "Conjuration",
+    "classes": [
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+    "iconStatus": "missing",
+    "_path": "level_9/storm-of-vengeance.json"
+  },
+  {
+    "name": "Time Stop",
+    "level": 9,
+    "school": "Transmutation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/e5595930-4ce3-4f03-802b-18b3484d3997.png",
+    "iconStatus": "ready",
+    "_path": "level_9/time-stop.json"
+  },
+  {
+    "name": "True Polymorph",
+    "level": 9,
+    "school": "Transmutation",
+    "classes": [
+      "bard",
+      "warlock",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/4c75b51a-9765-4445-831d-35ab2d5853d3.png",
+    "iconStatus": "ready",
+    "_path": "level_9/true-polymorph.json"
+  },
+  {
+    "name": "True Resurrection",
+    "level": 9,
+    "school": "Necromancy",
+    "classes": [
+      "cleric",
+      "druid"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/7bbb0468-baa0-42a0-b7d4-1551cf748cac.png",
+    "iconStatus": "ready",
+    "_path": "level_9/true-resurrection.json"
+  },
+  {
+    "name": "Weird",
+    "level": 9,
+    "school": "Illusion",
+    "classes": [
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/12282767-6cde-4d15-97f1-15d0a9c30c40.png",
+    "iconStatus": "ready",
+    "_path": "level_9/weird.json"
+  },
+  {
+    "name": "Wish",
+    "level": 9,
+    "school": "Conjuration",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "ritual": false,
+    "icon": "https://statsheet-cdn.b-cdn.net/images/5f6cdfb7-6cd7-4483-b947-1b37354b0d0d.png",
+    "iconStatus": "ready",
+    "_path": "level_9/wish.json"
+  }
+]

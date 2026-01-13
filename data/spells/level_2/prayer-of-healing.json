@@ -4,40 +4,45 @@
   },
   "name": "Prayer of Healing",
   "level": 2,
+  "flavorText": "Up to six creatures of your choice that you can see within range each regain hit points equal to 2d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
   "description": "Up to six creatures of your choice that you can see within range each regain hit points equal to 2d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
-  "castingTime": "10 minutes",
-  "range": "30 feet",
-  "components": "V",
-  "duration": "Instantaneous",
-  "damage": null,
   "school": "Evocation",
-  "isPublic": true,
   "classes": [
     "cleric"
   ],
   "ritual": false,
+  "castingTime": "10 minutes",
+  "range": "30 feet",
+  "components": "V",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": false,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": "When you cast this spell using a spell slot of 3rd level or higher, the healing increases by 1d8 for each slot level above 2nd.",
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/3ca4c22b-48bc-4c5a-b8b5-e0646e9de713.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "cleric",
+    "level2"
+  ],
   "iconLayers": [
-    {
-      "guid": "3ca4c22b-48bc-4c5a-b8b5-e0646e9de713${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e5180c6b-0e4a-42b5-a32a-26eb6bbdb287\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "97d8a5a8-053c-4a55-b193-dbd98990985e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"780939e6-9a8f-4f9b-ab46-fffc0ff88b49\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "a10882fe-1e2b-4437-8ca7-95559a49e65f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"0389774f-d5f1-49b3-ba2a-dfba481f0fe1\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "8b3b9cf2-c335-45a9-bd98-c12402b298be${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"f01dcf44-04ab-40d9-bfb3-1a15eaa932c1\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "04be4040-4835-4a1d-9dc4-be8f896d6998${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"76162e76-c3db-41b3-9b88-32bdd5c77221\"}",
-      "json": "{}"
-    }
+    [
+      "3ca4c22b-48bc-4c5a-b8b5-e0646e9de713${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e5180c6b-0e4a-42b5-a32a-26eb6bbdb287\"}",
+      "97d8a5a8-053c-4a55-b193-dbd98990985e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"780939e6-9a8f-4f9b-ab46-fffc0ff88b49\"}"
+    ],
+    [
+      "a10882fe-1e2b-4437-8ca7-95559a49e65f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"0389774f-d5f1-49b3-ba2a-dfba481f0fe1\"}"
+    ],
+    [
+      "8b3b9cf2-c335-45a9-bd98-c12402b298be${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"f01dcf44-04ab-40d9-bfb3-1a15eaa932c1\"}"
+    ],
+    [
+      "04be4040-4835-4a1d-9dc4-be8f896d6998${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"76162e76-c3db-41b3-9b88-32bdd5c77221\"}"
+    ]
   ]
 }

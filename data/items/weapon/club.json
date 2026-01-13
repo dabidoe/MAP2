@@ -1,0 +1,20 @@
+{
+  "id": "club",
+  "name": "Club",
+  "category": "weapon",
+  "rarity": "common",
+  "slot": "mainHand",
+  "weight": 2,
+  "value": 0.1,
+  "description": "A basic wooden bludgeoning weapon",
+  "weapon": {
+    "damage": "1d4",
+    "damageType": "bludgeoning",
+    "properties": [
+      "light"
+    ],
+    "range": "5 ft"
+  },
+  "icon": "⚔️",
+  "iconStatus": "placeholder"
+}

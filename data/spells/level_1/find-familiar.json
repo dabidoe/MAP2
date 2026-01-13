@@ -4,12 +4,46 @@
   },
   "name": "Find Familiar",
   "level": 1,
-  "description": "You summon a minor planar echo that coalesces into a tiny companion shaped as an animal or spirit of your choosing. It acts independently but loyally, relaying whispered impressions and magical signs. Though fragile, the echo can scout, deliver simple messages, or manifest faint glimmers of its home plane.",
-  "castingTime": "10 minutes",
-  "range": "30 feet",
-  "components": "V, S, M (a small charm of carved bone or crystal worth 5 gp)",
-  "duration": "8 hours",
-  "damage": "None",
+  "flavorText": "You summon a minor planar echo that coalesces into a tiny companion shaped as an animal or spirit of your choosing. It acts independently but loyally, relaying whispered impressions and magical signs. Though fragile, the echo can scout, deliver simple messages, or manifest faint glimmers of its home plane.",
+  "description": "Your familiar acts independently of you, but it always obeys your commands. In combat, it rolls its own initiative and acts on its own turn. A familiar can't attack, but it can take other actions as normal.\n\nWhen the familiar drops to 0 hit points, it disappears, leaving behind no physical form. It reappears after you cast this spell again.\n\nWhile your familiar is within 100 feet of you, you can communicate with it telepathically. Additionally, as an action, you can see through your familiar's eyes and hear what it hears until the start of your next turn, gaining the benefits of any special senses that the familiar has. During this time, you are deaf and blind with regard to your own senses.\n\nAs an action, you can temporarily dismiss your familiar. It disappears into a pocket dimension where it awaits your summons. Alternatively, you can dismiss it forever. As an action while it is temporarily dismissed, you can cause it to reappear in any unoccupied space within 30 feet of you.\n\nYou can't have more than one familiar at a time. If you cast this spell while you already have a familiar, you instead cause it to adopt a new form. Choose one of the forms from the above list. Your familiar transforms into the chosen creature.\n\nFinally, when you cast a spell with a range of touch, your familiar can deliver the spell as if it had cast the spell. Your familiar must be within 100 feet of you, and it must use its reaction to deliver the spell when you cast it. If the spell requires an attack roll, you use your action modifier for the roll.",
   "school": "Conjuration",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/c42b08df-3c07-4210-a22e-35f4e9ea34c2.png"
+  "classes": [
+    "wizard"
+  ],
+  "ritual": true,
+  "castingTime": "1 hour",
+  "range": "10 feet",
+  "components": "V, S, M (10gp worth of charcoal, incense, and herbs that must be consumed by fire in a brass brazier)",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "10gp worth of charcoal, incense, and herbs that must be consumed by fire in a brass brazier"
+    ]
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/c42b08df-3c07-4210-a22e-35f4e9ea34c2.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "None",
+  "tags": [
+    "wizard",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "c42b08df-3c07-4210-a22e-35f4e9ea34c2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"56a58266-c9f5-4788-bd6c-8497d4801765\"}"
+    ],
+    [
+      "43fd1201-71c7-4219-a001-057bf136eb53${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"88fa5957-1c35-4d98-b3d7-61b985835ed8\"}"
+    ],
+    [
+      "310471f3-bb55-4a4c-be71-31540257ed6f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"025cb54d-1f9f-424e-90cc-afda5bd13578\"}"
+    ],
+    [
+      "b6f85042-33d3-43eb-b371-baacbe9ac389${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"45881f2e-306a-47cd-ac47-ee102f3b5105\"}"
+    ]
+  ]
 }

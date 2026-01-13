@@ -4,37 +4,48 @@
   },
   "name": "Conjure Woodland Beings",
   "level": 4,
+  "flavorText": "You summon fey creatures that appear in unoccupied spaces that  you can see within range.  Choose one of the following options for what appears:\n\n* One fey creature of challenge rating 2 or lower\n\n* Two fey creatures of challenge rating 1 or lower\n\n* Four fey creatures of challenge rating 1/2 or lower\n\n* Eight fey creatures of challenge rating 1/4 or lower\n\nA summoned creature disappears when it drops to 0 hit points or when the spell ends.\n\nThe summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which have their own turns. They obey any verbal commands that you issue to them (no action required by you). If you don't issue any commands to them, they defend themselves from hostile creatures, but otherwise take no actions.\n\nThe DM has the creatures' statistics.",
   "description": "You summon fey creatures that appear in unoccupied spaces that  you can see within range.  Choose one of the following options for what appears:\n\n* One fey creature of challenge rating 2 or lower\n\n* Two fey creatures of challenge rating 1 or lower\n\n* Four fey creatures of challenge rating 1/2 or lower\n\n* Eight fey creatures of challenge rating 1/4 or lower\n\nA summoned creature disappears when it drops to 0 hit points or when the spell ends.\n\nThe summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which have their own turns. They obey any verbal commands that you issue to them (no action required by you). If you don't issue any commands to them, they defend themselves from hostile creatures, but otherwise take no actions.\n\nThe DM has the creatures' statistics.",
-  "castingTime": "1 action",
-  "range": "60 feet",
-  "components": "V, S, M (one holly berry per creature summoned)",
-  "duration": "Concentration, up to 1 hour",
-  "damage": null,
   "school": "Conjuration",
-  "isPublic": true,
   "classes": [
     "druid",
     "ranger"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "60 feet",
+  "components": "V, S, M (one holly berry per creature summoned)",
+  "duration": "Concentration, up to 1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "one holly berry per creature summoned"
+    ]
+  },
   "higherLevels": "When you cast this spell using certain higher-level spell slots, you choose one of the summoning options above, and more creatures appear: twice as many with a 6th-level slot and three times as many with an 8th-level slot.",
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/908f91c0-b0f9-4ac4-a768-130b4687934f.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "druid",
+    "ranger",
+    "level4"
+  ],
   "iconLayers": [
-    {
-      "guid": "908f91c0-b0f9-4ac4-a768-130b4687934f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"584f7bb8-8cdc-4a20-aa26-c697d026606a\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "9f242efe-a024-4460-8820-284bc6fcc37d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"7e0e3368-780a-437d-bda0-2c7695c6bf17\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "44d0e8dd-98e6-4b6b-9294-0191f1d5e596${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"71fd24ed-57d8-4fba-97c5-8f95a09003b5\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "e4a38bd8-2f67-47ba-a30a-ea758d2843d5${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e4929a24-2b57-416e-a65f-70e4db4678ed\"}",
-      "json": "{}"
-    }
+    [
+      "908f91c0-b0f9-4ac4-a768-130b4687934f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"584f7bb8-8cdc-4a20-aa26-c697d026606a\"}"
+    ],
+    [
+      "9f242efe-a024-4460-8820-284bc6fcc37d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"7e0e3368-780a-437d-bda0-2c7695c6bf17\"}"
+    ],
+    [
+      "44d0e8dd-98e6-4b6b-9294-0191f1d5e596${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"71fd24ed-57d8-4fba-97c5-8f95a09003b5\"}"
+    ],
+    [
+      "e4a38bd8-2f67-47ba-a30a-ea758d2843d5${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e4929a24-2b57-416e-a65f-70e4db4678ed\"}"
+    ]
   ]
 }

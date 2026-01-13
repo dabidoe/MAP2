@@ -1,0 +1,21 @@
+{
+  "id": "boots-speed",
+  "name": "Boots of Speed",
+  "category": "gear",
+  "rarity": "rare",
+  "slot": "feet",
+  "weight": 1,
+  "value": 4000,
+  "requiresAttunement": true,
+  "description": "While you wear these boots, you can use a bonus action to double your walking speed",
+  "magic": {
+    "effects": [
+      {
+        "name": "Speed Boost",
+        "description": "Double walking speed for 10 minutes. Once used, cannot be used again until you rest."
+      }
+    ]
+  },
+  "icon": "🎒",
+  "iconStatus": "placeholder"
+}

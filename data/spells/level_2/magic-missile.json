@@ -3,13 +3,47 @@
     "$oid": "6954698c5648a6dce9f6f748"
   },
   "name": "Magic Missile",
-  "level": 2,
-  "description": "You loose a resonant bolt of compressed sound that fractures into smaller ripples mid‑flight. The main lance strikes your chosen target, while the ripples lash out at up to two additional creatures within 10 feet of the first.",
+  "level": 1,
+  "flavorText": "You loose a resonant bolt of compressed sound that fractures into smaller ripples mid‑flight. The main lance strikes your chosen target, while the ripples lash out at up to two additional creatures within 10 feet of the first.",
+  "description": "You create three glowing darts of magical force. Each dart hits a creature of your choice that you can see within range. A dart deals 1d4 + 1 force damage to its target. The darts all strike simultaneously, and you can direct them to hit one creature or several.",
+  "school": "Evocation",
+  "classes": [
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
-  "range": "90 ft",
+  "range": "120 feet",
   "components": "V, S",
   "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot level above 1st.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/747eea45-7a72-47f8-9820-d731d3f4c051.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "Main hit 2d6 thunder; secondary ripples 1d6 thunder each",
-  "school": "Evocation",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/c3d16df6-731a-4766-8af9-e6a971a60980.png"
+  "tags": [
+    "sorcerer",
+    "wizard",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "747eea45-7a72-47f8-9820-d731d3f4c051${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4d15fdef-dc43-42e5-8622-4868e140ec40\"}"
+    ],
+    [
+      "1bbf42ee-bd98-4bf8-a78f-b1d4c43a0374${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"36338693-432d-430f-8668-1fa0f3150556\"}"
+    ],
+    [
+      "7ac479dd-11c3-49c1-927b-a3a0e704704a${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e705bdef-c589-4044-97ea-00055cdf63de\"}"
+    ],
+    [
+      "20caa3df-f46e-4830-a19d-c9ea9949ef06"
+    ]
+  ]
 }

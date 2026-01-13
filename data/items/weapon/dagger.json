@@ -1,0 +1,22 @@
+{
+  "id": "dagger",
+  "name": "Dagger",
+  "category": "weapon",
+  "rarity": "common",
+  "slot": "mainHand",
+  "weight": 1,
+  "value": 2,
+  "description": "A small, throwable blade",
+  "weapon": {
+    "damage": "1d4",
+    "damageType": "piercing",
+    "properties": [
+      "finesse",
+      "light",
+      "thrown"
+    ],
+    "range": "20/60 ft"
+  },
+  "icon": "⚔️",
+  "iconStatus": "placeholder"
+}

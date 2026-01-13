@@ -4,12 +4,48 @@
   },
   "name": "Expeditious Retreat",
   "level": 1,
-  "description": "A burst of arcane vigor floods your limbs, sharpening reflexes and lightening your stride. Until the spell ends, your speed increases by 20 feet and you can take the Dash action as a bonus action on each of your turns.",
+  "flavorText": "A burst of arcane vigor floods your limbs, sharpening reflexes and lightening your stride. Until the spell ends, your speed increases by 20 feet and you can take the Dash action as a bonus action on each of your turns.",
+  "description": "This spell allows you to move at an incredible pace. When you cast this spell, and then as a bonus action on each of your turns until the spell ends, you can take the Dash action.",
+  "school": "Transmutation",
+  "classes": [
+    "sorcerer",
+    "warlock",
+    "wizard"
+  ],
+  "ritual": false,
   "castingTime": "1 bonus action",
   "range": "Self",
   "components": "V, S",
   "duration": "Concentration, up to 10 minutes",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/082af48d-e336-4424-bd57-617e9122ba1b.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "None",
-  "school": "Transmutation",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/082af48d-e336-4424-bd57-617e9122ba1b.png"
+  "tags": [
+    "sorcerer",
+    "warlock",
+    "wizard",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "082af48d-e336-4424-bd57-617e9122ba1b${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"fee4b0f5-25a0-4c0b-b27f-20696b5abd56\"}"
+    ],
+    [
+      "0abb3bc1-ceb9-4947-88c4-2b368172769d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"fb871411-dd86-4a15-97b0-34e15ec195d6\"}"
+    ],
+    [
+      "621030a0-4ae6-4f61-bba8-5eea8871311e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"a5a9f5c7-4ea8-4162-b63b-c03dd4c5e574\"}"
+    ],
+    [
+      "301a16ff-8e36-437d-9db1-84d39cb09a24${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"f966e436-3e3c-4d20-8d15-aeaf0832af63\"}"
+    ]
+  ]
 }

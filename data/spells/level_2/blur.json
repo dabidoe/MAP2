@@ -4,37 +4,46 @@
   },
   "name": "Blur",
   "level": 2,
+  "flavorText": "Your body becomes blurred, shifting and wavering to all who can see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn’t rely on sight, as with blindsight, or can see through illusions, as with truesight.",
   "description": "Your body becomes blurred, shifting and wavering to all who can see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn’t rely on sight, as with blindsight, or can see through illusions, as with truesight.",
-  "castingTime": "1 action",
-  "range": "Self",
-  "components": "V",
-  "duration": "Concentration, up to 1 minute",
-  "damage": null,
   "school": "Illusion",
-  "isPublic": true,
   "classes": [
     "sorcerer",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Self",
+  "components": "V",
+  "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": false,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/756b7f8b-7471-4e7c-916c-851d6f14c33b.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "sorcerer",
+    "wizard",
+    "level2"
+  ],
   "iconLayers": [
-    {
-      "guid": "756b7f8b-7471-4e7c-916c-851d6f14c33b${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"67e77c74-6b40-40f4-91f0-7a2bdd78ec36\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "106ecf72-f396-448d-b953-b015c4f2f714${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"3a46c32f-76af-4a0c-a1c4-8054fa44e087\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "5e33ca6e-f3b7-4b15-80dd-7ce69c828a86",
-      "json": "{}"
-    },
-    {
-      "guid": "616420d7-c90d-4559-a57f-0fb6ba923e3d",
-      "json": "{}"
-    }
+    [
+      "756b7f8b-7471-4e7c-916c-851d6f14c33b${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"67e77c74-6b40-40f4-91f0-7a2bdd78ec36\"}"
+    ],
+    [
+      "106ecf72-f396-448d-b953-b015c4f2f714${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"3a46c32f-76af-4a0c-a1c4-8054fa44e087\"}"
+    ],
+    [
+      "5e33ca6e-f3b7-4b15-80dd-7ce69c828a86"
+    ],
+    [
+      "616420d7-c90d-4559-a57f-0fb6ba923e3d"
+    ]
   ]
 }

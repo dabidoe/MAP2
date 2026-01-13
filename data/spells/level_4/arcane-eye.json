@@ -4,36 +4,46 @@
   },
   "name": "Arcane Eye",
   "level": 4,
+  "flavorText": "You create an invisible, magical eye within range that hovers in the for the duration.\n\nYou mentally recieve visual information from the eye, which has normal vision and darkvision out to 30 feet. The eye can look in every direction.\n\nAs an action, you can move the eye up to 30 feet in any direction. There is no limit to how far away from you the eye can move, but it can't enter another plane of existence. A solid barrier blocks the eye's movement, but the eye can pass through an opening as small as 1 inch in diameter.",
   "description": "You create an invisible, magical eye within range that hovers in the for the duration.\n\nYou mentally recieve visual information from the eye, which has normal vision and darkvision out to 30 feet. The eye can look in every direction.\n\nAs an action, you can move the eye up to 30 feet in any direction. There is no limit to how far away from you the eye can move, but it can't enter another plane of existence. A solid barrier blocks the eye's movement, but the eye can pass through an opening as small as 1 inch in diameter.",
-  "castingTime": "1 action",
-  "range": "30 feet",
-  "components": "V, S, M (a bit of bat fur)",
-  "duration": "Concentration, up to 1 hour",
-  "damage": null,
   "school": "Divination",
-  "isPublic": true,
   "classes": [
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S, M (a bit of bat fur)",
+  "duration": "Concentration, up to 1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a bit of bat fur"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/f2b0d6d0-e715-4507-8220-ffd697532f23.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "wizard",
+    "level4"
+  ],
   "iconLayers": [
-    {
-      "guid": "f2b0d6d0-e715-4507-8220-ffd697532f23${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"a534165f-1b4e-4663-a6e5-e2fc6ca1c69c\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "92824aab-e1da-482f-b95d-152436d5cf4e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"6a74d532-fd9d-4bf5-8758-d19dbefeb93e\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "aa37c38c-beec-42f5-a02d-6b5ee3628793${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1adcf5a1-43f7-4dc9-979d-b7b2d3fef7f2\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "b09b9d11-ecb5-49da-84a6-56fab8bbf505${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"07e98fde-54ea-4e68-b6e7-f6cf18e081b3\"}",
-      "json": "{}"
-    }
+    [
+      "f2b0d6d0-e715-4507-8220-ffd697532f23${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"a534165f-1b4e-4663-a6e5-e2fc6ca1c69c\"}"
+    ],
+    [
+      "92824aab-e1da-482f-b95d-152436d5cf4e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"6a74d532-fd9d-4bf5-8758-d19dbefeb93e\"}"
+    ],
+    [
+      "aa37c38c-beec-42f5-a02d-6b5ee3628793${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1adcf5a1-43f7-4dc9-979d-b7b2d3fef7f2\"}"
+    ],
+    [
+      "b09b9d11-ecb5-49da-84a6-56fab8bbf505${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"07e98fde-54ea-4e68-b6e7-f6cf18e081b3\"}"
+    ]
   ]
 }

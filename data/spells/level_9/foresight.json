@@ -4,16 +4,9 @@
   },
   "name": "Foresight",
   "level": 9,
+  "flavorText": "You touch a willing creature and bestow a limited ability to see into the immediate future. For the duration the target can't be surprised and has advantage on attack rolls, ability checks, and saving throws. Additionally, other creatures have disadvantage on attack rolls against the target for the duration.\n\nThis spell immediately ends if you cast it again before its duration ends.",
   "description": "You touch a willing creature and bestow a limited ability to see into the immediate future. For the duration the target can't be surprised and has advantage on attack rolls, ability checks, and saving throws. Additionally, other creatures have disadvantage on attack rolls against the target for the duration.\n\nThis spell immediately ends if you cast it again before its duration ends.",
-  "castingTime": "1 minute",
-  "range": "Touch",
-  "components": "V, S, M (a hummingbird feather)",
-  "duration": "8 hours",
-  "damage": null,
   "school": "Divination",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "bard",
     "druid",
@@ -21,6 +14,42 @@
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 minute",
+  "range": "Touch",
+  "components": "V, S, M (a hummingbird feather)",
+  "duration": "8 hours",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a hummingbird feather"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/02d960fe-28a2-4e92-b67f-e984ae745aa9.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "bard",
+    "druid",
+    "warlock",
+    "wizard",
+    "level9"
+  ],
+  "iconLayers": [
+    [
+      "02d960fe-28a2-4e92-b67f-e984ae745aa9${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"8f78b26e-cb6a-41a6-a0d6-e9174f685286\"}"
+    ],
+    [
+      "bfbc5e05-eee3-485e-b922-2c7f87c34fb0${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1211c9d5-a3f3-46e7-bab5-05ef83d80d05\"}"
+    ],
+    [
+      "1baf2bea-02b1-4972-81b0-053731b72105${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"53aa74b7-01b4-4a6d-ac69-f2689a9f167c\"}"
+    ],
+    [
+      "d343eaac-2efa-4bad-a547-f7cc95703d5b${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"8f7faaad-3d85-480d-9b1b-1268709f5704\"}"
+    ]
+  ]
 }

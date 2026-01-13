@@ -4,38 +4,50 @@
   },
   "name": "Dream",
   "level": 5,
+  "flavorText": "This spell shapes a creature's dreams. Choose a creature known to you as the target of this spell. The target must be on the same plane of existence as you. Creatures that don't sleep, such as elves, can't be contacted by this spell. You, or a willing creature you touch, enters a trance state, acting as a messenger. While in the trance, the messenger is aware of his or her surroundings, but can't take actions or move.\n\nIf the target is asleep, the messenger appears in the target's dreams and can converse with the target as long as it remains asleep, through the duration of the spell. The messenger can also shape the environment of the dream, creating landscapes, objects, and other images. The messenger can emerge from the trance at any time, ending the effect of the spell early. The target recalls the dream perfectly upon waking. If the target is awake when you cast the spell, the messenger knows it, and can either end the trance (and the spell) or wait for the target to fall asleep, at which point the messenger appears in the target's dreams.\n\nYou can make the messenger appear monstrous and terrifying to the target. If you do, the messenger can deliver a message of no more than ten words and then the target must make a Wisdom saving throw. On a failed save, echoes of the phantasmal monstrosity spawn a nightmare that lasts the duration of the target's sleep and prevents the target from gaining any benefit from that rest. In addition, when the target wakes up, it takes 3d6 psychic damage.\n\nIf you have a body part, lock of hair, clipping from a nail, or similar portion of the target's body, the target makes its saving throw with disadvantage.",
   "description": "This spell shapes a creature's dreams. Choose a creature known to you as the target of this spell. The target must be on the same plane of existence as you. Creatures that don't sleep, such as elves, can't be contacted by this spell. You, or a willing creature you touch, enters a trance state, acting as a messenger. While in the trance, the messenger is aware of his or her surroundings, but can't take actions or move.\n\nIf the target is asleep, the messenger appears in the target's dreams and can converse with the target as long as it remains asleep, through the duration of the spell. The messenger can also shape the environment of the dream, creating landscapes, objects, and other images. The messenger can emerge from the trance at any time, ending the effect of the spell early. The target recalls the dream perfectly upon waking. If the target is awake when you cast the spell, the messenger knows it, and can either end the trance (and the spell) or wait for the target to fall asleep, at which point the messenger appears in the target's dreams.\n\nYou can make the messenger appear monstrous and terrifying to the target. If you do, the messenger can deliver a message of no more than ten words and then the target must make a Wisdom saving throw. On a failed save, echoes of the phantasmal monstrosity spawn a nightmare that lasts the duration of the target's sleep and prevents the target from gaining any benefit from that rest. In addition, when the target wakes up, it takes 3d6 psychic damage.\n\nIf you have a body part, lock of hair, clipping from a nail, or similar portion of the target's body, the target makes its saving throw with disadvantage.",
-  "castingTime": "1 minute",
-  "range": "Special",
-  "components": "V, S, M (a handful of sand, a dab of ink, and a writing quill plucked from a sleeping bird)",
-  "duration": "8 hours",
-  "damage": "3d6 psychic",
   "school": "Illusion",
-  "isPublic": true,
   "classes": [
     "bard",
     "warlock",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 minute",
+  "range": "Special",
+  "components": "V, S, M (a handful of sand, a dab of ink, and a writing quill plucked from a sleeping bird)",
+  "duration": "8 hours",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a handful of sand, a dab of ink, and a writing quill plucked from a sleeping bird"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/8f1fee07-41e9-4507-af29-783b301909df.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "3d6 psychic",
+  "tags": [
+    "bard",
+    "warlock",
+    "wizard",
+    "level5"
+  ],
   "iconLayers": [
-    {
-      "guid": "f0326b08-6544-4f1e-bdd1-863f8d3c1dc1${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"27171f37-c7ba-4af6-864a-8b72ed21f4e2\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "092c5948-33e8-492e-8a14-f4650c0d6f17${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"0f30be81-9161-4be8-8fd7-1e9ee4aca9f9\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "65586d47-9725-4b78-b0a7-cc0a3b5e1046${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"cf748966-b23b-4a52-8261-677c5c77243f\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "a97c07a7-2148-464c-8b3c-ae76e90d49b8${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"82af112b-0862-4ee6-8c13-389a95bb2fe0\"}",
-      "json": "{}"
-    }
+    [
+      "8f1fee07-41e9-4507-af29-783b301909df"
+    ],
+    [
+      "a22d7b9d-8983-419b-9ddb-23d7f152a7ca"
+    ],
+    [
+      "d8ab137f-6c67-4837-906d-8369eac276d3"
+    ],
+    [
+      "adaf83d3-f694-4dce-bbf0-c6a13fe20632"
+    ]
   ]
 }

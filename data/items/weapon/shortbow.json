@@ -1,0 +1,21 @@
+{
+  "id": "shortbow",
+  "name": "Shortbow",
+  "category": "weapon",
+  "rarity": "common",
+  "slot": "mainHand",
+  "weight": 2,
+  "value": 25,
+  "description": "A versatile ranged weapon",
+  "weapon": {
+    "damage": "1d6",
+    "damageType": "piercing",
+    "properties": [
+      "ammunition",
+      "two-handed"
+    ],
+    "range": "80/320 ft"
+  },
+  "icon": "⚔️",
+  "iconStatus": "placeholder"
+}

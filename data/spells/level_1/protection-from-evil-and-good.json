@@ -11,5 +11,20 @@
   "duration": "Concentration, up to 10 minutes",
   "damage": "None",
   "school": "Abjuration",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/1126edf8-0a07-4af8-bbd3-7ee145cdc9ad.png"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/1126edf8-0a07-4af8-bbd3-7ee145cdc9ad.png",
+  "iconStatus": "ready",
+  "iconLayers": [
+    [
+      "1126edf8-0a07-4af8-bbd3-7ee145cdc9ad${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"36e3e53b-c001-4f83-adb3-ec0ce13d55e1\"}"
+    ],
+    [
+      "c3b37257-8cba-48bc-8fe0-99ae5d097053${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c60ed223-c266-42c2-9757-430207e4f59a\"}"
+    ],
+    [
+      "73ec20a1-2f09-4ea8-9c45-6c90959b18e4${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1437d570-6b0e-450d-b75e-304d969a3aec\"}"
+    ],
+    [
+      "a2418553-9ee1-4887-9ace-8add81c5dc1d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d1d9407d-3292-4db8-86cb-516a7c158849\"}"
+    ]
+  ]
 }

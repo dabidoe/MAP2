@@ -3,13 +3,47 @@
     "$oid": "695469fb5648a6dce9f6f7c2"
   },
   "name": "Ray of Sickness",
-  "level": 2,
-  "description": "You snap a crackling lash of sickly energy at a creature you can see. The bolt gnaws at flesh and spirit alike. The target must make a Constitution save. On a failure, it suffers full damage and is wracked with debilitating weakness, granting disadvantage on its next attack roll. On a success, it takes half damage and suffers no further effect.",
+  "level": 1,
+  "flavorText": "You snap a crackling lash of sickly energy at a creature you can see. The bolt gnaws at flesh and spirit alike. The target must make a Constitution save. On a failure, it suffers full damage and is wracked with debilitating weakness, granting disadvantage on its next attack roll. On a success, it takes half damage and suffers no further effect.",
+  "description": "A ray of sickening greenish energy lashes out toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 2d8 poison damage and must make a Constitution saving throw. On a failed save, it is also poisoned until the end of your next turn.",
+  "school": "Necromancy",
+  "classes": [
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
-  "range": "90 ft",
+  "range": "60 feet",
   "components": "V, S",
   "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/d7f333f7-bdad-4fc7-a01d-a9154d33c3e0.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "2d10 necrotic",
-  "school": "Necromancy",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/d7f333f7-bdad-4fc7-a01d-a9154d33c3e0.png"
+  "tags": [
+    "sorcerer",
+    "wizard",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "d7f333f7-bdad-4fc7-a01d-a9154d33c3e0${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"571d7aa6-83ba-4fb1-a571-1756fb94cc32\"}"
+    ],
+    [
+      "02075fe6-d0b8-4312-aa85-72e606dce841${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e849315b-7968-4f3d-9a98-9d3e5a72475f\"}"
+    ],
+    [
+      "98651a6a-1eaf-46f9-985e-e95afdeac85e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"0870c0cd-66af-49b5-ba01-bd8d14b5495b\"}"
+    ],
+    [
+      "8122ccf6-da60-4174-abfc-2275ab752549"
+    ]
+  ]
 }

@@ -4,38 +4,50 @@
   },
   "name": "Animal Messenger",
   "level": 2,
+  "flavorText": "By means of this spell, you use an animal to deliver a message. Choose a Tiny beast you can see within range, such as a squirrel, a blue jay, or a bat. You specify a location, which you must have visited, and a recipient who matches a general description, such as “a man or woman dressed in the uniform of the town guard” or “a red-haired dwarf wearing a pointed hat.” You also speak a message of up to twenty-five words. The target beast travels for the duration of the spell toward the specified location, covering about 50 miles per 24 hours for a flying messenger, or 25 miles for other animals.\n\nWhen the messenger arrives, it delivers your message to the creature that you described, replicating the sound of your voice. The messenger speaks only to a creature matching the description you gave. If the messenger doesn’t reach its destination before the spell ends, the message is lost, and the beast makes its way back to where you cast this spell.",
   "description": "By means of this spell, you use an animal to deliver a message. Choose a Tiny beast you can see within range, such as a squirrel, a blue jay, or a bat. You specify a location, which you must have visited, and a recipient who matches a general description, such as “a man or woman dressed in the uniform of the town guard” or “a red-haired dwarf wearing a pointed hat.” You also speak a message of up to twenty-five words. The target beast travels for the duration of the spell toward the specified location, covering about 50 miles per 24 hours for a flying messenger, or 25 miles for other animals.\n\nWhen the messenger arrives, it delivers your message to the creature that you described, replicating the sound of your voice. The messenger speaks only to a creature matching the description you gave. If the messenger doesn’t reach its destination before the spell ends, the message is lost, and the beast makes its way back to where you cast this spell.",
-  "castingTime": "1 action",
-  "range": "30 feet",
-  "components": "V, S, M (a morsel of food)",
-  "duration": "24 hours",
-  "damage": null,
   "school": "Enchantment",
-  "isPublic": true,
   "classes": [
     "bard",
     "druid",
     "ranger"
   ],
   "ritual": true,
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S, M (a morsel of food)",
+  "duration": "24 hours",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a morsel of food"
+    ]
+  },
   "higherLevels": "If you cast this spell using a spell slot of 3rd level or higher, the duration of the spell increases by 48 hours for each slot level above 2nd.",
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/25538df2-2b14-4b97-879f-495c348be1b6.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "bard",
+    "druid",
+    "ranger",
+    "level2"
+  ],
   "iconLayers": [
-    {
-      "guid": "25538df2-2b14-4b97-879f-495c348be1b6${\"position\":\"0.5320957,0.4128635\",\"rotation\":0.0,\"scale\":\"1.558308,1.558308\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"fca024c3-cb6f-4856-8b84-48513166d296\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "ef3cc791-b059-46a5-be69-f6fb07f5b1fb${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"af383f0a-7ac3-4f6d-9f6d-4c8f1d203a6f\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "cab79957-af67-4a5a-a80b-82a0ac272fa2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"8c255dce-21eb-42f6-96c1-c5d18e4be800\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "6b74dfbf-6aa3-4423-a775-bc6f93c4dafe",
-      "json": "{}"
-    }
+    [
+      "25538df2-2b14-4b97-879f-495c348be1b6${\"position\":\"0.5320957,0.4128635\",\"rotation\":0.0,\"scale\":\"1.558308,1.558308\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"fca024c3-cb6f-4856-8b84-48513166d296\"}"
+    ],
+    [
+      "ef3cc791-b059-46a5-be69-f6fb07f5b1fb${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"af383f0a-7ac3-4f6d-9f6d-4c8f1d203a6f\"}"
+    ],
+    [
+      "cab79957-af67-4a5a-a80b-82a0ac272fa2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"8c255dce-21eb-42f6-96c1-c5d18e4be800\"}"
+    ],
+    [
+      "6b74dfbf-6aa3-4423-a775-bc6f93c4dafe"
+    ]
   ]
 }

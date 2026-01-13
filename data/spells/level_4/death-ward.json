@@ -4,38 +4,46 @@
   },
   "name": "Death Ward",
   "level": 4,
+  "flavorText": "You touch a creature and grant it a measure of protection from death.\n\nThe first time the target would drop to 0 hit points as a result of taking damage, the target instead drops to 1 hit point, and the spell ends.\n\nIf the spell is still in effect when the target is subjected to an effect that would kill it instantaneously without dealing damage, that effect is instead negated against the target, and the spell ends.",
   "description": "You touch a creature and grant it a measure of protection from death.\n\nThe first time the target would drop to 0 hit points as a result of taking damage, the target instead drops to 1 hit point, and the spell ends.\n\nIf the spell is still in effect when the target is subjected to an effect that would kill it instantaneously without dealing damage, that effect is instead negated against the target, and the spell ends.",
-  "castingTime": "1 action",
-  "range": "Touch",
-  "components": "V, S",
-  "duration": "8 hours",
-  "damage": null,
   "school": "Abjuration",
-  "isPublic": true,
   "classes": [
     "cleric",
     "paladin"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "8 hours",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
-  "iconLayers": [
-    {
-      "guid": "6d2b424b-0035-4000-8f09-9f7c91291ba7${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"a12d20e6-62f3-4a95-996e-b32ef83eb2db\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "903b5c50-7e6e-4908-aa98-6d6057305e86${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"46622be0-fc75-4350-9e1b-e54ebb6f0825\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "ec53a6de-bac7-47da-a089-4d0fa5cb71b7${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"05ebd9a1-3b5a-4556-8d22-19bae299a5b1\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "05ea5ead-338e-4ae1-b1ef-79559a3ae373",
-      "json": "{}"
-    }
+  "icon": "https://statsheet-cdn.b-cdn.net/images/6d2b424b-0035-4000-8f09-9f7c91291ba7.png",
+  "iconStatus": "ready",
+  "video": "/SPELL_VIDEOS/Death_Ward_You_touch_a_creature_and_grant_it_a_protective_war_a784db63-7247-4c31-83d0-971d98c6df4d_0.mp4",
+  "damage": null,
+  "tags": [
+    "cleric",
+    "paladin",
+    "level4"
   ],
-  "video": "/SPELL_VIDEOS/Death_Ward_You_touch_a_creature_and_grant_it_a_protective_war_a784db63-7247-4c31-83d0-971d98c6df4d_0.mp4"
+  "iconLayers": [
+    [
+      "6d2b424b-0035-4000-8f09-9f7c91291ba7${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"a12d20e6-62f3-4a95-996e-b32ef83eb2db\"}"
+    ],
+    [
+      "903b5c50-7e6e-4908-aa98-6d6057305e86${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"46622be0-fc75-4350-9e1b-e54ebb6f0825\"}"
+    ],
+    [
+      "ec53a6de-bac7-47da-a089-4d0fa5cb71b7${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"05ebd9a1-3b5a-4556-8d22-19bae299a5b1\"}"
+    ],
+    [
+      "05ea5ead-338e-4ae1-b1ef-79559a3ae373"
+    ]
+  ]
 }

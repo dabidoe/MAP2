@@ -4,22 +4,50 @@
   },
   "name": "Regenerate",
   "level": 7,
+  "flavorText": "You touch a creature and stimulate its natural healing ability. The target regains 4d8 + 15 hit points. For the duration of the spell, the target regains 1 hit point at the start of each of its turns (10 hit points each minute).\n\nThe target's severed body members (fingers, legs, tails, and so on), if any, are restored after 2 minutes. If you have the severed part and hold it to the stump, the spell instantaneously causes the limb to knit to the stump.",
   "description": "You touch a creature and stimulate its natural healing ability. The target regains 4d8 + 15 hit points. For the duration of the spell, the target regains 1 hit point at the start of each of its turns (10 hit points each minute).\n\nThe target's severed body members (fingers, legs, tails, and so on), if any, are restored after 2 minutes. If you have the severed part and hold it to the stump, the spell instantaneously causes the limb to knit to the stump.",
-  "castingTime": "1 minute",
-  "range": "Touch",
-  "components": "V, S, M (a prayer wheel and holy water)",
-  "duration": "1 hour",
-  "damage": null,
   "school": "Transmutation",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "bard",
     "cleric",
     "druid"
   ],
   "ritual": false,
+  "castingTime": "1 minute",
+  "range": "Touch",
+  "components": "V, S, M (a prayer wheel and holy water)",
+  "duration": "1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a prayer wheel and holy water"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/d2bcf54a-5a36-4b84-b06a-615166a8f6ca.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "bard",
+    "cleric",
+    "druid",
+    "level7"
+  ],
+  "iconLayers": [
+    [
+      "d2bcf54a-5a36-4b84-b06a-615166a8f6ca"
+    ],
+    [
+      "0d23e2b6-71c5-4af6-ac3b-01a3d43152a4"
+    ],
+    [
+      "95ead1e7-2b08-4059-8d2e-100ecd6e6117"
+    ],
+    [
+      "6668cc2d-6c69-47d4-8d04-a1feb4ef1485"
+    ]
+  ]
 }

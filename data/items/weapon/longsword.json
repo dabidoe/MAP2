@@ -1,0 +1,21 @@
+{
+  "id": "longsword",
+  "name": "Longsword",
+  "category": "weapon",
+  "rarity": "common",
+  "slot": "mainHand",
+  "weight": 3,
+  "value": 15,
+  "description": "A versatile one-handed sword",
+  "weapon": {
+    "damage": "1d8",
+    "damageType": "slashing",
+    "properties": [
+      "versatile"
+    ],
+    "versatileDamage": "1d10",
+    "range": "5 ft"
+  },
+  "icon": "⚔️",
+  "iconStatus": "placeholder"
+}

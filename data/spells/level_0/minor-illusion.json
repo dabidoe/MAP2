@@ -4,12 +4,52 @@
   },
   "name": "Minor Illusion",
   "level": 0,
-  "description": "You conjure a fleeting glimmer or whisper that briefly distracts creatures within sight or hearing. The illusion fits within a 5‑foot cube and can appear as a flicker of light, a shifting silhouette, or a soft hiss. A creature may use its action to inspect the effect and, on a successful Intelligence (Investigation) check against your spell save DC, identifies it as false. The illusion offers no sensory substance beyond sight or sound.",
+  "flavorText": "You conjure a fleeting glimmer or whisper that briefly distracts creatures within sight or hearing. The illusion fits within a 5‑foot cube and can appear as a flicker of light, a shifting silhouette, or a soft hiss. A creature may use its action to inspect the effect and, on a successful Intelligence (Investigation) check against your spell save DC, identifies it as false. The illusion offers no sensory substance beyond sight or sound.",
+  "description": "You create a sound or an image of an object within range that lasts for the duration. The illusion also ends if you dismiss it as an action or cast this spell again.\n\nIf you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else’s voice, a lion’s roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends.\n\nIf you create an image of an object—such as a chair, muddy footprints, or a small chest—it must be no larger than a 5-foot cube. The image can’t create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, because things can pass through it.\n\nIf a creature uses its action to examine the sound or image, the creature can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature.",
+  "school": "Illusion",
+  "classes": [
+    "bard",
+    "sorcerer",
+    "warlock",
+    "wizard"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
   "range": "30 feet",
-  "components": "S",
+  "components": "S, M (a bit of fleece)",
   "duration": "1 minute",
+  "componentsDetail": {
+    "verbal": false,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a bit of fleece"
+    ]
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/4b7329eb-cb5a-4059-8de3-f3acdf8c9f91.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "None",
-  "school": "Illusion",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/4b7329eb-cb5a-4059-8de3-f3acdf8c9f91.png"
+  "tags": [
+    "bard",
+    "sorcerer",
+    "warlock",
+    "wizard",
+    "cantrip"
+  ],
+  "iconLayers": [
+    [
+      "4b7329eb-cb5a-4059-8de3-f3acdf8c9f91${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"31e89496-e350-4f93-834c-29196c8fdbd1\"}"
+    ],
+    [
+      "24763402-dd90-4466-89e7-12a70a1076b1${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"23b8bef8-a5a2-467e-93de-d0c6c04a85ee\"}"
+    ],
+    [
+      "2bc9fbaf-0226-470c-afee-f4d93a8fa242${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"050fd5a9-6a86-442e-8cba-8a2e16da8a6b\"}"
+    ],
+    [
+      "b6fbe861-1f3c-473e-86eb-076c437720d8"
+    ]
+  ]
 }

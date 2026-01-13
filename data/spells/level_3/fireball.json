@@ -4,12 +4,48 @@
   },
   "name": "Fireball",
   "level": 3,
-  "description": "You call down a concentrated beam of radiant fire that spears a point you can see, erupting in a tight burst that sears everything caught within its glare.",
-  "castingTime": "1 action",
-  "range": "120 ft",
-  "components": "V, S",
-  "duration": "Instantaneous",
-  "damage": "6d8 radiant",
+  "flavorText": "You call down a concentrated beam of radiant fire that spears a point you can see, erupting in a tight burst that sears everything caught within its glare.",
+  "description": "A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes 8d6 fire damage on a failed save, or half as much damage on a successful one.\n\nThe fire spreads around corners. It ignites flammable objects in the area that aren't being worn or carried.",
   "school": "Evocation",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/8cae366b-76fc-4f81-b121-ddd999426609.png"
+  "classes": [
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
+  "castingTime": "1 action",
+  "range": "150 feet",
+  "components": "V, S, M (a tiny ball of bat guano and sulfur)",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a tiny ball of bat guano and sulfur"
+    ]
+  },
+  "higherLevels": "When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/8cae366b-76fc-4f81-b121-ddd999426609.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "6d8 radiant",
+  "tags": [
+    "sorcerer",
+    "wizard",
+    "level3"
+  ],
+  "iconLayers": [
+    [
+      "8cae366b-76fc-4f81-b121-ddd999426609${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"8d4d7633-e459-4579-954a-376e6bc0fd22\"}"
+    ],
+    [
+      "1b99055c-3aa7-4531-a8e7-2b13144d5fbb${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ef88abef-c1e4-4f9d-bf9b-cb88529bce61\"}"
+    ],
+    [
+      "a0a37d72-7ccd-483f-8d10-47eae2b279de${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"b9c1e094-6cf3-41f4-8e5f-e7ccc99c864f\"}"
+    ],
+    [
+      "f2662ab0-97ac-4567-88c0-9f15d10e24e7"
+    ]
+  ]
 }

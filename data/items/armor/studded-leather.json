@@ -1,0 +1,18 @@
+{
+  "id": "studded-leather",
+  "name": "Studded Leather",
+  "category": "armor",
+  "rarity": "common",
+  "slot": "body",
+  "weight": 13,
+  "value": 45,
+  "description": "Leather armor reinforced with metal studs",
+  "armor": {
+    "ac": 12,
+    "type": "light",
+    "maxDexBonus": null,
+    "stealthDisadvantage": false
+  },
+  "icon": "🛡️",
+  "iconStatus": "placeholder"
+}

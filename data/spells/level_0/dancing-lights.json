@@ -4,12 +4,50 @@
   },
   "name": "Dancing Lights",
   "level": 0,
-  "description": "Conjure up to four tiny motes of sentient light that flit about as you command. Each sprite sheds dim light in a small radius and can rearrange into simple patterns or symbols on your turn.",
+  "flavorText": "Conjure up to four tiny motes of sentient light that flit about as you command. Each sprite sheds dim light in a small radius and can rearrange into simple patterns or symbols on your turn.",
+  "description": "You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air for the duration. You can also combine the four lights into one glowing vaguely humanoid form of Medium size. Whichever form you choose, each light sheds dim light in a 10-foot radius. As a bonus action on your turn, you can move the lights up to 60 feet to a new spot within range. A light must be within 20 feet of another light created by this spell, and a light winks out if it exceeds the spell’s range.",
+  "school": "Evocation",
+  "classes": [
+    "bard",
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
-  "range": "90 ft",
-  "components": "V, S",
-  "duration": "Concentration, up to 10 minutes",
+  "range": "120 feet",
+  "components": "V, S, M (a bit of phosphorus or wychwood, or a glowworm)",
+  "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a bit of phosphorus or wychwood, or a glowworm"
+    ]
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/2e51be05-b97d-4c74-9a18-c1209d8b29f4.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "None",
-  "school": "Illusion",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/2e51be05-b97d-4c74-9a18-c1209d8b29f4.png"
+  "tags": [
+    "bard",
+    "sorcerer",
+    "wizard",
+    "cantrip"
+  ],
+  "iconLayers": [
+    [
+      "2e51be05-b97d-4c74-9a18-c1209d8b29f4${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"5a73acd6-ec14-4a9e-914f-43a117cba61c\"}"
+    ],
+    [
+      "a3574239-7fab-4e3c-ac61-24efbd4a8869${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"3e868c77-ad55-4df9-8a92-8b0e06684c35\"}"
+    ],
+    [
+      "66e955b8-5b67-4962-81a4-436c415d9d92"
+    ],
+    [
+      "6b87e97b-43ba-46be-b31a-045863d829d9"
+    ]
+  ]
 }

@@ -1,0 +1,21 @@
+{
+  "id": "wand-magic-missiles",
+  "name": "Wand of Magic Missiles",
+  "category": "wand",
+  "rarity": "uncommon",
+  "weight": 1,
+  "value": 8000,
+  "requiresAttunement": false,
+  "description": "This wand has 7 charges and regains 1d6+1 expended charges daily at dawn",
+  "magic": {
+    "charges": 7,
+    "effects": [
+      {
+        "name": "Magic Missile",
+        "description": "While holding it, you can expend 1 or more of its charges to cast the magic missile spell. For 1 charge, you cast the 1st-level version. You can increase the spell slot by one for each additional charge."
+      }
+    ]
+  },
+  "icon": "🪄",
+  "iconStatus": "placeholder"
+}

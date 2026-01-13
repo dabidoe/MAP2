@@ -4,12 +4,50 @@
   },
   "name": "Poison Spray",
   "level": 0,
-  "description": "You hiss a chilling word that summons a curl of necrotic vapors around a creature you can see. The target must succeed on a Constitution save or have its life-essence scoured by spectral rot.",
+  "flavorText": "You hiss a chilling word that summons a curl of necrotic vapors around a creature you can see. The target must succeed on a Constitution save or have its life-essence scoured by spectral rot.",
+  "description": "You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm. The creature must succeed on a Constitution saving throw or take 1d12 poison damage.\n\nThis spell's damage increases by 1d12 when you reach 5th level (2d12), 11th level (3d12), and 17th level (4d12).",
+  "school": "Conjuration",
+  "classes": [
+    "druid",
+    "sorcerer",
+    "warlock",
+    "wizard"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
-  "range": "15 ft",
-  "components": "V",
+  "range": "10 feet",
+  "components": "V, S",
   "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/2c4f2b89-ea38-4fee-a923-75cc565d1cfc.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "1d10 necrotic",
-  "school": "Necromancy",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/2c4f2b89-ea38-4fee-a923-75cc565d1cfc.png"
+  "tags": [
+    "druid",
+    "sorcerer",
+    "warlock",
+    "wizard",
+    "cantrip"
+  ],
+  "iconLayers": [
+    [
+      "2c4f2b89-ea38-4fee-a923-75cc565d1cfc${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"05a1ea7b-4ce0-4efe-a964-fbe8e6e9eb3d\"}"
+    ],
+    [
+      "accb2750-6032-465d-9a76-d3dc981825cc${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"811d8cbb-6ea0-4158-8930-6aa2b3f838eb\"}"
+    ],
+    [
+      "8151df20-74a0-4178-9641-ecd74414ddb7${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"292f1c53-2d54-4ee4-a9c9-aa4ee9a1d8e5\"}"
+    ],
+    [
+      "485dda6f-cf56-45cf-aa92-45d2554000e9"
+    ]
+  ]
 }

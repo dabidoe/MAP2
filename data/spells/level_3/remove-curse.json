@@ -4,12 +4,50 @@
   },
   "name": "Remove Curse",
   "level": 3,
-  "description": "You unleash a surge of cleansing force that targets a single curse clinging to a creature or object you touch. Minor and moderate hexes unravel instantly; more entrenched maledictions crack but may not fully break, instead weakening for a short time. This magic cannot unbind curses tied to a being’s core essence.",
+  "flavorText": "You unleash a surge of cleansing force that targets a single curse clinging to a creature or object you touch. Minor and moderate hexes unravel instantly; more entrenched maledictions crack but may not fully break, instead weakening for a short time. This magic cannot unbind curses tied to a being’s core essence.",
+  "description": "At your touch, all curses affecting one creature or object end. If the object is a cursed magical item, its curse remains, but the spell breaks its owner's attunement to the object so it can be removed or discarded.",
+  "school": "Abjuration",
+  "classes": [
+    "cleric",
+    "paladin",
+    "warlock",
+    "wizard"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
   "range": "Touch",
   "components": "V, S",
   "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/98b81aed-b54e-4fd0-8c81-6b99f72bc94e.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "None",
-  "school": "Abjuration",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/98b81aed-b54e-4fd0-8c81-6b99f72bc94e.png"
+  "tags": [
+    "cleric",
+    "paladin",
+    "warlock",
+    "wizard",
+    "level3"
+  ],
+  "iconLayers": [
+    [
+      "98b81aed-b54e-4fd0-8c81-6b99f72bc94e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"8862171a-ca4b-4c20-bae2-028611533c56\"}"
+    ],
+    [
+      "3900db41-1ec2-4177-938a-f03c02338aed${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"15f4fc05-ff7f-4646-939c-621704d000b3\"}"
+    ],
+    [
+      "ff7b9de7-33ce-44d1-8e50-1955bb4fbfbc${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"fa33199d-fdfc-41fb-88f7-6cb2587ef2bb\"}"
+    ],
+    [
+      "bd730d33-86bb-4e1f-8ad2-408897bf4a06${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"cbc3cfd3-b7c6-4292-8709-eadbafd3fc2c\"}"
+    ]
+  ]
 }

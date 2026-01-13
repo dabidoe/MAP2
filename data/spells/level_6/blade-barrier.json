@@ -4,20 +4,44 @@
   },
   "name": "Blade Barrier",
   "level": 6,
+  "flavorText": "You create a vertical wall of whirling, razor-sharp blades made of magical energy. The wall appears within range and lasts for the duration. You can make a straight wall up to 100 feet long, 20 feet high, and 5 feet thick, or a ringed wall up to 60 feet in diameter, 20 feet high, and 5 feet thick. The wall provides three-quarters cover to creatures behind it, and its space is difficult terrain.\n\nWhen a creature enters the wall's area for the first time on a turn or starts its turn there, the creature must make a Dexterity saving throw. On a failed save, the creature takes 6d10 slashing damage. On a successful save, the creature takes half as much damage.",
   "description": "You create a vertical wall of whirling, razor-sharp blades made of magical energy. The wall appears within range and lasts for the duration. You can make a straight wall up to 100 feet long, 20 feet high, and 5 feet thick, or a ringed wall up to 60 feet in diameter, 20 feet high, and 5 feet thick. The wall provides three-quarters cover to creatures behind it, and its space is difficult terrain.\n\nWhen a creature enters the wall's area for the first time on a turn or starts its turn there, the creature must make a Dexterity saving throw. On a failed save, the creature takes 6d10 slashing damage. On a successful save, the creature takes half as much damage.",
-  "castingTime": "1 action",
-  "range": "90 feet",
-  "components": "V, S",
-  "duration": "Concentration, up to 10 minutes",
-  "damage": "6d10 slashing",
   "school": "Evocation",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "cleric"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "90 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 10 minutes",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/724fd90f-2bf0-4f63-84c8-457145dd863d.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "6d10 slashing",
+  "tags": [
+    "cleric",
+    "level6"
+  ],
+  "iconLayers": [
+    [
+      "724fd90f-2bf0-4f63-84c8-457145dd863d"
+    ],
+    [
+      "56ac2c97-507f-440a-8713-67e086dd6a10"
+    ],
+    [
+      "d4dd3306-b042-4e7b-8792-abcf348be8ea"
+    ],
+    [
+      "143bda59-1a0b-4a33-aceb-855febbc213f"
+    ]
+  ]
 }

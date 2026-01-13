@@ -182,6 +182,58 @@ body {
     font-weight: bold;
 }
 
+/* Grimoire Filter Dropdowns */
+.grimoire-filter-dropdowns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(197, 169, 89, 0.2);
+}
+
+.filter-dropdown-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.filter-dropdown-label {
+    font-size: 0.7rem;
+    color: #8b7355;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.filter-dropdown {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(197, 169, 89, 0.3);
+    color: #e2d1b3;
+    padding: 6px 8px;
+    border-radius: 6px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-dropdown:hover {
+    border-color: #c5a959;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.filter-dropdown:focus {
+    outline: none;
+    border-color: #c5a959;
+    box-shadow: 0 0 10px rgba(197, 169, 89, 0.2);
+}
+
+.filter-dropdown option {
+    background: rgba(26, 20, 16, 0.98);
+    color: #e2d1b3;
+    padding: 8px;
+}
+
 .grimoire-spell-list {
     flex: 1;
     overflow-y: auto;
@@ -321,6 +373,255 @@ body {
     font-style: italic;
 }
 
+/* ===================================
+   ARMORY STYLES (reuse grimoire structure)
+   =================================== */
+
+.armory-category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.filter-label {
+    font-size: 0.75rem;
+    color: #8b7355;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    width: 100%;
+}
+
+.category-btn {
+    background: rgba(197, 169, 89, 0.1);
+    border: 1px solid rgba(197, 169, 89, 0.3);
+    color: #c5a959;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.category-btn:hover {
+    background: rgba(197, 169, 89, 0.2);
+    border-color: #c5a959;
+}
+
+.category-btn.active {
+    background: rgba(197, 169, 89, 0.3);
+    border-color: #c5a959;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+/* Item list items */
+.item-list-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(197, 169, 89, 0.15);
+    cursor: pointer;
+    transition: all 0.2s;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.item-list-item:hover {
+    background: rgba(197, 169, 89, 0.15);
+    border-left: 3px solid #c5a959;
+    padding-left: 12px;
+    transform: translateX(2px);
+}
+
+.item-list-item-icon {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 2px solid rgba(197, 169, 89, 0.4);
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.item-list-item-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.item-list-item-name {
+    font-size: 0.95rem;
+    color: #c5a959;
+    font-weight: bold;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-list-item-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.item-rarity-badge {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+}
+
+.item-category {
+    font-size: 0.75rem;
+    color: #8b7355;
+    font-style: italic;
+    text-transform: capitalize;
+}
+
+.item-value {
+    font-size: 0.75rem;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+/* Item Card Modal */
+.item-card-icon-display {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid rgba(197, 169, 89, 0.3);
+}
+
+.item-emoji {
+    font-size: 8rem;
+    line-height: 1;
+}
+
+.item-card-content {
+    padding: 20px;
+}
+
+.item-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(197, 169, 89, 0.3);
+}
+
+.item-card-title {
+    font-size: 1.4rem;
+    color: #c5a959;
+    letter-spacing: 1.5px;
+    margin-bottom: 4px;
+}
+
+.item-card-subtitle {
+    font-size: 0.85rem;
+    color: #8b7355;
+    font-style: italic;
+}
+
+.item-card-description {
+    font-size: 0.9rem;
+    color: #e2d1b3;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    border: 1px solid rgba(197, 169, 89, 0.1);
+}
+
+.item-card-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    border: 1px solid rgba(197, 169, 89, 0.2);
+}
+
+.item-card-stat-item {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(197, 169, 89, 0.2);
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.item-card-stat-item.full-width {
+    grid-column: 1 / -1;
+}
+
+.item-card-stat-label {
+    font-size: 0.75rem;
+    color: #8b7355;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.item-card-stat-value {
+    font-size: 0.9rem;
+    color: #c5a959;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.item-card-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.item-card-meta-item {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(197, 169, 89, 0.2);
+    border-radius: 6px;
+    padding: 10px;
+    text-align: center;
+}
+
+.item-card-meta-label {
+    font-size: 0.75rem;
+    color: #8b7355;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.item-card-meta-value {
+    font-size: 0.9rem;
+    color: #c5a959;
+}
+
 /* Spell Card Modal */
 .spell-card {
     position: relative;
@@ -344,10 +645,19 @@ body {
 
 .spell-card-icon-layer {
     position: absolute;
-    top: 50%;
-    left: 50%;
     transform-origin: center;
     pointer-events: none;
+    user-select: none;
+}
+
+.spell-card-video-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    pointer-events: auto;
 }
 
 .spell-card-content {
@@ -367,6 +677,21 @@ body {
     font-size: 1.4rem;
     color: #c5a959;
     letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.ritual-badge {
+    font-size: 0.7rem;
+    background: rgba(255, 215, 0, 0.2);
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    color: #FFD700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: normal;
+    letter-spacing: 1px;
 }
 
 .spell-card-level {
@@ -375,11 +700,83 @@ body {
     font-style: italic;
 }
 
+.spell-card-classes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.class-badge {
+    font-size: 0.7rem;
+    background: rgba(76, 175, 80, 0.2);
+    border: 1px solid rgba(76, 175, 80, 0.4);
+    color: #4CAF50;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+.spell-card-flavor {
+    font-size: 0.9rem;
+    color: #c5a959;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    padding: 12px;
+    background: rgba(197, 169, 89, 0.1);
+    border-radius: 6px;
+    border-left: 3px solid #c5a959;
+}
+
+.spell-card-description-container {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    padding-right: 5px;
+}
+
+.spell-card-description-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.spell-card-description-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+
+.spell-card-description-container::-webkit-scrollbar-thumb {
+    background: rgba(197, 169, 89, 0.4);
+    border-radius: 3px;
+}
+
 .spell-card-description {
     font-size: 0.9rem;
     color: #e2d1b3;
     line-height: 1.6;
+    white-space: pre-line;
+}
+
+.spell-card-higher-levels {
+    font-size: 0.85rem;
+    color: #e2d1b3;
+    line-height: 1.5;
     margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(156, 39, 176, 0.1);
+    border-radius: 6px;
+    border-left: 3px solid rgba(156, 39, 176, 0.5);
+}
+
+.spell-card-higher-levels strong {
+    color: #9c27b0;
+}
+
+.material-components {
+    font-size: 0.75rem;
+    color: #8b7355;
+    font-style: italic;
+    margin-top: 4px;
 }
 
 .spell-card-meta {
@@ -1286,3 +1683,4 @@ body.tactical-active #command-console {
 .unit-panel {
     display: none;
 }
+

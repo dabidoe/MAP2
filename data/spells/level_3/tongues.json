@@ -4,14 +4,9 @@
   },
   "name": "Tongues",
   "level": 3,
+  "flavorText": "This spell grants the creature you touch the ability to understand any spoken language it hears. Moreover, when the target speaks, any creature that knows at least one language and can hear the target understands what it says.",
   "description": "This spell grants the creature you touch the ability to understand any spoken language it hears. Moreover, when the target speaks, any creature that knows at least one language and can hear the target understands what it says.",
-  "castingTime": "1 action",
-  "range": "Touch",
-  "components": "V, M (a small clay model of a ziggurat)",
-  "duration": "1 hour",
-  "damage": null,
   "school": "Divination",
-  "isPublic": true,
   "classes": [
     "bard",
     "cleric",
@@ -20,24 +15,43 @@
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, M (a small clay model of a ziggurat)",
+  "duration": "1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": false,
+    "material": true,
+    "materialsNeeded": [
+      "a small clay model of a ziggurat"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/099caf32-8a55-4b67-a49a-9421d01c90b1.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "bard",
+    "cleric",
+    "sorcerer",
+    "warlock",
+    "wizard",
+    "level3"
+  ],
   "iconLayers": [
-    {
-      "guid": "099caf32-8a55-4b67-a49a-9421d01c90b1${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1b3607b8-bb20-48b5-b7ac-d0b7eeff51c9\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "8a40bdd6-5996-4507-812d-b4d30029306d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"f95bce49-e8cb-41eb-a291-10b4a93e0cd6\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "775ee826-f7ef-46be-bce3-bc167a1ed166${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"45b7ef28-17a6-4303-a012-2ee97ac31ae7\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "c1ac23ac-edd6-437e-ab67-de49f4cf4f27${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"26d34365-78e7-4352-9cd7-b30129e2673d\"}",
-      "json": "{}"
-    }
+    [
+      "099caf32-8a55-4b67-a49a-9421d01c90b1${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1b3607b8-bb20-48b5-b7ac-d0b7eeff51c9\"}"
+    ],
+    [
+      "8a40bdd6-5996-4507-812d-b4d30029306d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"f95bce49-e8cb-41eb-a291-10b4a93e0cd6\"}"
+    ],
+    [
+      "775ee826-f7ef-46be-bce3-bc167a1ed166${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"45b7ef28-17a6-4303-a012-2ee97ac31ae7\"}"
+    ],
+    [
+      "c1ac23ac-edd6-437e-ab67-de49f4cf4f27${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"26d34365-78e7-4352-9cd7-b30129e2673d\"}"
+    ]
   ]
 }

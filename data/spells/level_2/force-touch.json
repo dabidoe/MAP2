@@ -11,5 +11,20 @@
   "duration": "Instantaneous",
   "damage": "3d6 force",
   "school": "Evocation",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/009c915c-e5b7-4c59-ae6f-539b1468e75f.png"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/009c915c-e5b7-4c59-ae6f-539b1468e75f.png",
+  "iconStatus": "ready",
+  "iconLayers": [
+    [
+      "009c915c-e5b7-4c59-ae6f-539b1468e75f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e35da7c8-c445-4e1f-925b-68fc44d8a37b\"}"
+    ],
+    [
+      "127992fd-70a0-420c-8602-3e1e91af2c05"
+    ],
+    [
+      "e860075b-aa23-483c-bb82-98bde0730d55"
+    ],
+    [
+      "eb9ea169-61e1-41fd-92ae-26913b228dc4"
+    ]
+  ]
 }

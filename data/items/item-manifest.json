@@ -1,0 +1,104 @@
+{
+  "amulet": [
+    "amulet-health.json"
+  ],
+  "armor": [
+    "breastplate.json",
+    "chain-mail.json",
+    "half-plate.json",
+    "hide-armor.json",
+    "leather-armor.json",
+    "plate-armor.json",
+    "ring-mail.json",
+    "scale-mail.json",
+    "splint-armor.json",
+    "studded-leather.json"
+  ],
+  "gear": [
+    "arrows.json",
+    "backpack.json",
+    "bag-holding.json",
+    "bedroll.json",
+    "bolts.json",
+    "boots-speed.json",
+    "cloak-elvenkind.json",
+    "cloak-protection.json",
+    "gloves-thievery.json",
+    "grappling-hook.json",
+    "lantern-bullseye.json",
+    "lantern-hooded.json",
+    "rations.json",
+    "rope-hemp.json",
+    "rope-silk.json",
+    "tinderbox.json",
+    "torch.json",
+    "waterskin.json"
+  ],
+  "potion": [
+    "potion-flying.json",
+    "potion-greater-healing.json",
+    "potion-healing.json",
+    "potion-invisibility.json",
+    "potion-superior-healing.json",
+    "potion-supreme-healing.json"
+  ],
+  "ring": [
+    "ring-protection.json",
+    "ring-spell-storing.json"
+  ],
+  "scroll": [
+    "scroll-fireball.json",
+    "scroll-revivify.json"
+  ],
+  "shield": [
+    "shield.json"
+  ],
+  "tool": [
+    "crowbar.json",
+    "healer-kit.json",
+    "thieves-tools.json"
+  ],
+  "wand": [
+    "staff-power.json",
+    "wand-fireballs.json",
+    "wand-magic-missiles.json"
+  ],
+  "weapon": [
+    "battleaxe.json",
+    "club.json",
+    "dagger.json",
+    "greataxe.json",
+    "greatsword.json",
+    "handaxe.json",
+    "heavy-crossbow.json",
+    "javelin.json",
+    "light-crossbow.json",
+    "longbow.json",
+    "longsword-plus-1.json",
+    "longsword.json",
+    "mace.json",
+    "maul.json",
+    "quarterstaff.json",
+    "rapier.json",
+    "scimitar.json",
+    "shortbow.json",
+    "shortsword.json",
+    "spear.json",
+    "warhammer.json"
+  ],
+  "wondrous": [
+    "amulet-health.json",
+    "bag-of-holding.json",
+    "belt-giant-strength.json",
+    "boots-elvenkind.json",
+    "bracers-archery.json",
+    "cloak-elvenkind.json",
+    "cloak-protection.json",
+    "dust-disappearance.json",
+    "gauntlets-ogre-power.json",
+    "headband-intellect.json",
+    "immovable-rod.json",
+    "periapt-wound-closure.json",
+    "rope-entanglement.json"
+  ]
+}

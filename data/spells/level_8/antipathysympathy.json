@@ -4,21 +4,48 @@
   },
   "name": "Antipathy/Sympathy",
   "level": 8,
+  "flavorText": "This spell attracts or repels creatures of your choice. You target something within range, either a Huge or smaller object or creature or an area that is no larger than a 200-foot cube. Then specify a kind of intelligent creature, such as Red Dragons, Goblins, or vampires. You invest the target with an aura that either attracts or repels the specified creatures for the Duration. Choose antipathy or sympathy as the aura's Effect.\n\n* Antipathy. The Enchantment causes creatures of the kind you designated to feel an intense urge to leave the area and avoid the target. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or become Frightened. The creature remains frigh⁠tened while it can see the target or is within 60 feet of it. While frig⁠htened by the target, the creature must use its Movement to move to the nearest safe spot from which it can't see the target. If the creature moves more than 60 feet from the target and can't see it, the creature is no longer fright⁠ened, but the creature becomes fright⁠ened again if it regains sight of the target or moves within 60 feet of it.\n\n* Sympathy. The Enchantment causes the specified creatures to feel an intense urge to approach the target while within 60 feet of it or able to see it. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or use its Movement on each of its turns to enter the area or move within reach of the target. When the creature has done so, it can't willingly move away from the target. If the target damages or otherwise harms an affected creature, the affected creature can make a Wisdom saving throw to end the Effect, as described below.\n\n* Ending the Effect. If an affected creature ends its turn while not within 60 feet of the target or able to see it, the creature makes a Wisdom saving throw. ON a successful save, the creature is no longer affected by the target and recognizes the feeling of repugnance or attraction as magical. In addition, a creature affected by the Spells is allowed another Wisdom saving throw every 24 hours while the spell persists.\n\nA creature that successfully saves against this Effect is immune to it for 1 minute, after which time it can be affected again.",
   "description": "This spell attracts or repels creatures of your choice. You target something within range, either a Huge or smaller object or creature or an area that is no larger than a 200-foot cube. Then specify a kind of intelligent creature, such as Red Dragons, Goblins, or vampires. You invest the target with an aura that either attracts or repels the specified creatures for the Duration. Choose antipathy or sympathy as the aura's Effect.\n\n* Antipathy. The Enchantment causes creatures of the kind you designated to feel an intense urge to leave the area and avoid the target. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or become Frightened. The creature remains frigh⁠tened while it can see the target or is within 60 feet of it. While frig⁠htened by the target, the creature must use its Movement to move to the nearest safe spot from which it can't see the target. If the creature moves more than 60 feet from the target and can't see it, the creature is no longer fright⁠ened, but the creature becomes fright⁠ened again if it regains sight of the target or moves within 60 feet of it.\n\n* Sympathy. The Enchantment causes the specified creatures to feel an intense urge to approach the target while within 60 feet of it or able to see it. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or use its Movement on each of its turns to enter the area or move within reach of the target. When the creature has done so, it can't willingly move away from the target. If the target damages or otherwise harms an affected creature, the affected creature can make a Wisdom saving throw to end the Effect, as described below.\n\n* Ending the Effect. If an affected creature ends its turn while not within 60 feet of the target or able to see it, the creature makes a Wisdom saving throw. ON a successful save, the creature is no longer affected by the target and recognizes the feeling of repugnance or attraction as magical. In addition, a creature affected by the Spells is allowed another Wisdom saving throw every 24 hours while the spell persists.\n\nA creature that successfully saves against this Effect is immune to it for 1 minute, after which time it can be affected again.",
-  "castingTime": "1 hour",
-  "range": "60 feet",
-  "components": "V, S, M (either a hump of alum soaked in vinegar for the _antipathy_ effect or a drop of honey for the _sympathy_ effect)",
-  "duration": "10 days",
-  "damage": null,
   "school": "Enchantment",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "druid",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 hour",
+  "range": "60 feet",
+  "components": "V, S, M (either a hump of alum soaked in vinegar for the _antipathy_ effect or a drop of honey for the _sympathy_ effect)",
+  "duration": "10 days",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "either a hump of alum soaked in vinegar for the _antipathy_ effect or a drop of honey for the _sympathy_ effect"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/bdb84343-1be4-4aec-a49e-427121f33da1.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "druid",
+    "wizard",
+    "level8"
+  ],
+  "iconLayers": [
+    [
+      "bdb84343-1be4-4aec-a49e-427121f33da1"
+    ],
+    [
+      "80d40c88-e19b-4bfc-aaf8-2dbb01e080b8"
+    ],
+    [
+      "d31d13d0-2356-41d6-ab9d-a5bf14cbf115"
+    ],
+    [
+      "f7afc8a6-c419-4314-9813-7575f24f2712"
+    ]
+  ]
 }

@@ -4,12 +4,46 @@
   },
   "name": "Grease",
   "level": 1,
-  "description": "You conjure a patch of writhing, sticky muck that clings to anything stepping into it. Creatures entering or starting their turn in the area must succeed on a Strength saving throw or have their speed reduced to 0 until the start of their next turn.",
-  "castingTime": "1 action",
-  "range": "60 ft",
-  "components": "V, S, M (a drop of tar)",
-  "duration": "1 minute",
-  "damage": "Restrains movement; no direct damage",
+  "flavorText": "You conjure a patch of writhing, sticky muck that clings to anything stepping into it. Creatures entering or starting their turn in the area must succeed on a Strength saving throw or have their speed reduced to 0 until the start of their next turn.",
+  "description": "Slick grease covers the ground in a 10-foot square centered on a point within range and turns it into difficult terrain for the duration.\n\nWhen the grease appears, each creature standing in its area must succeed on a Dexterity saving throw or fall prone. A creature that enters the area or ends its turn there must also succeed on a Dexterity saving throw or fall prone.",
   "school": "Conjuration",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/70b2c009-f257-4058-acca-186230b30df1.png"
+  "classes": [
+    "wizard"
+  ],
+  "ritual": false,
+  "castingTime": "1 action",
+  "range": "60 feet",
+  "components": "V, S, M (a bit of pork rind or butter)",
+  "duration": "1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a bit of pork rind or butter"
+    ]
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/70b2c009-f257-4058-acca-186230b30df1.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "Restrains movement; no direct damage",
+  "tags": [
+    "wizard",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "70b2c009-f257-4058-acca-186230b30df1${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"f5014621-8ab6-4952-b58f-0781d751642a\"}"
+    ],
+    [
+      "f55c210f-f6fa-44e4-822b-8e9f5fd49292${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c3864a71-6547-4c07-bad8-9fa604573590\"}"
+    ],
+    [
+      "263d9ff6-d7fd-4fc5-ab58-73164431f1a6${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d0c1a72b-bb22-4d0e-81f6-e1ead64c1b3f\"}"
+    ],
+    [
+      "2c32ff82-1591-4fa0-919d-369ca7b9df31${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"59e9bfdf-516b-4687-9e1e-78f64ef4df16\"}"
+    ]
+  ]
 }

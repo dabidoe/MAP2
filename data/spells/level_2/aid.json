@@ -4,37 +4,48 @@
   },
   "name": "Aid",
   "level": 2,
+  "flavorText": "Your spell bolsters your allies with toughness and resolve. Choose up to three creatures within range. Each target’s hit point maximum and current hit points increase by 5 for the duration.",
   "description": "Your spell bolsters your allies with toughness and resolve. Choose up to three creatures within range. Each target’s hit point maximum and current hit points increase by 5 for the duration.",
-  "castingTime": "1 action",
-  "range": "30 feet",
-  "components": "V, S, M (a tiny strip of white cloth)",
-  "duration": "8 hours",
-  "damage": null,
   "school": "Abjuration",
-  "isPublic": true,
   "classes": [
     "cleric",
     "paladin"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S, M (a tiny strip of white cloth)",
+  "duration": "8 hours",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a tiny strip of white cloth"
+    ]
+  },
   "higherLevels": "When you cast this spell using a spell slot of 3rd level or higher, a target’s hit points increase by an additional 5 for each slot level above 2nd.",
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/339e9c57-e085-4289-8fc1-ed436cd94f4b.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "cleric",
+    "paladin",
+    "level2"
+  ],
   "iconLayers": [
-    {
-      "guid": "339e9c57-e085-4289-8fc1-ed436cd94f4b${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1.04098,1.04098\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"9abc9977-f12d-41bf-a418-e1fc153f0382\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "f0f95915-9ff6-4f2e-8926-d4c268b54a6e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"733c7619-6204-4dce-acaf-9f7c6b98485c\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "fda7c596-2972-4bd9-8309-0382f26a32be${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"fb2fb6fd-e8c3-4be0-b542-532c73ccb017\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "7562cb15-347f-44a1-9889-e501b6415ef7${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"5830e470-ba23-40cb-a9c7-e876308e3d36\"}",
-      "json": "{}"
-    }
+    [
+      "339e9c57-e085-4289-8fc1-ed436cd94f4b${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1.04098,1.04098\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"9abc9977-f12d-41bf-a418-e1fc153f0382\"}"
+    ],
+    [
+      "f0f95915-9ff6-4f2e-8926-d4c268b54a6e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"733c7619-6204-4dce-acaf-9f7c6b98485c\"}"
+    ],
+    [
+      "fda7c596-2972-4bd9-8309-0382f26a32be${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"fb2fb6fd-e8c3-4be0-b542-532c73ccb017\"}"
+    ],
+    [
+      "7562cb15-347f-44a1-9889-e501b6415ef7${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"5830e470-ba23-40cb-a9c7-e876308e3d36\"}"
+    ]
   ]
 }

@@ -3,13 +3,49 @@
     "$oid": "695496035648a6dce9f6f893"
   },
   "name": "Bane",
-  "level": 2,
-  "description": "You twist local gravity into a crushing knot around your foes. A faint ripple distorts the air as invisible weight drags at those caught in the effect. Each creature of your choice in range must succeed on a Strength saving throw or suffer impaired movement and difficulty escaping grapples until the spell ends.",
+  "level": 1,
+  "flavorText": "You twist local gravity into a crushing knot around your foes. A faint ripple distorts the air as invisible weight drags at those caught in the effect. Each creature of your choice in range must succeed on a Strength saving throw or suffer impaired movement and difficulty escaping grapples until the spell ends.",
+  "description": "Up to three creatures of your choice that you can see within range must make Charisma saving throws. Whenever a target that fails this saving throw makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw.",
+  "school": "Enchantment",
+  "classes": [
+    "bard",
+    "cleric"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
-  "range": "20 feet",
-  "components": "V, S",
+  "range": "30 feet",
+  "components": "V, S, M (a drop of blood)",
   "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a drop of blood"
+    ]
+  },
+  "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/ed910db2-ad55-4d58-a85c-46d50d8bf7df.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "None",
-  "school": "Transmutation",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/ed910db2-ad55-4d58-a85c-46d50d8bf7df.png"
+  "tags": [
+    "bard",
+    "cleric",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "ed910db2-ad55-4d58-a85c-46d50d8bf7df${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"012dbb9e-1b40-42d3-af17-48986c8e0f7c\"}"
+    ],
+    [
+      "0c7aa2ff-c681-49f6-9bfb-9639e14c167d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"dbf6eb67-70e0-4430-8d5b-ca8a639f3500\"}"
+    ],
+    [
+      "17f62fd6-458f-45b3-9f50-9e333a45ca69${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"b4fae604-ec2e-4e93-8128-76800a302a2c\"}"
+    ],
+    [
+      "8d754699-3ce5-45c0-b2ee-9cd68648d596${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"8ca656c7-31df-4051-995c-f9a1478aa2d5\"}"
+    ]
+  ]
 }

@@ -4,16 +4,9 @@
   },
   "name": "Darkvision",
   "level": 2,
+  "flavorText": "You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 60 feet.",
   "description": "You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 60 feet.",
-  "castingTime": "1 action",
-  "range": "Touch",
-  "components": "V, S, M (either a pinch of dried carrot or an agate)",
-  "duration": "8 hours",
-  "damage": null,
   "school": "Transmutation",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "druid",
     "ranger",
@@ -21,6 +14,42 @@
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S, M (either a pinch of dried carrot or an agate)",
+  "duration": "8 hours",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "either a pinch of dried carrot or an agate"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/9a333be1-b07e-4157-958d-29ab64169ca2.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "druid",
+    "ranger",
+    "sorcerer",
+    "wizard",
+    "level2"
+  ],
+  "iconLayers": [
+    [
+      "9a333be1-b07e-4157-958d-29ab64169ca2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"acb476b8-4393-4d84-a60e-300aa752b1f5\"}"
+    ],
+    [
+      "415e4dc4-eb73-4d86-bee7-95a04603cd28${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"78c21ce8-3c9d-44d1-9632-16a23878647e\"}"
+    ],
+    [
+      "7b3c2f48-17bf-4f4c-8239-a649da3f1016${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"a7acdfaa-a79b-4ef5-a344-f339470accf3\"}"
+    ],
+    [
+      "a1ef9e5a-2f57-4a1e-a669-715a8e6f758f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"25d5e0f4-9518-4c2c-9b77-26a55eac1a26\"}"
+    ]
+  ]
 }

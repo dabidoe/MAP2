@@ -11,5 +11,11 @@
   "duration": "Concentration, up to 1 minute",
   "damage": "2d8 piercing to each restrained creature at the start of its turn",
   "school": "Conjuration",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/1546e678-b34d-4fb3-a462-1e9f2b4ddac0.png"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/1546e678-b34d-4fb3-a462-1e9f2b4ddac0.png",
+  "iconStatus": "ready",
+  "iconLayers": [
+    [
+      "1546e678-b34d-4fb3-a462-1e9f2b4ddac0"
+    ]
+  ]
 }

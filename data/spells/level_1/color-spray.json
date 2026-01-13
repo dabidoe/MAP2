@@ -4,37 +4,48 @@
   },
   "name": "Color Spray",
   "level": 1,
+  "flavorText": "A dazzling array of flashing, colored light springs from your hand. Roll 6d10; the total is how many hit points of creatures this spell can effect. Creatures in a 15-foot cone originating from you are affected in ascending order of their current hit points (ignoring unconscious creatures and creatures that can't see).\n\nStarting with the creature that has the lowest current hit points, each creature affected by this spell is blinded until the spell ends. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected.",
   "description": "A dazzling array of flashing, colored light springs from your hand. Roll 6d10; the total is how many hit points of creatures this spell can effect. Creatures in a 15-foot cone originating from you are affected in ascending order of their current hit points (ignoring unconscious creatures and creatures that can't see).\n\nStarting with the creature that has the lowest current hit points, each creature affected by this spell is blinded until the spell ends. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected.",
-  "castingTime": "1 action",
-  "range": "Self (15-foot cone)",
-  "components": "V, S, M (a pinch of powder or sand that is colored red, yellow, and blue)",
-  "duration": "1 round",
-  "damage": null,
   "school": "Illusion",
-  "isPublic": true,
   "classes": [
     "sorcerer",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Self (15-foot cone)",
+  "components": "V, S, M (a pinch of powder or sand that is colored red, yellow, and blue)",
+  "duration": "1 round",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a pinch of powder or sand that is colored red, yellow, and blue"
+    ]
+  },
   "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, roll an additional 2d10 for each slot level above 1st.",
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/fb8932fd-b271-47cb-89ec-3497480b1a46.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "sorcerer",
+    "wizard",
+    "level1"
+  ],
   "iconLayers": [
-    {
-      "guid": "fb8932fd-b271-47cb-89ec-3497480b1a46${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"70852a8a-7e0c-4fe4-90fb-a714d3b31876\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "31de17a4-9241-4b52-8e57-c742239ede6e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"424cf6d0-2c1f-4014-9c63-a61256eabbaf\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "9bfcae82-a24c-4164-b5e4-9e6f242207c1${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ca0ef122-07f9-4f4e-b15f-b5514f8acce8\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "1b06d971-514a-4d16-ae50-74a4e50d0246${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"59e8ddd2-190c-4f44-8333-281d52301e39\"}",
-      "json": "{}"
-    }
+    [
+      "fb8932fd-b271-47cb-89ec-3497480b1a46${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"70852a8a-7e0c-4fe4-90fb-a714d3b31876\"}"
+    ],
+    [
+      "31de17a4-9241-4b52-8e57-c742239ede6e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"424cf6d0-2c1f-4014-9c63-a61256eabbaf\"}"
+    ],
+    [
+      "9bfcae82-a24c-4164-b5e4-9e6f242207c1${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ca0ef122-07f9-4f4e-b15f-b5514f8acce8\"}"
+    ],
+    [
+      "1b06d971-514a-4d16-ae50-74a4e50d0246${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"59e8ddd2-190c-4f44-8333-281d52301e39\"}"
+    ]
   ]
 }

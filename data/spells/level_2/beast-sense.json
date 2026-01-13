@@ -4,37 +4,46 @@
   },
   "name": "Beast Sense",
   "level": 2,
+  "flavorText": "You touch a willing beast. For the duration of the spell, you can use your action to see through the beast’s eyes and hear what it hears, and continue to do so until you use your action to return to your normal senses.\n\nWhile perceiving through the beast’s senses, you gain the benefits of any special senses possessed by that creature, though you are blinded and deafened to your own surroundings.",
   "description": "You touch a willing beast. For the duration of the spell, you can use your action to see through the beast’s eyes and hear what it hears, and continue to do so until you use your action to return to your normal senses.\n\nWhile perceiving through the beast’s senses, you gain the benefits of any special senses possessed by that creature, though you are blinded and deafened to your own surroundings.",
-  "castingTime": "1 action",
-  "range": "Touch",
-  "components": "S",
-  "duration": "Concentration, up to 1 hour",
-  "damage": null,
   "school": "Divination",
-  "isPublic": true,
   "classes": [
     "druid",
     "ranger"
   ],
   "ritual": true,
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "S",
+  "duration": "Concentration, up to 1 hour",
+  "componentsDetail": {
+    "verbal": false,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/6f50b1a0-fe33-4e77-a437-bd6024d01d9f.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "druid",
+    "ranger",
+    "level2"
+  ],
   "iconLayers": [
-    {
-      "guid": "6f50b1a0-fe33-4e77-a437-bd6024d01d9f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"efc7a23f-0d4f-4d98-b89f-ddece6d5fad7\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "7182b97b-0857-4be1-8293-e43c44d64b8c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"93148dc4-fddc-4b6d-9f99-2425829ca140\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "5eed812c-2060-4b6a-9df2-d7ba08f8c399${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"669570f5-f328-4f89-b003-51426a33eca4\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "5a950836-be12-403d-b51b-99fa189d8303",
-      "json": "{}"
-    }
+    [
+      "6f50b1a0-fe33-4e77-a437-bd6024d01d9f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"efc7a23f-0d4f-4d98-b89f-ddece6d5fad7\"}"
+    ],
+    [
+      "7182b97b-0857-4be1-8293-e43c44d64b8c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"93148dc4-fddc-4b6d-9f99-2425829ca140\"}"
+    ],
+    [
+      "5eed812c-2060-4b6a-9df2-d7ba08f8c399${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"669570f5-f328-4f89-b003-51426a33eca4\"}"
+    ],
+    [
+      "5a950836-be12-403d-b51b-99fa189d8303"
+    ]
   ]
 }

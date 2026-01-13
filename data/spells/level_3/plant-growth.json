@@ -4,39 +4,48 @@
   },
   "name": "Plant Growth",
   "level": 3,
+  "flavorText": "This spell channels vitality into plants within a specific area. There are two possible uses for the spell, granting either immediate or long-term benefits.\n\nIf you cast this spell using 1 action, choose a point within range. All normal plants in a 100-foot radius centered on that point become thick and overgrown. A creature moving through the area must spend 4 feet of movement for every 1 foot it moves.\n\nYou can exclude one or more areas of any size within the spell’s area from being affected.\n\nIf you cast this spell over 8 hours, you enrich the land. All plants in a half-mile radius centered on a point within range become enriched for 1 year. The plants yield twice the normal amount of food when harvested.",
   "description": "This spell channels vitality into plants within a specific area. There are two possible uses for the spell, granting either immediate or long-term benefits.\n\nIf you cast this spell using 1 action, choose a point within range. All normal plants in a 100-foot radius centered on that point become thick and overgrown. A creature moving through the area must spend 4 feet of movement for every 1 foot it moves.\n\nYou can exclude one or more areas of any size within the spell’s area from being affected.\n\nIf you cast this spell over 8 hours, you enrich the land. All plants in a half-mile radius centered on a point within range become enriched for 1 year. The plants yield twice the normal amount of food when harvested.",
-  "castingTime": "1 action or 8 hours",
-  "range": "150 feet",
-  "components": "V, S",
-  "duration": "Instantaneous",
-  "damage": null,
   "school": "Transmutation",
-  "isPublic": true,
   "classes": [
     "bard",
     "druid",
     "ranger"
   ],
   "ritual": false,
+  "castingTime": "1 action or 8 hours",
+  "range": "150 feet",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
-  "iconLayers": [
-    {
-      "guid": "c6b50cee-9ef4-4b60-8358-29eed0ba6f1f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ff374254-aa5d-4191-be80-5c83a67f3586\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "1f57c02c-029c-458e-acf8-aaec93f083d7",
-      "json": "{}"
-    },
-    {
-      "guid": "5c071ef2-1fb9-4e84-a8f4-29dc885db7e3${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d73aade6-6b94-4b2e-90ec-770c38af5cbe\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "3ab0c51a-30bf-4470-8d6d-f93157bc72f0",
-      "json": "{}"
-    }
+  "icon": "https://statsheet-cdn.b-cdn.net/images/c6b50cee-9ef4-4b60-8358-29eed0ba6f1f.png",
+  "iconStatus": "ready",
+  "video": "/SPELL_VIDEOS/Plant_Growth_You_cause_plants_within_the_area_to_become_thick_270eece2-5ee5-4556-8f93-6766e342a717_0.mp4",
+  "damage": null,
+  "tags": [
+    "bard",
+    "druid",
+    "ranger",
+    "level3"
   ],
-  "video": "/SPELL_VIDEOS/Plant_Growth_You_cause_plants_within_the_area_to_become_thick_270eece2-5ee5-4556-8f93-6766e342a717_0.mp4"
+  "iconLayers": [
+    [
+      "c6b50cee-9ef4-4b60-8358-29eed0ba6f1f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ff374254-aa5d-4191-be80-5c83a67f3586\"}"
+    ],
+    [
+      "1f57c02c-029c-458e-acf8-aaec93f083d7"
+    ],
+    [
+      "5c071ef2-1fb9-4e84-a8f4-29dc885db7e3${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d73aade6-6b94-4b2e-90ec-770c38af5cbe\"}"
+    ],
+    [
+      "3ab0c51a-30bf-4470-8d6d-f93157bc72f0"
+    ]
+  ]
 }

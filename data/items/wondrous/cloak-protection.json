@@ -1,0 +1,21 @@
+{
+  "id": "cloak-protection",
+  "name": "Cloak of Protection",
+  "category": "wondrous",
+  "rarity": "uncommon",
+  "weight": 1,
+  "value": 3500,
+  "quantity": 1,
+  "requiresAttunement": true,
+  "description": "Enchanted cloak that grants magical protection",
+  "magic": {
+    "effects": [
+      {
+        "name": "Protection",
+        "description": "+1 to AC and saving throws"
+      }
+    ]
+  },
+  "icon": "✨",
+  "iconStatus": "placeholder"
+}

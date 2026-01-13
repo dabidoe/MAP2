@@ -1,0 +1,18 @@
+{
+  "id": "ring-mail",
+  "name": "Ring Mail",
+  "category": "armor",
+  "rarity": "common",
+  "slot": "body",
+  "weight": 40,
+  "value": 30,
+  "description": "Leather armor with rings sewn into it",
+  "armor": {
+    "ac": 14,
+    "type": "heavy",
+    "maxDexBonus": 0,
+    "stealthDisadvantage": true
+  },
+  "icon": "🛡️",
+  "iconStatus": "placeholder"
+}

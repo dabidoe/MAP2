@@ -3,13 +3,49 @@
     "$oid": "695469785648a6dce9f6f738"
   },
   "name": "Alarm",
-  "level": 2,
-  "description": "You weave a thin veil of arcane vigilance over a doorway, chest, or boundary. Until the spell ends, the veil silently observes the warded space. When a creature other than those you designate crosses the threshold, a soft whisper blossoms in your mind, revealing the intruder’s direction and size category.",
-  "castingTime": "1 minute",
-  "range": "Touch",
-  "components": "V, S, M (a sliver of moonlit thread)",
-  "duration": "12 hours",
-  "damage": "None",
+  "level": 1,
+  "flavorText": "You weave a thin veil of arcane vigilance over a doorway, chest, or boundary. Until the spell ends, the veil silently observes the warded space. When a creature other than those you designate crosses the threshold, a soft whisper blossoms in your mind, revealing the intruder’s direction and size category.",
+  "description": "You set an alarm against unwanted intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot cube. Until the spell ends, an alarm alerts you whenever a Tiny or larger creature touches or enters the warded area. When you cast the spell, you can designate creatures that won't set off the alarm. You also choose whether the alarm is mental or audible.\n\nA mental alarm alerts you with a ping in your mind if you are within 1 mile of the warded area. This ping awakens you if you are sleeping.\n\nAn audible alarm produces the sound of a hand bell for 10 seconds within 60 feet.",
   "school": "Abjuration",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/71e7123d-05f9-4146-9f56-9137bba5d99a.png"
+  "classes": [
+    "ranger",
+    "wizard"
+  ],
+  "ritual": true,
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S, M (a tiny bell and a piece of fine silver wire)",
+  "duration": "8 hours",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a tiny bell and a piece of fine silver wire"
+    ]
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/71e7123d-05f9-4146-9f56-9137bba5d99a.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "None",
+  "tags": [
+    "ranger",
+    "wizard",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "71e7123d-05f9-4146-9f56-9137bba5d99a${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"b8332786-4aa3-4e18-b0aa-55a5e760838b\"}"
+    ],
+    [
+      "4b4f8642-74fd-4b45-9a78-4b695075504a${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c4e8f872-a3eb-4d1e-8136-cbc1ea2c39be\"}"
+    ],
+    [
+      "2248d7a6-6570-407c-937e-a977a3d42d46${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ab40f7cf-70f7-4a9a-ab74-b7a24e6e9944\"}"
+    ],
+    [
+      "535e2452-fd97-49f5-a30c-1cf4faf668ec${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d7285487-fee7-45db-a38e-df86f1999926\"}"
+    ]
+  ]
 }

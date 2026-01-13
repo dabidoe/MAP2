@@ -4,20 +4,46 @@
   },
   "name": "Divination",
   "level": 4,
+  "flavorText": "Your magic and an offering put you in contact with a god or a god's servants. You ask a single question concerning a specific goal, event, or activity to occur within 7 days. The DM offers a truthful reply. The reply might be a short phrase, a cryptic rhyme, or an omen.\n\nThe spell doesn't take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion.\n\nIf you cast this spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The DM makes this roll in secret.",
   "description": "Your magic and an offering put you in contact with a god or a god's servants. You ask a single question concerning a specific goal, event, or activity to occur within 7 days. The DM offers a truthful reply. The reply might be a short phrase, a cryptic rhyme, or an omen.\n\nThe spell doesn't take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion.\n\nIf you cast this spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The DM makes this roll in secret.",
-  "castingTime": "1 action",
-  "range": "Self",
-  "components": "V, S, M (incense and a sacrificial offering appropriate to your religion, together worth at least 25 gp, which the spell consumes)",
-  "duration": "Instantaneous",
-  "damage": null,
   "school": "Divination",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "cleric"
   ],
   "ritual": true,
+  "castingTime": "1 action",
+  "range": "Self",
+  "components": "V, S, M (incense and a sacrificial offering appropriate to your religion, together worth at least 25 gp, which the spell consumes)",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "incense and a sacrificial offering appropriate to your religion, together worth at least 25 gp, which the spell consumes"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/120e7144-af9b-47af-adee-39cfb712df79.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "cleric",
+    "level4"
+  ],
+  "iconLayers": [
+    [
+      "120e7144-af9b-47af-adee-39cfb712df79"
+    ],
+    [
+      "c31f3eb9-044d-44a0-9a98-61b736d766de"
+    ],
+    [
+      "da399f4f-f915-45e6-9bae-1b9c70a0a4c8"
+    ],
+    [
+      "f1e5105d-eb29-4560-93bc-ad99dd3d6654"
+    ]
+  ]
 }

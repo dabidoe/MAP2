@@ -1,0 +1,21 @@
+{
+  "id": "rope-entanglement",
+  "name": "Rope of Entanglement",
+  "category": "wondrous",
+  "rarity": "rare",
+  "weight": 3,
+  "value": 4000,
+  "quantity": 1,
+  "requiresAttunement": false,
+  "description": "60 ft of magical rope that can entangle creatures",
+  "magic": {
+    "effects": [
+      {
+        "name": "Entangle",
+        "description": "Command word causes rope to entangle creatures (DC 15 Dex save)"
+      }
+    ]
+  },
+  "icon": "✨",
+  "iconStatus": "placeholder"
+}

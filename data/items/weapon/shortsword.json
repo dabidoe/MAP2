@@ -1,0 +1,21 @@
+{
+  "id": "shortsword",
+  "name": "Shortsword",
+  "category": "weapon",
+  "rarity": "common",
+  "slot": "mainHand",
+  "weight": 2,
+  "value": 10,
+  "description": "A light, finesse blade",
+  "weapon": {
+    "damage": "1d6",
+    "damageType": "piercing",
+    "properties": [
+      "finesse",
+      "light"
+    ],
+    "range": "5 ft"
+  },
+  "icon": "⚔️",
+  "iconStatus": "placeholder"
+}

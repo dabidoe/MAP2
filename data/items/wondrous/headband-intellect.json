@@ -1,0 +1,21 @@
+{
+  "id": "headband-intellect",
+  "name": "Headband of Intellect",
+  "category": "wondrous",
+  "rarity": "uncommon",
+  "weight": 1,
+  "value": 6000,
+  "quantity": 1,
+  "requiresAttunement": true,
+  "description": "Your Intelligence becomes 19 while wearing this headband",
+  "magic": {
+    "effects": [
+      {
+        "name": "Enhanced Intellect",
+        "description": "Intelligence becomes 19"
+      }
+    ]
+  },
+  "icon": "✨",
+  "iconStatus": "placeholder"
+}

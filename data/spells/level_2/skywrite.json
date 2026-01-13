@@ -4,22 +4,34 @@
   },
   "name": "Skywrite",
   "level": 2,
+  "flavorText": "You cause up to ten words to form in a part of the sky you can see. The words appear to be made of cloud and remain in place for the spell’s duration. The words dissipate when the spell ends. A strong wind can disperse the clouds and end the spell early",
   "description": "You cause up to ten words to form in a part of the sky you can see. The words appear to be made of cloud and remain in place for the spell’s duration. The words dissipate when the spell ends. A strong wind can disperse the clouds and end the spell early",
-  "castingTime": "1 action",
-  "range": "Sight",
-  "components": "V, S",
-  "duration": "Concentration, up to 1 hour",
-  "damage": null,
   "school": "Transmutation",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "bard",
     "druid",
     "wizard"
   ],
   "ritual": true,
+  "castingTime": "1 action",
+  "range": "Sight",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+  "iconStatus": "missing",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "bard",
+    "druid",
+    "wizard",
+    "level2"
+  ]
 }

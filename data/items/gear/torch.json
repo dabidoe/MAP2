@@ -1,0 +1,12 @@
+{
+  "id": "torch",
+  "name": "Torch",
+  "category": "gear",
+  "rarity": "common",
+  "weight": 1,
+  "value": 0.01,
+  "quantity": 1,
+  "description": "Burns for 1 hour, casting bright light 20 ft, dim 20 ft",
+  "icon": "🎒",
+  "iconStatus": "placeholder"
+}

@@ -4,37 +4,46 @@
   },
   "name": "Heroism",
   "level": 1,
+  "flavorText": "A willing creature you touch is imbued with bravery. Until the spell ends, the creature is immune to being frightened and gains temporary hit points equal to your spellcasting ability modifier at the start of each of its turns. When the spell ends, the target loses any remaining temporary hit points from this spell.",
   "description": "A willing creature you touch is imbued with bravery. Until the spell ends, the creature is immune to being frightened and gains temporary hit points equal to your spellcasting ability modifier at the start of each of its turns. When the spell ends, the target loses any remaining temporary hit points from this spell.",
-  "castingTime": "1 action",
-  "range": "Touch",
-  "components": "V, S",
-  "duration": "Concentration, up to 1 minute",
-  "damage": null,
   "school": "Enchantment",
-  "isPublic": true,
   "classes": [
     "bard",
     "paladin"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.",
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/bb45808e-f6e3-45b4-945d-a0e87a6eda6b.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "bard",
+    "paladin",
+    "level1"
+  ],
   "iconLayers": [
-    {
-      "guid": "bb45808e-f6e3-45b4-945d-a0e87a6eda6b${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"b2503692-c702-4d30-aa3a-8f29ecbffc9d\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "5092d21c-9cc9-4475-8b25-2b3d01518bac${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"463bb872-958b-4c34-bb27-d9a5d2243c15\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "b4734ce1-ae4e-40f1-99dc-396c30fac84c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"47f164e5-2814-4ed1-bfb6-92e7332e1517\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "6fc0a862-8c74-46f4-85fd-5a27680cea74",
-      "json": "{}"
-    }
+    [
+      "bb45808e-f6e3-45b4-945d-a0e87a6eda6b${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"b2503692-c702-4d30-aa3a-8f29ecbffc9d\"}"
+    ],
+    [
+      "5092d21c-9cc9-4475-8b25-2b3d01518bac${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"463bb872-958b-4c34-bb27-d9a5d2243c15\"}"
+    ],
+    [
+      "b4734ce1-ae4e-40f1-99dc-396c30fac84c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"47f164e5-2814-4ed1-bfb6-92e7332e1517\"}"
+    ],
+    [
+      "6fc0a862-8c74-46f4-85fd-5a27680cea74"
+    ]
   ]
 }

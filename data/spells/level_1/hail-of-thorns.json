@@ -4,12 +4,44 @@
   },
   "name": "Hail of Thorns",
   "level": 1,
-  "description": "Your next ranged weapon hit erupts into a tight explosion of spectral brambles. The target and nearby creatures take piercing damage, tearing at exposed gaps in armor.",
-  "castingTime": "1 action",
-  "range": "Self (next ranged weapon attack)",
-  "components": "V, S, M (a dried bramble twig)",
-  "duration": "Instantaneous",
-  "damage": "1d8 piercing, Dexterity save for half",
+  "flavorText": "Your next ranged weapon hit erupts into a tight explosion of spectral brambles. The target and nearby creatures take piercing damage, tearing at exposed gaps in armor.",
+  "description": "The next time you hit a creature with a ranged weapon attack before this spell ends, this spell creates a rain of thorns that sprouts from your ranged weapon or ammunition. In addition to the normal effects of the attack, the target of the attack and each creature within 5 feet of it must make a Dexterity saving throw. A creature takes 1d10 piercing damage on a failed save, or half as much damage on a successful one.",
   "school": "Conjuration",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/45e2171a-7392-42ae-913e-2e331e9f1919.png"
+  "classes": [
+    "ranger"
+  ],
+  "ritual": false,
+  "castingTime": "1 bonus action",
+  "range": "Self",
+  "components": "V",
+  "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": false,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": "If you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st (to a maximum of 6d10).",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/45e2171a-7392-42ae-913e-2e331e9f1919.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "1d8 piercing, Dexterity save for half",
+  "tags": [
+    "ranger",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "45e2171a-7392-42ae-913e-2e331e9f1919${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"6eea5f3b-95af-43e1-be09-a5657367c7c1\"}"
+    ],
+    [
+      "16d7a1f4-8a13-45f5-8f42-fd81ac26a9e9${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c729b563-ee6a-48b9-9159-5c4d6c8e680e\"}"
+    ],
+    [
+      "ba0549e1-6ef0-49d8-a2b1-8964dde41915${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1c167462-3182-40cd-9ff7-9e7c4eea1030\"}"
+    ],
+    [
+      "dd15375c-90ee-4934-ad75-4048b6aa20ee${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"b4acd99a-c26b-48c8-9825-8a4a4b6e2eeb\"}"
+    ]
+  ]
 }

@@ -4,12 +4,46 @@
   },
   "name": "Ray of Frost",
   "level": 0,
-  "description": "You snap your fingers and launch a glittering splinter of compressed ice that bursts on impact, numbing flesh and jolting reflexes.",
+  "flavorText": "You snap your fingers and launch a glittering splinter of compressed ice that bursts on impact, numbing flesh and jolting reflexes.",
+  "description": "A frigid beam of blue-white light streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 1d8 cold damage, and its speed is reduced by 10 feet until the start of your next turn.\n\nThe spell’s damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
+  "school": "Evocation",
+  "classes": [
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
-  "range": "60 ft",
+  "range": "60 feet",
   "components": "V, S",
   "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/43c0d0c4-148e-4d64-a6f9-1b353e78927c.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "1d6 cold",
-  "school": "Evocation",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/43c0d0c4-148e-4d64-a6f9-1b353e78927c.png"
+  "tags": [
+    "sorcerer",
+    "wizard",
+    "cantrip"
+  ],
+  "iconLayers": [
+    [
+      "43c0d0c4-148e-4d64-a6f9-1b353e78927c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1.001498,1.001498\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"89f482de-58d2-40fe-bb94-63f8df1f4107\"}"
+    ],
+    [
+      "2132a2f8-53e4-4060-b384-52775a32c75e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"b312fa6b-0e12-4756-ba39-691e3ae65834\"}"
+    ],
+    [
+      "ec4982f3-cb8d-4904-83c5-52f6d507816a${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4d4462b6-6ed0-4d6d-97e6-52e13d51cb20\"}"
+    ],
+    [
+      "61394564-60c5-4bae-9a74-2c8558cf9cbe${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"646b42c3-b4c4-4ea5-9ed3-0b301fe0ff3d\"}"
+    ]
+  ]
 }

@@ -1,0 +1,18 @@
+{
+  "id": "breastplate",
+  "name": "Breastplate",
+  "category": "armor",
+  "rarity": "common",
+  "slot": "body",
+  "weight": 20,
+  "value": 400,
+  "description": "Fitted metal plates covering the chest",
+  "armor": {
+    "ac": 14,
+    "type": "medium",
+    "maxDexBonus": 2,
+    "stealthDisadvantage": false
+  },
+  "icon": "🛡️",
+  "iconStatus": "placeholder"
+}

@@ -4,21 +4,48 @@
   },
   "name": "Gentle Repose",
   "level": 2,
+  "flavorText": "You touch a corpse or other remains. For the duration, the target is protected from decay and can’t become undead.\n\nThe spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don’t count against the time limit of spells such as *[raise dead](../raise-dead/ \"raise dead (lvl 5)\")*.",
   "description": "You touch a corpse or other remains. For the duration, the target is protected from decay and can’t become undead.\n\nThe spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don’t count against the time limit of spells such as *[raise dead](../raise-dead/ \"raise dead (lvl 5)\")*.",
-  "castingTime": "1 action",
-  "range": "Touch",
-  "components": "V, S, M (a pinch of salt and one copper piece placed on each of the corpse's eyes, which must remain there for the duration)",
-  "duration": "10 days",
-  "damage": null,
   "school": "Necromancy",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "cleric",
     "wizard"
   ],
   "ritual": true,
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S, M (a pinch of salt and one copper piece placed on each of the corpse's eyes, which must remain there for the duration)",
+  "duration": "10 days",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a pinch of salt and one copper piece placed on each of the corpse's eyes, which must remain there for the duration"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/0c807cb2-753e-4209-9589-95eff5dce2b5.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "cleric",
+    "wizard",
+    "level2"
+  ],
+  "iconLayers": [
+    [
+      "0c807cb2-753e-4209-9589-95eff5dce2b5"
+    ],
+    [
+      "7d679809-3220-417f-bf8b-49e0aea932f7"
+    ],
+    [
+      "f6059a7b-af83-4cfa-8302-f79b535563f9"
+    ],
+    [
+      "c5f8d8f3-32d2-45e8-8c70-7c5620033d3b"
+    ]
+  ]
 }

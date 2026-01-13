@@ -4,36 +4,44 @@
   },
   "name": "Ensnaring Strike",
   "level": 1,
+  "flavorText": "The next time you hit a creature with a weapon attack before this spell ends, a writhing mass of thorny vines appears at the point of impact, and the target must succeed on a Strength saving throw or be restrained by the magical vines until the spell ends. A Large or larger creature has advantage on this saving throw. If the target succeeds on the save, the vines shrivel away.\n\nWhile restrained by this spell, the target takes 1d6 piercing damage at the start of each of its turns. A creature restrained by the vines or one that can touch a creature can use its action to make a Strength check against your spell save DC. On a success, the target is freed.",
   "description": "The next time you hit a creature with a weapon attack before this spell ends, a writhing mass of thorny vines appears at the point of impact, and the target must succeed on a Strength saving throw or be restrained by the magical vines until the spell ends. A Large or larger creature has advantage on this saving throw. If the target succeeds on the save, the vines shrivel away.\n\nWhile restrained by this spell, the target takes 1d6 piercing damage at the start of each of its turns. A creature restrained by the vines or one that can touch a creature can use its action to make a Strength check against your spell save DC. On a success, the target is freed.",
-  "castingTime": "1 bonus action",
-  "range": "Self",
-  "components": "V",
-  "duration": "Concentration, up to 1 minute",
-  "damage": "1d6 piercing",
   "school": "Conjuration",
-  "isPublic": true,
   "classes": [
     "ranger"
   ],
   "ritual": false,
+  "castingTime": "1 bonus action",
+  "range": "Self",
+  "components": "V",
+  "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": false,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": "If you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.",
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/74abe523-f54b-4c6b-ad0c-9bfc57583c14.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "1d6 piercing",
+  "tags": [
+    "ranger",
+    "level1"
+  ],
   "iconLayers": [
-    {
-      "guid": "74abe523-f54b-4c6b-ad0c-9bfc57583c14${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"57b9e5bb-651b-423b-8108-cb4bd353b56d\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "4937ffcc-3189-4030-b73f-f5480e9a50e1${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"67b4bb80-ffb9-4831-bf15-6ad7b5a63da6\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "2c19ad36-6b36-411f-8bf2-93f515604f29${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e511373e-792e-47f5-bf1d-202fced752ab\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "c7d6dcc9-47de-4363-ba40-673867f8da8f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ab75d0d3-040e-4777-b73d-8ce4caf8f03d\"}",
-      "json": "{}"
-    }
+    [
+      "74abe523-f54b-4c6b-ad0c-9bfc57583c14${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"57b9e5bb-651b-423b-8108-cb4bd353b56d\"}"
+    ],
+    [
+      "4937ffcc-3189-4030-b73f-f5480e9a50e1${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"67b4bb80-ffb9-4831-bf15-6ad7b5a63da6\"}"
+    ],
+    [
+      "2c19ad36-6b36-411f-8bf2-93f515604f29${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e511373e-792e-47f5-bf1d-202fced752ab\"}"
+    ],
+    [
+      "c7d6dcc9-47de-4363-ba40-673867f8da8f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ab75d0d3-040e-4777-b73d-8ce4caf8f03d\"}"
+    ]
   ]
 }

@@ -10,6 +10,7 @@ import { CanvasRenderer } from './CanvasRenderer.js';
 import { GameState } from './GameState.js';
 import { CommandDashboard } from './components/CommandDashboard.js';
 import { Grimoire } from './components/Grimoire.js';
+import { Armory } from './components/Armory.js';
 import { HotbarUI } from './components/HotbarUI.js';
 import { CharacterSheet } from './components/CharacterSheet.js';
 
@@ -23,6 +24,7 @@ class WarRoom1776 {
     this.canvasRenderer = null;
     this.dashboard = null;
     this.grimoire = null;
+    this.armory = null;
     this.hotbar = null;
     this.characterSheet = null;
     this.socket = null;
@@ -71,6 +73,9 @@ class WarRoom1776 {
 
       // Initialize Grimoire
       this.grimoire = new Grimoire();
+
+      // Initialize Armory
+      this.armory = new Armory();
 
       // Initialize Hotbar UI (after dashboard, pass grimoire for spell icons)
       this.hotbar = new HotbarUI(this.gameState, this.dashboard, this.grimoire);

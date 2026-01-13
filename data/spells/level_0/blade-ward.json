@@ -11,5 +11,20 @@
   "duration": "1 round",
   "damage": "None",
   "school": "Illusion",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/c6bed855-c542-4899-83ae-da06d0631496.png"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/c6bed855-c542-4899-83ae-da06d0631496.png",
+  "iconStatus": "ready",
+  "iconLayers": [
+    [
+      "c6bed855-c542-4899-83ae-da06d0631496${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"499b0dae-12b4-4a63-ab48-8ef95ad2f91d\"}"
+    ],
+    [
+      "e32c6f89-6bae-4380-ada0-a171f0810d9f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"f3ef245a-de90-4b25-a3b2-9d00ed5d3f9c\"}"
+    ],
+    [
+      "6b24b755-53d4-43d7-a79e-00cfc7918774${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"54d0fd47-e6df-451e-8aa6-2c90f41f8aca\"}"
+    ],
+    [
+      "ef8d1eaf-2f51-46d9-873e-4851827eb1ed${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"8b1406c2-4aae-40b8-af0b-d57dd5be2f06\"}"
+    ]
+  ]
 }

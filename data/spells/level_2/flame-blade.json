@@ -4,20 +4,46 @@
   },
   "name": "Flame Blade",
   "level": 2,
+  "flavorText": "You evoke a fiery blade in your free hand. The blade is similar in size and shape to a scimitar, and it lasts for the duration. If you let go of the blade, it disappears, but you can evoke the blade again as a bonus action.\n\nYou can use your action to make a melee spell attack with the fiery blade. On a hit, the target takes 3d6 fire damage.\n\nThe flaming blade sheds bright light in a 10-foot radius and dim light for an additional 10 feet.",
   "description": "You evoke a fiery blade in your free hand. The blade is similar in size and shape to a scimitar, and it lasts for the duration. If you let go of the blade, it disappears, but you can evoke the blade again as a bonus action.\n\nYou can use your action to make a melee spell attack with the fiery blade. On a hit, the target takes 3d6 fire damage.\n\nThe flaming blade sheds bright light in a 10-foot radius and dim light for an additional 10 feet.",
-  "castingTime": "1 bonus action",
-  "range": "Self",
-  "components": "V, S, M (leaf of sumac)",
-  "duration": "Concentration, up to 10 minutes",
-  "damage": "3d6 fire",
   "school": "Evocation",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "druid"
   ],
   "ritual": false,
+  "castingTime": "1 bonus action",
+  "range": "Self",
+  "components": "V, S, M (leaf of sumac)",
+  "duration": "Concentration, up to 10 minutes",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "leaf of sumac"
+    ]
+  },
   "higherLevels": "When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for every two slot levels above 2nd.",
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/f0aacd44-4cbc-4f3f-bce7-184be7040221.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "3d6 fire",
+  "tags": [
+    "druid",
+    "level2"
+  ],
+  "iconLayers": [
+    [
+      "f0aacd44-4cbc-4f3f-bce7-184be7040221"
+    ],
+    [
+      "23bdbe61-9434-4a92-9e60-ccb44136375f"
+    ],
+    [
+      "820e9088-967c-4065-acd6-462b28292079"
+    ],
+    [
+      "a316ab9c-a1ed-4a1a-952d-db9202e21fc2"
+    ]
+  ]
 }

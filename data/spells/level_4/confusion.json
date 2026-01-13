@@ -4,14 +4,9 @@
   },
   "name": "Confusion",
   "level": 4,
+  "flavorText": "This spell assaults and twists creatures' minds, spawning delusions and provoking uncontrolled action. Each creature in a 10-foot radius sphere centered on a point you choose within range must succeed on a Wisdom saving throw when you cast this spell or by affected by it.\n\nAn affected target can't take reactions and must roll a d10 at the start of each of its turns to determine its behaviour for that turn.\n\n1: The creature uses all its Movement to move in a random direction. To determine the direction, roll a d8 and assign a direction to each die face. The creature doesn't take an action this turn.\n2-6: The creature doesn't move or take Actions this turn.\n7-8: The creature uses its action to make a melee Attack against a randomly determined creature within its reach. If there is no creature within its reach, the creature does nothing this turn.\n9-10: The creature can act and move normally.\n\nAt the end of each of its turns, an affected target can make a Wisdom saving throw. If it succeeds, this effect ends for that target",
   "description": "This spell assaults and twists creatures' minds, spawning delusions and provoking uncontrolled action. Each creature in a 10-foot radius sphere centered on a point you choose within range must succeed on a Wisdom saving throw when you cast this spell or by affected by it.\n\nAn affected target can't take reactions and must roll a d10 at the start of each of its turns to determine its behaviour for that turn.\n\n1: The creature uses all its Movement to move in a random direction. To determine the direction, roll a d8 and assign a direction to each die face. The creature doesn't take an action this turn.\n2-6: The creature doesn't move or take Actions this turn.\n7-8: The creature uses its action to make a melee Attack against a randomly determined creature within its reach. If there is no creature within its reach, the creature does nothing this turn.\n9-10: The creature can act and move normally.\n\nAt the end of each of its turns, an affected target can make a Wisdom saving throw. If it succeeds, this effect ends for that target",
-  "castingTime": "1 action",
-  "range": "90 feet",
-  "components": "V, S, M (three nut shells)",
-  "duration": "Concentration, up to 1 minute",
-  "damage": null,
   "school": "Enchantment",
-  "isPublic": true,
   "classes": [
     "bard",
     "druid",
@@ -19,25 +14,42 @@
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "90 feet",
+  "components": "V, S, M (three nut shells)",
+  "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "three nut shells"
+    ]
+  },
   "higherLevels": "When you cast this spell using a spell slot of 5th level or higher, the radius of the sphere increases by 5 feet for each spell slot above 4th.",
-  "source": "SRD 5.1",
-  "iconLayers": [
-    {
-      "guid": "894bdbb8-e912-438b-a4f8-030508b7e728${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"7e2e8503-dd96-4dfc-941c-f12d533f8f08\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "1772318f-5b2e-4dbd-8551-294c3b15dcb6${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"9c31fdf8-7c9f-4c23-8338-494f0405787c\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "5faf395b-07fb-46f9-8283-8387122faeca${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"3ce942a0-fb7e-4185-b10b-78157db554d2\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "d7fd39bf-acb1-4831-9b74-210d5952255c",
-      "json": "{}"
-    }
+  "icon": "https://statsheet-cdn.b-cdn.net/images/894bdbb8-e912-438b-a4f8-030508b7e728.png",
+  "iconStatus": "ready",
+  "video": "/SPELL_VIDEOS/Confusion_You_unleash_a_chaotic_energy_that_muddles_the_minds_af184e5c-75e1-48d0-8513-3aecb11af23b_0.mp4",
+  "damage": null,
+  "tags": [
+    "bard",
+    "druid",
+    "sorcerer",
+    "wizard",
+    "level4"
   ],
-  "video": "/SPELL_VIDEOS/Confusion_You_unleash_a_chaotic_energy_that_muddles_the_minds_af184e5c-75e1-48d0-8513-3aecb11af23b_0.mp4"
+  "iconLayers": [
+    [
+      "894bdbb8-e912-438b-a4f8-030508b7e728${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"7e2e8503-dd96-4dfc-941c-f12d533f8f08\"}"
+    ],
+    [
+      "1772318f-5b2e-4dbd-8551-294c3b15dcb6${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"9c31fdf8-7c9f-4c23-8338-494f0405787c\"}"
+    ],
+    [
+      "5faf395b-07fb-46f9-8283-8387122faeca${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"3ce942a0-fb7e-4185-b10b-78157db554d2\"}"
+    ],
+    [
+      "d7fd39bf-acb1-4831-9b74-210d5952255c"
+    ]
+  ]
 }

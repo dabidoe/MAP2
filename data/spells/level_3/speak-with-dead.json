@@ -4,37 +4,48 @@
   },
   "name": "Speak with Dead",
   "level": 3,
+  "flavorText": "You grant the semblance o f life and intelligence to a corpse of your choice within range, allowing it to answer the questions you pose. The corpse must still have a mouth and can’t be undead. The spell fails if the corpse was the target o f this spell within the last 10 days.\n\nUntil the spell ends, you can ask the corpse up to five questions. The corpse knows only what it knew in life, including the languages it knew. Answers are usually brief, cryptic, or repetitive, and the corpse is under no compulsion to offer a truthful answer if you are hostile to it or it recognizes you as an enemy. This spell doesn’t return the creature’s soul to its body, only its animating spirit. Thus, the corpse can’t learn new information, doesn’t comprehend anything that has happened since it died, and can’t speculate about future events.",
   "description": "You grant the semblance o f life and intelligence to a corpse of your choice within range, allowing it to answer the questions you pose. The corpse must still have a mouth and can’t be undead. The spell fails if the corpse was the target o f this spell within the last 10 days.\n\nUntil the spell ends, you can ask the corpse up to five questions. The corpse knows only what it knew in life, including the languages it knew. Answers are usually brief, cryptic, or repetitive, and the corpse is under no compulsion to offer a truthful answer if you are hostile to it or it recognizes you as an enemy. This spell doesn’t return the creature’s soul to its body, only its animating spirit. Thus, the corpse can’t learn new information, doesn’t comprehend anything that has happened since it died, and can’t speculate about future events.",
-  "castingTime": "1 action",
-  "range": "10 feet",
-  "components": "V, S, M (burning incense)",
-  "duration": "10 minutes",
-  "damage": null,
   "school": "Necromancy",
-  "isPublic": true,
   "classes": [
     "bard",
     "cleric"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "10 feet",
+  "components": "V, S, M (burning incense)",
+  "duration": "10 minutes",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "burning incense"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/850bb2c3-1096-4c5b-8706-c6151727a7e3.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "bard",
+    "cleric",
+    "level3"
+  ],
   "iconLayers": [
-    {
-      "guid": "850bb2c3-1096-4c5b-8706-c6151727a7e3${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1ed9cf8a-8eae-4fd6-8119-92e8e8f26397\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "b9d9a51e-71d3-4f90-a7e8-6bccfafbdb17",
-      "json": "{}"
-    },
-    {
-      "guid": "464af26d-884b-467b-97e3-ec3da87b0fd7${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"f7ce7817-f3f6-480d-a866-b29d5641be67\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "fbff828e-3366-4213-8a1c-9be811a24f82",
-      "json": "{}"
-    }
+    [
+      "850bb2c3-1096-4c5b-8706-c6151727a7e3${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1ed9cf8a-8eae-4fd6-8119-92e8e8f26397\"}"
+    ],
+    [
+      "b9d9a51e-71d3-4f90-a7e8-6bccfafbdb17"
+    ],
+    [
+      "464af26d-884b-467b-97e3-ec3da87b0fd7${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"f7ce7817-f3f6-480d-a866-b29d5641be67\"}"
+    ],
+    [
+      "fbff828e-3366-4213-8a1c-9be811a24f82"
+    ]
   ]
 }

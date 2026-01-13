@@ -1,0 +1,18 @@
+{
+  "id": "half-plate",
+  "name": "Half Plate",
+  "category": "armor",
+  "rarity": "common",
+  "slot": "body",
+  "weight": 40,
+  "value": 750,
+  "description": "Plate armor covering the upper body",
+  "armor": {
+    "ac": 15,
+    "type": "medium",
+    "maxDexBonus": 2,
+    "stealthDisadvantage": true
+  },
+  "icon": "🛡️",
+  "iconStatus": "placeholder"
+}

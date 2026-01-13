@@ -1,0 +1,21 @@
+{
+  "id": "warhammer",
+  "name": "Warhammer",
+  "category": "weapon",
+  "rarity": "common",
+  "slot": "mainHand",
+  "weight": 2,
+  "value": 15,
+  "description": "A versatile hammer effective against armor",
+  "weapon": {
+    "damage": "1d8",
+    "damageType": "bludgeoning",
+    "properties": [
+      "versatile"
+    ],
+    "versatileDamage": "1d10",
+    "range": "5 ft"
+  },
+  "icon": "⚔️",
+  "iconStatus": "placeholder"
+}

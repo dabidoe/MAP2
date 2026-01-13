@@ -1,0 +1,22 @@
+{
+  "id": "longbow",
+  "name": "Longbow",
+  "category": "weapon",
+  "rarity": "common",
+  "slot": "mainHand",
+  "weight": 2,
+  "value": 50,
+  "description": "A powerful ranged weapon",
+  "weapon": {
+    "damage": "1d8",
+    "damageType": "piercing",
+    "properties": [
+      "ammunition",
+      "two-handed",
+      "heavy"
+    ],
+    "range": "150/600 ft"
+  },
+  "icon": "⚔️",
+  "iconStatus": "placeholder"
+}

@@ -4,12 +4,46 @@
   },
   "name": "Acid Splash",
   "level": 0,
-  "description": "You snap your fingers and release a dart of green flame‑tinged acid that lashes toward a creature you can see. On impact, it splashes in a brief corrosive flare, searing the target before evaporating.",
+  "flavorText": "You snap your fingers and release a dart of green flame‑tinged acid that lashes toward a creature you can see. On impact, it splashes in a brief corrosive flare, searing the target before evaporating.",
+  "description": "You hurl a bubble of acid. Choose one creature within range, or choose two creatures within range that are within 5 feet of each other. A target must succeed on a Dexterity saving throw or take 1d6 acid damage.\n\nThis spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).",
+  "school": "Conjuration",
+  "classes": [
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
-  "range": "60 ft",
+  "range": "60 feet",
   "components": "V, S",
   "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/2c5bd895-fc51-40fe-8197-c8d6a9e6d07c.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "1d6 acid",
-  "school": "Conjuration",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/2c5bd895-fc51-40fe-8197-c8d6a9e6d07c.png"
+  "tags": [
+    "sorcerer",
+    "wizard",
+    "cantrip"
+  ],
+  "iconLayers": [
+    [
+      "2c5bd895-fc51-40fe-8197-c8d6a9e6d07c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c1afc661-113d-406d-aa2d-b8ed45ab4e58\"}"
+    ],
+    [
+      "df66c1a1-484a-431c-b5dc-45c5ab3de9bc${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c980a1ac-930f-427c-a9c0-3f273c2d38d0\"}"
+    ],
+    [
+      "4d30be28-06df-49ab-8e49-01b28d7106fa${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"38454f49-7eca-48b5-81c0-25bee30f99bd\"}"
+    ],
+    [
+      "a133c6a3-4fd2-4bb6-9593-331e84627ad1${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"61d838d8-634e-421e-ad2b-848ad4e2989a\"}"
+    ]
+  ]
 }

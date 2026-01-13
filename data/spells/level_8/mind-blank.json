@@ -4,21 +4,46 @@
   },
   "name": "Mind Blank",
   "level": 8,
+  "flavorText": "Until the spell ends, one willing creature you touch is immune to psychic damage, any effect that would sense its emotions or read its thoughts, divination spells, and the charmed condition. The spell even foils _[wish](../wish/ \"wish (lvl 9)\")_ spells and spells or effects of similar power used to affect the target's mind or to gain information about the target.",
   "description": "Until the spell ends, one willing creature you touch is immune to psychic damage, any effect that would sense its emotions or read its thoughts, divination spells, and the charmed condition. The spell even foils _[wish](../wish/ \"wish (lvl 9)\")_ spells and spells or effects of similar power used to affect the target's mind or to gain information about the target.",
-  "castingTime": "1 action",
-  "range": "Touch",
-  "components": "V, S",
-  "duration": "24 hours",
-  "damage": null,
   "school": "Abjuration",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "bard",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "24 hours",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/c4f782fe-09b8-4d07-ab1e-24a5a0f20e39.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "bard",
+    "wizard",
+    "level8"
+  ],
+  "iconLayers": [
+    [
+      "c4f782fe-09b8-4d07-ab1e-24a5a0f20e39${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"0bda9bc9-73f5-4c9a-8f01-003ad844ca8f\"}"
+    ],
+    [
+      "c20ca423-c7b7-426d-9b4e-d724b940364f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"b2be5615-0a37-4889-82fa-cc59dbbbae2e\"}"
+    ],
+    [
+      "8ce76f9a-d1e1-45a2-b10a-88a7125ae0b8${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4d5f6d8b-9721-4d98-9c84-09e6384d3521\"}"
+    ],
+    [
+      "168acbe4-3bbe-4a5a-8cdb-26e64eca6ee8"
+    ]
+  ]
 }

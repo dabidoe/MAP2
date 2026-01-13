@@ -4,22 +4,50 @@
   },
   "name": "Reverse Gravity",
   "level": 7,
+  "flavorText": "This spell reverses gravity in a 50-foot-radius, 100-foot high cylinder centered on a point within range. All creatures and objects that aren't somehow anchored to the ground in the area fall upward and reach the top of the area when you cast this spell. A creature can make a Dexterity saving throw to grab onto a fixed object it can reach, thus avoiding the fall.\n\nIf some solid object (such as a ceiling) is encountered in this fall, falling objects and creature strike it just as they would during a normal downward fall. If an object or creature reaches the top of the area without striking anything, it remains there, oscillating slightly, for the duration.\n\nAt the end of the duration, affected objects and creatures fall back down.",
   "description": "This spell reverses gravity in a 50-foot-radius, 100-foot high cylinder centered on a point within range. All creatures and objects that aren't somehow anchored to the ground in the area fall upward and reach the top of the area when you cast this spell. A creature can make a Dexterity saving throw to grab onto a fixed object it can reach, thus avoiding the fall.\n\nIf some solid object (such as a ceiling) is encountered in this fall, falling objects and creature strike it just as they would during a normal downward fall. If an object or creature reaches the top of the area without striking anything, it remains there, oscillating slightly, for the duration.\n\nAt the end of the duration, affected objects and creatures fall back down.",
-  "castingTime": "1 action",
-  "range": "100 feet",
-  "components": "V, S, M (a lodestone and iron filings)",
-  "duration": "Concentration, up to 1 minute",
-  "damage": null,
   "school": "Transmutation",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "druid",
     "sorcerer",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "100 feet",
+  "components": "V, S, M (a lodestone and iron filings)",
+  "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a lodestone and iron filings"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/073a8a4a-3f68-4a59-bfe0-b184b8acabeb.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "druid",
+    "sorcerer",
+    "wizard",
+    "level7"
+  ],
+  "iconLayers": [
+    [
+      "073a8a4a-3f68-4a59-bfe0-b184b8acabeb"
+    ],
+    [
+      "c22064ae-cada-4170-b85f-51f07c47488c"
+    ],
+    [
+      "2adcc62d-be97-4b56-9e98-f8533df67946"
+    ],
+    [
+      "7a880ecb-ddfe-4a03-809b-45bf21081d7c"
+    ]
+  ]
 }

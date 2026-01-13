@@ -4,12 +4,47 @@
   },
   "name": "Guiding Bolt",
   "level": 1,
-  "description": "You release a needle-thin lance of stellar fire at a creature you can see. Make a ranged spell attack. On a hit, the target erupts with shimmering sparks that outline its form, shedding dim light and revealing weak spots to your allies.",
+  "flavorText": "You release a needle-thin lance of stellar fire at a creature you can see. Make a ranged spell attack. On a hit, the target erupts with shimmering sparks that outline its form, shedding dim light and revealing weak spots to your allies.",
+  "description": "A flash of light streaks toward a creature of your choice within range. Make a ranged spell attack against the target. On a hit, the target takes 4d6 radiant damage, and the next attack roll made against this target before the end of your next turn has advantage, thanks to the mystical dim light glittering on the target until then.",
+  "school": "Evocation",
+  "classes": [
+    "cleric"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
-  "range": "90 ft",
+  "range": "120 feet",
   "components": "V, S",
   "duration": "1 round",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/9f01b03c-6e5f-44f1-acba-27662ddfa125.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "3d8 radiant",
-  "school": "Evocation",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/9f01b03c-6e5f-44f1-acba-27662ddfa125.png"
+  "tags": [
+    "cleric",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "9f01b03c-6e5f-44f1-acba-27662ddfa125${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4395cc03-92c4-4020-bb18-c78776c112d3\"}"
+    ],
+    [
+      "8d5e7998-f9b2-4a1b-b32c-a0ed94d47c65${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"9995126e-555a-4688-b2a4-df075a340782\"}"
+    ],
+    [
+      "c74f2504-2ca1-43d9-90dc-6b4ff69cda74${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"251cf865-00e6-4ee2-86f5-5a02f47e6096\"}"
+    ],
+    [
+      "17150e0d-22c7-422d-98da-ce1bb75a6d10${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"735d8043-60a6-4a4e-bbde-83ece89d2907\"}"
+    ],
+    [
+      "0000000000000000000000000000000000000000000000000000000000000000"
+    ]
+  ]
 }

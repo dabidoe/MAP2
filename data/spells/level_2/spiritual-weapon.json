@@ -4,36 +4,44 @@
   },
   "name": "Spiritual Weapon",
   "level": 2,
+  "flavorText": "You create a floating, spectral weapon within range that lasts for the duration or until you cast this spell again. When you cast the spell, you can make a melee spell attack against a creature within 5 feet of the weapon. On a hit, the target takes force damage equal to 1d8 + your spellcasting ability modifier.\n\nAs a bonus action on your turn, you can move the weapon up to 20 feet and repeat the attack against a creature within 5 feet of it. The weapon can take whatever form you choose. Clerics of deities who are associated with a particular weapon (as St. Cuthbert is known for his mace and Thor for his hammer) make this spell’s effect resemble that weapon.",
   "description": "You create a floating, spectral weapon within range that lasts for the duration or until you cast this spell again. When you cast the spell, you can make a melee spell attack against a creature within 5 feet of the weapon. On a hit, the target takes force damage equal to 1d8 + your spellcasting ability modifier.\n\nAs a bonus action on your turn, you can move the weapon up to 20 feet and repeat the attack against a creature within 5 feet of it. The weapon can take whatever form you choose. Clerics of deities who are associated with a particular weapon (as St. Cuthbert is known for his mace and Thor for his hammer) make this spell’s effect resemble that weapon.",
-  "castingTime": "1 bonus action",
-  "range": "60 feet",
-  "components": "V, S",
-  "duration": "1 minute",
-  "damage": null,
   "school": "Evocation",
-  "isPublic": true,
   "classes": [
     "cleric"
   ],
   "ritual": false,
+  "castingTime": "1 bonus action",
+  "range": "60 feet",
+  "components": "V, S",
+  "duration": "1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for every two slot levels above 2nd.",
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/a646f622-3650-4cad-b2de-36dfddbd0317.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "cleric",
+    "level2"
+  ],
   "iconLayers": [
-    {
-      "guid": "a646f622-3650-4cad-b2de-36dfddbd0317${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e1881ed7-71fc-4bbb-a282-9987f6548199\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "b90b8853-a0e3-434d-a7b6-690b3d97e9f2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c84d4d2b-2918-46e9-bf4a-aaa4da77e6e0\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "7eb3e6ad-6443-464d-b999-3d5d88e72a58${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"58f076c5-1acf-4db2-bdb9-c7875031a30c\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "0e4878b9-010a-4500-aacb-3c6308a83268${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"6221f0ca-606d-4d90-8e80-83b2f31fdab8\"}",
-      "json": "{}"
-    }
+    [
+      "a646f622-3650-4cad-b2de-36dfddbd0317${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e1881ed7-71fc-4bbb-a282-9987f6548199\"}"
+    ],
+    [
+      "b90b8853-a0e3-434d-a7b6-690b3d97e9f2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c84d4d2b-2918-46e9-bf4a-aaa4da77e6e0\"}"
+    ],
+    [
+      "7eb3e6ad-6443-464d-b999-3d5d88e72a58${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"58f076c5-1acf-4db2-bdb9-c7875031a30c\"}"
+    ],
+    [
+      "0e4878b9-010a-4500-aacb-3c6308a83268${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"6221f0ca-606d-4d90-8e80-83b2f31fdab8\"}"
+    ]
   ]
 }

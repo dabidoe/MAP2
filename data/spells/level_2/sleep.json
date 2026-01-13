@@ -3,13 +3,51 @@
     "$oid": "69546a0a5648a6dce9f6f7d6"
   },
   "name": "Sleep",
-  "level": 2,
-  "description": "You cast a tether of drowsy magic that latches onto a creature’s mind. The target must succeed on a Wisdom save or become heavy‑eyed and sluggish. On a failure, the creature collapses into a shallow trance, perceiving only muted shapes and sounds. While dream‑hooked, it is unconscious but can be roused by taking damage or being shaken awake.",
-  "castingTime": "1 action",
-  "range": "60 ft",
-  "components": "V, S, M (a loop of twine knotted in your sleep)",
-  "duration": "Up to 1 minute",
-  "damage": "None",
+  "level": 1,
+  "flavorText": "You cast a tether of drowsy magic that latches onto a creature’s mind. The target must succeed on a Wisdom save or become heavy‑eyed and sluggish. On a failure, the creature collapses into a shallow trance, perceiving only muted shapes and sounds. While dream‑hooked, it is unconscious but can be roused by taking damage or being shaken awake.",
+  "description": "This spell sends creatures into a magical slumber. Roll 5d8; the total is how many hit points of creatures this spell can affect. Creatures within 20 feet of a point you choose within range are affected in ascending order of their current hit points (ignoring unconscious creatures).\n\nStarting with the creature that has the lowest current hit points, each creature affected by this spell falls unconscious until the spell ends, the sleeper takes damage, or someone uses an action to shake or slap the sleeper awake. Subtract each creature’s hit points from the total before moving on to the creature with the next lowest hit points. A creature’s hit points must be equal to or less than the remaining total for that creature to be affected.\n\nUndead and creatures immune to being charmed aren’t affected by this spell.",
   "school": "Enchantment",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/9529ec13-804b-45fb-a204-d89e4c7e2da2.png"
+  "classes": [
+    "bard",
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
+  "castingTime": "1 action",
+  "range": "90 feet",
+  "components": "V, S, M (a pinch of fine sand, rose petals, or a cricket)",
+  "duration": "1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a pinch of fine sand, rose petals, or a cricket"
+    ]
+  },
+  "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, roll an additional 2d8 for each slot level above 1st.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/9529ec13-804b-45fb-a204-d89e4c7e2da2.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "None",
+  "tags": [
+    "bard",
+    "sorcerer",
+    "wizard",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "9529ec13-804b-45fb-a204-d89e4c7e2da2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"9d84d245-76ee-45a5-b7c2-83a83436f4e6\"}"
+    ],
+    [
+      "5935e24c-e3f2-4f2e-a072-cda1b27b801c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c0641d0d-e857-4cb8-bece-5d7fd6308c53\"}"
+    ],
+    [
+      "65f9f25c-8bab-4351-b60c-0ee21f82f796${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"5fcfe0b9-969e-4114-bc9e-178a42f38ba1\"}"
+    ],
+    [
+      "6af55d62-b1ca-4c11-8ff5-b86cca93991e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d748ab90-a0bb-4ce7-aeb8-5643eb57fc05\"}"
+    ]
+  ]
 }

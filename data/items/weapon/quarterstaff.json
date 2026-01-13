@@ -1,0 +1,21 @@
+{
+  "id": "quarterstaff",
+  "name": "Quarterstaff",
+  "category": "weapon",
+  "rarity": "common",
+  "slot": "mainHand",
+  "weight": 4,
+  "value": 0.2,
+  "description": "A simple wooden staff used by monks and travelers",
+  "weapon": {
+    "damage": "1d6",
+    "damageType": "bludgeoning",
+    "properties": [
+      "versatile"
+    ],
+    "versatileDamage": "1d8",
+    "range": "5 ft"
+  },
+  "icon": "⚔️",
+  "iconStatus": "placeholder"
+}

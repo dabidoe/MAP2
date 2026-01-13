@@ -1,0 +1,21 @@
+{
+  "id": "cloak-elvenkind",
+  "name": "Cloak of Elvenkind",
+  "category": "wondrous",
+  "rarity": "uncommon",
+  "weight": 1,
+  "value": 5000,
+  "quantity": 1,
+  "requiresAttunement": true,
+  "description": "Grants advantage on Stealth checks and disadvantage to Perception checks against you",
+  "magic": {
+    "effects": [
+      {
+        "name": "Elven Stealth",
+        "description": "Advantage on Stealth. Others have disadvantage on Perception to see you"
+      }
+    ]
+  },
+  "icon": "✨",
+  "iconStatus": "placeholder"
+}

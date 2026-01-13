@@ -1,0 +1,19 @@
+{
+  "id": "bag-holding",
+  "name": "Bag of Holding",
+  "category": "gear",
+  "rarity": "uncommon",
+  "weight": 15,
+  "value": 4000,
+  "description": "This bag has an interior space considerably larger than its outside dimensions",
+  "magic": {
+    "effects": [
+      {
+        "name": "Extra Dimensional Storage",
+        "description": "The bag can hold up to 500 pounds, not exceeding a volume of 64 cubic feet"
+      }
+    ]
+  },
+  "icon": "🎒",
+  "iconStatus": "placeholder"
+}

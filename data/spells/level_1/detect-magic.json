@@ -11,5 +11,20 @@
   "duration": "Concentration, up to 10 minutes",
   "damage": "None",
   "school": "Divination",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/7761c38c-f0f9-47a2-9c76-252d2a2cc107.png"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/7761c38c-f0f9-47a2-9c76-252d2a2cc107.png",
+  "iconStatus": "ready",
+  "iconLayers": [
+    [
+      "7761c38c-f0f9-47a2-9c76-252d2a2cc107${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1.442064,1.442064\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"0e8802a5-c181-4ba6-9831-f4101fe83731\"}"
+    ],
+    [
+      "73a74665-eccc-4932-b414-8f2dc7397b50${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4e70fbc8-9759-485c-8f9e-7ad72f536a0a\"}"
+    ],
+    [
+      "473abcb7-bbc9-4560-9cd3-24d2ed43aa4a${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"2e1370d0-45a2-41c6-ba23-23d22eafeca2\"}"
+    ],
+    [
+      "22f2dbd7-4dd6-408c-935e-27f6f77b9367${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"77ec0e74-9683-4ec9-8189-246ae1aa51ee\"}"
+    ]
+  ]
 }

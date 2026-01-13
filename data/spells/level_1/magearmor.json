@@ -1,52 +1,51 @@
 {
-    "name": "Mage Armor",
-    "type": "spell",
-    "img": "assets/icons/spells/mage-armor.webp",
-    "classes": ["wizard", "sorcerer"],
-    "tags": ["buff", "defense", "wizard", "sorcerer", "abjuration"],
-    "system": {
-      "level": 1,
-      "school": "abj",
-      "activation": {
-        "type": "action",
-        "cost": 1,
-        "condition": ""
-      },
-      "duration": {
-        "value": "8",
-        "units": "hours"
-      },
-      "target": {
-        "value": 1,
-        "units": "",
-        "type": "creature"
-      },
-      "range": {
-        "value": null,
-        "long": null,
-        "units": "touch"
-      },
-      "components": {
-        "vocal": true,
-        "somatic": true,
-        "material": true,
-        "materialDescription": "a piece of cured leather",
-        "concentration": false,
-        "ritual": false
-      },
-      "scaling": {
-        "mode": "none",
-        "formula": ""
-      },
-      "description": {
-        "value": "<p>You touch a willing creature who isn't wearing armor, and a protective magical force surrounds it until the spell ends.</p><p>The target's base AC becomes 13 + its Dexterity modifier.</p>",
-        "chat": ""
-      }
-    },
-    "flags": {
-      "mythos": {
-        "isPublic": true,
-        "sourceDoc": "SRD 5.1"
-      }
-    }
-  }
+  "_id": {
+    "$oid": "new-1768227956242-52"
+  },
+  "name": "Mage Armor",
+  "level": 1,
+  "flavorText": null,
+  "description": "You touch a willing creature who isn’t wearing armor, and a protective magical force surrounds it until the spell ends. The target’s base AC becomes 13 + its Dexterity modifier. The spell ends if the target dons armor or if you dismiss the spell as an action.",
+  "school": "Abjuration",
+  "classes": [
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S, M (a piece of cured leather)",
+  "duration": "8 hours",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a piece of cured leather"
+    ]
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/75672142-5c49-4735-9703-54865a4d083b.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "sorcerer",
+    "wizard",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "75672142-5c49-4735-9703-54865a4d083b${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ad6bfb9f-859f-48f0-803f-51653d82eb08\"}"
+    ],
+    [
+      "f3575ef0-efd7-4ee2-8899-6a8df5fb1433${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"6fe944a8-fb39-4558-9932-f73bb2fb3612\"}"
+    ],
+    [
+      "c59bf314-7402-45d3-a70e-ada634cd0d94"
+    ],
+    [
+      "552cbc7b-0415-4869-b494-f867ccf70e67"
+    ]
+  ]
+}

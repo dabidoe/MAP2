@@ -4,20 +4,32 @@
   },
   "name": "Arcanist’s Magic Aura",
   "level": 2,
+  "flavorText": "You place an Illusion on a creature or an object you touch so that Divination Spells reveal false information about it. The target can be a willing creature or an object that isn’t being carried or worn by another creature.\n\nWhen you cast the spell, choose one or both of the following Effects. The Effect lasts for the Duration. If you cast this spell on the same creature or object every day for 30 days, placing the same Effect on it each time, the i⁠llusion lasts until it is dispelled.\n\nFalse Aura. You change the way the target appears to Spells and Magical Effects, such as Detect Magic, that detect Magical auras. You can make a nonmagical object appear Magical, a Magical object appear nonmagical, or change the object’s Magical aura so that it appears to belong to a specific School of Magic that you choose. When you use this Effect on an object, you can make the false magic apparent to any creature that handles the item.\n\nMask. You change the way the target appears to Spells and Magical Effects that detect Creature Types, such as a paladin’s Divine Sense or the trigger of a sym⁠bol spell. You choose a Creature Type and other Spells and Magical Effects treat the target as if it were a creature of that type or of that Alignment.",
   "description": "You place an Illusion on a creature or an object you touch so that Divination Spells reveal false information about it. The target can be a willing creature or an object that isn’t being carried or worn by another creature.\n\nWhen you cast the spell, choose one or both of the following Effects. The Effect lasts for the Duration. If you cast this spell on the same creature or object every day for 30 days, placing the same Effect on it each time, the i⁠llusion lasts until it is dispelled.\n\nFalse Aura. You change the way the target appears to Spells and Magical Effects, such as Detect Magic, that detect Magical auras. You can make a nonmagical object appear Magical, a Magical object appear nonmagical, or change the object’s Magical aura so that it appears to belong to a specific School of Magic that you choose. When you use this Effect on an object, you can make the false magic apparent to any creature that handles the item.\n\nMask. You change the way the target appears to Spells and Magical Effects that detect Creature Types, such as a paladin’s Divine Sense or the trigger of a sym⁠bol spell. You choose a Creature Type and other Spells and Magical Effects treat the target as if it were a creature of that type or of that Alignment.",
-  "castingTime": "1 action",
-  "range": "Touch",
-  "components": "V, S, M (A small square of silk)",
-  "duration": "24 hours",
-  "damage": null,
   "school": "Illusion",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S, M (A small square of silk)",
+  "duration": "24 hours",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "A small square of silk"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
+  "iconStatus": "missing",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "wizard",
+    "level2"
+  ]
 }

@@ -4,16 +4,9 @@
   },
   "name": "Dimension Door",
   "level": 4,
+  "flavorText": "You teleport yourself from your current location to any other spot within range. You arrive at exactly the spot desired. It can be a place you can see, one you can visualise, or one you can describe by stating distance and direction, such as \"200 feet straight downward\" or \"upward to the northwest at a 45-degree angle, 300 feet.\"\n\nYou can bring along objects as long as their weight doesn't exceed what you can carry. You can also bring one willing creature of your size or smaller who is carrying gear up to its carrying capacity. The creature must be within 5 feet of you when you cast this spell.\n\nIf you would arrive in a place already occupied by an object or a creature, you and any creature travelling with you each take 4d6 force damage, and the spell fails to teleport you.",
   "description": "You teleport yourself from your current location to any other spot within range. You arrive at exactly the spot desired. It can be a place you can see, one you can visualise, or one you can describe by stating distance and direction, such as \"200 feet straight downward\" or \"upward to the northwest at a 45-degree angle, 300 feet.\"\n\nYou can bring along objects as long as their weight doesn't exceed what you can carry. You can also bring one willing creature of your size or smaller who is carrying gear up to its carrying capacity. The creature must be within 5 feet of you when you cast this spell.\n\nIf you would arrive in a place already occupied by an object or a creature, you and any creature travelling with you each take 4d6 force damage, and the spell fails to teleport you.",
-  "castingTime": "1 action",
-  "range": "500 feet",
-  "components": "V",
-  "duration": "Instantaneous",
-  "damage": "4d6 force",
   "school": "Conjuration",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "bard",
     "sorcerer",
@@ -21,6 +14,40 @@
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "500 feet",
+  "components": "V",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": false,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/61c1e439-32f5-49e7-a814-795c16e03d46.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "4d6 force",
+  "tags": [
+    "bard",
+    "sorcerer",
+    "warlock",
+    "wizard",
+    "level4"
+  ],
+  "iconLayers": [
+    [
+      "61c1e439-32f5-49e7-a814-795c16e03d46"
+    ],
+    [
+      "54912f14-ca42-4159-b8e9-6c34e091b578"
+    ],
+    [
+      "205d94d1-1a5e-4169-b7dc-af996f7ec4ec"
+    ],
+    [
+      "695f8607-83da-4631-93cf-755d983b5665"
+    ]
+  ]
 }

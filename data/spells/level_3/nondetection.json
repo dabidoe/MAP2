@@ -4,38 +4,50 @@
   },
   "name": "Nondetection",
   "level": 3,
+  "flavorText": "For the duration, you hide a target that you touch from divination magic. The target can be a willing creature or a place or an object no larger than 10 feet in any dimension. The target can’t be targeted by any divination magic or perceived through magical scrying sensors.",
   "description": "For the duration, you hide a target that you touch from divination magic. The target can be a willing creature or a place or an object no larger than 10 feet in any dimension. The target can’t be targeted by any divination magic or perceived through magical scrying sensors.",
-  "castingTime": "1 action",
-  "range": "Touch",
-  "components": "V, S, M (a pinch of diamond dust worth 25 gp sprinkled over the target, which the spell consumes)",
-  "duration": "8 hours",
-  "damage": null,
   "school": "Abjuration",
-  "isPublic": true,
   "classes": [
     "bard",
     "ranger",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S, M (a pinch of diamond dust worth 25 gp sprinkled over the target, which the spell consumes)",
+  "duration": "8 hours",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a pinch of diamond dust worth 25 gp sprinkled over the target, which the spell consumes"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/319b96f8-0abe-4fa8-83d9-1019bc4239e4.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "bard",
+    "ranger",
+    "wizard",
+    "level3"
+  ],
   "iconLayers": [
-    {
-      "guid": "319b96f8-0abe-4fa8-83d9-1019bc4239e4${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"cca1e489-b32d-4f08-be03-14487226b6a9\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "0210977e-7086-4618-98ab-fa8c74688483",
-      "json": "{}"
-    },
-    {
-      "guid": "2959bfcb-494f-4677-ac7d-868da28f53d5${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"7f5c61fc-4be6-44cc-8691-17f60042ab01\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "e181ea83-b05c-4ce8-9e31-82530b115a88",
-      "json": "{}"
-    }
+    [
+      "319b96f8-0abe-4fa8-83d9-1019bc4239e4${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"cca1e489-b32d-4f08-be03-14487226b6a9\"}"
+    ],
+    [
+      "0210977e-7086-4618-98ab-fa8c74688483"
+    ],
+    [
+      "2959bfcb-494f-4677-ac7d-868da28f53d5${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"7f5c61fc-4be6-44cc-8691-17f60042ab01\"}"
+    ],
+    [
+      "e181ea83-b05c-4ce8-9e31-82530b115a88"
+    ]
   ]
 }

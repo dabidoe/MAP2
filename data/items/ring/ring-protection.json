@@ -1,0 +1,21 @@
+{
+  "id": "ring-protection",
+  "name": "Ring of Protection",
+  "category": "ring",
+  "rarity": "rare",
+  "weight": 0,
+  "value": 5000,
+  "quantity": 1,
+  "requiresAttunement": true,
+  "description": "A ring imbued with protective magic",
+  "magic": {
+    "effects": [
+      {
+        "name": "Protection",
+        "description": "+1 to AC and saving throws"
+      }
+    ]
+  },
+  "icon": "💍",
+  "iconStatus": "placeholder"
+}

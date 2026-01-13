@@ -11,5 +11,20 @@
   "duration": "Concentration, up to 1 minute",
   "damage": "2d8 cold per turn",
   "school": "Evocation",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/1efcd817-3b79-46c9-b4b6-600ab767b842.png"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/1efcd817-3b79-46c9-b4b6-600ab767b842.png",
+  "iconStatus": "ready",
+  "iconLayers": [
+    [
+      "1efcd817-3b79-46c9-b4b6-600ab767b842"
+    ],
+    [
+      "b22850e4-1a6e-4185-bff2-4bdc2ab0d6f4"
+    ],
+    [
+      "bb9cb286-cd23-4c4a-a7a8-209c42acbd5d"
+    ],
+    [
+      "7e1e754a-cfe4-40da-bce2-710f641ff372"
+    ]
+  ]
 }

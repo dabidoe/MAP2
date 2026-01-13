@@ -1,0 +1,19 @@
+{
+  "id": "splint-armor",
+  "name": "Splint Armor",
+  "category": "armor",
+  "rarity": "common",
+  "slot": "body",
+  "weight": 60,
+  "value": 200,
+  "description": "Narrow vertical metal strips riveted to leather",
+  "armor": {
+    "ac": 17,
+    "type": "heavy",
+    "maxDexBonus": 0,
+    "stealthDisadvantage": true,
+    "strengthRequired": 15
+  },
+  "icon": "🛡️",
+  "iconStatus": "placeholder"
+}

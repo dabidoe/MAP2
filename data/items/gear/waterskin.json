@@ -1,0 +1,12 @@
+{
+  "id": "waterskin",
+  "name": "Waterskin",
+  "category": "gear",
+  "rarity": "common",
+  "weight": 5,
+  "value": 0.2,
+  "quantity": 1,
+  "description": "A leather container that holds 4 pints of liquid",
+  "icon": "🎒",
+  "iconStatus": "placeholder"
+}

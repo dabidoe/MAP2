@@ -4,21 +4,46 @@
   },
   "name": "Commune with Nature",
   "level": 5,
+  "flavorText": "You briefly become one with nature and gain knowledge of the surrounding territory. In the outdoors, the spell gives you knowledge of the land within 3 miles of you. In caves and other natural underground settings, the radius is limited to 300 feet. The spell doesn't function where nature has been replaced by construction, such as in dungeons and towns.  You instantly gain knowledge of up to three facts of your choice about any of the following subjects as they relate to the area:\n\n* terrain and bodies of water\n\n* prevalent plants, minerals, animals, or peoples\n\n* powerful celestials, fey, fiends, elementals, or undead\n\n* influence from other planes of existence\n\n* buildings\n\nFor example, you could determine the location of powerful undead in the area, the location of major sources of safe drinking water, and the location of any nearby towns.",
   "description": "You briefly become one with nature and gain knowledge of the surrounding territory. In the outdoors, the spell gives you knowledge of the land within 3 miles of you. In caves and other natural underground settings, the radius is limited to 300 feet. The spell doesn't function where nature has been replaced by construction, such as in dungeons and towns.  You instantly gain knowledge of up to three facts of your choice about any of the following subjects as they relate to the area:\n\n* terrain and bodies of water\n\n* prevalent plants, minerals, animals, or peoples\n\n* powerful celestials, fey, fiends, elementals, or undead\n\n* influence from other planes of existence\n\n* buildings\n\nFor example, you could determine the location of powerful undead in the area, the location of major sources of safe drinking water, and the location of any nearby towns.",
-  "castingTime": "1 minute",
-  "range": "Self",
-  "components": "V, S",
-  "duration": "Instantaneous",
-  "damage": null,
   "school": "Divination",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "druid",
     "ranger"
   ],
   "ritual": true,
+  "castingTime": "1 minute",
+  "range": "Self",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/e7c4dad1-0aba-4b28-bf5e-e6e5c1011699.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "druid",
+    "ranger",
+    "level5"
+  ],
+  "iconLayers": [
+    [
+      "e7c4dad1-0aba-4b28-bf5e-e6e5c1011699"
+    ],
+    [
+      "8886b5f5-c139-411d-a496-e103f54b1730"
+    ],
+    [
+      "d0686dac-beb8-448e-b57d-02c92d8afd33"
+    ],
+    [
+      "ab075f0c-e7a9-40bc-8cd0-4325d010193f"
+    ]
+  ]
 }

@@ -4,12 +4,44 @@
   },
   "name": "Branding Smite",
   "level": 2,
-  "description": "You wreathe your next weapon strike in stellar fire. On your first hit before the spell ends, the attack erupts in a burst of astral sparks, burning the target and outlining it in shimmering constellations that foil invisibility and reveal hidden movement.",
+  "flavorText": "You wreathe your next weapon strike in stellar fire. On your first hit before the spell ends, the attack erupts in a burst of astral sparks, burning the target and outlining it in shimmering constellations that foil invisibility and reveal hidden movement.",
+  "description": "The next time you hit a creature with a weapon attack before this spell ends, the weapon gleams with astral radiance as you strike. The attack deals an extra 2d6 radiant damage to the target, which becomes visible if it’s invisible, and the target sheds dim light in a 5-foot radius and can’t become invisible until the spell ends.",
+  "school": "Evocation",
+  "classes": [
+    "paladin"
+  ],
+  "ritual": false,
   "castingTime": "1 bonus action",
   "range": "Self",
   "components": "V",
   "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": false,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": "When you cast this spell using a spell slot of 3rd level or higher, the extra damage increases by 1d6 for each slot level above 2nd.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/ae37c97f-9318-44dd-849d-7be3117555be.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "2d8 Radiant",
-  "school": "Evocation",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/ae37c97f-9318-44dd-849d-7be3117555be.png"
+  "tags": [
+    "paladin",
+    "level2"
+  ],
+  "iconLayers": [
+    [
+      "ae37c97f-9318-44dd-849d-7be3117555be${\"position\":\"0.4648451,0.4590767\",\"rotation\":0.0,\"scale\":\"1.1,1.1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"632ed6e0-36e9-464c-a366-4dbe356eabf6\"}"
+    ],
+    [
+      "8727ae0c-40f6-4c88-b6b2-7e52cf4e34e5${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"5178a16b-0887-4c1f-a849-22cd9148e598\"}"
+    ],
+    [
+      "92d96079-0567-4eb9-ae75-d709451eb976${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d9788977-2ff1-4488-a4a4-ef396c784162\"}"
+    ],
+    [
+      "cb6994a6-1558-49ed-ab0c-7188ef164a72${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d50c88d0-661e-4b67-80f7-4660a0f7ff85\"}"
+    ]
+  ]
 }

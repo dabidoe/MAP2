@@ -1,0 +1,18 @@
+{
+  "id": "mace",
+  "name": "Mace",
+  "category": "weapon",
+  "rarity": "common",
+  "slot": "mainHand",
+  "weight": 4,
+  "value": 5,
+  "description": "A simple bludgeoning weapon with a metal head",
+  "weapon": {
+    "damage": "1d6",
+    "damageType": "bludgeoning",
+    "properties": [],
+    "range": "5 ft"
+  },
+  "icon": "⚔️",
+  "iconStatus": "placeholder"
+}

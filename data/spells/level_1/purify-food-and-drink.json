@@ -4,12 +4,48 @@
   },
   "name": "Purify Food and Drink",
   "level": 1,
-  "description": "You infuse a meal or drink with gentle household magic, banishing rot, foul tastes, and minor impurities. Creatures who consume the treated fare gain a faint sense of warmth and well‑being.",
+  "flavorText": "You infuse a meal or drink with gentle household magic, banishing rot, foul tastes, and minor impurities. Creatures who consume the treated fare gain a faint sense of warmth and well‑being.",
+  "description": "All nonmagical food and drink within a 5-foot radius sphere centered on a point of your choice within range is purified and rendered free of poison and disease.",
+  "school": "Transmutation",
+  "classes": [
+    "cleric",
+    "druid",
+    "paladin"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
-  "range": "Touch",
+  "range": "10 feet",
   "components": "V, S",
   "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/cf7cd0ca-e113-4945-a925-6c1e8b727947.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "None",
-  "school": "Transmutation",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/cf7cd0ca-e113-4945-a925-6c1e8b727947.png"
+  "tags": [
+    "cleric",
+    "druid",
+    "paladin",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "cf7cd0ca-e113-4945-a925-6c1e8b727947${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"0136687d-9ea1-44c7-af8a-55d5f918767c\"}"
+    ],
+    [
+      "73ba6a9d-038c-44ee-b21c-6265c2b5e319${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"7f41e68f-2e60-43c0-8bfb-14a91ee54193\"}"
+    ],
+    [
+      "3514b6ac-d942-47ad-9e4d-4122ac20f3b3${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"951e8c21-7fdf-483b-82d6-858b3fb530bb\"}"
+    ],
+    [
+      "c39eccc7-5462-4fb2-a440-c43d8d365a9d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"b904c6de-fc51-4564-9ceb-02963df8540d\"}"
+    ]
+  ]
 }

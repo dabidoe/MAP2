@@ -4,22 +4,50 @@
   },
   "name": "Find the Path",
   "level": 6,
+  "flavorText": "This spell allows you to find the shortest, most direct physical route to a specific fixed location that you are familiar with on the same plane of existence. If you name a destination on another plan of existence, a destination that moves (such as a mobile fortress), or a destination that isn't specific (such as \"a green dragon's lair\"), the spell fails.\n\nFor the duration, as long as you are on the same plane of existence as the destination, you know how far it is and in what direction it lies. While you are traveling there, whenever you are presented with a choice of paths along the way, you atomatically determine which path is the shortest and most direct route (but not necessarily the safest route) to the destination.",
   "description": "This spell allows you to find the shortest, most direct physical route to a specific fixed location that you are familiar with on the same plane of existence. If you name a destination on another plan of existence, a destination that moves (such as a mobile fortress), or a destination that isn't specific (such as \"a green dragon's lair\"), the spell fails.\n\nFor the duration, as long as you are on the same plane of existence as the destination, you know how far it is and in what direction it lies. While you are traveling there, whenever you are presented with a choice of paths along the way, you atomatically determine which path is the shortest and most direct route (but not necessarily the safest route) to the destination.",
-  "castingTime": "1 minute",
-  "range": "Self",
-  "components": "V, S, M (a set of divinatory tools -- such as bones, ivory sticks, cards, teeth, or carved runes -- worth 100 gp and an object from the location you wish to find)",
-  "duration": "Concentration, up to 1 day",
-  "damage": null,
   "school": "Divination",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "bard",
     "cleric",
     "druid"
   ],
   "ritual": false,
+  "castingTime": "1 minute",
+  "range": "Self",
+  "components": "V, S, M (a set of divinatory tools -- such as bones, ivory sticks, cards, teeth, or carved runes -- worth 100 gp and an object from the location you wish to find)",
+  "duration": "Concentration, up to 1 day",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a set of divinatory tools -- such as bones, ivory sticks, cards, teeth, or carved runes -- worth 100 gp and an object from the location you wish to find"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/42ccb67e-fb3f-4e88-b404-49820ca81e1d.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "bard",
+    "cleric",
+    "druid",
+    "level6"
+  ],
+  "iconLayers": [
+    [
+      "42ccb67e-fb3f-4e88-b404-49820ca81e1d"
+    ],
+    [
+      "4c6e66be-0025-42ae-9371-126d60475f5d"
+    ],
+    [
+      "56de97be-e6ae-4ff2-b8e3-1eee0f276e5c"
+    ],
+    [
+      "f88e4cd3-98b8-4f06-a2a7-332970858d70"
+    ]
+  ]
 }

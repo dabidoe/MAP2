@@ -4,12 +4,44 @@
   },
   "name": "Inflict Wounds",
   "level": 1,
-  "description": "Your hand darkens with starless void as you seize a creature, draining its vigor and chilling its spirit with creeping shadow.",
+  "flavorText": "Your hand darkens with starless void as you seize a creature, draining its vigor and chilling its spirit with creeping shadow.",
+  "description": "Make a melee spell attack against a creature you can reach. On a hit, the target takes 3d10 necrotic damage.",
+  "school": "Necromancy",
+  "classes": [
+    "cleric"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
   "range": "Touch",
   "components": "V, S",
   "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/108e5078-ba2a-4dc7-9f60-2dd0e5fc45f1.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "3d8 necrotic",
-  "school": "Necromancy",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/108e5078-ba2a-4dc7-9f60-2dd0e5fc45f1.png"
+  "tags": [
+    "cleric",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "108e5078-ba2a-4dc7-9f60-2dd0e5fc45f1"
+    ],
+    [
+      "ea86a122-462d-410d-8034-3249f9fc3aa1"
+    ],
+    [
+      "6ddf3df0-78dc-46f6-97e9-3883bda8b1a2"
+    ],
+    [
+      "e8fdeda1-370b-4ab2-a331-9293d0f56af7"
+    ]
+  ]
 }

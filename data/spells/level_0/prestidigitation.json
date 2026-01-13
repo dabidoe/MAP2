@@ -4,12 +4,50 @@
   },
   "name": "Prestidigitation",
   "level": 0,
-  "description": "A flicker of raw arcane potential performs tiny tasks at your command. Choose one effect within range: ignite or snuff a small flame; clean or smudge an object no larger than 1 cubic foot; chill, warm, or subtly flavor nonliving material; shift the color of a palm-sized surface; conjure a harmless hand‑held trinket that vanishes at the start of your next turn; or create a brief sensory flourish such as a drifting spark, soft chime, or fleeting scent.",
+  "flavorText": "A flicker of raw arcane potential performs tiny tasks at your command. Choose one effect within range: ignite or snuff a small flame; clean or smudge an object no larger than 1 cubic foot; chill, warm, or subtly flavor nonliving material; shift the color of a palm-sized surface; conjure a harmless hand‑held trinket that vanishes at the start of your next turn; or create a brief sensory flourish such as a drifting spark, soft chime, or fleeting scent.",
+  "description": "This spell is a minor magical trick that novice spellcasters use for practice. You create one of the following magical effects within range:\n\n* You create an instantaneous, harmless sensory effect, such as a shower of sparks, a puff of wind, faint musical notes, or an odd odor.\n\n* You instantaneously light or snuff out a candle, a torch, or a small campfire.\n\n* You instantaneously clean or soil an object no larger than 1 cubic foot.\n\n* You chill, warm, or flavor up to 1 cubic foot of nonliving material for 1 hour.\n\n* You make a color, a small mark, or a symbol appear on an object or a surface for 1 hour.\n\n* You create a nonmagical trinket or an illusory image that can fit in your hand and that lasts until the end of your next turn.\n\nIf you cast this spell multiple times, you can have up to three of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.",
+  "school": "Transmutation",
+  "classes": [
+    "bard",
+    "sorcerer",
+    "warlock",
+    "wizard"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
-  "range": "15 feet",
+  "range": "10 feet",
   "components": "V, S",
-  "duration": "1 hour",
+  "duration": "Up to 1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/2d2ef1a0-e6ce-4363-82b3-e004f87a3911.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "None",
-  "school": "Illusion",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/2d2ef1a0-e6ce-4363-82b3-e004f87a3911.png"
+  "tags": [
+    "bard",
+    "sorcerer",
+    "warlock",
+    "wizard",
+    "cantrip"
+  ],
+  "iconLayers": [
+    [
+      "2d2ef1a0-e6ce-4363-82b3-e004f87a3911${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1.5,1.5\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"a7ad568c-3de5-446b-aa68-7902b57a26a6\"}"
+    ],
+    [
+      "97defa5b-5752-409e-a6f6-318c3beb2173${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"b1200fa2-670e-40d9-8491-2e2111b1d160\"}"
+    ],
+    [
+      "11f18462-93c4-4110-a3cb-878453771fee${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"eb7224d2-8945-4f43-8036-6c381e6e201e\"}"
+    ],
+    [
+      "a758e4f9-896e-464b-aad3-3652c9767fad${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e06573d9-9b79-4df9-a71d-c9eb9fc07f18\"}"
+    ]
+  ]
 }

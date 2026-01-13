@@ -1,0 +1,12 @@
+{
+  "id": "rations",
+  "name": "Rations (1 day)",
+  "category": "gear",
+  "rarity": "common",
+  "weight": 2,
+  "value": 0.5,
+  "quantity": 1,
+  "description": "Dried foods suitable for extended travel",
+  "icon": "🎒",
+  "iconStatus": "placeholder"
+}

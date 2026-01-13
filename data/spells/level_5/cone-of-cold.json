@@ -4,21 +4,48 @@
   },
   "name": "Cone of Cold",
   "level": 5,
+  "flavorText": "A blast of cold air erupts from your hands. Each creature in a 60-foot cone must make a Constitution saving throw. A creature takes 8d8 cold damage on a failed save, or half as much damage on a successful one.\n\nA creature killed by this spell becomes a frozen statue until it thaws.",
   "description": "A blast of cold air erupts from your hands. Each creature in a 60-foot cone must make a Constitution saving throw. A creature takes 8d8 cold damage on a failed save, or half as much damage on a successful one.\n\nA creature killed by this spell becomes a frozen statue until it thaws.",
-  "castingTime": "1 action",
-  "range": "Self (60-foot cone)",
-  "components": "V, S, M (a small crystal or a glass cone)",
-  "duration": "Instantaneous",
-  "damage": "8d8 cold",
   "school": "Evocation",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "sorcerer",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Self (60-foot cone)",
+  "components": "V, S, M (a small crystal or a glass cone)",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a small crystal or a glass cone"
+    ]
+  },
   "higherLevels": "When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th.",
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/cea121fc-dda0-47d1-b7f7-0359a32cc039.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "8d8 cold",
+  "tags": [
+    "sorcerer",
+    "wizard",
+    "level5"
+  ],
+  "iconLayers": [
+    [
+      "cea121fc-dda0-47d1-b7f7-0359a32cc039"
+    ],
+    [
+      "9e1c1ea4-5c7d-48b8-a818-756c6abee121"
+    ],
+    [
+      "e8826ba1-82db-49b6-969e-6b764e065066"
+    ],
+    [
+      "7dd740d6-d7f0-4f4f-84e4-f1e4e04aaca8"
+    ]
+  ]
 }

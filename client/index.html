@@ -27,6 +27,9 @@
             <button class="sidebar-icon" title="Grimoire" id="sidebar-grimoire">
                 📖
             </button>
+            <button class="sidebar-icon" title="Armory" id="sidebar-armory">
+                ⚔️
+            </button>
             <button class="sidebar-icon" title="Settings" id="sidebar-settings">
                 ⚙️
             </button>
@@ -66,12 +69,33 @@
                 <!-- Spells will be populated here -->
             </div>
         </div>
+
+        <!-- Armory Panel -->
+        <div id="sidebar-armory-panel" class="sidebar-panel grimoire-panel">
+            <div class="sidebar-panel-header">
+                <h3>The Armory</h3>
+                <button id="close-armory" class="close-btn">✕</button>
+            </div>
+            <div class="armory-search grimoire-search">
+                <input type="text" id="armory-search-input" placeholder="Search items..." class="grimoire-search-input" />
+            </div>
+            <div id="armory-item-list" class="grimoire-spell-list">
+                <!-- Items will be populated here -->
+            </div>
+        </div>
     </div>
 
     <!-- Spell Card Modal -->
     <div id="spell-card-modal" class="modal-overlay" style="display: none;">
         <div id="spell-card-container" class="spell-card">
             <!-- Spell card will be rendered here -->
+        </div>
+    </div>
+
+    <!-- Item Card Modal -->
+    <div id="item-card-modal" class="modal-overlay" style="display: none;">
+        <div id="item-card-container" class="spell-card">
+            <!-- Item card will be rendered here -->
         </div>
     </div>
 

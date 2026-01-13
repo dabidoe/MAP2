@@ -4,12 +4,46 @@
   },
   "name": "Guidance",
   "level": 0,
-  "description": "You brush a creature with a soft pulse of arcane clarity. Until the spell ends, the target may add a brief surge of mental precision to a single ability check it makes before the spell expires.",
+  "flavorText": "You brush a creature with a soft pulse of arcane clarity. Until the spell ends, the target may add a brief surge of mental precision to a single ability check it makes before the spell expires.",
+  "description": "You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends.",
+  "school": "Divination",
+  "classes": [
+    "cleric",
+    "druid"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
   "range": "Touch",
   "components": "V, S",
   "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/5bfb0610-76cc-425c-a431-4b52f108d489.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "+1d4 to one ability check",
-  "school": "Enchantment",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/5bfb0610-76cc-425c-a431-4b52f108d489.png"
+  "tags": [
+    "cleric",
+    "druid",
+    "cantrip"
+  ],
+  "iconLayers": [
+    [
+      "5bfb0610-76cc-425c-a431-4b52f108d489${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c4f726b4-9515-4731-8d4f-777c22ff949f\"}"
+    ],
+    [
+      "6c2092c7-5834-42c2-87d7-da26c7208ef6${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"819f09fe-a4cc-413b-960e-9e0876194269\"}"
+    ],
+    [
+      "e50f86f0-539f-49df-ab0d-8ae0d59d57eb${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"841edb0b-314b-435a-98de-764901d43fe1\"}"
+    ],
+    [
+      "7271ce7a-ddac-4c56-b9ab-663d47ccc949"
+    ]
+  ]
 }

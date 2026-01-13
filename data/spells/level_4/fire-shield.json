@@ -4,20 +4,46 @@
   },
   "name": "Fire Shield",
   "level": 4,
+  "flavorText": "Thin and wispy flames wreathe your body for the duration, shedding bright light in a 10-foot radius and dim light for an additional 10 feet, You can end the spell early by using an action to dismiss it.\n\nThe flames provide you with a warm shield or a chill shield, as you choose. The warm shield grants you resistance to cold damage, and the chill shield grants you resistance to fire damage.\n\nIn addition, whenever a creature within 5 feet of you hits you with a melee attack, the shield erupts with flame. The attacker takes 2d8 fire damage from a warm shield, or 2d8 cold damage from a cold shield.",
   "description": "Thin and wispy flames wreathe your body for the duration, shedding bright light in a 10-foot radius and dim light for an additional 10 feet, You can end the spell early by using an action to dismiss it.\n\nThe flames provide you with a warm shield or a chill shield, as you choose. The warm shield grants you resistance to cold damage, and the chill shield grants you resistance to fire damage.\n\nIn addition, whenever a creature within 5 feet of you hits you with a melee attack, the shield erupts with flame. The attacker takes 2d8 fire damage from a warm shield, or 2d8 cold damage from a cold shield.",
-  "castingTime": "1 action",
-  "range": "Self",
-  "components": "V, S, M (a bit of phosphorous or a firefly)",
-  "duration": "10 minutes",
-  "damage": "2d8 fire",
   "school": "Evocation",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Self",
+  "components": "V, S, M (a bit of phosphorous or a firefly)",
+  "duration": "10 minutes",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a bit of phosphorous or a firefly"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/7feef143-1d9e-4ed8-befe-f4118a5f992a.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "2d8 fire",
+  "tags": [
+    "wizard",
+    "level4"
+  ],
+  "iconLayers": [
+    [
+      "7feef143-1d9e-4ed8-befe-f4118a5f992a"
+    ],
+    [
+      "7d069dcd-1608-430a-8681-17165838b9a5"
+    ],
+    [
+      "0bdc445f-be81-43e3-b11d-736c3d1b389a"
+    ],
+    [
+      "939bdcea-fdb7-4b9b-8e1f-cbddcc8a77c2"
+    ]
+  ]
 }

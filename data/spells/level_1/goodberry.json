@@ -4,37 +4,48 @@
   },
   "name": "Goodberry",
   "level": 1,
+  "flavorText": "Up to ten berries appear in your hand and are infused with magic for the duration. A creature can use its action to eat one berry. Eating a berry restores 1 hit point, and the berry provides enough nourishment to sustain a creature for a day.\n\nThe berries lose their potency if they have not been consumed within 24 hours of the casting of this spell.",
   "description": "Up to ten berries appear in your hand and are infused with magic for the duration. A creature can use its action to eat one berry. Eating a berry restores 1 hit point, and the berry provides enough nourishment to sustain a creature for a day.\n\nThe berries lose their potency if they have not been consumed within 24 hours of the casting of this spell.",
-  "castingTime": "1 action",
-  "range": "Touch",
-  "components": "V, S, M (a sprig of mistletoe)",
-  "duration": "Instantaneous",
-  "damage": null,
   "school": "Transmutation",
-  "isPublic": true,
   "classes": [
     "druid",
     "ranger"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S, M (a sprig of mistletoe)",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a sprig of mistletoe"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/f90898bb-b7fd-4944-894c-f2405f675ffa.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "druid",
+    "ranger",
+    "level1"
+  ],
   "iconLayers": [
-    {
-      "guid": "f90898bb-b7fd-4944-894c-f2405f675ffa${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ac300f15-d24e-4c89-9924-6b44d9114cfd\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "e5d7dc44-42bb-40b1-868d-b83f35443f01${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"fa25b437-ee6c-4f10-9540-d8b43981daa9\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "48c71421-27c4-47be-ac30-3b953890f758${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"939ef624-61e0-4d1e-840c-c92cbbee5d3e\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "f4aaacc5-2a63-4432-b1d7-64f5b37dd68d",
-      "json": "{}"
-    }
+    [
+      "f90898bb-b7fd-4944-894c-f2405f675ffa${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ac300f15-d24e-4c89-9924-6b44d9114cfd\"}"
+    ],
+    [
+      "e5d7dc44-42bb-40b1-868d-b83f35443f01${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"fa25b437-ee6c-4f10-9540-d8b43981daa9\"}"
+    ],
+    [
+      "48c71421-27c4-47be-ac30-3b953890f758${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"939ef624-61e0-4d1e-840c-c92cbbee5d3e\"}"
+    ],
+    [
+      "f4aaacc5-2a63-4432-b1d7-64f5b37dd68d"
+    ]
   ]
 }

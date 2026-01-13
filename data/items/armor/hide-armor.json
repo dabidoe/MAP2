@@ -1,0 +1,18 @@
+{
+  "id": "hide-armor",
+  "name": "Hide Armor",
+  "category": "armor",
+  "rarity": "common",
+  "slot": "body",
+  "weight": 12,
+  "value": 10,
+  "description": "Armor made from thick furs and pelts",
+  "armor": {
+    "ac": 12,
+    "type": "medium",
+    "maxDexBonus": 2,
+    "stealthDisadvantage": false
+  },
+  "icon": "🛡️",
+  "iconStatus": "placeholder"
+}

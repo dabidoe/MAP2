@@ -4,14 +4,9 @@
   },
   "name": "Crown of Madness",
   "level": 2,
+  "flavorText": "One humanoid of your choice that you can see within range must succeed on a Wisdom saving throw or become charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes.\nThe charmed target must use its action before moving on each of its turns to make a melee attack against a creature other than itself that you mentally choose.\nThe target can act normally on its turn if you choose no creature or if none are within its reach.\nOn your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target can make a Wisdom saving throw at the end of each of its turns. On a success, the spell ends.",
   "description": "One humanoid of your choice that you can see within range must succeed on a Wisdom saving throw or become charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes.\nThe charmed target must use its action before moving on each of its turns to make a melee attack against a creature other than itself that you mentally choose.\nThe target can act normally on its turn if you choose no creature or if none are within its reach.\nOn your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target can make a Wisdom saving throw at the end of each of its turns. On a success, the spell ends.",
-  "castingTime": "1 action",
-  "range": "120 feet",
-  "components": "V, S",
-  "duration": "Concentration, up to 1 minute",
-  "damage": null,
   "school": "Enchantment",
-  "isPublic": true,
   "classes": [
     "bard",
     "sorcerer",
@@ -19,24 +14,40 @@
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "120 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/ca7559f9-fea2-4956-b9d5-3a8a92d9f1f0.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "bard",
+    "sorcerer",
+    "warlock",
+    "wizard",
+    "level2"
+  ],
   "iconLayers": [
-    {
-      "guid": "ca7559f9-fea2-4956-b9d5-3a8a92d9f1f0${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"6d1e7f0f-2ab4-4d9d-ae0c-b952adb9d02c\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "34655fae-b190-4cbf-ad6d-5df09244180d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1edc2902-55cf-4779-bbbc-68b9341114bb\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "1dc7fe43-4146-4b43-8cec-22bc84a6a405${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4fe105bb-0c8f-4dc9-b2cb-30c76b99e7f1\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "297f4ca0-30fc-4bfb-8aa4-db9d230130b4${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"790dbe62-d930-42cb-9a20-f6564ce19df2\"}",
-      "json": "{}"
-    }
+    [
+      "ca7559f9-fea2-4956-b9d5-3a8a92d9f1f0${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"6d1e7f0f-2ab4-4d9d-ae0c-b952adb9d02c\"}"
+    ],
+    [
+      "34655fae-b190-4cbf-ad6d-5df09244180d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1edc2902-55cf-4779-bbbc-68b9341114bb\"}"
+    ],
+    [
+      "1dc7fe43-4146-4b43-8cec-22bc84a6a405${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4fe105bb-0c8f-4dc9-b2cb-30c76b99e7f1\"}"
+    ],
+    [
+      "297f4ca0-30fc-4bfb-8aa4-db9d230130b4${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"790dbe62-d930-42cb-9a20-f6564ce19df2\"}"
+    ]
   ]
 }

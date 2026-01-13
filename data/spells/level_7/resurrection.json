@@ -4,21 +4,48 @@
   },
   "name": "Resurrection",
   "level": 7,
+  "flavorText": "You touch a dead creature that has been dead for no more than a century, that didn't die of old age, and that isn't undead. If its soul is free and willing, the target returns to life with all its hit points.\n\nThis spell neutralizes any poisons and cures normal diseases afflicting the creature when it died. It doesn't however, remove magical diseases, curses, and the like; if such effects aren't removed prior to casting the spell, the afflict the target on its return to life.\n\nThis spell closes all mortal wounds and restores any missing body parts.\n\nComing back from the dead is an ordeal. The target takes a -4 penalty to all attack rolls, saving throws, and ability checks. Every time the target finishes a long rest, the penalty is reduced by 1 until it disappears.\n\nCasting this spell to restore life to a creature that has been dead for one year or longer taxes you greatly. Until you finish a long rest, you can't cast spells again, and you have disadvantage on all attack rolls, ability checks, and saving throws.",
   "description": "You touch a dead creature that has been dead for no more than a century, that didn't die of old age, and that isn't undead. If its soul is free and willing, the target returns to life with all its hit points.\n\nThis spell neutralizes any poisons and cures normal diseases afflicting the creature when it died. It doesn't however, remove magical diseases, curses, and the like; if such effects aren't removed prior to casting the spell, the afflict the target on its return to life.\n\nThis spell closes all mortal wounds and restores any missing body parts.\n\nComing back from the dead is an ordeal. The target takes a -4 penalty to all attack rolls, saving throws, and ability checks. Every time the target finishes a long rest, the penalty is reduced by 1 until it disappears.\n\nCasting this spell to restore life to a creature that has been dead for one year or longer taxes you greatly. Until you finish a long rest, you can't cast spells again, and you have disadvantage on all attack rolls, ability checks, and saving throws.",
-  "castingTime": "1 hour",
-  "range": "Touch",
-  "components": "V, S, M (a diamond worth at least 1,000 gp, which the spell consumes)",
-  "duration": "Instantaneous",
-  "damage": null,
   "school": "Necromancy",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "bard",
     "cleric"
   ],
   "ritual": false,
+  "castingTime": "1 hour",
+  "range": "Touch",
+  "components": "V, S, M (a diamond worth at least 1,000 gp, which the spell consumes)",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a diamond worth at least 1,000 gp, which the spell consumes"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/3f5f3c7e-2caf-436c-8bd4-f5e8beb66f4f.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "bard",
+    "cleric",
+    "level7"
+  ],
+  "iconLayers": [
+    [
+      "3f5f3c7e-2caf-436c-8bd4-f5e8beb66f4f"
+    ],
+    [
+      "0eb394ee-18cc-4b3f-bb18-212ebf9bee59"
+    ],
+    [
+      "5577062d-71b8-47c0-afd1-0426ef86632c"
+    ],
+    [
+      "233eb758-9be5-4ed6-a9dd-cc41255b3ea9"
+    ]
+  ]
 }

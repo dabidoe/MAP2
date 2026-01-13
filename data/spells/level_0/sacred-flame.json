@@ -4,12 +4,44 @@
   },
   "name": "Sacred Flame",
   "level": 0,
-  "description": "You summon a spear of early-morning light that streaks toward a creature you can see. The shard pierces shadow and illusion, flashing with cleansing brilliance before fading.",
+  "flavorText": "You summon a spear of early-morning light that streaks toward a creature you can see. The shard pierces shadow and illusion, flashing with cleansing brilliance before fading.",
+  "description": "Flame-like radiance descends on a creature that you can see within range. The target must succeed on a Dexterity saving throw or take 1d8 radiant damage. The target gains no benefit from cover for this saving throw.\n\nThe spell’s damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
+  "school": "Evocation",
+  "classes": [
+    "cleric"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
-  "range": "60 ft",
+  "range": "60 feet",
   "components": "V, S",
   "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/baba19a2-2cc5-4a04-a15b-70baaca30513.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "1d6 radiant",
-  "school": "Evocation",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/baba19a2-2cc5-4a04-a15b-70baaca30513.png"
+  "tags": [
+    "cleric",
+    "cantrip"
+  ],
+  "iconLayers": [
+    [
+      "baba19a2-2cc5-4a04-a15b-70baaca30513${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ca20d3b3-54f9-4dba-9556-84c8d261b3be\"}"
+    ],
+    [
+      "7960c4e4-2a13-4b01-9056-bdc495f1a79f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e89c7d60-2dca-4ead-9d5c-923c2c991c84\"}"
+    ],
+    [
+      "c41f30f7-7a30-4b75-8739-84baa3a7ed0f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"8546c8ad-9018-437e-9eb9-0bfa4b022b9b\"}"
+    ],
+    [
+      "96b91997-491e-4c81-9918-bc90dde57dd0"
+    ]
+  ]
 }

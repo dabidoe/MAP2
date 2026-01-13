@@ -4,36 +4,44 @@
   },
   "name": "Eldritch Blast",
   "level": 0,
+  "flavorText": "A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage.\nThe spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.",
   "description": "A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage.\nThe spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.",
-  "castingTime": "1 action",
-  "range": "120 feet",
-  "components": "V, S",
-  "duration": "Instantaneous",
-  "damage": "1d10 force",
   "school": "Evocation",
-  "isPublic": true,
   "classes": [
     "warlock"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "120 feet",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/af9bfe83-6bb3-4611-abdf-fe8b26a2bc81.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "1d10 force",
+  "tags": [
+    "warlock",
+    "cantrip"
+  ],
   "iconLayers": [
-    {
-      "guid": "af9bfe83-6bb3-4611-abdf-fe8b26a2bc81${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ec9c448c-de2b-4921-b142-1c5800d342ab\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "9cc98269-9d62-493f-86c2-80e0dddb599d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"0448b91e-bd52-4843-a7c3-8c40b6986bba\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "ae121e7b-1382-4c96-a177-2058586288c4${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ee609f33-4bac-41f6-b120-0f627ed1e11b\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "637d30a2-870e-43be-8266-492ce228fe72${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d69f5ede-9e11-422a-b4a4-c0fab9a5743d\"}",
-      "json": "{}"
-    }
+    [
+      "af9bfe83-6bb3-4611-abdf-fe8b26a2bc81${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ec9c448c-de2b-4921-b142-1c5800d342ab\"}"
+    ],
+    [
+      "9cc98269-9d62-493f-86c2-80e0dddb599d${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"0448b91e-bd52-4843-a7c3-8c40b6986bba\"}"
+    ],
+    [
+      "ae121e7b-1382-4c96-a177-2058586288c4${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ee609f33-4bac-41f6-b120-0f627ed1e11b\"}"
+    ],
+    [
+      "637d30a2-870e-43be-8266-492ce228fe72${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d69f5ede-9e11-422a-b4a4-c0fab9a5743d\"}"
+    ]
   ]
 }

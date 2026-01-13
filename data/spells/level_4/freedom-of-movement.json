@@ -4,14 +4,9 @@
   },
   "name": "Freedom of Movement",
   "level": 4,
+  "flavorText": "You touch a willing creature. For the duration, the target's movement is unaffected by difficult terrain, and spells and other magical effects can neither reduce the target's speed nor cause the target to be paralyzed or restrained.\n\nThe target can also spend 5 feet of movement to automatically escape from nonmagical restraints, such as manacles or a creature that has it grappled. Finally, being underwater imposes no penalties on the target's movement or attacks.",
   "description": "You touch a willing creature. For the duration, the target's movement is unaffected by difficult terrain, and spells and other magical effects can neither reduce the target's speed nor cause the target to be paralyzed or restrained.\n\nThe target can also spend 5 feet of movement to automatically escape from nonmagical restraints, such as manacles or a creature that has it grappled. Finally, being underwater imposes no penalties on the target's movement or attacks.",
-  "castingTime": "1 action",
-  "range": "Touch",
-  "components": "V, S, M (a leather strap, bound around the arm or a similar appendage)",
-  "duration": "1 hour",
-  "damage": null,
   "school": "Abjuration",
-  "isPublic": true,
   "classes": [
     "bard",
     "cleric",
@@ -19,12 +14,42 @@
     "ranger"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S, M (a leather strap, bound around the arm or a similar appendage)",
+  "duration": "1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a leather strap, bound around the arm or a similar appendage"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/f3475cde-6c3a-49e1-8398-856ebd777a20.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "bard",
+    "cleric",
+    "druid",
+    "ranger",
+    "level4"
+  ],
   "iconLayers": [
-    {
-      "guid": "8dc3344b7bc0b1a764c24d4f019e1928f18b90b7f8cb4ef9a8882acd2bbb6e7d",
-      "json": "{}"
-    }
+    [
+      "f3475cde-6c3a-49e1-8398-856ebd777a20"
+    ],
+    [
+      "4a4fd55c-7e05-4b56-b61a-2c7c0601c54c"
+    ],
+    [
+      "fc8c9070-1109-444d-a0cd-7b373591eaff"
+    ],
+    [
+      "4eb2f4db-d599-4fc1-ad79-ae2e8a805088"
+    ]
   ]
 }

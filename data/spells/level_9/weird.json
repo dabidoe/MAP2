@@ -4,20 +4,44 @@
   },
   "name": "Weird",
   "level": 9,
+  "flavorText": "Drawing on the deepest fears of a group of creatures, you create illusory creatures in their minds, visible only to them. Each creature in a 30-foot-radius sphere centered on a point of your choice within range must make a Wisdom saving throw. On a failed save, a creature becomes frightened for the duration. The illusion calls on the creature's deepest fears, manifesting its worst nightmares as an implacable threat. At the start of each of the frightened creature's turns, it must succeed on a Wisdom saving throw or take 4d10 psychic damage. On a successful save, the spell ends for that creature.",
   "description": "Drawing on the deepest fears of a group of creatures, you create illusory creatures in their minds, visible only to them. Each creature in a 30-foot-radius sphere centered on a point of your choice within range must make a Wisdom saving throw. On a failed save, a creature becomes frightened for the duration. The illusion calls on the creature's deepest fears, manifesting its worst nightmares as an implacable threat. At the start of each of the frightened creature's turns, it must succeed on a Wisdom saving throw or take 4d10 psychic damage. On a successful save, the spell ends for that creature.",
-  "castingTime": "1 action",
-  "range": "120 feet",
-  "components": "V, S",
-  "duration": "Concentration, up to 1 minute",
-  "damage": "4d10 psychic",
   "school": "Illusion",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "120 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/12282767-6cde-4d15-97f1-15d0a9c30c40.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "4d10 psychic",
+  "tags": [
+    "wizard",
+    "level9"
+  ],
+  "iconLayers": [
+    [
+      "12282767-6cde-4d15-97f1-15d0a9c30c40"
+    ],
+    [
+      "e9b775fc-57e2-4ee5-b6a7-63777b0c534f"
+    ],
+    [
+      "c42fe747-0cb0-4b5c-807e-741ef8e6f496"
+    ],
+    [
+      "cff4c5dd-4edf-4665-a27e-2ed0cbc7cfdf"
+    ]
+  ]
 }

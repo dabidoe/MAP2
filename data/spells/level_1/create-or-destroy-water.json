@@ -4,12 +4,48 @@
   },
   "name": "Create or Destroy Water",
   "level": 1,
-  "description": "Conjure a sudden bloom of life-giving moisture or wither it away. You create a gush of fresh water that fills a 5‑foot square or you desiccate the same area, draining moisture from soil, plants, or small pools.",
+  "flavorText": "Conjure a sudden bloom of life-giving moisture or wither it away. You create a gush of fresh water that fills a 5‑foot square or you desiccate the same area, draining moisture from soil, plants, or small pools.",
+  "description": "You either create or destroy water.\n\nCreate Water: You create up to 10 gallons of clean water within range in an open container. Alternatively, the water falls as rain in a 30-foot cube within range, extinguishing exposed flames in the area.\n\nDestroy Water: You destroy up to 10 gallons of water in an open container within range. Alternatively, you destroy fog in a 30-foot cube within range.",
+  "school": "Transmutation",
+  "classes": [
+    "cleric",
+    "druid"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
   "range": "30 feet",
-  "components": "V, S",
+  "components": "V, S, M (a drop of water if creating water, or a few grains of sand if destroying it)",
   "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a drop of water if creating water, or a few grains of sand if destroying it"
+    ]
+  },
+  "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, you create or destroy 10 additional gallons of water, or the size of the cube increases by 5 feet, for each slot level above 1st.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/74ed0a7d-8176-4a5d-b0e8-92c2d7c9761a.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "None",
-  "school": "Transmutation",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/74ed0a7d-8176-4a5d-b0e8-92c2d7c9761a.png"
+  "tags": [
+    "cleric",
+    "druid",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "74ed0a7d-8176-4a5d-b0e8-92c2d7c9761a${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"621547f0-9fb7-4fa6-8b98-4338fe54cac9\"}"
+    ],
+    [
+      "569499c2-f460-4d73-be82-3c8b6b01924a${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1dd644b4-3e67-43d4-8e0e-1c879d5e99f7\"}"
+    ],
+    [
+      "ecf22b74-89db-4a4e-b8a2-a938822ce377${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"438c65e2-b390-4729-a6b0-828da5887006\"}"
+    ],
+    [
+      "7eae5153-b5a0-46a1-9167-f81ea3a0e81c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1441ac26-f100-4da1-8f12-8764e806cb00\"}"
+    ]
+  ]
 }

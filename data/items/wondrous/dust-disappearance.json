@@ -1,0 +1,17 @@
+{
+  "id": "dust-disappearance",
+  "name": "Dust of Disappearance",
+  "category": "wondrous",
+  "rarity": "uncommon",
+  "weight": 0.1,
+  "value": 300,
+  "quantity": 1,
+  "requiresAttunement": false,
+  "description": "Magical dust that renders creatures invisible",
+  "consumable": {
+    "effect": "All creatures within 10 ft become invisible for 2d4 minutes",
+    "duration": "2d4 minutes"
+  },
+  "icon": "✨",
+  "iconStatus": "placeholder"
+}

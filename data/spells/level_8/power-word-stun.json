@@ -4,16 +4,9 @@
   },
   "name": "Power Word Stun",
   "level": 8,
+  "flavorText": "You speak a word of power that can overwhelm the mind of one creature you can see within range, leaving it dumbfounded. If the target has 150 hit points or fewer, it is stunned. Otherwise, the spell has no effect.\n\nThe stunned target must make a Constitution saving throw at the end of each of its turns.  On a successful save, this stunning effect ends.",
   "description": "You speak a word of power that can overwhelm the mind of one creature you can see within range, leaving it dumbfounded. If the target has 150 hit points or fewer, it is stunned. Otherwise, the spell has no effect.\n\nThe stunned target must make a Constitution saving throw at the end of each of its turns.  On a successful save, this stunning effect ends.",
-  "castingTime": "1 action",
-  "range": "60 feet",
-  "components": "V",
-  "duration": "Instantaneous",
-  "damage": null,
   "school": "Enchantment",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "bard",
     "sorcerer",
@@ -21,6 +14,40 @@
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "60 feet",
+  "components": "V",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": false,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/d9257c63-0b41-43db-af6d-956a35bd1eac.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "bard",
+    "sorcerer",
+    "warlock",
+    "wizard",
+    "level8"
+  ],
+  "iconLayers": [
+    [
+      "d9257c63-0b41-43db-af6d-956a35bd1eac${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"3396c62f-d1fb-4c9c-bf31-d6b3df381ee6\"}"
+    ],
+    [
+      "11a29d08-1654-443d-90c5-c926ad5113ab${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"7bd78f67-7a0c-4bcc-8883-2456b78f4c9f\"}"
+    ],
+    [
+      "f67b204b-4a46-4490-b0a3-9c3992cd2ecd"
+    ],
+    [
+      "b1e654e8-b95c-4ba4-97ee-6695c3aa4318"
+    ]
+  ]
 }

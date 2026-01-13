@@ -1,0 +1,21 @@
+{
+  "id": "cloak-elvenkind",
+  "name": "Cloak of Elvenkind",
+  "category": "gear",
+  "rarity": "uncommon",
+  "slot": "back",
+  "weight": 1,
+  "value": 5000,
+  "requiresAttunement": true,
+  "description": "While you wear this cloak with its hood up, Wisdom (Perception) checks to see you have disadvantage, and you have advantage on Dexterity (Stealth) checks",
+  "magic": {
+    "effects": [
+      {
+        "name": "Enhanced Stealth",
+        "description": "Advantage on Stealth checks and disadvantage for others to perceive you"
+      }
+    ]
+  },
+  "icon": "🎒",
+  "iconStatus": "placeholder"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "amulet-health",
+  "name": "Amulet of Health",
+  "category": "wondrous",
+  "rarity": "rare",
+  "weight": 1,
+  "value": 8000,
+  "quantity": 1,
+  "requiresAttunement": true,
+  "description": "Your Constitution becomes 19 while wearing this amulet",
+  "magic": {
+    "effects": [
+      {
+        "name": "Enhanced Constitution",
+        "description": "Constitution becomes 19"
+      }
+    ]
+  },
+  "icon": "✨",
+  "iconStatus": "placeholder"
+}

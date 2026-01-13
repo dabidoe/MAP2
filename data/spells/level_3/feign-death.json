@@ -4,14 +4,9 @@
   },
   "name": "Feign Death",
   "level": 3,
+  "flavorText": "You touch a willing creature and put it into a cataleptic state that is indistinguishable from death.\n\nFor the spell’s duration, or until you use an action to touch the target and dismiss the spell, the target appears dead to all outward inspection and to spells used to determine the target’s status. The target is blinded and incapacitated, and its speed drops to 0. The target has resistance to all damage except psychic damage. If the target is diseased or poisoned when you cast the spell, or becomes diseased or poisoned while under the spell’s effect, the disease and poison have no effect until the spell ends.",
   "description": "You touch a willing creature and put it into a cataleptic state that is indistinguishable from death.\n\nFor the spell’s duration, or until you use an action to touch the target and dismiss the spell, the target appears dead to all outward inspection and to spells used to determine the target’s status. The target is blinded and incapacitated, and its speed drops to 0. The target has resistance to all damage except psychic damage. If the target is diseased or poisoned when you cast the spell, or becomes diseased or poisoned while under the spell’s effect, the disease and poison have no effect until the spell ends.",
-  "castingTime": "1 action",
-  "range": "Touch",
-  "components": "V, S, M (a pinch of graveyard dirt)",
-  "duration": "1 hour",
-  "damage": null,
   "school": "Necromancy",
-  "isPublic": true,
   "classes": [
     "bard",
     "cleric",
@@ -19,25 +14,42 @@
     "wizard"
   ],
   "ritual": true,
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S, M (a pinch of graveyard dirt)",
+  "duration": "1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a pinch of graveyard dirt"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
-  "iconLayers": [
-    {
-      "guid": "3d5782a2-9a62-4c8c-9da0-875009d99098${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"3278965a-b3f9-4f3a-80f8-cb6556cbdef7\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "a587efb5-e5f2-458d-8a98-33877b6d0c18${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"289e733b-3511-4a8a-90c1-3f347f779cdf\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "38117c6c-641a-45f9-a3e1-aec26bfdd448${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"8b9a0cda-d31c-4b8d-9649-820aabb9ee35\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "1c7581a5-ce5b-4a32-8db3-f3bfa3285c49${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"3f3c9760-78ce-46da-8be0-e2082900f246\"}",
-      "json": "{}"
-    }
+  "icon": "https://statsheet-cdn.b-cdn.net/images/3d5782a2-9a62-4c8c-9da0-875009d99098.png",
+  "iconStatus": "ready",
+  "video": "/SPELL_VIDEOS/Feign_Death_You_touch_a_willing_creature_and_put_it_into_a_st_a0186545-915d-4276-aaa2-b19155168d5f_0.mp4",
+  "damage": null,
+  "tags": [
+    "bard",
+    "cleric",
+    "druid",
+    "wizard",
+    "level3"
   ],
-  "video": "/SPELL_VIDEOS/Feign_Death_You_touch_a_willing_creature_and_put_it_into_a_st_a0186545-915d-4276-aaa2-b19155168d5f_0.mp4"
+  "iconLayers": [
+    [
+      "3d5782a2-9a62-4c8c-9da0-875009d99098${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"3278965a-b3f9-4f3a-80f8-cb6556cbdef7\"}"
+    ],
+    [
+      "a587efb5-e5f2-458d-8a98-33877b6d0c18${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"289e733b-3511-4a8a-90c1-3f347f779cdf\"}"
+    ],
+    [
+      "38117c6c-641a-45f9-a3e1-aec26bfdd448${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"8b9a0cda-d31c-4b8d-9649-820aabb9ee35\"}"
+    ],
+    [
+      "1c7581a5-ce5b-4a32-8db3-f3bfa3285c49${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"3f3c9760-78ce-46da-8be0-e2082900f246\"}"
+    ]
+  ]
 }

@@ -1,0 +1,21 @@
+{
+  "id": "maul",
+  "name": "Maul",
+  "category": "weapon",
+  "rarity": "common",
+  "slot": "mainHand",
+  "weight": 10,
+  "value": 10,
+  "description": "A massive two-handed hammer",
+  "weapon": {
+    "damage": "2d6",
+    "damageType": "bludgeoning",
+    "properties": [
+      "two-handed",
+      "heavy"
+    ],
+    "range": "5 ft"
+  },
+  "icon": "⚔️",
+  "iconStatus": "placeholder"
+}

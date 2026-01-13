@@ -4,21 +4,48 @@
   },
   "name": "Disintegrate",
   "level": 6,
+  "flavorText": "A thin green ray springs from your pointing finger to a target that you can see within range. The target can be a creature, an object, or a creation of magical force, such as the wall created by *[wall of force](../wall-of-force/ \"wall of force (lvl 5)\")*.\n\nA creature targeted by this spell must make a Dexterity saving throw. On a failed save, the target takes 10d6 + 40 force damage. If this damage reduces the target to 0 hit points, it is disintegrated.\n\nA disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine gray dust. The creature can be restored to life only by means of a *[true resurrection](../true-resurrection/ \"true resurrection (lvl 9)\")* or a *[wish](../wish/ \"wish (lvl 9)\")* spell.\n\nThis spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If the target is a Huge or larger object or creation of force, this spell disintegrates a 10-foot-cube portion of it. A magic item is unaffected by this spell.",
   "description": "A thin green ray springs from your pointing finger to a target that you can see within range. The target can be a creature, an object, or a creation of magical force, such as the wall created by *[wall of force](../wall-of-force/ \"wall of force (lvl 5)\")*.\n\nA creature targeted by this spell must make a Dexterity saving throw. On a failed save, the target takes 10d6 + 40 force damage. If this damage reduces the target to 0 hit points, it is disintegrated.\n\nA disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine gray dust. The creature can be restored to life only by means of a *[true resurrection](../true-resurrection/ \"true resurrection (lvl 9)\")* or a *[wish](../wish/ \"wish (lvl 9)\")* spell.\n\nThis spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If the target is a Huge or larger object or creation of force, this spell disintegrates a 10-foot-cube portion of it. A magic item is unaffected by this spell.",
-  "castingTime": "1 action",
-  "range": "60 feet",
-  "components": "V, S, M (a lodestone and a pinch of dust)",
-  "duration": "Instantaneous",
-  "damage": "10d6 + 40 force",
   "school": "Transmutation",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "sorcerer",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "60 feet",
+  "components": "V, S, M (a lodestone and a pinch of dust)",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a lodestone and a pinch of dust"
+    ]
+  },
   "higherLevels": "When you cast this spell using a spell slot of 7th level or higher, the damage increases by 3d6 for each slot level above 6th.",
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/7f058ae7-9056-417d-bdbb-2f049a40b96f.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "10d6 + 40 force",
+  "tags": [
+    "sorcerer",
+    "wizard",
+    "level6"
+  ],
+  "iconLayers": [
+    [
+      "7f058ae7-9056-417d-bdbb-2f049a40b96f"
+    ],
+    [
+      "e9627293-3950-47f3-bd2b-e533b4c15981"
+    ],
+    [
+      "8b4b23d5-5c5a-4a2a-a5dc-284545a17241"
+    ],
+    [
+      "4ec3d299-43e8-4047-ae02-0ea161036801"
+    ]
+  ]
 }

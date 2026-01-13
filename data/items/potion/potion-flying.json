@@ -1,0 +1,16 @@
+{
+  "id": "potion-flying",
+  "name": "Potion of Flying",
+  "category": "potion",
+  "rarity": "very-rare",
+  "weight": 0.5,
+  "value": 5000,
+  "quantity": 1,
+  "description": "Grants the ability to fly",
+  "consumable": {
+    "effect": "Gain flying speed equal to walking speed for 1 hour",
+    "duration": "1 hour"
+  },
+  "icon": "🧪",
+  "iconStatus": "placeholder"
+}

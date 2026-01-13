@@ -4,36 +4,44 @@
   },
   "name": "Entangle",
   "level": 1,
+  "flavorText": "Grasping weeds and vines sprout from the ground in a 20-foot square starting form a point within range. For the duration, these plants turn the ground in the area into difficult terrain.\n\nA creature in the area when you cast the spell must succeed on a Strength saving throw or be restrained by the entangling plants until the spell ends. A creature restrained by the plants can use its action to make a Strength check against your spell save DC. On a success, it frees itself.\n\nWhen the spell ends, the conjured plants wilt away.",
   "description": "Grasping weeds and vines sprout from the ground in a 20-foot square starting form a point within range. For the duration, these plants turn the ground in the area into difficult terrain.\n\nA creature in the area when you cast the spell must succeed on a Strength saving throw or be restrained by the entangling plants until the spell ends. A creature restrained by the plants can use its action to make a Strength check against your spell save DC. On a success, it frees itself.\n\nWhen the spell ends, the conjured plants wilt away.",
-  "castingTime": "1 action",
-  "range": "90 feet",
-  "components": "V, S",
-  "duration": "Concentration, up to 1 minute",
-  "damage": null,
   "school": "Conjuration",
-  "isPublic": true,
   "classes": [
     "druid"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "90 feet",
+  "components": "V, S",
+  "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/c236ac72-2b47-407d-98c9-7a57140c19e2.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "druid",
+    "level1"
+  ],
   "iconLayers": [
-    {
-      "guid": "c236ac72-2b47-407d-98c9-7a57140c19e2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e3bc7d1b-491f-4757-b8f7-b7d18f54eded\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "83eeebd7-16d5-46c3-ace2-faa43e6e41b2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"0abf5f3e-1582-4997-b01c-0c8e4f55e51f\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "e7e955c0-58aa-4988-8e72-a9fc8cca7639${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"30af11af-92e5-4121-9aae-ca5c67cce2d3\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "e426d565-959c-4fee-91b5-269e6802ed8c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"840e6d7c-8693-440b-8f71-265f76d9afbd\"}",
-      "json": "{}"
-    }
+    [
+      "c236ac72-2b47-407d-98c9-7a57140c19e2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e3bc7d1b-491f-4757-b8f7-b7d18f54eded\"}"
+    ],
+    [
+      "83eeebd7-16d5-46c3-ace2-faa43e6e41b2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"0abf5f3e-1582-4997-b01c-0c8e4f55e51f\"}"
+    ],
+    [
+      "e7e955c0-58aa-4988-8e72-a9fc8cca7639${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"30af11af-92e5-4121-9aae-ca5c67cce2d3\"}"
+    ],
+    [
+      "e426d565-959c-4fee-91b5-269e6802ed8c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"840e6d7c-8693-440b-8f71-265f76d9afbd\"}"
+    ]
   ]
 }

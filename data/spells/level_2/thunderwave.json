@@ -3,13 +3,51 @@
     "$oid": "69546a105648a6dce9f6f7de"
   },
   "name": "Thunderwave",
-  "level": 2,
-  "description": "A resonant shock ripples from your core, vibrating the air with harmonic force. Each creature in a 20‑foot radius must make a Constitution save or take full sonic damage and have its next movement reduced by half. Those who succeed take half damage and suffer no slow. Loose objects tremble and rattle but are not moved.",
+  "level": 1,
+  "flavorText": "A resonant shock ripples from your core, vibrating the air with harmonic force. Each creature in a 20‑foot radius must make a Constitution save or take full sonic damage and have its next movement reduced by half. Those who succeed take half damage and suffer no slow. Loose objects tremble and rattle but are not moved.",
+  "description": "A wave of thunderous force sweeps out from you. Each creature in a 15-foot cube originating from you must make a Constitution saving throw. On a failed save, a creature takes 2d8 thunder damage and is pushed 10 feet away from you. On a successful save, the creature takes half as much damage and isn’t pushed. In addition, unsecured objects that are completely within the area of effect are automatically pushed 10 feet away from you by the spell’s effect, and the spell emits a thunderous boom audible out to 300 feet.",
+  "school": "Evocation",
+  "classes": [
+    "bard",
+    "druid",
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
-  "range": "Self (20‑foot radius)",
+  "range": "Self (15-foot cube)",
   "components": "V, S",
   "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/f9f2f406-d20a-480d-9d00-7ccc78444ed2.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "3d8 Sonic",
-  "school": "Evocation",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/f9f2f406-d20a-480d-9d00-7ccc78444ed2.png"
+  "tags": [
+    "bard",
+    "druid",
+    "sorcerer",
+    "wizard",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "f9f2f406-d20a-480d-9d00-7ccc78444ed2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"245c9b09-d9ea-45a9-a790-daba19a8efb9\"}"
+    ],
+    [
+      "28ea8b19-ad5e-43ec-9167-767ae7f09fa2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"a57b6255-3341-4c6e-96d0-287e883b2697\"}"
+    ],
+    [
+      "ed1bd2ad-c952-452f-9920-80a8864be211${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d4ff2645-c914-4ea1-beb0-3b0e7e6877ad\"}"
+    ],
+    [
+      "c5d99e39-1759-421c-9731-7166384395fb${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"9d226b07-093f-488f-b723-66d5367d5299\"}"
+    ]
+  ]
 }

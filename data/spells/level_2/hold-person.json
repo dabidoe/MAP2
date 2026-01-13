@@ -4,14 +4,9 @@
   },
   "name": "Hold Person",
   "level": 2,
+  "flavorText": "Choose a humanoid that you can see within range. The target must succeed on a Wisdom saving throw or be paralyzed for the duration. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target.",
   "description": "Choose a humanoid that you can see within range. The target must succeed on a Wisdom saving throw or be paralyzed for the duration. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target.",
-  "castingTime": "1 action",
-  "range": "60 feet",
-  "components": "V, S, M (a small, straight piece of iron)",
-  "duration": "Concentration, up to 1 minute",
-  "damage": null,
   "school": "Enchantment",
-  "isPublic": true,
   "classes": [
     "bard",
     "cleric",
@@ -21,25 +16,44 @@
     "wizard"
   ],
   "ritual": true,
+  "castingTime": "1 action",
+  "range": "60 feet",
+  "components": "V, S, M (a small, straight piece of iron)",
+  "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a small, straight piece of iron"
+    ]
+  },
   "higherLevels": "When you cast this spell using a spell slot of 3rd level or higher, you can target one additional humanoid for each slot level above 2nd. The humanoids must be within 30 feet of each other when you target them.",
-  "source": "SRD 5.1",
-  "iconLayers": [
-    {
-      "guid": "f3f485e8-1d67-4400-8fc7-f4f0d264dcfb${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d380c1e7-1dd5-42ca-89a7-b1d082de334b\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "f01d0f93-7782-4c63-b2b7-5c2c6b6847c6",
-      "json": "{}"
-    },
-    {
-      "guid": "606d1edf-ae29-4dec-be72-721198c88a1b",
-      "json": "{}"
-    },
-    {
-      "guid": "976d6e82-65f5-438d-b221-10175b13ec1c",
-      "json": "{}"
-    }
+  "icon": "https://statsheet-cdn.b-cdn.net/images/f3f485e8-1d67-4400-8fc7-f4f0d264dcfb.png",
+  "iconStatus": "ready",
+  "video": "/SPELL_VIDEOS/Hold_Person_You_point_at_a_creature_you_can_see_within_range__e8d8b285-7a79-4c62-92da-8d85c3aa0929_0.mp4",
+  "damage": null,
+  "tags": [
+    "bard",
+    "cleric",
+    "druid",
+    "sorcerer",
+    "warlock",
+    "wizard",
+    "level2"
   ],
-  "video": "/SPELL_VIDEOS/Hold_Person_You_point_at_a_creature_you_can_see_within_range__e8d8b285-7a79-4c62-92da-8d85c3aa0929_0.mp4"
+  "iconLayers": [
+    [
+      "f3f485e8-1d67-4400-8fc7-f4f0d264dcfb${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"d380c1e7-1dd5-42ca-89a7-b1d082de334b\"}"
+    ],
+    [
+      "f01d0f93-7782-4c63-b2b7-5c2c6b6847c6"
+    ],
+    [
+      "606d1edf-ae29-4dec-be72-721198c88a1b"
+    ],
+    [
+      "976d6e82-65f5-438d-b221-10175b13ec1c"
+    ]
+  ]
 }

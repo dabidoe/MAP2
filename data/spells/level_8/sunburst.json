@@ -4,22 +4,50 @@
   },
   "name": "Sunburst",
   "level": 8,
+  "flavorText": "Brilliant sunlight flashes in a 60-foot radius centered on a point you choose within range. Each creature in that light must make a Constitution saving throw. On a failed save, a creature takes 12d6 radiant damage and is blinded for 1 minute. On a successful save, it takes half as much damage and isn't blinded by this spell. Undead and oozes have disadvantage on this saving throw.\n\nA creature blinded by this spell makes another Constitution saving throw at the end of each of its turns. On a successful save, it is no longer blinded.\n\nThis spell dispels any darkness in its area that was created by a spell.",
   "description": "Brilliant sunlight flashes in a 60-foot radius centered on a point you choose within range. Each creature in that light must make a Constitution saving throw. On a failed save, a creature takes 12d6 radiant damage and is blinded for 1 minute. On a successful save, it takes half as much damage and isn't blinded by this spell. Undead and oozes have disadvantage on this saving throw.\n\nA creature blinded by this spell makes another Constitution saving throw at the end of each of its turns. On a successful save, it is no longer blinded.\n\nThis spell dispels any darkness in its area that was created by a spell.",
-  "castingTime": "1 action",
-  "range": "150 feet",
-  "components": "V, S, M (fire and a piece of sunstone)",
-  "duration": "Instantaneous",
-  "damage": "12d6 radiant",
   "school": "Evocation",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "druid",
     "sorcerer",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "150 feet",
+  "components": "V, S, M (fire and a piece of sunstone)",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "fire and a piece of sunstone"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/6b663df2-5af6-4bd9-a91c-34a5b7d4702d.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "12d6 radiant",
+  "tags": [
+    "druid",
+    "sorcerer",
+    "wizard",
+    "level8"
+  ],
+  "iconLayers": [
+    [
+      "6b663df2-5af6-4bd9-a91c-34a5b7d4702d"
+    ],
+    [
+      "6ea9f49d-8ae4-4b51-9c1f-64b261d68f48"
+    ],
+    [
+      "52b24f62-700a-4e52-bd43-5b097d09a11c"
+    ],
+    [
+      "71cfa5d6-dca2-4859-be2e-808209509f6b"
+    ]
+  ]
 }

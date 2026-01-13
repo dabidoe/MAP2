@@ -1,0 +1,21 @@
+{
+  "id": "bracers-archery",
+  "name": "Bracers of Archery",
+  "category": "wondrous",
+  "rarity": "uncommon",
+  "weight": 1,
+  "value": 1500,
+  "quantity": 1,
+  "requiresAttunement": true,
+  "description": "Magical bracers that enhance ranged weapon attacks",
+  "magic": {
+    "effects": [
+      {
+        "name": "Archery Mastery",
+        "description": "+2 to damage rolls with ranged weapons (requires proficiency with longbow or shortbow)"
+      }
+    ]
+  },
+  "icon": "✨",
+  "iconStatus": "placeholder"
+}

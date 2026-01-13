@@ -4,20 +4,44 @@
   },
   "name": "Power Word Heal",
   "level": 9,
+  "flavorText": "A wave of healing energy washes over the creature you touch. The target regains all its hit points. If the creature is charmed, frightened, paralyzed, or stunned, the condition ends. If the creature is prone, it can use its reaction to stand up. This spell has no effect on undead or constructs.",
   "description": "A wave of healing energy washes over the creature you touch. The target regains all its hit points. If the creature is charmed, frightened, paralyzed, or stunned, the condition ends. If the creature is prone, it can use its reaction to stand up. This spell has no effect on undead or constructs.",
-  "castingTime": "1 action",
-  "range": "Touch",
-  "components": "V, S",
-  "duration": "Instantaneous",
-  "damage": null,
   "school": "Evocation",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "bard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/c47eb326-c2ab-42ba-a6c2-03f96d37495b.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "bard",
+    "level9"
+  ],
+  "iconLayers": [
+    [
+      "c47eb326-c2ab-42ba-a6c2-03f96d37495b${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"20b720b9-e659-41ea-aea3-366305b3a15e\"}"
+    ],
+    [
+      "1276357d-0ee2-42b4-8763-3f103a5393d6${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"9dd19417-949c-4ea1-8335-377f2f779e79\"}"
+    ],
+    [
+      "ae2fc97e-ec4b-499c-8a1e-a9ca3a7d7529${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"20bd4346-c24a-4f1d-9e2e-21ac9ffb35d1\"}"
+    ],
+    [
+      "ed8b209c-fa99-4745-8f4f-5147596fb5ab${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ae2943fd-21b4-4662-9880-42ba59fca8cc\"}"
+    ]
+  ]
 }

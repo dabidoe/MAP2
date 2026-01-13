@@ -4,38 +4,48 @@
   },
   "name": "Speak with Animals",
   "level": 1,
+  "flavorText": "You gain the ability to comprehend and verbally communicate with beasts for the duration. The knowledge and awareness of many beasts is limited by their intelligence, but at a minimum, beasts can give you information about nearby locations and monsters, including whatever they can perceive or have perceived within the past day. You might be able to persuade a beast to perform a small favor for you, at the DM's discretion.",
   "description": "You gain the ability to comprehend and verbally communicate with beasts for the duration. The knowledge and awareness of many beasts is limited by their intelligence, but at a minimum, beasts can give you information about nearby locations and monsters, including whatever they can perceive or have perceived within the past day. You might be able to persuade a beast to perform a small favor for you, at the DM's discretion.",
-  "castingTime": "1 action",
-  "range": "Self",
-  "components": "V, S",
-  "duration": "10 minutes",
-  "damage": null,
   "school": "Divination",
-  "isPublic": true,
   "classes": [
     "bard",
     "druid",
     "ranger"
   ],
   "ritual": true,
+  "castingTime": "1 action",
+  "range": "Self",
+  "components": "V, S",
+  "duration": "10 minutes",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/cf33d339-b717-4b57-a5cf-03b38586f5fe.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "bard",
+    "druid",
+    "ranger",
+    "level1"
+  ],
   "iconLayers": [
-    {
-      "guid": "cf33d339-b717-4b57-a5cf-03b38586f5fe",
-      "json": "{}"
-    },
-    {
-      "guid": "47cb1a17-95ff-45f0-a28d-a5dd767dbd1b",
-      "json": "{}"
-    },
-    {
-      "guid": "0e0fb58c-8930-4350-8ae3-bce6ee87434b",
-      "json": "{}"
-    },
-    {
-      "guid": "5bdb7e0a-f60f-437c-942e-71afcced16ef",
-      "json": "{}"
-    }
+    [
+      "cf33d339-b717-4b57-a5cf-03b38586f5fe"
+    ],
+    [
+      "47cb1a17-95ff-45f0-a28d-a5dd767dbd1b"
+    ],
+    [
+      "0e0fb58c-8930-4350-8ae3-bce6ee87434b"
+    ],
+    [
+      "5bdb7e0a-f60f-437c-942e-71afcced16ef"
+    ]
   ]
 }

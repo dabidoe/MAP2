@@ -4,38 +4,50 @@
   },
   "name": "Darkness",
   "level": 2,
+  "flavorText": "Magical darkness spreads from a point you choose within range to fill a 15-foot-radius sphere for the duration. The darkness spreads around corners. A creature with darkvision can’t see through this darkness, and nonmagical light can’t illuminate it. If the point you choose is on an object you are holding or one that isn’t being worn or carried, the darkness emanates from the object and moves with it. Completely covering the source of the darkness with an opaque object, such as a bowl or a helm, blocks the darkness. If any of this spell’s area overlaps with an area of light created by a spell of 2nd level or lower, the spell that created the light is dispelled.",
   "description": "Magical darkness spreads from a point you choose within range to fill a 15-foot-radius sphere for the duration. The darkness spreads around corners. A creature with darkvision can’t see through this darkness, and nonmagical light can’t illuminate it. If the point you choose is on an object you are holding or one that isn’t being worn or carried, the darkness emanates from the object and moves with it. Completely covering the source of the darkness with an opaque object, such as a bowl or a helm, blocks the darkness. If any of this spell’s area overlaps with an area of light created by a spell of 2nd level or lower, the spell that created the light is dispelled.",
-  "castingTime": "1 action",
-  "range": "60 feet",
-  "components": "V, M (bat fur and a drop of pitch or piece of coal)",
-  "duration": "Concentration, up to 10 minutes",
-  "damage": null,
   "school": "Evocation",
-  "isPublic": true,
   "classes": [
     "sorcerer",
     "warlock",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "60 feet",
+  "components": "V, M (bat fur and a drop of pitch or piece of coal)",
+  "duration": "Concentration, up to 10 minutes",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": false,
+    "material": true,
+    "materialsNeeded": [
+      "bat fur and a drop of pitch or piece of coal"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/63e3dfa6-c250-41ca-81a5-bfb52cb5b93f.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "sorcerer",
+    "warlock",
+    "wizard",
+    "level2"
+  ],
   "iconLayers": [
-    {
-      "guid": "6f4d17f7-26b8-44f5-b9ca-147d01a24ec1${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1.73507,1.73507\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"920b09de-ae0e-4a16-9354-70dd935e490b\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "b8afd7a5-08b2-4c75-8220-cde60b7f9013${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"7913dc06-aace-4a2a-8f98-e346ef29de81\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "36e169ec-c8c5-488b-9f50-68d5bf345a31${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e8bed0af-a17a-4cd0-b67d-2904bbcda182\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "82d4e3f9-9c8e-4e54-8363-487634affed2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"199907d9-fb09-40fc-bb95-9e2e9a019459\"}",
-      "json": "{}"
-    }
+    [
+      "63e3dfa6-c250-41ca-81a5-bfb52cb5b93f"
+    ],
+    [
+      "b49371c4-3027-4bf6-8858-29f070351d60"
+    ],
+    [
+      "da3e11d6-53a0-44cd-a22c-81844be79222"
+    ],
+    [
+      "b4d0ee5f-935a-40e7-9f57-cb3d48dd51df"
+    ]
   ]
 }

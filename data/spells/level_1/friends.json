@@ -3,13 +3,53 @@
     "$oid": "695469985648a6dce9f6f75a"
   },
   "name": "Friends",
-  "level": 1,
-  "description": "You infuse a creature with a subtle aura of camaraderie. For the duration, the target views you as a trusted ally and shares information freely. The magic gently steers emotions but does not control actions. When the spell ends, the target feels an uneasy sense of manipulation and becomes wary of you, though not immediately hostile unless provoked.",
-  "castingTime": "1 action",
-  "range": "30 feet",
-  "components": "V, S",
-  "duration": "Concentration, up to 1 hour",
-  "damage": "None",
+  "level": 0,
+  "flavorText": "You infuse a creature with a subtle aura of camaraderie. For the duration, the target views you as a trusted ally and shares information freely. The magic gently steers emotions but does not control actions. When the spell ends, the target feels an uneasy sense of manipulation and becomes wary of you, though not immediately hostile unless provoked.",
+  "description": "For the duration, you have advantage on all Charisma checks directed at one creature of your choice that isn't hostile toward you. When the spell ends, the creature realizes that you have used magic to influence its mood and becomes hostile toward you. A creature prone to violence might attack you. Another creature might seek retribution in other ways (at the DM's discretion), depending on the nature of your interaction with it.",
   "school": "Enchantment",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/f61dcc58-ffa7-41ad-b462-e0f80b1feb0c.png"
+  "classes": [
+    "bard",
+    "sorcerer",
+    "warlock",
+    "wizard"
+  ],
+  "ritual": false,
+  "castingTime": "1 action",
+  "range": "Self",
+  "components": "S, M (a small amount of makeup applied to the face as this spell is cast)",
+  "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": false,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a small amount of makeup applied to the face as this spell is cast"
+    ]
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/f61dcc58-ffa7-41ad-b462-e0f80b1feb0c.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "None",
+  "tags": [
+    "bard",
+    "sorcerer",
+    "warlock",
+    "wizard",
+    "cantrip"
+  ],
+  "iconLayers": [
+    [
+      "f61dcc58-ffa7-41ad-b462-e0f80b1feb0c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"accde8e5-075b-4e8c-a644-f7ea804315b2\"}"
+    ],
+    [
+      "65170a1c-3973-43c3-adac-4be9d8db9b2e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"71550b34-cdcc-47af-95e7-1d59cf2ca030\"}"
+    ],
+    [
+      "6ae7cef3-a87f-4393-9d5c-ba46318b44c1${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"dfd57020-475d-4a5b-9737-8697409e8f3b\"}"
+    ],
+    [
+      "104344b9-1ae8-42c0-887b-59b12ea46f8b${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"0c98e2f0-9a2d-4103-8736-f3c305f5a28e\"}"
+    ]
+  ]
 }

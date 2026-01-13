@@ -1,0 +1,12 @@
+{
+  "id": "crowbar",
+  "name": "Crowbar",
+  "category": "tool",
+  "rarity": "common",
+  "weight": 5,
+  "value": 2,
+  "quantity": 1,
+  "description": "Grants advantage on Strength checks to force open doors or pry things",
+  "icon": "🔧",
+  "iconStatus": "placeholder"
+}

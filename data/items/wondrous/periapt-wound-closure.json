@@ -1,0 +1,21 @@
+{
+  "id": "periapt-wound-closure",
+  "name": "Periapt of Wound Closure",
+  "category": "wondrous",
+  "rarity": "uncommon",
+  "weight": 0,
+  "value": 3000,
+  "quantity": 1,
+  "requiresAttunement": true,
+  "description": "Stabilizes you when dying and doubles hit dice healing",
+  "magic": {
+    "effects": [
+      {
+        "name": "Rapid Healing",
+        "description": "Automatically stabilize when dying. Double hit dice healing on short rest"
+      }
+    ]
+  },
+  "icon": "✨",
+  "iconStatus": "placeholder"
+}

@@ -4,22 +4,48 @@
   },
   "name": "Find Traps",
   "level": 2,
+  "flavorText": "You sense the presence of any trap within range that is within line of sight. A trap, for the purpose of this spell, includes anything that would inflict a sudden or unexpected effect you consider harmful or undesirable, which was specifically intended as such by its creator. Thus, the spell would sense an area affected by the *[alarm](../alarm/ \"alarm (lvl 1)\")* spell, a *[glyph of warding](../glyph-of-warding/ \"glyph of warding (lvl 3)\")*, or a mechanical pit trap, but it would not reveal a natural weakness in the floor, an unstable ceiling, or a hidden sinkhole.\n\nThis spell merely reveals that a trap is present. You don't learn the location of each trap, but you do learn the general nature of the danger posed by a trap you sense.",
   "description": "You sense the presence of any trap within range that is within line of sight. A trap, for the purpose of this spell, includes anything that would inflict a sudden or unexpected effect you consider harmful or undesirable, which was specifically intended as such by its creator. Thus, the spell would sense an area affected by the *[alarm](../alarm/ \"alarm (lvl 1)\")* spell, a *[glyph of warding](../glyph-of-warding/ \"glyph of warding (lvl 3)\")*, or a mechanical pit trap, but it would not reveal a natural weakness in the floor, an unstable ceiling, or a hidden sinkhole.\n\nThis spell merely reveals that a trap is present. You don't learn the location of each trap, but you do learn the general nature of the danger posed by a trap you sense.",
-  "castingTime": "1 action",
-  "range": "120 feet",
-  "components": "V, S",
-  "duration": "Instantaneous",
-  "damage": null,
   "school": "Divination",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "cleric",
     "druid",
     "ranger"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "120 feet",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/cc78625c-d388-4534-aff8-42e744886559.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "cleric",
+    "druid",
+    "ranger",
+    "level2"
+  ],
+  "iconLayers": [
+    [
+      "cc78625c-d388-4534-aff8-42e744886559"
+    ],
+    [
+      "db394b36-e63e-4c2e-9373-25a89c64608c"
+    ],
+    [
+      "6c15efe8-cef4-47dc-b9ba-c88b72bb55cc"
+    ],
+    [
+      "750c5960-4064-4efe-b02d-79d00c57081c"
+    ]
+  ]
 }

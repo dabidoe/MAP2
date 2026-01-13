@@ -4,12 +4,52 @@
   },
   "name": "Charm Person",
   "level": 1,
-  "description": "You speak a soft entreaty that drifts into the mind of one creature you can see. The target must succeed on a Wisdom saving throw or feel a gentle surge of trust toward you. For the duration, the creature treats you as a calm mediator and will avoid hostility toward you unless clearly threatened. If you or your allies are actively harming it, the target has advantage on the saving throw. When the effect ends, the creature senses your influence but not your intent.",
-  "castingTime": "1 action",
-  "range": "40 ft",
-  "components": "V, S",
-  "duration": "10 minutes",
-  "damage": "None",
+  "flavorText": "You speak a soft entreaty that drifts into the mind of one creature you can see. The target must succeed on a Wisdom saving throw or feel a gentle surge of trust toward you. For the duration, the creature treats you as a calm mediator and will avoid hostility toward you unless clearly threatened. If you or your allies are actively harming it, the target has advantage on the saving throw. When the effect ends, the creature senses your influence but not your intent.",
+  "description": "You attempt to charm a humanoid you can see within range. It must make a Wisdom saving throw, and does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is charmed by you until the spell ends or until you or your companions do anything harmful to it. The charmed creature regards you as a friendly acquaintance. When the spell ends, the creature knows it was charmed by you.",
   "school": "Enchantment",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/6e6e4d7a-8184-4589-b556-48219cd1a3ed.png"
+  "classes": [
+    "bard",
+    "druid",
+    "sorcerer",
+    "warlock",
+    "wizard"
+  ],
+  "ritual": false,
+  "castingTime": "1 action",
+  "range": "30 feet",
+  "components": "V, S",
+  "duration": "1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/6e6e4d7a-8184-4589-b556-48219cd1a3ed.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "None",
+  "tags": [
+    "bard",
+    "druid",
+    "sorcerer",
+    "warlock",
+    "wizard",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "6e6e4d7a-8184-4589-b556-48219cd1a3ed${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"90d0a464-ce3b-4e1a-b367-ea28edc2a742\"}"
+    ],
+    [
+      "7e2dabf0-80d1-498f-b197-00ce222e5e8e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"6ffb67f7-5574-437c-adfe-1f203936395b\"}"
+    ],
+    [
+      "a23d768a-312b-4241-8dba-e156c61487ab${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"83570538-93cf-435f-945b-962f07182d5c\"}"
+    ],
+    [
+      "0b5dc23e-6ee7-47a0-af5b-56bdd2872ca6${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"8dd56b0c-c4a5-41a9-8334-c97e87954460\"}"
+    ]
+  ]
 }

@@ -1,0 +1,22 @@
+{
+  "id": "spear",
+  "name": "Spear",
+  "category": "weapon",
+  "rarity": "common",
+  "slot": "mainHand",
+  "weight": 3,
+  "value": 1,
+  "description": "A simple piercing weapon that can be thrown",
+  "weapon": {
+    "damage": "1d6",
+    "damageType": "piercing",
+    "properties": [
+      "thrown",
+      "versatile"
+    ],
+    "versatileDamage": "1d8",
+    "range": "20/60 ft"
+  },
+  "icon": "⚔️",
+  "iconStatus": "placeholder"
+}

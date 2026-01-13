@@ -1,0 +1,12 @@
+{
+  "id": "bolts",
+  "name": "Crossbow Bolts (20)",
+  "category": "gear",
+  "rarity": "common",
+  "weight": 1.5,
+  "value": 1,
+  "quantity": 20,
+  "description": "Standard ammunition for crossbows",
+  "icon": "🎒",
+  "iconStatus": "placeholder"
+}

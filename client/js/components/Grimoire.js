@@ -10,6 +10,19 @@ export class Grimoire {
     this.sortBy = 'level'; // 'level' or 'name'
     this.sortOrder = 'asc'; // 'asc' or 'desc'
 
+    // Lazy loading state
+    this.renderedCount = 0;
+    this.batchSize = 20; // Render 20 items at a time
+    this.isLoadingMore = false;
+
+    // Filter state
+    this.filters = {
+      level: 'all',     // 'all' or specific level (0-9)
+      class: 'all',     // 'all' or specific class name
+      school: 'all',    // 'all' or specific school name
+      search: ''        // search query
+    };
+
     // DOM elements
     this.elements = {
       grimoireBtn: document.getElementById('sidebar-grimoire'),
@@ -63,50 +76,49 @@ export class Grimoire {
    */
   async _loadSpells() {
     try {
-      console.log('Loading spells from data/spells/ using manifest...');
+      console.log('⚡ Loading spell index (lightweight, fast)...');
 
-      // Load the spell manifest
-      const manifestResponse = await fetch('/data/spells/spell-manifest.json');
-      if (!manifestResponse.ok) {
-        throw new Error(`Failed to load spell manifest: ${manifestResponse.status}`);
+      const indexResponse = await fetch('/data/spells/spell-index.json');
+      if (!indexResponse.ok) {
+        throw new Error(`Failed to load spell index: ${indexResponse.status}`);
       }
 
-      const manifest = await manifestResponse.json();
-      const allSpells = [];
+      const index = await indexResponse.json();
 
-      // Load each spell file listed in the manifest
-      for (const [levelFolder, fileList] of Object.entries(manifest)) {
-        for (const filename of fileList) {
-          try {
-            const spellResponse = await fetch(`/data/spells/${levelFolder}/${filename}`);
-            if (spellResponse.ok) {
-              const spellData = await spellResponse.json();
-              const normalizedSpell = this._normalizeSpellData(spellData);
-              allSpells.push(normalizedSpell);
-            }
-          } catch (err) {
-            console.warn(`Failed to load ${levelFolder}/${filename}:`, err);
-          }
-        }
-      }
+      console.log(`✅ Loaded ${index.length} spells from index (fast!)`);
 
-      console.log('Raw spell data loaded:', allSpells.length, 'total spells');
-
-      // Filter by isPublic flag
-      this.spells = allSpells.filter(spell => {
-        return spell.isPublic === undefined || spell.isPublic === true;
-      });
-
+      this.spells = index;
       this.filteredSpells = [...this.spells];
 
-      console.log(`✅ Loaded ${this.spells.length} spells from data/spells/ folders`);
       if (this.spells.length > 0) {
-        console.log('Sample spell:', this.spells[0].name, '- ID:', this.spells[0]._id?.$oid || this.spells[0].id, '- Icon:', this.spells[0].icon);
+        console.log('📊 Index loaded:', this.spells.length, 'spells');
+        console.log('💡 Full spell data will load on-demand when cards open');
       }
     } catch (error) {
-      console.error('❌ Failed to load spells:', error);
+      console.error('❌ Failed to load spell index:', error);
       this.spells = [];
       this.filteredSpells = [];
+    }
+  }
+
+  /**
+   * Lazy load full spell data when needed (card open)
+   * @private
+   */
+  async _loadFullSpell(path) {
+    try {
+      console.log(`📖 Loading full spell data: ${path}`);
+      const response = await fetch(`/data/spells/${path}`);
+      if (!response.ok) {
+        throw new Error(`Failed to load spell: ${response.status}`);
+      }
+
+      const fullSpell = await response.json();
+      console.log(`✅ Loaded full data for: ${fullSpell.name}`);
+      return fullSpell;
+    } catch (error) {
+      console.error(`❌ Failed to load full spell from ${path}:`, error);
+      return null;
     }
   }
 
@@ -210,7 +222,10 @@ export class Grimoire {
     // Search input
     if (this.elements.searchInput) {
       this.elements.searchInput.addEventListener('input', (e) => {
-        this._searchSpells(e.target.value);
+        this.filters.search = e.target.value;
+        this._applyFilters();
+        this._sortSpells();
+        this._renderSpellList();
       });
     }
 
@@ -232,9 +247,125 @@ export class Grimoire {
 
     // Setup sort controls
     this._setupSortControls();
+
+    // Setup filter dropdowns
+    this._setupFilterDropdowns();
   }
 
-  //
+  /**
+   * Setup filter dropdown controls
+   * @private
+   */
+  _setupFilterDropdowns() {
+    const searchContainer = this.elements.grimoirePanel?.querySelector('.grimoire-search');
+    if (!searchContainer) return;
+
+    // Check if controls already exist
+    if (searchContainer.querySelector('.grimoire-filter-dropdowns')) return;
+
+    // Get unique values from spells for filter options
+    const levels = ['all', ...new Set(this.spells.map(s => s.level).filter(l => l !== null && l !== undefined).sort((a, b) => a - b))];
+    const classes = ['all', ...new Set(this.spells.filter(s => s.classes).flatMap(s => s.classes).sort())];
+    const schools = ['all', ...new Set(this.spells.map(s => s.school).filter(s => s).sort())];
+
+    const filterDropdowns = document.createElement('div');
+    filterDropdowns.className = 'grimoire-filter-dropdowns';
+
+    filterDropdowns.innerHTML = `
+      <div class="filter-dropdown-group">
+        <label class="filter-dropdown-label">Level:</label>
+        <select class="filter-dropdown" id="grimoire-level-filter">
+          ${levels.map(level => `<option value="${level}">${level === 'all' ? 'All Levels' : `Level ${level}`}</option>`).join('')}
+        </select>
+      </div>
+      <div class="filter-dropdown-group">
+        <label class="filter-dropdown-label">Class:</label>
+        <select class="filter-dropdown" id="grimoire-class-filter">
+          ${classes.map(cls => `<option value="${cls}">${cls === 'all' ? 'All Classes' : cls}</option>`).join('')}
+        </select>
+      </div>
+      <div class="filter-dropdown-group">
+        <label class="filter-dropdown-label">School:</label>
+        <select class="filter-dropdown" id="grimoire-school-filter">
+          ${schools.map(school => `<option value="${school}">${school === 'all' ? 'All Schools' : school}</option>`).join('')}
+        </select>
+      </div>
+    `;
+
+    searchContainer.appendChild(filterDropdowns);
+
+    // Add event listeners
+    const levelFilter = document.getElementById('grimoire-level-filter');
+    const classFilter = document.getElementById('grimoire-class-filter');
+    const schoolFilter = document.getElementById('grimoire-school-filter');
+
+    if (levelFilter) {
+      levelFilter.addEventListener('change', (e) => {
+        this.filters.level = e.target.value;
+        this._applyFilters();
+        this._sortSpells();
+        this._renderSpellList();
+      });
+    }
+
+    if (classFilter) {
+      classFilter.addEventListener('change', (e) => {
+        this.filters.class = e.target.value;
+        this._applyFilters();
+        this._sortSpells();
+        this._renderSpellList();
+      });
+    }
+
+    if (schoolFilter) {
+      schoolFilter.addEventListener('change', (e) => {
+        this.filters.school = e.target.value;
+        this._applyFilters();
+        this._sortSpells();
+        this._renderSpellList();
+      });
+    }
+  }
+
+  /**
+   * Apply all active filters to spell list
+   * @private
+   */
+  _applyFilters() {
+    // Start with all spells
+    this.filteredSpells = [...this.spells];
+
+    // Apply search filter
+    if (this.filters.search.trim()) {
+      const q = this.filters.search.toLowerCase();
+      this.filteredSpells = this.filteredSpells.filter(spell => {
+        return (
+          spell.name?.toLowerCase().includes(q) ||
+          spell.description?.toLowerCase().includes(q) ||
+          spell.level?.toString().includes(q) ||
+          spell.school?.toLowerCase().includes(q)
+        );
+      });
+    }
+
+    // Apply level filter
+    if (this.filters.level !== 'all') {
+      const targetLevel = parseInt(this.filters.level);
+      this.filteredSpells = this.filteredSpells.filter(spell => spell.level === targetLevel);
+    }
+
+    // Apply class filter
+    if (this.filters.class !== 'all') {
+      this.filteredSpells = this.filteredSpells.filter(spell =>
+        spell.classes && spell.classes.includes(this.filters.class)
+      );
+    }
+
+    // Apply school filter
+    if (this.filters.school !== 'all') {
+      this.filteredSpells = this.filteredSpells.filter(spell => spell.school === this.filters.school);
+    }
+  }
 
   /**
    * Setup sorting controls
@@ -376,7 +507,12 @@ export class Grimoire {
     // Show grimoire (use flex since grimoire-panel uses flexbox)
     this.elements.grimoirePanel.style.display = 'flex';
 
-    // Sort and render spell list
+    // BUGFIX: Reset filtered spells from full spell list before filtering
+    // This ensures we start fresh when switching panels
+    this.filteredSpells = [...this.spells];
+
+    // Apply filters and render
+    this._applyFilters();
     this._sortSpells();
     this._renderSpellList();
   }
@@ -390,28 +526,6 @@ export class Grimoire {
     this.elements.grimoirePanel.style.display = 'none';
   }
 
-  /**
-   * Search spells
-   * @private
-   */
-  _searchSpells(query) {
-    if (!query.trim()) {
-      this.filteredSpells = [...this.spells];
-    } else {
-      const q = query.toLowerCase();
-      this.filteredSpells = this.spells.filter(spell => {
-        return (
-          spell.name?.toLowerCase().includes(q) ||
-          spell.description?.toLowerCase().includes(q) ||
-          spell.level?.toString().includes(q) ||
-          spell.school?.toLowerCase().includes(q)
-        );
-      });
-    }
-
-    this._sortSpells();
-    this._renderSpellList();
-  }
 
   /**
    * Sort filtered spells
@@ -444,7 +558,7 @@ export class Grimoire {
   }
 
   /**
-   * Render spell list
+   * Render spell list with lazy loading
    * @private
    */
   _renderSpellList() {
@@ -453,9 +567,9 @@ export class Grimoire {
       return;
     }
 
-    console.log(`Rendering ${this.filteredSpells.length} spells to list`);
-
+    // Clear list and reset counter
     this.elements.spellList.innerHTML = '';
+    this.renderedCount = 0;
 
     if (this.filteredSpells.length === 0) {
       this.elements.spellList.innerHTML = '<p style="padding: 20px; color: #8b7355; text-align: center;">No spells found</p>';
@@ -463,7 +577,28 @@ export class Grimoire {
       return;
     }
 
-    this.filteredSpells.forEach(spell => {
+    console.log(`Lazy loading ${this.filteredSpells.length} spells (${this.batchSize} at a time)`);
+
+    // Render first batch immediately
+    this._renderSpellBatch();
+
+    // Setup scroll listener for lazy loading
+    this._setupLazyLoading();
+  }
+
+  /**
+   * Render a batch of spells
+   * @private
+   */
+  _renderSpellBatch() {
+    if (this.renderedCount >= this.filteredSpells.length) {
+      return; // All spells rendered
+    }
+
+    const endIndex = Math.min(this.renderedCount + this.batchSize, this.filteredSpells.length);
+    const batch = this.filteredSpells.slice(this.renderedCount, endIndex);
+
+    batch.forEach(spell => {
       const item = document.createElement('div');
       item.className = 'spell-list-item';
 
@@ -497,7 +632,41 @@ export class Grimoire {
       this.elements.spellList.appendChild(item);
     });
 
-    console.log('✅ Spell list rendered');
+    this.renderedCount = endIndex;
+    console.log(`✅ Rendered ${this.renderedCount} / ${this.filteredSpells.length} spells`);
+  }
+
+  /**
+   * Setup lazy loading on scroll
+   * @private
+   */
+  _setupLazyLoading() {
+    if (!this.elements.spellList) return;
+
+    // Remove old listener if exists
+    if (this._scrollHandler) {
+      this.elements.spellList.removeEventListener('scroll', this._scrollHandler);
+    }
+
+    // Create new scroll handler
+    this._scrollHandler = () => {
+      if (this.isLoadingMore || this.renderedCount >= this.filteredSpells.length) {
+        return;
+      }
+
+      const scrollTop = this.elements.spellList.scrollTop;
+      const scrollHeight = this.elements.spellList.scrollHeight;
+      const clientHeight = this.elements.spellList.clientHeight;
+
+      // Load more when user is 200px from bottom
+      if (scrollTop + clientHeight >= scrollHeight - 200) {
+        this.isLoadingMore = true;
+        this._renderSpellBatch();
+        this.isLoadingMore = false;
+      }
+    };
+
+    this.elements.spellList.addEventListener('scroll', this._scrollHandler);
   }
 
   /**
@@ -521,20 +690,31 @@ export class Grimoire {
   }
 
   /**
-   * Show spell card modal
+   * Show spell card modal (lazy load full spell data)
    * @private
    */
-  _showSpellCard(spell) {
+  async _showSpellCard(spell) {
     if (!this.elements.spellCardModal || !this.elements.spellCardContainer) return;
 
-    // Render spell card
-    this._renderSpellCard(spell);
+    // Show modal immediately with loading state
+    this.elements.spellCardModal.style.display = 'flex';
+    this.elements.spellCardContainer.innerHTML = '<div style="padding: 40px; text-align: center; color: #c5a959;">Loading spell data...</div>';
+
+    // Lazy load full spell data if we only have index entry
+    let fullSpell = spell;
+    if (spell._path) {
+      fullSpell = await this._loadFullSpell(spell._path);
+      if (!fullSpell) {
+        this.elements.spellCardContainer.innerHTML = '<div style="padding: 40px; text-align: center; color: #ff6464;">Failed to load spell data</div>';
+        return;
+      }
+    }
+
+    // Render spell card with full data
+    this._renderSpellCard(fullSpell);
 
     // Expand console when viewing spell
     this._expandConsole();
-
-    // Show modal
-    this.elements.spellCardModal.style.display = 'flex';
   }
 
   /**
@@ -556,15 +736,9 @@ export class Grimoire {
     const container = this.elements.spellCardContainer;
     container.innerHTML = '';
 
-    // Create card structure
-    const card = document.createElement('div');
-    card.style.position = 'relative';
-    card.style.width = '100%';
-    card.style.height = '100%';
-
     // Render icon stack (either iconLayers or single icon)
     const iconStack = this._renderIconStack(spell);
-    card.appendChild(iconStack);
+    container.appendChild(iconStack);
 
     // Render content
     const content = document.createElement('div');
@@ -575,15 +749,31 @@ export class Grimoire {
     content.innerHTML = `
       <div class="spell-card-header">
         <div>
-          <div class="spell-card-title">${spell.name || 'Unknown Spell'}</div>
+          <div class="spell-card-title">
+            ${spell.name || 'Unknown Spell'}
+            ${spell.ritual ? '<span class="ritual-badge">🕯️ Ritual</span>' : ''}
+          </div>
           <div class="spell-card-level">Level ${displayLevel} ${spell.school || ''}</div>
+          ${spell.classes && spell.classes.length ? `
+          <div class="spell-card-classes">
+            ${spell.classes.map(cls => `<span class="class-badge">${cls}</span>`).join(' ')}
+          </div>
+          ` : ''}
         </div>
         <button class="close-btn" onclick="document.getElementById('spell-card-modal').style.display='none'">✕</button>
       </div>
 
-      <div class="spell-card-description">
-        ${spell.description || 'No description available.'}
+      <div class="spell-card-description-container">
+        <div class="spell-card-description">
+          ${spell.description || 'No description available.'}
+        </div>
       </div>
+
+      ${spell.higherLevels ? `
+      <div class="spell-card-higher-levels">
+        <strong>At Higher Levels:</strong> ${spell.higherLevels}
+      </div>
+      ` : ''}
 
       <div class="spell-card-meta">
         <div class="spell-card-meta-item">
@@ -596,7 +786,11 @@ export class Grimoire {
         </div>
         <div class="spell-card-meta-item">
           <div class="spell-card-meta-label">Components</div>
-          <div class="spell-card-meta-value">${spell.components || 'Unknown'}</div>
+          <div class="spell-card-meta-value">
+            ${spell.components || 'Unknown'}
+            ${spell.componentsDetail?.material && spell.componentsDetail?.materialsNeeded?.length ?
+              `<div class="material-components">${spell.componentsDetail.materialsNeeded.join(', ')}</div>` : ''}
+          </div>
         </div>
         <div class="spell-card-meta-item">
           <div class="spell-card-meta-label">Duration</div>
@@ -611,8 +805,7 @@ export class Grimoire {
       </div>
     `;
 
-    card.appendChild(content);
-    container.appendChild(card);
+    container.appendChild(content);
   }
 
   /**
@@ -625,77 +818,140 @@ export class Grimoire {
 
     console.log('Rendering spell visual for:', spell.name, 'video:', spell.video, 'icon:', spell.icon);
 
-    // Priority 1: Video (if available)
-    if (spell.video) {
-      const video = document.createElement('video');
-      video.src = spell.video;
-      video.className = 'spell-card-video';
-      video.loop = true;
-      video.autoplay = true;
-      video.muted = true;
-      video.style.width = '100%';
-      video.style.height = '100%';
-      video.style.objectFit = 'cover';
-      video.style.transform = 'translate(-50%, -50%)';
-
-      // Add error handling
-      video.onerror = () => {
-        console.error('Failed to load spell video:', spell.video);
-        // Fallback to icon if video fails
-        if (spell.icon) {
-          stack.innerHTML = '';
-          const img = document.createElement('img');
-          img.src = spell.icon;
-          img.className = 'spell-card-icon-layer';
-          img.style.width = '100%';
-          img.style.height = '100%';
-          img.style.objectFit = 'cover';
-          img.style.transform = 'translate(-50%, -50%)';
-          stack.appendChild(img);
-        } else {
-          stack.innerHTML = `<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #8b7355;">Failed to load video</div>`;
-        }
-      };
-
-      video.onloadeddata = () => {
-        console.log('Successfully loaded spell video:', spell.name);
-      };
-
-      stack.appendChild(video);
+    // Show loading placeholder initially
+    if (!spell.video && !spell.icon) {
+      stack.innerHTML = `<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #8b7355; font-size: 3rem;">✨</div>`;
       return stack;
     }
 
-    // Priority 2: Icon Layers (master format)
-    if (spell.iconLayers && Array.isArray(spell.iconLayers) && spell.iconLayers.length > 0) {
-      // Render layered composite
-      spell.iconLayers.forEach((layer, index) => {
-        const img = this._createIconLayer(layer, index);
-        if (img) stack.appendChild(img);
-      });
-    } else if (spell.icon) {
-      // Priority 3: Single icon
+    // Priority 1: Video (if available)
+    if (spell.video) {
+      // Check if it's a Bunny CDN embed URL (iframe) or direct video URL
+      const isBunnyEmbed = spell.video.includes('player.mediadelivery.net/embed');
+
+      if (isBunnyEmbed) {
+        // Bunny CDN iframe embed
+        const iframe = document.createElement('iframe');
+        iframe.src = spell.video;
+        iframe.className = 'spell-card-video-iframe';
+        iframe.loading = 'lazy';
+        iframe.allow = 'autoplay';
+        iframe.style.position = 'absolute';
+        iframe.style.top = '0';
+        iframe.style.left = '0';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.border = 'none';
+
+        iframe.onload = () => {
+          console.log('✅ Successfully loaded Bunny video embed:', spell.name);
+        };
+
+        iframe.onerror = () => {
+          console.error('❌ Failed to load Bunny video embed:', spell.video);
+          // Fallback to icon if video fails
+          if (spell.icon) {
+            stack.innerHTML = '';
+            const img = document.createElement('img');
+            img.src = spell.icon;
+            img.className = 'spell-card-icon-layer';
+            img.style.position = 'absolute';
+            img.style.top = '50%';
+            img.style.left = '50%';
+            img.style.width = '100%';
+            img.style.height = '100%';
+            img.style.objectFit = 'cover';
+            img.style.transform = 'translate(-50%, -50%)';
+            stack.appendChild(img);
+          } else {
+            stack.innerHTML = `<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #8b7355;">Failed to load video</div>`;
+          }
+        };
+
+        stack.appendChild(iframe);
+      } else {
+        // Direct video URL (old format)
+        const video = document.createElement('video');
+        video.src = spell.video;
+        video.className = 'spell-card-video';
+        video.loop = true;
+        video.autoplay = true;
+        video.muted = true;
+        video.style.position = 'absolute';
+        video.style.top = '50%';
+        video.style.left = '50%';
+        video.style.width = '100%';
+        video.style.height = '100%';
+        video.style.objectFit = 'cover';
+        video.style.transform = 'translate(-50%, -50%)';
+
+        // Add error handling
+        video.onerror = () => {
+          console.error('❌ Failed to load spell video:', spell.video);
+          // Fallback to icon if video fails
+          if (spell.icon) {
+            stack.innerHTML = '';
+            const img = document.createElement('img');
+            img.src = spell.icon;
+            img.className = 'spell-card-icon-layer';
+            img.style.position = 'absolute';
+            img.style.top = '50%';
+            img.style.left = '50%';
+            img.style.width = '100%';
+            img.style.height = '100%';
+            img.style.objectFit = 'cover';
+            img.style.transform = 'translate(-50%, -50%)';
+            stack.appendChild(img);
+          } else {
+            stack.innerHTML = `<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #8b7355;">Failed to load video</div>`;
+          }
+        };
+
+        video.onloadeddata = () => {
+          console.log('✅ Successfully loaded spell video:', spell.name);
+        };
+
+        stack.appendChild(video);
+      }
+
+      return stack;
+    }
+
+    // Priority 2: Single icon (pre-composed image - faster, no flashing)
+    if (spell.icon) {
       const img = document.createElement('img');
       img.src = spell.icon;
       img.className = 'spell-card-icon-layer';
+      img.style.position = 'absolute';
+      img.style.top = '50%';
+      img.style.left = '50%';
       img.style.width = '100%';
       img.style.height = '100%';
       img.style.objectFit = 'cover';
       img.style.transform = 'translate(-50%, -50%)';
 
+      // Add load success handler
+      img.onload = () => {
+        console.log('✅ Successfully loaded spell icon:', spell.name);
+      };
+
       // Add error handling
       img.onerror = () => {
-        console.error('Failed to load spell icon:', spell.icon);
+        console.error('❌ Failed to load spell icon:', spell.icon);
         stack.innerHTML = `<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #8b7355; flex-direction: column; gap: 10px;">
           <div>Failed to load icon</div>
           <div style="font-size: 0.7rem; opacity: 0.6;">${spell.icon}</div>
         </div>`;
       };
 
-      img.onload = () => {
-        console.log('Successfully loaded spell icon:', spell.name);
-      };
-
       stack.appendChild(img);
+    } else if (spell.iconLayers && Array.isArray(spell.iconLayers) && spell.iconLayers.length > 0) {
+      // Priority 3: Icon Layers (fallback if no single icon available)
+      console.log('Using icon layers for:', spell.name);
+      spell.iconLayers.forEach((layer, index) => {
+        const img = this._createIconLayer(layer, index);
+        if (img) stack.appendChild(img);
+      });
     } else {
       // No icon or video available
       console.warn('No icon or video available for spell:', spell.name);
@@ -707,46 +963,70 @@ export class Grimoire {
 
   /**
    * Create icon layer from iconLayer data
+   * Handles format: ["hash${metadata}"] where metadata is JSON string
    * @private
-   * @param {Object} layer - Layer data with GUID and JSON transform
+   * @param {Array} layerArray - Array with hash+metadata string
    * @param {number} index - Layer index for z-index
    */
-  _createIconLayer(layer, index) {
-    if (!layer.guid) return null;
+  _createIconLayer(layerArray, index) {
+    if (!layerArray || layerArray.length === 0) return null;
 
     try {
-      // Clean GUID - extract just the GUID portion if there's extra data appended
-      let cleanGuid = layer.guid;
-      const dollarSignIndex = cleanGuid.indexOf('${');
-      if (dollarSignIndex !== -1) {
-        cleanGuid = cleanGuid.substring(0, dollarSignIndex);
-      }
+      // Extract the first item from the layer array
+      const layerString = layerArray[0];
+      if (!layerString) return null;
 
-      // Parse JSON string for transform data
-      const transform = layer.json ? JSON.parse(layer.json) : {};
+      // Split by ${ to separate hash from metadata
+      const dollarSignIndex = layerString.indexOf('${');
+      const hash = dollarSignIndex !== -1
+        ? layerString.substring(0, dollarSignIndex)
+        : layerString;
+
+      // Parse metadata if present
+      let metadata = {};
+      if (dollarSignIndex !== -1) {
+        try {
+          const metadataStr = layerString.substring(dollarSignIndex + 1);
+          metadata = JSON.parse(metadataStr);
+        } catch (e) {
+          console.warn('Failed to parse layer metadata:', e);
+        }
+      }
 
       const img = document.createElement('img');
       img.className = 'spell-card-icon-layer';
-      img.src = `/icons/${cleanGuid}.png`; // Assuming icons are stored in /icons/
+      img.src = `https://statsheet-cdn.b-cdn.net/images/${hash}.png`;
 
-      // Apply transform
-      const scale = transform.scale || 1;
-      const rotation = transform.rotation || 0;
-      const posX = transform.positionX || 0;
-      const posY = transform.positionY || 0;
+      // Apply positioning from metadata
+      const position = metadata.position ? metadata.position.split(',').map(parseFloat) : [0.5, 0.5];
+      const scale = metadata.scale ? metadata.scale.split(',').map(parseFloat) : [1, 1];
+      const rotation = metadata.rotation || 0;
 
-      img.style.transform = `
-        translate(-50%, -50%)
-        translate(${posX}px, ${posY}px)
-        rotate(${rotation}deg)
-        scale(${scale})
-      `;
+      // Convert position (0-1 range) to percentage
+      const leftPercent = position[0] * 100;
+      const topPercent = position[1] * 100;
 
+      img.style.position = 'absolute';
+      img.style.left = `${leftPercent}%`;
+      img.style.top = `${topPercent}%`;
+      img.style.width = '100%';
+      img.style.height = '100%';
+      img.style.objectFit = 'contain';
+      img.style.transform = `translate(-50%, -50%) scale(${scale[0]}, ${scale[1]}) rotate(${rotation}deg)`;
       img.style.zIndex = index;
+
+      // Add error handling
+      img.onerror = () => {
+        console.error('❌ Failed to load icon layer:', img.src);
+      };
+
+      img.onload = () => {
+        console.log('✅ Loaded icon layer:', hash);
+      };
 
       return img;
     } catch (error) {
-      console.error('Failed to parse icon layer:', layer, error);
+      console.error('Failed to parse icon layer:', layerArray, error);
       return null;
     }
   }

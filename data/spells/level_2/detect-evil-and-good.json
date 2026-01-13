@@ -3,13 +3,47 @@
     "$oid": "695496125648a6dce9f6f8f5"
   },
   "name": "Detect Evil and Good",
-  "level": 2,
-  "description": "You attune your sight to hidden presences, perceiving spectral traces of spirits, curses, and otherworldly intrusions within 40 feet. You learn the direction of each disturbance and whether its nature is spiritual, arcane, or other planar essence. The sense cannot pass through lead or more than a foot of stone.",
+  "level": 1,
+  "flavorText": "You attune your sight to hidden presences, perceiving spectral traces of spirits, curses, and otherworldly intrusions within 40 feet. You learn the direction of each disturbance and whether its nature is spiritual, arcane, or other planar essence. The sense cannot pass through lead or more than a foot of stone.",
+  "description": "For the duration, you know if there is an aberration, celestial, elemental, fey, fiend, or undead within 30 feet of you, as well as where the creature is located. Similarly, you know if there is a place or object within 30 feet of you that has been magically consecrated or desecrated.\n\nThe spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.",
+  "school": "Divination",
+  "classes": [
+    "cleric",
+    "paladin"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
-  "range": "Self (40-foot radius)",
+  "range": "Self",
   "components": "V, S",
   "duration": "Concentration, up to 10 minutes",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/9e17ce48-f577-494c-bf65-cad7d38674cd.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "None",
-  "school": "Divination",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/9e17ce48-f577-494c-bf65-cad7d38674cd.png"
+  "tags": [
+    "cleric",
+    "paladin",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "9e17ce48-f577-494c-bf65-cad7d38674cd${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"05e34a08-383f-43c8-bbe7-adc26c98f0a1\"}"
+    ],
+    [
+      "c15e5038-e400-4ee8-8cd8-fd6d3e4fbea2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"51b41a69-6bfd-44c3-9950-b5f8d3667783\"}"
+    ],
+    [
+      "4da5bf6e-8ca6-449a-9129-9c1c040b9e9f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"60a11c95-4398-49e6-9764-1a0e317027f1\"}"
+    ],
+    [
+      "1a303115-e875-4811-bbab-63827334f2c5"
+    ]
+  ]
 }

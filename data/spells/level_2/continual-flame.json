@@ -4,21 +4,48 @@
   },
   "name": "Continual Flame",
   "level": 2,
+  "flavorText": "A flame, equivalent in brightness to a torch, springs forth from an object that you touch. The effect looks like a regular flame, but it creates no heat and doesn't use oxygen. A *continual flame* can be covered or hidden but not smothered or quenched.",
   "description": "A flame, equivalent in brightness to a torch, springs forth from an object that you touch. The effect looks like a regular flame, but it creates no heat and doesn't use oxygen. A *continual flame* can be covered or hidden but not smothered or quenched.",
-  "castingTime": "1 action",
-  "range": "Self",
-  "components": "V, S, M (ruby dust worth 50 gp, which the spell consumes)",
-  "duration": "Until dispelled",
-  "damage": null,
   "school": "Evocation",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "cleric",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Self",
+  "components": "V, S, M (ruby dust worth 50 gp, which the spell consumes)",
+  "duration": "Until dispelled",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "ruby dust worth 50 gp, which the spell consumes"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/caa49f22-f7ba-4dd3-8e19-f0479ccf8459.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "cleric",
+    "wizard",
+    "level2"
+  ],
+  "iconLayers": [
+    [
+      "caa49f22-f7ba-4dd3-8e19-f0479ccf8459"
+    ],
+    [
+      "d0e9a9b1-b477-423d-80fa-5257b6b7384b"
+    ],
+    [
+      "a6dbc642-2dec-4860-91d5-45fffcb52ab3"
+    ],
+    [
+      "e8afd951-4eff-45b5-9704-c163eb97a934"
+    ]
+  ]
 }

@@ -4,12 +4,48 @@
   },
   "name": "Healing Word",
   "level": 1,
-  "description": "A resonant pulse of restorative sound washes over a creature you can see, stitching wounds and steadying breath with a soft harmonic glow.",
-  "castingTime": "1 action",
-  "range": "30 ft",
-  "components": "V, S",
-  "duration": "Instantaneous",
-  "damage": "Heals 1d4 + your spellcasting modifier",
+  "flavorText": "A resonant pulse of restorative sound washes over a creature you can see, stitching wounds and steadying breath with a soft harmonic glow.",
+  "description": "A creature of your choice that you can see within range regains hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
   "school": "Evocation",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/f90b69ba-0887-41b0-b97b-e19b5ca725be.png"
+  "classes": [
+    "bard",
+    "cleric",
+    "druid"
+  ],
+  "ritual": false,
+  "castingTime": "1 bonus action",
+  "range": "60 feet",
+  "components": "V",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": false,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d4 for each slot level above 1st.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/020e02f4-7b49-410f-bdaf-72cf50e89c81.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "Heals 1d4 + your spellcasting modifier",
+  "tags": [
+    "bard",
+    "cleric",
+    "druid",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "020e02f4-7b49-410f-bdaf-72cf50e89c81"
+    ],
+    [
+      "aa26af24-2afb-4f47-9c1e-4120285d6c1f"
+    ],
+    [
+      "d937d359-6811-41c2-8fae-c725bb0bbb4e"
+    ],
+    [
+      "f2a4fd65-bcc1-4bf2-94ed-ffeaa5dbd59c"
+    ]
+  ]
 }

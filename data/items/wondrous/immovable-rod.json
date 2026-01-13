@@ -1,0 +1,21 @@
+{
+  "id": "immovable-rod",
+  "name": "Immovable Rod",
+  "category": "wondrous",
+  "rarity": "uncommon",
+  "weight": 2,
+  "value": 5000,
+  "quantity": 1,
+  "requiresAttunement": false,
+  "description": "Rod that becomes fixed in place when activated",
+  "magic": {
+    "effects": [
+      {
+        "name": "Immovable",
+        "description": "Holds up to 8,000 lbs. DC 30 Strength check to move"
+      }
+    ]
+  },
+  "icon": "✨",
+  "iconStatus": "placeholder"
+}

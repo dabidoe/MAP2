@@ -1,0 +1,12 @@
+{
+  "id": "rope-hemp",
+  "name": "Rope, Hemp (50 ft)",
+  "category": "gear",
+  "rarity": "common",
+  "weight": 10,
+  "value": 1,
+  "quantity": 1,
+  "description": "Standard rope with 300 lbs capacity",
+  "icon": "🎒",
+  "iconStatus": "placeholder"
+}

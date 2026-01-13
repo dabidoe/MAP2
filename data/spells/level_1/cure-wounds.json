@@ -4,12 +4,52 @@
   },
   "name": "Cure Wounds",
   "level": 1,
-  "description": "A brief shimmer of starlight coils around your hand before sinking into a creature you touch, knitting flesh and spirit with quiet radiance.",
+  "flavorText": "A brief shimmer of starlight coils around your hand before sinking into a creature you touch, knitting flesh and spirit with quiet radiance.",
+  "description": "A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
+  "school": "Evocation",
+  "classes": [
+    "bard",
+    "cleric",
+    "druid",
+    "paladin",
+    "ranger"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
   "range": "Touch",
   "components": "V, S",
   "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d8 for each slot level above 1st.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/0fc3e96e-b38b-4472-adc8-c89da44b15fa.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "1d8 + your spellcasting modifier healing",
-  "school": "Conjuration",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/a54876dd-b54a-44b9-af68-add3b3a911fc.png"
+  "tags": [
+    "bard",
+    "cleric",
+    "druid",
+    "paladin",
+    "ranger",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "0fc3e96e-b38b-4472-adc8-c89da44b15fa${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"f25050e9-8f01-4206-8348-b33042fdf1b4\"}"
+    ],
+    [
+      "dea1a3ae-a419-4546-9f99-bc9fb6daba14${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c1227350-34c5-4692-a49a-2a7e79778937\"}"
+    ],
+    [
+      "8a6bee85-364c-4d2a-8338-36df2a89a5cf${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1bfc9163-bac9-4522-a1bb-87e10172ae95\"}"
+    ],
+    [
+      "96f3f552-63cd-473b-85ac-4dd48c8e6e1c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"215eddec-05e6-4436-870b-58e00a315505\"}"
+    ]
+  ]
 }

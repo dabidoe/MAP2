@@ -1,0 +1,21 @@
+{
+  "id": "ring-spell-storing",
+  "name": "Ring of Spell Storing",
+  "category": "ring",
+  "rarity": "rare",
+  "slot": "ring",
+  "weight": 0,
+  "value": 24000,
+  "requiresAttunement": true,
+  "description": "This ring stores spells cast into it, holding them until the attuned wearer uses them",
+  "magic": {
+    "effects": [
+      {
+        "name": "Spell Storage",
+        "description": "Can contain up to 5 levels worth of spells at a time"
+      }
+    ]
+  },
+  "icon": "💍",
+  "iconStatus": "placeholder"
+}

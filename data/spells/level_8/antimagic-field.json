@@ -4,21 +4,48 @@
   },
   "name": "Antimagic Field",
   "level": 8,
+  "flavorText": "A 10-foot-radius Invisible Sphere of antimagic surrounds you. This area is divorced from the magical energy that suffuses the multiverse. Within the Sphere, Spells can't be cast, summoned creatures disappear, and even Magic Items become mundane. Until the spell ends, the Sphere moves with you, centered on you.\nSpells and other magical Effects, except those created by an artifact or a deity, are suppressed in the Sphere and can't protrude into it. A slot expended to cast a suppressed spell is consumed. While an Effect is suppressed, it doesn't function, but the time it spends suppressed counts against its Duration.\n\n* Targeted Effects: Spells and other magical Effects, such as Magic Missile and Charm Person, that target a creature or an object in the Sphere have no Effect on that target.\n* Areas of Magic: The area of another spell or magical Effect, such as Fireball, can't extend into the Sphere. If the Sphere overlaps an area of magic, the part of the area that is covered by the Sphere is suppressed. For example, the flames created by a Wall of Fire are suppressed within the Sphere, creating a gap in the wall if the overlap is large enough.\n* Spells: Any active spell or other magical Effect on a creature or an object in the Sphere is suppressed while the creature or object is in it.\n* Magic Items: The Properties and powers of Magic Items are suppressed in the Sphere. For example, a +1 long sword in the Sphere functions as a nonmagical long sword. A magic weapon's Properties and powers are suppressed if it is used against a target in the Sphere or wielded by an attacker in the Sphere. If a Magic Weapon or piece of magic Ammunition fully leaves the Sphere (For example, if you fire a Magic Arrow or throw a magic spear at a target outside the sphere), the magic of the item ceases to be suppressed as soon as it exits.\n* Magical Travel: Teleportation and Planar Travel fail to work in the Sphere, whether the Sphere is the destination or the departure point for such magical Travel. A portal to another location, world, or plane of existence, as well as an opening to an extradimensional space such as that created by the Rope Trick Spells, temporarily closes while in the Sphere.\n* Creatures and Objects: A creature or object summoned or created by magic temporarily winks out of existence in the Sphere. Such a creature instantly reappears once the space the creature occupied is no longer within the Sphere.\n* Dispel Magic: Spells and magical Effects such as Dispel Magic have no Effect on the Sphere. Likewise, the spheres created by different antimagic field Spells don't nullify each other.",
   "description": "A 10-foot-radius Invisible Sphere of antimagic surrounds you. This area is divorced from the magical energy that suffuses the multiverse. Within the Sphere, Spells can't be cast, summoned creatures disappear, and even Magic Items become mundane. Until the spell ends, the Sphere moves with you, centered on you.\nSpells and other magical Effects, except those created by an artifact or a deity, are suppressed in the Sphere and can't protrude into it. A slot expended to cast a suppressed spell is consumed. While an Effect is suppressed, it doesn't function, but the time it spends suppressed counts against its Duration.\n\n* Targeted Effects: Spells and other magical Effects, such as Magic Missile and Charm Person, that target a creature or an object in the Sphere have no Effect on that target.\n* Areas of Magic: The area of another spell or magical Effect, such as Fireball, can't extend into the Sphere. If the Sphere overlaps an area of magic, the part of the area that is covered by the Sphere is suppressed. For example, the flames created by a Wall of Fire are suppressed within the Sphere, creating a gap in the wall if the overlap is large enough.\n* Spells: Any active spell or other magical Effect on a creature or an object in the Sphere is suppressed while the creature or object is in it.\n* Magic Items: The Properties and powers of Magic Items are suppressed in the Sphere. For example, a +1 long sword in the Sphere functions as a nonmagical long sword. A magic weapon's Properties and powers are suppressed if it is used against a target in the Sphere or wielded by an attacker in the Sphere. If a Magic Weapon or piece of magic Ammunition fully leaves the Sphere (For example, if you fire a Magic Arrow or throw a magic spear at a target outside the sphere), the magic of the item ceases to be suppressed as soon as it exits.\n* Magical Travel: Teleportation and Planar Travel fail to work in the Sphere, whether the Sphere is the destination or the departure point for such magical Travel. A portal to another location, world, or plane of existence, as well as an opening to an extradimensional space such as that created by the Rope Trick Spells, temporarily closes while in the Sphere.\n* Creatures and Objects: A creature or object summoned or created by magic temporarily winks out of existence in the Sphere. Such a creature instantly reappears once the space the creature occupied is no longer within the Sphere.\n* Dispel Magic: Spells and magical Effects such as Dispel Magic have no Effect on the Sphere. Likewise, the spheres created by different antimagic field Spells don't nullify each other.",
-  "castingTime": "1 action",
-  "range": "Self (10-foot-radius sphere)",
-  "components": "V, S, M (a pinch of powdered iron or iron filings)",
-  "duration": "Concentration, up to 1 hour",
-  "damage": null,
   "school": "Abjuration",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "cleric",
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Self (10-foot-radius sphere)",
+  "components": "V, S, M (a pinch of powdered iron or iron filings)",
+  "duration": "Concentration, up to 1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a pinch of powdered iron or iron filings"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/d15046cd-4364-452d-8e44-1f3e6ba35929.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "cleric",
+    "wizard",
+    "level8"
+  ],
+  "iconLayers": [
+    [
+      "d15046cd-4364-452d-8e44-1f3e6ba35929${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"0b2d60af-8633-4cd4-8ed0-626c01a2c835\"}"
+    ],
+    [
+      "fa4369d8-cf18-4c37-a1d9-2609a20f1d16${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"08df4e30-9fb0-46ef-803b-1081a4ba48a8\"}"
+    ],
+    [
+      "0c6dfe64-5d06-418b-960b-c2068d7eb690${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4e3fdc60-5a02-47f2-81af-ddfce4667bd2\"}"
+    ],
+    [
+      "dc4954f4-50f4-47b0-82f2-8b9753ebcf05${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"5e516ab0-8492-4dbc-beb6-84678c99355b\"}"
+    ]
+  ]
 }

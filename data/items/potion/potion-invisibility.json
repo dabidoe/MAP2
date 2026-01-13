@@ -1,0 +1,16 @@
+{
+  "id": "potion-invisibility",
+  "name": "Potion of Invisibility",
+  "category": "potion",
+  "rarity": "very-rare",
+  "weight": 0.5,
+  "value": 5000,
+  "quantity": 1,
+  "description": "Grants invisibility when consumed",
+  "consumable": {
+    "effect": "Become invisible for 1 hour",
+    "duration": "1 hour"
+  },
+  "icon": "🧪",
+  "iconStatus": "placeholder"
+}

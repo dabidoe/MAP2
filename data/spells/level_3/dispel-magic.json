@@ -4,14 +4,9 @@
   },
   "name": "Dispel Magic",
   "level": 3,
+  "flavorText": "Choose one creature, object, or magical effect within range. Any spell of 3rd level or lower on the target ends. For each spell of 4th level or higher on the target, make an ability check using your spellcasting ability. The DC equals 10 + the spell’s level. On a successful check, the spell ends.",
   "description": "Choose one creature, object, or magical effect within range. Any spell of 3rd level or lower on the target ends. For each spell of 4th level or higher on the target, make an ability check using your spellcasting ability. The DC equals 10 + the spell’s level. On a successful check, the spell ends.",
-  "castingTime": "1 action",
-  "range": "120 feet",
-  "components": "V, S",
-  "duration": "Instantaneous",
-  "damage": null,
   "school": "Abjuration",
-  "isPublic": true,
   "classes": [
     "bard",
     "cleric",
@@ -22,25 +17,43 @@
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "120 feet",
+  "components": "V, S",
+  "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": "When you cast this spell using a spell slot of 4th level or higher, you automatically end the effects of a spell on the target if the spell’s level is equal to or less than the level of the spell slot you used.",
-  "source": "SRD 5.1",
-  "iconLayers": [
-    {
-      "guid": "8daf03db-3029-4c5d-9d63-15beabda6514${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4716f637-7c46-487f-a7dc-0344025c7c34\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "6dc9877a-2b73-48ae-9eb8-9c08cf810760${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"848637f9-2e33-47c6-9e4e-1c82847afa4d\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "db85db62-2597-4012-a705-07b9fbc27654",
-      "json": "{}"
-    },
-    {
-      "guid": "6903a644-1dd5-43ba-a6fb-97d3278e6d27",
-      "json": "{}"
-    }
+  "icon": "https://statsheet-cdn.b-cdn.net/images/8daf03db-3029-4c5d-9d63-15beabda6514.png",
+  "iconStatus": "ready",
+  "video": "/SPELL_VIDEOS/Dispel_Magic_You_attempt_to_end_one_spell_on_a_target_or_in_a_da76f373-c78e-49cb-8b5e-65445bae59f1_0.mp4",
+  "damage": null,
+  "tags": [
+    "bard",
+    "cleric",
+    "druid",
+    "paladin",
+    "sorcerer",
+    "warlock",
+    "wizard",
+    "level3"
   ],
-  "video": "/SPELL_VIDEOS/Dispel_Magic_You_attempt_to_end_one_spell_on_a_target_or_in_a_da76f373-c78e-49cb-8b5e-65445bae59f1_0.mp4"
+  "iconLayers": [
+    [
+      "8daf03db-3029-4c5d-9d63-15beabda6514${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4716f637-7c46-487f-a7dc-0344025c7c34\"}"
+    ],
+    [
+      "6dc9877a-2b73-48ae-9eb8-9c08cf810760${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"848637f9-2e33-47c6-9e4e-1c82847afa4d\"}"
+    ],
+    [
+      "db85db62-2597-4012-a705-07b9fbc27654"
+    ],
+    [
+      "6903a644-1dd5-43ba-a6fb-97d3278e6d27"
+    ]
+  ]
 }

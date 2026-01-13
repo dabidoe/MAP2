@@ -4,12 +4,46 @@
   },
   "name": "Sanctuary",
   "level": 1,
-  "description": "A shimmer of bending air wraps a creature you choose, diverting hostile intent. Until the spell ends, any foe attempting to strike or cast a harmful spell on the target must succeed on a Wisdom save or have the effort simply glance aside, forcing them to choose another target or forfeit the attempt. The veil offers no protection against area effects.",
+  "flavorText": "A shimmer of bending air wraps a creature you choose, diverting hostile intent. Until the spell ends, any foe attempting to strike or cast a harmful spell on the target must succeed on a Wisdom save or have the effort simply glance aside, forcing them to choose another target or forfeit the attempt. The veil offers no protection against area effects.",
+  "description": "You ward a creature within range against attack. Until the spell ends, any creature who targets the warded creature with an attack or a harmful spell must first make a Wisdom saving throw. On a failed save, the creature must choose a new target or lose the attack or spell. This spell doesn’t protect the warded creature from area effects, such as the explosion of a fireball.\n\nIf the warded creature makes an attack or casts a spell that affects an enemy creature, this spell ends.",
+  "school": "Abjuration",
+  "classes": [
+    "cleric"
+  ],
+  "ritual": false,
   "castingTime": "1 bonus action",
   "range": "30 feet",
-  "components": "V, S, M (a sliver of polished glass)",
+  "components": "V, S, M (a small silver mirror)",
   "duration": "1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a small silver mirror"
+    ]
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/19357c14-823f-466b-aee4-02ee090b9593.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "None",
-  "school": "Abjuration",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/19357c14-823f-466b-aee4-02ee090b9593.png"
+  "tags": [
+    "cleric",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "19357c14-823f-466b-aee4-02ee090b9593${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"85b4b98b-1dbe-4856-af18-dc2988f7401a\"}"
+    ],
+    [
+      "ce8385d8-94cc-4cff-a731-1e48f8e5d379${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"cd21335f-8bec-41c4-ae54-c0ac892120e6\"}"
+    ],
+    [
+      "37841c67-7a8b-4511-a7c4-52b5a71c47a4${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"0c11c353-e5ea-4b20-9875-38ff2047f2ad\"}"
+    ],
+    [
+      "eddf2a8b-7c50-4cfb-a925-9243327dac75${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"52bb2633-28e4-45f7-8595-24da644fa009\"}"
+    ]
+  ]
 }

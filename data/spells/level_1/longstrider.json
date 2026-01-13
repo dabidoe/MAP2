@@ -4,12 +4,52 @@
   },
   "name": "Longstrider",
   "level": 1,
-  "description": "You infuse a creature with flickering kinetic magic. For the duration, its speed increases by 15 feet and it can ignore the first 5 feet of difficult terrain it enters each turn.",
-  "castingTime": "1 bonus action",
-  "range": "Touch",
-  "components": "V, S",
-  "duration": "10 minutes",
-  "damage": "None",
+  "flavorText": "You infuse a creature with flickering kinetic magic. For the duration, its speed increases by 15 feet and it can ignore the first 5 feet of difficult terrain it enters each turn.",
+  "description": "You touch a creature. The target's speed increases by 10 feet until the spell ends.",
   "school": "Transmutation",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/7c065201-bc9b-4a80-b131-959b8b095409.png"
+  "classes": [
+    "bard",
+    "druid",
+    "ranger",
+    "wizard"
+  ],
+  "ritual": false,
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S, M (a pinch of dirt)",
+  "duration": "1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a pinch of dirt"
+    ]
+  },
+  "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each spell slot above 1st.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/7c065201-bc9b-4a80-b131-959b8b095409.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "None",
+  "tags": [
+    "bard",
+    "druid",
+    "ranger",
+    "wizard",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "7c065201-bc9b-4a80-b131-959b8b095409${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"824f22b5-1c2d-4449-9a34-e0f1dfd58eb7\"}"
+    ],
+    [
+      "b2dab2b8-bb7e-489c-8880-a6d9ea9e2b33${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"62f29a29-99ca-45fa-b0b6-5115a005cd45\"}"
+    ],
+    [
+      "1dab5361-1714-42e0-84fc-8b4e9f3b02d4${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1e91d4e3-5bff-4fb6-8a70-c289e82df44a\"}"
+    ],
+    [
+      "9389e2f6-31f1-40c7-8e0b-e2b99078bb0e${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ed79815e-f45b-4d2f-aa10-e4320b7d9976\"}"
+    ]
+  ]
 }

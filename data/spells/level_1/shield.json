@@ -4,12 +4,46 @@
   },
   "name": "Shield",
   "level": 1,
-  "description": "A flash of warding light ripples across your form, diverting a blow at the last possible instant. The brief shimmer leaves a cool afterimage hanging in the air.",
-  "castingTime": "1 reaction, triggered when a creature you see targets you with an attack",
+  "flavorText": "A flash of warding light ripples across your form, diverting a blow at the last possible instant. The brief shimmer leaves a cool afterimage hanging in the air.",
+  "description": "An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from magic missile.",
+  "school": "Abjuration",
+  "classes": [
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
+  "castingTime": "1 reaction, which you take when you are hit by an attack or targeted by the magic missile spell",
   "range": "Self",
   "components": "V, S",
   "duration": "1 round",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/fcd7781a-c964-478e-a725-c4f6dd8b01dd.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "None",
-  "school": "Abjuration",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/fcd7781a-c964-478e-a725-c4f6dd8b01dd.png"
+  "tags": [
+    "sorcerer",
+    "wizard",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "fcd7781a-c964-478e-a725-c4f6dd8b01dd${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"ca9e16f8-3832-494c-8fd1-a0567c7c2879\"}"
+    ],
+    [
+      "c908e69d-e9ce-4348-af6a-5d75d6fe04ee${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"f29d8882-47d5-4999-840a-e33c53cfbf09\"}"
+    ],
+    [
+      "477c854b-6115-45f1-b1a1-24e4142fa570${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"2041d648-595c-49e8-ae6d-296013f6e7d5\"}"
+    ],
+    [
+      "6456ccf9-87c3-4ab3-9f2f-ca44ecabd5ba${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"404c51d1-46b0-45cb-98ce-2be3e7f68681\"}"
+    ]
+  ]
 }

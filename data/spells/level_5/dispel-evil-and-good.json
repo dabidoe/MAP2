@@ -4,21 +4,48 @@
   },
   "name": "Dispel Evil and Good",
   "level": 5,
+  "flavorText": "Shimmering energy surrounds and protects you from fey, undead, and creatures originating from beyond the Material Plane. For the duration, celestials, elementals, fey, fiends, and undead have disadvantage on attack rolls against you.\n\nYou can end the spell early by using either of the following special functions.\n\n* Break Enchantment. As your action, you touch a creature you can reach that is charmed, frightened, or possessed by a celestial, an elemental, a fey, a fiend, or an undead. The creature you touch is no longer charmed, frightened, or possessed by such creatures.\n* Dismissal. As your action, make a melee spell attack against a celestial, an elemental, a fey, a fiend, or an undead you can reach. On a hit, you attempt to drive the creature back to its home plane. The creature must succeed on a Charisma saving throw or be sent back to its home plane (if it isn’t there already). If they are already on their home plane, undead are sent to the Shadowfell, and fey are sent to the Feywild.",
   "description": "Shimmering energy surrounds and protects you from fey, undead, and creatures originating from beyond the Material Plane. For the duration, celestials, elementals, fey, fiends, and undead have disadvantage on attack rolls against you.\n\nYou can end the spell early by using either of the following special functions.\n\n* Break Enchantment. As your action, you touch a creature you can reach that is charmed, frightened, or possessed by a celestial, an elemental, a fey, a fiend, or an undead. The creature you touch is no longer charmed, frightened, or possessed by such creatures.\n* Dismissal. As your action, make a melee spell attack against a celestial, an elemental, a fey, a fiend, or an undead you can reach. On a hit, you attempt to drive the creature back to its home plane. The creature must succeed on a Charisma saving throw or be sent back to its home plane (if it isn’t there already). If they are already on their home plane, undead are sent to the Shadowfell, and fey are sent to the Feywild.",
-  "castingTime": "1 action",
-  "range": "Self",
-  "components": "V, S, M (holy water or powdered silver and iron)",
-  "duration": "Concentration, up to 1 minute",
-  "damage": null,
   "school": "Abjuration",
-  "icon": "https://via.placeholder.com/512/1a1a1a/ffffff?text=Icon+Missing",
-  "iconStatus": "missing",
-  "isPublic": true,
   "classes": [
     "cleric",
     "paladin"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Self",
+  "components": "V, S, M (holy water or powdered silver and iron)",
+  "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "holy water or powdered silver and iron"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1"
+  "icon": "https://statsheet-cdn.b-cdn.net/images/0f74fc67-6525-48d6-9b63-0b7dea4dd4d5.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "cleric",
+    "paladin",
+    "level5"
+  ],
+  "iconLayers": [
+    [
+      "0f74fc67-6525-48d6-9b63-0b7dea4dd4d5"
+    ],
+    [
+      "3875deb7-72e7-43b4-b811-f8c3bea27fd5"
+    ],
+    [
+      "de660b8b-aef1-4cd5-bf73-c6a6c1f59cf3"
+    ],
+    [
+      "12565583-d9af-442a-8cd9-7ad9a4fccb75"
+    ]
+  ]
 }

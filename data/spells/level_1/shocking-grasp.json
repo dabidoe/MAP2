@@ -3,13 +3,47 @@
     "$oid": "69546a035648a6dce9f6f7ce"
   },
   "name": "Shocking Grasp",
-  "level": 1,
-  "description": "You snap a thread of charged aether at a creature you can touch, discharging a sharp jolt that rattles muscle and focus. The surge crackles loudly, leaving the target briefly disoriented.",
+  "level": 0,
+  "flavorText": "You snap a thread of charged aether at a creature you can touch, discharging a sharp jolt that rattles muscle and focus. The surge crackles loudly, leaving the target briefly disoriented.",
+  "description": "Lightning springs from your hand to deliver a shock to a creature you try to touch. Make a melee spell attack against the target. You have advantage on the attack roll if the target is wearing armor made of metal. On a hit, the target takes 1d8 lightning damage, and it can’t take reactions until the start of its next turn.\n\nThe spell’s damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
+  "school": "Evocation",
+  "classes": [
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
   "range": "Touch",
   "components": "V, S",
   "duration": "Instantaneous",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/789f4802-3556-4af9-9adf-1aa8648f07a0.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "2d6 lightning",
-  "school": "Evocation",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/789f4802-3556-4af9-9adf-1aa8648f07a0.png"
+  "tags": [
+    "sorcerer",
+    "wizard",
+    "cantrip"
+  ],
+  "iconLayers": [
+    [
+      "789f4802-3556-4af9-9adf-1aa8648f07a0${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"59a1ff94-b221-4627-b9d2-f9494469643d\"}"
+    ],
+    [
+      "20adff15-e1c8-4bb3-8361-3f62d368f9ba${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"44f2db38-c4cd-48e9-81d4-c592a1f5a68d\"}"
+    ],
+    [
+      "8bd35fe8-8144-4a0f-bd9c-cc9b5ca9fe47${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"3f5b3876-f6b5-4d28-af63-1d3f25d6c153\"}"
+    ],
+    [
+      "7bd12ac5-737d-4616-8482-b0d10337d92e"
+    ]
+  ]
 }

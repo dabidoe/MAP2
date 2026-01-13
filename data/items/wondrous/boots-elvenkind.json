@@ -1,0 +1,21 @@
+{
+  "id": "boots-elvenkind",
+  "name": "Boots of Elvenkind",
+  "category": "wondrous",
+  "rarity": "uncommon",
+  "weight": 1,
+  "value": 2500,
+  "quantity": 1,
+  "requiresAttunement": false,
+  "description": "Magical boots that muffle your footsteps",
+  "magic": {
+    "effects": [
+      {
+        "name": "Silent Steps",
+        "description": "Advantage on Stealth checks to move silently"
+      }
+    ]
+  },
+  "icon": "✨",
+  "iconStatus": "placeholder"
+}

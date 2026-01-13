@@ -1,0 +1,15 @@
+{
+  "id": "shield",
+  "name": "Shield",
+  "category": "shield",
+  "rarity": "common",
+  "slot": "offHand",
+  "weight": 6,
+  "value": 10,
+  "description": "A basic wooden shield",
+  "shield": {
+    "acBonus": 2
+  },
+  "icon": "🛡️",
+  "iconStatus": "placeholder"
+}

@@ -4,14 +4,9 @@
   },
   "name": "Hypnotic Pattern",
   "level": 3,
+  "flavorText": "You create a twisting pattern of colors that weaves through the air inside a 30-foot cube within range. The pattern appears for a moment and vanishes. Each creature in the area who sees the pattern must make a Wisdom saving throw. On a failed save, the creature becomes charmed for the duration. While charmed by this spell, the creature is incapacitated and has a speed of 0.\n\nThe spell ends for an affected creature if it takes any damage or if someone else uses an action to shake the creature out of its stupor.",
   "description": "You create a twisting pattern of colors that weaves through the air inside a 30-foot cube within range. The pattern appears for a moment and vanishes. Each creature in the area who sees the pattern must make a Wisdom saving throw. On a failed save, the creature becomes charmed for the duration. While charmed by this spell, the creature is incapacitated and has a speed of 0.\n\nThe spell ends for an affected creature if it takes any damage or if someone else uses an action to shake the creature out of its stupor.",
-  "castingTime": "1 action",
-  "range": "120 feet",
-  "components": "S, M (a glowing stick of incense or a crystal vial filled with phosphorescent material)",
-  "duration": "Concentration, up to 1 minute",
-  "damage": null,
   "school": "Illusion",
-  "isPublic": true,
   "classes": [
     "bard",
     "sorcerer",
@@ -19,25 +14,42 @@
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "120 feet",
+  "components": "S, M (a glowing stick of incense or a crystal vial filled with phosphorescent material)",
+  "duration": "Concentration, up to 1 minute",
+  "componentsDetail": {
+    "verbal": false,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a glowing stick of incense or a crystal vial filled with phosphorescent material"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
-  "iconLayers": [
-    {
-      "guid": "a130592d-9010-4752-9c52-26c595b40bc2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1.530183,1.530183\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"6b2c881a-984b-4f28-b3fb-d8a24b113a7c\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "26c90d02-8326-40f0-be6f-d80e9c3ed8bf${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"fb6e2f85-45a9-4528-b698-bf8f3e113f4c\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "1d39e761-4d25-434e-bd59-28be4f7e6ba2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"69ed004a-84ba-406a-a58e-c7b2f8a14e3e\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "6beffe4e-1ba2-4697-acce-5212fb1c4e7a${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"619435f7-aeba-4c7d-ab1a-75edf9c10eed\"}",
-      "json": "{}"
-    }
+  "icon": "https://statsheet-cdn.b-cdn.net/images/a130592d-9010-4752-9c52-26c595b40bc2.png",
+  "iconStatus": "ready",
+  "video": "/SPELL_VIDEOS/Hypnotic_Pattern_You_create_a_twisting_pattern_of_colors_that_faaae798-06a8-49fb-9109-f2693b8d586f_0.mp4",
+  "damage": null,
+  "tags": [
+    "bard",
+    "sorcerer",
+    "warlock",
+    "wizard",
+    "level3"
   ],
-  "video": "/SPELL_VIDEOS/Hypnotic_Pattern_You_create_a_twisting_pattern_of_colors_that_faaae798-06a8-49fb-9109-f2693b8d586f_0.mp4"
+  "iconLayers": [
+    [
+      "a130592d-9010-4752-9c52-26c595b40bc2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1.530183,1.530183\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"6b2c881a-984b-4f28-b3fb-d8a24b113a7c\"}"
+    ],
+    [
+      "26c90d02-8326-40f0-be6f-d80e9c3ed8bf${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"fb6e2f85-45a9-4528-b698-bf8f3e113f4c\"}"
+    ],
+    [
+      "1d39e761-4d25-434e-bd59-28be4f7e6ba2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"69ed004a-84ba-406a-a58e-c7b2f8a14e3e\"}"
+    ],
+    [
+      "6beffe4e-1ba2-4697-acce-5212fb1c4e7a${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"619435f7-aeba-4c7d-ab1a-75edf9c10eed\"}"
+    ]
+  ]
 }

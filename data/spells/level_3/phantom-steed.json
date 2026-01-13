@@ -4,37 +4,44 @@
   },
   "name": "Phantom Steed",
   "level": 3,
+  "flavorText": "A Large quasi-real, horselike creature appears on the ground in an unoccupied space of your choice within range. You decide the creature’s appearance, but it is equipped with a saddle, bit, and bridle. Any of the equipment created by the spell vanishes in a puff of smoke if it is carried more than 10 feet away from the steed.\n\nFor the duration, you or a creature you choose can ride the steed. The creature uses the statistics for a riding horse, except it has a speed of 100 feet and can travel 10 miles in an hour, or 13 miles at a fast pace. When the spell ends, the steed gradually fades, giving the rider 1 minute to dismount. The spell ends if you use an action to dismiss it or if the steed takes any damage.",
   "description": "A Large quasi-real, horselike creature appears on the ground in an unoccupied space of your choice within range. You decide the creature’s appearance, but it is equipped with a saddle, bit, and bridle. Any of the equipment created by the spell vanishes in a puff of smoke if it is carried more than 10 feet away from the steed.\n\nFor the duration, you or a creature you choose can ride the steed. The creature uses the statistics for a riding horse, except it has a speed of 100 feet and can travel 10 miles in an hour, or 13 miles at a fast pace. When the spell ends, the steed gradually fades, giving the rider 1 minute to dismount. The spell ends if you use an action to dismiss it or if the steed takes any damage.",
-  "castingTime": "1 minute",
-  "range": "30 feet",
-  "components": "V, S",
-  "duration": "1 hour",
-  "damage": null,
   "school": "Illusion",
-  "isPublic": true,
   "classes": [
     "wizard"
   ],
   "ritual": true,
+  "castingTime": "1 minute",
+  "range": "30 feet",
+  "components": "V, S",
+  "duration": "1 hour",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": false,
+    "materialsNeeded": []
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
-  "iconLayers": [
-    {
-      "guid": "1a0df93d-1841-4974-8d25-0c61636311a2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"db3ce2d5-c14d-4a10-a4b0-9e1c2667f9e1\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "a1be5e7f-af24-415c-ac2a-37c834f7ee65",
-      "json": "{}"
-    },
-    {
-      "guid": "cc2e8931-ac0c-41a9-aa02-d0309319445f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"f8a652c2-9d2e-48df-ae03-de2c560bf083\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "dbcb0bcb-cc7d-4f20-8cfd-1aa21c83e998",
-      "json": "{}"
-    }
+  "icon": "https://statsheet-cdn.b-cdn.net/images/1a0df93d-1841-4974-8d25-0c61636311a2.png",
+  "iconStatus": "ready",
+  "video": "/SPELL_VIDEOS/Phantom_Steed_You_summon_a_large_ethereal_horse_made_of_swirl_aa31b892-5620-4837-b1c3-e2257df7e0c5_0.mp4",
+  "damage": null,
+  "tags": [
+    "wizard",
+    "level3"
   ],
-  "video": "/SPELL_VIDEOS/Phantom_Steed_You_summon_a_large_ethereal_horse_made_of_swirl_aa31b892-5620-4837-b1c3-e2257df7e0c5_0.mp4"
+  "iconLayers": [
+    [
+      "1a0df93d-1841-4974-8d25-0c61636311a2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"db3ce2d5-c14d-4a10-a4b0-9e1c2667f9e1\"}"
+    ],
+    [
+      "a1be5e7f-af24-415c-ac2a-37c834f7ee65"
+    ],
+    [
+      "cc2e8931-ac0c-41a9-aa02-d0309319445f${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"f8a652c2-9d2e-48df-ae03-de2c560bf083\"}"
+    ],
+    [
+      "dbcb0bcb-cc7d-4f20-8cfd-1aa21c83e998"
+    ]
+  ]
 }

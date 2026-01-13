@@ -1,0 +1,10 @@
+# Video Mappings - Spell Name to Bunny Video ID
+# Format: SpellName,VideoID (or paste full embed URL)
+# Lines starting with # are ignored
+
+# Example entries:
+# Fireball,f1ab439d-67fd-40b1-ba7d-41a869442bfb
+# Magic Missile,b2d71a08-9be6-43cc-9214-b914d8eb5b06
+# Cure Wounds,https://player.mediadelivery.net/embed/578953/a1b2c3d4-e5f6-7890-abcd-ef1234567890
+
+# Add your spell-to-video mappings below:

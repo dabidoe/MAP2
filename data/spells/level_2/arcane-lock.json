@@ -4,36 +4,46 @@
   },
   "name": "Arcane Lock",
   "level": 2,
+  "flavorText": "You touch a closed door, window, gate, chest, or other entryway, and it becomes locked for the duration. You and the creatures you designate when you cast this spell can open the object normally. You can also set a password that, when spoken within 5 feet of the object, suppresses this spell for 1 minute. Otherwise, it is impassable until it is broken or the spell is dispelled or suppressed. Casting knock on the object suppresses arcane lock for 10 minutes.\n\nWhile affected by this spell, the object is more difficult to break or force open; the DC to break it or pick any locks on it increases by 10.",
   "description": "You touch a closed door, window, gate, chest, or other entryway, and it becomes locked for the duration. You and the creatures you designate when you cast this spell can open the object normally. You can also set a password that, when spoken within 5 feet of the object, suppresses this spell for 1 minute. Otherwise, it is impassable until it is broken or the spell is dispelled or suppressed. Casting knock on the object suppresses arcane lock for 10 minutes.\n\nWhile affected by this spell, the object is more difficult to break or force open; the DC to break it or pick any locks on it increases by 10.",
-  "castingTime": "1 action",
-  "range": "Touch",
-  "components": "V, S, M (gold dust w orth at least 25 gp, which the spell consumes)",
-  "duration": "Until dispelled",
-  "damage": null,
   "school": "Abjuration",
-  "isPublic": true,
   "classes": [
     "wizard"
   ],
   "ritual": false,
+  "castingTime": "1 action",
+  "range": "Touch",
+  "components": "V, S, M (gold dust w orth at least 25 gp, which the spell consumes)",
+  "duration": "Until dispelled",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "gold dust w orth at least 25 gp, which the spell consumes"
+    ]
+  },
   "higherLevels": null,
-  "source": "SRD 5.1",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/4713fac1-ad7d-4ba5-a04e-66a4dd9296db.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": null,
+  "tags": [
+    "wizard",
+    "level2"
+  ],
   "iconLayers": [
-    {
-      "guid": "4713fac1-ad7d-4ba5-a04e-66a4dd9296db${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4fc09c46-f104-487e-b7a4-9defb0165dc3\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "af1c7ef1-c09b-4e94-beb5-0ac1c93c7988${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"428c1b91-0b03-49bd-a715-b4a434edafbd\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "35c99ae0-15f1-40c1-988c-7d8ec8813020${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c5fd3935-a40b-44bd-a80c-24dd34eae626\"}",
-      "json": "{}"
-    },
-    {
-      "guid": "e7b26cf1-e992-4f40-8ee4-58abd00273cb",
-      "json": "{}"
-    }
+    [
+      "4713fac1-ad7d-4ba5-a04e-66a4dd9296db${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4fc09c46-f104-487e-b7a4-9defb0165dc3\"}"
+    ],
+    [
+      "af1c7ef1-c09b-4e94-beb5-0ac1c93c7988${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"428c1b91-0b03-49bd-a715-b4a434edafbd\"}"
+    ],
+    [
+      "35c99ae0-15f1-40c1-988c-7d8ec8813020${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"c5fd3935-a40b-44bd-a80c-24dd34eae626\"}"
+    ],
+    [
+      "e7b26cf1-e992-4f40-8ee4-58abd00273cb"
+    ]
   ]
 }

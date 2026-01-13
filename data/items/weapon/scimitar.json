@@ -1,0 +1,21 @@
+{
+  "id": "scimitar",
+  "name": "Scimitar",
+  "category": "weapon",
+  "rarity": "common",
+  "slot": "mainHand",
+  "weight": 3,
+  "value": 25,
+  "description": "A curved blade favored by desert warriors",
+  "weapon": {
+    "damage": "1d6",
+    "damageType": "slashing",
+    "properties": [
+      "finesse",
+      "light"
+    ],
+    "range": "5 ft"
+  },
+  "icon": "⚔️",
+  "iconStatus": "placeholder"
+}

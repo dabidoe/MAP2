@@ -1,0 +1,21 @@
+{
+  "id": "greatsword",
+  "name": "Greatsword",
+  "category": "weapon",
+  "rarity": "common",
+  "slot": "mainHand",
+  "weight": 6,
+  "value": 50,
+  "description": "A massive two-handed blade",
+  "weapon": {
+    "damage": "2d6",
+    "damageType": "slashing",
+    "properties": [
+      "two-handed",
+      "heavy"
+    ],
+    "range": "5 ft"
+  },
+  "icon": "⚔️",
+  "iconStatus": "placeholder"
+}

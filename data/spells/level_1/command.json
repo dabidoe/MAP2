@@ -4,12 +4,46 @@
   },
   "name": "Command",
   "level": 1,
-  "description": "You utter a resonant syllable that tugs at a creature’s will. One creature you can see must succeed on a Wisdom saving throw or be subtly compelled to take a simple, non-harmful action of your choice on its next turn. Commands like step closer, stand down, or cast aside are common. If the directive would place the creature in immediate danger, it has advantage on the save.",
+  "flavorText": "You utter a resonant syllable that tugs at a creature’s will. One creature you can see must succeed on a Wisdom saving throw or be subtly compelled to take a simple, non-harmful action of your choice on its next turn. Commands like step closer, stand down, or cast aside are common. If the directive would place the creature in immediate danger, it has advantage on the save.",
+  "description": "You speak a one-word command to a creature you can see within range. The target must succeed on a Wisdom saving throw or follow the command on its next turn. The spell has no effect if the target is undead, if it doesn’t understand your language, or if your command is directly harmful to it.\n\nSome typical commands and their effects follow. You might issue a command other than one described here. If you do so, the DM determines how the target behaves. If the target can’t follow your command, the spell ends.\n\nApproach: The target moves toward you by the shortest and most direct route, Ending its turn if it moves within 5 feet of you.\nDrop: The target drops whatever it is holding and then ends its turn.\nFlee: The target spends its turn moving away from you by the fastest available means.\nGrovel: The target falls prone and then ends its turn.\nHalt: The target doesn't move and takes no Actions. A flying creature stays aloft, provided that it is able to do so. If it must move to stay aloft, it flies the minimum distance needed to remain in the air.",
+  "school": "Enchantment",
+  "classes": [
+    "cleric",
+    "paladin"
+  ],
+  "ritual": false,
   "castingTime": "1 action",
   "range": "60 feet",
   "components": "V",
   "duration": "1 round",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": false,
+    "material": false,
+    "materialsNeeded": []
+  },
+  "higherLevels": "When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them.",
+  "icon": "https://statsheet-cdn.b-cdn.net/images/3b05fc88-3d77-416c-aa5b-24fa020e7b3b.png",
+  "iconStatus": "ready",
+  "video": null,
   "damage": "None",
-  "school": "Enchantment",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/3b05fc88-3d77-416c-aa5b-24fa020e7b3b.png"
+  "tags": [
+    "cleric",
+    "paladin",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "3b05fc88-3d77-416c-aa5b-24fa020e7b3b${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"0c949b3e-8e94-480c-849a-c3e5d0d8a06a\"}"
+    ],
+    [
+      "d6435aa1-e7ca-4773-b326-66aeef8dcdb2${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"15ef704c-12b3-4aa2-8ebe-118cda5ac61c\"}"
+    ],
+    [
+      "982726c1-4063-446c-925f-8d855d71bfe4${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e7e00bb9-1330-41a0-bc65-acc02affb10f\"}"
+    ],
+    [
+      "e0ac9f0f-31ea-4f2e-8238-0d6d81206fcc${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"11791087-0c30-40ad-854c-80ad69814982\"}"
+    ]
+  ]
 }

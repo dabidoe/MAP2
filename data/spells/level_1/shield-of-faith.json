@@ -4,12 +4,48 @@
   },
   "name": "Shield of Faith",
   "level": 1,
-  "description": "You trace a sigil in the air, summoning a thin veil of astral force that clings to a willing creature. The barrier bends incoming attacks and flickers with faint starlight visible only at the edge of vision.",
-  "castingTime": "1 bonus action",
-  "range": "30 feet",
-  "components": "V, S",
-  "duration": "Concentration, up to 10 minutes",
-  "damage": "None",
+  "flavorText": "You trace a sigil in the air, summoning a thin veil of astral force that clings to a willing creature. The barrier bends incoming attacks and flickers with faint starlight visible only at the edge of vision.",
+  "description": "A shimmering field appears and surrounds a creature of your choice within range, granting it a +2 bonus to AC for the duration.",
   "school": "Abjuration",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/2784d256-a173-4d4e-938d-a392940a0f8c.png"
+  "classes": [
+    "cleric",
+    "paladin"
+  ],
+  "ritual": false,
+  "castingTime": "1 bonus action",
+  "range": "60 feet",
+  "components": "V, S, M (a small parchment with a bit of holy text written on it)",
+  "duration": "Concentration, up to 10 minutes",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a small parchment with a bit of holy text written on it"
+    ]
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/2784d256-a173-4d4e-938d-a392940a0f8c.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "None",
+  "tags": [
+    "cleric",
+    "paladin",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "2784d256-a173-4d4e-938d-a392940a0f8c${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"e867b792-5716-48b0-8867-4bb94971bdac\"}"
+    ],
+    [
+      "5858ab72-661a-43fd-8a36-f3a67a06e2f9${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"3e80ed26-71bb-4819-8611-f3b5ed0e9c7f\"}"
+    ],
+    [
+      "a014dcb4-4e1e-46dc-a9f0-58cd356cbdd1${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"eec3cd7b-3ea6-44b3-9717-2134d301e09a\"}"
+    ],
+    [
+      "019a7903-d66a-4ef6-a510-ab3123bb28bd${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"1ef8a84f-16b7-4b4c-b5ee-82ee12a26990\"}"
+    ]
+  ]
 }

@@ -1,0 +1,26 @@
+{
+  "id": "cloak-protection",
+  "name": "Cloak of Protection",
+  "category": "gear",
+  "rarity": "uncommon",
+  "slot": "back",
+  "weight": 1,
+  "value": 350,
+  "requiresAttunement": true,
+  "description": "A magical cloak that wards off harm",
+  "customProperties": {
+    "bonuses": {
+      "ac": 1
+    }
+  },
+  "magic": {
+    "effects": [
+      {
+        "name": "+1 AC and Saves",
+        "description": "You gain a +1 bonus to AC and saving throws while wearing this cloak"
+      }
+    ]
+  },
+  "icon": "🎒",
+  "iconStatus": "placeholder"
+}

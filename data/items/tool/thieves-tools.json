@@ -1,0 +1,12 @@
+{
+  "id": "thieves-tools",
+  "name": "Thieves' Tools",
+  "category": "tool",
+  "rarity": "common",
+  "weight": 1,
+  "value": 25,
+  "quantity": 1,
+  "description": "Tools for picking locks and disarming traps",
+  "icon": "🔧",
+  "iconStatus": "placeholder"
+}

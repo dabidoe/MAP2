@@ -1,0 +1,19 @@
+{
+  "id": "chain-mail",
+  "name": "Chain Mail",
+  "category": "armor",
+  "rarity": "common",
+  "slot": "body",
+  "weight": 55,
+  "value": 75,
+  "description": "Heavy interlocking metal rings",
+  "armor": {
+    "ac": 16,
+    "type": "heavy",
+    "maxDexBonus": 0,
+    "stealthDisadvantage": true,
+    "strengthRequired": 13
+  },
+  "icon": "🛡️",
+  "iconStatus": "placeholder"
+}

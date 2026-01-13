@@ -1,0 +1,12 @@
+{
+  "id": "grappling-hook",
+  "name": "Grappling Hook",
+  "category": "gear",
+  "rarity": "common",
+  "weight": 4,
+  "value": 2,
+  "quantity": 1,
+  "description": "Metal hook for climbing or securing rope",
+  "icon": "🎒",
+  "iconStatus": "placeholder"
+}

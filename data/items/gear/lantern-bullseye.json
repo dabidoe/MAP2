@@ -1,0 +1,12 @@
+{
+  "id": "lantern-bullseye",
+  "name": "Lantern, Bullseye",
+  "category": "gear",
+  "rarity": "common",
+  "weight": 3,
+  "value": 10,
+  "quantity": 1,
+  "description": "Casts 60 ft cone of bright light, 60 ft dim. Burns oil for 6 hours",
+  "icon": "🎒",
+  "iconStatus": "placeholder"
+}

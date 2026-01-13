@@ -3,13 +3,51 @@
     "$oid": "69546a065648a6dce9f6f7d2"
   },
   "name": "Silent Image",
-  "level": 2,
-  "description": "Conjure a drifting phantasm up to a 20‑foot cube in size, its form shifting subtly as it glides within range. The illusion is purely visual but eerily lifelike, capable of adopting new poses or features as you direct it with your action. A creature that studies the illusion can attempt an Intelligence (Investigation) check against your spell save DC to pierce the ruse, after which the image becomes ghostlike and transparent to that creature.",
-  "castingTime": "1 action",
-  "range": "90 feet",
-  "components": "V, S",
-  "duration": "Concentration, up to 10 minutes",
-  "damage": "None",
+  "level": 1,
+  "flavorText": "Conjure a drifting phantasm up to a 20‑foot cube in size, its form shifting subtly as it glides within range. The illusion is purely visual but eerily lifelike, capable of adopting new poses or features as you direct it with your action. A creature that studies the illusion can attempt an Intelligence (Investigation) check against your spell save DC to pierce the ruse, after which the image becomes ghostlike and transparent to that creature.",
+  "description": "You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 15-foot cube. The image appears at a spot within range and lasts for the duration. The image is purely visual; it isn’t accompanied by sound, smell, or other sensory effects.\n\nYou can use your action to cause the image to move to any spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking.\n\nPhysical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image.",
   "school": "Illusion",
-  "icon": "https://statsheet-cdn.b-cdn.net/images/e95a3a32-af15-4950-b2d3-a52b24532e55.png"
+  "classes": [
+    "bard",
+    "sorcerer",
+    "wizard"
+  ],
+  "ritual": false,
+  "castingTime": "1 action",
+  "range": "60 feet",
+  "components": "V, S, M (a bit of fleece)",
+  "duration": "Concentration, up to 10 minutes",
+  "componentsDetail": {
+    "verbal": true,
+    "somatic": true,
+    "material": true,
+    "materialsNeeded": [
+      "a bit of fleece"
+    ]
+  },
+  "higherLevels": null,
+  "icon": "https://statsheet-cdn.b-cdn.net/images/e95a3a32-af15-4950-b2d3-a52b24532e55.png",
+  "iconStatus": "ready",
+  "video": null,
+  "damage": "None",
+  "tags": [
+    "bard",
+    "sorcerer",
+    "wizard",
+    "level1"
+  ],
+  "iconLayers": [
+    [
+      "e95a3a32-af15-4950-b2d3-a52b24532e55${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"b7de2632-8fbb-45a4-a5a2-b69bddfb771b\"}"
+    ],
+    [
+      "a108a441-da28-4411-b971-7e23ea687702${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"4198e66f-5dea-48e3-9d7f-c2677200053b\"}"
+    ],
+    [
+      "574fa33e-820d-4d86-b4cd-b10110d0e9b5${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"9f37466d-6205-4467-9660-5f8d24a574a3\"}"
+    ],
+    [
+      "ce73b888-f7ea-450d-8a78-ccbc38753200${\"position\":\"0.5,0.5\",\"rotation\":0.0,\"scale\":\"1,1\",\"crop\":\"0,0,1,1\",\"hide\":false,\"guid\":\"08bf1a11-80be-462e-bade-737efa2cc08a\"}"
+    ]
+  ]
 }

@@ -1,0 +1,12 @@
+{
+  "id": "arrows",
+  "name": "Arrows (20)",
+  "category": "gear",
+  "rarity": "common",
+  "weight": 1,
+  "value": 1,
+  "quantity": 20,
+  "description": "Standard ammunition for bows",
+  "icon": "🎒",
+  "iconStatus": "placeholder"
+}

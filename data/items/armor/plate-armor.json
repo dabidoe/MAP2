@@ -1,0 +1,19 @@
+{
+  "id": "plate-armor",
+  "name": "Plate Armor",
+  "category": "armor",
+  "rarity": "common",
+  "slot": "body",
+  "weight": 65,
+  "value": 1500,
+  "description": "Full suit of interlocking metal plates",
+  "armor": {
+    "ac": 18,
+    "type": "heavy",
+    "maxDexBonus": 0,
+    "stealthDisadvantage": true,
+    "strengthRequired": 15
+  },
+  "icon": "🛡️",
+  "iconStatus": "placeholder"
+}
